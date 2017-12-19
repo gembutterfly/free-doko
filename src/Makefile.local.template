@@ -1,0 +1,88 @@
+# This file contains some variables for the local compilation
+# Just rename it to 'Makefile.local' to get rid of the make error
+
+include $(DEPTH)/../Makefile.version
+
+# which modules to use (see Makefile.modules)
+# thread support -- experimental
+#USE_THREADS = false
+# boost support -- till now (0.7.8) only for reference checks
+#USE_BOOST = false
+# network support (gnet)
+#USE_NETWORK  = true
+# support for DokoLounge (http://www.doko-lounge.de), in developement
+#USE_NETWORK_DOKOLOUNGE  = false
+# user interface (gtkmm) -- set to 'true'
+#USE_UI_GTKMM = true
+
+# sound -- only works under GNU/Linux, select 'alut' then
+#ifeq ($(OPERATING_SYSTEM), Windows)
+## windows mmsystem command 'PlaySound()'
+#USE_SOUND_PLAYSOUND = true
+#else
+## using freealut
+#USE_SOUND_ALUT  = true
+## using an external program (p.e. aplay)
+#USE_SOUND_COMMAND = false
+#endif
+
+
+# Where is the directory with the public data?
+CPPFLAGS += -DPUBLIC_DATA_DIRECTORY_VALUE='"../data"'
+
+# Where is the directory with the manual?
+#CPPFLAGS += -DMANUAL_DIRECTORY_VALUE='"../manual"'
+
+# a description for the version information
+CPPFLAGS += -DVERSION_DESCRIPTION='"self compiled"'
+
+# no debugging (speeds up the program but does not check for errors)
+#CPPFLAGS += -DDEBUG_NO
+
+# whether to create a segmentation fault (and hence a core dump) when FreeDoko
+# has found an error
+#CPPFLAGS += -DASSERTION_GENERATES_SEGFAULT
+
+# some code is only executed for a specific developer
+#CPPFLAGS += -DDKNOF
+#CPPFLAGS += -DBENDERS
+
+# no update on demand
+#CPPFLAGS += -DNO_UPDATE_ON_DEMAND
+
+# compiler flags
+#CXXFLAGS ?= -Wall -Werror -pipe -std=c++14 -O0 -ggdb
+#CXXFLAGS ?= -Wall -Werror -Wno-parentheses -std=c++14 -pipe -march=native -O2
+
+
+ifeq ($(SHELLTYPE), COMMAND.COM)
+# the location of the mingw directory (for Microsoft Windows)
+#MINGW_DIR = D:/MinGW32
+# The location of the compiler
+#CXX=$(MINGW_DIR)/bin/g++
+endif
+
+# path to the generated .o and .d files
+# relative paths must begin with './' or '../'
+# ifeq ($(SHELLTYPE), sh)
+# ifneq ($(findstring -DRELEASE,$(CPPFLAGS)),)
+# 	FREEDOKO_WORKING_DIRECTORY ?= /tmp/${LOGNAME}/FreeDoko_$(VERSION).working/release
+# else
+# ifneq ($(findstring -ggdb,$(CXXFLAGS)),)
+# 	FREEDOKO_WORKING_DIRECTORY ?= /tmp/${LOGNAME}/FreeDoko_$(VERSION).working/debug
+# else
+# 	FREEDOKO_WORKING_DIRECTORY ?= /tmp/${LOGNAME}/FreeDoko_$(VERSION).working/src
+# endif
+# endif
+# endif
+# ifeq ($(SHELLTYPE), COMMAND.COM)
+# ifneq ($(findstring -DRELEASE,$(CPPFLAGS)),)
+# 	FREEDOKO_WORKING_DIRECTORY ?= C:\tmp\FreeDoko_$(VERSION).working\release
+# else
+# ifneq ($(findstring -ggdb,$(CXXFLAGS)),)
+# 	FREEDOKO_WORKING_DIRECTORY ?= C:\tmp\FreeDoko_$(VERSION).working\debug
+# else
+# 	FREEDOKO_WORKING_DIRECTORY ?= C:\tmp\FreeDoko_$(VERSION).working\src
+# endif
+# endif
+# endif

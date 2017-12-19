@@ -1,0 +1,12 @@
+Source: freedoko-soundset-mbrola
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-soundset-mbrola
+Architecture: all
+Provides: freedoko-sounds
+Description: mbrola soundset for 'freedoko'
+ This package does contain the mbrola soundset for the game 'freedoko'.

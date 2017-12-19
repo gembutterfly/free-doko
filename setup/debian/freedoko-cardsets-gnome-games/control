@@ -1,0 +1,12 @@
+Source: freedoko-cardsets-gnome-games
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-cardsets-gnome-games
+Architecture: all
+Provides: freedoko-cardset
+Description: gnome-games cardset for 'freedoko'
+ This package does contain the gnome-games cardsets for the game 'freedoko'.

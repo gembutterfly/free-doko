@@ -1,0 +1,839 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: Regelkonfiguration</title>
+
+    <meta name="date" content="2006-04-04T22:30:50+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="party_settings.html" title="Turniereinsetllungen">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="party_settings.html" title="Turniereinstellungen">
+    <link rel="next" href="player_config.html" title="Spielerkonfiguration">
+
+    <link rel="alternate" href="../../en/operation/rules_config.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+    <h1>Regelkonfiguration</h1>
+
+    <p>
+    Bei den Regeln ist zu beachten, daß Abhängigkeiten bestehen, auch über die Rubriken hinaus.
+    So kann es z.B. den Sonderpunkt beim <a href="#extrapoint_dolle_jabs_dolle">Dollenschlag</a> nur geben, wenn es <a href="#dollen">Dollen</a> gibt.
+    </p>
+    <p>
+    Die Regeln sind in die folgenden Bereiche aufgeteilt
+    </p>
+    <ol>
+      <li><a href="#group_tournament">Turnier</a></li>
+      <li><a href="#group_counting">Zählung</a></li>
+      <li><a href="#group_informations">Informationen</a></li>
+      <li><a href="#group_solo">Solo</a></li>
+      <li><a href="#group_poverty">Armut</a></li>
+      <li><a href="#group_marriage">Hochzeit</a></li>
+      <li><a href="#group_announcement">Ansagen</a></li>
+      <li><a href="#group_dollen">Dollen</a></li>
+      <li><a href="#group_swines">Schweine</a></li>
+      <li><a href="#group_specialpoints">Sonderpunkte</a></li>
+    </ol>
+
+    <h2 id="group_tournament">Turnier</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Turnier.png"><img src="pictures/Regeln/Turnier.small.png" width="441" height="355" alt="Turnier"></a></div>
+
+    <dl>
+      <dt id="with_nines">mit Neunen</dt>
+      <dd>
+      Ob mit Neunen oder ohne Neunen gespielt wird.
+      </dd>
+
+      <!--
+      <dt class="ToDo" id="number_of_players">Spieleranzahl</dt>
+      <dd class="ToDo">
+      Wie viele Spieler insgesamt mitspielen dürfen.
+      Bisher sind nur vier erlaubt.
+      <br>
+      Wir wollen später auch mehr als vier Spieler zulassen, die überschüssigen Spieler setzen dann immer reihum aus.
+      </dd>
+
+      <dt class="ToDo" id="number_of_players_in_game">Spieleranzahl im Spiel</dt>
+      <dd class="ToDo">
+      Wieviele Spieler in einem Spiel mitspielen dürfen.
+      Es muß immer eine gerade Anzahl sein (damit die Karten aufgehen).
+      Bisher immer nur vier.
+      <br>
+      Es gibt auch die Doppelkopfvariante mit z.B. sechs Spielern, dabei werden drei Kartensätze gebraucht (d.h. jede Karte gibt es dreimal).
+      Ist auch irgendwann geplant.
+      <br>
+      Hat jemand erfahrung damit? Dann wären wir interessiert, worauf noch zu achten ist (z.B. sind da Soli noch sinnvoll?) und insbesondere, wie die Hochzeiten (also jemand hat mindestens zwei Kreuz Damen auf der Hand) gehandhabt werden.
+      Bitte uns <a href="mailto:free-doko-developer@sourceforge.net?subject=FreeDoko%20mit%20sechs%20Spielern">schreiben</a>.
+      </dd>
+      -->
+
+      <dt id="number_of_rounds_limited">beschränkte Rundenanzahl</dt>
+      <dd>
+      Ein Turnier endet nach einer festgesetzten Anzahl an Runden.
+      </dd>
+
+      <dt id="number_of_rounds">Rundenanzahl</dt>
+      <dd>
+      Nach wie vielen Runden das Turnier endet.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#number_of_rounds_limited">beschränkte Rundenanzahl</a>
+      </dd>
+
+      <dt id="limited_points">beschränkte Punkte</dt>
+      <dd>
+      Das Turnier endet, nachdem eine bestimmte Anzahl an Punkten vergeben wurde.
+      <br>
+      Diese Regel ist kombinierbar mit <a href="#number_of_rounds_limited">beschränkte Rundenanzahl</a>, das Turnier endet, wenn das erste Ereignis eintritt.
+      </dd>
+
+      <dt id="points">Punkte</dt>
+      <dd>
+      Wie viele Punkte im Turnier vergeben werden können (im Punktetopf sind).
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#limited_points">beschränkte Punkte</a>
+      </dd>
+
+      <dt id="number_of_duty_soli">Pflichtsoli</dt>
+      <dd>
+      Die Anzahl der Pflichtsoli, die gespielt werden müssen.
+      <br>
+      Hat ein Spieler bis zum Turnierende nicht seie Pflichtsoli gespielt wird er vorgeführt.
+      Das bedeutet, er muß als anschließend seine Solospiele abarbeite, auch bei einem schlechten Blatt.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#solo">Soli</a> sowie
+      <a href="#number_of_rounds_limited">beschränkte Rundenanzahl</a> oder
+      <a href="#limited_points">beschränkte Punkte</a>.
+
+      </dd>
+
+      <dt id="number_of_duty_color_soli">Pflicht-Farbsoli</dt>
+      <dd>
+      Wie viele der Pflichtsoli Farbsoli sein müssen
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#number_of_duty_soli">Pflichtsoli</a> und <a href="#solo_color">Farbsolo</a>.
+      </dd>
+
+      <dt id="number_of_duty_picture_soli">Pflicht-Bildsoli</dt>
+      <dd>
+      Wie viele der Pflichtsoli Bildsoli sein müssen
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#number_of_duty_soli">Pflichtsoli</a> und den <a href="#group_solo">Bildsoli</a>.
+      </dd>
+
+      <dt id="offer_duty_solo">Pflichtsolo anbieten</dt>
+      <dd>
+      Erlaubt es, beim Vorführen den anderen Spielern anzubieten, ein Solo zu spielen.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#number_of_duty_soli">Pflichtsoli</a>.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_counting">Zählung</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Zaehlung.png"><img src="pictures/Regeln/Zaehlung.small.png" width="441" height="355" alt="Zählung"></a></div>
+
+
+    <dl>
+      <dt id="counting">Zählart</dt>
+      <dd>
+      Wie gezählt werden soll.
+      Es gibt drei Arten der Zählung:
+      <dl>
+	<dt>Plus</dt>
+	<dd>Die Gewinner bekommen die Punkte gutgeschrieben</dd>
+	<dt>Minus</dt>
+	<dd>Die Velierer bekommen die Punkte abgezogen</dd>
+	<dt>Plus-minus</dt>
+	<dd>Die Gewinner bekommen die Punkte gutgeschrieben und die Verlierer abgezogen</dd>
+      </dl>
+      </dd>
+      <dt id="counting">Solo zählt immer dreifach</dt>
+      <dd>
+      Plus-Zählung: Ein verlorenes Solo zählt dreifach für die Kontra-Partei.<br>
+      Minus-Zählung: Ein gewonnenes Solo zählt dreifach für den Solo-Spieler.
+      </dd>
+
+      <dt id="bock">Bockrunden</dt>
+      <dd>
+      Ob es Bockrunden (d.h. Runden, in denen die Punktezahl verdoppelt wird) gibt
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#number_of_duty_soli">Pflichtsoli</a> und den <a href="#group_solo">Bildsoli</a>.
+      </dd>
+
+      <dt id="append_bock">Bockrunden anhängen</dt>
+      <dd>
+      Wenn aktiv, werden zusätzliche Bockrunden an schon bestehende angehängt.
+      Ansonsten vervielfachen sich die Bock-Multiplikatoren, also *2, *4, *8, *16, ....
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+
+      <dt id="after_120_120">Bock nach 120-120</dt>
+      <dd>
+      Es gibt eine Bockrunde nach einem <q>gespaltenen Arsch</q>, d.h. beide Teams haben genau 120 Punkte erreicht.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+
+      <dt id="after_lost_solo">Bock nach verlorenem Solo</dt>
+      <dd>
+      Es gibt eine Bockrunde nach einem verlorenem Solospiel.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+
+      <dt id="after_lost_re_contra">Bock nach verlorenem Re/Kontra</dt>
+      <dd>
+      Es gibt eine Bockrunde nach einer verlorenen Re' oder Kontra-Ansage.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+
+      <dt id="after_heart_trick">Bock nach Herzstich</dt>
+      <dd>
+      Es gibt eine Bockrunde nach einem Herzstich, also ein Stich, in dem nur Farb-Herzkarten enthalten sind.
+      Diese Regel macht vor allem Sinn, wenn es nur vier Herzkarten gibt, also <a href="#with_nines">ohne Neuner</a> und mit <a href="#dollen">Dollen</a> gespielt wird.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+
+      <dt id="after_black_game">Bock nach Schwarzspiel</dt>
+      <dd>
+      Es gibt eine Bockrunde nach einem Schwarzspiel, d.h. ein Team hat keinen Stich erhalten.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#bock">Bockrunden</a>.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_informations">Informationen</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Informationen.png"><img src="pictures/Regeln/Informationen.small.png" width="441" height="355" alt="Informationen"></a></div>
+    <dl>
+      <dt id="show_tricks_number">Anzahl der einsehbaren Stiche</dt>
+      <dd>
+      Dieser Wert gibt an, wieviele der in diesem Spiel gespielten Stiche Sie im nachhinein betrachten dürfen.
+      Nach den Turnierregeln ist nur der letzte Stich (1) erlaubt.
+      </dd>
+
+      <dt id="show_tricks_in_trickpiles">zeige Stiche in den Stichhaufen</dt>
+      <dd>
+      Gibt an, ob die Anzahl der gemachten Stiche jedes Spielers anhand der Stichhaufen erkennbar sein soll oder nicht.
+      </dd>
+
+      <dt id="show_trickpiles_points">zeige Punkte der Stichhaufen</dt>
+      <dd>
+      Damit wird auf jeden Stichhaufen eine Zahl angezeigt, die die in ihm enthaltenen Punkte angibt.
+      </dd>
+
+      <dt id="show_soloplayer_in_game">zeige Solospieler im Spiel</dt>
+      <dd>Erlaubt die Anzeige vom Solospieler im Spiel.</dd>
+
+      <dt id="show_known_teams_in_game">zeige bekannte Teams im Spiel</dt>
+      <dd>Erlaubt die Anzeige der bekannten Teams im Spiel.</dd>
+
+      <dt id="show_if_valid">zeige ob zulässig</dt>
+      <dd>
+      Mit dieser Regel wird gesteuert, ob der Spieler Hilfen zum Zeigen von zulässigen Karten bekommt.
+      Zum einen ändert der Mauszeiger seine Form, wenn die Maus über unzulässige Karten kommt
+      und zum zweiten kann die Einstellung <a href="settings.html#emphasize_valid_cards">hebe zulässige Karten hervor</a> wirken.
+      <br>
+      Im Moment geht es noch nicht, unzulässige Karten auszuspielen (die Aktion wird ignoriert).
+      </dd>
+
+      <dt id="show_all_hands">zeige alle Blätter</dt>
+      <dd>
+      Ob mit offenen Blättern gespielt werden darf.
+      Jeder Spieler, der dies nutzen möchte, muß noch zusätzlich die entsprechende <a href="settings.html#show_all_hands">Einstellung</a> aktivieren.
+      </dd>
+
+      <dt id="card_hint">Kartenvorschlag</dt>
+      <dd>
+      Hiermit darf die für den Spieler gewählte KI einen <a href="menu.html#card_suggestion">Vorschlag für die zu spielende Karte</a>.
+      </dd>
+
+      <dt class="ToDo" id="take_back_trick">Stiche zurücknehmen</dt>
+      <dd class="ToDo">
+      Erlaubt den Spieler, einen Stich zurückzunehmen.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_solo">Solo</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Solo.png"><img src="pictures/Regeln/Solo.small.png" width="441" height="355" alt="Solo"></a></div>
+
+    <p>
+    In dieser Rubrik können alle verschiedenen Solospiele erlaubt bzw. verboten werden.
+    </p>
+
+    <dl>
+      <dt id="solo">Solo</dt>
+      <dd>
+      Erlaubt Solospiele.
+      <br>
+      Alle folgenden Regeln in dieser Rubrik sind abhängig von dieser.
+      </dd>
+
+      <dt id="solo_color">Farbsolo</dt>
+      <dd>
+      Die Trümpfe sind wie im normalen Spiel (auch <a href="#dollen">Dollen</a>).
+      Statt Karo kann auch eine andere Grundfarbe gewählt werden.
+      <br>
+      Dies ist nicht die Variante, daß nur alle Karo-Karten Trumpf sind, die haben wir (noch) nicht.
+      </dd>
+
+      <dt id="solo_koehler">Köhler</dt>
+      <dd>
+      Alle Könige, Damen und Buben sind Trumpf.
+      </dd>
+
+      <dt id="solo_meatless">Fleischlos</dt>
+      <dd>
+      Es gibt kein Trumpf.
+      </dd>
+
+      <dt id="solo_jack">Buben-Solo</dt>
+      <dd>
+      Nur Buben sind Trumpf.
+      </dd>
+
+      <dt id="solo_queen">Damen-Solo</dt>
+      <dd>
+      Nur Damen sind Trumpf.
+      </dd>
+
+      <dt id="solo_king">Königen Solo</dt>
+      <dd>
+      Nur die Könige sind Trumpf.
+      </dd>
+
+      <dt id="solo_queen_jack">Damen-Buben-Solo</dt>
+      <dd>
+      Nur Damen und Buben sind Trumpf.
+      </dd>
+
+      <dt id="solo_king_jack">Königen-Buben-Solo</dt>
+      <dd>
+      Nur Könige und Buben sind Trumpf.
+      </dd>
+
+      <dt id="solo_king_queen">Königen-Damen-Solo</dt>
+      <dd>
+      Nur Könige und Damen sind Trumpf.
+      </dd>
+
+      <dt id="lustsolo_player_leads">Lustsolist ist Ausspieler</dt>
+      <dd>
+      Der Solospieler eines freiwilligen Solos beginnt das Spiel statt Vorhand.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_poverty">Armut</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Armut.png"><img src="pictures/Regeln/Armut.small.png" width="441" height="355" alt="Armut"></a></div>
+
+    <h3 id="throw">Schmeissen</h3>
+    <p>
+    Schmeissen von einem Spiel bedeutet, daß der Spieler die seine Armut ansagt und seine Karten offen auf den Tisch wirft.
+    Das Spiel wird anschließend neu ausgeteilt.
+    <br>
+    Ein Solospiel geht vor.
+    </p>
+
+    <dl>
+      <dt id="poverty">Armut</dt>
+      <dd>
+      Erlaubt eine Trumpfarmut.
+      Eine Trumpfarmut liegt vor, wenn ein Spieler höchstens drei Trumpfkarten auf der Hand hat (unabhängig von den Trumpfkarten).
+      <br>
+      Ist <a href="#shift_poverty">Armut schieben</a> aktiviert, dann wird die Armut geschoben, ansonsten wird geschmissen.
+      </dd>
+
+      <dt id="shift_poverty">Armut schieben</dt>
+      <dd>
+      Wenn ein Spieler eine Armut hat, kann er sie den Mitspielern anbieten (verdeckt).
+      Akzeptiert ein Spieler die Armut, nimmt dieser die Karten auf und gibt entsprechend Karten zurück, wobei gesagt wird, wieviele Trumpfkarten zurückgegeben werden.
+      Diese beiden Spieler spielen dann zusammen.
+      <br>
+      <a href="#swines">Schweine</a> und <a href="#hyperswines">Hyperschweine</a> können nicht zusammengeschoben werden.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#poverty">Armut</a>
+      </dd>
+
+      <dt id="shift_only_trump">nur Trümpfe schieben</dt>
+      <dd>
+      Standardmäßig werden bei einer Armut immer drei Karten geschoben, unabhängig von der Anzahl der Trümpfe (diese müssen aber immer dabei sein).
+      Alternativ kann angegeben werden, daß nur die Trumpfkarten geschoben werden.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#shift_poverty">Armut schieben</a>
+      </dd>
+
+      <dt id="poverty_fox_do_not_count">Füchse zählen nicht</dt>
+      <dd>
+      Bei der Zählung der Trümpfe zählen Füchse nicht.
+      Wurden <a href="#swines">Schweine</a> angesagt, zählen die Karo Asse mit.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#poverty">Armut</a>
+      </dd>
+
+      <dt id="poverty_fox_shift_extra">Füchse zusätzlich schieben</dt>
+      <dd>
+      Beim Schieben werden die Füchse nicht zu de drei erlaubten Schiebekarten mitgezählt.
+      Also können maximal fünf Karten geschoben werden.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#poverty_fox_do_not_count">Füchse zählen nicht</a> und <a href="#shift_only_trump">nur Trümpfe schieben</a>.
+      </dd>
+
+      <dt id="poverty_fox_shift_open">Füchse offen schieben</dt>
+      <dd>
+      Geschobene Füchse werden offen geschoben.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#shift_poverty">Armut schieben</a>
+      </dd>
+
+      <dt id="throw_with_one_trump">mit einem Trumpf schmeißen</dt>
+      <dd>
+      Wenn ein Spieler nur einen Trumpf oder gar keinen hat kann das Spiel auch geschmissen werden.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#shift_poverty">Armut schieben</a>
+      </dd>
+
+      <dt id="throw_with_nines">mit Neunen schmeißen</dt>
+      <dd>
+      Hat ein Spieler mindestens die in <a href="#min_number_of_throwing_nines">minimale Anzahl zu schmeißende Neunen</a> Neunen auf der Hand kann er das Spiel <a href="#throw">schmeißen</a>.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#with_nines">mit Neunen</a>
+      </dd>
+
+      <dt id="min_number_of_throwing_nines">minimale Anzahl zu schmeißende Neunen</dt>
+      <dd>
+      Gibt die minimale Anzahl an Neunen an, die ein Spieler auf der Hand braucht, um zu schmeißen.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#throw_with_nines">mit Neunen schmeißen</a>
+      </dd>
+
+      <dt id="throw_with_kings">mit Königen schmeißen</dt>
+      <dd>
+      Hat ein Spieler mindestens die in <a href="#min_number_of_throwing_kings">minimale Anzahl zu schmeißende Könige</a> Könige auf der Hand kann er das Spiel <a href="#throw">schmeißen</a>.
+      </dd>
+
+      <dt id="min_number_of_throwing_kings">minimale Anzahl zu schmeißende Könige</dt>
+      <dd>
+      Gibt die minimale Anzahl an Königen an, die ein Spieler auf der Hand braucht, um zu schmeißen.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#throw_with_kings">mit Königen schmeißen</a>
+      </dd>
+
+      <dt id="throw_with_nines_and_kings">mit Neunen und Königen schmeißen</dt>
+      <dd>
+      Hat ein Spieler mindestens die in <a href="#min_number_of_throwing_nines">minimale Anzahl zu schmeißende Neunen und Könige</a> Neunen und Könige auf der Hand kann er das Spiel <a href="#throw">schmeißen</a>.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#with_nines">mit Neunen</a>
+      </dd>
+
+      <dt id="min_number_of_throwing_nines_and_kings">minimale Anzahl zu schmeißende Neunen und Könige</dt>
+      <dd>
+      Gibt die minimale Anzahl an Neunen und Könige an, die ein Spieler auf der Hand braucht, um zu schmeißen.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#throw_with_nines_and_kings">mit Neunen und Königen schmeißen</a>
+      </dd>
+
+      <dt id="throw_with_richness">mit Reichtum schmeißen</dt>
+      <dd>
+      Hat ein Spieler mindestens die in <a href="#min_richness_for_throwing">minimale Punkte um zu schmeißen</a> Punkte auf der Hand kann er das Spiel <a href="#throw">schmeißen</a>.
+      </dd>
+
+      <dt id="min_throwing_richness">minimale Punkte um zu schmeißen</dt>
+      <dd>
+      Gibt die minimale Anzahl an Punkten an, die ein Spieler auf der Hand braucht, um zu schmeißen.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#throw_with_richness">mit Reichtum schmeißen</a>
+      </dd>
+
+      <dt id="throw_when_fox_is_highest_trump">schmeiße, wenn Fuchs höchster Trumpf</dt>
+      <dd>
+      Wenn der höchste Trumpf von einem Spieler ein (zwei) Fuchs (Karo As) ist kann er das Spiel <a href="#throw">schmeißen</a>.
+      </dd>
+    </dl>
+
+
+    <h2 id="group_marriage">Hochzeit</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Hochzeit.png"><img src="pictures/Regeln/Hochzeit.small.png" width="441" height="355" alt="Hochzeit"></a></div>
+
+    <dl>
+      <dt id="first_foreign">erster Fremde</dt>
+      <dd>
+      Erlaubt es, den Klärungstich auf den ersten fremden Stich zu setzen.
+      </dd>
+
+      <dt id="first_color">erster Farb</dt>
+      <dd>
+      Erlaubt es, den Klärungstich auf den ersten fremden Farbstich einzuschränken.
+      </dd>
+
+      <dt id="first_single_color">erster spezieller Farb</dt>
+      <dd>
+      Erlaubt es, den Klärungstich auf den ersten fremden Farbstich einer speziellen Farbe einzuschränken.
+      </dd>
+
+      <dt id="first_trump">erster Trumpf</dt>
+      <dd>
+      Erlaubt es, den Klärungstich auf den ersten fremden Trumpfstich einzuschränken.
+      </dd>
+
+      <dt id="marriage_determination">Hochzeitsklärung</dt>
+      <dd>
+      Dieses gibt an, welches der letzte Stich ist in dem der Hochzeitler einen Partner finden kann.
+      </dd>
+
+      <dt id="genscher">Genscher</dt>
+      <dd>
+      Ein Genscher liegt vor, wenn ein Spieler beide Karo Könige auf der Hand hat.
+      Dann darf er beim Ausspielen des ersten sich seinen Partner frei wählen.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_announcement">Ansagen</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Ansagen.png"><img src="pictures/Regeln/Ansagen.small.png" width="441" height="355" alt="Ansagen"></a></div>
+
+    <p>
+    Zu jeder Ansage kann angegeben werden, wie viele Karten ein Spieler maximal noch auf der Hand, um sie zu tätigen.
+    Anders formuliert: wie viele Stiche mit dem offenen noch zu spielen sind.
+    Um eine Ansage zu tätigen müssen auch alle vorherigen noch nicht getätigten Ansagen erlaubt sein.
+    <br>
+    Bei einer <a href="#group_marriage">Hochzeit</a> verschieben sich die Ansagepunkte um so viele Stiche, wie es gebraucht hat, die Hochzeit zu entscheiden.
+    </p>
+
+    <dl>
+      <dt id="announcement_knocking">Klopfen</dt>
+      <dd>
+      Bei Klopfen erfolgen Ansagen bei Normalspielen und stillen Hochzeiten ohne Bekanntgabe des Teams. Damit sind mehrere „keine 120“ möglich.
+      </dd>
+
+      <dt id="annoucement_no_120">keine 120</dt>
+      <dd>
+      Wann darf spätestens <em>Re</em> bzw. <em>Kontra</em> gesagt werden.
+      </dd>
+
+      <dt id="announcement_no_90">keine 90</dt>
+      <dd>
+      Wann darf spätestens <em>keine 90</em> gesagt werden.
+      </dd>
+
+      <dt id="announcement_no_60">keine 60</dt>
+      <dd>
+      Wann darf spätestens <em>keine 60</em> gesagt werden.
+      </dd>
+
+      <dt id="announcement_no_30">keine 30</dt>
+      <dd>
+      Wann darf spätestens <em>keine 30</em> gesagt werden.
+      </dd>
+
+      <dt id="announcement_no_0">schwarz</dt>
+      <dd>
+      Wann darf spätestens <em>schwarz</em> gesagt werden.
+      </dd>
+
+      <dt id="last_announcement">letzte Ansagemöglichkeit</dt>
+      <dd>
+      Gibt den spätesten Ansagezeitpunkt für alle Spiele an.
+      Nur interessant für <a href="#group_marriage">Hochzeiten</a> (s.o.).
+      </dd>
+
+      <dt id="announcement_till_full_trick">bis zum vollen Stich</dt>
+      <dd>
+      Beim spätesten Ansagezeitpunkt zählt auch die offen auf dem Tisch liegende Karte mit, d.h. man kann bis der Stich abgeräumt wird ansagen.
+      </dd>
+
+      <dt id="announcement_reply">Gegenansage</dt>
+      <dd>
+      Auf jede Absage (<em>keine 90</em>, <em>keine 60</em>, <em>keine 30</em>, <em>schwarz</em>) darf ein <em>doch</em> erwidert werden, sofern bisher keine Ansage getätigt wurde.
+      Die Gegenansage ist erlaubt bis zu einem Zeitpunkt später (d.h. einen Stich später), als die eigentliche Absage erlaubt gewesen wäre.
+      Siehe auch <a href="#announcement_re_must_get_120">Re/Kontra muß 120 Punkte erreichen</a>.
+      </dd>
+
+      <dt id="announcement_strict_limit">strikte Grenzen</dt>
+      <dd>
+      Wenn aktiv, dann müssen mit einer Re/Kontra-Ansage mindestens 121 bzw. 120 Punkte erreicht werden.
+      Eine <a href="#announcement_reply">Gegenansage</a> ist dann bindend für die entsprechende Punktezahl, auf die die Gegenansage erfolgt.
+      D.h. der Spieler gibt an, mindestens die Punkte zu erreichen, egal was die Gegner noch ansagen.
+      </dd>
+      <dd>
+      Ist die Regel nicht aktiv, dann darf immer auf eine An-/Absage der Gegner ein Re/Kontra angesagt werden.
+      Die Ansage bindet den Spieler nicht, d.h. wenn die Gegner noch tiefer absagen, dann gilt die Grenze für den Gewinn.
+      </dd>
+
+      <dt id="announcement_re_contra_doubles">Re/Kontra verdoppelt Punkte</dt>
+      <dd>
+      Anstatt daß es zwei Punkte für pro Re/Kontra-Ansage gibt werden die Punkte des Spiels (ohne <a href="#group_specialpoints">Sonderpunkte</a> verdoppelt.
+      </dd>
+
+      <dt id="contra_doubles_point_against_re">Kontra verdoppelt Punkte 'gegen die Alten'</dt>
+      <dd>
+      Der Punkt 'gegen die Alten' wird bei Kontra auch verdoppelt.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#announcement_re_contra_doubles">Re/Kontra verdoppelt Punkte</a>.
+      </dd>
+
+      <dt id="announcement_first_trick_thirty_points">erster Stich 30 Punkte</dt>
+      <dd>
+      Wenn im ersten Stich eines normalen Spieles 30 oder mehr Punkte liegen muß der Gewinner des Stiches <em>Re</em> bzw. <em>Kontra</em> ansagen.
+      </dd>
+
+      <dt id="announcement_first_trick_thirty_points_only_first">nur als erste Ansage</dt>
+      <dd>
+      Die Pflichtansage <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a> muß nur erfolgen, wenn sonst keine Ansage getätigt wurde.
+      <br>
+      Die Regel ist abhängig von der Regel <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a>.
+      </dd>
+
+      <dt id="announcement_first_trick_thirty_points_only_re_koontra">nur Re/Kontra</dt>
+      <dd>
+      Die Pflichtansage <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a> muß nur erfolgen, wenn die Partei des Spielers noch nicht Re/Kontra angesagt hat.
+      <br>
+      Die Regel ist abhängig von der Regel <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a>.
+      </dd>
+
+      <dt id="announcement_first_trick_thirty_points_in_marriage">in Hochzeit</dt>
+      <dd>
+      Die Pflichtansage <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a> muß auch in Hochzeiten erfolgen.
+      <br>
+      Die Regel ist abhängig von der Regel <a href="#announcement_first_trick_thirty_points">erster Stich 30 Punkte</a>.
+      </dd>
+
+    </dl>
+
+
+
+    <h2 id="group_dollen">Dollen</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Dollen.png"><img src="pictures/Regeln/Dollen.small.png" width="441" height="355" alt="Dollen"></a></div>
+
+    <dl>
+      <dt id="dollen">Dollen</dt>
+      <dd>
+      Die beiden Herz Zehnen (Dollen) sind Trümpfe. Sie werden über den Kreuz Damen angeordnet.
+      </dd>
+
+      <dt id="dollen_second_over_first">zweite Dolle über erste</dt>
+      <dd>
+      Werden beide Dollen in einem Stich ausgespielt, ist die zweite Dolle höher als die erste.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#dollen">Dollen</a>
+      </dd>
+
+      <dt id="dollen_contrary_in_last_trick">nicht im letzte Stich</dt>
+      <dd>
+      Ist die Regel <a href="#dollen_second_over_first">zweite Dolle über erste</a> aktiv, dann ist im letzten Stich die erste Dolle höher als die zweie, ansonsten geht im letzten Stich die zweite Dolle über die erste.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#dollen">Dollen</a>.
+      </dd>
+
+      <dt id="dollen_first_over_second_with_swines">bei Schweinen erste über zweite</dt>
+      <dd>
+      Bei Schweinen ist immer die erste Dolle höher als die zweite.
+      <br>
+      Diese Regel ist abhängig von allen <a href="#dollen">Dollen</a>-Regeln und der Regel <a href="#swines">Schweine</a>.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_swines">Schweine</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Schweine.png"><img src="pictures/Regeln/Schweine.small.png" width="441" height="355" alt="Schweine"></a></div>
+
+    <dl>
+      <dt id="swines">Schweine</dt>
+      <dd>
+      Hat ein Spieler beide Karo Asse, dann stehen diese über den Dollen (Kreuz Damen).
+      </dd>
+
+      <dt id="swines_in_solo">Schweine im Solo</dt>
+      <dd>
+      Gibt an, ob Schweine auch in <a href="#solo_color">Farbsolospielen</a> erlaubt sind.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#swines">Schweine</a> und <a href="#solo">Solo</a>.
+      </dd>
+
+      <dt id="swines_in_poverty">Schweine in Armut</dt>
+      <dd>
+      Gibt an, ob Schweine auch in der <a href="#shift_poverty">Schiebe-Armut</a> erlaubt sind.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#swines">Schweine</a> und <a href="#shift_poverty">Armut schieben</a>.
+      </dd>
+
+      <dt id="swines_announcement_begin">Ansage am Spielanfang</dt>
+      <dd>
+      Gibt an, ob ein Spieler seine Schweine am Spielanfang ansagen muß oder erst, wenn er sein erstes Schwein ausspielt.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#swines">Schweine</a>.
+      </dd>
+
+      <dt id="swines_only_second">nur zweites</dt>
+      <dd>
+      Ist nur das zweite Karo As ein Schwein, so muß der Spieler erst seinen ersten Fuch durchbringen, d.h. er muß vom eigenen Team gefangen werden, damit das zweite Karo As über den anderen Trümpfen steht.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#swines">Schweine</a>, <a href="#swines_announcement_begin">Ansage am Spielanfang</a> und <a href="#hyperswines">Hyperschweine</a>.
+      </dd>
+
+      <dt id="hyperswines">Hyperschweine</dt>
+      <dd>
+      Hat ein Spieler beide Karo Neunen und sind <a href="#swines">Schweine</a> angesagt, dann stehen die Hyperschweine (Karo Neunen) noch über den Schweinen.
+      Das Fangen eines Schweins gibt keinen <a href="#extrapoint_catch_fox">Sonderpunkt</a>.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#swines">Schweine</a> und <a href="#swines_only_second">Schweine: nur zweites</a>.
+      </dd>
+
+      <dt id="hyperswines_in_solo">Hyperschweine im Solo</dt>
+      <dd>
+      Gibt an, ob Hyperschweine auch in <a href="#solo_color">Farbsolospielen</a> erlaubt sind
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#hyperswines">Hyperschweine</a> und <a href="#swines_in_solo">Schweine im Solo</a>.
+      </dd>
+
+      <dt id="hyperswines_in_poverty">Hyperschweine in Armut</dt>
+      <dd>
+      Gibt an, ob Hyperschweine auch in der <a href="#shift_poverty">Schiebe-Armut</a> erlaubt sind.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#hyperswines">Hyperschweine</a> und <a href="#swines_in_poverty">Schweine in Armut</a>.
+      </dd>
+
+      <dt id="hyperswines_announcement_begin">Ansage am Spielanfang</dt>
+      <dd>
+      Gibt an, ob ein Spieler seine Hyperschweine am Spielanfang ansagen muß oder erst, wenn er sein erstes Hyperschwein ausspielt.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#hyperswines">hyperschweine</a> und <a href="#swines_announcement_begin">Schweine: Ansage am Spielanfang</a>.
+      </dd>
+
+      <dt id="swines_and_hyperswines_joint">gemeinsame Schweine und Hyperschweine</dt>
+      <dd>
+      Gibt an, ob ein Spieler <a href="#swines">Schweine</a> und <a href="#hyperswines">Hyperschweine</a> auf der Hand haben darf.
+      Wenn die Regel deaktiviert ist, darf ein Spieler, der <a href="#swines">Schweine</a> angesagt hat, keine <a href="#hyperswines">Hyperschweine</a> mehr ansagen, auch wenn er beide Trumpf-Neunen auf der Hand hat.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#hyperswines">Hyperschweine</a>.
+      </dd>
+    </dl>
+
+
+
+    <h2 id="group_specialpoints">Sonderpunkte</h2>
+
+    <div class="picture_center"><a href="pictures/Regeln/Sonderpunkte.png"><img src="pictures/Regeln/Sonderpunkte.small.png" width="441" height="355" alt="Sonderpunkte"></a></div>
+
+    <p>
+    Sonderpunkte können im Spiel gesammelt werden, diese werden zur Spieleauswertung hinzugezählt.
+    </p>
+
+    <dl>
+      <dt id="doppelkopf">Doppelkopf</dt>
+      <dd>
+      Ein Doppelkopf liegt vor, wenn in einem Stich mindestens 40 Punkte liegen (d.h. nur Asse und Zehnen im Stich sind).
+      Dieser Sonderpunkt ist nicht einstellbar.
+      </dd>
+
+      <dt id="extrapoint_catch_fox">Fuchs fangen</dt>
+      <dd>
+      Ein Karo As (Fuchs, kein <a href="#swines">Schwein</a>), das das eigene Team nicht in einem Stich gewinnt (durchbringt), ist ein Sonderpunkt für das gegnerische Team.
+      </dd>
+
+      <dt id="extrapoint_catch_fox_last_trick">Fuchs im letzten Stich fangen</dt>
+      <dd>
+      Im letzten Stich wird ein Fuchs (kein <a href="#swines">Schwein</a>) gefangen gibt einen weiteren Sonderpunkt.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#extrapoint_catch_fox">Fuchs fangen</a>.
+      </dd>
+
+      <dt id="extrapoint_fox_last_trick">Fuchs letzter Stich</dt>
+      <dd>
+      Der letzte Stich wird mit einem Fuchs (kein <a href="#swines">Schwein</a>) gewonnen.
+      </dd>
+
+      <dt id="extrapoint_double_fox_last_trick">beide Füchse letzter Stich</dt>
+      <dd>
+      Beide Füchse eines Teams fallen im letzten Stich und dieser Stich wird von dem Team gewonnen.
+      Dieser Sonderpunkt ist zusätzlich zu <a href="#extrapoint_fox_last_trick">Fuchs letzter Stich</a>
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#extrapoint_fox_last_trick">Fuchs letzter Stich</a>.
+      </dd>
+
+      <dt id="extrapoint_charlie">Karlchen</dt>
+      <dd>
+      Ein Karlchen (oder auch Karlchen Müller)ist ein Kreuz Bube im letzten Stich.
+      Wird mit diesem der letzte Stich gewonnen, dann gibt es einen Sonderpunkt.
+      Es muß also der Kreuz Bube die höchste Karte im Stich sein.
+      </dd>
+
+      <dt id="extrapoints_catch_charlie">Karlchen fangen</dt>
+      <dd>
+      Ein Karlchen wird vom anderen Team überstochen.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#extrapoint_charlie">Karlchen</a>.
+      </dd>
+
+      <dt id="extrapoint_double_charlie">Doppelkarlchen</dt>
+      <dd>
+      Beide Kreuz Buben eines Teams sind im letzten Stich die höchsten Karten.
+      Dieser Sonderpunkt zählt zusätzlich zu <a href="#extrapoint_charlie">Karlchen</a>.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#extrapoint_charlie">Karlchen</a>.
+      </dd>
+
+      <dt id="extrapoint_catch_double_charlie">Doppelkarlchen fangen</dt>
+      <dd>
+      Beide Karlchen eines Teams werden überstochen.
+      Dieser Sonderpunkt zählt zusätzlich zu <a href="#extrapoint_catch_charlie">Karlchen gefangen.</a>.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#extrapoint_double_charlie">Karlchen</a> und <a href="#extrapoint_catch_double_charlie">Doppelkarlchen fangen</a>.
+      </dd>
+
+      <dt id="extrapoint_dolle_jabs_dolle">Dollenschlag</dt>
+      <dd>
+      Die zweite <a href="#dollen">Dolle</a> in einem Stich sticht die erste.
+      Natürlich muß die gestochene Dolle dem gegenerischen Team gehören und die zweite Dolle muß höher als die erste sein.
+      <br>
+      Diese Regel ist abhängig von der Regel <a href="#dolle_second_over_first">zweite Dolle üer erste</a> oder <a href="#dolle_contrary_in_last_trick">Dollen: nicht im letzten Stich</a>.
+      </dd>
+
+      <dt id="extrapoint_heart_trick">Herzstich</dt>
+      <dd>
+      Wenn in einem Spiel mit nur vier Herzkarten (d.h. <a href="#with_nines">ohne Neunen</a> und mit <a href="#dollen">Dollen</a>) ein Herzstich glatt durchgeht (d.h. beide Herz Asse und Herz Könige sind im Stich), dann gibt es für das seltene Ereignis einen Sonderpunkt.
+      <br>
+      Diese Regel ist abhängig von den Regeln <a href="#with_nines">ohne Neunen</a> sowie <a href="#dollen">Dollen</a>.
+      </dd>
+    </dl>
+
+    <div class="Version">Version 0.7.7</div>
+
+  </body>
+</html>

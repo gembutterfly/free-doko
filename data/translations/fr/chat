@@ -1,0 +1,29 @@
+# FreeDoko translation: part chatting
+# language: french
+# version: 0.7.5
+
+chatter	= chatter
+
+# greeting of some hand-picked players
+Chat::Greeting::Odo \
+  = Salut brique !
+
+
+# game
+Chat::GameAction::Played::club queen \
+  = J'espère que tout le monde peut voir ça.
+
+
+Chat::Trick::specialpoints \
+  = J'aime les points spéciaux.
+
+Chat::Trick::ge 30 points \
+  = Merci pour les points.
+
+
+Chat::GameAction::Announcement::reply \
+  = Je ne pense pas...
+
+
+Chat::Game::won \
+  = Houra, j'ai gagné!

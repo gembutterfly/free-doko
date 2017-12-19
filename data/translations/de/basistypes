@@ -1,0 +1,185 @@
+# FreeDoko translation: part basistypes
+# language: deutsch
+# version: 0.7.5
+
+!input	"cards"
+
+# gamestatus
+GameStatus::program start		= Programmstart
+GameStatus::quit			= Programmende
+GameStatus::party new			= Turnier: neu
+GameStatus::party init			= Turnier: initialisieren
+GameStatus::party initial loaded	= Turnier: Anfang geladen
+GameStatus::party loaded		= Turnier: geladen
+GameStatus::party play			= Turnier: spielen
+GameStatus::party finished		= Turnier: zuende
+GameStatus::game new			= Spiel: neu
+GameStatus::game init			= Spiel: initilisieren
+GameStatus::game reservation		= Spiel: Vorbehalte
+GameStatus::game redistribute		= Spiel: Karten neu verteilen
+GameStatus::game start			= Spiel: Start
+GameStatus::game poverty shift		= Spiel: Trumpfarmut schieben
+GameStatus::game play			= Spiel: im Spiel
+GameStatus::game full trick		= Spiel: voller Stich
+GameStatus::game trick taken		= Spiel: Stich genommen
+GameStatus::game finished		= Spiel: Ende
+GameStatus::game closed 		= Spiel: geschlossen
+
+# team
+Team::team				= Team
+Team::re				= Re
+Team::contra				= Kontra
+Team::maybe re				= vielleicht Re
+Team::maybe contra			= vielleicht Kontra
+Team::unknown team			= unbekanntes Team
+Team::no team				= kein Team
+Team::-					= -
+Team::?					= ?
+Team::?re?				= ?Re?
+Team::?contra?				= ?Kontra?
+
+# gametype
+GameType::gametype			= Spieltyp
+GameType::normal			= normal
+GameType::thrown nines			= geworfene Neuner
+GameType::%tnumber% nines		= %tnumber% Neuner
+GameType::thrown kings			= geworfene Könige
+GameType::%tnumber% kings		= %tnumber% Könige
+GameType::thrown nines and kings	= geworfene Neuner und Könige
+GameType::%tnumber% nines and kings	= %tnumber% Neuner und Könige
+GameType::thrown richness		= geworfener Reichtum
+GameType::%upoints% richness		= %upoints% Punkte
+GameType::fox highest trump		= Fuchs höchster Trumpf
+GameType::poverty			= Armut
+GameType::genscher			= Genscher
+GameType::marriage			= Hochzeit
+GameType::marriage solo			= unerfüllte Hochzeit
+GameType::marriage silent		= stille Hochzeit
+GameType::solo jack			= Buben-Solo
+GameType::solo queen			= Damen-Solo
+GameType::solo king			= Königen-Solo
+GameType::solo queen-jack		= Damen-Buben-Solo
+GameType::solo king-jack		= Königen-Buben-Solo
+GameType::solo king-queen		= Königen-Damen-Solo
+GameType::solo koehler			= Köhler
+GameType::solo club			= Kreuz-Solo
+GameType::solo spade			= Pik-Solo
+GameType::solo heart			= Herz-Solo
+GameType::solo diamond			= Karo-Solo
+GameType::solo meatless			= Fleischlos
+GameType::Group::games			= Spiele
+GameType::Group::general		= allgemein
+GameType::Group::marriage		= Hochzeit
+GameType::Group::poverty		= Armut
+GameType::Group::solo			= Solo
+GameType::Group::Solo::color		= Farbsolo
+GameType::Group::Solo::picture		= Bildsolo
+GameType::Group::Solo::Picture::single	= Ein-Bildsolo
+GameType::Group::Solo::Picture::double	= Zwei-Bildsolo
+
+# announcement
+Announcement::announcement		= Ansage
+Announcement::no announcement		= keine Ansage
+Announcement::no 120			= keine 120
+Announcement::no 90			= keine 90
+Announcement::no 60			= keine 60
+Announcement::no 30			= keine 30
+Announcement::no 0			= schwarz
+Announcement::reply			= Gegenansage
+Announcement::no 120 reply		= doch 120
+Announcement::no 90 reply		= doch 90
+Announcement::no 60 reply		= doch 60
+Announcement::no 30 reply		= doch 30
+Announcement::no 0 reply		= doch Punkte
+
+# marriage selector
+MarriageSelector::silent		= still
+MarriageSelector::team set		= Team gesetzt
+MarriageSelector::first foreign		= erster Fremder
+MarriageSelector::first trump		= erster Trumpf
+MarriageSelector::first color		= erster Farb
+MarriageSelector::first club		= erster Kreuz
+MarriageSelector::first spade		= erster Pik
+MarriageSelector::first heart		= erster Herz
+
+# bock triggers
+BockTrigger::equal points                 = Gleichstand
+BockTrigger::solo lost                    = Solo verloren
+BockTrigger::re lost                      = Re verloren
+BockTrigger::contra lost                  = Contra verloren
+BockTrigger::heart trick                  = Herzstich
+BockTrigger::black                        = schwarz gespielt
+
+# specialpoint
+SpecialPoint::specialpoint		= Extrapunkt
+SpecialPoint::specialpoints		= Extrapunkte
+SpecialPoint::no specialpoint		= kein Extrapunkt
+SpecialPoint::caught fox		= Fuchs gefangen
+SpecialPoint::caught fox last trick	= Fuchs im letzten Stich gefangen
+SpecialPoint::fox last trick		= letzter Stich mit Fuchs
+SpecialPoint::double fox last trick	= letzter Stich mit Füchsen
+SpecialPoint::charlie			= Karlchen
+SpecialPoint::caught charlie		= Karlchen gefangen
+SpecialPoint::double charlie		= Doppelkarlchen
+SpecialPoint::caught double charlie	= Doppelkarlchen gefangen
+SpecialPoint::dolle caught dolle	= Dollenschlag
+SpecialPoint::heart trick		= Herzstich
+SpecialPoint::Doppelkopf		= Doppelkopf
+SpecialPoint::won			= gewonnen
+SpecialPoint::no 120			= keine 120
+SpecialPoint::no 90			= keine 90
+SpecialPoint::no 60			= keine 60
+SpecialPoint::no 30			= keine 30
+SpecialPoint::no 0			= schwarz
+SpecialPoint::no 120 won		= gegen kein 120 gewonnen
+SpecialPoint::against re won		= gegen Re gewonnen
+SpecialPoint::against contra won	= gegen Kontra gewonnen
+SpecialPoint::no 120 said		= keine 120 angesagt
+SpecialPoint::re said			= Re angesagt
+SpecialPoint::contra said		= Kontra angesagt
+SpecialPoint::no 120 said		= keine 120 angesagt
+SpecialPoint::no 90 said		= keine 90 angesagt
+SpecialPoint::no 60 said		= keine 60 angesagt
+SpecialPoint::no 30 said		= keine 30 angesagt
+SpecialPoint::no 0 said			= schwarz angesagt
+SpecialPoint::got 120 against no 90	= 120 Punkte gegen keine 90 erreicht
+SpecialPoint::got 90 against no 60	= 90 Punkte gegen keine 60 erreicht
+SpecialPoint::got 60 against no 30	= 60 Punkte gegen keine 30 erreicht
+SpecialPoint::got 30 against no 0	= 30 Punkte gegen schwarz erreicht
+SpecialPoint::no 120 reply said		= doch 120 angesagt
+SpecialPoint::no 90 reply said		= doch 90 angesagt
+SpecialPoint::no 60 reply said		= doch 60 angesagt
+SpecialPoint::no 30 reply said		= doch 30 angesagt
+SpecialPoint::no 0 reply said		= nicht schwarz angesagt
+SpecialPoint::contra won		= gegen die Alten gewonnen
+SpecialPoint::solo			= Solo
+SpecialPoint::bock			= Bock
+SpecialPoint::Group::winning		= Gewinnpunkte
+SpecialPoint::Group::announcement	= Ansage
+
+# player type
+Player::Type::type			= Spielertyp
+Player::Type::human			= Mensch
+Player::Type::ai			= Computer
+Player::Type::dummy ai			= dummer Spieler
+Player::Type::random ai			= Zufallsspieler
+Player::Type::network			= Netzwerk-Spieler
+
+# gametype actions
+GameplayAction::reservation		= Vorbehalt
+GameplayAction::marriage		= Hochzeit
+GameplayAction::genscher		= Genscher
+GameplayAction::poverty shift		= Armut: geschoben
+GameplayAction::poverty accepted	= Armut: angenommen
+GameplayAction::poverty returned	= Armut: zurückgeschoben
+GameplayAction::poverty denied		= Armut: abgelehnt
+GameplayAction::poverty denied by all	= Armut: von allen abgelehnt
+GameplayAction::announcement		= Ansage
+GameplayAction::swines			= Schweine
+GameplayAction::hyperswines		= Hyperschweine
+GameplayAction::card played		= Karte ausgespielt
+GameplayAction::trick open		= Stich eröffnet
+GameplayAction::trick full		= Stich voll
+GameplayAction::trick taken		= Stich genommen
+GameplayAction::check			= Überprüfen
+GameplayAction::print			= Ausgeben

@@ -1,0 +1,85 @@
+aktuell
+* Umstellung gtkmm 3
+  - utils.cpp: Pixbuf::render_pixmap_and_mask()
+  - splash_screen.cpp: Maske für das Fenster, rotes Füllen
+* make release anpassen (Pfade)
+* Text: Beschreibungen verkürzen (insbesondere für den Fehlerbericht)
+* mbrola: Sprachdateien
+* Sprachdateien: Lizenz
+* language_update -> translation_update
+* Kartensätze: viele rauswerfen, einige in besserer Qualität anbieten
+  - eventuell auch auf svg umsteigen
+  - https://commons.wikimedia.org/wiki/Poker_(cards_deck)
+  - https://commons.wikimedia.org/wiki/Category:OpenClipart_simple_playing_cards
+* Hintergründe und Kartenrückseiten durchgehen, überarbeiten, rauswerfen
+* Themen testen und korrigieren
+* Absturz bei einigen Kartensätzen
+
+Netzwerk
+* Doko-Lounge
+* - Zuschauer
+* - Mitspieler
+* FreeDoko anpassen
+* - Karten im Spiel verteilen
+
+technisch
+* make install: nicht neu kompilieren mit anderen Parametern. (siehe https://sourceforge.net/p/free-doko/discussion/118378/thread/31451164/?limit=25#90d9).
+* gnet: Auf gtkmm oder boost umstellen
+* log-Modus: automatisch einen Fehlerbericht erstellen und direkt in die Datei schreiben. Damit wird auch ein richtiger Absturz aufgezeichnet.
+* Spiel überspringen (Tunier fortsetzen)
+  über Crash-Log, darin den seed speichern
+* check_references
+  - beim ersten Fehler aufhören
+  - wenn Spiel beendet ist, Fehler
+* seed: schon bekannten überspringen (Wert + 1 nehmen)
+* Zufallsgenerator umstellen
+
+Verbesserungen KI
+* best winning card: lowest trump card limit
+* CardsInformation/TeamInformation: Gewichtung immer wieder neu, um alle Informationen einfließen lassen zu können (z.B. hat nur Kreuz Zehn, daher ist das kein Pfund)
+* ChooseBestCard (Weighting): Alle Karten durchprobieren auslagern (Code ist für alle gleich)
+  - Nicht: MonteCarlo: Jab or Serve
+* ChooseBestCard: Bei unbekannten Teams verschiedene Varianten durchprobieren
+* KI generell: restliche Stiche gehen an den Gegner (z.B. Schweine): pfunde noch dem eigenen Team (auch Herz Zehn). Beispiel: ../Bugreports/ai/Choosebestcard/GameTree/111096.BugReport.FreeDoko
+  Sollte vor allen Heuristiken greifen. Dabei auch prüfen, wie früh ich meine Punkte vergeben muss (bei drei Zehnen).
+* Endspielheuristiken
+  - Heuristik "von oben ziehen" (für Endspiel!)
+  - Karten gleich (da keine gegnerische dazwischen und gleiche Punkte, zum Beispiel Karo und Pik Dame: nimm die niedrige
+    o auch für ChooseBestCard: andere Karte nicht beachten
+* Gegen eine Armut werden alle Asse nacheinander gezogen. Richtig wäre, die Farben von unten anzuspielen und nicht zu wechseln.
+* Gegen eine Ansage wird immer noch Trumpf gezogen. Halte ich für falsch, weil der mit der Ansage ja mehr haben dürfte und dann eben zum Schluß alles einsackt.
+* einfache Heuristiken auch für das Endspiel
+  - nicht einstellbar, da *immer* gut
+  - immer zuerst prüfen
+  - serve color (wenn nur noch eine Farbe da ist: kleinste Farbkarte - beachte Doppelkopf)
+  - draw trump (wenn die höchsten Trümpfe auf der Hand sind: von oben herunter ziehen; beachte Doppelkopf, Karlchen, Fuchs letzter Stich
+  - nur noch eine Farbe, kein Trumpf mehr (also für Soli): wie draw trump
+  - nur noch zwei Farbkarten: wenn gleichwertig, nehme die, unter der keine andere ist; wenn Gegner Stich hat (also letzter Spieler): nehme die kleinere, wenn darunter keine andere ist
+  - nur noch gleiche Karten (z.B. zwei Damen, kein anderer Spieler hat Karten dazwischen): kleinere nehmen
+
+
+Verbesserungen UI>
+* Bug report: Teams der Spieler in Übersicht
+* Kartenvorschlag: gleich selber Karte wählen düfen (mehrere Threads)
+* Fehlermeldungen in ein Fenster zusammenfassen
+* FileMenu: Einträge sortieren
+* Kartensatz: Für die Voreinstellung die Größe anhand des Bildschirms auswählen. Eventuell statt 185 die Größe 175 anbieten. Statistiken über die Bildschirmgröße bei Webseiten raussuchen.
+
+Dokumentation
+* Statistiken in Dokumentation (Hochzeit, ...)
+* Anleitung zum Kompilieren
+
+Fehlerberichte
+* new Heuristics 123901
+* Heuristics: 001042 (Fleischlos)
+* Heuristics: 016746 (Damensolo)
+* CardsInformation: Hochzeitler im Klärungsstich gibt seine höchsten Punkte
+  ../Bugreports/ai/Heuristics/best_winning_card/259093.BugReport.FreeDoko
+
+DokoLounge
+* Doko zählt auch beim Solo
+
+
+gdb ./FreeDoko core -ex bt -ex q | cat
+valgrind --leak-check=yes --log-file=valgrind.out --suppressions=FD.supp --gen-suppressions=yes ./FreeDoko -
+valgrind --leak-check=yes --log-file=valgrind.out --suppressions=FD.supp ./FreeDoko -

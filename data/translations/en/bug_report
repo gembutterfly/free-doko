@@ -1,0 +1,68 @@
+# FreeDoko translation: bug report
+# language: english
+# version: 0.7.5
+
+BugReport::bug report			= bug report
+BugReport::create			= create bug report
+
+BugReport::generated error		= generated error
+
+BugReport::end				= end bug report
+
+BugReport::save			= \
+	The bug report will be saved in the directory 'FreeDoko.BugReports'. \n\
+	Please report, where you have found the bug \
+	and report the bug at our sourceforge site http://sourceforge.net/tracker/?func=add&group_id=38051&atid=421197 or \
+	send that file to 'freedoko@users.sourceforge.net'. \
+	The time, the version, your text and some informations of the game are appended to the file, that is written in the last line.\n\
+	The file can be deleted after sending. \n\
+	If you want a feedback to your bug report, please insert your email adress, so that we can assign the bug report.
+
+BugReport::created directory '%sdirectory%'	= \
+	Created directory '%sdirectory%' for the bug reports.
+
+BugReport::could not save at '%sfilename%', trying '%sfilename2%'. = \
+	Could not save the bug report at '%sfilename%', trying '%sfilename2%'.
+BugReport::could not save			= \
+	Could not save the bug report :-(. \n\
+        Please report manually.
+
+BugReport::write seed: %useed%			= \
+	Trying to output the seed: %useed%
+
+BugReport::write startplayer: %ustartplayer%	= \
+	Trying to output the startplayer: %ustartplayer%
+
+BugReport::bug found, create report, %scontact%	= \
+	An internal error has been found :-(\n\
+	Please create the bug report and send it to %scontact% to help us fix the error.\n\
+	Thank you.\n\n\
+	After generating the bug report the program will close itself.
+
+BugReport::message = \
+	Error description
+
+BugReport::automatic creation, %sfilename%, %scontact%	= \
+	Sorry, you have found a bug :-(\n\
+	A bug report is saved in the file '%sfilename%'.\n\
+	Please send it to %scontact%.\n\
+	Thank you.
+
+BugReport::automatic report creation failed		= \
+	Sorry, you have found a bug :-(\n\
+	A bug report cannot be generated, \
+	please give us the seed of the game and a description of your gameplay, so that we can reproduce the bug.\n\
+	Thank you.
+
+Press <Return> to display the bug report.	= \
+	Press <Return> to display the bug report.
+
+Press <Return> to exit.				= \
+	Press <Return> to exit.
+Press <Return> to create segmentation fault.	= \
+	Press <Return> to create segmentation fault.
+Creating segmentation fault.			= \
+	Creating segmentation fault.
+
+replayed bug report: %sbug report% = \
+        replayed bug report: %sbug report%

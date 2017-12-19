@@ -1,0 +1,15 @@
+Source: freedoko-manual-de
+Section: doc
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-manual-de
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Provides: freedoko-manual
+Depends: freedoko-manual-base
+Description: german manual for 'freedoko'
+ The manual is in html format.
+ The current version is always on http://free-doko.sourceforge.net/doc/manual/de/.

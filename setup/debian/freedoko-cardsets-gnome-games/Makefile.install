@@ -1,0 +1,19 @@
+PACKAGE=freedoko-cardsets-gnome-games
+include Makefile.install.directories
+
+# Edited for Debian GNU/Linux.
+DESTDIR = 
+
+
+.PHONY: all
+all :
+
+.PHONY: install
+install :
+	mkdir -p $(DESTDIR)/usr/share/doc/$(PACKAGE)
+	cp AUTHORS copyright $(DESTDIR)/usr/share/doc/$(PACKAGE)/
+	mkdir -p $(DESTDIR)/$(DATA_DIRECTORY)/cardsets
+	cp -r ./data/cardsets/gnome-games $(DESTDIR)/$(DATA_DIRECTORY)/cardsets/gnome-games
+	-chgrp -R games $(DESTDIR)/$(DATA_DIRECTORY)
+	-chmod -R ug+rX $(DESTDIR)/$(DATA_DIRECTORY)
+	-chmod -R o-rwx $(DESTDIR)/$(DATA_DIRECTORY)

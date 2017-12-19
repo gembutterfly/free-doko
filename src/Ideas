@@ -1,0 +1,97 @@
+/** @page ideas Ideas
+
+/------\
+| Borg |
+\------/
+- Ich habe 'Weighting' umgebaut. Die Klass dient jetzt als Basisklasse für die verschiedenen Gewichtungsverfahren. Eingebaut ist auch Thread-Unterstützung (max. so viele Threads wie Karten). Wäre schön, wenn Du VirtualGames und MonteCarlo entsprechend anpassen könntest (Beispiel: siehe GameTree). Ich steige nicht so schnell durch die Initialisierung durch.
+
+- Ai::checksolo()
+  Auch auf Hyperschweine überprüfen.
+  Du kannst übrigens den Spieltyp setzen: 'this->game().set_type(GAMETYPE::SOLO_HEART)', solltest den aber wieder zurücksetzen.
+
+- Bei Hochzeit: Für Re-Spieler alle anderen Spieler auf 'maybe contra' setzen.
+  Grund: Bei 'maybe re' (momentane Einstellung) schmiert der Hochzeitler den anderen Spielern, auch wenn die Hochzeit nicht geklärt ist. Die Heuristik 'play to marry' sollte das schmieren abfangen.
+  Beispiel: Heuristics/266080_4
+
+
+
+/---------\
+| Diether |
+\---------/
+
+* Bessere Fehlermeldung beim Problem beim Laden (insb. Logo, Kartensatz, Sprache)
+* Wenn kein Kartensatz gefunden: verständliche Meldung
+* Vorbehalt besser anzeigen
+* Tastaturbefehle für _alle_ Fenster
+  Karte spielen, ... nur für Hauptfenster
+* überprüfen: 180 Punkte gewonnen ohne Ansage, 181 mit Ansage
+* Netzwerk: Log speichern.
+* debian-Pakete testen (Kartensätze)
+* neues make target test_ai => gui=none, automatic bugreport generation
+* spezielle Übersetzung
+* Windows: -rpath -mwindows
+* Windows: Test: Sprache "default"
+* Windows Installer: Desktop-Symbol nur entfernen, wenn erstellt
+* CD: Altenburg raus, auch Installer (Einstellung: Kartensätze)
+* Teaminfo: Zahl, Farbe für Team in Spielfeld
+* Tunierstart: Symbol für Spielertyp: KI, Mensch, Netzwerk
+* X-Maus für FreeDoko-Fenster (Einstellung)
+
+* Tunierpunkte
+  - Felderbreite der Spieler gleichbreit
+  - beim Vergrößern alle Felder verbreiter
+  - senkrechte Linien
+  - Minuspunkte: rote Schriftfarbe
+  - Spielübersicht: Pfeile - voriges, nächstes
+  - Hintergrundfarbe
+
+* Sound
+  - doppelte Einträge rausfiltern
+  - general rausfiltern
+  - Bilder zur Auswahl
+
+* Einstellungen
+  - Vorschau bei Kartensätzen, Hintergründen
+  - doppelte Einträge rausfiltern
+
+* Testfall
+  1) Spieentscheidung
+  2) Ansage
+  3) Karten
+  - Informationen
+    o Regeln
+    o der Spieler (nicht alle)
+    o Spiel
+
+/-----------\
+| allgemein |
+\-----------/
+
+Nullspiel besser veranschaulichen
+
+Im Installer die einzelnen Card Sets vorstellen
+
+Hilfe, Unterstützunge, Konto -> Internetseite + Hilfe-Menü
+
+Haupfenster im Netzwerk blinken lassen, wenn man dran ist!
+
+Chat hervorheben ohne Fenster ?
+
+Fehlerbericht Dokumentation
+
+Heuristics für Komplettüberholung:
+best_winning_card (insbesondere auf der Basis oppositeTeamCanWinTrick)?
+
+Tests: 
+- ChooseBestCard auf letzter Karte (hier sollten eigentlich immer Heuristiken möglich sein)
+- ChooseBestCard auf erster Karte (hier sollten meistens Heuristiken möglich sein)
+
+Automatisch erzeugte Bugreports vorsortieren...Poverty, Announcement,...
+
+
+bei Heuristiken: Spieltyp überprüfen (insb. Solo-Heuristiken).
+Eventuel für die Heuristiken angeben, für welche Spiele die gelten und nur die dann bei der Auswahl anzeigen.
+
+Trickweigthing analog zu Heruistics aufbauen (activation, sorting)
+
+**/

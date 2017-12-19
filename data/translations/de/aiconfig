@@ -1,0 +1,183 @@
+# FreeDoko translation: part aiconfig
+# language: deutsch
+# version: 0.7.5
+
+
+aiconfig		= KI-Konfiguration
+aiconfigs		= KI-Konfigurationen
+
+!input "aiconfig.heuristics.description"
+
+AiConfig::difficulty				= Schwierigkeit
+AiConfig::Difficulty::custom			= individuell
+AiConfig::Difficulty::novice			= Anfänger
+AiConfig::Difficulty::standard defensive	= Standard defensiv
+AiConfig::Difficulty::standard offensive	= Standard offensive
+AiConfig::Difficulty::profi			= Profi
+AiConfig::Difficulty::profi aggressive		= Profi aggressiv
+AiConfig::Difficulty::profi unfair		= Profi unfair
+
+AiConfig::Group::data			= Daten
+AiConfig::Group::simple                 = einfach
+AiConfig::Group::aitype			= KI-Typ
+AiConfig::Group::announcement		= Ansagen
+AiConfig::Group::trick decision		= Stichentscheidung
+AiConfig::Group::game decision		= Spielentscheidung
+
+AiConfig::Group::heuristics		= Heuristiken
+AiConfig::HeuristicsMap::GametypeGroup::default		= Vorgabe
+AiConfig::HeuristicsMap::GametypeGroup::normal		= normales Spiel
+AiConfig::HeuristicsMap::GametypeGroup::marriage	= Hochzeit
+AiConfig::HeuristicsMap::GametypeGroup::silent marriage	= stille Hochzeit
+AiConfig::HeuristicsMap::GametypeGroup::undetermined marriage = Hochzeitsfindung
+AiConfig::HeuristicsMap::GametypeGroup::poverty		= Armut
+AiConfig::HeuristicsMap::GametypeGroup::soli		= Soli
+AiConfig::HeuristicsMap::GametypeGroup::soli color	= Farbsoli
+AiConfig::HeuristicsMap::GametypeGroup::soli single picture = einfache Bildsoli
+AiConfig::HeuristicsMap::GametypeGroup::soli double picture = doppelte Bildsoli
+AiConfig::HeuristicsMap::GametypeGroup::solo koehler	= Köhler
+AiConfig::HeuristicsMap::GametypeGroup::solo meatless	= Fleischlos
+AiConfig::HeuristicsMap::PlayerTypeGroup::re		= Re
+AiConfig::HeuristicsMap::PlayerTypeGroup::contra	= Kontra
+AiConfig::HeuristicsMap::PlayerTypeGroup::special	= Spezial
+
+AiConfig::Group::card limits		= Kartengrenzen
+AiConfig::CardLimit::Group::normal game		= normales Spiel
+AiConfig::CardLimit::Group::solo		= Solo
+AiConfig::CardLimit::Group::trump limit		= Entscheidungsgrenze
+AiConfig::CardLimit::Group::lowest trump limit	= niedrigste Entscheidungsgrenze
+
+
+# aitype
+AiConfig::aitype				= KI-Typ
+AiConfig::AiType::no choosebestcard		= kein KI-Typ
+AiConfig::AiType::random			= zufällig
+AiConfig::AiType::virtual games			= virtuelle Spiele
+AiConfig::AiType::gametree			= Spielbaum
+AiConfig::AiType::gametree with heuristics	= Spielbaum mit Heuristiken
+AiConfig::AiType::gametree for team		= Spielbaum für Team
+AiConfig::AiType::monte carlo			= Monte Carlo
+AiConfig::AiType::monte carlo - jab or serve	= Monte Carlo (stechen/bedienen)
+
+# rating
+AiConfig::rating				= Bewertung
+AiConfig::Rating::maximum			= Maximum
+AiConfig::Rating::minimum			= Minimum
+AiConfig::Rating::second maximum		= Zweitbester
+AiConfig::Rating::second minimum		= Zweitschlechtester
+AiConfig::Rating::average			= Durchschnitt
+AiConfig::Rating::physical average		= physikalischer Durchschnitt
+AiConfig::Rating::median			= Median
+AiConfig::Rating::linear			= Linear
+AiConfig::Rating::linear reverse		= Linear invers
+
+AiConfig::future limit			= Grenze für die Zukunftsberechnung
+
+AiConfig::trusting			= vertrauensvoll
+AiConfig::aggressive			= aggressiv
+AiConfig::teams known			= kennt alle Teams
+AiConfig::hands known			= kennt alle Blätter
+AiConfig::estimate hands		= schätzt andere Blätter
+AiConfig::first card fehl creation	= Erzeuge mit erster Karte Fehlfarbe
+AiConfig::remember tricks		= Anzahl erinnerter Stiche   
+
+AiConfig::game decision			= Spielentscheidung
+
+
+AiConfig::heuristics			= Heuristiken
+
+
+AiConfig::limit throw fehl \
+	= Maximale Stichpunkte um Fehlkarte abzuwerfen
+AiConfig::limit queen \
+	= Minimale Stichpunkte für bevorzugten Dameneinsatz
+AiConfig::limit dolle \
+	= Minimale Stichpunkte für bevorzugten Dolleneinsatz
+AiConfig::last fehlcreation \
+	= Letzter Stich, um Fehlfarbe zu erzeugen
+AiConfig::last tricks without heuristics \
+	= Letzte Stiche ohne Heuristik
+AiConfig::first trick for trump points optimization \
+	= Erster Stich zur Optimierung von Punkten gespielter Trumpfkarten
+AiConfig::announce limit \
+	= Minimaler Blattwert für Ansage
+AiConfig::announce limit reply \
+	= Minimaler Blattwert für Gegenansage
+AiConfig::announce limit decrement \
+	= Dekrement des Blattwertes für weitere Ansagen
+AiConfig::announce config \
+	= Blattwertmodifikator zur Konfiguration der Ansagefreudigkeit
+AiConfig::announce config reply \
+	= Blattwertmodifikator zur Konfiguration der Gegenansagefreudigkeit
+AiConfig::take poverty \
+	= Minimaler Blattwert für Armutaufnahme
+AiConfig::handvalue single solo \
+	= Minimaler Blattwert für Ansage eines einfachen Bildersolos
+AiConfig::handvalue double solo \
+	= Minimaler Blattwert für Ansage eines doppelten Bildersolos
+AiConfig::handvalue trible solo \
+	= Minimaler Blattwert für Ansage eines dreifachen Bildersolos
+AiConfig::handvalue color solo \
+	= Minimaler Blattwert für Ansage eines Farbsolo
+AiConfig::handvalue meatless \
+	= Minimaler Blattwert für Ansage eines Fleischlosen
+
+AiConfig::trump limit \
+	= Entscheidungsgrenze (anderer Spieler)
+AiConfig::lowest trump limit \
+	= Entscheidungsgrenze (selber)
+
+AiConfig::limit throwing \
+	= Minimale Teamkarte zum Pfunden
+AiConfig::trump limit normal \
+	= Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit normal \
+	= niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::limit high \
+	= kleinste Karte für starke Pfunde
+
+AiConfig::trump limit color \
+	= Farbsoli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit color \
+	= Farbsoli: niedrigste Karte bei best. Heuristiken zu spielen
+
+AiConfig::trump limit jack \
+	= Bubensoli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit jack \
+	= Bubensoli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit queen \
+	= Damensoli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit queen \
+	= Damensoli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit king \
+	= Königensoli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit king \
+	= Königensoli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit jack queen \
+	= Damen-Buben-Soli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit jack queen \
+	= Damen-Buben-Soli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit jack king \
+	= Königen-Buben-Soli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit jack king \
+	= Königen-Buben-Soli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit queen king \
+	= Königen-Damen-Soli: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit queen king \
+	= Königen-Damen-Soli: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit koehler \
+	= Köhler: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit koehler \
+	= Köhler: niedrigste Karte bei best. Heuristiken zu spielen
+AiConfig::trump limit meatless \
+	= Fleischlos: Entscheidungskarte für Heuristiken
+AiConfig::lowest trump limit meatless \
+	= Fleischlos: niedrigste Karte bei best. Heuristiken zu spielen
+
+
+AiConfig::Heuristic::Group::normal game		= Normalspiele
+AiConfig::Heuristic::Group::poverty		= Armut
+AiConfig::Heuristic::Group::solo		= Soli
+AiConfig::Heuristic::Group::Solo::color		= Farbsoli
+AiConfig::Heuristic::Group::Solo::picture	= Bildsoli
+AiConfig::Heuristic::Group::Solo::meatless	= Fleischlos

@@ -1,0 +1,292 @@
+#!/bin/sh
+
+#wtow cards_distributed  cards distributed
+#wtow trick_move_in_pile trick move in pile
+#wtow card_played        card played
+
+ROOT=/usr/share/mbrola   # Where are the needed files?
+VOICE=$ROOT/de3/de3             # Path to the mbrola-voice
+SEX=m                           # m/f Which sex has your voice?
+
+# word to wav converter
+# 1. argument: sex
+# 2. argument: filename
+# + arguements: text
+function wtow {
+file=$1
+shift
+#echo $@
+echo $@ \
+| sed 's/@/ ät /g' \
+| $ROOT/pipefilt \
+| $ROOT/preproc $ROOT/Rules.lst $ROOT/Hadifix.abk \
+| $ROOT/txt2pho -$SEX -p $ROOT/data/ \
+| $ROOT/mbrola $VOICE - -.au \
+| sox -t au - $file.wav
+#aplay -q -t au -"
+} # function wtow
+
+
+# create english texts
+function create_sounds_en
+{
+  wtow re_won            re has won
+  wtow contra_won        contra has win
+  wtow soloplayer_won    the soloplayer has won
+  wtow soloplayer_lost   the soloplayer has lost
+  wtow no_winner         nobody has won
+
+  wtow reservation       reservation
+  wtow no_reservation    no reservation
+
+  wtow poverty           poverty
+  wtow poverty_denied    no
+  wtow poverty_accepted  poverty accepted
+  wtow swines            swines
+  wtow hyperswines       hyperswines
+
+  wtow re             re
+  wtow contra         Kontra
+  wtow no_120         no 120
+  wtow no_90          no 90
+  wtow no_60          no 60
+  wtow no_30          no 30
+  wtow no_0           blank
+  wtow no_120_reply   sure 120
+  wtow no_90_reply    sure 90
+  wtow no_60_reply    sure 60
+  wtow no_30_reply    sure 30
+  wtow no_0_reply     sure tricks
+
+  wtow thrown_nines             too many nines
+  wtow thrown_kings             too many kings
+  wtow thrown_nines_and_kings   too many nines and kings
+  wtow fox_highest_trump        fox is highest trump
+  wtow poverty                  poverty
+  wtow genscher                 genscher
+  wtow marriage                 marriage
+  wtow marriage_solo            marriage solo
+  wtow marriage_silent          silent marriage
+  wtow solo_jack                jacksolo
+  wtow solo_queen               queen solo
+  wtow solo_king                king solo
+  wtow solo_queen-jack          jack-queen-solo
+  wtow solo_king-jack           jack-king-solo
+  wtow solo_king-queen          queen-king-solo
+  wtow solo_koehler             Köhler
+  wtow solo_club                club solo
+  wtow solo_spade               spade solo
+  wtow solo_heart               heart solo
+  wtow solo_diamond             diamond solo
+  wtow solo_meatless            meatless
+
+  wtow first_foreign            first foreign
+  wtow first_trump              first trump
+  wtow first_color              first color
+  wtow first_club               first club
+  wtow first_spade              first spade
+  wtow first_heart              first heart
+
+} # function create_sounds_en
+
+# create german texts
+function create_sounds_de
+{
+  wtow re_won            Re hat gewonnen
+  wtow contra_won        Kontra hat gewonnen
+  wtow soloplayer_won    Der Solospieler hat gewonnen
+  wtow soloplayer_lost   Der Solospieler hat verloren
+  wtow no_winner         keiner hat gewonnen
+
+  wtow reservation       Vorbehalt
+  wtow no_reservation    gesund
+
+  wtow poverty           Armut
+  wtow poverty_denied    Nein
+  wtow poverty_accepted  Armut angenommen
+  wtow swines            Schweine
+  wtow hyperswines       Hyperschweine
+
+  wtow re             re
+  wtow contra         kontra
+  wtow no_120         keine 120
+  wtow no_90          keine 90
+  wtow no_60          keine 60
+  wtow no_30          keine 30
+  wtow no_0           schwarz
+  wtow no_120_reply   doch 120
+  wtow no_90_reply    doch 90
+  wtow no_60_reply    doch 60
+  wtow no_30_reply    doch 30
+  wtow no_0_reply     doch Stiche
+
+  wtow thrown_nines             zu viele Neuner
+  wtow thrown_kings             zu viele Könige
+  wtow thrown_nines_and_kings   zu viele Neuner und Könige
+  wtow fox_highest_trump        Fuchs höchster Trumpf
+  wtow poverty                  Armut
+  wtow genscher                 Genscher
+  wtow marriage                 Hochzeit
+  wtow marriage_solo            Hochzeitssolo
+  wtow marriage_silent          stille Hochzeit
+  wtow solo_jack                Bubensolo
+  wtow solo_queen               Damensolo
+  wtow solo_king                Königensolo
+  wtow solo_queen-jack          Buben-Damen-Solo
+  wtow solo_king-jack           Buben-Königen-Solo
+  wtow solo_king-queen          Damen-Königen-Solo
+  wtow solo_koehler             Köhler
+  wtow solo_club                Kreuz-Solo
+  wtow solo_spade               Pik-Solo
+  wtow solo_heart               Herz-Solo
+  wtow solo_diamond             Karo-Solo
+  wtow solo_meatless            Fleischlos
+
+  wtow first_foreign            erster fremde
+  wtow first_trump              erster Trumpf
+  wtow first_color              erster Farb
+  wtow first_club               erster Kreuz
+  wtow first_spade              erster Pik
+  wtow first_heart              erster Herz
+
+} # function create_sounds_de
+
+# create old german texts
+function create_sounds_de_alt
+{
+  dir=$1
+  echo $dir
+  wtow re_won            Re hat gewonnen
+  wtow contra_won        Kontra hat gewonnen
+  wtow soloplayer_won    Der Solospieler hat gewonnen
+  wtow soloplayer_lost   Der Solospieler hat verloren
+  wtow no_winner         keiner hat gewonnen
+
+  wtow reservation       Vorbehalt
+  wtow no_reservation    gesund
+
+  wtow poverty           Armut
+  wtow poverty_denied    Nein
+  wtow poverty_accepted  Armut angenommen
+  wtow swines            Schweine
+  wtow hyperswines       Hyperschweine
+
+  wtow re             re
+  wtow contra         kontra
+  wtow no_120         keine 120
+  wtow no_90          keine 90
+  wtow no_60          keine 60
+  wtow no_30          keine 30
+  wtow no_0           schwarz
+  wtow no_120_reply   doch 120
+  wtow no_90_reply    doch 90
+  wtow no_60_reply    doch 60
+  wtow no_30_reply    doch 30
+  wtow no_0_reply     doch Stiche
+
+  wtow thrown_nines             zu viele Neuner
+  wtow thrown_kings             zu viele Könige
+  wtow thrown_nines_and_kings   zu viele Neuner und Könige
+  wtow fox_highest_trump        Fuchs höchster Trumpf
+  wtow poverty                  Armut
+  wtow genscher                 Genscher
+  wtow marriage                 Hochzeit
+  wtow marriage_solo            Hochzeitssolo
+  wtow marriage_silent          stille Hochzeit
+  wtow solo_jack                Untersolo
+  wtow solo_queen               Obersolo
+  wtow solo_king                Königensolo
+  wtow solo_queen-jack          Unter-Ober-Solo
+  wtow solo_king-jack           Unter-Königen-Solo
+  wtow solo_king-queen          Ober-Königen-Solo
+  wtow solo_koehler             Köhler
+  wtow solo_club                Eichel-Solo
+  wtow solo_spade               Gras-Solo
+  wtow solo_heart               Herz-Solo
+  wtow solo_diamond             Schellen-Solo
+  wtow solo_meatless            Fleischlos
+
+  wtow first_foreign            erster fremde
+  wtow first_trump              erster Trumpf
+  wtow first_color              erster Farb
+  wtow first_club               erster Eichel
+  wtow first_spade              erster Gras
+  wtow first_heart              erster Herz
+
+} # function create_sounds_de_alt
+
+echo "create german sounds"
+mkdir -p de/
+pushd .
+cd de/
+for v in de1 de2 de3 de5 de8; do
+  echo "  voice $v"
+  VOICE=/usr/share/mbrola/$v/$v
+  mkdir -p male/mbrola.$v
+  cd male/mbrola.$v
+  SEX=m
+  create_sounds_de
+  cd - >/dev/null
+  mkdir -p female/mbrola.$v
+  cd female/mbrola.$v
+  SEX=f
+  create_sounds_de
+  cd - >/dev/null
+done
+cp -r male/mbrola.de2 male/mbrola
+cp -r female/mbrola.de3 female/mbrola
+mkdir -p general/
+cp male/contra_won.wav male/no_winner.wav  male/re_won.wav general/
+popd >/dev/null
+
+echo "create old german sounds"
+mkdir -p de-alt/
+pushd .
+cd de-alt/
+for v in de1 de2 de3 de5 de8; do
+  echo "  voice $v"
+  VOICE=/usr/share/mbrola/$v/$v
+  mkdir -p male/mbrola.$v
+  cd male/mbrola.$v
+  SEX=m
+  create_sounds_de_alt
+  cd - >/dev/null
+  mkdir -p female/mbrola.$v
+  cd female/mbrola.$v
+  SEX=f
+  create_sounds_de_alt
+  cd - >/dev/null
+done
+cp -r male/mbrola.de2 male/mbrola
+cp -r female/mbrola.de3 female/mbrola
+mkdir -p general/
+cp male/contra_won.wav male/no_winner.wav  male/re_won.wav general/
+popd >/dev/null
+
+
+echo "create english sounds"
+mkdir -p en/
+pushd .
+cd en/
+for v in us1 us2 us3; do
+  echo "  voice $v"
+  VOICE=/usr/share/mbrola/$v/$v
+  mkdir -p male/mbrola.$v
+  cd male/mbrola.$v
+  SEX=m
+  create_sounds_en
+  cd - >/dev/null
+  mkdir -p female/mbrola.$v
+  cd female/mbrola.$v
+  SEX=f
+  create_sounds_en
+  cd - >/dev/null
+done
+cp -r male/mbrola.us3 male/mbrola
+cp -r female/mbrola.us3 female/mbrola
+mkdir -p general/
+cp male/mbrola/contra_won.wav \
+   male/mbrola/no_winner.wav \
+   male/mbrola/re_won.wav \
+   general/
+popd >/dev/null

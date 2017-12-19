@@ -1,0 +1,94 @@
+\documentclass[11pt,twocolumn,landscape]{scrartcl}
+
+\usepackage{FreeDoko}
+
+\svnInfo $Id$
+
+% Keine Einrückung am Anfang eines Absatzes
+\setlength{\parindent}{0pt}
+% Zwischen Absätzen eine halbe Zeile Abstand
+\KOMAoptions{parskip=half}
+% Abstand zwischen den beiden Spalten
+\setlength{\columnsep}{3em}
+
+\renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont\textit{#1}}
+
+\begin{document}
+\thispagestyle{empty}
+\paragraph{Kartenreihenfolge:}~
+
+\begin{tabular}{lr|lr}
+Trumpf & Wert & Farbe & Wert\\
+\hline
+Herz Zehn & 10 &  &      \\
+%          &    &  &      \\
+Kreuz Dame & 3 &  Kreuz As & 11\\
+Pik Dame & 3   &  Kreuz Zehn & 10\\
+Herz Dame & 3  &  Kreuz König & 4\\
+Karo Dame & 3  &Kreuz Neun  & 0\\
+%          &    &           & \\
+Kreuz Bube& 2  &   Pik As & 11\\
+Pik Bube  & 2  &  Pik Zehn & 10\\
+Herz Bube & 2  &  Pik König & 4\\
+Karo Bube & 2  &  Pik Neun   & 0\\
+%          &    &            & \\
+Karo As   & 11 & Herz As    & 11\\
+Karo Zehn & 10 &            & \\
+Karo König & 4 & Herz König& 4\\
+Karo Neun   & 0 & Herz Neun  &0\\
+\end{tabular}
+
+\paragraph{Sonderregeln}
+\begin{compactdesc}
+\item[Fuchs:] ein einzelnes Trumpf Karo As, das die Gegenpartei in einem Stich gewinnt, gibt einen Sonderpunkt
+\item[Schweine:] beide Trumpf Asse auf einer Hand werden zu den höchsten Trümpfen (über den Herz Zehnen)
+\item[Armut:] (ein Solo geht vor)
+\begin{compactitem}
+\item 3 Trümpfe oder weniger: Trümpfe verdeckt auf den Tisch legen, Partner ist der Spieler, der diese auf nimmt und entsprechend viele
+beliebige Karten zurück gibt (dabei sagt er an wieviele Trümpfe er zurück gibt)
+\item 5 Neunen oder mehr: es wird neu gegeben
+\end{compactitem}
+\item[Hochzeit:] Beide Kreuz Damen auf einer Hand: der Spieler darf ein Kriterium angeben, das entscheidet, wer mit ihm zusammen spielt
+(erster fremder Stich, erster fremder Pik Stich, ...)
+\end{compactdesc}
+
+\pagebreak
+\paragraph{Ansagen}~
+
+\begin{tabular}{lll}
+Bis Stichnr. & Ansage & Bedeutung\\\hline
+2 & Re  & Kreuz Dame \\
+  &     & keine 120 Punkte für Gegner\\
+2 & Kontra & gegen die Kreuz Damen \\
+  &        & keine 120 Punkte für Gegner\\
+3 & keine 90 & keine 90 Punkte für Gegner\\
+6 & keine 60 & keine 60 Punkte für Gegner\\
+9 & keine 30 & keine 30 Punkte für Gegner\\
+9 & Schwarz & keinen Stich für Gegner\\
+\end{tabular}
+
+Wenn der erste Stich 30 oder mehr Punkte hat, muß der Gewinner dieses Stiches
+Re oder Kontra ansagen.
+
+Re und Kontra verdoppeln den Wert des Spieles. Alle anderen Ansagen sind ein
+Extrapunkt für die Gewinnerpartei.
+
+In der Reihenfolge der Ansagen darf keine ausgelassen werden.
+
+\paragraph{Soli}
+\begin{compactdesc}
+\item[Karosolo:] nichts ändert sich
+\item[Farbsolo:] eine Farbe ersetzt die Karo-Karten als Trümpfe
+\item[Damensolo:] nur Damen sind Trumpf
+\item[Bubensolo:] nur Buben sind Trumpf
+\item[Damen-Buben-Solo:] nur Damen und Buben sind Trumpf
+\item[Köhler:] nur Könige, Damen und Buben sind Trumpf
+\item[Fleischloser:] es gibt keine Trümpfe
+\item[verdecktes Solo:] man hat eine Hochzeit und sagt diese nicht an
+\end{compactdesc}
+
+Jedes Solo zählt für den Solospieler dreifach.
+
+Alle nicht mehr benötigten Trümpfe werden gegebenfalls eingereiht. Reihenfolge:
+As, Zehn, König, Dame, Bube, Neun.
+\end{document}

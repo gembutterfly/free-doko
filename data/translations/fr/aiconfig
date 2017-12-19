@@ -1,0 +1,485 @@
+# FreeDoko translation: part aiconfig
+# language: français
+# version: 0.7.5
+
+
+aiconfig		= intelligence artificielle
+aiconfigs		= intelligences artificielles
+
+
+
+AiConfig::difficulty				= difficulté
+AiConfig::Difficulty::custom = personnalisée
+AiConfig::Difficulty::novice = novice
+AiConfig::Difficulty::standard defensive = standard défensif
+AiConfig::Difficulty::standard offensive = standard offensif
+AiConfig::Difficulty::profi = confirmé
+AiConfig::Difficulty::profi aggressive		= profi aggressive***
+AiConfig::Difficulty::profi unfair		= confirmé et pas cool
+AiConfig::Group::data			= données
+AiConfig::Group::simple = simple
+AiConfig::Group::aitype			= Type d'Intelligence artificielle
+AiConfig::Group::announcement		= annonces
+AiConfig::Group::trick decision		= décision de la levée
+AiConfig::Group::game decision		= décision du jeu
+
+AiConfig::Group::heuristics		= heuristiques
+AiConfig::Heuristic::Group::normal game	= jeu normal
+AiConfig::Heuristic::Group::poverty	= misère
+AiConfig::Heuristic::Group::solo		= solo
+AiConfig::Heuristic::Group::Solo::color		= couleur
+AiConfig::Heuristic::Group::Solo::picture	= figure
+AiConfig::Heuristic::Group::Solo::meatless	= sans atout
+
+AiConfig::HeuristicsMap::GametypeGroup::default		= default
+AiConfig::HeuristicsMap::GametypeGroup::normal		= jeu normal
+AiConfig::HeuristicsMap::GametypeGroup::marriage	= mariage
+AiConfig::HeuristicsMap::GametypeGroup::silent marriage	= mariage silencieux
+AiConfig::HeuristicsMap::GametypeGroup::undetermined marriage = détermination du mariage
+AiConfig::HeuristicsMap::GametypeGroup::poverty		= misère
+AiConfig::HeuristicsMap::GametypeGroup::soli		= solo
+AiConfig::HeuristicsMap::GametypeGroup::soli color	= couleur
+AiConfig::HeuristicsMap::GametypeGroup::soli single picture = soli figure simple
+AiConfig::HeuristicsMap::GametypeGroup::soli double picture = soli figure double
+AiConfig::HeuristicsMap::GametypeGroup::solo koehler	= figures
+AiConfig::HeuristicsMap::GametypeGroup::solo meatless	= sans atout
+AiConfig::HeuristicsMap::PlayerTypeGroup::re		= re
+AiConfig::HeuristicsMap::PlayerTypeGroup::contra	= contre
+AiConfig::HeuristicsMap::PlayerTypeGroup::special	= special
+
+AiConfig::Group::card limits		= limite des cartes
+AiConfig::CardLimit::Group::normal game		= jeu normal
+AiConfig::CardLimit::Group::solo		= solo
+AiConfig::CardLimit::Group::trump limit		= limite des atouts
+AiConfig::CardLimit::Group::lowest trump limit	= limite inférieure des atouts
+
+
+# aitype
+AiConfig::aitype				= IA
+AiConfig::AiType::no choosebestcard		= pas d'intelligence artificielle
+AiConfig::AiType::random			= au hasard
+AiConfig::AiType::virtual games			= jeux virtuels
+AiConfig::AiType::gametree			= arbre de jeu
+AiConfig::AiType::gametree with heuristics	= arbre de jeu avec heuristiques
+AiConfig::AiType::gametree for team		= arbre de jeu pour l'équipe
+AiConfig::AiType::monte carlo			= monte carlo
+AiConfig::AiType::monte carlo - jab or serve	= Monte Carlo (jab/serve)***
+
+# rating
+AiConfig::rating				= taux
+AiConfig::Rating::maximum			= maximum
+AiConfig::Rating::minimum			= minimum
+AiConfig::Rating::second maximum		= second maximum
+AiConfig::Rating::second minimum		= second minimum
+AiConfig::Rating::average			= moyenne
+AiConfig::Rating::physical average		= moyenne physique
+AiConfig::Rating::median			= mediane
+AiConfig::Rating::linear			= lineaire
+AiConfig::Rating::linear reverse		= opposé lineaire
+
+AiConfig::future limit			= limite pour le calcul des prochaines levées
+
+AiConfig::trusting			= confiance
+AiConfig::aggressive			= aggressive***
+AiConfig::hands known			= knows the hands of the other players***
+AiConfig::teams known			= knows the teams of the other players***
+AiConfig::estimate hands		= estimate the hands of the other players***
+AiConfig::first card fehl creation	= Création d'une 'Fehlcard' avec la première carte
+AiConfig::remember tricks		= nombre de levées mémorisées
+AiConfig::game decision           = Decision de jeu
+
+AiConfig::heuristics              = Heuristiques
+
+
+AiConfig::Heuristic::no heuristic \
+	= pas d'heuristique
+AiConfig::Heuristic::Description::no heuristic \
+	= pas d'heuristique
+
+AiConfig::Heuristic::manual \
+	= manuel
+AiConfig::Heuristic::Description::manual \
+	= Carte jouée manuellement
+
+AiConfig::Heuristic::bug report \
+	= carte du rapport de bug
+AiConfig::Heuristic::Description::bug report \
+	= carte du rapport de bug
+
+AiConfig::Heuristic::let trick pass \
+	= laisser passer la levée
+AiConfig::Heuristic::Description::let trick pass =\
+	pas assez de points pour remporter la levée, défausser\n\n\
+	* troisième ou quatrième jouer sur la levée\n\
+	* Il n'y a pas beaucoup de points dans cette levée\n\
+	* ne peut pas fournir de la couleur demandée\n\
+	\nAction: Jouer la meilleure défausse
+
+AiConfig::Heuristic::get trick for announcement \
+	= indice pour l'annonce
+AiConfig::Heuristic::Description::get trick for announcement \
+	= indice pour l'annonce
+
+AiConfig::Heuristic::start with low color \
+	= start with low color***
+AiConfig::Heuristic::Description::start with low color =\
+	Start the trick with a low color to find the partner\n\n\
+	\nAction: when a singleton color card is found, take it\
+	\nAction: take smallest card from the longest color***
+
+AiConfig::Heuristic::start with low trump \
+	= start with low trump***
+AiConfig::Heuristic::Description::start with low trump =\
+	Start the trick with a low trump to find the partner\n\n\
+	\nAction: with enough trumps take a small trump***
+
+AiConfig::Heuristic::play to jab later \
+	= play to jab later***
+AiConfig::Heuristic::Description::play to jab later =\
+	play low trump to jab later with high trump\n\n\
+	* startcard\n\
+	* only trumps on the hand\n\
+	\nAction: play a low trump***
+
+AiConfig::Heuristic::play for partner worries \
+	= jouer pour les cartes gênantes du partenaire
+AiConfig::Heuristic::Description::play for partner worries =\
+	Jouer de manière à remporter la levée afin que le partenaire puisse se défausser de ses cartes gênantes
+
+
+AiConfig::Heuristic::start with color \
+	= start with color***
+AiConfig::Heuristic::Description::start with color =\
+	play a color hoping the partner has the ace\n\n\
+	* startplayer in the trick\n\
+	* or there are enough remaining cards for all players\n\
+	* first run of the color\n\
+	\nAction: play the card with the highest value in the smallest color***
+
+
+AiConfig::Heuristic::grab trick \
+	= remporter la levée
+AiConfig::Heuristic::Description::grab trick \
+	= remporter la levée
+
+AiConfig::Heuristic::play trump \
+	= play trump***
+AiConfig::Heuristic::Description::play trump =\
+	with only trump on the hand play the best trump card\n\n\
+	* no startcard\n\
+	* only trumps\n\
+	\nAction: play best winning card***
+
+AiConfig::Heuristic::play to marry \
+	= jouer pour se marier
+AiConfig::Heuristic::Description::play to marry \
+	= jouer pour se marier
+
+AiConfig::Heuristic::play to get married =\
+	play card to get marrie***
+AiConfig::Heuristic::Description::play to get married =\
+	play card to get married\n\n\
+	* marriage player\n\
+	\nAction: As first player, play card of the marriage color to get married,\
+	\nAction: else in a marriage trick, play pfund.***
+
+AiConfig::Heuristic::choose ace \
+	= choisir un as
+AiConfig::Heuristic::Description::choose ace \
+	= choisir un as
+
+AiConfig::Heuristic::choose ten \
+	= choisir un dix
+AiConfig::Heuristic::Description::choose ten \
+	= choisir un dix
+
+AiConfig::Heuristic::choose single ace \
+	= play single color ace***
+AiConfig::Heuristic::Description::choose single ace =\
+	for the first card in a trick choose the best single color Ace to play\n\n\***
+
+AiConfig::Heuristic::manual \
+	= Carte jouée manuellement
+AiConfig::Heuristic::Description::manual \
+	= Carte jouée manuellement
+
+AiConfig::Heuristic::bug report \
+	= carte du rapport de bug
+AiConfig::Heuristic::Description::bug report \
+	= Rapport de bug
+
+AiConfig::Heuristic::network \
+	= joueur en réseau
+AiConfig::Heuristic::Description::network \
+	= joueur en réseau
+
+AiConfig::Heuristic::only valid card \
+	= seule carte valide
+AiConfig::Heuristic::Description::only valid card \
+	= seule carte valide
+
+AiConfig::Heuristic::choose for color trick \
+	= Choisir la levée à la couleur
+AiConfig::Heuristic::Description::choose for color trick \
+	= Choisir la levée à la couleur
+
+AiConfig::Heuristic::serve color trick \
+	= Servir une levée à la couleur
+AiConfig::Heuristic::Description::serve color trick \
+	= Servir une levée à la couleur
+
+AiConfig::Heuristic::serve trump trick \
+	= Servir une levée à l'atout
+AiConfig::Heuristic::Description::serve trump trick \
+	= Servir une levée à l'atout
+
+AiConfig::Heuristic::choose pfund \
+	= Charger (mettre des points sur son partenaire)
+AiConfig::Heuristic::Description::choose pfund \
+	= Charger (mettre des points sur son partenaire)
+
+AiConfig::Heuristic::retry color \
+	= Couleur de nouvel essai
+AiConfig::Heuristic::Description::retry color \
+	= Couleur de nouvel essai
+
+AiConfig::Heuristic::play color for partner \
+	= jouer une couleur pour le partenaire
+AiConfig::Heuristic::Description::play color for partner \
+	= jouer une couleur pour le partenaire
+
+AiConfig::Heuristic::try color for partner \
+	= essayer une couleur pour le partenaire
+AiConfig::Heuristic::Description::try color for partner \
+	= essayer une couleur pour le partenaire
+
+AiConfig::Heuristic::play color in solo \
+	= play color in solo***
+AiConfig::Heuristic::Description::play color in solo =\
+	Play shortest color in game for solo contra in hope solo player and partner can jab.\n\n\
+	* start card in the trick\n\
+	* contra player in a picture or color solo\n\
+	\nAction: play color card with the least cards remaining***
+
+AiConfig::Heuristic::play color for partner ace \
+	= jouer une couleur pour l'as du partenaire
+AiConfig::Heuristic::Description::play color for partner ace \
+	= jouer une couleur pour l'as du partenaire
+
+AiConfig::Heuristic::choose pfund poverty \
+	= Charger dans une misère (mettre des points sur son partenaire)
+AiConfig::Heuristic::Description::choose pfund poverty \
+	= Charger dans une misère (mettre des points sur son partenaire)
+
+AiConfig::Heuristic::choose pfund before partner \
+	= Charger avant le partenaire
+AiConfig::Heuristic::Description::choose pfund before partner \
+	= Charger avant le partenaire
+
+AiConfig::Heuristic::jab for ace \
+	= prendre pour l'as suivant
+AiConfig::Heuristic::Description::jab for ace \
+	= prendre pour l'as suivant
+
+AiConfig::Heuristic::create fehl \
+	= créer 'Fehlcolor'
+AiConfig::Heuristic::Description::create fehl \
+	= créer 'Fehlcolor'
+
+AiConfig::Heuristic::best winning card \
+	= Choisir la meilleure carte pour gagner cette levée
+AiConfig::Heuristic::Description::best winning card \
+	= Choisir la meilleure carte pour gagner cette levée
+
+AiConfig::Heuristic::play low high \
+	= Jouer alternativement atouts hauts et bas
+AiConfig::Heuristic::Description::play low high \
+	= Jouer alternativement atouts hauts et bas
+
+AiConfig::Heuristic::play for team \
+	= Jouer pour l'équipe
+AiConfig::Heuristic::Description::play for team \
+	= Jouer pour l'équipe
+
+AiConfig::Heuristic::jab fox \
+	= grouiker le renard
+AiConfig::Heuristic::Description::jab fox \
+	= grouiker le renard
+
+AiConfig::Heuristic::try for doppelkopf \
+	= tenter le doppelkopf
+AiConfig::Heuristic::Description::try for doppelkopf \
+	= tenter le doppelkopf
+
+AiConfig::Heuristic::draw trump \
+	= jouer atout
+AiConfig::Heuristic::Description::draw trump \
+	= jouer atout
+
+AiConfig::Heuristic::play highest color card in game \
+	= play highest color card in game***
+AiConfig::Heuristic::Description::play highest color card in game =\
+	Make a sure trick with a color card\n\n\
+	* startplayer\n\
+	\nAction: take card the opposite team can not get with the most points***
+
+AiConfig::Heuristic::partner backhand draw trump \
+	= le partenaire fournit à l'atout
+AiConfig::Heuristic::Description::partner backhand draw trump\
+	= le partenaire fournit à l'atout
+
+AiConfig::Heuristic::poverty: special: play pfund \
+	= Charger  (mettre des points sur son partenaire)
+AiConfig::Heuristic::Description::poverty: special: play pfund \
+	= Charger  (mettre des points sur son partenaire)
+
+AiConfig::Heuristic::poverty: special: offer pfund \
+	= poverty: special: offer pfund***
+AiConfig::Heuristic::Description::poverty: special: offer pfund =\
+	If the poverty partner has played high and still many points on hand play many points.\n\n\
+	* poverty player\n\
+	* the partner has jabbed with a high card\n\
+	* the player has many high cards\n\
+	\nAction: play a ten or ace of the color with the most cards***
+
+AiConfig::Heuristic::poverty: special: give no points \
+	= ne pas donner de point (joueur d'une misère)
+AiConfig::Heuristic::Description::poverty: special: give no points \
+	= ne pas donner de point (joueur d'une misère)
+
+AiConfig::Heuristic::poverty: re: trump color trick high \
+ 	= Acheter une levée à la couleur (misère, re)
+AiConfig::Heuristic::Description::poverty: re: trump color trick high \
+	= Acheter une levée à la couleur (misère, re)
+
+AiConfig::Heuristic::poverty: re: play trump \
+	= commencer à l'atout (misère, re)
+AiConfig::Heuristic::Description::poverty: re: play trump \
+	= commencer à l'atout (misère, re)
+
+AiConfig::Heuristic::poverty: contra: play color \
+	= commencer avec une couleur pour économiser des atouts (misère, contre)
+AiConfig::Heuristic::Description::poverty: contra: play color \
+	= commencer avec une couleur pour économiser des atouts (misère, contre)
+
+AiConfig::Heuristic::poverty: contra: trump color trick high \
+	= Acheter une levée à la couleur (misère, contre)
+AiConfig::Heuristic::Description::poverty: contra: trump color trick high \
+	= Acheter une levée à la couleur (misère, contre)
+
+AiConfig::Heuristic::poverty: contra: leave to partner \
+	= laisser une levée au partenaire (misère, contre)
+AiConfig::Heuristic::Description::poverty: contra: leave to partner \
+	= laisser une levée au partenaire (misère, contre)
+
+AiConfig::Heuristic::poverty: contra: overjab re \
+	= surenchérir sur un re (misère, contre)
+AiConfig::Heuristic::Description::poverty: contra: overjab re \
+	= surenchérir sur un re (misère, contre)
+
+AiConfig::Heuristic::poverty: best winning card \
+	= Choisir la meilleure carte pour gagner cette levée
+AiConfig::Heuristic::Description::poverty: best winning card \
+	= Choisir la meilleure carte pour gagner cette levée
+
+AiConfig::Heuristic::meatless: play highest color \
+	= jouer la meilleure couleur
+AiConfig::Heuristic::Description::meatless: play highest color \
+	= jouer la meilleure couleur
+
+AiConfig::Heuristic::picture: second best trump \
+	= jouer le second meilleur atout
+AiConfig::Heuristic::Description::picture: second best trump \
+	= jouer le second meilleur atout
+
+AiConfig::Heuristic::color: choose ace \
+	= jouer un as
+AiConfig::Heuristic::Description::color: choose ace \
+	= jouer un as
+
+AiConfig::Heuristic::color: best winning \
+	= choisir la meilleure carte pour gagner cette levée
+AiConfig::Heuristic::Description::color: best winning \
+	= choisir la meilleure carte pour gagner cette levée
+
+AiConfig::Heuristic::color: jab for ace \
+	= prendre pour l'as suivant
+AiConfig::Heuristic::Description::color: jab for ace \
+	= prendre pour l'as suivant
+
+AiConfig::Heuristic::color: play low high \
+	= Jouer alternativement atouts hauts et bas
+AiConfig::Heuristic::Description::color: play low high \
+	= Jouer alternativement atouts hauts et bas
+
+AiConfig::Heuristic::choose best card		= meilleure carte trouvée avec le type d'IA
+AiConfig::Heuristic::Description::choose best card \
+	= The ai playes different game courses and takes the card with the "best" course.***
+
+
+AiConfig::limit throw fehl \
+	= nombre maximal de points de levée pour se défausser
+AiConfig::limit queen \
+	= Nombre minimal de points dans la levée pour jouer de préférence une dame
+AiConfig::limit dolle \
+	= Nombre minimal de points dans la levée pour jouer de préférence une poupée
+AiConfig::last fehlcreation \
+	= Dernière levée avec laquelle on crée une 'Fehlcolor' en se défaussant
+AiConfig::last tricks without heuristics \
+	= Dernière levée dans laquelle les heuristiques no sont utilisées pas
+AiConfig::first trick for trump points optimization \
+	= Première levée pour optimisation des points à l'atout
+AiConfig::announce limit \
+	= Valeur de main minimale pour annoncer
+AiConfig::announce limit reply \
+	= Valeur de main minimale pour répondre
+AiConfig::announce limit decrement \
+	= Décrément de valeur de main pour suivre une annonce
+AiConfig::announce config \
+	= Modificateur de valeur de main pour configurer les décisions d'annonce
+AiConfig::announce config reply \
+	= Modificateur de valeur de main pour configurer les décisions d'annonce de réponses
+AiConfig::take poverty \
+	= Valeur de main minimale pour prendre une misère
+AiConfig::handvalue single solo \
+	= Valeur de main minimale pour announcer un solo à une figure simple
+AiConfig::handvalue double solo \
+	= Valeur de main minimale pour annoncer un solo à une figure double
+AiConfig::handvalue trible solo \
+	= Valeur de main minimale pour annoncer un solo à une figure triple
+AiConfig::handvalue color solo \
+	= Valeur de main minimale pour annoncer un solo à une couleur
+AiConfig::handvalue meatless \
+	= Valeur de main minimale pour annoncer un solo à sans atout
+AiConfig::trump limit			= limite d'atouts
+AiConfig::lowest trump limit		= limite inférieure d'atouts
+AiConfig::limit throwing		= limite pour jeter le jeu (misère)
+AiConfig::trump limit normal		= normal: limite d'atouts
+AiConfig::lowest trump limit normal	= normal: limite inférieure d'atouts
+AiConfig::limit high			= limite haute
+AiConfig::trump limit color		= color: limite d'atouts
+AiConfig::lowest trump limit color	= color: limite inférieure d'atouts
+AiConfig::trump limit jack		= valet: limite d'atouts
+AiConfig::lowest trump limit jack	= valet: limite inférieure d'atouts
+AiConfig::trump limit queen		= dame: limite d'atouts
+AiConfig::lowest trump limit queen	= dame: limite inférieure d'atouts
+AiConfig::trump limit king		= roi: limite d'atouts
+AiConfig::lowest trump limit king	= roi: limite inférieure d'atouts
+AiConfig::trump limit jack queen	= valet dame: limite d'atouts
+AiConfig::lowest trump limit jack queen	= valet dame: limite inférieure d'atouts
+AiConfig::trump limit jack king		= valet roi: limite d'atouts
+AiConfig::lowest trump limit jack king	= valet roi: limite inférieure d'atouts
+AiConfig::trump limit queen king	= dame roi: limite d'atouts
+AiConfig::lowest trump limit queen king	= dame roi: limite inférieure d'atouts
+AiConfig::trump limit koehler		= figures: limite d'atouts
+AiConfig::lowest trump limit koehler	= figures: limite inférieure d'atouts
+AiConfig::trump limit meatless		= sans atout: limite d'atouts
+AiConfig::lowest trump limit meatless	= sans atout: limite inférieure d'atouts
+
+
+AiConfig::Heuristic::Group::normal game		= jeu normal
+AiConfig::Heuristic::Group::poverty		= misère
+AiConfig::Heuristic::Group::solo		= solo
+AiConfig::Heuristic::Group::Solo::color		= coleur
+AiConfig::Heuristic::Group::Solo::picture	= figure
+AiConfig::Heuristic::Group::Solo::meatless	= sans atout

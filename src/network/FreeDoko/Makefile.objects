@@ -1,0 +1,7 @@
+# All object-files
+OBJECTS = \
+	interpreter.o \
+	sender.o \
+	  sender.party.o \
+	  sender.game.o \
+	receiver.o

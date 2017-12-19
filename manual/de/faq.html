@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Häufig gestellte Fragen</title>
+
+    <meta name="date" content="2005-07-14T22:40:11+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/faq.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/faq.html" title="offizielle Internetseite">
+
+  </head>
+
+
+  <body>
+
+    <h1>Häufig gestellte Fragen</h1>
+    
+
+    <h2>Über FreeDoko</h2>
+
+
+    <h3>Auf welchen Systemen läuft FreeDoko?</h3>
+
+    <p>
+    Für folgende Systeme haben wir selber getestet oder Rückmeldungen erhalten:
+    </p>
+    <ul>
+      <li>GNU/Linux: debian, gentoo, SuSE, ubuntu, arch linux, ...</li>
+      <li>Microsoft Windows: 98 (selber kompilieren), 2000, XP, Vista</li>
+      <li>HPUX 11.00 (mit g++ 3.3)</li>
+      <li>FreeBSD</li>
+      <li>Mac: OS/X (einiges an Arbeit: X-Server, gtkmm, ...)</li>
+    </ul>
+
+    <p>
+    Prinzipiel sollte FreeDoko auf allen Systemen laufen, auf denen es einen C++-Compiler und die gtkmm-Bibliothek gibt.
+    </p>
+
+
+    <h2>Spielstart</h2>
+
+
+    <h3>Microsoft-Windows</h3>
+
+
+    <h4>Microsoft-Windows beschwert sich über fehlende dll-Dateien.</h4>
+
+    <ul>
+      <li>
+      Als erstes sollten Sie überprüfen, daß Sie FreeDoko über die Batch-Datei <samp>FreeDoko.bat</samp> starten und nicht über die Programmdatei.
+      </li>
+      <li>
+      Wenn im FreeDoko-Verzeichnis keine Unterverzeichnise <samp>gtkmm.dll</samp> und <samp>gnet.dll</samp> enthalten sind, müssen Sie die Bibliotheken zusätzlich installieren.
+      Dafür laden Sie sich die Archive <a href="http://prdownloads.sourceforge.net/free-doko/gtkmm_2.4_dll.zip">gtkmm_2.4_dll.zip</a> (ca. 8,1&nbsp;MB) und <a href="http://prdownloads.sourceforge.net/free-doko/gnet.dll.zip">gnet.dll.zip</a> (ca. 0,2 MB) herunter und entpacken die Archive im FreeDoko-Verzeichnis (die Ordner werden von den Archiven angelegt).
+      </li>
+      <li>
+      Wenn die Batch-Datei Probleme verursacht können Sie den Inhalt der Verzeichnisse <samp>gtkmm.dll</samp> und <samp>gnet.dll</samp> in das FreeDoko-Verzeichnis verschieben.
+      </li>
+    </ul>
+
+    <h4>FreeDoko startet nicht unter MS-Windows 98</h4>
+    <p>
+    Beim Start beendet sich FreeDoko mit der Meldung
+    <pre>
+Pango-ERROR : file ../.././pango/pango/shape.c: line75 (pango_shape): assertion failed: (glyphs-&gt;num_glyphs &gt; 0) aborting
+      </pre>
+    Das Problem liegt in der GTK-Bibliothek, die unterstützt anscheinend in der 2.8er Version kein MS-Windows 98.
+    </p>
+    <p>
+    Um FreeDoko unter MS-Windows 98 spielen zu können, müssen Sie selber kompilieren.
+    Eine Anleitung dazu finden Sie unter <a href="http://free-doko.sourceforge.net/doc/de/Windows.kompilieren"><var>doc/de/Windows.kompilieren</var></a>, beachten Sie die Hinweise zu MS-Windows 98.
+    </p>
+
+
+
+    <h3>GNU/Linux</h3>
+
+    <h3>Zugriff nicht erlaubt</h3>
+    <p>
+    Wenn Sie FreeDoko installiert haben, dürfen nur Benutzer, die der Gruppe <var>games</var> angehören, FreeDoko spielen.
+    Fügen Sie ihren Benutzer der Gruppe <var>games</var> hinzu (Datei <samp>/etc/group</samp>).
+    </p>
+
+
+
+
+    <h2>Spielverlauf</h2>
+
+    <h3>Warum werden in Solospielen keine Sonderpunkte gezählt?</h3>
+
+    <p>
+    Laut den offiziellen Regeln des Deutschen Doppekopf-Verbandes werden Sonderpunkte in Solospielen nicht gezählt.
+    Wir haben aber vor, als zusätzliche Regel die Sonderpunkte auch explizit für die Solospiele zuzulassen.
+    </p>
+
+    <h3>Warum rechnet FreeDoko sehr lange?</h3>
+    <p>
+    Die KI arbeitet mit zwei Verfahren.
+    Zuerst wird geschaut, ob eine Heuristik greift.
+    Welche in den einzelnen Spielsituationen betrachtet werden und in welcher Reihenfolge, kann detailliert unter der Rubrik "Heuristiken" der Spielerkonfiguation eingestellt werden.
+    Dabei spielt die KI nach der ersten Heuristik, deren Voraussetzungen erfüllt sind.
+    </p>
+    <p>
+    Findet die KI keine Heuristik für die aktuelle Spielsituation oder befindet sich das Spiel in den letzten Stichen ("Letzte Stiche, ohne Heuristik" in der Rubrik "Stichentscheidung"), dann werden mögliche Spielverläufe (entsprechend den Einstellungen unter der Rubrik KI-Typ) berechnet und die Karte mit der besten Wertung gespielt.
+    Eine Beschreibung der KI-Typen befindet sich im <a href="operation/ai_config.html#aitype">Handbuch</a>.
+    </p>
+    <p>
+    Generell braucht die KI manchmal einige Sekunden (je nach Rechnerleistung bis zu einer/zwei Minuten) um eine Karte zu berechnen.
+    Über die Grenze für Zunkunfsberechnung kann hier beeinflußt werden, wie lange die KI rechnet.
+    Ein höherer Wert führt zu längerer Wartezeit aber auch einem in der Regel besseren KI Verhalten.
+    Aufgrund der Verfahren (es müssen Stiche immer bis zum Ende berechnet werden) wird diese Grenze nicht immer eingehalten, dies ist nur bei Monte Carlo gewährleistet.
+    </p> 
+
+
+    <h2>Erweiterungen</h2>
+
+
+    <h3>Wie werden neue Kartensätze eingebunden?</h3>
+
+    <p>
+    Wenn Sie weitere Kartensätze in FreeDoko einbinden woll, kopieren Sie diese in das <var>cardsets</var>-Verzeichnis.
+    Unter <var>Einstellungen</var> können Sie dann den Kartensatz auswälen (ein Neustart ist nicht erforderlich).
+    </p>
+    <p>
+    Einige Kartensätze können Sie auf unserer Internetseite <a href="http://free-doko.sourceforge.net/de/download.pakete.html">http://free-doko.sourceforge.net/de/download.pakete.html</a> herunterladen.
+    </p>
+
+
+    <h2>Fehlerbericht</h2>
+
+    <p>
+    Für den Fehlerbericht gibt es eine eigene <a href="bug_report.html">Seite</a>, die ihn erklärt.
+    </p>
+
+
+
+    <h2>Hilfe</h2>
+
+
+    <h3>Wie kann ich helfen?</h3>
+
+    <p>
+    Die einfachste Hilfe besteht darin, uns <a href="operation/bug_report.html">Fehlerberichte</a> zu schicken.
+    Das können Sie tun, wenn der Computer schlecht spielt, oder das Programm sich nicht gemäß der Anleitung (Ihren Erwartungen) verhält.
+    </p>
+    <p>
+    Wenn Ihnen bei FreeDoko etwas fehlt, können Sie das uns unter <a href="http://sourceforge.net/tracker/?atid=421200&amp;group_id=38051&amp;func=browse">Feature Requests</a> eintragen.
+    </p>
+    <p>
+    Weitere Bereiche:
+    </p>
+    <dl>
+      <dt>Dokumentation</dt>
+      <dd>
+      Da die Dokumentation noch recht unvollständig ist können Sie helfen, diese zu vervollständigen.
+      </dd>
+
+      <dt>Übersetzung</dt>
+      <dd>
+      Bisher gibt es FreeDoko in Deutsch, Englisch sowie Französisch.
+      Helfen Sie uns mit weiteren Übersetzungen.
+      Als Bereiche gibt es die spielinternen Übersetzungen und die Dokumentation.
+      </dd>
+
+      <dt>Sprachdateien</dt>
+      <dd>
+      Wenn Sie ein Mikrophohn an Ihrem Computer haben können Sie eigene Sprachdateien erstellen, dann sprechen die Mitspieler mit Ihrer Stimme.
+      <a href="mailto:freedoko@users.sourceforge.net?subject=Sprachdateien">Schreiben</a> Sie uns wegen einer Liste der benötigten Texte an und schicken Sie uns anschließend Ihre Sprachdateien..
+      </dd>
+
+      <dt>Themen</dt>
+      <dd>
+      Wenn Sie gerne Graphiken erstellen können Sie uns mit eigenen Themen für FreeDoko beglücken.
+      Spendieren Sie uns einen neuen Kartensatz, einen neuen Symbolsatz oder weitere Hintergründe.
+      </dd>
+
+      <dt>Heuristiken</dt>
+      <dd>
+      Wenn Sie auf Spielsituationen treffen in denen Sie sich leicht für eine Karte entscheiden können, die KI aber rechnen muß, dann erstellen Sie einen <a href="operation/bug_report.html">Fehlerbericht</a> und schreiben uns welche Karte Sie aus welchen Gründen spielen.
+      Wenn Sie wollen können Sie die Heuristik auch gleich selber programmieren und uns <a href="mailto:freedoko@users.sourceforge.net?subject=Heuristik">zuschicken</a>.
+      </dd>
+
+      <dt>graphische Oberflächen</dt>
+      <dd>
+      Programmieren Sie gerne graphischen Oberflächen, dann können Sie FreeDoko auch auf andere Bibliotheken neben <a href="http://www.gtkmm.org">gtkmm</a> portieren.
+      Insbesondere die API für Microsoft&trade; Windows, die für den Macintosh und die qt-API sind bestimmt gerne gesehen.
+      </dd>
+    </dl>
+
+    <p>
+    Wenn Sie Interesse haben uns zu helfen, <a href="mailto:freedoko@users.sourceforge.net?subject=Hilfe">melden</a> Sie sich bei uns.
+    </p>
+
+
+    <hr>
+    <div style="text-align: right;">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/faq.html">offizielle Internetseite</a>
+    </div>
+
+  </body>
+
+</html>

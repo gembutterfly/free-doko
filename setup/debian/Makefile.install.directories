@@ -1,0 +1,13 @@
+# settings for the installation
+# used by 'make install'
+
+# the different directories for the files
+
+# debian
+MAIN_DIRECTORY = /usr
+BIN_DIRECTORY  = $(MAIN_DIRECTORY)/games
+DATA_DIRECTORY = $(MAIN_DIRECTORY)/share/games/FreeDoko
+HELP_DIRECTORY = $(MAIN_DIRECTORY)/share/doc/freedoko
+MAN_DIRECTORY  = $(MAIN_DIRECTORY)/share/man/man6
+ICON_DIRECTORY = $(MAIN_DIRECTORY)/share/pixmaps
+DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications

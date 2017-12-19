@@ -1,0 +1,86 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+
+
+\usepackage{german}
+
+\parindent=0pt
+
+\begin{document}
+\thispagestyle{empty}
+\textbf{Order of cards:}\ \\
+\smallskip\ \\
+\begin{tabular}{lr|lr}
+trump & value & color & value\\
+\hline
+heart ten & 10 &  &      \\
+          &    &  &      \\
+club queen & 3 &  club ace & 11\\
+spade queen & 3   &  club ten & 10\\
+heart queen & 3  &  club king & 4\\
+diamond queen & 3  &club nine  & 0\\
+          &    &           & \\
+club jack& 2  &   spade ace & 11\\
+spade jack & 2  &  spade ten & 10\\
+heart jack & 2  &  spade king & 4\\
+diamond jack & 2  &  spade nine   & 0\\
+          &    &            & \\
+diamond ace   & 11 & heart ace    & 11\\
+diamond ten & 10 &            & \\
+diamond king & 4 & heart king& 4\\
+diamond nine   & 0 & heart nine  &0\\
+\end{tabular}
+\ \\
+\smallskip
+\ \\
+\textbf{Special rules:}
+\begin{itemize}
+\item \textit{fox:} a single trump ace, which the opposing team jabs, earns a bonus point.
+\item \textit{swines:} both trump aces on one hand are the highest trump (even higher than heart ten)
+\item \textit{poverty:} (a solo comes first)
+\begin{itemize}
+\item 3 trumps or less: put the trumps covered on the table, teammate is the player, who takes this cards and gives
+the same number of any of his cards back (he tells how much trumps he has given back)
+\item 5 nines or more: the cards are redistributed.
+\end{itemize}
+\item \textit{marriage:} both club queens on one hand: the player may choose a criterion for his teammate
+(first foreign trick, first foreign spade trick, ...)
+\end{itemize}
+\newpage
+\textbf{Announcements:}\ \\
+\smallskip\ \\
+\begin{tabular}{lll}
+till trick & announce & meaning\\\hline
+2 & re  & club queen \\
+  &     & no 120 points for opposite team\\
+2 & contra & versus club queens \\
+  &        & no 120 points for opposite team\\
+3 & no 90 & no 90 points for opposite team\\
+6 & no 60 & no 60 points for opposite team\\
+9 & no 30 & no 30 points for opposite team\\
+9 & black & no trick for opposite team\\
+\end{tabular}
+\medskip
+
+When the first trick has 30 points or more, then the winner of this trick must say re or contra.
+\\
+Re and contra doubles the value of a game. All other announcements are one bonus point for the winnerteam
+\\
+In the order of annoucement must none be left out.
+\ \\
+\smallskip
+\ \\
+\textbf{Soli:}
+\begin{itemize}
+\item \textit{diamondsolo:} no changes
+\item \textit{colorsolo:} one color replaces the diamond cards as trump
+\item \textit{queensolo:} only queens are trump
+\item \textit{jacksolo:} only jacks are trump
+\item \textit{queen-jack-solo:} only queens and jacks are trump
+\item \textit{king-queen-jack-solo:} only kings, queens and jacks are trump
+\item \textit{meatless:} there are no trumps
+\item \textit{hidden solo:} a player with a marriage make no announcement
+\end{itemize}
+Each solo has the triple value for the solo player.\\
+All unused former trumps are placed among the none trump cards. Order:
+Ace, ten, king, queen, jack, nine.
+\end{document}

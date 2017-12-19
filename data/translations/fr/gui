@@ -1,0 +1,347 @@
+# FreeDoko translation: part gui
+# language: français
+# version: 0.7.5
+
+!input	"menu"
+!input	"help"
+
+FreeDoko %ttitle%		= %ttitle% FreeDoko
+
+# buttons
+apply				= appliquer
+close				= fermer
+reset				= reset
+cancel				= abandonner
+abort				= abandonner
+adopt				= adopter
+allot				= assigner
+load				= charger
+save				= sauver
+hardcoded			= par défaut
+
+# first run
+first run			= premier tour
+FreeDoko first run		= Bienvenue au FreeDoko
+
+# program updated
+program updated			= programme mis à jour
+FreeDoko program updated	= programme FreeDoko mis à jour
+reset ais			= reset intelligence artificielle
+
+# init (splash screen)
+splash screen			= écran d'accueil
+loading back of the cards	= chargement du dos des cartes
+loading the cards		= chargement des cartes
+loading the icons		= chargement des icônes
+initiating the GUI		= initialisation de l'interface graphique
+finished			= fini
+
+# settings
+settings			= réglages
+preferences			= préférences
+general				= général
+behaviour			= comportement
+cards order			= ordre des cartes
+appearance			= apparence
+cards				= cartes
+theme				= thème
+fonts				= fontes
+
+# summary of the party
+party summary			= résumé de la partie
+new party			= nouvelle partie
+continue party			= continuer partie
+Gamenumber: %ugameno%		= jeu %ugameno%
+Roundnumber: %uroundno%		= tour %uroundno%
+Remaining rounds: %urounds%	= tours restants: %urounds%
+Remaining points: %ipoints%	= points restants: %ipoints%
+Next startplayer: %sname%	= prochaine entame: %sname%
+duty soli			= soli obligé
+
+# settings of the party
+party settings			= réglages de la partie
+
+general				= général
+game seed			= n° de jeu
+startplayer			= entame
+random				= au hasard
+
+player				= joueur
+player %unumber%		= joueur %unumber%
+players				= joueurs
+statistics			= statistiques
+name				= nom
+random name			= nom au hasard
+voice                           = voix
+type				= type
+configure			= configurer
+player %uno% configuration	= configuration du joueur %uno%
+configure players		= configurer les joueurs
+configure rules			= configurer les règles
+configure network		= configurer le réseau
+network				= réseau
+
+start party			= démarrer la partie
+load bug report			= charger un rapport de bug
+save on desktop			= sauver sur le bureau
+
+save party			= sauver la partie
+load party			= charger une partie
+
+# network
+network				= réseau
+network settings		= réglages du réseau
+server				= serveur
+address				= adresse
+connections			= connexions
+connection			= connexion
+new connection			= nouvelle connexion
+connect				= connecter
+local addresses			= adresses locales
+listeners			= listeners
+new listener			= new listener
+create listener			= créer listener
+open port			= ouvrir port
+port				= port
+standard port			= port standard
+rule differences		= differences de règles
+server value			= serveur
+self value			= valeur pour soi
+# log
+network log			= log réseau
+time				= temps
+address				= adresse
+text				= texte
+clear network			= nettoyer réseau
+synchronize network		= synchronisation du réseau
+# chat
+send				= envoye
+
+# rules
+# -> text.rules
+announcement with maximal cards	= annonce avec les cartes maximum
+save rules			= sauver les règles
+adjust rules 			= ajuster les règles
+
+# players database
+players database data type	= type de base de données
+players database		= statistiques des joueurs
+clear database			= effacer
+recreate database		= recréer
+update database			= mettre à jour
+ranking				= ordre
+average game points		= moyenne de points dans un jeu
+average game trick points	= moyenne de points dans une levée
+games				= jeux
+games marriage			= mariages
+games poverty			= misères
+games solo			= solos
+games solo color		= solos couleur
+games solo picture		= solos figures
+games solo picture single	= solos figures simples
+games solo picture double	= solos figures doubles
+specialpoints			= points spéciaux
+specialpoints winning		= points spéciaux gagnants
+specialpoints announcements	= annonces
+heuristics			= heuristiques
+heuristics general		= général
+heuristics solo			= solo
+heuristics solo color		= solo couleur
+heuristics solo picture		= solo image
+heuristics solo meatless	= solo sans atout
+statistic total			= total
+statistic won			= gagne
+statistic lost			= perdu
+statistic percent won		= pour cent
+
+# aiconfig
+difficulty			= difficulté
+card suggestion			= suggestion de carte
+replacement ai			= ia de remplacement
+no ai configuration		= pas de réglage de l'ia
+trick				= levée
+configure ais			= configurer ia
+save aiconfig of %splayer%	= sauver la configuration de l'ia de %splayer%
+future limit			= calcul des limites
+heuristics as in normal game	= heuristiques comme dans un jeu normal
+move up				= monter
+move down			= descendre
+
+# reservation
+reservation			= réservation
+reservation (%sname%)		= réservation (%sname%)
+reservation default		= defaut
+solo				= solo
+offer duty solo 		= offer doty solo***
+
+reservation announce		= annonce
+bock: %umultiplier%           	= bock: points * %umultiplier%***
+
+# gametype
+gametype			= type de jeu
+gametype: %ttype%		= type de jeu: %ttype%
+gametype: %ttype% (duty solo)	= gametype: %ttype% (duty solo)***
+%splayer% plays a %tgametype%.	= %splayer% joue un %tgametype%.
+%splayer% has %tgametype%.	= %splayer% a %tgametype%.
+%splayer% has %tnumber% nines.	= %splayer% a %tnumber% neufs.
+%splayer% has %tnumber% kings.	= %splayer% a %tnumber% rois.
+%splayer% has %tnumber% nines and kings.	= %splayer% a %tnumber% neufs et rois.
+%splayer% has %upoints% richness.	= %splayer% has %upoints% de richesse.
+%splayer% has a %tgametype%.	= %splayer% a un %tgametype%.
+%splayer% has a %tgametype%: %tselector%.	= %splayer% a un %tgametype%: %tselector%.
+partner is %splayer%.		= le partenaire est %splayer%.
+%splayer% has returned %utrumpno% trump.	= \
+	%splayer% a retourné %utrumpno% atout.
+%splayer% has returned %utrumpno% trumps.	= \
+	%splayer% a retourné %utrumpno% atouts.
+%splayer% marries %sbride%.	= %splayer% se joint à %sbride%.
+%splayer% has found no bride.	= %splayer% n'a pas trouvé de partenaire.
+%splayer% has a swine.		= %splayer% a un cochon.
+%splayer% has swines.		= %splayer% a les cochons.
+%splayer% has hyperswines.	= %splayer% a les hypercochons.
+%splayer% announces '%tannouncement%'.	= %splayer% annonce '%tannouncement%'.
+%splayer% announces '%tannouncement%' (duty 30).	\
+	= %splayer% annonce '%tannouncement%' (obligation).
+
+# genscher
+genscher			= genscher
+no genscher			= pas de genscher
+new partner			= nouveau partenaire
+no partner change		= pas de genscher
+Select a new partner or keep the old.	= Choisir un nouveau partenaire ou garder l'ancien.
+Genscher: %splayer% chooses %spartner%.	= Genscher: %splayer% choisit %spartner%.
+Genscher: Please choose your partner.	= Genscher: choisissez votre partenaire.
+
+# full trick
+full trick			= levée complète
+specialpoint			= point special
+specialpoints			= points spéciaux
+The trick goes to %swinner%.	= La levée va à %swinner%.
+points				= points
+Points in the trick: %upoints%	= Points dans la levée: %upoints%
+of player			= du joueur
+
+# swines
+swines				= cochons
+hyperswines			= hypercochons
+
+# last trick
+last trick			= dernière levée
+%unumber%. trick		= %unumber%. levée
+startplayer: %sname%		= entame: %sname%
+winner: %sname%			= gagnant: %sname%
+
+# card suggestion
+Thinking, please wait.		= Je réfléchis, attendez s'il vous plaît.
+suggested card			= carte suggérée
+play card			= jouer la carte
+
+# game information
+game information		= information de jeu
+game info			= jeu info
+player info			= joueur info
+team info			= équipe info
+tricks				= levées
+soloplayer			= joueur solo
+heuristic			= heuristique
+name				= nom
+teams				= équipe
+announcement			= annonce
+points				= points
+
+# party points
+party points			= points de partie
+round				= tour
+game				= jeu
+game points			= points de jeu
+add up points			= points ajoutés
+collapse rounds			= résumer les tours
+expand rounds			= détailler les tours
+table				= table
+graph				= graphe
+remaining rounds: %urounds%	= tours restants : %urounds%
+remaining points: %upoints%	= tours restants : %upoints%
+bock                            = bock***
+duty free soli 			= free duty soli***
+duty color soli 		= duti color soli***
+duty picture soli 		= duty picture soli***
+duty soli round 		= duty soli round***
+
+# game overview
+show game overview		= montrer le résumé de la partie
+Game overview: %ugame%		= Résumé de la partie: %ugame%
+
+# game finished
+end of game			= fin de jeu
+show party points		= montrer les points de la partie
+show game review		= remontrer la partie
+next game			= partie suivante
+end of party			= fin de partie
+
+# game summary
+game summary			= sommaire de jeu
+game %ugameno%			= jeu %ugameno%
+seed %useed%			= n° de jeu: %useed%
+startplayer %sname%		= entame: %sname%
+name				= nom
+trick points			= points de la levée
+team				= équipe
+Winner: no team			= pas de gagnant
+Winner: %tteam%			= Gagnant: %tteam%
+# ToDo: special case '1' point
+Winner: team %twinnerteam% with %uwinnerpoints% points (%tlooserteam%: %ulooserpoints% points)	= \
+	Gagnant: équipe %twinnerteam% avec %uwinnerpoints% points (%tlooserteam%: %ulooserpoints% points)
+game points: %ipoints%		= points de jeu: %ipoints%
+game points: %ipoints% for %tteam%	= points de jeu: %ipoints% pour %tteam%
+team				= éqipe
+sign				= signe
+point(s)			= point(s)
+description			= description
+bock triggers			= bock trigger***
+
+# game review
+game review			= replay
+game review: %ttrick%		= replay: %ttrick%
+
+# party finished
+party finished			= partie terminée
+rang				= rang
+lustsolo games			= solos choisis
+finish party			= partie terminée
+
+
+Cannot construct the icon for the announcement '%tannouncement%'.\n\
+Keeping the old one.	= \
+	Impossible de construire l'icone pour l'annonce '%tannouncement%'.\n\
+	On garde l'ancienne.
+
+# replay a bug report
+BugReportReplay::Group::general	= général
+BugReportReplay::Group::actions	= actions
+BugReportReplay::Group::human actions	= actions humaines
+BugReportReplay::Group::game summary	= sommaire de jeu
+bug report			= rapport de bug
+bug report replay		= replay rapport de bug
+Version: %sversion%		= Version: %sversion%
+Compiled: %stime%		= Compilé le: %stime%
+System: %ssystem%		= Système: %ssystem%
+Time: %stime%			= Heure: %stime%
+Language: %slanguage%		= Langage: %slanguage%
+Trick: %utrick%			= Levée: %utrick%
+Seed: %useed%			= N° de jeu: %useed%
+Startplayer: %ustartplayer%	= Entame: %ustartplayer%
+Soloplayer: %usoloplayer%	= Joueur solo: %usoloplayer%
+Soloplayer: -			= joueur solo: -
+auto actions			= actions automatiques
+
+# gameplay actions
+type				= type
+player				= joueur
+data				= données
+
+# bug report (?)
+error                           = erreur
+file				= fichier
+file: %sfile%			= fichier: %sfile%
+save				= sauver
+dismiss				= rejeter

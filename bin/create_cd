@@ -1,0 +1,235 @@
+#!/bin/bash
+
+# create the directory for the content
+function initialization {
+  rm -rf "${FREEDOKO_CD_DIR}"
+  mkdir "${FREEDOKO_CD_DIR}"
+} # function initialization
+
+# copy the installation
+function copy_installation {
+  mkdir "${FREEDOKO_CD_DIR}"/Installation
+  cp -a ../FreeDoko_${VERSION}.release/* "${FREEDOKO_CD_DIR}"/Installation/
+  rm -rf "${FREEDOKO_CD_DIR}"/Installation/debian
+  cp data/setup/rpm/dummy-libexpat-1.0-0.i586.rpm "${FREEDOKO_CD_DIR}"/Installation/
+} # function copy_installation
+
+
+# the debian packages
+function copy_debian_packages {
+  mkdir -p "${FREEDOKO_CD_DIR}"/debian
+  cp -a /home/install/mirrors/FreeDoko/dists "${FREEDOKO_CD_DIR}"/debian/
+  cp -a /home/install/mirrors/FreeDoko/pool "${FREEDOKO_CD_DIR}"/debian/
+  return
+
+
+  mkdir -p "${FREEDOKO_CD_DIR}"/debian/pool/main/FreeDoko
+  for p in \
+    freedoko \
+    freedoko-all \
+    freedoko-binary \
+    freedoko-binary-no-network \
+    freedoko-data \
+    freedoko-cardsets-xskat \
+    freedoko-cardsets-kdecarddecks \
+    freedoko-cardsets-pysol \
+    freedoko-cardsets-gnome-games \
+    freedoko-cardset-openclipart \
+    freedoko-backgrounds \
+    freedoko-manual-base \
+    freedoko-manual-de \
+    freedoko-manual-en \
+    freedoko-translation-en \
+    freedoko-translation-de \
+    freedoko-translation-de-alt \
+    freedoko-translation-fr \
+    ; do
+    cp $(ls /home/install/mirrors/FreeDoko/pool/main/FreeDoko/${p}_*.deb | sort -n | tail -1) "${FREEDOKO_CD_DIR}"/debian/pool/main/FreeDoko/
+  done
+  mkdir -p "${FREEDOKO_CD_DIR}"/debian/pool/non-free/FreeDoko
+  cp $(ls /home/install/mirrors/FreeDoko/pool/non-free/FreeDoko/freedoko-nonfree_*.deb | sort -n | tail -1) "${FREEDOKO_CD_DIR}"/debian/pool/non-free/FreeDoko/
+  cd "${FREEDOKO_CD_DIR}"/debian
+
+  mkdir -p dists/testing/main/binary-i386
+  mkdir -p dists/testing/non-free/binary-i386
+  echo '
+  Dir {
+    ArchiveDir	".";
+    CacheDir	"/tmp/";
+  }
+  Default {
+  }
+  TreeDefault {
+    Directory	"pool/$(SECTION)";
+  }
+  BinDirectory {
+    Packages	"true";
+  }
+  Tree "dists/testing" {
+    Sections	"main non-free";
+    Architectures	"i386";
+  }
+  ' >generate.cfg
+  apt-ftparchive -q=2 generate ./generate.cfg
+  rm generate.cfg
+  cd - >/dev/null
+} # function copy_debian_packages
+
+#   cardsets
+function copy_installation_cardsets {
+  mkdir "${FREEDOKO_CD_DIR}"/Installation/cardsets
+  for c in xskat openclipart gnome-games kdecarddecks pysol; do
+    echo "|   . $c"
+    cd ~/Daten/FreeDoko/cardsets
+    zip -r -q /tmp/$c.zip $c
+    cd - >/dev/null
+    mv /tmp/$c.zip "${FREEDOKO_CD_DIR}"/Installation/cardsets/
+  done
+} # function copy_installation_cardsets
+
+# program files
+function copy_program_files {
+  DIR=$(pwd)
+  cd "${FREEDOKO_CD_DIR}"/
+  ln -s FreeDoko_${VERSION} FreeDoko
+  # general files and Windows binary
+  unzip -q Installation/FreeDoko_${VERSION}.Windows.zip
+  unzip -q Installation/FreeDoko_${VERSION}.manual.zip
+  chmod 644 FreeDoko/*.dll
+  # Linux binary
+  #tar xzf Installation/FreeDoko_${VERSION}.Linux.tgz FreeDoko_${VERSION}/FreeDoko
+  dpkg -x Installation/freedoko-nonfree_${VERSION}_i386.deb tmp
+  cp tmp/usr/games/FreeDoko FreeDoko_${VERSION}
+  rm -rf FreeDoko_${VERSION}/FreeDoko/tmp
+  cd - >/dev/null
+  # hpux binary
+  if [ -f ../Installation/FreeDoko_*.hpux.tgz ]; then
+    mkdir "${FREEDOKO_CD_DIR}"/hpux
+    cd "${FREEDOKO_CD_DIR}"/hpux/
+    tar xzf ../Installation/FreeDoko_*.hpux.tgz --wildcards FreeDoko_*/FreeDoko \
+      && mv FreeDoko_*/FreeDoko ../FreeDoko_${VERSION}/FreeDoko.hpux
+    rm -rf "${FREEDOKO_CD_DIR}"/hpux
+    cd - >/dev/null
+  fi
+} # function copy_program_files
+
+#   more cardsets
+function copy_cardsets {
+  cd "${FREEDOKO_CD_DIR}"/FreeDoko/cardsets/
+  for c in origin xskat openclipart gnome-games kdecarddecks pysol; do
+    echo "|   . $c"
+    cp -a ~/Daten/FreeDoko/cardsets/$c $c
+  done
+  cd - >/dev/null
+} # function copy_program_files
+
+#   more backgrounds
+function copy_backgrounds {
+  cp -a data/backgrounds/* "${FREEDOKO_CD_DIR}"/FreeDoko/backgrounds/
+  rm -rf $(find "${FREEDOKO_CD_DIR}"/FreeDoko/backgrounds -name ".svn")
+  rm "${FREEDOKO_CD_DIR}"/FreeDoko/backgrounds/Makefile
+} # function copy_backgrounds
+
+# documentation
+function copy_documentation {
+  cd "${FREEDOKO_CD_DIR}"/
+  ln -s FreeDoko/doc
+  cd - >/dev/null
+} # function copy_documentation
+
+# homepage
+function copy_homepage {
+  cp -a homepage "${FREEDOKO_CD_DIR}"/
+  rm -rf $(find "${FREEDOKO_CD_DIR}"/homepage -name ".svn")
+  sed -e "s|http://prdownloads.sourceforge.net/free-doko/FreeDoko_regeln.pdf|../../doc/de/FreeDoko_Regeln.pdf|" \
+  -e "s|http://prdownloads.sourceforge.net/free-doko/freedoko_kurzregeln.pdf|../../doc/de/Kurzregeln.pdf|" \
+  -e "s|http://prdownloads.sourceforge.net/free-doko/ddv_kurzregeln.pdf|../../doc/de/DDV_Kurzregeln.pdf|" \
+  -e "s|http://prdownloads.sourceforge.net/free-doko/ddv_tunierregeln.pdf|../../doc/de/DDV_Turnierregeln.pdf|" \
+  -e "s|http://prdownloads.sourceforge.net/free-doko/freedoko_konzept.pdf|../../doc/de/FreeDoko_Konzept.pdf|" \
+  "${FREEDOKO_CD_DIR}"/homepage/de/Dateien.html > t.out \
+    && mv t.out "${FREEDOKO_CD_DIR}"/homepage/de/Dateien.html
+  for f in \
+    "${FREEDOKO_CD_DIR}"/homepage/en/FreeDoko.html \
+    "${FREEDOKO_CD_DIR}"/homepage/en/files.html \
+    "${FREEDOKO_CD_DIR}"/homepage/de/FreeDoko.html \
+    "${FREEDOKO_CD_DIR}"/homepage/de/Dateien.html \
+    ; do
+    sed "s|http://prdownloads.sourceforge.net/free-doko/|../../Installation/|g" $f > t.out \
+      && mv t.out $f
+  done
+  cd "${FREEDOKO_CD_DIR}"/homepage
+  rm download
+  ln -s ../Installation download
+  rm de/FreeDoko.Windows.dev.html
+  cd - >/dev/null
+  cp data/setup/Windows/install_dev/LiesMich.html "${FREEDOKO_CD_DIR}"/homepage/de/FreeDoko.Windows.dev.html
+} # function copy_homepage
+
+# autostarter
+function copy_autostarter {
+  for f in Autorun.inf FreeDoko.ico; do
+    cp data/CD/cdstarter/$f "${FREEDOKO_CD_DIR}"/
+  done
+  return
+  if ! [ -f data/CD/cdstarter/FreeDoko_autostart.exe ]; then return; fi 
+  for f in FreeDoko_autostart.exe; do
+    cp data/CD/cdstarter/$f "${FREEDOKO_CD_DIR}"/
+  done
+  cat data/CD/cdstarter/freedoko_autostart.config \
+    | sed "s/VERSION/${VERSION}/" \
+    > "${FREEDOKO_CD_DIR}"/freedoko_autostart.config
+} # function copy_autostarter
+
+# remainder
+function copy_remainder {
+  if ! [ -d data/CD/root ]; then return; fi 
+  cp "${FREEDOKO_CD_DIR}"/FreeDoko/Version "${FREEDOKO_CD_DIR}"/
+  cp data/CD/root/* "${FREEDOKO_CD_DIR}"/
+} # function copy_remainder
+
+# create image
+function create_image {
+  rm -f ../FreeDoko_${VERSION}_CD.iso
+  chmod go+rX "${FREEDOKO_CD_DIR}" -R
+  mkisofs -quiet -J -joliet-long -r -f \
+          -V "FreeDoko ${VERSION}" "${FREEDOKO_CD_DIR}" \
+    > ../FreeDoko_${VERSION}_CD.iso
+} # function create_image
+
+if [ $# != 1 ]; then
+  echo "$0:"
+  echo "You have to give the version as argument"
+  exit
+fi
+
+VERSION=$1
+
+echo "Creating FreeDoko ${VERSION} CD"
+
+FREEDOKO_CD_DIR="/tmp/FreeDoko_${VERSION}_CD"
+
+rm -rf "$FREEDOKO_CD_DIR"
+echo "+-initialization"
+initialization
+echo "+-installation files"
+copy_installation
+echo "| +-debian packages"
+copy_debian_packages
+echo "| \`-cardsets"
+copy_installation_cardsets
+echo "+-program files"
+copy_program_files
+echo "| \`-more cardsets"
+copy_cardsets
+echo "| \`-more backgrounds"
+copy_backgrounds
+echo "+-documentation"
+copy_documentation
+echo "+-homepage"
+copy_homepage
+echo "+-autostarter"
+copy_autostarter
+echo "\`-remainder"
+copy_remainder
+echo "create image"
+create_image

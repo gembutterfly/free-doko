@@ -1,0 +1,409 @@
+#!/bin/bash
+#
+# program to create the icons
+# uses imagemagick
+#
+# 17. May 2004
+# Diether Knof <dknof@gmx.de>
+
+scaling=80
+
+INFO_GROUPS=true
+INFO_FILES=true
+
+if [ ! -e ../cards/club/queen.png ]; then
+  echo "could not find '../cards/club/queen.png' -- wrong directory?"
+  exit 1
+fi
+PATH=$PATH:../../../bin/
+
+# get the width and the height of the cards
+#width=`xpmtoppm ../cards/club/queen.png | pnmfile | awk '{ print $4 }'`
+#height=`xpmtoppm ../cards/club/queen.png | pnmfile | awk '{ print $6 }'`
+width=$(identify -format "%w" ../cards/club/queen.png)
+height=$(identify -format "%h" ../cards/club/queen.png)
+height_half=$(( ${height} / 2 ))
+
+overlap_width=$(( ${width} / 4 ))
+
+FILE_PIXEL=$(tempfile -p pixel. -s .png)
+FILE_OVERLAP=$(tempfile -p overlap. -s .png)
+FILE_OVERLAP_TMP=$(tempfile -p overlap_tmp. -s .png)
+
+test ${INFO_GROUPS} && echo "creating icons"
+
+overlap() {
+  convert ${FILE_PIXEL} -resize $(( ${width} + ($# - 1) * ${overlap_width} ))x${height_half}\! ${FILE_OVERLAP}
+
+  for (( i = 0; $# != 0 ; i++ )); do
+    composite -compose src-over -geometry +$(( $i * ${overlap_width} ))+0 ../cards/$1 ${FILE_OVERLAP} ${FILE_OVERLAP_TMP} \
+      && mv ${FILE_OVERLAP_TMP} ${FILE_OVERLAP}
+    shift
+  done # for i
+
+  cat ${FILE_OVERLAP}
+}
+
+echo -e "P4\n1 1\n" \
+| convert -transparent white - ${FILE_PIXEL}
+
+# re.png
+test ${INFO_FILES} && echo "  re.png"
+overlap club/queen.png \
+> re.png
+
+test ${INFO_FILES} && echo "  contra.png"
+thickness_x=$(( ${width} / 10 ))
+thickness_y=$(( ${height} / 10 ))
+convert -fill red -draw "polygon \
+0,$(( $height_half - ${thickness_y} )) \
+0,$(( $height_half )) \
+${thickness_x},$(( $height_half )) \
+$width,${thickness_y} \
+$width,0 \
+$(( $width - ${thickness_x} )),0 \
+" re.png t.png
+composite -compose In t.png re.png contra.png
+rm t.png
+
+# Soli
+test ${INFO_FILES} && echo "  solo.jack.png"
+overlap club/jack.png spade/jack.png heart/jack.png diamond/jack.png \
+> solo.jack.png
+test ${INFO_FILES} && echo "  solo.queen.png"
+overlap club/queen.png spade/queen.png heart/queen.png diamond/queen.png \
+> solo.queen.png
+test ${INFO_FILES} && echo "  solo.king.png"
+overlap club/king.png spade/king.png heart/king.png diamond/king.png \
+> solo.king.png
+test ${INFO_FILES} && echo "  solo.queen-jack.png"
+overlap club/queen.png spade/queen.png heart/jack.png diamond/jack.png \
+> solo.queen-jack.png
+test ${INFO_FILES} && echo "  solo.king-jack.png"
+overlap club/king.png spade/king.png heart/jack.png diamond/jack.png \
+> solo.king-jack.png
+test ${INFO_FILES} && echo "  solo.king-queen.png"
+overlap club/king.png spade/king.png heart/queen.png diamond/queen.png \
+> solo.king-queen.png
+test ${INFO_FILES} && echo "  solo.koehler.png"
+overlap club/king.png spade/king.png heart/queen.png diamond/jack.png \
+> solo.koehler.png
+
+# Idee: nur Farbsymbol
+test ${INFO_FILES} && echo "  solo.club.png"
+overlap spade/queen.png heart/jack.png club/ace.png club/king.png \
+> solo.club.png
+test ${INFO_FILES} && echo "  solo.spade.png"
+overlap club/queen.png heart/jack.png spade/ace.png spade/king.png \
+> solo.spade.png
+test ${INFO_FILES} && echo "  solo.heart.png"
+overlap club/queen.png diamond/jack.png heart/ace.png heart/king.png \
+> solo.heart.png
+test ${INFO_FILES} && echo "  solo.diamond.png"
+overlap club/queen.png heart/jack.png diamond/ace.png diamond/king.png \
+> solo.diamond.png
+
+test ${INFO_FILES} && echo "  solo.meatless.png"
+overlap club/ace.png spade/ace.png heart/ace.png diamond/ace.png \
+> solo.meatless.png
+
+# marriage
+# Idee: Hochzeitsringe
+test ${INFO_FILES} && echo "  marriage.png"
+overlap club/queen.png club/queen.png \
+> marriage.png
+test ${INFO_FILES} && echo "  marriage.foreign.png"
+overlap club/queen.png club/queen.png diamond/jack.png spade/ace.png \
+> marriage.foreign.png
+test ${INFO_FILES} && echo "  marriage.trump.png"
+overlap club/queen.png club/queen.png heart/jack.png diamond/ace.png \
+> marriage.trump.png
+# Idee: Hochzeitsringe + 3 Farbsymbole
+test ${INFO_FILES} && echo "  marriage.color.png"
+overlap club/queen.png club/queen.png heart/ace.png spade/ace.png \
+> marriage.color.png
+# Idee: Hochzeitsringe + Farbsymbol
+test ${INFO_FILES} && echo "  marriage.club.png"
+overlap club/queen.png club/queen.png club/ace.png club/ace.png \
+> marriage.club.png
+test ${INFO_FILES} && echo "  marriage.spade.png"
+overlap club/queen.png club/queen.png spade/ace.png spade/ace.png \
+> marriage.spade.png
+test ${INFO_FILES} && echo "  marriage.heart.png"
+overlap club/queen.png club/queen.png heart/ace.png heart/ace.png \
+> marriage.heart.png
+test ${INFO_FILES} && echo "  marriage.partner.png"
+overlap club/queen.png \
+> marriage.partner.png
+
+# genscher
+test ${INFO_FILES} && echo "  genscher.png"
+overlap diamond/king.png diamond/king.png \
+> genscher.png
+
+# poverty
+test ${INFO_FILES} && echo "  poverty.png"
+overlap heart/queen.png spade/jack.png diamond/ten.png \
+> poverty.png
+test ${INFO_FILES} && echo "  poverty.3.png"
+overlap heart/queen.png spade/jack.png diamond/ten.png \
+> poverty.3.png
+test ${INFO_FILES} && echo "  poverty.2.png"
+overlap heart/queen.png diamond/ten.png club/ace.png \
+> poverty.2.png
+test ${INFO_FILES} && echo "  poverty.1.png"
+overlap heart/queen.png club/ace.png heart/king.png \
+> poverty.1.png
+test ${INFO_FILES} && echo "  poverty.0.png"
+overlap club/ace.png heart/king.png spade/ten.png \
+> poverty.0.png
+test ${INFO_FILES} && echo "  poverty.partner.png"
+overlap club/queen.png \
+> poverty.partner.png
+
+# thrown nines
+test ${INFO_FILES} && echo "  thrown_nines.png"
+overlap club/nine.png spade/nine.png heart/nine.png diamond/nine.png \
+> thrown_nines.png
+
+# thrown kings
+test ${INFO_FILES} && echo "  thrown_kings.png"
+overlap club/king.png spade/king.png heart/king.png diamond/king.png \
+> thrown_kings.png
+
+# thrown nines and kings
+test ${INFO_FILES} && echo "  thrown_nines_and_kings.png"
+overlap club/king.png spade/king.png heart/nine.png diamond/nine.png \
+> thrown_nines_and_kings.png
+
+# thrown richness
+# Idee: Viele Münzen
+test ${INFO_FILES} && echo "  thrown_richness.png"
+overlap club/ten.png spade/ten.png heart/ten.png diamond/ten.png \
+> thrown_richness.png
+
+# fox highest trump
+test ${INFO_FILES} && echo "  fox_highest_trump.png"
+overlap diamond/ace.png diamond/ten.png diamond/king.png diamond/nine.png \
+> fox_highest_trump.png
+
+# swines
+# Idee: Schwein
+test ${INFO_FILES} && echo "  swines.club.png"
+overlap club/ace.png club/ace.png \
+> swines.club.png
+test ${INFO_FILES} && echo "  swines.spade.png"
+overlap spade/ace.png spade/ace.png \
+> swines.spade.png
+test ${INFO_FILES} && echo "  swines.heart.png"
+overlap heart/ace.png heart/ace.png \
+> swines.heart.png
+test ${INFO_FILES} && echo "  swines.diamond.png"
+overlap diamond/ace.png diamond/ace.png \
+> swines.diamond.png
+
+# hyperswines
+# Idee: besonderes Schwein
+test ${INFO_FILES} && echo "  hyperswines.club.png"
+overlap club/nine.png club/nine.png \
+> hyperswines.club.png
+test ${INFO_FILES} && echo "  hyperswines.spade.png"
+overlap spade/nine.png spade/nine.png \
+> hyperswines.spade.png
+test ${INFO_FILES} && echo "  hyperswines.heart.png"
+overlap heart/nine.png heart/nine.png \
+> hyperswines.heart.png
+test ${INFO_FILES} && echo "  hyperswines.diamond.png"
+overlap diamond/nine.png diamond/nine.png \
+> hyperswines.diamond.png
+# without nines
+test ${INFO_FILES} && echo "  hyperswines.king.club.png"
+overlap club/king.png club/king.png \
+> hyperswines.king.club.png
+test ${INFO_FILES} && echo "  hyperswines.king.spade.png"
+overlap spade/king.png spade/king.png \
+> hyperswines.king.spade.png
+test ${INFO_FILES} && echo "  hyperswines.king.heart.png"
+overlap heart/king.png heart/king.png \
+> hyperswines.king.heart.png
+test ${INFO_FILES} && echo "  hyperswines.king.diamond.png"
+overlap diamond/king.png diamond/king.png \
+> hyperswines.king.diamond.png
+
+# swines and hyperswines
+test ${INFO_FILES} && echo "  swines-hyperswines.club.png"
+overlap club/ace.png club/nine.png \
+> swines-hyperswines.club.png
+test ${INFO_FILES} && echo "  swines-hyperswines.spade.png"
+overlap spade/ace.png spade/nine.png \
+> swines-hyperswines.spade.png
+test ${INFO_FILES} && echo "  swines-hyperswines.heart.png"
+overlap heart/ace.png heart/nine.png \
+> swines-hyperswines.heart.png
+test ${INFO_FILES} && echo "  swines-hyperswines.diamond.png"
+overlap diamond/ace.png diamond/nine.png \
+> swines-hyperswines.diamond.png
+# without nines
+test ${INFO_FILES} && echo "  swines-hyperswines.king.club.png"
+overlap club/ace.png club/king.png \
+> swines-hyperswines.king.club.png
+test ${INFO_FILES} && echo "  swines-hyperswines.king.spade.png"
+overlap spade/ace.png spade/king.png \
+> swines-hyperswines.king.spade.png
+test ${INFO_FILES} && echo "  swines-hyperswines.king.heart.png"
+overlap heart/ace.png heart/king.png \
+> swines-hyperswines.king.heart.png
+test ${INFO_FILES} && echo "  swines-hyperswines.king.diamond.png"
+overlap diamond/ace.png diamond/king.png \
+> swines-hyperswines.king.diamond.png
+
+# dollen
+test ${INFO_FILES} && echo "  dollen.png"
+overlap heart/ten.png heart/ten.png \
+> dollen.png
+
+# specialpoints
+# Idee: Zwei Köpfe
+test ${INFO_FILES} && echo "  doppelkopf.png"
+overlap club/ace.png spade/ten.png diamond/ace.png heart/ten.png \
+> doppelkopf.png
+
+# no_*_reply
+for limit in 120 90 60 30 0; do
+  test ${INFO_FILES} && echo "  no_${limit}_reply.png"
+  scale=8
+  echo "%!PS-Adobe-3.0
+%%LanguageLevel: 2
+%%
+%%Title: no $limit reply
+%%For: Diether Knof
+%%CreationDate: 15-12-2006
+%%Creator: Diether Knof
+%%
+%%Orientation: Portrait
+%%BoundingBox: 0 0 $(($scale * $width)) $(($scale * $width / 2))
+%%Pages: 1
+%%
+%%EndComments
+
+%Groesse ~ 842x595
+$scale dup scale
+/breite $(($width)) def
+/hoehe $(($width / 2)) def
+
+%
+% change encoding to ISO8859-1  -  reiner@schildi.xnc.com
+%
+% <fontname> ISOfindfont => <font>
+%
+/ISOfindfont {
+dup 100 string cvs (ISO-) exch concatstrings cvn exch
+findfont dup maxlength dict begin
+{ 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end definefont
+} def
+
+/Times-ItalicBold ISOfindfont
+setfont
+
+/Zentriere {
+  % Text
+  /Groesse exch def
+  /Text exch def
+  gsave
+  %    /StandardSymL ISOfindfont
+  ISOfindfont
+  Groesse scalefont
+  setfont
+  breite Text stringwidth pop sub 2 div
+  1 moveto
+  Text show
+  grestore
+} def
+
+%%Page: 1 1
+
+/Times-Bold ($limit) $(($width * 2 / 3)) Zentriere
+
+showpage
+
+quit"\
+> no_${limit}_reply.ps
+#convert -colors 3 -transparent white no_${limit}_reply.ps no_${limit}_reply.png
+convert -colors 2 -white-threshold 65000 -transparent white no_${limit}_reply.ps no_${limit}_reply.png
+#mogrify -transparent white no_${limit}_reply.png
+mogrify -resize ${width}x$(($width / 2)) no_${limit}_reply.png
+rm -f no_${limit}_reply.ps
+done
+
+# no_*
+  echo "%!PS-Adobe-3.0
+%%LanguageLevel: 2
+%%
+%%Title: stroke
+%%For: Diether Knof
+%%CreationDate: 15-12-2006
+%%Creator: Diether Knof
+%%
+%%Orientation: Portrait
+%%BoundingBox: 0 0 $(($scale * $width)) $(($scale * $width / 2))
+%%Pages: 1
+%%
+%%EndComments
+
+%Groesse ~ 842x595
+$scale $width mul 100 div dup scale
+/breite 100 def
+/hoehe 50 def
+
+10 setlinewidth
+
+%%Page: 1 1
+
+gsave
+/DeviceRGB setcolorspace
+1 0 0 setcolor
+newpath
+5 10 moveto
+breite 5 sub hoehe 10 sub lineto
+closepath
+stroke
+grestore
+
+showpage
+
+quit"\
+> stroke.ps
+convert -colors 2 -white-threshold 65000 -transparent white stroke.ps stroke.png
+#mogrify -transparent white stroke.png
+mogrify -resize ${width}x$(($width / 2)) stroke.png
+for limit in 120 90 60 30 0; do
+  test ${INFO_FILES} && echo "  no_${limit}"
+  composite stroke.png no_${limit}_reply.png no_${limit}.png
+done
+rm -f stroke.ps stroke.png
+
+test ${INFO_GROUPS} && echo "scaling all icons"
+# scale all icons
+for f in re.png contra.png solo*.png marriage*.png genscher.png poverty*.png thrown_nines.png thrown_kings.png thrown_nines_and_kings.png fox_highest_trump.png swines.*.png hyperswines.*.png swines-hyperswines.*.png no_*.png
+do
+  #convert -scale $(( $width * $scaling / 100 ))x$(( $height * $scaling / 100 )) \
+  test ${INFO_FILES} && echo "  $f"
+  mogrify -resize $scalingx$scaling% $f
+done
+
+
+rm ${FILE_PIXEL}
+rm ${FILE_OVERLAP}
+
+
+test ${INFO_GROUPS} && echo "sharpen all icons"
+# sharpen and minimize
+for f in *.png; do \
+  test ${INFO_FILES} && echo "  $f"
+  mogrify -sharpen 1 $f
+  pngcrushmin $f
+done
+

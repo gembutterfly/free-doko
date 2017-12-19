@@ -1,0 +1,105 @@
+# All object files
+#OBJECTS = doko_test.o 
+OBJECTS_ROOT = \
+	freedoko.o \
+	constants.o \
+	debug.o \
+	utils.o \
+	basistypes.o \
+	runtime.o \
+
+include party/Makefile.objects
+OBJECTS_PARTY := $(patsubst %,party/%,$(OBJECTS))
+
+include game/Makefile.objects
+OBJECTS_GAME := $(patsubst %,game/%,$(OBJECTS))
+include game/gameplay_actions/Makefile.objects
+OBJECTS_GAME += $(patsubst %,game/gameplay_actions/%,$(OBJECTS))
+
+include player/Makefile.objects
+OBJECTS_PLAYER := $(patsubst %,player/%,$(OBJECTS))
+include player/rating/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/rating/%,$(OBJECTS))
+include player/ai.dummy/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/ai.dummy/%,$(OBJECTS))
+include player/ai.random/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/ai.random/%,$(OBJECTS))
+include player/ai/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/ai/%,$(OBJECTS))
+include player/human/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/human/%,$(OBJECTS))
+include player/network/Makefile.objects
+OBJECTS_PLAYER += $(patsubst %,player/network/%,$(OBJECTS))
+
+include card/Makefile.objects
+OBJECTS_CARD := $(patsubst %,card/%,$(OBJECTS))
+
+include misc/Makefile.objects
+OBJECTS_MISC := $(patsubst %,misc/%,$(OBJECTS))
+
+include ui/Makefile.objects
+OBJECTS_UI := $(patsubst %,ui/%,$(OBJECTS))
+
+include os/Makefile.objects
+OBJECTS_OS := $(patsubst %,os/%,$(OBJECTS))
+
+# the classes
+OBJECTS_CLASS := \
+	class/getopt/getopt.o \
+	class/getopt/option.o \
+	class/readconfig/readconfig.o
+
+include utils/Makefile.objects
+OBJECTS_UTILS := $(patsubst %,utils/%,$(OBJECTS))
+
+ifeq ($(USE_UI_TEXT), true)
+	include ui/text/Makefile.objects
+	OBJECTS_UI += $(patsubst %,ui/text/%,$(OBJECTS))
+endif
+ifeq ($(USE_UI_GTKMM), true)
+	include ui/gtkmm/Makefile.objects
+	OBJECTS_UI += $(patsubst %,ui/gtkmm/%,$(OBJECTS))
+	include ui/gtkmm/widgets/Makefile.objects
+	OBJECTS_UI += $(patsubst %,ui/gtkmm/widgets/%,$(OBJECTS))
+ifeq ($(USE_NETWORK), true)
+ifeq ($(USE_NETWORK_DOKOLOUNGE), true)
+	include ui/gtkmm/dokolounge/Makefile.objects
+	OBJECTS_UI += $(patsubst %,ui/gtkmm/dokolounge/%,$(OBJECTS))
+  endif
+  endif
+endif
+
+ifeq ($(USE_SOUND), true)
+	include sound/Makefile.objects
+	OBJECTS_SOUND := $(patsubst %,sound/%,$(OBJECTS))
+endif
+
+
+ifeq ($(USE_NETWORK), true)
+	include network/Makefile.objects
+	OBJECTS_NETWORK := $(patsubst %,network/%,$(OBJECTS))
+	include network/actor/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/actor/%,$(OBJECTS))
+	include network/gnet/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/gnet/%,$(OBJECTS))
+	include network/file/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/file/%,$(OBJECTS))
+	include network/FreeDoko/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/FreeDoko/%,$(OBJECTS))
+	include network/FreeDoko/parser/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/FreeDoko/parser/%,$(OBJECTS))
+ifeq ($(USE_NETWORK_DOKOLOUNGE), true)
+	include network/DokoLounge/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/DokoLounge/%,$(OBJECTS))
+	include network/DokoLounge/parser/Makefile.objects
+	OBJECTS_NETWORK += $(patsubst %,network/DokoLounge/parser/%,$(OBJECTS))
+  endif
+endif
+
+OBJECTS := $(OBJECTS_ROOT)
+
+#include ai/Makefile.objects
+#include os/Makefile.objects
+#ifdef GTK
+#	include ui.gtk/Makefile.objects
+#endif

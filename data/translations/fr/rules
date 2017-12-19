@@ -1,0 +1,186 @@
+# FreeDoko translation: part rules
+# language: français
+# version: 0.7.5
+
+rule					= règle
+rules					= règles
+
+rules: %tgroup%				= règles: %tgroup%
+
+Rule::unsupported			= non supporté
+
+Rule::mutate				= mutate
+
+# tournament
+Rule::Group::tournament			= tournoi
+Rule::number of rounds limited		= nombre de tours limité
+Rule::number of rounds			= nombre de tours
+Rule::number of games per round		= number of games per round***
+Rule::points limited			= points limités
+Rule::points				= points
+
+Rule::number of players			= nombre de joueurs
+Rule::number of players in game		= nombre de joueurs en jeu
+Rule::with nines			= avec neufs
+
+Rule::number of duty soli		= solos obligatoires
+Rule::number of duty color soli		= solos couleur obligatoires
+Rule::number of duty picture soli	= solos figures obligatoires
+Rule::offer duty solo			= offer duty solo***
+Rule::lustsolo player leads		= le joueur de solo entame
+Rule::solo always counts triple		= solo always counts triple***
+
+# Bock
+Rule::Group::counting			= compte
+Rule::bock				= bock
+Rule::bock multiplier			= bock multiplier***
+Rule::append bock			= ajouter les tours de bock
+Rule::bock after 120-120		= bock après 120-120
+Rule::bock after lost solo		= bock après solo perdu
+Rule::bock after lost re/contra		= bock après re/contre perdu
+Rule::bock after heart trick		= bock après levée à coeur
+Rule::bock after black game		= bock après black game
+
+# information
+Rule::Group::information		= information
+Rule::show tricks number		= montrer le numéro de levée
+Rule::show all hands			= montrer toutes les mains
+Rule::show if valid			= montrer si valide
+Rule::show trickpiles points		= montrer les points sur les piles
+Rule::show tricks in trickpiles		= montrer les levées sur les piles
+Rule::show known teams in game		= montrer les équipes connues dans le jeu
+Rule::show soloplayer in game		= montrer le joueur de solo dans le jeu
+Rule::card hint				= indice
+Rule::take back tricks			= rendre la levée
+
+# poverty
+Rule::Group::poverty			= misère
+Rule::poverty				= misère
+Rule::poverty shift			= passer la misère
+Rule::poverty shift only trump		= passer seulement des atouts
+
+Rule::poverty fox do not count		= le renard ne compte pas
+Rule::poverty fox shift extra		= le renard change les bonus
+Rule::poverty fox shift open		= le renard change l'entame
+Rule::throw with one trump		= jeter le jeu avec un atout
+
+Rule::throw with nines			= jeter le jeu avec neufs
+Rule::throw with %tnumber% nines	= jeter le jeu avec %tnumber% neufs
+Rule::min number of throwing nines	= nombre minimal pour jeter les neufs
+Rule::throw with kings			= jeter le jeu avec rois
+Rule::throw with %tnumber% kings	= jeter le jeu avec %tnumber% rois
+Rule::min number of throwing kings	= nombre minimal pour jeter les rois
+Rule::throw with nines and kings		= jeter le jeu avec neufs et rois
+Rule::throw with %tnumber% nines and kings	= jeter le jeu avec %tnumber% neufs et rois
+Rule::min number of throwing nines and kings	= nombre minimal pour jeter les neufs et rois
+Rule::throw with richness		= jeter le jeu avec une richesse
+Rule::throw with richness %unumber% 	= jeter le jeu avec %unumber% points
+Rule::min richness for throwing         = points minimaux pour une richesse
+Rule::throw when fox highest trump	= jeter le jeu quand le renard est l'atout le plus élevé
+
+# marriage
+Rule::Group::marriage			= mariage
+Rule::marriage determination		= détermination de mariage
+Rule::marriage first foreign		= première levée
+Rule::marriage first color		= première couleur
+Rule::marriage first single color	= première couleur simple
+Rule::marriage first trump		= premier levée à l'atout
+
+Rule::genscher				= genscher
+
+# solo
+Rule::Group::solo			= solo
+Rule::solo				= solo
+Rule::solo jack				= solo valets
+Rule::solo queen			= solo dames
+Rule::solo king				= solo rois
+Rule::solo queen jack			= solo dames-valets
+Rule::solo king jack			= solo rois-valets
+Rule::solo king queen			= solo rois-dames
+Rule::solo koehler			= figures
+Rule::solo color			= solo couleur
+Rule::solo meatless			= sans atout
+Rule::throwing before solo		= throwing goes before solo***
+
+# dollen
+Rule::Group::dollen			= poupées
+Rule::dollen				= poupées
+Rule::dollen second over first		= le second prime sur le premier
+Rule::dollen contrary in last trick	= pas dans la dernière levée
+Rule::dollen first over second with swines	= avec les cochons la première prime sur la seconde
+
+# swines
+Rule::Group::swines			= cochons
+Rule::swines				= cochons
+Rule::swines announcement begin		= annonce des cochons au début
+Rule::swine only second			= cochon seulement le second
+Rule::swines in solo			= cochons dans solo
+Rule::swines in poverty			= cochons dans une misère
+Rule::hyperswines			= hypercochons
+Rule::hyperswines announcement begin	= annonce des hypercochons au début
+Rule::hyperswines in solo		= hypercochons dans solo
+Rule::hyperswines in poverty		= hypercochons dans une misère
+Rule::swines and hyperswines joint	= cochons et hypercochons unis
+
+# extrapoints
+Rule::Group::extrapoints		= bonus
+
+Rule::extrapoint catch fox		= renard capturé
+Rule::extrapoint catch fox last trick	= catch fox in last trick***
+Rule::extrapoint fox last trick		= dernière levée par renard
+Rule::extrapoint double fox last trick	= dernière levée par les deux renards
+
+Rule::extrapoint charlie		= charlie
+Rule::extrapoint catch charlie		= charlie attrapé
+Rule::extrapoint double charlie		= double charlie
+Rule::extrapoint catch double charlie	= double charlie attrapé
+Rule::extrapoint catch charlie only with diamond queen= catch charlie only with diamond queen***
+
+Rule::extrapoint dolle jabs dolle	= poupée grouike poupée
+Rule::extrapoint heart trick		= levée à coeur
+
+# announcements
+Rule::Group::announcements		= annonces
+Rule::knocking	= knocking***
+Rule::announcement till full trick	= jusqu'à la levée complète
+Rule::announcement first trick thirty points	= obligatoire quand la première levée fait au moins 30 points
+Rule::announcement first trick thirty points only first	= seulement en tant que première annonce
+Rule::announcement first trick thirty points only re/contra= seulement sur re ou contre
+Rule::announcement first trick thirty points only re/contra -- knocking= seulement sur pas de 120
+Rule::announcement first trick thirty points in marriage= dans un mariage
+Rule::announcement contra doubles against re = re/contre double les points 'en face d'un re'
+Rule::announcement contra doubles against re -- knocking = pas de 120 double les points 'en face d'un re'
+Rule::announcement reply		= réponse
+Rule::announcement strict limit		= strict limits***
+Rule::announcement re/contra doubles	= re/contre double les points
+Rule::announcement re/contra doubles -- knocking= pas de 120 double les points
+Rule::announcement no 120		= re/contre
+Rule::announcement no 120 -- knocking	= pas de 120
+Rule::announcement no 90		= pas de 90
+Rule::announcement no 60		= pas de 60
+Rule::announcement no 30		= pas de 30
+Rule::announcement no 0			= fanny
+Rule::last announcement			= dernière annonce
+
+# static values
+Rule::number of same cards		= nombre de cartes identiques
+Rule::number of card colors		= nombre de couleurs de cartes
+Rule::number of card tcolors		= nombre de tcolors de cartes
+Rule::number of card values		= nombre de valeurs de cartes
+Rule::number of cards			= nombre de cartes
+Rule::number of teams			= nombre d'équipes
+Rule::number of players per team	= nombre de joueurs par équipe
+Rule::number of tricks in game		= nombre de levées dans le jeu
+
+# counting
+Rule::Group::counting			= compte
+Rule::counting			= compte
+Counting::plus			= plus
+Counting::minus			= moins
+Counting::plus-minus		= plus-moins
+
+
+# extra informations
+Rule::Information::Title::without nines	= Information: jeu sans neufs
+Rule::Information::without nines	= \
+  Vous avez choisi de jouer sans les neufs. Vous devriez alors ajuster les levées de dernière annonce dans le groupe 'annonce' ainsi que la détermination de mariage dans le groupe 'marriage'. Nous vous suggérons également d'adjuster l'IA (Revenir au défaut ou changer manuellement).

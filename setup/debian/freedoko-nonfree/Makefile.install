@@ -1,0 +1,40 @@
+include Makefile.install.directories
+
+PACKAGE=freedoko-nonfree
+
+# Edited for Debian GNU/Linux.
+DESTDIR = 
+
+.PHONY: all
+all :
+
+.PHONY: install
+install :
+	# create and copy the binary
+	mkdir -p $(DESTDIR)/$(BIN_DIRECTORY)
+	echo ${CXX}
+	export OSTYPE \
+	  && $(MAKE) -C src FreeDoko
+	strip src/FreeDoko
+	cp src/FreeDoko $(DESTDIR)/$(BIN_DIRECTORY)/
+	cd $(DESTDIR)/$(BIN_DIRECTORY) && ln -s FreeDoko freedoko
+	# copy the icon
+	mkdir -p $(DESTDIR)/$(ICON_DIRECTORY)
+	cp src/FreeDoko.png $(DESTDIR)/$(ICON_DIRECTORY)/
+	# copy the .desktop file
+	mkdir -p $(DESTDIR)/$(DESKTOP_FILE_DIRECTORY)
+	cp FreeDoko.desktop $(DESTDIR)/$(DESKTOP_FILE_DIRECTORY)/
+	# copy the data
+	mkdir -p $(DESTDIR)/$(DATA_DIRECTORY)
+	cp -a data/* $(DESTDIR)/$(DATA_DIRECTORY)
+	-chown -R .games $(DESTDIR)/$(DATA_DIRECTORY)
+	-chmod -R u+rwX,g+rX,o-rwx $(DESTDIR)/$(DATA_DIRECTORY)
+	# copy the documentation
+	mkdir -p $(DESTDIR)/usr/share/doc/$(PACKAGE)
+	cp -a AUTHORS copyright ChangeLog doc/* \
+		$(DESTDIR)/usr/share/doc/$(PACKAGE)/
+	# create and copy the manual page
+	a2x -f manpage doc/freedoko.asciidoc
+	mkdir -p $(DESTDIR)/$(MAN_DIRECTORY)
+	cp debian/freedoko.6 $(DESTDIR)/$(MAN_DIRECTORY)/
+	cd $(DESTDIR)/$(MAN_DIRECTORY)/ && ln -s freedoko.6 FreeDoko.6

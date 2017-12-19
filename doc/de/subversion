@@ -1,0 +1,57 @@
+Seit der Version 0.7.1 ist FreeDoko über ein subversion-Repository zu auf gna.org erreichen.
+
+Der Befehl um FreeDoko mit subversion herunterzuladen lautet:
+  svn checkout svn://svn.gna.org/svn/freedoko
+Um den Quelltext und die nötigen Daten zu laden reicht ein
+  svn checkout svn://svn.gna.org/svn/freedoko/trunk FreeDoko
+und die Dokumentation gibt es dann mit
+  svn checkout svn://svn.gna.org/svn/freedoko/documents FreeDoko/doc
+
+
+Hier die Struktur des Repositories (nur ausgewählte Unterverzeichnisse)
+
++-trunk                 die aktuelle Entwicklungsversion von FreeDoko
+| |
+| +-src                   der Quelltext
+| +-doc                   Dokumentation
+| | +-de                   auf deutsch
+| | `-en                   auf englisch
+| `-data                  Daten, die für den Start benötigt werden
+|   +-rules                 Regelsätze                  
+|   +-ai                    KI-Konfigurationen                  
+|   `-translations          Sprachdateien
+|
++-documents               weitere Dokumentation
+|
++-manual                  Das Handbuch von FreeDoko
+| +-de                      deutsches Handbuch
+| `-en                      englisches Handbuch
+|
++-more_data             zusätzliche Dateien, die nicht unbedingt benötigt werden
+| |
+| +-cardsets              weitere Kartensätze (xskat, kdecarddecks, pysol)
+| +-backgrounds           weitere Hintergründe
+| +-bin                   ein paar Skripte
+| |                       (u.a. um die Symbole aus Karten zu erstellen)
+| +-gtkmm-2.4-dll         Graphik-Bibliotheken für MS-Windows
+| +-gnet.dll              Netzwerk-Bibliotheken für MS-Windows
+| +-setup                 Dateien für die Erzeugung der Pakete
+|
++-bugreports            die noch zu bearbeitenden Fehlerberichte
+|
++-homepage              unsere Internetpräsenz
+|
++-distribution          ?
+|
+`-versions              ?
+
+
+
+Internetseiten
+* subversion 
+  http://subversion.tigris.org/
+* Dokumentation zu subversion
+  http://svnbook.org/
+* FreeDoko auf gna.org
+  http://www.gna.org/
+

@@ -1,0 +1,29 @@
+# FreeDoko translation: part network
+# language: english
+# version: 0.7.5
+
+Warning::network unstable =\
+	The support for network games is still in early developement. So you will most surely get some problems.
+
+Network::name			= name
+Network::address		= address
+Network::port			= port
+Network::incoming bytes		= incoming
+Network::outgoing bytes		= outgoing
+
+# relation
+Network::Connection::relation		= relation
+Network::Connection::Relation::orphan	= orphan
+Network::Connection::Relation::parent	= parent
+Network::Connection::Relation::child	= child
+Network::Connection::Relation::sibling	= sibling
+
+# type
+Network::Connection::type		= type
+Network::Connection::Type::unset	= unset
+Network::Connection::Type::player	= player
+Network::Connection::Type::shadow	= shadow
+Network::Connection::Type::observer	= observer
+
+Error: could not create server on port %uport% = \
+	Could not create server on port %uport%.

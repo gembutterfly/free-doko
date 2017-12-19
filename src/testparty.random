@@ -1,0 +1,110 @@
+#!FreeDoko
+# FreeDoko party
+
+# 1. standard defensiv
+# 2. profi
+# 3. standard offensiv
+# 4. profi unfair
+
+first seed = 3
+first startplayer = 0
+
+rules 
+{
+    mutate = true
+    number of rounds limited = false
+    points limited = false
+    counting = plus-minus
+}
+
+players
+{
+  {
+    name = Mara
+    type = ai
+
+    aiconfig
+    {
+      difficulty = standard defensive
+	type =  0: random
+	type =  1: random
+	type =  2: random
+	type =  3: random
+	type =  4: random
+	type =  5: random
+	type =  6: random
+	type =  7: random
+	type =  8: random
+	type =  9: random
+	type =  10: random
+	type =  11: random
+    }
+  }
+  {
+    name = Gerd
+      type = ai
+
+      aiconfig
+      {
+	difficulty = profi
+	  type =  0: random
+	  type =  1: random
+	  type =  2: random
+	  type =  3: random
+	  type =  4: random
+	  type =  5: random
+	  type =  6: random
+	  type =  7: random
+	  type =  8: random
+	  type =  9: random
+	  type =  10: random
+	  type =  11: random
+      }
+  }
+  {
+    name = Erika
+      type = ai
+
+      aiconfig
+      {
+	difficulty = standard offensive
+	  type =  0: random
+	  type =  1: random
+	  type =  2: random
+	  type =  3: random
+	  type =  4: random
+	  type =  5: random
+	  type =  6: random
+	  type =  7: random
+	  type =  8: random
+	  type =  9: random
+	  type =  10: random
+	  type =  11: random
+      }
+  }
+  {
+    name = Sven
+      type = ai
+
+      aiconfig
+      {
+	difficulty = profi unfair
+	  type =  0: random
+	  type =  1: random
+	  type =  2: random
+	  type =  3: random
+	  type =  4: random
+	  type =  5: random
+	  type =  6: random
+	  type =  7: random
+	  type =  8: random
+	  type =  9: random
+	  type =  10: random
+	  type =  11: random
+      }
+  }
+}
+
+game summaries
+{
+}

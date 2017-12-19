@@ -1,0 +1,23 @@
+freedoko-cardsets-gnome-games (0.7.9) unstable; urgency=low
+
+  * update to debian squeeze
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 06 Mar 2011 08:14:30 +0100
+
+freedoko-cardsets-gnome-games (0.7.6) unstable; urgency=low
+
+  * update to debian lenny
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jun 2009 21:22:00 +0200
+
+freedoko-cardsets-gnome-games (0.7.4-2) unstable; urgency=low
+
+  * fixed no* icons
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jan 2007 07:54:52 +0100
+
+freedoko-cardsets-gnome-games (0.7.4) unstable; urgency=low
+
+  * created cardset
+
+ -- Diether Knof <dknof@gmx.de>  Tue, 16 Jan 2007 23:28:31 +0100

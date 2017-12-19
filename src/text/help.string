@@ -1,0 +1,114 @@
+std::string const help_string = "\
+FreeDoko -- Version " + static_cast<std::string>(*::version) + "\n\
+\n\
+arguments:\n\
+-h -?\n\
+--help\n\
+	print this help, quits\n\
+\n\
+-v\n\
+--version\n\
+	print the version, quits\n\
+\n\
+-L\n\
+--license\n\
+	print some info about the license (GPL), quits\n\
+\n\
+--defines\n\
+	print the defines (compile time), quits\n\
+\n\
+--directories\n\
+	print the directories FreeDoko searchs, quits\n\
+\n\
+--debug\n\
+	print debug information (so far the gameplay)\n\
+\n\
+-u\n\
+--ui [string]\n\
+	setting the ui type.\n\
+	til now, only 'gtkmm' is implemented\n\
+\n\
+--settings [string]\n\
+	file with (extra) settings to load\n\
+\n\
+-n\n\
+--name [string]\n\
+	the name of the player\n\
+-l\n\
+--language [string]\n\
+	the language (shortform or longform)\n\
+\n\
+-C\n\
+--cardset [string]\n\
+	the cardset\n\
+\n\
+-H\n\
+--cards-height [number]\n\
+	the height of the cards\n\
+\n\
+-s\n\
+--seed [number]\n\
+        set the starting seed\n\
+        this value will be overwritten by a loaded party, so use with '-'\n\
+\n\
+-b\n\
+--bug-report [filename]\n\
+	replay the bug report\n\
+\n\
+-r\n\
+--references [dirname]\n\
+	check the references in the directory\n\
+\n\
+--auto-bug-reports\n\
+        automatically create bug reports for hardcoded situations\n\
+\n\
+--fast-play\n\
+        automate some behaviour\n\
+        bitwise settings:\n\
+          1  automatic party start\n\
+          2  ai players\n\
+          4  random ai\n\
+          8  skip pauses\n\
+         16  skip gameplay informations\n\
+         32  skip game finished dialog\n\
+         64  show all hands\n\
+        128  skip party finished dialog\n\
+        256  quit when finished\n\
+        512  seed info (see below)\n\
+\n\
+--seed-info\n\
+        print the seeds and some information on stdout\n\
+        (overwrites the bit in 'fast-play')\n\
+\n\
+--save-standard-aiconfig\n\
+        saves the standard aiconfig in the ai directory in the private data directory under the filename 'standard.defensive.saved'.\n\
+        Quits the program\n\
+\n\
+--no-automatic-savings\n\
+        do save nothing automatically\n\
+\n\
+--threads [number]\n\
+	number of threads to use when calculating\n\
+	(thread support must have been enabled for compiling)\n\
+\n\
+--start-server\n\
+	starts the server on the standard port (4224)\n\
+	(network support must have been enabled for compiling)\n\
+\n\
+--connect [address]\n\
+	connects FreeDoko with another FreeDoko server\n\
+	(network support must have been enabled for compiling)\n\
+\n\
+[filename] 	\n\
+	play the party in the file\n\
+	Per default the file 'current' in the 'parties' subdirectory is taken.\n\
+	If the file ends in .BugReport.FreeDoko or .Reference.FreeDoko the file is treated as a bug report.\n\
+\n\
+\n\
+-\n\
+	when used as first option:\n\
+	do load neither the rules, the players nor the current party\n\
+\n\
+\n\
+Report bugs to freedoko@users.sourceforge.net\n\
+";

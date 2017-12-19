@@ -1,0 +1,15 @@
+PACKAGE=freedoko-data
+
+# Edited for Debian GNU/Linux.
+DESTDIR = 
+
+
+.PHONY: all
+all :
+
+.PHONY: install
+install :
+	mkdir -p $(DESTDIR)/usr/share/doc/$(PACKAGE)
+	cp AUTHORS copyright $(DESTDIR)/usr/share/doc/$(PACKAGE)/
+	mkdir -p $(DESTDIR)/usr/share/games/FreeDoko
+	cp -a data/* $(DESTDIR)/usr/share/games/FreeDoko/

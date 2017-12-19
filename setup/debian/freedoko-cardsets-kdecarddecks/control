@@ -1,0 +1,12 @@
+Source: freedoko-cardsets-kdecarddecks
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-cardsets-kdecarddecks
+Architecture: all
+Provides: freedoko-cardset
+Description: kdecarddecks cardset for 'freedoko'
+ This package does contain the kdecarddecks cardsets for the game 'freedoko'.

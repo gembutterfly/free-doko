@@ -1,0 +1,81 @@
+freedoko-nonfree (0.7.11) unstable; urgency=low
+
+  * bug fixes
+  * ai improvements, especially jabbing of tricks
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 18 Dec 2011 07:01:35 +0100
+
+freedoko-nonfree (0.7.10) unstable; urgency=low
+
+  * added sounds
+  * bug fixes
+  * ai improvements
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 14 Aug 2011 15:38:44 +0200
+
+freedoko-nonfree (0.7.9) unstable; urgency=low
+
+  * new rule: knocking
+  * new ki type: monte carlo (jab/serve)
+  * ai improvements
+  * bug fixes
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 06 Mar 2011 08:14:30 +0100
+
+freedoko-nonfree (0.7.8) unstable; urgency=low
+
+  * ai improvements
+  * bug fixes
+
+ -- Diether <dknof@gmx.de>  Sat, 13 Mar 2010 08:00:00 +0200
+
+freedoko-nonfree (0.7.7) unstable; urgency=low
+
+  * duty soli
+  * ai configuration "aggressive" for aggressive announcements
+  * bug fixes (especially crashes in games with swines)
+
+ -- Diether <dknof@gmx.de>  Sun, 27 Sep 2009 13:41:06 +0200
+
+freedoko-nonfree (0.7.6b) unstable; urgency=low
+
+  * fixed bug: swines in color solo
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 16 Aug 2009 08:36:50 +0200
+
+freedoko-nonfree (0.7.6) unstable; urgency=low
+
+  * references: With references, we developers do regular tests of various game situations.
+  * new rules: p.a. bock, throwing goes before solo
+  * improvements in the ai, especially at the estimation of the hands of the other players
+  * better performance, also progress is now shown
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jun 2009 21:22:00 +0200
+
+freedoko-nonfree (0.7.5) unstable; urgency=low
+
+  * rules: 'swines in poverty', 'throw with richness', 'announcement first trick thirty points in marriage'
+  * network: added game synchronization
+  * sound support
+  * ai improvements
+  * bug fixes
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 26 Oct 2008 09:23:53 +0100
+
+freedoko-nonfree (0.7.4-2) unstable; urgency=low
+
+  * added logo and icon images
+
+ -- Diether Knof <dknof@gmx.de>  Mon, 22 Jan 2007 20:00:20 +0100
+
+freedoko-nonfree (0.7.4) unstable; urgency=low
+
+  * replaces 'freedoko-altenburg'
+  * new cardsets: Altenburg/german, Elite, InnoCard
+  * prolongation of the license for the Altenburg/french cardset
+  * rule 'limited points'
+  * support for themes
+  * improvements of the network play: synchronization of the closing of the tricks, announcements are managed by the server
+  * ai improvements: hands of the other players are estimated, new heuristics, announcements overworked
+
+ -- Diether Knof <dknof@gmx.de>  Tue, 16 Jan 2007 23:46:51 +0100

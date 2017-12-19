@@ -1,0 +1,97 @@
+#!/bin/bash
+
+# updates the release specific entries of the homepage
+# note: gnu extensions of 'sed' are used
+
+if [ $# != 1 ]; then
+  echo "$0:"
+  echo "You have to give the version as argument"
+  exit
+fi
+
+VERSION=$1
+
+echo Version $VERSION
+
+VERSION_REGEXP='[0-9].[0-9].[0-9]\+[a-z]\?'
+#VERSION_REGEXP='[0-9].[0-9].[0-9]'
+#VERSION_REGEXP='[0-9.]*'
+DATE_REGEXP='[0-9]\{1,2\}. [A-Z][a-z]\+ [0-9]\{4\}'
+SIZE_REGEXP='\([^0-9]\)[0-9]\+[,.][0-9]'
+MD5SUM_REGEXP='[0-9a-f]\{32\}'
+\
+# echos the size in megabyte with precision 1
+# Argument is the filename in the release directory
+function size() {
+  local SIZE_MB=$(du -k ~/Programme/FreeDoko_${VERSION}.release/$1 | sed "s/\([0-9]*\).*/\1/")
+  SIZE_MB=$(( $SIZE_MB + (1024 / 10 / 2) ))
+  #SIZE_MB=$(( $SIZE_MB * 20 )) # for testings
+  echo -n "$(( ${SIZE_MB} / 1024))${SIZE_DELIMITER}$(( (${SIZE_MB} % 1024) / (1024 / 10) ))"
+} # function size()
+
+# echos the md5sum
+# Argument is the filename in the release directory
+function md5() {
+  md5sum ~/Programme/FreeDoko_${VERSION}.release/$1 | awk '{print $1}'
+}
+
+# german
+
+pushd . >/dev/null
+cd de
+
+DATE=$(export LC_ALL=de_DE.utf8 && date +"%d. %B %Y" | sed "s/^0//")
+SIZE_DELIMITER=,
+
+echo "Windows: $(size FreeDoko_${VERSION}.Windows.zip) MB  MD5: $(md5 FreeDoko_${VERSION}.Windows.zip)"
+echo "Setup:   $(size FreeDoko_${VERSION}.Setup.exe  ) MB  MD5: $(md5 FreeDoko_${VERSION}.Setup.exe  )"
+echo "src:     $(size FreeDoko_${VERSION}.src.zip    ) MB  MD5: $(md5 FreeDoko_${VERSION}.src.zip    )"
+echo "Linux:   $(size FreeDoko_${VERSION}.Linux.zip  ) MB  MD5: $(md5 FreeDoko_${VERSION}.Linux.zip  )"
+
+sed \
+  -e "s|\(<h2>Aktuelle Version: \)${VERSION_REGEXP}\( vom \)${DATE_REGEXP}\(<\/h2>\)|\1${VERSION}\2${DATE}\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Setup.exe\)|\1${VERSION}\2|" \
+  -e "s|\(.* Microsoft Windows.*\)${SIZE_REGEXP}\( MB.*\)|\1\2$(size FreeDoko_${VERSION}.Windows.zip)\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.src.zip\)|\1${VERSION}\2|" \
+  -e "s|\(.* Quelltext mit Graphiken.*\)${SIZE_REGEXP}\( MB.*\)|\1\2$(size FreeDoko_${VERSION}.src.zip)\3|" \
+  FreeDoko.html > FreeDoko.html.2 \
+  && mv FreeDoko.html.2 FreeDoko.html
+
+sed \
+  -e "s|\(<h1>FreeDoko \)${VERSION_REGEXP}\( &mdash; \)${DATE_REGEXP}\(<\/h1>\)|\1${VERSION}\2${DATE}\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Setup.exe.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Setup.exe)\4$(md5 FreeDoko_${VERSION}.Setup.exe)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Windows.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Windows.zip)\4$(md5 FreeDoko_${VERSION}.Windows.zip)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Linux.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Linux.zip)\4$(md5 FreeDoko_${VERSION}.Linux.zip)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.src.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.src.zip)\4$(md5 FreeDoko_${VERSION}.src.zip)|" \
+  Dateien.html > Dateien.html.2 \
+  && mv Dateien.html.2 Dateien.html
+
+popd >/dev/null
+
+
+# english
+pushd . >/dev/null
+cd en
+
+DATE=$(export LC_ALL=C && date +"%d. %B %Y" | sed "s/^0//")
+SIZE_DELIMITER=.
+
+sed \
+  -e "s|\(<h2>Current version: \)${VERSION_REGEXP}\( of the \)${DATE_REGEXP}\(<\/h2>\)|\1${VERSION}\2${DATE}\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Setup.exe\)|\1${VERSION}\2|" \
+  -e "s|\(.* Microsoft Windows.*\)${SIZE_REGEXP}\( MB.*\)|\1\2$(size FreeDoko_${VERSION}.Setup.exe)\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.src.zip\)|\1${VERSION}\2|" \
+  -e "s|\(.* source code with graphics.*\)${SIZE_REGEXP}\( MB.*\)|\1\2$(size FreeDoko_${VERSION}.src.zip)\3|" \
+  FreeDoko.html > FreeDoko.html.2 \
+  && mv FreeDoko.html.2 FreeDoko.html
+
+sed \
+  -e "s|\(<h1>FreeDoko \)${VERSION_REGEXP}\( &mdash; \)${DATE_REGEXP}\(<\/h1>\)|\1${VERSION}\2${DATE}\3|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Setup.exe.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Setup.exe)\4$(md5 FreeDoko_${VERSION}.Setup.exe)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Windows.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Windows.zip)\4$(md5 FreeDoko_${VERSION}.Windows.zip)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.Linux.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.Linux.zip)\4$(md5 FreeDoko_${VERSION}.Linux.zip)|" \
+  -e "s|\(FreeDoko_\)${VERSION_REGEXP}\(.src.zip.*\)${SIZE_REGEXP}\( MB.*MD5sum: \)${MD5SUM_REGEXP}|\1${VERSION}\2\3$(size FreeDoko_${VERSION}.src.zip)\4$(md5 FreeDoko_${VERSION}.src.zip)|" \
+  files.html > files.html.2 \
+  && mv files.html.2 files.html
+
+popd >/dev/null

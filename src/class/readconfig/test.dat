@@ -1,0 +1,10 @@
+# demo config file
+a = 1
+b = 2
+a d = 4 123a
+
+{
+  !include test2.dat
+}
+
+

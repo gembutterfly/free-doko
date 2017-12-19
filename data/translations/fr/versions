@@ -1,0 +1,203 @@
+# FreeDoko translation: part version
+# language: français
+# version: 0.7.5
+
+Greeting::first run			= \
+	Bienvenue au FreeDoko.\n\
+	\n\
+	Avant de jouer, voici quelques informations:\n\
+	* FreeDoko est distribué sous GNU General Public License (GPL), vous pouvez trouver davantage d'informations dans le menu 'Aide', item 'licence'. La GPL complète peut être trouvée dans le répertoire documentation et sous http://www.gnu.org/licenses/gpl.html.\n\
+	* Quand FreeDoko démarre pour la première fois, certains répertoires sont créés (ils seront affichés dans une nouvelle fenêtre). Si vous voulez effacer FreeDoko n'oubliez pas de détruire ces répertoires(avec le contenu).\n\
+	* FreeDoko est toujours en cours de développement. C'est pourquoi vous ne pouvez sélectioner toutes les options (p.e. certaines règles de tournoi). Le programme peut aussi se planter. Si FreeDoko detecte un problème le jeu sera stoppé et vous pourrez créer un rapport de bug.\n\
+	* Afin que vous nous aidiez au développement de FreeDoko, vous pouvez nous contacter directement (sur http://sourceforge.net/projects/free-doko/). Vous pouvez créer des rapports de bug dans le jeu en utilisant l'item de menu correspondant et en nous l'envoyant (freedoko@users.sourceforge.net). Vous pourrez trouver davantage d'informations dans la documentation de FreeDoko.\n\
+	\n\
+	Amusez vous bien
+
+Greeting::%sversion%	= \
+	Bienvenue à la version %sversion%
+
+ChangeLog::for %sversion%	= \
+	 Log des modifications de la version %sversion%:
+
+ChangeLog::till %sversion%	= \
+	 Log des modifications jusqu'à la version %sversion%
+
+
+
+# 0.6.3
+ChangeLog::0.6.3			= \
+	* l'interface utilisateur a changé, utilisation de la librairie gtkmm (http://www.gtkmm.org).\n\
+	* Les informations du jeu et de la partie sont rassemblées dans le menu 'information', il y a aussi le nouvel item 'suggestion de carte' (shortcut: 'h'). \
+	  Il suggère une carte à jouer et donne un (court) résumé. \n\
+	* Les cartes sont redimmensionnables. Choisissez la hauteur de carte désirée dans 'réglages' onglet 'réglages', 'cartes'.\n\
+	* La syntaxe pour les polices a changé. Vous devez sélectionner noms des polices ('réglages' -> 'réglages' -> 'polices, couleurs')
+
+# 0.6.4
+ChangeLog::0.6.4			= \
+	* Maintenant on peut répondre à une annonce (règles, annonces, réponse)\n\
+	* La suggestion de carte peut être automatique(préferences, comportement, suggestion automatique)\n\
+	* On peut utiliser les carctères spéciaux pour les noms de joueurs\n\
+	* Les images sont sauvegardées au format 'png'
+
+# 0.6.5
+ChangeLog::0.6.5			= \
+	* caractères spéciaux dans le texte supportés\n\
+	* le curseur de la souris montre si une carte peut être jouée\n\
+	* corrections de bugs dans l'AI
+
+# 0.6.5b
+ChangeLog::0.6.5b		= \
+	* la dernière levée peut être vue
+
+# 0.6.6
+ChangeLog::0.6.6			= \
+	* nouvelle organisation de la configuration des joueurs et des règles\n\
+	* statistiques de joueurs (dans le menu 'information')\n\
+	* maniement facilité des cochons:\n\
+	  Avec le réglage 'annonce automatique des cochons' les cochons du joueur sont annoncés automatiquement au dernier moment possible.\n\
+	  Sinon, le joueur doit annoncer ses cochons manuellement (menu 'annonces').
+
+# 0.6.7
+ChangeLog::0.6.7	= \
+	* quand la manche est terminée, elle peut être revue\n\
+	* les points spéciaux sont visibles dans les piles de levées\n\
+	* nouveau réglage : les cartes valides peuvent être mises en avant\n\
+	* fenêtre des points de partie améliorée: les tours sont visibles \n\
+	* l'IA peut être définie pour chaque levée\n\
+	* le curseur montre si l'IA réfléchit\n\
+	* une carte peut être jouée avec les touches 1-9 et a, b, c
+
+
+# 0.6.7b
+ChangeLog::0.6.7b	= \
+	* correction de bug avec les jeus solo (au commencement d'une nouvelle partie)\n\
+	* correction d'un bug sur l'alimentation aléatoire dans les réglages de partie\n\
+	* dans les préférences, les entrées de texte peuvent être changées
+
+# 0.6.8
+ChangeLog::0.6.8	= \
+	* le type de décompte des points d'une partie peut être changé\n\
+	* ajout de la fenêtre de partie terminée\n\
+	* le nombre de tours peut être limité
+
+# 0.6.9
+ChangeLog::0.6.9	= \
+	* les partes peuvent être sauvegardées, la partie courante est automatiquement sauvegardée\n\
+	* les annonces peuvent être faites sur la table(cliquer avec la souris sur l'icône d'annonces)\n\
+	* nouveau code pour déterminer une main\n\
+	* nouvelle règle : avec les cochons, la première poupée sur la seconde
+
+# 0.7.0
+ChangeLog::0.7.0	= \
+	* règle: jointure des cochons et hypercochons\n\
+	* amélioration de règle: en jouant 'sans les neufs' les rois de carreau deviennent des hypercochons\n\
+	* début du code multijoueurs : la connexion avec un autre jeu de FreeDoko afin de chatter est possible\n\
+	* conversion des fichiers texte en utf-8\n\
+	* changement de la configuration IA par defaut
+
+# 0.7.1
+ChangeLog::0.7.1	= \
+	* réglage 'montrer les points spéciaux dans les piles de levées' supprimé \n\
+	* réglage: les informations de l'ia sur les cartes et les équipes des autres joueurs peuvent être affichées (groupe: 'aide'). \n\
+	* nouvelle traduction'altdeutsch' \n\
+	* information équipe 'surmenée'
+
+# 0.7.2
+ChangeLog::0.7.2	= \
+	* subversion repository under http://gna.org/\n\
+	* développement futur dans le code du jeu en réseau\n\
+	* ajout de la rotation de table\n\
+	* changement de version vers gtkmm 2.4\n\
+	* inteligence artificielle prédéfinie supportée
+# 0.7.2b
+ChangeLog::0.7.2b	= \
+	* correction de bug critique (crash sans rapport de bug dans la dernière levée)
+
+# 0.7.3
+ChangeLog::0.7.3	= \
+        * nouvelle règle : \
+	  'nombre mini pour jeter les neufs', \
+	  'nombre mini pour jeter les rois', \
+          'jeter avec neufs et rois', \
+          'l'annonce d'un contre double en face d'un re', \
+          'l'annonce de la première levée à trente points uniquement en premier lieu', \
+	  'annonce jusqu'à la levée complète', \
+	  'renard ne compte pas lors d'une misère', \
+	  'le renard d'une misère change l'entame', \
+	  'le renard d'une misère change les bonus'\n\
+	* ordre des heuristiques libre, interface de réglage des heuristiques amélioré\n\
+	* support ajouté pour différents taux\n\
+	* traduction française\n\
+	* graphe des points de la partie\n\
+	* support réseau pour les parties simples
+
+# 0.7.4
+ChangeLog::0.7.4        = \
+	* nouveaux jeux de cartes: \
+	  Altenburg/german, \
+	  Elite, \
+	  InnoCard\n\
+	* prolongation de la license pour les jeux Altenburg/français \n\
+	* règle 'points limités'\n\
+	* support des themes\n\
+	* améliorations du jeu en réseau: \
+	  synchronisation de la clôture des levées, \
+	  les annonces sont gérées par le serveur\n\
+	* améliorations de l'IA: \
+	  les mains des autres joueurs sont estimées, \
+	  nouvelles heuristiques, \
+	  annonces très rapides
+
+# 0.7.5
+ChangeLog::0.7.5        = \
+	* nouvelles règles: \
+          jeter le jeu avec une richesse, \
+	  cochons dans une misère, \
+	  annonce obligatoire dans un mariage\n\
+	* sons supportés\n\
+	* synchronisation du jeu pour les joueurs en réseau\n\
+	* améliorations de l'IA , ie nouvelles heuristiques\n\
+	* corrections de bugs \n\
+	* handling: les levées complètes et les fenêtres d'information sont maintenant fermées avec le bouton droit de la souris, en plus, la levée complète avec un clic gauche sur la levée.
+
+
+# 0.7.6
+ChangeLog::0.7.6        = \
+	* references: With references, we developers do regular tests of various game situations.\n\
+	* new rules: p.a. bock, throwing goes before solo\n\
+	* improvements in the ai, especially at the estimation of the hands of the other players\n\
+	* better performance, also progress is now shown***
+
+# 0.7.6b
+ChangeLog::0.7.6b        = \
+	* fixed bug: swines in color solo***
+
+# 0.7.7
+ChangeLog::0.7.7        = \
+	* duty soli \n\
+	* ai configuration "aggressive" for aggressive announcements \n\
+	* bug fixes (especially crashes in games with swines)***
+
+# 0.7.8
+ChangeLog::0.7.8        = \
+	* support for Microsoft Windows 7 \n\
+	* improvements of the ai \n\
+	* bug fixes***
+
+# 0.7.9
+ChangeLog::0.7.9        = \
+	* new rule: knocking \n\
+	* new ai type "monte carlo (jab/serve)" \n\
+	* further improvements of the ai \n\
+	* bug fixes***
+
+# 0.7.10
+ChangeLog::0.7.10        = \
+	* bug fixes\n\
+	* ai improvements***
+
+# 0.7.11
+ChangeLog::0.7.11        = \
+	* expanded license of the altenburg cardsets\n\
+	* bug fixes\n\
+	* ai improvements, especially jabbing of tricks***

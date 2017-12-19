@@ -1,0 +1,10 @@
+Document: freedoko-manual-en
+Title: FreeDoko manual (english)
+Author: Borg Enders <ben@BorgSoft.de>, Diether Knof <dknof@gmx.de>
+Abstract: This manual describes what FreeDoko is and how the program can be used.
+Section: Games/Card
+
+Format: HTML
+Index: /usr/share/doc/freedoko/manual/en/
+Files: /usr/share/doc/freedoko/manual/en/*.html /usr/share/doc/freedoko/manual/en/operation/*.html
+

@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: bekannte Fehler</title>
+
+    <meta name="date" content="2007-01-18T22:23:45+0100">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/bugs.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/bugs.html" title="offizielle Internetseite">
+
+  </head>
+
+
+  <body>
+
+    <h1>Bekannte Fehler</h1>
+
+    <p>
+    Im folgenden sind alle (die meisten) bekannten Fehler aufgelistet.
+    Teilweise ist beschrieben, wie der Fehler umgangen werden kann.
+    Soweit nicht anders angegeben werden wir uns bemühen, alle Fehler zu beseitigen, je nach (unserer subjektiver) Wichtigkeit kann das aber dauern.
+    </p>
+    <p>
+    Eine aktuelle Version befindet sich auf unserer <a href="http://free-doko.sourceforge.net/manual/de/bugs.html">sourceforge-Seite</a>.
+    Wenn Sie neue Fehler finden schicken Sie diese bitte an <a href="mailto:freedoko@users.sourceforge.net">freedoko@users.sourceforge.net</a> oder stellen ihn auf unserer <a href="http://sourceforge.net/tracker/?func=add&amp;group_id=38051&amp;atid=421197">Fehlerseite</a>.
+    </p>
+
+    <h2>Installation</h2>
+    <dl>
+      <dt>Microsoft Windows: FreeDoko lässt sich nicht deinstallieren</dt>
+      <dd>
+      Wenn FreeDoko nicht als Administrator installiert wurde, werden beim Deinstallieren die Dateien nicht gelöscht. Dies ist wohl ein Fehler beim verwendeten NSIS-System.
+      </dd>
+      <dd>
+      Problemumgehung:
+      Die Dateien per Hand löschen.
+      </dd>
+      <dt>Microsoft Windows&nbsp;7: Bei der Deinstallation bleiben die Einträge im Startmenü erhalten</dt>
+      <dd>
+      Bei der Deinstallation unter Micosoft Windows&nbsp;7 werden die Einträge im Startmenü nicht gelöscht. Dies ist wohl ein Fehler beim verwendeten NSIS-System.
+      </dd>
+      <dd>
+      Problemumgehung:
+      Die Dateien per Hand löschen.
+      </dd>
+    </dl>
+
+
+    <h2>Programmstart</h2>
+    <dl>
+      <dt>FreeDoko startet nicht unter MS-Windows 98</dt>
+      <dd>
+      Beim Start beendet sich FreeDoko mit der Meldung
+      <pre>
+Pango-ERROR : file ../.././pango/pango/shape.c: line75 (pango_shape): assertion failed: (glyphs-&gt;num_glyphs &gt; 0) aborting
+      </pre>
+      Das Problem liegt in der GTK-Bibliothek, die unterstützt anscheinend in der 2.8er Version kein MS-Windows 98.
+      </dd>
+      <dd>
+      Problemumgehung:
+      FreeDoko selber kompilieren. Dabei nicht die 2.8er Version der GTK und gtkmm-Bibliotheken verwenden sondern die 2.6er (siehe <a href="http://free-doko.sourceforge.net/doc/de/Windows.kompilieren"><var>doc/de/Windows.kompilieren</var></a>)
+      </dd>
+
+    </dl>
+
+
+
+    <h2>Turnier</h2>
+    <dl>
+      <dt>Geschmissene Blätter werden nicht gespeichert</dt>
+      <dd>
+      Wird ein Blatt geschmissen (z.B. wegen fünf Neunen) und nach der Neuverteilung der Karten das Turnier gespeichert, dann startet nach einem Laden des Turniers das vorherige Spiel (das, in dem geschmissen wurde).
+      </dd>
+
+    </dl>
+
+
+  </dl>
+
+
+  <h2>Netzwerk</h2>
+
+  <p>
+  Der Netzwerkcode ist noch stark in der Entwicklung, daher werden dabei noch viele Fehler auftreten.
+  Hier eine Auflistung, was funktionieren sollte:
+  </p>
+  <ul>
+    <li>starten eines Empfängers (Servers)</li>
+    <li>verbinden mit einem Empfänger bei den Turniereinstellungen</li>
+    <li>ausklinken mit Hilfe von <kbd>leere Netzwerk</kbd></li>
+    <li>schnacken</li>
+    <li>Start eines Spiels</li>
+    <li>Abfrage der Vorbehalte</li>
+    <li>Schweine</li>
+    <li>Ausspielen der Karten</li>
+    <li>Ansagen (solange die Spielsituationen der Spieler synchron sind, d.h. insbesondere, daß alle im selben Stich sind)</li>
+    <li>Genscher</li>
+    <li>neues Spiel starten</li>
+  </ul>
+
+  <p>
+  Was auf jeden Fall Probleme macht:
+  </p>
+  <ul>
+    <li>die Verbindung zu einem Spieler trennt sich</li>
+    <li>Ansagen in asynchronen Spielsituationen (die Spieler befinden sich in unterschiedlichen Stichen)</li>
+  </ul>
+
+
+
+  <h2>KI</h2>
+
+  <h3>Absturz</h3>
+
+  <dl>
+    <dt>Absturz mit <kbd>this-&gt;soloplayer_ == NULL</kbd></dt>
+    <dd>
+    Wenn die Heuristiken für die KI geändert wurden, kann es vorkommen, daß die KI abstürzt.
+    </dd>
+    <dd>
+    Das Problem tritt auf, wenn einem Spieltyp &bdquo;falsche&rdquo; Heuristiken zugeordnet werden, z.B. <samp>Spiele beste Farbe (Fleischlos)</samp> für ein normales Spiel.
+    </dd>
+    <dd>
+    Problemumgehung:
+    Bei der Aktivierung der Heuristiken vorsichtig sein und die Beschreibung durchlesen.
+    </dd>
+  </dl>
+
+  <h3>ChooseBestCard</h3>
+
+  <dl>
+    <dt>Unbekannte Teams bei Sonderpunkten</dt>
+    <dd>
+    Wenn eine Hochzeit noch nicht erfüllt ist können Sonderpunkte wie 'Fuchs gefangen' und 'Dollenschlag' nicht zugeordnet werden.
+    </dd>
+  </dl>
+
+
+
+  <h2>Graphische Oberfläche</h2>
+
+  <dl>
+    <dt>Absturz nach Minimierung des Hauptfensters</dt>
+    <dd>
+    Unter Microsoft Windows stürzt FreeDoko teilweise ab, wenn das Hauptfenster nach Minimierung wieder angezeigt werden soll.
+    </dd>
+    <dd>
+    Keine Ahnung, woran das liegt. Ich vermute, es ist ein Fehler in der GTK-Bibliothek, vielleicht ist er mit der Version 3.0 behoben.
+    </dd>
+    <dd>
+    Problemumgehung:
+    Anderen System (z.B. GNU/Linux) verwenden ;-)
+    </dd>
+
+    <dt>Unterfenster behalten nicht ihre Position</dt>
+    <dd>
+    Bei einigen Fenstermanagern, insbesondere der von KDE, erscheinen die Informationsfenster (wie <samp>voller Stich</samp>) immer in der Mitte des Hauptfensters anstatt an der letzten Position.
+    </dd>
+    <dd>
+    Diese Fenstermanager scheinen das nachträgliche Positionierung von Fenstern nicht zu unterstützen.
+    </dd>
+    <dd>
+    Problemumgehung:
+    Anderen Fenstermanager (z.B. fvwm) verwenden.
+    </dd>
+
+    <dt>Vorbehaltsfenster nicht sichtbar</dt>
+    <dd>
+    Unter Microsoft&trade; Windows führt folgende Vorgehensweise zu einem Problem:
+    Beim Tunierstart alle Fenster minimieren, das Tuniereinstellungen-Fenster in den Vordergrund bringen und auf 'Tunier starten'.
+    Auch wenn anschließend das Hauptfenster in den Vordergrund genommen wird ist das Vorbehaltsfenster weiter versteckt, kann also nicht geschlossen werden.
+    </dd>
+    <dd>
+    Problemumgehung: Diese Abfolge nicht ausführen.
+    Wenn es zu spät ist, über das Menü ein neues Tunier starten (und das Hauptfenster nicht minimiert lassen) oder die aktuelle Parie laden.
+    </dd>
+    <dd>
+    Die Schuld für diesen Fehler weise ich von mir ;-), entweder ist unter Microsoft&trade; Windows der Fehler, daß das Hauptfenster nicht mit dem Tuniereinstellungen-Fenster maximiert wurde bzw. keinen Eintrag zum wiederherstellen des Vorbehalts-Fensters vorhanden ist oder bei Gtk wurde dahingehend geschlampt.
+    Unter dem Fenstermanager fvwm wird beim Wiederherstellen des Tuniereinstellungen-Fensters auch gleich das Hauptfenster wiederhergestellt.
+    </dd>
+  </dl>
+
+
+
+  <h2>Quelltext</h2>
+
+  <dl>
+    <dt>Unvollständige Dokumentation mit doxygen</dt>
+    <dd>
+    Doxygen erstellt nicht alle Dokumentation.
+    Dies ist ein Fehler von doxygen, siehe 'Troubleshooting' im doxygen-Handbuch, den werden wir nicht korrigieren.
+    </dd>
+  </dl>
+
+
+
+  <h2>Sonstiges</h2>
+
+  <dl>
+    <dt>Ungenügende Dokumentation</dt>
+    <dd>
+    Die Dokumentation ist unvollständig und nur wenig übesetzt.
+    </dd>
+    <dd>
+    Problemlösung: Uns bei der Dokumentation helfen.
+    </dd>
+  </dl>
+
+
+  <div class="official_page">
+    <a href="http://free-doko.sourceforge.net/doc/manual/de/bugs.html">offizielle Internetseite</a>
+  </div>
+
+</body>
+
+</html>

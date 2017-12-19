@@ -1,0 +1,55 @@
+# FreeDoko translation
+# language: altdeutsch
+
+!name 	altdeutsch
+
+# Hier werden nur die Kartenfarben und Dollen geändert,
+# der Rest ist normal deutsch
+
+Card::Value::nine			= Neun
+Card::Value::jack			= Unter
+Card::Value::queen			= Ober
+Card::Value::king			= König
+Card::Value::ten			= Sau
+Card::Value::ace			= Daus
+
+Card::Color::club			= Eichel
+Card::Color::spade			= Gras
+Card::Color::heart			= Herz
+Card::Color::diamond			= Schellen
+
+MarriageSelector::first club		= erster Eichel
+MarriageSelector::first spade		= erster Gras
+MarriageSelector::first heart		= erster Herz
+
+GameType::solo jack			= Unter-Solo
+GameType::solo queen			= Ober-Solo
+GameType::solo king			= Königen-Solo
+GameType::solo queen-jack		= Ober-Unter-Solo
+GameType::solo king-jack		= Königen-Unter-Solo
+GameType::solo king-queen		= Königen-Ober-Solo
+GameType::solo koehler			= Köhler
+GameType::solo club			= Eichel-Solo
+GameType::solo spade			= Gras-Solo
+GameType::solo heart			= Herz-Solo
+GameType::solo diamond			= Schellen-Solo
+GameType::solo meatless			= Fleischlos
+
+Rule::Group::dollen			= Dullen
+Rule::dollen				= Dullen
+Rule::dollen second over first		= zweite Dulle über erste
+Rule::extrapoint dolle jabs dolle	= Dullenschlag
+Rule::solo jack                         = Unter-Solo
+Rule::solo queen                        = Ober-Solo
+Rule::solo queen jack                   = Ober-Unter-Solo
+Rule::solo king jack                    = Königen-Unter-Solo
+Rule::solo king queen                   = Königen-Ober-Solo
+
+
+SpecialPoint::dolle caught dolle	= Dullenschlag
+
+AiConfig::limit dolle \
+  = Minimale Stichpunkte für bevorzugten Dulleneinsatz
+
+
+!input "../de/text"

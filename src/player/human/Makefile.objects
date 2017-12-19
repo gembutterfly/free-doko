@@ -1,0 +1,2 @@
+# all object files
+OBJECTS = human.o

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Installation</title>
+
+    <meta name="date" content="2005-07-14T22:40:16+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/installation.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/introduction.html" title="offizielle Internetseite">
+  </head>
+
+  <body>
+
+    <h1>Installation von FreeDoko</h1>
+    <p>
+    FreeDoko geht über drei Arten zu verwenden:
+    <ol>
+      <li>ein Paket für das verwendete System installieren</li>
+      <li>für Windows oder Linux das entsprechende Archiv entpacken und FreeDoko aus dem Verzeichnis starten</li>
+      <li>den <a href="#source">Quelltext</a> kompilieren und FreeDoko starten</li>
+    </ol>
+    </p>
+
+
+
+    <h2>GNU/Linux</h2>
+
+    <h3>Systeme</h3>
+
+    <h4>debian, ubuntu</h4>
+    <p>
+    Zur Version 0.7.12 haben wir die Erstellung der dep-Pakete und die Pflege des Repository eingestellt. Daher muss FreeDoko aus den Quellen erstellt werden.
+    </p>
+
+    <h4>Gentoo</h4>
+    <p>
+    FreeDoko ist dank Rafael Kolless im portage-Baum.
+    Daher reicht ein <kbd>emerge freedoko</kbd> aus.
+    Vorher muß noch mindestens ein use-Flag (z.B. <var>altenburg</var>) für den Kartensatz gesetzt werden.
+    </p>
+
+    <h4>SuSE</h4>
+    <p>
+    Toni bietet unter <a href="http://packman.links2linux.de/package/FreeDoko">http://packman.links2linux.de/package/FreeDoko</a> regelmäßig Pakete der Entwicklerversion an.
+    </p>
+
+    <h4>Arch Linux</h4>
+    <p>
+    Michael Straube hat Pakete für Arch Linux erstellt:
+    <ul>
+      <li>Binary Version:<br>
+      <a href="http://aur.archlinux.org/packages.php?ID=29644">http://aur.archlinux.org/packages.php?ID=29644</a>
+      </li>
+      <li>Quelltext Version:<br>
+      <a href="http://aur.archlinux.org/packages.php?ID=15705">http://aur.archlinux.org/packages.php?ID=15705</a>
+      </li>
+    </ul>
+    </p>
+
+
+    <h3>Pakete</h3>
+
+    <h4>deb</h4>
+    <p>
+    Zur Version 0.7.12 haben wir die Erstellung des dep-Pakets eingestellt. Daher muss FreeDoko aus den Quellen erstellt werden.
+    </p>
+
+    <h4>rpm</h4>
+    <p>
+    Zur Version 0.7.12 haben wir die Erstellung des rpm-Pakets eingestellt. Daher muss FreeDoko aus den Quellen erstellt werden.
+    </p>
+
+    <h3>Archiv</h3>
+    <p>
+    In dem tgz-Archiv sind alle für FreeDoko nötigen Dateien enthalten.
+    Also einfach entpacken (<kbd>tar xzf FreeDoko_*.Linux.tgz</kbd>), ins Verzeichnis wechseln und FreeDoko starten (<kbd>./FreeDoko</kbd>).).
+    Installiert sein muss auf dem System <samp>gtkmm</samp> Version <samp>2.x</samp>.
+    </p>
+
+
+    <h2>Microsoft Windows</h2>
+    <h3>Windows 98</h3>
+    <p>
+    Um FreeDoko unter Microsoft Windows 98 zu spielen, muß das Programm kompiliert werden.
+    Eine Anleitung dafür finden Sie unter <a href="http://free-doko.sourceforge.net/doc/de/Windows.kompilieren">doc/de/Windows.kompilieren</a>.
+    </p>
+
+    <h3>Setup-Datei</h3>
+    <p>
+    Einfach den Installer <em>FreeDoko_0.7.12.Setup.exe</em> starten, auf <samp>installieren</samp> klicken und nach der Installation auf <samp>fertig</samp>.
+    </p>
+    <p>
+    Der Installer bietet die folgenden Einstellungen:
+    </p>
+    <dl>
+      <dt>Installationsverzeichnis</dt>
+      <dd>Das Installationsverzeichnis kann direkt eingegeben oder durch den Dialog ausgewählt werden.</dd>
+
+      <dt>Programmgruppe</dt>
+      <dd>Mit diesem Eintrag wird angegeben, wie die Programmgruppe heißt, in der FreeDoko-Verweise (Programm, Deinstaller, Dokumentation) abgelegt werden.
+      Ist der Eintrag leer, dann wird keine Programmgruppe erstellt.</dd>
+
+      <dt>Symbol auf dem Desktop erstellen</dt>
+      <dd>sollte selbsterklärend sein</dd>
+    </dl>
+
+    <h3>Archiv</h3>
+    <p>
+    Um FreeDoko mit Hilfe des Archives zu spielen sind folgende Schritte nötig:
+    </p>
+    <ol>
+      <li>Zuerst muß natürlich das Archiv entpackt werden.</li>
+      <li>Dann sind die <a href="http://prdownloads.sourceforge.net/free-doko/gtkmm.dll.zip">gtkmm-Bibliotheken</a> nötig. Da die sich nicht so häufig ändern haben wir sie ausgelagert, die müssen also nicht mit jeder neuen FreeDoko-Version heruntergeladen werden. Die dll-Dateien müssen in dem Unterverzeichnis <samp>gtkmm.dll</samp> liegen (einfach das dll-Archiv im FreeDoko-Verzeichnis entpacken).</li>
+      <li>Analog zu den gtkmm-Bibliotheken braucht FreeDoko auch die <a href="http://prdownloads.sourceforge.net/free-doko/gnet.dll.zip">gnet-Bibliothek</a>, die laden in dem Unterverzeichnis <samp>gnet.dll</samp>.</li>
+      <li>FreeDoko muß anschließend über die Batch-Datei <samp>FreeDoko.bat</samp> gestartet werden, ansonsten werden die dll-Dateien nicht gefunden.</li>
+    </ol>
+
+
+
+    <h2>FreeBSD</h2>
+    <p>
+    Der FreeBSD-Port wird von Thomas Gellekum verwaltet.
+    </p>
+    <p>
+    <kbd>pkg_add -r freedoko</kbd> holt das Paket für die passende Systemversion und Architektur und installiert es, einschließlich der abhängigen Pakete, sofern vonnöten. Einzelheiten dazu gibt's in der Manpage zu pkg_add und im Handbuch (<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports.html">englische Version</a> bzw. der deutschen Version).
+    </p>
+
+    <p>
+    Wer eine ältere Version aktualisieren möchte, kann das mit <kbd>portupgrade -PR freedoko</kbd> tun; dazu muß portupgrade(8) installiert sein. Das holt aktuelle Pakete (<kbd>-P</kbd>), auch für die Abhängigkeiten (<kbd>-R</kbd>), räumt die alte Version auf Seite und installiert die neue.
+
+    <h3>Für etwas Fortgeschrittene, die selbst kompilieren möchten</h3>
+
+    <p>
+    <kbd>cd /usr/ports/games/freedoko; make all install clean</kbd>
+    holt die Quelltexte, kompiliert alles einschließlich der Abhängigkeiten, installiert aus dem Arbeitsverzeichnis und räumt hinterher wieder auf.
+    Auch das ist im Handbuch näher beschrieben und auch hier ist portupgrade nützlich: <kbd>portupgrade -R freedoko</kbd> macht ein Upgrade wie oben, benutzt aber keine fertigen Pakete, sondern kompiliert alles aus den Quellen.
+    <br>
+    Wichtig ist, daß das GNU-make verwendet wird, also eventuel <kbd>gmake</kbd> statt <kbd>make</kbd> aufrufen.
+    </p>
+
+
+
+    <h2>hpux</h2>
+    <p>
+    Leider kann Rainer Dörntge keine Archive mehr für hpux bereitstellen.
+    </p>
+
+
+    <h2><a name="source">Quelltext</a></h2>
+    <p>
+    Der von uns angebotene Quelltext enthält alle Dateien, die für FreeDoko nötig sind.
+    <br>
+    Kompiliert wird durch einen Aufruf von <kbd>make</kbd> im <samp>src</samp>-Unterverzeichnis.
+    Es ist also kein <kbd>./configure</kbd> nötig, das System wird automatisch erkannt (wenn die automatische Erkennung unter einem Linux-System nicht funktioniert, geben Sie erst <kbd>export OSTYPE</kbd> und anschließend <kbd>make</kbd> ein).
+    <br>
+    Das Programm kann anschließend direkt aus dem <samp>src</samp>-Verzeichnis gestartet werden.
+    </p>
+
+    <div class="official_page">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/installation.html">offizielle Internetseite</a>
+    </div>
+
+  </body>
+
+</html>

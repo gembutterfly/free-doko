@@ -1,0 +1,86 @@
+FreeDoko LIESMICH
+
+Inhaltsverzeichnis
+
+ 1. Inhaltsverzeichnis
+ 2. Installation
+ 3. Programmstart
+      □ Linux
+      □ Windows
+ 4. Einstellungen
+      □ Sprache
+ 5. Dateien
+ 6. Bemerkungen
+
+Installation
+
+Dieser Teil ist nur für die Leute gedacht, die sich das Programm kompilieren
+wollen, die mit dem vorkompilierten Programm können direkt zu Programmstart
+weitergehen.
+
+Zum Kompilieren einfach im Verzeichnis src make aufrufen. Wenn unter Linux eine
+Fehlermeldung mit no-cygwin oder ms-bitfields erscheint, dann hat die
+automatische Erkennung nicht funktioniert. Geben Sie in der Shell export OSTYPE
+=linux-gnu ein und starten Sie make noch einmal.
+
+Für SuSE bitte SuSE anschauen (Probleme mit DOS-Zeilenende).
+
+Für Windows bitte Windows anschauen (dlls).
+
+Programmstart
+
+FreeDoko unterstützt einige Kommandozeilenargumente, diese lassen sich mit
+'--help' anschauen.
+
+Linux
+
+Das Programm FreeDoko starten.
+
+Um FreeDoko nutzen zu dürfen, müssen Sie Mitglied der Gruppe games sein.
+
+Windows
+
+Die Batch-Datei FreeDoko.bat starten.
+
+Einstellungen
+
+In der Ressourcendatei FreeDokorc stehen die Einstellungen für das Programm.
+Das Format ist wie folgt: Leerzeilen und Zeilen, die mit einem '#' beginnen
+werden ignoriert, Einstellungen beginnen mit dem Schlüsselwort, gefolgt von
+einem '=' und dem Wert ('1' steht fuer 'ja', '0' fuer 'nein');
+
+Alle Einstellungen können wärend des Spiels geändert werden und werden sofort
+aktiv.
+
+Sprache
+
+Um die Sprache von FreeDoko zu ändern also einfach mit F2 das
+Einstellungsfenster öffnen und dann auch die angezeigte Sprache Standard
+klicken und eine andere auswählen.
+
+Dateien
+
+Zu FreeDoko gehören folgende Dateien und Verzeichnisse:
+
+  • Programmdatei
+    Unter Linux ist dies FreeDoko, unter Windows FreeDoko.exe.
+  • Lizenz: COPYING
+  • Allgemeine Information: LIESMICH, README
+  • Hintergründe: Unterverzeichnis backgrounds
+  • Kartensätze: Unterverzeichnis cardsets
+  • Symbolsätze: Unterverzeichnis iconsets
+  • Sounds: Unterverzeichnis sounds
+  • Textdateien: Unterverzeichnis translations
+  • Dokumentation: Unterverzeichnis doc
+  • Handbuch: Unterverzeichnis manual
+  • Regelsätze: Unterverzeichnis rules
+  • Logos: FreeDoko.png, icon.png
+  • Programmierer: AUTHORS
+  • Änderungsliste: ChangeLog
+  • Versionsinformation: Version
+
+Bemerkungen
+
+  • Diese Version ist noch alpha, das heißt sie ist noch nicht vollständig.
+  • Bei Fehlern bitte eine E-Mail an freedoko@users.sourceforge.net schicken.
+

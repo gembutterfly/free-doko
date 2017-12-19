@@ -1,0 +1,193 @@
+# FreeDoko translation: part settings
+# language: français
+# version: 0.7.5
+
+setting				= réglage
+settings			= réglages
+
+update				= mise à jour
+
+settings: %tgroup%			= réglages: %tgroup%
+
+# general
+Setting::Group::general			= général
+Setting::automatic savings		= sauvegarde automatique
+Setting::save party changes		= sauver les modifications
+Setting::name				= nom
+Setting::language			= langage
+
+Setting::sound				= son
+
+Setting::max threads			= tâches
+
+# behaviour
+Setting::Group::behaviour		= comportement
+Setting::announce in table		= annonce faite
+Setting::card play delay		= délai d'affichage des cartes
+
+# assistance
+Setting::Group::assistance			= assistance
+Setting::announce swines automatically	= annonce cochons automatiquement
+Setting::show if valid			= montre si valide
+Setting::emphasize valid cards		= accentuer les cartes valides
+Setting::show known teams in game	= montrer les équipes connues
+Setting::show soloplayer in game		= montrer le joueur de solo
+
+# help
+Setting::Group::help				= aide
+Setting::automatic card suggestion	= suggestion automatique de carte
+Setting::show all hands			= montrer toutes les mains
+Setting::show ai information hands	= montrer les mains(information IA)
+Setting::show ai information teams	= montrer les équipes (information IA)
+Setting::show trickpiles points		= montrer les points réalisés
+
+# information windows
+Setting::Group::information windows \
+	= fenêtre d'information
+
+Setting::Group::gametype \
+	= type de jeu
+Setting::show gametype window \
+	= montrer la fenêtre de type de jeu
+Setting::close gametype window automatically \
+	= fermer la fenêtre de type de jeu automatiquement
+Setting::gametype window close delay \
+	= délai avant fermeture de la fenêtre de type de jeu
+
+Setting::Group::full trick \
+	= levée complète
+Setting::show full trick window \
+	= montrer la fenêtre de levée complète
+Setting::show full trick window if special points \
+	= montrer la fenêtre de levée complète si bonus
+Setting::close full trick automatically \
+	= fermer la fenêtre de levée complète automatiquement
+Setting::full trick close delay \
+	= délai avant fermeture de la fenêtre de levée complète
+
+Setting::Group::marriage \
+	= mariage
+Setting::show marriage window \
+	= montrer la fenêtre de mariage
+Setting::close marriage window automatically \
+	= fermer la fenêtre de mariage automatiquement
+Setting::marriage window close delay \
+	= délai avant fermeture de la fenêtre de mariage
+
+Setting::Group::genscher \
+	= genscher
+Setting::show genscher window \
+	= show genscher window
+Setting::close genscher window automatically \
+	= close genscher window automatically
+Setting::genscher window close delay \
+	= genscher window close delay
+
+Setting::Group::announcement \
+	= annonces
+Setting::show announcement window \
+	= montrer la fenêtre d'annonces
+Setting::close announcement window automatically \
+	= fermer la fenêtre d'annonces automatiquement
+Setting::announcement window close delay \
+	= délai avant fermeture de la fenêtre d'annonces
+
+Setting::Group::swines \
+	= cochons
+Setting::show swines window \
+	= montre la fenêtre cochons
+Setting::close swines window automatically \
+	= ferme la fenêtre cochons automatiquement
+Setting::swines window close delay \
+	= délai de fermeture de la la fenêtre cochons
+
+Setting::Group::network \
+	= réseau
+Setting::network connections urgency hint \
+	= connexion indication
+Setting::network chat urgency hint \
+	= chat indication
+
+# cards order
+Setting::Group::cards order		= ordre des cartes
+Setting::cards order			= ordre des cartes
+Direction::none				= aucun
+Direction::up				= haut
+Direction::down				= bas
+Setting::CardsOrder::unsorted		= désordre
+Setting::CardsOrder::random		= aléatoire
+Setting::CardsOrder::sorted		= trié
+Setting::CardsOrder::mixed		= mélangé
+Setting::CardsOrder::mix cards		= cartes mélangées
+
+# theme
+Setting::Group::theme			= thème
+
+#   cards
+Setting::Group::cards			= cartes
+Setting::original cards size		= taille originale des cartes
+Setting::cards height			= hauteur des cartes
+
+#   appearance
+Setting::Group::appearance		= apparence
+Setting::cardset			= jeu de cartes
+Setting::background			= arrière plan
+Setting::cards back			= dos des cartes
+
+#   table
+Setting::Group::table			= table
+Setting::own hand on table bottom	= sa propre main en bsa de la table
+Setting::table rotation			= rotation de la table
+Setting::rotate trick cards		= tourner les cartes des levées
+
+#   fonts
+Setting::Group::fonts and colors	= polices, couleurs
+Setting::name font			= nom des polices
+Setting::name font color		= nom de couleur de police
+Setting::name active font color		= nom de la couleur de police du joueur actif
+Setting::name reservation font color    = nom de couleur de police pour une réserve
+Setting::trickpile points font		= police des points de levée
+Setting::trickpile points font color	= couleur de la police des points de levée
+
+Setting::poverty shift arrow color	= couleur de la flêche pour passer la misère
+
+# splash screen
+Setting::Group::splash screen		= écran d'accueil
+Setting::show splash screen		= montrer l'écran d'accueil
+Setting::splash screen transparent	= écran d'accueil transparent
+
+# bug report button
+Setting::show bug report button in game finished window	= montrer le bouton de rapport de bug dans la fenêtre de fin de jeu
+Setting::save bug reports on desktop	= sauvegarder les rapports de bug sur le bureau
+
+
+# the browser
+Setting::play sound command		= commande de lecture des sons
+Setting::browser command		= commande pour le navigateur
+
+
+# other
+
+#   directories
+Setting::public data directory		= répertoire de données publiques
+Setting::private data directory		= répertoire de données privées
+Setting::settings file			= fichier de configuration
+Setting::languages directory		= répertoire de langues
+Setting::language file			= fichier de langue
+Setting::graphic extension		= extension graphique
+Setting::sound extension		= extension des sons
+Setting::cardsets directory		= répertoire des jeux de cartes
+Setting::cards directory		= répertoire des cartes
+Setting::cards back directory		= répertoire des dos de cartes
+Setting::icons directory		= répertoire des icones
+Setting::backgrounds directory		= répertoire des fonds
+Setting::sounds directory		= répertoire des sons
+Setting::ai directory			= répertoire ia
+Setting::parties directory		= répertoire des parties 
+Setting::rules directory		= répertoire des règles
+Setting::settings directory		= répertoire de la configuration
+
+
+# themes
+Setting::Theme::autumn  = automne
+Setting::Theme::christmas = noel

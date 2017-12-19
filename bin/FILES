@@ -1,0 +1,15 @@
+FILES                     this file
+DATEIEN                   german version of this file
+
+
+FreeDoko.bat              includes the dll-directories in the path and executes FreeDoko
+FreeDoko.desktop          desktop-file for desktop environments under Linux
+
+create_icons              creates the icons out of the cards (not the no_*)
+create_cards_column       create the column of cards for the homepage
+
+cardset_convert.*.sh      converter of a cardset to the FreeDoko format
+
+dos2unix                  converts the lineend of dos to that of unix
+
+homepage.release_update   updates the entries of for a new release (filenames, size, md5sum)

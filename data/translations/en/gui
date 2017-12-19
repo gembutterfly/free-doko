@@ -1,0 +1,399 @@
+# FreeDoko translation: part gui
+# language: english
+# version: 0.7.13
+
+!input	"menu"
+!input	"help"
+
+FreeDoko %ttitle%		= FreeDoko %ttitle%
+
+# buttons
+apply				= apply
+close				= close
+reset				= reset
+cancel				= cancel
+abort				= abort
+adopt				= adopt
+allot				= allot
+load				= load
+save				= save
+hardcoded			= hardcoded
+
+# first run
+first run			= first run
+FreeDoko first run		= Welcome to FreeDoko
+
+# program updated
+program updated			= program updated
+FreeDoko program updated	= FreeDoko program updated
+reset ais			= reset ais
+
+# init (splash screen)
+splash screen			= splash screen
+loading back of the cards	= loading back of the cards
+loading the cards		= loading the cards
+loading the cards (cards back)	= loading the cards (cards back)
+loading the cards (%tcard%)	= loading the cards (%tcard%)
+loading the icons		= loading the icons
+loading the icons (%ui%/%un%)	= loading the icons (%ui%/%un%)
+initiating the GUI		= initiating the GUI
+initiating the GUI (license)           = initiating the GUI (license)
+initiating the GUI (changelog)         = initiating the GUI (changelog)
+initiating the GUI (support)           = initiating the GUI (support)
+initiating the GUI (about)             = initiating the GUI (about)
+initiating the GUI (preferences)       = initiating the GUI (preferences)
+initiating the GUI (bug report)        = initiating the GUI (bug report)
+initiating the GUI (bug report replay) = initiating the GUI (bug report replay)
+initiating the GUI (main window)       = initiating the GUI (main window)
+initiating the GUI (table)             = initiating the GUI (table)
+initiating the GUI (network)           = initiating the GUI (network)
+initiating the GUI (network log)       = initiating the GUI (network log)
+initiating the GUI (dokolounge)        = initiating the GUI (dokolounge)
+initiating the GUI (party summary)     = initiating the GUI (party summary)
+initiating the GUI (party settings)    = initiating the GUI (party settings)
+initiating the GUI (players db)        = initiating the GUI (players db)
+initiating the GUI (game debug)        = initiating the GUI (game debug)
+initiating the GUI (chatter)           = initiating the GUI (chatter)
+initiating the GUI (show all)          = initiating the GUI (show all)
+finished			= finished
+
+# settings
+settings			= settings
+preferences			= preferences
+general				= general
+behaviour			= gehaviour
+cards order			= cards order
+appearance			= appearance
+cards				= cards
+theme				= theme
+fonts				= fonts
+
+# summary of the party
+party summary			= party summary
+new party			= new party
+continue party			= continue party
+gamenumber: %ugameno%		= game %ugameno%
+roundnumber: %uroundno%		= round %uroundno%
+remaining rounds: %urounds%	= remaining rounds: %urounds%
+remaining points: %ipoints%	= remaining points: %ipoints%
+next startplayer: %sname%	= next startplayer: %sname%
+points				= points
+duty soli			= duty soli
+
+# settings of the party
+party settings			= party settings
+
+general				= general
+seed				= seed
+card distribution		= distribution of cards
+startplayer			= startplayer
+random				= random
+
+game duration                   = duration of game
+
+player				= player
+player %unumber%		= player %unumber%
+players				= players
+statistics			= statistics
+name				= name
+random name			= random name
+voice                           = voice
+type				= type
+configure			= configure
+player %uno% configuration	= player %uno% configuration
+configure players		= configure players
+configure rules			= configure rules
+configure network		= configure network
+network				= network
+
+start party			= start party
+load bug report			= load bug report
+save on desktop			= save on desktop
+
+save party			= save party
+load party			= load party
+
+# network
+network				= network
+network settings		= network settings
+server				= server
+address				= address
+connections			= connections
+connection			= connection
+new connection			= new connection
+connect				= connect
+local addresses			= local addresses
+new listener			= new listener
+listeners			= listeners
+create listener			= create listener
+open port			= open port
+port				= port
+standard port			= standard port
+rule differences		= rule differences
+server value			= server value
+self value			= self value
+# log
+network log			= network log
+time				= time
+address				= address
+text				= text
+clear network			= clear network
+synchronize network		= synchronize network
+# chat
+send				= send
+
+# DokoLounge
+DokoLounge                      = DokoLounge
+DokoLounge: Lounge              = DokoLounge: Lounge
+name: %sname%                   = name: %sname%
+create account                  = create account
+login                           = login         
+logout                          = logout        
+klingel                         = klingel       
+hilfe                           = hilfe         
+blog                            = blog          
+pinnwand                        = pinnwand      
+messages                        = messages
+DokoLounge: Help                = DokoLounge: Help
+DokoLounge: Blog                = DokoLounge: Blog
+DokoLounge: PinBoard            = DokoLounge: Pin Board
+DokoLounge: Mail                = DokoLounge: Mail
+DokoLounge: Alert               = DokoLounge: Alert
+player list                     = player list
+table list                      = table list
+chat                            = chat
+table %itable% (%stype%)        = table %itable% (%stype%)
+audience                        = audience
+
+# rules
+# -> rules
+announcement with maximal cards	= max. cards
+save rules			= save rules
+adjust rules 			= adjust rules
+
+# players database
+players database data type	= type
+players database		= players statistics
+clear database			= clear
+recreate database		= recreate
+update database			= update
+ranking				= ranking
+average game points		= average game points
+average game trick points	= average game trick points
+games				= games
+games marriage			= games marriage
+games poverty			= games poverty
+games solo			= games solo
+games solo color		= games solo color
+games solo picture		= games solo picture
+games solo picture single	= games solo picture single 
+games solo picture double	= games solo picture double
+specialpoints			= specialpoints
+specialpoints winning		= winning
+specialpoints announcements	= announcements
+heuristics			= heuristics
+heuristics general		= general
+heuristics solo			= solo
+heuristics solo color		= color solo
+heuristics solo picture		= picture solo
+heuristics solo meatless	= meatless solo
+statistic total			= total
+statistic won			= won
+statistic lost			= lost
+statistic percent won		= percent
+
+# aiconfig
+difficulty			= difficulty
+card suggestion			= card suggestion
+replacement ai			= replacement ai
+no ai configuration		= no ai configuration
+trick				= trick
+configure ais			= configure ais
+save aiconfig of %splayer%	= save aiconfig of %splayer%
+future limit			= calculating limit
+heuristics as in normal game	= heuristics as in normal game
+move up				= move up
+move down			= move down
+
+# reservation
+reservation			= reservation
+reservation (%sname%)		= reservation (%sname%)
+reservation default		= default
+solo				= solo
+offer duty solo 		= offer doty solo
+
+reservation announce		= announce
+bock: %umultiplier%           	= bock: points * %umultiplier%
+
+# gametype
+gametype			= gametype
+gametype: %ttype%		= gametype: %ttype%
+gametype: %ttype% (duty solo)	= gametype: %ttype% (duty solo)
+%splayer% plays a %tgametype%.	= %splayer% plays a %tgametype%.
+%splayer% has %tgametype%.	= %splayer% has %tgametype%.
+%splayer% has %tnumber% nines.	= %splayer% has %tnumber% nines.
+%splayer% has %tnumber% kings.	= %splayer% has %tnumber% kings.
+%splayer% has %tnumber% nines and kings.	= %splayer% hat %tnumber% nines and kings.
+%splayer% has %upoints% richness.	= %splayer% has %upoints% richness.
+%splayer% has a %tgametype%.	= %splayer% has a %tgametype%.
+%splayer% has a %tgametype%: %tselector%.	= %splayer% has a %tgametype%: %tselector%.
+partner is %splayer%.		= partner is %splayer%.
+%splayer% has returned %utrumpno% trump.	= \
+	%splayer% has returned %utrumpno% trump.
+%splayer% has returned %utrumpno% trumps.	= \
+	%splayer% has returned %utrumpno% trumps.
+%splayer% marries %sbride%.	= %splayer% marries %sbride%.
+%splayer% has found no bride.	= %splayer% has found no bride.
+%splayer% has a swine.		= %splayer% has a swine.
+%splayer% has swines.		= %splayer% has swines.
+%splayer% has hyperswines.	= %splayer% has hyperswines.
+%splayer% announces '%tannouncement%'.	= %splayer% announces '%tannouncement%'.
+%splayer% announces '%tannouncement%' (duty 30).	= \
+	%splayer% announces '%tannouncement%' (duty).
+
+# genscher
+genscher			= genscher
+no genscher			= no genscher
+new partner			= new partner
+no partner change		= no genscher
+Select a new partner or keep the old.	= Select a new partner or keep the old.
+Genscher: %splayer% chooses %spartner%.	= Genscher: %splayer% chooses %spartner%.
+Genscher: Please choose your partner.	= Genscher: Please choose your partner.
+
+# full trick
+full trick			= full trick
+specialpoint			= specialpoint
+specialpoints			= specialpoints
+The trick goes to %swinner%.	= The trick goes to %swinner%.
+points				= points
+Points in the trick: %upoints%	= Points in the trick: %upoints%
+of player			= of player
+
+# swines
+swines				= swines
+hyperswines			= hyperswines
+
+# last trick
+last trick			= last trick
+%unumber%. trick		= %unumber%. trick
+startplayer: %sname%		= startplayer: %sname%
+winner: %sname%			= winner: %sname%
+
+# card suggestion
+Thinking, please wait.		= Thinking, please wait.
+suggested card			= suggested card
+play card			= play card
+
+# game information
+game information		= game information
+game info			= game info
+player info			= player info
+team info			= team info
+tricks				= tricks
+soloplayer			= soloplayer
+heuristic			= heuristic
+name				= name
+teams				= team
+announcement			= announcement
+points				= points
+
+# party points
+party points			= party points
+round				= round
+game				= game
+game points			= game points
+add up points			= add up points
+collapse rounds			= collapse rounds
+expand rounds			= expand rounds
+table				= table
+graph				= graph
+remaining rounds		= remaining rounds
+remaining games			= remaining games
+remaining points		= remaining points
+bock                            = bock
+duty free soli 			= free duty soli
+duty color soli 		= duti color soli
+duty picture soli 		= duty picture soli
+duty soli round 		= duty soli round
+duty free soli: %usoli% 	= duty free soli: %usoli%
+duty color soli: %usoli% 	= duty color soli: %usoli%
+duty picture soli: %usoli% 	= duty picture soli: %usoli%
+
+# game overview
+show game overview		= show game overview
+Game overview: %ugame%		= Game overview: %ugame%
+
+# game finished
+end of game			= end of game
+show party points		= show party points
+show game review		= show game review
+next game			= next game
+end of party 			= end of party
+
+# game summary
+game summary			= game summary
+game %ugameno%			= game %ugameno%
+seed %useed%			= seed: %useed%
+startplayer %sname%		= startplayer: %sname%
+name				= name
+trick points			= trick points
+team				= team
+Winner: no team			= no winner
+Winner: %tteam%			= Winner: %tteam%
+# ToDo: special case '1' point
+Winner: team %twinnerteam% with %uwinnerpoints% points (%tlooserteam%: %ulooserpoints% points)	= \
+	Winner: team %twinnerteam% with %uwinnerpoints% points (%tlooserteam%: %ulooserpoints% points
+game points: %ipoints%		= game points: %ipoints%
+game points: %ipoints% for %tteam%	= game points: %ipoints% for %tteam%
+team				= team
+sign				= sign
+point(s)			= point(s)
+description			= description
+bock triggers			= bock trigger
+
+# game review
+game review			= game review
+game review: %ttrick%		= game review: %ttrick%
+
+# party finished
+party finished			= party finished
+rang				= rang
+lustsolo games			= lustsolo games
+finish party			= finish party
+
+
+Cannot construct the icon for the announcement '%tannouncement%'.\n\
+Keeping the old one.	= \
+	Cannot construct the icon for the announcement '%tannouncement%'.\n\
+	Keeping the old one.
+
+# replay a bug report
+BugReportReplay::Group::general	= general
+BugReportReplay::Group::actions	= actions
+BugReportReplay::Group::human actions	= human actions
+BugReportReplay::Group::game summary	= game summary
+bug report			= bug report
+bug report replay		= bug report replay
+Version: %sversion%		= Version: %sversion%
+Compiled: %stime%		= Compiled: %stime%
+System: %ssystem%		= System: %ssystem%
+Time: %stime%			= Time: %stime%
+Language: %slanguage%		= Language: %slanguage%
+Trick: %utrick%			= Trick: %utrick%
+Seed: %useed%			= Seed: %useed%
+Startplayer: %ustartplayer%	= Startplayer: %ustartplayer%
+Soloplayer: %usoloplayer%	= Soloplayer: %usoloplayer%
+Soloplayer: -			= Soloplayer: -
+auto actions			= auto actions
+
+# gameplay actions
+type				= type
+player				= player
+data				= data
+
+# bug report (?)
+error                           = error
+file				= file
+file: %sfile%			= file: %sfile%
+save				= save
+dismiss				= dismiss

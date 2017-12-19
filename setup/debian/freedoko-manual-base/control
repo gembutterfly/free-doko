@@ -1,0 +1,14 @@
+Source: freedoko-manual-base
+Section: doc
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-manual-base
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Depends: freedoko-manual
+Suggests: www-browser
+Description: base files for the manual for 'freedoko'
+ The manual is in html format.

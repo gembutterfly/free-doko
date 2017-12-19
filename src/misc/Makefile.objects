@@ -1,0 +1,15 @@
+# All object-files
+OBJECTS = \
+	translation.o \
+	  translator.o \
+	setting.o \
+	  setting.theme.o \
+	  setting.cardsorder.o \
+	bug_report.o \
+	references_check.o
+ifeq ($(USE_NETWORK), true)
+ifeq ($(USE_NETWORK_DOKOLOUNGE), true)
+  OBJECTS += lounge.o
+endif
+endif
+

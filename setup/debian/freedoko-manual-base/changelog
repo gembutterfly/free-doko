@@ -1,0 +1,30 @@
+freedoko-manual-base (0.7.9) unstable; urgency=low
+
+  * update to debian squeeze
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 06 Mar 2011 08:14:30 +0100
+
+freedoko-manual-base (0.7.6) unstable; urgency=low
+
+  * update to debian lenny
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jun 2009 21:22:00 +0200
+
+freedoko-manual-base (0.7.3) unstable; urgency=low
+
+  * changed default directory
+
+ -- Diether Knof <dknof@gmx.de>  Wed,  9 Aug 2006 23:46:57 +0200
+
+freedoko-manual-base (0.7.2) unstable; urgency=low
+
+  * made this package depend on a manual package
+    (t.i. 'freedoko-manual-de' or 'freedoko-manual-en')
+
+ -- Diether Knof <dknof@gmx.de>  So, 22 Jan 2006 12:56:47 +0200
+
+freedoko-manual-base (0.6.6) unstable; urgency=low
+
+  * exporting the base manual files into a seperate package
+
+ -- Diether Knof <dknof@gmx.de>  Mon, 19 Jul 2004 20:29:06 +0200

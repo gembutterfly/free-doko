@@ -1,0 +1,5 @@
+# All object-files
+OBJECTS = \
+	listener.o \
+	connection.o \
+	addresses.o

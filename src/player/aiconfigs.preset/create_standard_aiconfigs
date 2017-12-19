@@ -1,0 +1,89 @@
+#!/bin/sh
+
+# creates the ai configuration files out of the saved one 'aiconfig.defensive.saved'
+echo '// aiconfig: standard defensive'        >  standard.defensive
+echo 'char const standard_defensive[] = "\' >> standard.defensive
+sed -e 's/^# FreeDoko.*$//' \
+    -e 's/$/\\n\\/' \
+    <  standard.defensive.saved \
+    >> standard.defensive
+echo '";' >> standard.defensive
+
+# novice
+sed -e 's.^\(// aiconfig:\) standard defensive$.\1 novice.' \
+    -e 's.^\(char const\) standard_defensive\(\[\] = \"\).\1 novice\2.' \
+    -e 's.^\(type\s*=\s*[0-9]\{1,2\}:\) [a-z -]*.\1 monte carlo - jab or serve.' \
+    -e 's.^\(future limit\s*=\s*[0-9]\{1,2\}:\) [0-9]*.\1 1200.' \
+    -e 's.^\(rating\s*=\s*[0-9]\{1,2\}:\) [a-z ]*.\1 average.' \
+    -e 's.^\(trusting =\) \(true\|false\).\1 true.'\
+    -e 's.^\(remember tricks =\) [0-9]\{1,2\}.\1 6.'\
+    -e 's.^\(last fehlcreation =\) [0-9]\{1,2\}.\1 6.'\
+    -e 's.^\(first trick for trump points optimization =\) [0-9]\+.\1 5.'\
+    -e 's.^\(announce limit reply =\) [0-9]\+.\1 12.'\
+    -e 's.^\(take poverty =\) [0-9]\+.\1 12.'\
+    < standard.defensive \
+    > novice
+
+# standard offensive
+sed -e 's.^\(// aiconfig:\) standard defensive$.\1 standard offensive.' \
+    -e 's.^\(char const\) standard_defensive\(\[\] = \"\).\1 standard_offensive\2.' \
+    -e 's.^\(type\s*=\s*\(8\|9\|10\|11\):\) [a-z ]*.\1 gametree for team.' \
+    -e 's.^\(rating\s*=\s*[0-7]:\) [a-z ]*.\1 linear.' \
+    -e 's.^\(trusting =\) \(true\|false\).\1 true.'\
+    -e 's.^\(aggressive =\) \(true\|false\).\1 true.'\
+    -e 's.^\(limit queen =\) [0-9]\{1,2\}.\1  9.'\
+    -e 's.^\(limit dolle =\) [0-9]\{1,2\}.\1 17.'\
+    -e 's.^\(last fehlcreation =\) [0-9]\{1,2\}.\1 5.'\
+    -e 's.^\(first trick for trump points optimization =\) [0-9]\+.\1 5.'\
+    -e 's.^\(announce limit =\) [0-9]\+.\1 10.'\
+    -e 's.^\(announce limit reply =\) [0-9]\+.\1  9.'\
+    -e 's.^\(take poverty =\) [0-9]\+.\1 12.'\
+    -e 's.^\(handvalue single solo =\) [0-9]\+.\1 16.'\
+    -e 's.^\(handvalue double solo =\) [0-9]\+.\1 46.'\
+    -e 's.^\(handvalue trible solo =\) [0-9]\+.\1 92.'\
+    -e 's.^\(handvalue color solo =\) [0-9]\+.\1 26.'\
+    -e 's.^\(handvalue meatless =\) [0-9]\+.\1 24.'\
+    -e 's.^\(\s*grab trick =\) \(true\|false\).\1 true.'\
+    < standard.defensive \
+    > standard.offensive
+
+# profi
+sed -e 's.^\(// aiconfig:\) standard defensive$.\1 profi.' \
+    -e 's.^\(char const\) standard_defensive\(\[\] = \"\).\1 profi\2.' \
+    -e 's.^\(rating\s*=\s*[0-9]\{1,2\}:\) [a-z ]*.\1 linear.' \
+    -e 's.^\(type\s*=\s*\(8\|9\|10\|11\):\) [a-z ]*.\1 gametree for team.' \
+    -e 's.^\(first card fehl creation =\) \(true\|false\).\1 false.'\
+    -e 's.^\(remember tricks =\) [0-9]\+.\1 12.'\
+    -e 's.^\(limit queen =\) [0-9]\+.\1 10.'\
+    -e 's.^\(limit dolle =\) [0-9]\+.\1 19.'\
+    -e 's.^\(last fehlcreation =\) [0-9]\+.\1 4.'\
+    -e 's.^\(first trick for trump points optimization =\) [0-9]\+.\1 5.'\
+    -e 's.^\(announce limit =\) [0-9]\+.\1 11.'\
+    -e 's.^\(announce limit reply =\) [0-9]\+.\1 10.'\
+    -e 's.^\(take poverty =\) [0-9]\+.\1 13.'\
+    -e 's.^\(handvalue single solo =\) [0-9]\+.\1 18.'\
+    -e 's.^\(handvalue double solo =\) [0-9]\+.\1 50.'\
+    -e 's.^\(handvalue trible solo =\) [0-9]\+.\1 100.'\
+    -e 's.^\(handvalue color solo =\) [0-9]\+.\1 28.'\
+    -e 's.^\(handvalue meatless =\) [0-9]\+.\1 26.'\
+    < standard.defensive \
+    > profi
+
+# profi aggressive
+sed -e 's.^\(// aiconfig:\) profi$.\1 profi aggressive.' \
+    -e 's.^\(char const\) profi\(\[\] = \"\).\1 profi_aggressive\2.' \
+    -e 's.^\(aggressive =\) \(true\|false\).\1 true.'\
+    < profi \
+    > profi.aggressive
+
+
+
+# profi unfair
+sed -e 's.^\(// aiconfig:\) profi$.\1 profi unfair.' \
+    -e 's.^\(char const\) profi\(\[\] = \"\).\1 profi_unfair\2.' \
+    -e 's.^\(hands known =\) \(true\|false\).\1 true.'\
+    -e 's.linear.maximum.'\
+    < profi \
+    > profi.unfair
+
+

@@ -1,0 +1,14 @@
+Source: freedoko-all
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-all
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Depends: freedoko-binary, freedoko-data, freedoko-backgrounds, freedoko-cardsets-xskat, freedoko-cardset-openclipart, freedoko-cardsets-gnome-games, freedoko-cardsets-kdecarddecks, freedoko-cardsets-pysol, freedoko-manual-de, freedoko-manual-en
+Description: meta package for all packages for 'freedoko'
+ This package depends on the binary packages, all data packages and all manual packages of 'freedoko'.
+ The best cardsets are in the package 'freedoko-nonfree' which is not covered by this package because of the license of the cardsets.

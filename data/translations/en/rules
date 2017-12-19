@@ -1,0 +1,192 @@
+# FreeDoko translation: part rules
+# language: english
+# version: 0.7.12
+
+rule					= rule
+rules					= rules
+
+rules: %tgroup%				= rules: %tgroup%
+
+Rule::unsupported			= unsupported
+
+Rule::mutate				= mutate
+
+# tournament
+Rule::Group::tournament			= tournament
+Rule::number of rounds limited		= limited number of rounds
+Rule::number of rounds			= number of rounds
+Rule::number of games per round		= number of games per round
+Rule::points limited			= limited points
+Rule::points				= points
+
+Rule::number of players			= number of players
+Rule::number of players in game		= number of players in game
+Rule::with nines			= with nines
+
+Rule::number of duty soli		= duty soli
+Rule::number of duty color soli		= duty color soli
+Rule::number of duty picture soli	= duty picture soli
+Rule::offer duty solo			= offer duty solo
+Rule::lustsolo player leads		= lustsolo player leads
+Rule::solo always counts triple		= solo always counts triple
+
+# Bock
+Rule::Group::counting			= counting
+Rule::bock				= bock
+Rule::bock multiplier			= bock multiplier
+Rule::append bock			= append bock rounds
+Rule::bock after 120-120		= bock after 120-120
+Rule::bock after lost solo		= bock after lost solo
+Rule::bock after lost re/contra		= bock after lost re/contra
+Rule::bock after heart trick		= bock after heart trick
+Rule::bock after black game		= bock after black game
+
+# information
+Rule::Group::information		= information
+Rule::show tricks number		= show tricks number
+Rule::show all hands			= show all hands
+Rule::show if valid			= show if valid
+Rule::show trickpiles points		= show trickpiles points
+Rule::show tricks in trickpiles		= show tricks in trickpiles
+Rule::show known teams in game		= show known teams in game
+Rule::show soloplayer in game		= show soloplayer in game
+Rule::card hint				= card hint
+Rule::take back tricks			= take back tricks
+
+# poverty
+Rule::Group::poverty			= poverty
+Rule::poverty				= poverty
+Rule::poverty shift			= shift poverty
+Rule::poverty shift only trump		= shift only trump
+Rule::poverty fox do not count		= fox do not count
+Rule::poverty fox shift extra		= shift fox extra
+Rule::poverty fox shift open		= shift fox open
+Rule::throw with one trump		= throw with one trump
+
+Rule::throw with nines			= throw with nines
+Rule::throw with %tnumber% nines	= throw with %tnumber% nines
+Rule::min number of throwing nines	= minimal number of throwing nines
+Rule::throw with kings			= throw with kings
+Rule::throw with %tnumber% kings	= throw with %tnumber% kings
+Rule::min number of throwing kings	= minimal number of throwing kings
+Rule::throw with nines and kings		= throw with nines and kings
+Rule::throw with %tnumber% nines and kings	= throw with %tnumber% nines and kings
+Rule::min number of throwing nines and kings	= minimal number of throwing nines and kings
+Rule::throw with richness		= throw with richness
+Rule::throw with richness %unumber% 	= throw with %unumber% points
+Rule::min richness for throwing         = minimal points for richness
+Rule::throw when fox highest trump	= throw when fox is highest trump
+
+# marriage
+Rule::Group::marriage			= marriage
+Rule::marriage determination		= marriage determination
+Rule::marriage first foreign		= first foreign
+Rule::marriage first color		= first color
+Rule::marriage first single color	= first single color
+Rule::marriage first trump		= first trump
+Rule::marriage first one decides	= first trick desides
+Rule::marriage before poverty		= marriage before poverty
+
+Rule::genscher				= genscher
+
+# solo
+Rule::Group::solo			= solo
+Rule::solo				= solo
+Rule::solo jack				= jack solo
+Rule::solo queen			= queen solo
+Rule::solo king				= king solo
+Rule::solo queen jack			= queen-jack solo
+Rule::solo king jack			= king-jack solo
+Rule::solo king queen			= king-queen solo
+Rule::solo koehler			= koehler
+Rule::solo color			= color solo
+Rule::solo meatless			= meatloess
+Rule::throwing before solo		= throwing goes before solo
+
+# dollen
+Rule::Group::dollen			= dollen
+Rule::dollen				= dollen
+Rule::dollen second over first		= second dolle over first
+Rule::dollen contrary in last trick	= not in the last trick
+Rule::dollen first over second with swines	= with swines first over second
+
+# swines
+Rule::Group::swines			= swines
+Rule::swines				= swines
+Rule::swines announcement begin		= announcement at begin
+Rule::swine only second			= only second
+Rule::swines in solo			= in solo
+Rule::swines in poverty			= swines in poverty
+Rule::hyperswines			= hyperswines
+Rule::hyperswines announcement begin	= announcement at begin
+Rule::hyperswines in solo		= in solo
+Rule::hyperswines in poverty			= hyperswines in poverty
+Rule::swines and hyperswines joint	= swines and hyperswines joint
+
+# extrapoints
+Rule::Group::extrapoints		= extrapoints
+
+Rule::extrapoint catch fox		= catch fox
+Rule::extrapoint catch fox last trick	= catch fox in last trick
+Rule::extrapoint fox last trick		= fox last trick
+Rule::extrapoint double fox last trick	= double fox last trick
+
+Rule::extrapoint charlie		= charlie
+Rule::extrapoint catch charlie		= catch charlie
+Rule::extrapoint double charlie		= double charlie
+Rule::extrapoint catch double charlie	= catch double charlie
+Rule::extrapoint catch charlie only with diamond queen= catch charlie only with diamond queen
+
+Rule::extrapoint dolle jabs dolle	= dolle jabs dolle
+Rule::extrapoint heart trick		= heart trick
+
+# announcements
+Rule::Group::announcements		= announcements
+Rule::knocking	= knocking
+Rule::announcement limit only for current = only for current announcement
+Rule::announcement till full trick	= till full trick
+Rule::announcement first trick thirty points	= duty announcement: first trick thirty points
+Rule::announcement first trick thirty points only first	= only as first announcement
+Rule::announcement first trick thirty points only re/contra= only re/contra
+Rule::announcement first trick thirty points only re/contra -- knocking= only no 120
+Rule::announcement first trick thirty points in marriage= in marriage
+Rule::announcement reply		= reply
+Rule::announcement strict limit		= strict limits
+Rule::announcement re/contra doubles	= re/contra doubles points
+Rule::announcement re/contra doubles -- knocking= no 120 doubles points
+Rule::announcement contra doubles against re = re/contra doubles point 'against re'
+Rule::announcement contra doubles against re -- knocking = no 120 doubles point 'against re'
+Rule::announcement no 120		= re/contra
+Rule::announcement no 120 -- knocking	= no 120
+Rule::announcement no 90		= no 90
+Rule::announcement no 60		= no 60
+Rule::announcement no 30		= no 30
+Rule::announcement no 0			= black
+Rule::last announcement			= last announcement
+
+# static values
+Rule::number of same cards		= number of same cards
+Rule::number of card colors		= number of card colors
+Rule::number of card tcolors		= number of card tcolors
+Rule::number of card values		= number of card values
+Rule::number of cards			= number of cards
+Rule::number of teams			= number of teams
+Rule::number of players per team	= number of players per team
+Rule::number of tricks in game		= number of tricks in game
+
+# counting
+Rule::Group::counting			= counting
+Rule::counting			= counting
+Counting::plus			= plus
+Counting::minus			= minus
+Counting::plus-minus		= plus-minus
+
+
+# extra informations
+Rule::Information::Title::with nines	= Information: game with nines
+Rule::Information::with nines	= \
+  You have chosen to play with nines. So you should adjust the latest announcements trick in the group 'announcement' as well as the marriage determination in the group 'marriage'. Also we suggest that you adjust the AI (reset to hardcoded or change manually).
+
+Rule::Information::Title::without nines	= Informaiton: game without nines
+Rule::Information::without nines	= \
+  You have chosen to play without nines. So you should adjust the latest announcements trick in the group 'announcement' as well as the marriage determination in the group 'marriage'. Also we suggest that you adjust the AI (reset to hardcoded or change manually).

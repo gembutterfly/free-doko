@@ -1,0 +1,6 @@
+# All object-files
+OBJECTS = \
+	parser.o \
+	  lounge.o \
+	  table.o \
+	  gameplay.o

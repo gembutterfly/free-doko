@@ -1,0 +1,9 @@
+# All object-files
+OBJECTS = \
+	file.o \
+	string.o \
+	windows.o \
+	version.o \
+	date.o \
+	time.o \
+	stop_watch.o

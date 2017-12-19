@@ -1,0 +1,382 @@
+# FreeDoko translation: part aiconfig heuristics description
+# language: english
+
+
+AiConfig::Heuristic::Description::the name of the heuristic (as in '::name(Heuristic)') =\
+	the main idea for the heuristic\n\n\
+	a simple comment\
+	* a condition for the heuristic\n\
+	* a second condition for the heuristic\n\
+	\nAction: which card is taken\
+
+AiConfig::Heuristic::Description::choose pfund poverty =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::meatless: play highest color =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::picture: second best trump =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::color: choose ace =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::color: best winning =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::color: jab for ace =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::color: play low high =\
+	???\n\n\
+
+AiConfig::Heuristic::Description::no heuristic =\
+	internal use: no heuristic was used, yet\n\n\
+
+AiConfig::Heuristic::Description::manual =\
+	The card is played manual (from the human).\n\n\
+
+AiConfig::Heuristic::Description::bug report =\
+	Play the card from the bug report.\n\n\
+	This heuristic is used so that in a bug report replay\
+	the card suggestion is the card from the bug report.\
+
+AiConfig::Heuristic::Description::network =\
+	The card is played by the network player.\n\n\
+
+AiConfig::Heuristic::Description::only valid card =\
+	If there is only one valid card, play it.\n\n\
+
+AiConfig::Heuristic::Description::play to marry =\
+	play card to marry\n\n\
+	* trick empty and first foreign or first trump\n\
+	\nAction: play the highest trump, if only the bride can jab\
+	* trick empty and first specific color\n\
+	\nAction: play the ace of this color, if it can get through\
+	* must be a selector trick\n\
+	* the player has the highest trump and can play it\n\
+	\nAction: play the highest trump, if only the bride can jab\
+
+AiConfig::Heuristic::Description::play to get married =\
+	play card to get married\n\n\
+	* marriage player\n\
+	\nAction: As first player, play card of the marriage color to get married,\
+	\nAction: else in a marriage trick, play pfund.\
+
+AiConfig::Heuristic::Description::choose ace =\
+	For the first card in a trick choose the best color Ace to play. For a following card in a color trick choose the ace, if the trick can get through.\n\n\
+
+AiConfig::Heuristic::Description::choose ten =\
+	For the first card in a trick choose the best color ten to play. For a following card in a color trick choose the ten, if the trick can get through.\n\n\
+
+AiConfig::Heuristic::Description::choose single ace =\
+	for the first card in a trick choose the best single color Ace to play\n\n\
+
+AiConfig::Heuristic::Description::?  best winning card single picture  ? =\
+	Only valid for soli with only one picture as trump: Tries to find the best card to win a trick depending on different values like Aiconfig::LIMITQUEEN    \n\n\
+	\nAction: jab the trick\
+
+AiConfig::Heuristic::Description::?  best winning card double picture  ? =\
+	Only valid for soli with only tow picutes as trump: Tries to find the best card to win a trick depending on different values like Aiconfig::LIMITQUEEN    \n\n\
+	\nAction: jab the trick\
+
+AiConfig::Heuristic::Description::?  best winning card triple picture  ? =\
+	Only valid for soli with only three pictures as trump: Tries to find the best card to win a trick depending on different values like Aiconfig::LIMITQUEEN    \n\n\
+	\nAction: jab the trick\
+
+AiConfig::Heuristic::Description::best winning card =\
+	Tries to find the best card to win a trick depending on different values like Aiconfig::LIMITQUEEN    \n\n\
+
+AiConfig::Heuristic::Description::?  lowest best trump  ? =\
+	find smallest best trump card (avoiding for example a fox in most situations)        \n\n\
+	\nAction: play the smallest trump, but no fox/ten\
+
+AiConfig::Heuristic::Description::?  choose pfund card  ? =\
+	find a pfund card\n\n\
+	\nAction: play a pfund\
+
+AiConfig::Heuristic::Description::choose for color trick =\
+	choose a card for a color trick either a pfund for the own team or a small card for the opponents\n\n\
+	* color trick\n\
+	\nAction: play a pfund for the own team or a small card for the opponetnts or jab the trick\
+
+AiConfig::Heuristic::Description::jab color over fox =\
+	Jab a color trick with the lowest card over the fox\n\n\
+	* color trick\n\
+	* trick not already jabbed\n\
+	* no meatless and no picture solo\n\
+	\nAction: play the next card above the fox\
+
+AiConfig::Heuristic::Description::retry color =\
+	try a color again, which was not jabbed or jabbed by the own team        \n\n\
+
+AiConfig::Heuristic::Description::play color for partner =\
+	play a color the partner does not have\n\n\
+	* startplayer in the trick\n\
+	* there are at least as many remaining cards as the best so far\n\
+	* the partner does not have the color\n\
+	* the partner has the highest trump\n\
+	* or behind the partner all players have the color\n\
+	\nAction: play the card with the highest value in the smallest color\
+
+AiConfig::Heuristic::Description::try color for partner =\
+	try a color the partner hopefully does not have\n\n\
+	* startplayer in the trick\n\
+	* last player of the trick is partner\n\
+	* the last player can have the last remaining card of the color\n\
+	\nAction: play the card with the lowest value\
+
+AiConfig::Heuristic::Description::play color in solo =\
+	Play shortest color in game for solo contra in hope solo player and partner can jab.\n\n\
+	* start card in the trick\n\
+	* contra player in a picture or color solo\n\
+	\nAction: play color card with the least cards remaining\
+
+AiConfig::Heuristic::Description::play color for partner ace =\
+	play a color hoping the partner has the ace\n\n\
+	* startplayer in the trick\n\
+	* or there are enough remaining cards for all players\n\
+	* first run of the color\n\
+	* the next in line who can have the ace is of the same team\n\
+	\nAction: play the card with the highest value in the smallest color\
+
+AiConfig::Heuristic::Description::play bad color =\
+	play a color the partner has\n\n\
+	* startplayer in the trick\n\
+	* the partner is in the back\n\
+	* the partner has the color\n\
+	\nAction: play lowest card of selected color\
+
+AiConfig::Heuristic::Description::serve color trick =\
+	When a player cannot get a color trick take the card with the smallest value. The main case is that one is the last to play and has only got to take ones lowest card.\n\n\
+	* it must not be the first card in the trick\n\
+	* the trick must be a color trick\n\
+	* one cannot get the trick\n\
+	* the winnercard must be an ace or a trump or one does not have the ace in the non-trump case or there are not enough remaining cards to get through\n\
+	* the winnerplayer must not be of the own team, or the trick does not get through\n\
+	* it must not be an undetermined marriage\n\
+	\nAction: take lowest color card\
+
+AiConfig::Heuristic::Description::serve trump trick =\
+	When a player cannot get a trump trick take the card with the smallest value. The main case is that one is the last to play and has only got to take ones lowest card. This heuristik should be sorted behind the pfund heuristics.\n\n\
+	* it must not be the first card in the trick\n\
+	* the trick must be a trump trick or the player has only color aces and trumps\n\
+	* not: game is solo and solo player is behind\n\
+	* one cannot get the trick or has only 1/2 cards over the winnercard and over trump limit\n\
+	* the player has no trump or at max 4 points in the low trumps\n\
+	\nAction: play the lowest card\
+
+AiConfig::Heuristic::Description::choose pfund =\
+	choose for trump trick won by the own team a pfund\n\n\
+
+AiConfig::Heuristic::Description::choose pfund before partner =\
+	if the partner has the highest card in the game play a pfund\n\n\
+	* the partner has the highest trump still in the game\n\
+	\nAction: play a pfund of at least 10 points\
+
+AiConfig::Heuristic::Description::jab for ace =\
+	jab a trick to serve next trick a ace\n\n\
+
+AiConfig::Heuristic::Description::play low high =\
+	play changing low and high trumps to force opponent to jab or either draw his trumps\n\n\
+	* do not use for undetermined marriage  \n\
+	* trump cards at the opposite players still remain\n\
+
+AiConfig::Heuristic::Description::?  second best trump  ? =\
+	play the seconmd highest trump (especially useful for solo player in picture soli)\n\n\
+
+AiConfig::Heuristic::Description::play for team =\
+	put a good card in a trick of the team mate\n\n\
+	* partner has jabbed the trick with a high card\n\
+	\nAction: play a small card with some value\
+
+AiConfig::Heuristic::Description::jab fox =\
+	jab a fox if played in this trick\n\n\
+	* it must not be an undetermined marriage\n\
+
+AiConfig::Heuristic::Description::try for doppelkopf =\
+	try to get a doppelkopf for the own team        \n\n\
+
+AiConfig::Heuristic::Description::create fehl =\
+	create a missing color (only allowed for first card depending on Aiconfig::FEHLCREATIONONFIRSTCARD)\n\n\
+	* this trick is still worth fehl creation\n\
+	* this is the firstcard \n\
+	* this is not the first colorrun and there are not more then 10 points \n\
+	* - the trick is jabbed high enough \n\
+	* - the winnercard is already a no trump ace \n\
+	\nAction: play the best fehl card\
+
+AiConfig::Heuristic::Description::?  calc hand value  ? =\
+	calculates the value of a hand for decision making of announcements, soli decisions,...\n\n\
+
+AiConfig::Heuristic::Description::poverty: special: play pfund =\
+	If the trick goes or will go to the own team, play a pfund. This heuristic should only be used by the poverty player.\n\n\
+	* poverty player\n\
+	* the last player must be of the own team (oneself or the partner)\n\
+	* the own team has already the trick or the partner is behind\n\
+	* if the partner is behind, he can still jab the trick\n\
+	\nAction: play a pfund\
+
+AiConfig::Heuristic::Description::poverty: special: offer pfund =\
+	If the poverty partner has played high and still many points on hand play many points.\n\n\
+	* poverty player\n\
+	* the partner has jabbed with a high card\n\
+	* the player has many high cards\n\
+	\nAction: play a ten or ace of the color with the most cards\
+
+AiConfig::Heuristic::Description::poverty: special: give no points =\
+	If the contra team gets the trick, give as few points as possible.\n\n\
+	* the player must be the poverty player\n\
+	* the partner has played already\n\
+	* contra already has the trick or the re player can be overjabbed\n\
+	\nAction: play the lowest card\
+
+AiConfig::Heuristic::Description::poverty: re: trump color trick high =\
+	Jab the trick with a small queen in order to get the points\n\n\
+	* re player (not poverty player) in a poverty\n\
+	* only my team behind me, I don't need to jab high\n\
+	* neither first nor last card in the trick\n\
+	* color trick which must not be served\n\
+	* not first color run\n\
+	\nAction: play high trump (small queen)\
+
+AiConfig::Heuristic::Description::poverty: re: play trump =\
+	As first player draw trump fro the contra players.\n\n\
+	* re player (not poverty player) in a poverty\n\
+	* first player\n\
+	* partner has no trump\n\
+	\nAction: play a small jack\
+	\n\n\
+	* partner has trump\n\
+	\nAction: play a high trump\
+
+AiConfig::Heuristic::Description::poverty: contra: play color =\
+	Start with a color.\n\n\
+	* contra player in a poverty\n\
+	* first player\n\
+	\nAction: Play a color the partner does not have; if the partner is behind the re player, take a high card, else take a low one. Else take the longest color.\
+
+AiConfig::Heuristic::Description::poverty: contra: trump color trick high =\
+	Play a high trump (small queen) in color tricks, so that the trick is expensive for the re player.\n\n\
+	* contra player in a poverty\n\
+	* a color trck the player must not serve\n\
+	* the re player is behind\n\
+	* a) the partner has played low (trump limit)\n\
+	* a) there are some points (>= 8) in the trick\n\
+	* b) the partner is behind\n\
+	* b) the partner can have the color\n\
+	\nAction: play high trump (small queen)\
+
+AiConfig::Heuristic::Description::poverty: contra: leave to partner =\
+	Make myself be behind the re player.\n\n\
+	* contra player in a poverty\n\
+	* the re player has played a trump\n\
+	* the partner is behind and can jab the trick\n\
+	\nAction: play a low trump\
+
+AiConfig::Heuristic::Description::poverty: contra: overjab re =\
+	Overjab the re player in order to get the points.\n\n\
+	* contra player in a poverty\n\
+	* the re player has won so far with a trump\n\
+	* the player can play a better card than the re player\n\
+	\nAction: Take the best winning card.\
+
+AiConfig::Heuristic::Description::poverty: best winning card =\
+	As last player in a trick take the lowest card to win the trick.\n\n\
+	* only for the not poverty player in a poverty\n\
+	* last player in the trick\n\
+	\nAction: Play the best winning card.\
+
+AiConfig::Heuristic::Description::?  make announcement  ? =\
+	announcement decision bases on Heuristics::CalcHandValue\n\n\
+
+AiConfig::Heuristic::Description::?  say no 90  ? =\
+	decision to make the annoncement no 90 depending on Heuristics::CalcHandValue\n\n\
+
+AiConfig::Heuristic::Description::?  say no 60  ? =\
+	decision to make the annoncement no 60 depending on Heuristics::CalcHandValue\n\n\
+
+AiConfig::Heuristic::Description::?  say no 30  ? =\
+	decision to make the annoncement no 30 depending on Heuristics::CalcHandValue\n\n\
+
+AiConfig::Heuristic::Description::?  say no 0  ? =\
+	decision to make the annoncement no 0 depending on Heuristics::CalcHandValue\n\n\
+
+AiConfig::Heuristic::Description::meatless: play highest color =\
+	Heuristic for solo::MEATLESS to play the longest color or follow previous color\n\n\
+	* the player can jab the trick\n\
+	* the player has the highest card\n\
+	\nAction: play the highest card of the color\
+
+AiConfig::Heuristic::Description::partner backhand draw trump =\
+	as first player and the partner in backhand, draw trump\n\n\
+	* first player in the trick\n\
+	* last player is partner\n\
+	* the opposite team has not made any announcement\n\
+	* at least three trump on the hand if the partner does not have the highest card\n\
+
+AiConfig::Heuristic::Description::draw trump =\
+	play trumps to force other players to play also trumps        \n\n\
+	* first player\n\
+	* more trumps then remaining trumps * 2\n\
+	* the opposite team has not made any announcement\n\
+
+AiConfig::Heuristic::Description::play highest color card in game =\
+	Make a sure trick with a color card\n\n\
+	* startplayer\n\
+	\nAction: take color card the opposite team can not get with the most points \
+
+AiConfig::Heuristic::Description::grab trick =\
+	as last player jab the trick if possible\n\n\
+	* last player in the trick\n\
+	* the trick does not go to the own team\n\
+	\nAction: Play the best winning card.\
+
+AiConfig::Heuristic::Description::play trump =\
+	with only trump on the hand play the best trump card\n\n\
+	* no startcard\n\
+	* only trumps\n\
+	\nAction: if the trick goes to the own team: play low card\
+	\nAction: if the trick has enough points or the player enough high cards: jab it\
+	\nAction: else: play low card\
+
+AiConfig::Heuristic::Description::let trick pass =\
+	not enough points to grab trick, throw fehl\n\n\
+	* third or forth player in trick\n\
+	* color trick\n\
+	* can't serve color\n\
+	* There are not many points in this trick\n\
+	* Do not leave the trick to the opposite team\n\
+	\nAction: Play the best fehl\
+
+AiConfig::Heuristic::Description::get trick for announcement =\
+	If this trick would open the possibility for the other team to win there announcement try to win this trick for the own team        \n\n\
+
+AiConfig::Heuristic::Description::play for partner worries =\
+	Plays a card that will win the trick so that the partner can drop a "worry-card"\n\n\
+
+AiConfig::Heuristic::Description::start with color =\
+	play a color hoping the partner has the ace\n\n\
+	* startplayer in the trick\n\
+	* following player is not of the opposite team\n\
+	* or there are enough remaining cards for all players\n\
+	* first run of the color\n\
+	\nAction: play the card with the highest value in the smallest color\
+
+AiConfig::Heuristic::Description::start with low color =\
+	Start the trick with a low color (in a normal game to find the partner, in a solo game always)\n\n\
+	* first card in trick\n\
+
+AiConfig::Heuristic::Description::start with low trump =\
+	Start the trick with a low trump to find the partner\n\n\
+	* enough trumps or re and first card in the game\n\
+	\nAction: with enough trumps take a small trump\
+
+AiConfig::Heuristic::Description::play to jab later =\
+	play low trump to jab later with high trump\n\n\
+	* startcard\n\
+	* only trumps on the hand\n\
+	\nAction: play a low trump\
+
+AiConfig::Heuristic::Description::?  make reply  ? =\
+	announcement reply decision bases on Heuristics::CalcHandValue\n\n\

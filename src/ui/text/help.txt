@@ -1,0 +1,4 @@
+quit		Beenden des Programms
+help		Anzeige der Hilfe
+rules		Anzeige der Regeln
+settings	Anzeige der Einstellungen

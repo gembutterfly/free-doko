@@ -1,0 +1,193 @@
+# FreeDoko translation: part rules
+# language: deutsch
+# version: 0.7.5
+
+rule				= Regel
+rules				= Regeln
+
+rules: %tgroup%			= Regeln: %tgroup%
+
+Rule::unsupported			= nicht unterstützt
+
+Rule::mutate				= mutierend
+
+# tournament
+Rule::Group::tournament			= Turnier
+Rule::number of rounds limited		= beschränkte Rundenanzahl
+Rule::number of rounds			= Runden
+Rule::number of games per round		= Anzahl der Spiele pro Runde
+Rule::points limited			= beschränkte Punkte
+Rule::points				= Punkte
+
+Rule::number of players			= Spieleranzahl
+Rule::number of players in game		= Spieleranzahl im Spiel
+Rule::with nines			= mit Neunen
+
+Rule::number of duty soli		= Pflichtsoli
+Rule::number of duty color soli		= Pflicht-Farbsoli
+Rule::number of duty picture soli	= Pflicht-Bildsoli
+Rule::offer duty solo			= Biete Pflichtsolo an
+Rule::lustsolo player leads		= Lustsolist ist Ausspieler
+Rule::solo always counts triple		= Solo zählt immer dreifach
+
+# Bock
+Rule::Group::counting			= Zählung
+Rule::bock				= Bockrunden
+Rule::bock multiplier			= Bockfaktor
+Rule::append bock			= Bockrunden anhängen
+Rule::bock after 120-120		= Bock nach 120-120
+Rule::bock after lost solo		= Bock nach verlorenem Solo
+Rule::bock after lost re/contra		= Bock nach verlorenem Re/Kontra
+Rule::bock after heart trick		= Bock nach Herzstich
+Rule::bock after black game		= Bock nach Schwarzspiel
+
+# information
+Rule::Group::information		= Informationen
+Rule::show tricks number		= Anzahl der einsehbaren Stiche
+Rule::show all hands			= ermögliche Anzeige aller Blätter
+Rule::show if valid			= zeige ob zulässig
+Rule::show trickpiles points		= zeige Punkte der Stichhaufen
+Rule::show tricks in trickpiles		= zeige Stiche in den Stichhaufen
+Rule::show known teams in game		= zeige bekannte Teams im Spiel
+Rule::show soloplayer in game		= zeige Solospieler im Spiel
+Rule::card hint				= Kartenvorschlag
+Rule::take back tricks			= Stiche zurücknehmen
+
+# poverty
+Rule::Group::poverty			= Armut
+Rule::poverty				= Armut
+Rule::poverty shift			= Armut schieben
+Rule::poverty shift only trump		= nur Trümpfe schieben
+Rule::poverty fox do not count		= Füchse zählen nicht
+Rule::poverty fox shift extra		= Füchse zusätzlich schieben
+Rule::poverty fox shift open		= Füchse offen schieben
+Rule::throw with one trump		= mit einem Trumpf schmeißen
+
+Rule::throw with nines			= mit Neunen schmeißen
+Rule::throw with %tnumber% nines	= mit %tnumber% Neunen schmeißen
+Rule::min number of throwing nines	= minimale Anzahl zu schmeißende Neunen
+Rule::throw with kings			= mit Königen schmeißen
+Rule::throw with %tnumber% kings	= mit %tnumber% Königen schmeißen
+Rule::min number of throwing kings	= minimale Anzahl zu schmeißende Könige
+Rule::throw with nines and kings		= mit Neunen und Königen schmeißen
+Rule::throw with %tnumber% nines and kings	= mit %tnumber% Neunen und Königen schmeißen
+Rule::min number of throwing nines and kings	= minimale Anzahl zu schmeißende Neunen und Königen
+Rule::throw with richness		= mit Reichtum schmeißen
+Rule::throw with richness %unumber% 	= mit %unumber% Punkten schmeißen
+Rule::min richness for throwing         = minimale Punkte um zu schmeißen
+Rule::throw when fox highest trump	= schmeiße, wenn Fuchs höchster Trumpf
+
+# marriage
+Rule::Group::marriage			= Hochzeit
+Rule::marriage determination		= Hochzeitsklärung
+Rule::marriage first foreign		= erster Fremder
+Rule::marriage first color		= erster Farb
+Rule::marriage first single color	= erster spezieller Farb
+Rule::marriage first trump		= erster Trumpf
+Rule::marriage first one decides	= erster Stich klärt
+Rule::marriage before poverty		= Hochzeit vor Armut
+
+Rule::genscher				= Genscher
+
+# solo
+Rule::Group::solo			= Solo
+Rule::solo				= Solo
+Rule::solo jack				= Buben-Solo
+Rule::solo queen			= Damen-Solo
+Rule::solo king				= Königen-Solo
+Rule::solo queen jack			= Damen-Buben-Solo
+Rule::solo king jack			= Königen-Buben-Solo
+Rule::solo king queen			= Königen-Damen-Solo
+Rule::solo koehler			= Köhler
+Rule::solo color			= Farbsolo
+Rule::solo meatless			= Fleischlos
+Rule::throwing before solo		= Schmeißen geht vor Solo
+
+# dollen
+Rule::Group::dollen			= Dollen
+Rule::dollen				= Dollen
+Rule::dollen second over first		= zweite Dolle über erste
+Rule::dollen contrary in last trick	= nicht im letzten Stich
+Rule::dollen first over second with swines	= bei Schweinen erste über zweite
+
+# swines
+Rule::Group::swines			= Schweine
+Rule::swines				= Schweine
+Rule::swines announcement begin		= Ansage am Spielanfang
+Rule::swine only second			= nur zweites
+Rule::swines in solo			= Schweine im Solo
+Rule::swines in poverty			= Schweine in Armut
+Rule::hyperswines			= Hyperschweine
+Rule::hyperswines announcement begin	= Ansage am Spielanfang
+Rule::hyperswines in solo		= Hyperschweine im Solo
+Rule::hyperswines in poverty		= Hyperschweine in Armut
+Rule::swines and hyperswines joint	= gemeinsame Schweine und Hyperschweine
+
+# extrapoints
+Rule::Group::extrapoints		= Sonderpunkte
+
+Rule::extrapoint catch fox		= Fuchs fangen
+Rule::extrapoint catch fox last trick	= Fuchs im letzten Stich fangen
+Rule::extrapoint fox last trick		= Fuchs letzter Stich
+Rule::extrapoint double fox last trick	= beide Füchse letzter Stich
+
+Rule::extrapoint charlie		= Karlchen
+Rule::extrapoint catch charlie		= Karlchen gefangen
+Rule::extrapoint double charlie		= Doppelkarlchen
+Rule::extrapoint catch double charlie	= Doppelkarlchen gefangen
+Rule::extrapoint catch charlie only with diamond queen= Karlchen nur mit Karo Dame fangen
+
+Rule::extrapoint dolle jabs dolle	= Dollenschlag
+Rule::extrapoint heart trick		= Herzstich
+
+# announcements
+Rule::Group::announcements		= Ansagen
+Rule::knocking	= Klopfen
+Rule::announcement limit only for current = nur für aktuelle Ansage
+Rule::announcement till full trick	= bis zum vollen Stich
+Rule::announcement first trick thirty points	= Pflichtansage: erster Stich 30 Punkte
+Rule::announcement first trick thirty points only first	= nur als erste Ansage
+Rule::announcement first trick thirty points only re/contra= nur Re/Kontra
+Rule::announcement first trick thirty points only re/contra -- knocking= nur keine 120
+Rule::announcement first trick thirty points in marriage= in Hochzeit
+Rule::announcement reply		= Gegenansage
+Rule::announcement strict limit		= strikte Grenzen
+Rule::announcement re/contra doubles	= Re/Kontra verdoppelt Punkte
+Rule::announcement re/contra doubles -- knocking= keine 120 verdoppelt Punkte
+Rule::announcement contra doubles against re = Re/Kontra verdoppelt Punkt 'gegen die Alten'
+Rule::announcement contra doubles against re -- knocking= keine 120 verdoppelt Punkt 'gegen die Alten'
+Rule::announcement no 120		= Re/Kontra
+Rule::announcement no 120 -- knocking	= keine 120
+Rule::announcement no 90		= keine 90
+Rule::announcement no 60		= keine 60
+Rule::announcement no 30		= keine 30
+Rule::announcement no 0			= schwarz
+Rule::last announcement			= letzte Ansagemöglichkeit
+
+# static values
+Rule::number of same cards		= Anzahl an gleichen Karten
+Rule::number of card colors		= Anzahl an Kartenfarben
+Rule::number of card tcolors		= Anzahl an Kartenfarben mit Trumpf
+Rule::number of card values		= Anzahl an Kartenwerten
+Rule::number of cards			= Anzahl an Karten
+Rule::number of teams			= Anzahl an Teams
+Rule::number of players per team	= Anzahl an Spielern pro Team
+Rule::number of tricks in game		= Anzahl an Stichen im Spiel
+
+# counting
+Rule::Group::counting			= Zählart
+Rule::counting				= Zählart
+Counting::plus				= plus
+Counting::minus				= minus
+Counting::plus-minus			= plus-minus
+
+
+# extra informations
+Rule::Information::Title::with nines	= Hinweis: Spiel mit Neunen
+Rule::Information::with nines	= \
+					  Sie haben gewählt mit Neunen zu spielen. Deshalb sollten Sie im Bereich 'Ansagen' die spätesten Ansagezeitpunkte und unter 'Hochzeit' die Hochzeitsklärung überprüfen. \
+					  Außerdem empfehlen wir, die KI anzupassen (auf die Vorgabe zurücksetzen oder manuell ändern).
+Rule::Information::Title::without nines	= Hinweis: Spiel ohne Neunen
+Rule::Information::without nines	= \
+					  Sie haben gewählt ohne Neunen zu spielen. Deshalb sollten Sie im Bereich 'Ansagen' die spätesten Ansagezeitpunkte und unter 'Hochzeit' die Hochzeitsklärung überprüfen. \
+					  Außerdem empfehlen wir, die KI anzupassen (auf die Vorgabe zurücksetzen oder manuell ändern).

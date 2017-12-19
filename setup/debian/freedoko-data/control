@@ -1,0 +1,13 @@
+Source: freedoko-data
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-data
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Depends: freedoko-translations, freedoko-backgrounds, freedoko-icongroups, freedoko-cardset
+Description: meta package for all necessary data for 'freedoko'
+ This package depends on the translations, the backgrounds, the icongroups and a cardset of 'freedoko'.

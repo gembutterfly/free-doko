@@ -1,0 +1,11 @@
+# All object-files
+OBJECTS = \
+	os.o \
+	gameplay.o \
+	seed.o \
+	party_points.o \
+	bug_report.o \
+	bug_report_replay.o \
+	auto_bug_report.o \
+	chatter.o \
+	network_log.o

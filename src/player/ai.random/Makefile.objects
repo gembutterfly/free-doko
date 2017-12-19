@@ -1,0 +1,2 @@
+# All object-files
+OBJECTS = ai.o

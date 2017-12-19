@@ -1,0 +1,26 @@
+* About: Absturz
+* alle Fenster: pack_start(true, true)
+* Spielerstatistiken: Absturz
+* Turnierpunkte Graph
+  - Rand
+  - Linienbreite
+
+
+== noch zu verbessern
+
+utils.h
+* bitmap ersetzen
+
+widgets/type_selector.hpp
+* language_update() korrigieren
+
+widgets/stock_button.h
+* durch Gtk::Button ersetzen
+
+widgets/sticky_dialog.h
+* Notwendigkeit prüfen
+* add_close_button testen
+* bei abgeleiteten Klassen add_close_button verwenden
+
+aiconfig.cpp
+* aitype und rating: Änderungen verarbeiten (das alte System funktioniert nicht mehr). Bisher wurde der Typ als Zusätzliches Datum im Objekt (MenuItem) gespeichert, das geht jetzt nicht mehr. Nun enthält das Popup-Menü nur noch Text. Vielleicht beim append die "id" mit belegen und auswerten.

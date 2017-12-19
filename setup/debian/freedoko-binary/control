@@ -1,0 +1,17 @@
+Source: freedoko-binary
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-binary
+Architecture: any
+Conflicts: freedoko (<< 0.6.6)
+Depends: freedoko-data, libgtkmm-2.4-1c2a, libgnet2.0-0, libalut0
+Suggests: freedoko-manual
+Description: The german card game ``Doppelkopf''
+ The game ``Doppelkopf'' is a card game for four or more Players similar to ``Skat'' (like 'xskat').
+ One game will be played by four players.
+ Doppelkopf originates probably from the mostly in south germany played game ``Schafkopf''.
+ The game is written with GTKMM for Linux and Windows.

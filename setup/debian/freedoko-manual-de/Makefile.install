@@ -1,0 +1,15 @@
+PACKAGE=freedoko-manual-de
+include Makefile.install.directories
+
+# Edited for Debian GNU/Linux.
+DESTDIR = 
+
+.PHONY: all
+all :
+
+.PHONY: install
+install :
+	mkdir -p $(DESTDIR)/usr/share/doc/$(PACKAGE)/
+	cp AUTHORS copyright $(DESTDIR)/usr/share/doc/$(PACKAGE)/
+	mkdir -p $(DESTDIR)/$(HELP_DIRECTORY)/manual
+	cp -a ./doc/manual/de $(DESTDIR)/$(HELP_DIRECTORY)/manual/de

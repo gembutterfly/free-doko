@@ -1,0 +1,83 @@
+#!/bin/bash
+#
+# program to create a column of cards
+# uses imagemagick and the bc
+#
+# 23. August 2005
+# Diether Knof <dknof@gmx.de>
+
+
+CARDS_DIRECTORY=.
+FILE_TYPE=png
+OUTPUT_IMAGE=/tmp/column.png
+
+if [ ! -e ${CARDS_DIRECTORY}/club/queen.png ]; then
+  echo "could not find 'club/queen.png' -- wrong directory?"
+  exit 1
+fi
+
+# get the width and the height of the cards
+width=`identify -format "%w" ${CARDS_DIRECTORY}/club/queen.png`
+height=`identify -format "%h" ${CARDS_DIRECTORY}/club/queen.png`
+
+# the padding between the cards in the column
+padding=$(( ${height} / 4 ))
+
+
+# create the column with the cards given as parameters
+function create_column() {
+  echo -e "P4\n1 1\n" > /tmp/pixel.pbm
+  convert -transparent white /tmp/pixel.pbm /tmp/pixel.png
+  rm /tmp/pixel.pbm
+
+  convert -resize ${width}x$(( $# * (${height} + ${padding}) ))\! \
+  	/tmp/pixel.png ${OUTPUT_IMAGE}
+  rm /tmp/pixel.png
+
+  identify ${OUTPUT_IMAGE}
+
+  n=0
+  while [ $# -gt 0 ]; do
+    # for each card the column is enlarged and the card is appended
+    echo $1
+    cp ${OUTPUT_IMAGE} ${OUTPUT_IMAGE}.tmp.png
+
+    composite -geometry +0+$(( $n * (${height} + ${padding}) )) \
+	${CARDS_DIRECTORY}/$1.${FILE_TYPE} \
+    	${OUTPUT_IMAGE}.tmp.png \
+	${OUTPUT_IMAGE}
+
+    n=$((n + 1))
+    shift
+  done
+  mogrify -resize 50% ${OUTPUT_IMAGE}
+
+  rm ${OUTPUT_IMAGE}.tmp.png
+} # function create_column() 
+
+
+create_column \
+	heart/ten \
+	club/queen \
+	spade/queen \
+	heart/queen \
+	diamond/queen \
+	club/jack \
+	spade/jack \
+	heart/jack \
+	diamond/jack \
+	diamond/ace \
+	diamond/ten \
+	diamond/king \
+	diamond/nine \
+	club/ace \
+	club/ten \
+	club/king \
+	club/nine \
+	heart/ace \
+	heart/king \
+	heart/nine \
+	spade/ace \
+	spade/ten \
+	spade/king \
+	spade/nine \

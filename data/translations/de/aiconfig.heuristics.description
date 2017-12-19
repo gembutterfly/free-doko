@@ -1,0 +1,343 @@
+# FreeDoko translation: part aiconfig heuristic descriptions
+# language: deutsch
+
+
+AiConfig::Heuristic::no heuristic \
+  = keine Heuristik
+AiConfig::Heuristic::Description::no heuristic \
+  = Intern genutzt um zu bemerken, daß noch keine Heuristic genutzt wurde.
+
+AiConfig::Heuristic::manual \
+  = manuell gespielte Karte
+AiConfig::Heuristic::Description::manual \
+  = Die Karte wurde manuell (vom Menschen) gespielt
+
+AiConfig::Heuristic::bug report \
+  = Karte vom Fehlerbericht
+AiConfig::Heuristic::Description::bug report \
+  = Die Karte ist im Fehlerbericht gespielt. \n\
+    Diese Heuristik wird genutzt, damit beim Nachspiel eines Fehlerberichtes die gespielten Karten vorgeschlagen werden.
+
+AiConfig::Heuristic::network \
+  = Karte vom Netzwerkspieler
+AiConfig::Heuristic::Description::network \
+  = Die Karte ist von einem Netzwerkspieler gespielt.
+
+AiConfig::Heuristic::only valid card \
+  = Einzige zulässige Karte
+AiConfig::Heuristic::Description::only valid card \
+  = Es gibt nur eine einzige zulässige Karte, spiele diese. \n\
+    Diese Heuristik wird intern immer getestet.
+
+AiConfig::Heuristic::play to marry \
+  = Spiele um zu heiraten
+AiConfig::Heuristic::Description::play to marry \
+  = Wenn der Stich Klärungsstich ist und der Stich sicher geholt werden kann, dann stich ihn ab. \n\
+    Als Ausspieler prüfe, ob ein hoher Trumpf oder das entsprechende As durchgeht. \n\
+    Betrifft nur den Kontra-Spieler in einer unerfüllten Hochzeit.
+
+AiConfig::Heuristic::play to get married \
+  = Spiele um geheiratet zu werden
+AiConfig::Heuristic::Description::play to get married \
+  = Pfunde, wenn der Stich Klärungsstich ist. \n\
+    Als Ausspieler spiele eine hohe Karte von einer Klärungsfarbe. \n\
+    Betrifft nur den Hochzeitler in einer unerfüllten Hochzeit
+
+AiConfig::Heuristic::choose ace \
+  = Wähle Farb-As
+AiConfig::Heuristic::Description::choose ace \
+  = Als Ausspieler wähle ein Farb-As aus. \
+    Dabei wird das As mit den meisten ausstehenden Farbkarten vorgezogen.\n\
+    In einem Farbstich wähle das Farb-As, wenn der Stich damit gewonnen werden kann.
+
+AiConfig::Heuristic::choose ten \
+  = Wähle Farb-Zehn
+AiConfig::Heuristic::Description::choose ten \
+  = Als Ausspieler wähle eine Farb-Zehn aus, wenn dies die höchste Karte der Farbe ist. \
+    Dabei wird die Zehn mit den meisten ausstehenden Farbkarten vorgezogen.\n\
+    In einem Farbstich wähle die Farb-Zehn, wenn der Stich damit gewonnen werden kann.
+
+AiConfig::Heuristic::choose single ace \
+	= Spiele einzelnes As
+AiConfig::Heuristic::Description::choose single ace \
+  = Als Ausspieler spiele ein einzelnes Farb-As aus.
+
+AiConfig::Heuristic::choose for color trick \
+  = Wähle Karte für Farbstich
+AiConfig::Heuristic::Description::choose for color trick \
+  = Greift in nicht bedienbaren Farbstichen, dabei immer im ersten Durchlauf, oder als letzter Spieler. \n\
+    Pfunde, wenn der Stich an das eigene Team geht, \
+    stich ab, wenn sonst nur Farbkarten im Stich sind, \
+    überstich, wenn genügend Punkte im Stich enthalten sind (siehe 'Minimale Stichpunkte für bevorzugten Dolleneinsatz', 'Maximale Stichpunkte um Fehlkarte abzuwerfen', 'Minimale Stichpunkte für bevorzugten Dameneinsatz').
+
+AiConfig::Heuristic::jab color over fox \
+  = Steche Farbe über Fuchs ab
+AiConfig::Heuristic::Description::jab color over fox \
+  = Greift in nicht bedienbaren Farbstichen. Steche die Farbe mit der kleinsten Karte über dem Fuchs ab.\n\
+    Nach "Wähle Karte für Farbstich" einsortieren, am besten weit hinten.
+
+AiConfig::Heuristic::retry color \
+  = Versuche erneut Farbe
+AiConfig::Heuristic::Description::retry color \
+  = Spiele eine Farbe erneut an, wenn sie nicht gestochen wurde (mit Neun oder König anspielen) \
+    oder wenn sie vom eigenen Team gestochen wurde, das hinten sitzt (Zehn, Neun oder König)
+
+AiConfig::Heuristic::play color for partner \
+  = Spiele Farbe für Partner
+AiConfig::Heuristic::Description::play color for partner \
+  = Wenn der Partner eine Farbe nicht mehr hat, aber die Spieler hinter ihm noch, spiele diese an, damit er übernehmen kann.
+
+AiConfig::Heuristic::try color for partner \
+  = Versuche Farbe für Partner
+AiConfig::Heuristic::Description::try color for partner \
+  = Wenn der Partner hinten sitzt und von einer Farbe vielleicht nicht mehr die letzte Karte hat, spiele diese Farbe mit dem kleinsten an.
+
+AiConfig::Heuristic::play color in solo =\
+	Spiele Farbe an (Solo)
+AiConfig::Heuristic::Description::play color in solo =\
+	Spiele die kürzeste Farbe im Solo an, damit der Solospieler hoch rangehen muss.
+
+AiConfig::Heuristic::play color for partner ace \
+  = Spiele Farbe für Partner-As
+AiConfig::Heuristic::Description::play color for partner ace \
+  = Wenn der Partner hinter einem sitzt, spiele eine Farbe an, die noch nicht gelaufen ist, in der Hoffnung, er hat das As.
+
+AiConfig::Heuristic::play bad color \
+  = Spiele schlechte Farbe
+AiConfig::Heuristic::Description::play bad color \
+  = Wenn der Partner hinten sitzt, spiele eine Farbe an, die er auch noch hat.
+
+AiConfig::Heuristic::serve color trick \
+  = Bediene Farbstich
+AiConfig::Heuristic::Description::serve color trick \
+  = Spiele die kleinste Farbkarte, wenn ein Farbstich bedient werden muß, der nicht überstochen werden kann. \n\
+    Normalerweise greift die Heuristik, wenn ein Farb-As vorgespielt wurde und keine Teams bekannt sind.
+
+AiConfig::Heuristic::serve trump trick \
+  = Bediene Trumpfstich
+AiConfig::Heuristic::Description::serve trump trick \
+  = Nimm die kleinste Karte, wenn ein Trumpfstich bedient werden muß, ohne daß er übernommen werden kann. \n\
+    Dabei darf der Stich nicht ans eigene Team gehen und kein Spieler vom eigenen Team darf noch hinter einem sitzen. \n\
+    Die Heuristik ist insbesondere für den Fall ausgelegt, in dem der letzte Spieler in einem Trumpfstich den Stich nicht übernehmen kann und der Stich an die gegnerische Partei geht.
+
+AiConfig::Heuristic::choose pfund \
+  = Spiele Pfund
+AiConfig::Heuristic::Description::choose pfund \
+  = Spiele ein Pfund, wenn der Trumpfstich an das eigene Team geht. \n\
+    Dabei muß der Spieler hinten sitzen \
+    oder der Partner muß einen genügend großen Trumpf gespielt haben (siehe 'Entscheidungskarte für Heuristiken' für die einzelnen Spieltypen).
+
+AiConfig::Heuristic::choose pfund poverty \
+  = Spiele Pfund (Armut)
+AiConfig::Heuristic::Description::choose pfund poverty \
+  = Wie 'Spiele Pfund', greift aber nicht, wenn der Spieler hinten sitzt (dafür ist 'Spiele Pfund (Armut)' zuständig).
+
+AiConfig::Heuristic::choose pfund before partner \
+  = Spiele Pfund vor Partner
+AiConfig::Heuristic::Description::choose pfund before partner \
+  = Wenn der Partner den höchsten Trumpf hat, spiele ein Pfund vor.\n\
+    Der höchste Trumpf kann dabei ein angesagtes Schwein sein oder die Kreuz Dame, die irgendwo noch rumfliegt.
+
+AiConfig::Heuristic::jab for ace \
+  = Stich ein, um As nachzuspielen
+AiConfig::Heuristic::Description::jab for ace \
+  = Stich den Stich ab, wenn der Spieler ein Farb-As auf der Hand hat von einer Farbe, die noch nicht gelaufen ist. (um danach das Farb-As auszuspielen). \n\
+    In einem Solo achte noch darauf, daß genügend Trumpfkarten auf der Hand verbleiben.
+
+AiConfig::Heuristic::start with color \
+  = Starte mit Farbkarte
+AiConfig::Heuristic::Description::start with color \
+  = Komm mit einer Farbkarte aus, in der Hoffnung, dass der Partner das As hat.
+
+AiConfig::Heuristic::start with low color \
+  = Spiele kleine Farbkarte
+AiConfig::Heuristic::Description::start with low color \
+  = Komm mit einer kleinen Farbkarte aus, um den Partner zu finden oder im Solospiel.
+
+AiConfig::Heuristic::start with low trump \
+  = Spiele kleine Trumpfkarte
+AiConfig::Heuristic::Description::start with low trump \
+  = Komm mit einer kleinen Trumpfkarte aus, um den Partner zu finden.
+
+AiConfig::Heuristic::play to jab later \
+  = Spiele Trumpf, um später zu stechen
+AiConfig::Heuristic::Description::play to jab later \
+    = Spiele einen kleinen Trumpf, um Trümpfe der anderen Spieler zu ziehen und später mit einem hohen zu stechen.\n\
+	Der Spieler hat nur Trumpf auf der Hand
+
+AiConfig::Heuristic::create fehl \
+  = Erzeuge Fehlfarbe
+AiConfig::Heuristic::Description::create fehl \
+  = Spiele eine Farbe blank, wenn nur noch eine Karte davon auf der Hand ist. \n\
+    Es muß noch früh im Spiel sein (siehe 'Letzter Stich, um Fehlfarbe zu erzeugen'); \n\
+    'Erzeuge mit erster Karte Fehlfarbe' wird beachtet; \n\
+    der Stich darf nicht zu viele Pukte enthalten (siehe 'Maximale Stichpunkte um Fehlkarte abzuwerfen'); \n\
+    die Gewinnerkarte ist ein Farb-As oder ein hoher Trumpf (siehe 'niedrigste Karte bei best. Heuristiken zu spielen' für die einzelnen Spieltypen)
+
+AiConfig::Heuristic::best winning card \
+  = Wähle beste Karte, um Stich zu gewinnen
+AiConfig::Heuristic::Description::best winning card \
+  = Wählt eine Karte um den Stich zu gewinnen. \n\
+    Nicht erlaubt sind Trumpf-Asse sowie der kleinste Trumpf. \n\
+    Für die Kartenwahl werden die Stichpunkte in Betracht gezogen, \
+    siehe u.a. 'Minimale Stichpunkte für bevorzugten Dameneinsatz' und 'Minimale Stichpunkte für bevorzugten Dolleneinsatz'.
+
+AiConfig::Heuristic::play low high \
+  = Spiele abwechselnd niedrige und hohe Trümpfe
+AiConfig::Heuristic::Description::play low high \
+  = Spiele abwechselnd einen kleinen Trumpf (kleinster Bube) und eine großen Trumpf (kleine Dame) an. \n\
+    Greift beim Ausspieler, wenn er mindenstens zur Hälfte noch Trümpfe auf der Hand hat. \n\
+    Angefangen wird mit einem kleinen Trumpf, wenn mindestens so viele Buben wie Damen im Blatt sind.
+
+AiConfig::Heuristic::play for team \
+  = Spiele fürs Team
+AiConfig::Heuristic::Description::play for team \
+  = Greift, wenn der Stich an das eigene Team geht und der Partner eine hohe Karte (siehe 'Minimale Teamkarte zum Pfunden') gespielt hat. \n\
+    Wenn der Partner mindestens 'kleinste Karte für starke Pfunde' gespielt hat, spiele den Fuchs oder eine Zehn (keine Dolle), ansonsten einen König.
+
+AiConfig::Heuristic::jab fox \
+  = Stich einen Fuchs
+AiConfig::Heuristic::Description::jab fox \
+  = Stich den Stich genügend hoch ab, wenn ein Fuchs (kein Schwein) im Stich liegt. \n\
+    Als letzter Spieler reicht die beste Gewinnerkarte; \n\
+    wenn der Spieler die beste ausstehende Karte hat, nimm die; \n\
+    wenn der Partner die beste ausstehende Karte hat, laß ihn machen; \n\
+    ansonsten nimm die beste Dame.
+
+AiConfig::Heuristic::try for doppelkopf \
+  = Versuche einen Doppelkopf
+AiConfig::Heuristic::Description::try for doppelkopf \
+  = Spiele eine Zehn oder ein As, wenn ein Doppekopf möglich ist. \n\
+    Dabei darf maximal noch ein Spieler folgen, der muß dann vom eigenen Team sein; \n\
+    der Stich muß mit der Karte abgestochen werden. \n\
+    Getestet werden 'Trumpf Zehn', 'Trumpf As' und die Dolle. \n\
+    \n\
+    Bemerkung: \n\
+    Viele weitere möglichen Fälle werden schon mit 'Spiele Pfund' abgedeckt.
+
+AiConfig::Heuristic::play for partner worries \
+  = Von Sorgen erlösen
+AiConfig::Heuristic::Description::play for partner worries \
+  = Wenn der Partner eine "Sorgen Karte" wie Karo 10 oder Fuchs haben könnte wird der Stich geholt, damit der Partner seine Karte spielen kann.
+
+AiConfig::Heuristic::draw trump \
+  = Ziehe Trümpfe
+AiConfig::Heuristic::Description::draw trump \
+  = Spiele den höchsten Trumpf aus, wenn der Spieler Ausspieler ist und er mehr Trümpfe auf der Hand hat als die anderen zusammen (und die anderen Spieler noch Trümpfe haben).
+
+AiConfig::Heuristic::partner backhand draw trump \
+  = Ziehe Trümpfe (Partner Hinterhand)
+AiConfig::Heuristic::Description::partner backhand draw trump \
+  = Wenn der Partner in der Hinterhand sitzt, spiele einen kleinen Trumpf, um die Trümpfe zu ziehen. Hat der Partner den höchsten Trumpf, dann spiele viele Punkte.
+
+AiConfig::Heuristic::get trick for announcement \
+  = Stich den Stich für Ansage
+AiConfig::Heuristic::Description::get trick for announcement \
+  = Überstich den Stich, wenn die Einhaltung der eigenen Ansage gefährdet ist, d.h. der Gegner bekäme mit diesem Stich zu viele Punkte.
+
+AiConfig::Heuristic::play trump =\
+	Spiele Trumpf
+AiConfig::Heuristic::Description::play trump =\
+	Wenn nur noch Trümpfe auf der Hand sind, spiele die "beste" Trumpfkarte.
+
+AiConfig::Heuristic::let trick pass \
+  = Laß den Stich liegen
+AiConfig::Heuristic::Description::let trick pass \
+  = Wenn in dem Stich nicht genügend Punkte sind, daß es sich lohnen würde ihn mitzunehmen, lasse ihn liegen.
+
+AiConfig::Heuristic::grab trick \
+  = Kralle den Stich
+AiConfig::Heuristic::Description::grab trick \
+  = Als letzter Spieler im Stich, stich ihn, wenn möglich.
+
+AiConfig::Heuristic::let trick pass \
+  = Lasse den Stich vorbei
+AiConfig::Heuristic::Description::let trick pass \
+  = Nicht genügend Punkte im Stich. Werfe Fehl ab.
+
+AiConfig::Heuristic::poverty: special: play pfund \
+  = Spiele Pfund (Armutler)
+AiConfig::Heuristic::Description::poverty: special: play pfund \
+  = Spiele ein Pfund als Armutspieler wenn der Partner hinten sitzt. \n\
+    \n\
+    Zu tun: \n\
+    * wenn das gegnerische Team eine hohe Karte gespielt hat, pfunde nicht
+
+AiConfig::Heuristic::poverty: special: offer pfund =\
+	Biete Pfund an (Armutler)
+AiConfig::Heuristic::Description::poverty: special: offer pfund =\
+	Wenn der Armutler viele Punkte auf der Hand hat und sein Partner einen hohen trumpf gespielt hat, dann pfunde (Zehn oder As von der längsten Farbe).
+
+AiConfig::Heuristic::poverty: special: give no points \
+  = Gib keine Punkte (Armutler)
+AiConfig::Heuristic::Description::poverty: special: give no points \
+  = Wenn der Partner den Stich nicht bekommen kann, gib so wenig Punkte in den Stich, wie möglich.
+
+AiConfig::Heuristic::poverty: re: trump color trick high \
+  = Stich einen Farbstich hoch ab (Armut, Re)
+AiConfig::Heuristic::Description::poverty: re: trump color trick high \
+  = Der Re-Spieler einer Armut nimmt eine kleine Dame oder ähnliches, um einen Farbstich abzustechen.
+
+AiConfig::Heuristic::poverty: re: play trump \
+  = Spiele Trumpf an (Armut, Re)
+AiConfig::Heuristic::Description::poverty: re: play trump \
+  = Der Re-Spieler einer Armut spielt einen kleinen Trumpf an (ab Bube aufwärts), um die Trümpfe zu ziehen.
+
+AiConfig::Heuristic::poverty: contra: play color \
+  = Spiele Farbe an (Armut, Kontra)
+AiConfig::Heuristic::Description::poverty: contra: play color \
+  = Ein Kontra-Spieler in einer Armut spielt, soweit noch vorhanden, Farbkarten an.\n\
+    Dabei werden Farben, die der Partner nicht hat, bevorzugt.
+
+AiConfig::Heuristic::poverty: contra: trump color trick high \
+  = Stich Farbstich hoch ab (Armut, Kontra)
+AiConfig::Heuristic::Description::poverty: contra: trump color trick high \
+  = Der Spieler nimmt eine kleine Dame oder ähnliches, um einen Farbstich abzustechen.
+
+AiConfig::Heuristic::poverty: contra: leave to partner \
+  = Lasse den Stich dem Partner (Armut, Kontra)
+AiConfig::Heuristic::Description::poverty: contra: leave to partner \
+  = Wenn der Partner den Stich überstechen kann, lasse ihn das tun (und gib dafür Punkte), damit der Re-Spieler nicht hinten sitzt.
+
+AiConfig::Heuristic::poverty: contra: overjab re \
+  = Überstich Re (Armut, Kontra)
+AiConfig::Heuristic::Description::poverty: contra: overjab re \
+  = Wenn es sonst keiner tun kann, überstich den Re-Spieler (so eng wie möglich).
+
+AiConfig::Heuristic::poverty: best winning card \
+  = Beste Gewinnerkarte für letzten Spieler (Armut)
+AiConfig::Heuristic::Description::poverty: best winning card \
+  = Der letzte Spieler spielt, wenn er kann, seine kleinste Karte, mit der er den Stich erhält.
+
+AiConfig::Heuristic::meatless: play highest color \
+  = Spiele beste Farbe (Fleischlos)
+AiConfig::Heuristic::Description::meatless: play highest color \
+  = Im Fleischlosspiel spiele die höchste Karte einer Farbe, wenn es sonst keine höhere gibt. \n\
+    \n\
+    Diese Heuristik sorgt dafür, daß im Fleischlos-Spiel Farben von oben runter gespielt werden.
+
+AiConfig::Heuristic::picture: second best trump \
+  = Spiele zweitbesten Trumpf
+AiConfig::Heuristic::Description::picture: second best trump \
+  = Spiele den zweitbesten Trumpf aus.
+
+AiConfig::Heuristic::color: jab for ace \
+  = Stich, um As nachzuspielen (Farbsoli)
+AiConfig::Heuristic::Description::color: jab for ace \
+  = Wie 'Stich, um As nachzuspielen'.
+
+AiConfig::Heuristic::color: play low high \
+  = Spiele abwechselnd niedrige und hohe Trümpfe (Farbsoli)
+AiConfig::Heuristic::Description::color: play low high \
+  = Wie 'Spiele abwechselnd niedrige und hohe Trümpfe'.
+
+AiConfig::Heuristic::play highest color card in game \
+  = Spiele höchste Farbkarte des Spiels
+AiConfig::Heuristic::Description::play highest color card in game \
+  = Spiele eine Farbkarte, die der Gegner nicht überstechen kann.
+
+AiConfig::Heuristic::choose best card \
+	= Beste mit KI-Typ gefundene Karte
+AiConfig::Heuristic::Description::choose best card \
+	= Der Computer spielt verschiedene Spielverläufe durch und nimmt die Karte mit dem "besten" Spielverlauf.
+

@@ -1,0 +1,78 @@
+# FreeDoko translation: help
+# language: english
+# version: 0.7.12
+
+
+# help menu
+license					= license
+License::of cardset '%scardset%'	= license of the cardset '%scardset%'
+
+program license				= program license
+cardset license				= cardset license
+iconset license				= iconset license
+
+version					= version
+Version::%sversion% %tabout%		= \
+	Version: %sversion%\n\n%tabout%
+
+ChangeLog				= ChangeLog
+
+help				= help
+online help			= online help
+Help::not found			= local help page not found
+Help::not found: %slocation% = \
+	The help page could not be found on your system. \
+	You can see the page in the internet at the following address:\n\
+	%slocation%
+
+support					= Unterstützung
+Version::%sversion% %tsupport%		= \
+	Version: %sversion%\n\n%tsupport%
+Support::support			= \
+	Please support the FreeDoko team, so that we can improve the program further. \
+	There are many possibility for your help:\n\
+	\n\
+	* donation\n\
+	\  With PayPal you can donate some money to the FreeDoko team and the host sourceforge.net. Further information are at https://sourceforge.net/donate/index.php?group_id=38051\n\
+	\n\
+	* bug reports\n\
+	\  If the computer is playing badc or he has a bad card suggestion, create a bug report and send it to us. You can find further information for the bug report in the manual at http://free-doko.sourceforge.net/doc/manual/de/bug_report.html.\n\
+	\n\
+	* documentation\n\
+	\  Take part in writing documentation for FreeDoko. The more you write the more time we have to improve the program.\n\
+	\n\
+	* themes\n\
+	\  If you enjoy creating graphics you can give us an own theme for FreeDoko. Create a new cardset, new symbols, additional backgrounds or a new soundset.
+
+about					= about
+About::about				= \
+	FreeDoko is a free game of ,,Doppelkopf''.\n\
+	This program is distributed under the GPL.\n\n\
+	Homepage: http://free-doko.sourceforge.net/\n\
+	E-Mail: freedoko@users.sourceforge.net\n\n\n\
+	Programming:\n\
+	Borg Enders\n\
+	Diether Knof\n\
+	Florian Sundermann (inactiv)\n\
+	\n\
+	Ports\n\
+	Arch Linux: Michael Straube\n\
+	\n\
+	Translations:\n\
+	French: Yves Caubarrus (inactiv)
+
+visit homepage 				= \
+	visit homepage
+cardset internet page			= \
+	cardsets in the internet
+
+
+License: Elite expired =\
+	The usage of the cardset 'Elite' is only granted till 31. december 2009. You can find other cardsets at http://free-doko.sourceforge.net/en/files.html.
+License: Altenburg expired =\
+	The usage of the cardset 'Altenburg' is only granted till 31. december 2013. You can find other cardsets at http://free-doko.sourceforge.net/en/files.html.
+License: InnoCard expired =\
+	The usage of the cardset 'InnoCard' is only granted till 31. december 2017. You can find other cardsets at http://free-doko.sourceforge.net/en/files.html.
+
+cardset replaced: %sorig%, %sreplacement% =\
+        The cardset %sorig% was replaced by %sreplacement%.

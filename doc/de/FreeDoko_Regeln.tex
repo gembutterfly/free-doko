@@ -1,0 +1,390 @@
+\documentclass{scrartcl}
+
+\usepackage{FreeDoko}
+
+\svnInfo $Id$
+
+%\renewcommand{\thesection}{\Roman{section}}
+
+%\setkomafont{sectioning}{\normalfont\bfseries}
+
+\hypersetup{
+pdftitle   ={FreeDoko Regeln},
+pdfsubject ={Regeln von der Doppelkopfumsetzung FreeDoko},
+pdfauthor  ={Borg Enders, Dr. Diether Knof},
+pdfkeywords={FreeDoko Doppelkopf Regeln}
+}
+
+\title{FreeDoko}
+\subtitle{Spielregeln}
+\author{Borg Enders \and Dr. Diether Knof}
+\date{\svnInfoLongDate, Revision \svnInfoRevision}
+
+
+\begin{document}
+\pagestyle{plain}
+
+\maketitle
+
+\tableofcontents
+
+\section{Einleitung}
+
+Im folgenden werden alle von FreeDoko (\href{http://free-doko.sourceforge.net/de/}{http://free-doko.sourceforge.net/de/}) unterstützten Spielregeln
+detailiert erläutert.
+
+Hinweis: In diesem Dokument sind noch nicht alle Sonderregeln beschrieben.
+Die Regeln sind auch im Handbuch in der Rubrik \href{http://free-doko.sourceforge.net/doc/manual/de/operation/rules_config.html}{Regeln} beschrieben.
+
+
+\section{Das Doppelkopfblatt}
+Das Blatt besteht aus je 12 Karten der vier Farben Kreuz
+(\Kreuz), Pik (\Pik), Herz (\Herz) und Karo (\Karo), nämlich
+(Zählwert(Augen) in Klammern) pro Farbe je zwei Asse (11), zwei
+Zehnen (10), zwei Könige (4), zwei Damen (3), zwei Buben (2) und
+zwei Neunen (0). \Optional kann bei FreeDoko auch ohne Neunen
+gespielt werden. In jeder Farbe sind also 60 Augen vorhanden, so
+daß das Doppelkopfblatt insgesamt 240 Augen enhält.
+
+\section{Rangfolge der Karten}
+
+Jede Karte gehört entweder zu einer der gleichwertigen "`Fehlfarben"' oder zu den Trumpfkarten. Jede Trumpfkarte ist ranghöher als irgendeine Fehlkarte. Die Rangfolge hängt vom Typ des Spieles ab, der vor Beginn des Spieles ermittelt wird. Es gibt folgende zwei Spieltypen: Solo und Normalspiel.
+
+Die Rangfolge beim Solo wird im Kapitel Solo (siehe \ref{solo}) erklärt.
+
+Die Rangfolge der Karten beim Normalspiel ist wie folgt:
+
+Die absteigende Reihenfolge der jeweils zweifach im Spiel vorhandenen Trumpfkarten ist: (\Herz\ Zehn,) \Kreuz\ Dame, \Pik\ Dame, \Herz\ Dame, \Karo\ Dame, \Kreuz\ Bube, \Pik\ Bube, \Herz\ Bube, \Karo\ Bube, \Karo\ As, \Karo\ Zehn, \Karo\ König und \Karo\ Neun. In den drei Fehlfarben ist die absteigende Rangfolge der ebenfalls doppelt vorhandenen Karten: As, Zehn, König und Neun.
+
+Grundsätzlich besteht Bedienpflicht. Wenn eine angespielte Karte nicht bedient werden kann, darf getrumpft oder abgeworfen werden.  Bei zwei gleichen Karten in einem Stich ist die zuerst gespielte höher als die zweite.
+
+\subsection{Herz Zehnen}
+In der Regel sind die \Herz\ Zehnen Trümpfe, können aber \optional bei FreeDoko auch normale Farbkarten sein. Wenn diese Trümpfe sind, stehen die \Herz\ Zehnen in der Rangfolge der Karten über den \Kreuz\ Damen. Allerdings gibt es \optional zwei Formen der Rangfolge der \Herz\ Zehnen in einem Stich:
+\begin{enumerate}
+  \item Die zweite schlägt immer die erste.
+    \begin{itemize}
+      \item Außer (\optional) im letzen Stich.
+    \end{itemize}
+  \item Die erste schlägt immer die zweite.
+    \begin{itemize}
+      \item Außer (\optional) im letzten Stich.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Schweine}
+Bei FreeDoko gibt es \optional noch die Möglichkeit höhere Trümpfe als die \Kreuz\ Damen und, wenn vorhanden, die \Herz\ Zehnen zu erlauben. Diese Trümpfe heißen Schweine und Hyperschweine. Schweine sind zwei \Karo\ Asse auf einer Hand und müssen angesagt werden. Diese Karten sind die höchstens Trümpfe im Spiel, solange keine Hyperschweine angesagt werden. Hyperschweine sind zwei \Karo\ Neunen auf einer Hand, wenn bereits Schweine angesagt wurden und auch nur dann.
+
+Für die Ansagezeitpunkte von Schweinen und Hyperschweinen gibt es \optional verschiedene Möglichkeiten:
+\begin{itemize}
+  \item Für Schweine:
+    \begin{itemize}
+      \item Ansage vor dem Spiel.
+      \item Ansage, wenn das erstes Schwein gespielt wird.
+      \item Wenn das erste As von der eigenen Partei gewonnen wurde, wird das
+	zweite \Karo\ As zum Schwein und angesagt.
+	In diesem Spezialfall sind keine Hyperschweine erlaubt.
+    \end{itemize}
+  \item Für Hyperschweine:
+    \begin{itemize}
+      \item Ansage vor dem Spiel.
+      \item Ansage, wenn die erste Neun gespielt wird
+    \end{itemize}
+\end{itemize}
+
+Außerdem kann angegeben werden, ob es Schweine und Hyperschweine auch im Solospiel gibt.
+
+\section{Parteien}
+Doppelkopf wird mit vier Spielern gespielt. Im Normalspiel spielen die Spieler, die die \Kreuz\ Damen besitzen (Re-Partei) gegen die beiden anderen (Kontra-Partei). Es ist allerdings auch möglich, daß ein Spieler gegen die drei anderen ein Solo spielt.  Bei diesen ist dann der Solospieler die Re-Partei.
+
+\section{Spielziel}
+Jede Partei versucht mehr "`Augen"' als die Gegenpartei zu erspielen und dabei einen möglichst hohen Punktwert des Spieles bei der Abrechnung zu erreichen.
+
+\section{Ende einer Partie}
+Bei Doppelkopf besteht ein komplettes Tunier entweder aus einer vorher angegebenen Anzahl von Spielen oder einer vorher festgelegten Anzahl gespielter Punkte (Punktetopf).
+
+\section{Spielfindung}
+Bei der Spielfindung geht es darum, für das Spiel zu entscheiden, ob ein normales Spiel oder ein Solo gespielt wird.
+
+\subsection{Die Vorbehaltsfrage}
+Bevor das Spiel beginnt, muß in der Vorbehaltsfrage der Spieltyp ermittelt werden. Beginnend beim linken Nachbarn des Kartengebers wird in ununterbrochener Reihenfolge nach Vorbehalten gefragt.  Wenn ein Spieler ein Pflichtsolo, Lustsolo, eine Armut oder eine Hochzeit anmelden möchte, sagt er laut und deutlich: "`Vorbehalt"'. Ein Spieler der keinen "`Vorbehalt"' anmelden möchte sagt laut und deutlich: "'Gesund"'. Falls sich alle Spieler "'Gesund"' melden wird ein Normalspiel durchgeführt.  Wenn nur ein Spieler einen "`Vorbehalt"'angemeldet hat, muß er diesen "`taufen"', das heißt, er muß bekannt geben, ob er ein Solo, eine Armut oder eine Hochzeit spielen will. Wenn mehrere Spieler im selben Spiel "`Vorbehalt"' angemeldet haben, gilt die Reihenfolge:
+
+\begin{enumerate}
+  \item Pflichtsolo
+  \item Lustsolo
+  \item Armut
+  \item Hochzeit
+\end{enumerate}
+
+Um festzustellen, wer bei mehreren Vorbehalten den höchstrangigen hat, wird als erstes reihum gefragt, ob einer der betroffenen Spieler ein Pflichtsolo spielen will. Wenn dies alle verneinen, wird nach dem Lustsolo gefragt. Falls auch alle Spieler verneinen, wird nach der Armut und gegebenenfalls danach nach der Hochzeit gefragt. Sobald ein Spieler den gefragten Vorbehalt bejaht, "`tauft"' dieser seinen Vorbehalt, d.h. er benennt genau die Art seines Vorbehalts (z.B.: Herz Solo). Alle anderen angemeldeten Vorbehalte verfallen. Ein einmal angesagter Vorbehalt ist verbindlich, das heißt, er muß getauft werden, wenn kein höherrangiger besteht.
+
+\subsection{\label{solo}Solospiele}
+Ein Solospiel ist ein Spiel bei dem ein Spieler alleine gegen die drei anderen Spieler spielt.
+
+\begin{description}
+  \item[Farbsolo:]
+    (\Herz\ Zehnen), alle
+    Damen und alle Buben sind wie im Normalspiel Trumpf. \Karo\ As,
+    \Karo\ Zehn, \Karo\ König und \Karo\ Neun werden durch die
+    entsprechenden Karten der gewählten Trumpffarbe (\Kreuz, \Pik,
+    \Herz\ oder \Karo) ersetzt. Wichtig: beim \Herz-Solo bleiben die
+    Dollen (die \Herz\ Zehnen als Trumpf) hoch. Es gibt also 26 bzw.
+    24 Trümpfe. Falls ohne Neunen gespielt wird gibt es natürlich
+    zwei Trümpfe weniger.
+  \item[Fleischloser:]
+    Es gibt keine Trümpfe. Die Karten gelten in der Reihenfolge As,
+    Zehn, König, Dame, Bube, Neun.
+  \item[Damen-Solo:]
+    Alle Damen sind Trumpf in der Reihenfolge \Kreuz, \Pik, \Herz,
+    \Karo. Es gibt also acht Trumpf. Alle anderen Karten gehören zur
+    Fehlfarbe in der Reihenfolge As, Zehn, König, Bube, Neun.
+  \item[Buben-Solo:]
+    Alle Buben sind Trumpf in der Reihenfolge \Kreuz, \Pik, \Herz,
+    \Karo. Es gibt also acht Trumpf. Alle anderen Karten gehören zur
+    Fehlfarbe in der Reihenfolge As, Zehn, König, Dame, Neun.
+  \item[Damen-Buben-Solo:]
+    Alle Damen und Buben sind Trumpf in der Reihenfolge \Kreuz\ Dame,
+    \Pik\ Dame, \Herz\ Dame, \Karo\ Dame, \Kreuz\ Bube, \Pik\ Bube, \Herz
+    Bube, \Karo\ Bube. Es gibt also 16 Trumpf. Alle anderen Karten
+    gehören zur Fehlfarbe in der Reihenfolge As, Zehn, König, Neun.
+  \item[Köhler:]
+    Alle Könige, Damen und Buben sind Trumpf in der Reihenfolge
+    \Kreuz\ König, \Pik\ König, \Herz\ König, \Karo\ König,
+    \Kreuz\ Dame, \Pik\ Dame, \Herz\ Dame, \Karo\ Dame,
+    \Kreuz\ Bube, \Pik\ Bube, \Herz\ Bube, \Karo\ Bube.
+  \item[Königen-Solo:]
+    Alle Könige sind Trumpf in der Reihenfolge \Kreuz, \Pik, \Herz,
+    \Karo. Es gibt also acht Trumpf. Alle anderen Karten gehören zur
+    Fehlfarbe in der Reihenfolge As, Zehn, Dame, Bube, Neun.
+  \item[Königen-Damen-Solo:]
+    Alle Könige und Damen sind Trumpf in der Reihenfolge \Kreuz
+    König, \Pik\ König, \Herz\ König, \Karo\ König, \Kreuz\ Dame, \Pik
+    Dame, \Herz\ Dame, \Karo\ Dame. Es gibt also 16 Trumpf. Alle anderen
+    Karten gehören zur Fehlfarbe in der Reihenfolge As, Zehn, Bube,
+    Neun.
+  \item[Königen-Buben-Solo:]
+    Alle Könige und Buben sind Trumpf in der Reihenfolge \Kreuz
+    König, \Pik\ König, \Herz\ König, \Karo\ König, \Kreuz\ Bube, \Pik
+    Bube, \Herz\ Bube, \Karo\ Bube. Es gibt also 16 Trumpf. Alle anderen
+    Karten gehören zur Fehlfarbe in der Reihenfolge As, Zehn, Dame,
+    Neun. Alle Könige, Damen und Buben sind Trumpf in der Reihenfolge
+    \Kreuz\ König, \Pik\ König, \Herz\ König, \Karo\ König, \Kreuz
+    Dame, \Pik\ Dame, \Herz\ Dame, \Karo\ Dame, \Kreuz\ Bube, \Pik\ Bube,
+    \Herz\ Bube, \Karo\ Bube. Es gibt also 24 Trumpf. Alle anderen
+    Karten gehören zur Fehlfarbe in der Reihenfolge As, Zehn, Neun.
+\end{description}
+
+\subsection{Pflichtsoli}
+\Optional gibt es bei FreeDoko die Möglichkeit, eine feste Anzahl von Pflichtsoli vorzugeben. Jede Soloart kann als Pflichtsoli gespielt werden. Der Solospieler hat hierbei die Aufspielpflicht zum ersten Stich. Wenn die Anzahl nicht gespielter Pflichtsoli gleich der Anzahl noch zu absolvierender Spiele ist oder Punktetopf leer ist, muß derjenige Spieler, dem ein Pflichtsolo fehlt und der als Nächster links vom Kartengeber sitzt, ein Pflichtsolo spielen, das heißt, er wird "`vorgeführt"'. Ein freiwilliges Solo wird nachgegeben, das heißt, es gibt der Spieler nochmal, der auch schon die Karten zum Pflichtsolo verteilt hat. Ein vorgeführtes Pflichtsolo wird hingegen nicht nachgegeben.
+
+\subsection{Lustsoli}
+Sobald ein Spieler alle seine Pflichtsoli absolviert hat, darf er Lustsoli spielen. Als Lustsolo kann jede Soloart gespielt werden.  Beim Lustsolo spielt der linke Nachbar des Kartengebers aus und es wird auch nicht nachgegeben. \Optional \ kann allerdings auch bei einem Lustsolo der Spieler selber ausspielen, in diesem Fall wird allerdings auch nachgegeben.
+
+\subsection{Hochzeit}
+Wenn ein Spieler beide \Kreuz\ Damen auf der Hand hat, kann er sich, falls kein Solo und keine Armut vorliegt, zwei Spieltypen entscheiden. Er kann entweder die Hochzeit anmelden oder eine "`Stille Hochzeit"' (Farbsolo in \Karo) spielen. Falls der Spieler mit den beiden \Kreuz\ Damen kein Solo spielen möchte, meldet er in der Vorbehaltsfrage einen "`Vorbehalt"' an. Bei der angemeldeten Hochzeit hat der Spieler verschiedene Möglichkeiten seinen Mitspieler zu finden. Hierzu wählt er eine der folgenden Möglichkeiten:
+\begin{itemize}
+  \item Erster fremder Stich entscheidet
+  \item Erster fremder Trumpfstich entscheidet
+  \item Erster fremder Farbstich entscheidet
+  \item Erster fremder \Herz\ Stich entscheidet
+  \item Erster fremder \Pik\ Stich entscheidet
+  \item Erster fremder \Kreuz\ Stich entscheidet
+\end{itemize}
+Der Spieler, der als erster einen Stich gewinnt, der dem geforderten Kriterium entspricht und der nicht die beiden \Kreuz\ Damen hat, spielt mit dem Hochzeitler zusammen. \Optional kann auch ein letzter Klärungsstiches festgelegt werden, das heißt, wenn der Hochzeitler bis zu diesem Zeitpunkt keinen Partner gefunden hat, wird das Spiel als \Karo\ Solo des Hochzeitlers
+fortgesetzt.
+
+\subsection{Armut}
+In FreeDoko gibt es \optional drei Formen der Armut.  Armuten können nur durch das Spielen von Soli verhindert werden.
+
+\subsubsection{Neunen werfen}
+Wenn ein Spieler mehr als vier Neunen auf seiner Hand hat, darf dieser entscheiden, ob er möchte, daß neu gegeben oder normal gespielt wird.
+
+\subsubsection{Königen werfen}
+Wenn ein Spieler mehr als fünf Könige auf seiner Hand hat, darf dieser entscheiden, ob er möchte das neu gegeben oder normal gespielt wird.
+
+\subsubsection{Trumpfarmut (Fuchs höchster Trumpf)}
+Wenn ein Spieler als höchsten Trumpf einen Fuchs auf seiner Hand hat, darf dieser entscheiden, ob er möchte das neu gegeben oder normal gespielt wird.
+
+\subsubsection{Trumpfarmut}
+Zu dieser Armut kommt es, wenn ein Spieler weniger als vier Trümpfe hat. In diesem Fall gibt es bei FreeDoko zwei Möglichkeiten die \optional gewählt werden können.
+\begin{itemize}
+  \item
+    Die erste Variante besteht darin, daß die Karten neu gegeben werden.
+  \item
+    Bei der zweiten Variante legt der Spieler drei Karten verdeckt
+    auf den Tisch. Zu diesen drei Karten gehören alle seine
+    Trumpfkarten. Jetzt dürfen die Spieler nacheinander entscheiden,
+    ob sie die Karten aufnehmen möchten. Wenn kein Spieler die
+    Karten aufnimmt, wird neu gegeben. Andernfalls gibt der Spieler,
+    der die Karten aufgenohmen hat, dem Spieler mit der Armut drei
+    beliebige Karten zurück und sagt dabei an, wieviele Trümpfe er
+    zurückgegeben hat. Der Spieler, der die Karten aufgenohmen hat,
+    bildet beim Spiel zusammen mit dem Spieler mit der Armut die
+    Re-Partei. Die Verteilung der \Kreuz\ Damen ist für die weitere
+    Parteienbildung nicht mehr relevant. Ansonsten wird das Spiel
+    jetzt wie ein Normalspiel gespielt. Wenn allerdings ein Spieler
+    lieber ein Solo spielen möchte, geht dieses vor und der Spieler
+    mit der Armut behält seine Karten.
+\end{itemize}
+
+\section{Spielverlauf}
+
+\subsection{Aufspiel}
+Aufspielpflicht zum ersten Stich hat der linke Nachbar des Kartengebers oder der Pflichtsolispieler. Zum ersten Stich wird erst nach geklärter Vorbehaltsfrage aufgespielt. Ab dem zweiten Stich spielt immer derjenige auf, der den vorangegangenen Stich gemacht hat. Eine gespielte Karte darf nicht zurückgenommen
+werden.
+
+\subsection{Bedienen}
+Für jeden Stich herrscht Bedienpflicht, das heißt, jeder muß, wenn möglich, eine Karte der aufgespielten Fehlfarbe oder geforderten Trumpffarbe zugeben (bedienen). Wer die ausgespielte Fehlfarbe nicht hat, darf entweder eine Trumpfkarte zugeben (stechen), oder eine beliebige Karte einer anderen Fehlfarbe spielen. Wenn eine Trumpfkarte gefordert wird, aber nicht bedient werden kann, darf eine beliebige Karte einer Fehlfarbe zugegeben werden.
+
+\subsection{Letzter Stich}
+Jederzeit im Spiel kann durch Anfrage eines Spielers nochmal der letzte Stich aufgedeckt werden. Weitergespielt wird, wenn dieser wieder verdeckt wird.  \Optional kann in FreeDoko die Anzahl der einsehbaren Stiche erhöht werden.
+
+\section{An- und Absagen}
+
+\subsection{Ansage}
+Mit der Ansage "`Re"' (Re-Partei) oder "`Kontra"' (Kontra-Partei) zeigt der Ansagende an, welcher Partei er angehört und daß er glaubt, zusammen mit seinem Partner das Spiel gewinnen zu können.  Eine Ansage ist solange möglich bis der Spieler seine Karte des zweiten Stiches bzw. die erste Karte nachdem Klärungsstich einer Hochzeit gespielt hat. Sie darf jedoch nicht vor Beendigung der Vorbehaltsfrage erfolgen. Eine zweite "`Re"' oder "`Kontra"' Ansage ist nicht erlaubt, wenn schon für die eigene Partei eine entsprechende Ansage gemacht wurde.
+
+\subsection{Absagen}
+Bei Doppelkopf gibt es folgende Absagen mit ihrer jeweiligen Bedeutung:
+\begin{description}
+  \item[Keine 90:] die Gegenpartei schafft keine 90 Punkte, Ansage der eigenen Partei mußte vorher
+    erfolgen.
+  \item[Keine 60:] die Gegenpartei schafft keine 60 Punkte, keine 90 mußte vorher angesagt
+    werden.
+  \item[Keine 30:] die Gegenpartei schafft keine 30 Punkte, keine 60 mußte vorher angesagt
+    werden.
+  \item[Schwarz:] die Gegenpartei macht keinen Stich, keine 30 mußte vorher angesagt
+    werden.
+\end{description}
+Bei FreeDoko kann \optional konfiguriert werden, bis wann und wieviele Absagen erlaubt sind. Es dürfen auch Absagen übersprungen werden, wenn vorher nötige Absagen noch erlaubt sind. Diese gelten dann als abgesagt. Auf jede Absage darf \optional ein Re oder Kontra, sofern nicht bereits erfolgt, erwidert werden. Bei einer Hochzeit verschiebt der Klärungsstich alle Absagezeitpunkte entsprechend, das heißt, wenn der dritte Stich der Klärungsstich ist, dürfen alle Absagen zwei Stiche später erfolgen.
+
+\section{Genscher}
+\Optional gibt es bei FreeDoko eine Sonderegel für alle, die etwas Unfairnis ins Spiel bringen möchten. Diese Regel heißt Genscher und tritt dann in Kraft, wenn ein Spieler beide \Karo\ Könige auf seiner Hand hat. In diesem Fall darf dieser Spieler beim Ausspielen des ersten \Karo\ Königs (Genscher) völlig frei entscheiden, wer sein Mitspieler sein soll. Allerdings kann der Spieler den Genscher auch spielen ohne von ihm Gebrauch zu machen.  Beim Gebrauch des Genschers werden alle Absagen aufgehoben, und es bleiben nur gemachte Ansagen bestehen.
+
+Diese Sonderregeln gilt nicht bei einem Solospiel oder einer Armut.
+
+\section{Spielbewertung}
+
+\subsection{Gewinnstufen und Gewinnkriterien}
+Die Fälle, in denen eine Partei gewonnen hat und den Grundwert von einem Spielpunkt dafür erhält, werden im folgenden vollständig aufgeführt.
+
+Die Re-Partei hat in den folgenden Fällen gewonnen:
+\begin{enumerate}
+  \item Mit dem 121. Auge, wenn keine Ansage bzw. Absage getroffen wurde,
+  \item mit dem 121. Auge, wenn nur "`Re"' angesagt wurde,
+  \item mit dem 121. Auge, wenn "`Re"' und "`Kontra"' unabhängig von der Reihenfolge angesagt
+    wurden,
+  \item mit dem 120. Auge, wenn nur "`Kontra"' angesagt wurde,
+  \item mit dem 151. (181., 211.) Auge, wenn sie der Kontra-Partei "`keine 90"' ("`keine 60"', "`keine 30"') abgesagt
+    hat,
+  \item falls sie alle Stiche erhalten hat, wenn sie der Kontra-Partei "`schwarz"' abgesagt hat,
+  \item mit dem 90. (60., 30.) Auge, wenn von der Kontra-Partei "`keine 90"' ("`keine 60"', "`keine 30"') abgesagt
+    wurde und die Re-Partei sich nicht durch eine Absage zu einer
+    höheren Augenzahl verpflichtet hat,
+  \item mit dem 1. Stich, den sie erhält, wenn von der Kontra-Partei "`schwarz"' abgesagt wurde und die
+    Re-Partei sich nicht durch eine Absage zu einer höheren Augenzahl
+    verpflichtet hat.
+\end{enumerate}
+Die Kontra-Partei hat in den folgenden Fällen gewonnen:
+\begin{enumerate}
+  \item Mit dem 120. Auge, wenn keine Ansage bzw. Absage getroffen wurde,
+  \item mit dem 120. Auge, wenn nur "`Re"' angesagt wurde,
+  \item mit dem 120. Auge, wenn "`Re"' und "`Kontra"' unabhängig von der Reihenfolge angesagt wurden,
+  \item mit dem 121. Auge, wenn nur "`Kontra"' angesagt wurde,
+  \item mit dem 151. (181., 211.) Auge, wenn sie der Re-Partei "`keine 90"' ("`keine 60"', "`keine 30"') abgesagt hat,
+  \item falls sie alle Stiche erhalten hat, wenn sie der Re-Partei "`schwarz"' abgesagt hat,
+  \item mit dem 90. (60., 30.) Auge, wenn von der Re-Partei "`keine 90"' ("`keine 60"', "`keine 30"') abgesagt
+    wurde und die Kontra-Partei sich nicht durch eine Absage zu einer höheren Augenzahl verpflichtet hat,
+  \item mit dem 1. Stich, den sie erhält, wenn von der Re-Partei "`schwarz"' abgesagt wurde und die Kontra-Partei
+    sich nicht durch eine Absage zu einer höheren Augenzahl verpflichtet hat.
+\end{enumerate}
+
+\subsection{Spielwerte}
+
+Die Spielwerte der Einzelspiele werden in Spielpunkten (Punkten) ausgedrückt.
+\begin{enumerate}
+  \item Gewonnen: 1 Punkt als Grundwert
+    \begin{enumerate}
+      \item unter 90 gespielt: 1 Punkt zusätzlich
+      \item unter 60 gespielt: 1 Punkt zusätzlich
+      \item unter 30 gespielt: 1 Punkt zusätzlich
+      \item schwarz gespielt: 1 Punkt zusätzlich
+    \end{enumerate}
+  \item Es wurde:
+    \begin{enumerate}
+      \item "`Re"' angesagt: 2 Punkte zusätzlich (bzw. \optional eine
+	Verdopplung der Punkte)
+      \item "`Kontra"' angesagt: 2 Punkte zusätzlich (bzw. \optional eine
+	Verdopplung der Punkte)
+    \end{enumerate}
+  \item Es wurde von der Re-Partei:
+    \begin{enumerate}
+      \item "`keine 90"' abgesagt: 1 Punkt zusätzlich
+      \item "`keine 60"' abgesagt: 1 Punkt zusätzlich
+      \item "`keine 30"' abgesagt: 1 Punkt zusätzlich
+      \item "`schwarz"' abgesagt: 1 Punkt zusätzlich
+    \end{enumerate}
+  \item Es wurde von der Kontra-Partei:
+    \begin{enumerate}
+      \item "`keine 90"' abgesagt: 1 Punkt zusätzlich
+      \item "`keine 60"' abgesagt: 1 Punkt zusätzlich
+      \item "`keine 30"' abgesagt: 1 Punkt zusätzlich
+      \item "`schwarz"' abgesagt: 1 Punkt zusätzlich
+    \end{enumerate}
+  \item Es wurden von der Re-Partei:
+    \begin{enumerate}
+      \item 120 Augen gegen "`keine 90"' erreicht: 1 Punkt zusätzlich
+      \item 90 Augen gegen "`keine 60"' erreicht: 1 Punkt zusätzlich
+      \item 60 Augen gegen "`keine 30"' erreicht: 1 Punkt zusätzlich
+      \item 30 Augen gegen "`schwarz"' erreicht: 1 Punkt zusätzlich
+    \end{enumerate}
+  \item Es wurden von der Kontra-Partei:
+    \begin{enumerate}
+      \item 120 Augen gegen "`keine 90"' erreicht: 1 Punkt zusätzlich
+      \item 90 Augen gegen "`keine 60"' erreicht: 1 Punkt zusätzlich
+      \item 60 Augen gegen "`keine 30"' erreicht: 1 Punkt zusätzlich
+      \item 30 Augen gegen "`schwarz"' erreicht: 1 Punkt zusätzlich
+    \end{enumerate}
+\end{enumerate}
+
+Sonderpunkte können von beiden Parteien nur beim Normalspiel gewonnen werden.  Sie werden gegebenenfalls zuerst miteinander und danach mit den unter (1 - 6) ermittelten Punkten verrechnet.  Es werden folgende Sonderpunkte vergeben:
+\begin{itemize}
+  \item Gegen die \Kreuz\ Damen gewonnen: 1 Sonderpunkt
+  \item Doppelkopf (ein Stich mit 40 oder mehr Augen): 1 Sonderpunkt
+  \item \Karo\ As (Fuchs) der Gegenpartei gefangen: 1 Sonderpunkt
+  \item \optional \Kreuz\ Bube (Karlchen) macht den letzten Stich: 1 Sonderpunkt
+    \begin{itemize}
+      \item \optional 2 Sonderpunkte für Doppel-Karlchen: beide \Kreuz\ Buben einer Partei im letzten Stich
+      \item \optional 1 Sonderpunkt für Karlchen fangen: wenn \Kreuz\ Bube im letzten Stich von Gegenpartei überstochen wird und
+	die Gegenpartei den Stich macht
+      \item \optional 2 Sonderpunkte für Doppel-Karlchen fangen: wenn beide \Kreuz\ Buben im letzten Stich von Gegenpartei überstochen werden
+    \end{itemize}
+  \item \optional 1 Sonderpunkt für Fuchs im letzten Stich: Letzter Stich wird mit \Karo\ As (kein Schwein) gewonnen
+    \begin{itemize}
+      \item \optional zwei Sonderpunkte für Doppel-Fuchs im letzten Stich: letzter Stich wird durch zwei \Karo\ Asse einer Partei gewonnen
+    \end{itemize}
+  \item \optional 1 Sonderpunkt für Dollenschlag, wenn eine \Herz\ Zehn die andere schlägt
+  \item \optional 1 Sonderpunkt für Herzstich, wenn eine Herz
+    durchläuft ohne gestochen zu werden.
+\end{itemize}
+
+Bei einem Solo gibt es keine Sonderpunkte. Dies gilt auch für eine "`Stille Hochzeit"'.
+
+Erreichen beide Parteien ihr abgesagtes Ziel nicht und es werden nur noch Punkte vergeben für:
+\begin{enumerate}
+  \item unter 90 gespielt
+  \item unter 60 gespielt
+  \item unter 30 gespielt
+  \item schwarz gespielt
+  \item Punkte für nicht eingehaltene Absagen
+  \item Sonderpunkte
+\end{enumerate}
+
+\subsection{Punkte zählen}
+Bei FreeDoko besteht \optional die Möglichkeit eine von drei Zählarten zu wählen:
+\begin{itemize}
+  \item alle Punkte werden jedem Gewinner positiv angeschrieben.
+  \item alle Punkte werden für jeden Verlierer negativ angeschrieben
+  \item alle Punkte werden nach der Plus-Minus-Regel angeschrieben, das heißt jeder
+    Gewinner bekommet die Punkte positiv und jeder Verlierer bekommt die Punkte negativ angeschrieben.  Hierbei ist die Summe der vergebenen Punkte immer null. Deswegen wird bei einem Solo die Punktzahl für den Solospieler verdreifacht und ihm bei Gewinn gutgeschrieben, bei Niederlage abgezogen. Den drei Spielern der Gegenpartei wird die einfache Punktzahl mit umgekehrtem Vorzeichen angeschrieben.
+\end{itemize}
+\end{document}

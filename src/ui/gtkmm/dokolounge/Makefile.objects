@@ -1,0 +1,10 @@
+# All object-files
+OBJECTS = \
+	  lounge.o \
+	    lounge.signals.o \
+	    chat.o \
+	    blog.o \
+	    help.o \
+	    pin_board.o \
+	    messages.o \
+	    alert.o

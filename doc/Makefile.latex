@@ -1,0 +1,117 @@
+all : dvi
+
+force : touch 
+	make
+
+touch :
+	for f in $(DOCUMENTS); do \
+	  touch $$f.tex; \
+	done
+
+latex :
+	for f in $(DOCUMENTS); do \
+	  make $$f.dvi; \
+	done
+
+dvi :
+	for f in $(DOCUMENTS); do \
+	  make $$f.dvi; \
+	done
+
+ps :
+	for f in $(DOCUMENTS); do \
+	  make $$f.ps; \
+	done
+
+pdf :
+	for f in $(DOCUMENTS); do \
+	  make $$f.pdf; \
+	done
+
+html :
+	for f in $(DOCUMENTS); do \
+	  make $$f.html; \
+	done
+
+%.dvi : %.tex *.tex
+	latex $<
+	@while egrep -s 'Rerun (LaTeX|to get cross-references right)' `basename $< .tex`.log ;\
+	    do \
+	      echo "Rerunning latex...." ;\
+	      if [ -e $(DOCUMENTS).idx ]; then \
+		make index; \
+	      fi; \
+	      latex $< ;\
+	    done
+	@chmod a+r $@
+	latex $<
+	if [ -e $(DOCUMENTS).idx ]; then \
+	  make index; \
+	  latex $<; \
+	fi
+
+%.ps : %.dvi
+	dvips $<
+	@chmod a+r $@
+
+%.pdf : %.tex *.tex
+	# Koennte auch eine ps-Datei erzeugen und die konvertieren
+	pdflatex $<
+	if [ -e $(DOCUMENTS).idx ]; then \
+	  make index; \
+	  pdflatex $<; \
+	fi
+	@while egrep -s 'Rerun (LaTeX|to get cross-references right)' `basename $< .tex`.log ;\
+	    do \
+	      echo "Rerunning pdflatex...." ;\
+	      if [ -e $(DOCUMENTS).idx ]; then \
+		make index; \
+	      fi; \
+	      pdflatex $< ;\
+	    done
+	@chmod a+r $@
+
+%.html :
+	latex2html -html_version 4.0 -local_icons -split +1 $(DOCUMENTS)
+
+index :
+	if [ -e $(DOCUMENTS).idx ]; then \
+	  makeindex -s dots.ist $(DOCUMENTS); \
+	fi
+
+clean :
+	rm -rf *~ *.aux *.log _region* $(DOCUMENTS)
+	@for d in $(DOCUMENTS); do \
+	  for f in "$$d".*; do \
+	    if ( test $$f != `basename $$f .tex`.tex \
+	        && test $$f != `basename $$f .sty`.sty ); then \
+	      echo "rm $$f";\
+	      rm -rf $$f; \
+	    fi; \
+	  done; \
+	done
+
+all_clean :
+	make clean
+	@for d in *; \
+	do	if test -d $$d; \
+		then	if test -e $$d/Makefile; \
+			then	make -C $$d all_clean; \
+			fi \
+		fi \
+	done
+
+tgz : all_clean
+	tar czf ../$(DOCUMENTS).tgz -C .. $(DOCUMENTS)
+
+copy : tgz
+	-mount /mnt/floppy
+	cp ../$(DOCUMENTS).tgz /mnt/floppy/
+	chmod a+r /mnt/floppy/$(DOCUMENTS).tgz
+	-umount /mnt/floppy
+
+zip_copy : tgz
+	-mount /mnt/zip
+	cp ../$(DOCUMENTS).tgz /mnt/zip/
+	chmod a+r /mnt/zip/$(DOCUMENTS).tgz
+	-umount /mnt/zip

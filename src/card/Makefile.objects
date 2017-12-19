@@ -1,0 +1,13 @@
+# All object-files
+OBJECTS = \
+	card.o \
+	  card.color.o \
+	  card.value.o \
+	  hand_card.o \
+	  hand_cards.o \
+	card_counter.o \
+	tcolor_counter.o \
+	weighted_card_list.o \
+	trick.o \
+	hand.o \
+	sorted_hand.o

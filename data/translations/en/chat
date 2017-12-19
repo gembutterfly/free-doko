@@ -1,0 +1,29 @@
+# FreeDoko translation: part chatting
+# language: deutsch
+# version: 0.7.5
+
+chatter	= chatter
+
+# greeting of some hand-picked players
+Chat::Greeting::Odo \
+  = Hello shape shifter
+
+
+# game 
+Chat::GameAction::Played::club queen \
+  = I hope everyone can see this.
+
+
+Chat::Trick::specialpoints \
+  = I like specila points.
+
+Chat::Trick::ge 30 points \
+  = Thanks for the points.
+
+
+Chat::GameAction::Announcement::reply \
+  = I don't think so...
+
+
+Chat::Game::won \
+  = Hooray, won!

@@ -1,0 +1,5 @@
+# All object-files
+OBJECTS = \
+	lines.o \
+	  rules.o \
+	  gameplay_actions.o

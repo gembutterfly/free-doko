@@ -1,0 +1,13 @@
+FreeDoko ist eine freie Implementierung des Kartenspiels 'Doppelkopf'
+
+Deutsche Dokumentation befindet sich im Verzeichnis 'doc/de/', ein guter Start ist die Datei 'LIESMICH.txt' bzw. 'LIESMICH.html'.
+Das Handbuch befindet sich im Verzeichnis 'doc/manual/de'.
+
+Die offizielle Internetseite ist: http://free-doko.sourceforge.net/de/
+
+Systemvoraussetzungen:
+* obligatorisch
+  - gtkmm-Bibliothek (http://www.gtkmm.org/)
+* optional
+  - Netzwerk: gnet-Bibliothek  (http://live.gnome.org/GNetLibrary)
+  - Sound:    alut-Bibliothek  (http://connect.creativelabs.com/openal/)

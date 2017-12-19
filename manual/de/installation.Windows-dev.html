@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Setup.exe für die Entwicklerversion</title>
+
+    <meta name="date" content="2007-01-13T23:10:55+0100">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="installation.html" title="Installation">
+
+    <link rev="alternate" href="../en/installation.Windows-dev.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/introduction.Windows-dev.html" title="offizielle Internetseite">
+  </head>
+
+  <body>
+
+    <h1>Setup.exe für die Entwicklerversion (Microsoft Windows)</h1>
+
+    <p>
+    Die Installationsdatei für die Entwicklerversion FreeDoko-0.7.4-dev.Setup.exe ist für die Leute gedacht, die unter einem Microsoft Windows möglichst unkompliziert immer auf dem allerneusten (Entwicklungs-)Stand von FreeDoko bleiben möchten.
+    </p>
+
+    <h2>Unterstützte Systeme</h2>
+    <p>
+    Getestet wurde das Script unter Microsoft Windows XP (hat funktioniert) und Microsoft Windows 2000 (da gab es Probleme mit subversion).
+    <br>
+    Nicht unterstützt werden Microsoft Windows 95, 98, ME.
+    </p>
+
+    <h2>Kurzübersicht</h2>
+    <p>
+    Im Installationspaket befindet sich folgendes:
+    </p>
+    <dl>
+      <dt>install.bat</dt>
+      <dd>Dieses Script wird vom Installationsprogramm gestartet und richtet die Umgebung ein. Eine genauere Beschreibung findet sich <a href="#install.bat">weiter unten</a></dd>
+
+      <dt>update.bat</dt>
+      <dd>Dieses Script aktualisiert die FreeDoko-Dateien und erstellt ein Programm auf dem aktuellen Stand. Eine genauer Beschreibung findet sich <a href="#update.bat">weiter unten</a>.</dd>
+
+      <dt>wget</dt>
+      <dd>
+      Wget ist ein Programm, das Daten aus dem Internet herunterlädt.<br>
+      Internetpräsenz: <a href="http://wget.sunsite.dk">http://wget.sunsite.dk</a><br>
+      Lizenz: <a href="http://www.gnu.org/licenses/gpl.html">GPLv2</a><br>
+      Datei: <var>bin/wget.exe</var>
+      </dd>
+
+      <dt>7zip</dt>
+      <dd>
+      7zip ist ein Entpacker<br>
+      Internetpräsenz: <a href="http://www.7-zip.org">http://www.7-zip.org</a><br>
+      Lizenz: <a href="http://www.gnu.org/licenses/lgpl.html">LGPLv2.1</a><br>
+      Dateien (kopiert aus einer installierten Version): <var>bin/7z.exe</var>, <var>bin/Codecs</var>, <var>bin/Formats</var>
+      </dd>
+
+      <dt>md5</dt>
+      <dd>
+      md5 berechnet MD5-Prüfsummen<br>
+      Internetpräsenz: <a href="http://www.fourmilab.ch/md5/">http://www.fourmilab.ch/md5/</a><br>
+      Lizenz: public domain<br>
+      Dateien: <var>bin/md5.exe</var>
+      </dd>
+
+      <dt>Dokumentation</dt>
+      <dd>
+	<dt>Dateien</dt>
+	<dd>Auflistung der Dateien, die aus dem Internet heruntergeladen werden</dd>
+
+	<dt>LiesMich</dt>
+	<dd>kurze Beschreibung von diesem Installationsverfahren</dd>
+
+	<dt>ReadMe.wget</dt>
+	<dd>ReadMe-Datei von wget</dd>
+
+	<dt>ReadMe.7z</dt>
+	<dd>ReadMe-Datei von 7zip</dd>
+
+	<dt>md5sum.html</dt>
+	<dd>ReadMe-Datei von md5</dd>
+
+	<dt>GPL, LGPL</dt>
+	<dd>Lizenzen</dd>
+      </dl>
+    </dl>
+
+
+
+
+    <h2 id="install.bat">install.bat</h2>
+    <p>
+    Dieses Skript lädt einige Archive aus dem Internet herunter und richtet mit diesen eine Entwicklungsumgebung ein.
+    Anschließend wird der Quelltext von FreeDoko heruntergeladen und kompiliert.
+    Insgesamt werden etwa 80&nbsp;MB heruntergeladen.
+    <br>
+    Alle Aktionen finden in dem Installationsverzeichnis statt, außerhalb wird nichts angefaßt und es werden keine Änderungen durchgeführt.
+    <br>
+    Das Installationsprogramm selber erstellt noch einige Registry-Einträge:
+    <ul>
+      <li><var>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\App&nbsp;Paths\FreeDoko.exe</var>,</li>
+      <li><var>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\FreeDoko</var> und</li>
+      <li><var>HKEY_LOCAL_MACHINE\Software\FreeDoko</var></li>
+    </ul>
+    sowie Verknüpfungen im <var>Programme</var>-Menü und (falls ausgewählt) auf dem Desktop.
+    </p>
+
+
+
+    <h3>Entwicklungsumgebung</h3>
+    <p>
+    Als Entwicklungsumgebung wird <a href="http://www.mingw.org">MinGW</a> verwendet.
+    Die benötigten Archive werden heruntergeladen und in das Verzeichnis <var>MinGW32</var> entpackt.
+    </p>
+    <p>
+    Die Entwicklungsumgebung wird benötigt, damit der Quelltext von FreeDoko kompiliert werden kann.
+    </p>
+
+    <h4>Dateien</h4>
+    <table>
+      <tr>
+	<th>Datei</th>
+	<th>Größe (Bytes)</th>
+	<th>MD5Sum</th>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/binutils-2.15.91-20040904-1.tar.gz">binutils-2.15.91-20040904-1.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">6160640</td>
+	<td><code>64e8a3a2aa3b780f56287e0b6144689c</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/gcc-core-3.4.2-20040916-1.tar.gz">gcc-core-3.4.2-20040916-1.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">3515620</td>
+	<td><code>d9cd78f926fc31ef101c6fa7072fc65d</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/gcc-g++-3.4.2-20040916-1.tar.gz">gcc-g++-3.4.2-20040916-1.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">4831138</td>
+	<td><code>e5c7eb2c1e5f7e10842eac03d1d6fcdc</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/mingw-runtime-3.9.tar.gz">mingw-runtime-3.9.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">348713</td>
+	<td><code>0cb66b1071da224ea2174f960c593e2e</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/w32api-3.6.tar.gz">w32api-3.6.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">1536427</td>
+	<td><code>2f86ec42cafd774ec82162fbc6e6808d</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/mingw/mingw32-make-3.80.0-3.tar.gz">mingw32-make-3.80.0-3.tar.gz</a></td>
+	<td style="text-align: right; padding-right: 2em;">950504</td>
+	<td><code>a68e5a25917eb1bb6aa1d359eec47b4b</code></td>
+      </tr>
+    </table>
+    </p>
+
+
+
+    <h3>subversion</h3>
+
+    <p>
+    Das Subversion-Paket wird aus dem Internet heruntergeladen und auch in das Verzeichnis <var>MinGW32</var> entpackt.
+    </p>
+    <p>
+    <a href="http://subversion.tigris.org">Subversion</a> wird genutzt, um den aktuellen FreeDoko-Quelltext herunterzuladen und um ihn auf dem aktuellen Stand zu halten.
+    Das Repository liegt unter <a href="http://svn.gna.org/viewcvs/freedoko/">svn://svn.gna.org/svn/freedoko/</a>.
+    </p>
+    <p>
+    Bei meinem Test unter Microsoft Windows 2000 konnte das Programm <var>svn</var> aus dem subversion-Paket nicht ausgeführt werden.
+    </p>
+
+    <h4>Dateien</h4>
+    <table>
+      <tr>
+	<th>Datei</th>
+	<th>Größe (Bytes)</th>
+	<th>MD5Sum</th>
+      </tr>
+      <tr>
+	<td><a href="http://subversion.tigris.org/downloads/svn-win32-1.4.2.zip ">svn-win32-1.4.2.zip</a></td>
+	<td style="text-align: right; padding-right: 2em;">5232881</td>
+	<td><code>32dbff085330bf23033a5215fb171911</code></td>
+      </tr>
+    </table>
+
+
+
+    <h3>Bibliotheken</h3>
+    <p>
+    Die <a href="http://www.gtkmm.org">gtkmm</a>-Bibliothek wird heruntergeladen und in das Verzeichnis <var>MinGW32</var> entpackt.
+    Die <a href="http://live.gnome.org/GNetLibrary">gnet</a>-Bibliothek heruntergeladen, kompiliert und in das Verzeichnis <var>MinGW32</var> kopiert.
+    </p>
+    <p>
+    gtkmm wird für die graphische Oberfläche genutzt,
+    gnet wird für den Netzwerkmodus benötigt.
+    </p>
+
+    <h4>Dateien</h4>
+    <table>
+      <tr>
+	<th>Datei</th>
+	<th>Größe (Bytes)</th>
+	<th>MD5Sum</th>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/gladewin32/gtk-dev-2.8.20-win32-1.exe">gtk-dev-2.8.20-win32-1.exe</a></td>
+	<td style="text-align: right; padding-right: 2em;">9894815</td>
+	<td><code>d9a08636f81f2517ff9bf72dc3ec4441</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://www.pcpm.ucl.ac.be/~gustin/win32_ports/binaries/gtkmm-devel-2.8.8-2.exe">gtkmm-devel-2.8.8-2.exe</a></td>
+	<td style="text-align: right; padding-right: 2em;">17044465</td>
+	<td><code>fcab666e628691c7dab376d574504a62</code></td>
+      </tr>
+      <tr>
+	<td><a href="http://free-doko.sourceforge.net/download/gnet-src-2.0-20030531.zip">gnet-src-2.0-20030531.zip</a></td>
+	<td style="text-align: right; padding-right: 2em;">200206</td>
+	<td><code>a8e82916dcc3085b1bb0f901a426a43d</code></td>
+      </tr>
+    </table>
+
+
+
+    <h3>FreeDoko</h3>
+    <p>
+    Zum Schluß werden die FreeDoko-Dateien heruntergeladen und das FreeDoko-Programm kompiliert.
+    </p>
+    <p>
+    Heruntergeladen wird natürlich der Quelltext, damit das Programm erstellt werden kann.
+    Weiter wird das Handbuch und das Aktualisierungskript heruntergeladen sowie aus dem <var>FreeDoko_*.Windows.zip</var>-Archiv ein paar nicht freie Kartensätze kopiert.
+    </p>
+
+    <h4>Dateien</h4>
+    <table>
+      <tr>
+	<th>Datei / subversion Repository</th>
+	<th>MD5Sum</th>
+      </tr>
+      <tr>
+	<td><a href="http://mesh.dl.sourceforge.net/sourceforge/freedoko/FreeDoko_0.7.4.Windows.zip">FreeDoko_0.7.4.Windows.zip</a></td>
+	<td>bf6ad4e56c3746c50ae69c4243e23d3c</td>
+      </tr>
+      <tr>
+	<td><a href="http://svn.gna.org/viewcvs/freedoko/trunk/">svn://svn.gna.org/svn/freedoko/trunk/</a></td>
+      </tr>
+      <tr>
+	<td><a href="http://svn.gna.org/viewcvs/freedoko/more_data/setup/Windows/install_dev/">svn://svn.gna.org/svn/freedoko/more_data/setup/Windows/install_dev/</a></td>
+      </tr>
+      <tr>
+	<td><a href="http://svn.gna.org/viewcvs/freedoko/manual/">svn://svn.gna.org/svn/freedoko/manual/</a></td>
+      </tr>
+    </table>
+
+
+
+
+    <h2 id="update.bat">update.bat</h2>
+    <p>
+    Dieses Skript aktualisiert den FreeDoko-Quelltext und erstellt eine aktuelle Version von dem Programm.
+    Weiterhin wird das Handbuch und das Aktualisierungsskript selber auf dem neusten Stand gebracht.
+    </p>
+    <p>
+    Für die Aktualisierung werden dieselben subversion-Repositories wie bei der Installation verwendet.
+    </p>
+
+
+
+
+
+    <h2>Bemerkungen</h2>
+
+    <h3>Microsoft Windows-Version</h3>
+    <p>
+    Getestet wurde das Skript erfolgreich unter Microsoft Windows XP Professional.
+    Unter Microsoft Windows 95/98/ME wird spätestens das Kompilieren fehlschlagen.
+    </p>
+
+
+    <h2>Zu tun</h2>
+    <ul>
+      <li>Verknüpfungen erstellen (wie geht das per Kommandozeile?)</li>
+      <li>Entwicklungsumgebung aktualisieren</li>
+    </ul>
+
+    <div class="official_page">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/installation.Windows-dev.html">offizielle Internetseite</a>
+    </div>
+
+  </body>
+
+</html>

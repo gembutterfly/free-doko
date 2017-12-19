@@ -1,0 +1,7 @@
+# All object-files
+OBJECTS = \
+	ui.o \
+	ui.dummy.o \
+	ui.wrap.o \
+	status_message.o \
+	help.o

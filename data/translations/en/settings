@@ -1,0 +1,207 @@
+# FreeDoko translation: part settings
+# language: english
+# version: 0.7.12
+
+setting				= setting
+settings			= settings
+
+update				= update
+
+settings: %tgroup%			= settings: %tgroup%
+
+# general
+Setting::Group::general			= general
+Setting::automatic savings		= automatic savings
+Setting::save party changes		= save party changes
+Setting::additional party settings	= additional party settings
+Setting::name				= name
+Setting::language			= language
+
+Setting::sound				= sound
+
+Setting::max threads			= treads
+
+# behaviour
+Setting::Group::behaviour		= behaviour
+Setting::announce in table		= announce in table
+Setting::card play delay		= card play delay
+
+# assistance
+Setting::Group::assistance			= assistance
+Setting::announce swines automatically	= announce swines automatically
+Setting::show if valid			= show if valid
+Setting::emphasize valid cards		= emphasize valid cards
+Setting::show known teams in game	= show known teams in game
+Setting::show soloplayer in game		= show soloplayer in game
+
+# help
+Setting::Group::help				= help
+Setting::automatic card suggestion	= automatic card suggestion
+Setting::show all hands			= show all hands
+Setting::show ai information hands	= show hands (AI information)
+Setting::show ai information teams	= show teams (AI information)
+Setting::show trickpiles points		= show trickpiles points
+
+
+# information windows
+Setting::Group::information windows \
+	= information windows
+
+Setting::Group::gametype \
+	= gametype
+Setting::show gametype window \
+	= show gametype window
+Setting::close gametype window automatically \
+	= close gametype window automatically
+Setting::gametype window close delay \
+	= gametype window close delay
+
+Setting::Group::full trick \
+	= full trick
+Setting::show full trick window \
+	= show full trick window
+Setting::show full trick window if special points \
+	= show full trick window if special points
+Setting::close full trick automatically \
+	= close full trick automatically
+Setting::full trick close delay \
+	= full trick close delay
+
+Setting::Group::marriage \
+	= marriage
+Setting::show marriage window \
+	= show marriage window
+Setting::close marriage window automatically \
+	= close marriage window automatically
+Setting::marriage window close delay \
+	= marriage window close delay
+
+Setting::Group::genscher \
+	= genscher
+Setting::show genscher window \
+	= show genscher window
+Setting::close genscher window automatically \
+	= close genscher window automatically
+Setting::genscher window close delay \
+	= genscher window close delay
+
+Setting::Group::announcement \
+	= announcement
+Setting::show announcement window \
+	= show announcement window
+Setting::close announcement window automatically \
+	= close announcement window automatically
+Setting::announcement window close delay \
+	= announcement window close delay
+
+Setting::Group::swines \
+	= swines
+Setting::show swines window \
+	= show swines window
+Setting::close swines window automatically \
+	= close swines window automatically
+Setting::swines window close delay \
+	= swines window close delay
+
+Setting::Group::network \
+	= network
+Setting::network connections urgency hint \
+	= connections hint
+Setting::network chat urgency hint \
+	= chat hint
+
+Setting::Group::DokoLounge \
+        = Dokolounge
+Setting::DokoLounge name \
+        = name
+Setting::DokoLounge password \
+        = password
+Setting::DokoLounge auto login \
+        = auto login
+
+# cards order
+Setting::Group::cards order		= cards order
+Setting::cards order			= cards order
+Direction::none				= none
+Direction::up				= up
+Direction::down				= down
+Setting::CardsOrder::unsorted		= unsorted
+Setting::CardsOrder::random		= random
+Setting::CardsOrder::sorted		= sorted
+Setting::CardsOrder::mixed		= mixed
+Setting::CardsOrder::mix cards		= mix cards
+
+# appearance
+Setting::Group::appearance		= appearance
+
+#   table
+Setting::Group::table			= table
+Setting::own hand on table bottom	= own hand on table bottom
+Setting::table rotation			= table rotation
+Setting::rotate trick cards		= rotate trick cards
+
+#   cards
+Setting::Group::cards			= cards
+Setting::original cards size		= original cards size
+Setting::cards height			= cards height
+
+#   theme
+Setting::Group::theme			= theme
+Setting::cardset			= cardset
+Setting::iconset from cardset		= iconset from cardset
+Setting::iconset			= iconset
+Setting::background			= background
+Setting::cards back			= cards back
+
+#   fonts
+Setting::Group::fonts and colors	= fonts, colors
+Setting::name font			= name fonts
+Setting::name font color		= name font color
+Setting::name active font color		= name font color of the active player
+Setting::name reservation font color    = name font color for a reservation
+Setting::trickpile points font		= trickpile points font
+Setting::trickpile points font color	= trickpile points font color
+
+Setting::poverty shift arrow color	= poverty shift arrow color
+
+# splash screen
+Setting::Group::splash screen		= splash screen
+Setting::show splash screen		= show splash screen
+Setting::splash screen transparent	= splash screen transparent
+
+# bug report button
+Setting::show bug report button in game finished window	= show bug report button in game finished window
+Setting::save bug reports on desktop	= save bug reports on desktop
+
+
+# commands for external programs
+Setting::play sound command		= sound playing program
+Setting::browser command		= browser command
+
+
+# other
+
+#   directories
+Setting::public data directory		= public data directory
+Setting::private data directory		= private data directory
+Setting::settings file			= settings file
+Setting::languages directory		= languages directory
+Setting::language file			= language file
+Setting::graphic extension		= graphic extension
+Setting::sound extension		= sound extension
+Setting::cardsets directory		= cardsets directory
+Setting::cards directory		= cards directory
+Setting::cards back directory		= cards back directory
+Setting::iconsets directory		= Symbolsatzverzeichnis
+Setting::icons directory		= icons directory
+Setting::backgrounds directory		= backgrounds directory
+Setting::sounds directory		= sounds directory
+Setting::ai directory			= ai directory
+Setting::parties directory		= parties directory
+Setting::rules directory		= rules directory
+Setting::settings directory		= settings directory
+
+
+# themes
+Setting::Theme::autumn  = autumn
+Setting::Theme::christmas = christmas

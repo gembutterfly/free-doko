@@ -1,0 +1,29 @@
+# FreeDoko translation: part chatting
+# language: deutsch
+# version: 0.7.5
+
+chatter	= Chat
+
+# Begrüßungen von bestimmten Spielern
+Chat::Greeting::Odo \
+  = Hallo Gestaltenwandler
+
+
+# Bemerkungen zu bestimmten Spielsituationen
+Chat::GameAction::Played::club queen \
+  = Ich hoffe, das sieht jeder.
+
+
+Chat::Trick::specialpoints \
+  = Sonderpunkte nehme ich gerne.
+
+Chat::Trick::ge 30 points \
+  = Danke für die vielen Punkte.
+
+
+Chat::GameAction::Announcement::reply \
+  = Das denkst Du...
+
+
+Chat::Game::won \
+  = Hurra, gewonnen!

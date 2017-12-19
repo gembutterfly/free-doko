@@ -1,0 +1,14 @@
+# All object-files
+OBJECTS = \
+	labelspinbutton.o \
+	labelscalespinbutton.o \
+	labelentry.o \
+	label_card_selector.o \
+	filemenu.o \
+	filemenu_extension.o \
+	filemenu_file.o \
+	pixbuf_rotations.o \
+	stock_button.o \
+	sticky_dialog.o \
+	scaled_pixbuf.o \
+	scaled_pixbuf_rotations.o \

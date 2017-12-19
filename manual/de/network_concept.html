@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Netzwerk-Konzept</title>
+
+    <meta name="date" content="2006-10-28T14:06:27+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="statistics.html" title="Statistiken">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/network_concept.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/network_concept.html" title="offizielle Internetseite">
+
+  </head>
+
+
+  <body>
+
+    <h1>Netzwerk-Konzept</h1>
+
+    <p>
+    Auf dieser Seite sammeln wir Ideen zu der Netzwerkunterstützung von FreeDoko.
+    Schwerpunkt ist dabei eine Spielplattform im Internet.
+    </p>
+    <p>
+    Kommentare und Vorschläge bitte in die <a href="http://sourceforge.net/forum/message.php?msg_id=3978781">Diskussion auf Sourceforge</a> einbringen.
+    Fragen sind <span class="question">hervorgehoben</span>.
+    </p>
+
+    <h2>Struktur dieser Seite</h2>
+    <ul>
+      <li>Als erstes wird klargestellt, worum es überhaupt geht.</li>
+      <li>Die erste Überlegung ist, was die Erwartungen an dem Netzwerkspiel sind.</li>
+      <li>Danach machen wir uns Gedanken, wie die Bedienung aussehen soll.</li>
+      <li>Als drittes geht es darum, wie das Gewünschte umgesetzt werden kann.</li>
+    </ul>
+
+
+
+    <h2>Definition</h2>
+
+    <p>
+    Zuerst stellen wir klar, was wir unter der Netzwerkunterstützung verstehen:
+    </p>
+    <ul>
+      <li>Anstatt gegen den Computer zu spielen können Computergegner durch Mitspieler ersetzt werden, die über das Netzwerk mit dem Spieler verbunden sind.</li>
+      <li>Die Spielplattform bietet einen Treffpunkt, bei dem man Mitspieler finden kann.</li>
+    </ul>
+
+
+    <h2>Konkurrenz</h2>
+    <p class="question">
+    Wie machen das andere?
+    </p>
+    <ul>
+      <li><a href="http://www.skatcorner.de/doppelkopf/doppelkopf.html">Doppelkopf Professionell</a></li>
+      <li>NetDoppelkopf</li>
+    </ul>
+
+
+
+    <h2>Spielertypen</h2>
+
+    <p>
+    Hier listen wir auf, was für Spielertypen es gibt und welche Wünsche diese haben.
+    </p>
+
+    <h3>Gelegenheitsspieler</h3>
+    <p>
+    Ein Spieler, der mal Lust auf Doppelkopf hat und z.B. in der Arbeitspause ein paar Spiele spielen möchte.
+    </p>
+    <ul>
+      <li>Sucht Mitspieler für ein paar Spiele.</li>
+      <li>Möchte keine Verpflichtung zu längeren Spielen eingehen.</li>
+      <li>Kann plötzlich aufhören (z.B. wenn der Chef kommt)</li>
+    </ul>
+
+    <h3>Vielspieler</h3>
+    <p>
+    Ein Spieler, der viel spielt, z.B. immer samstag abends.
+    </p>
+    <ul>
+      <li>Sucht Mitspieler für ein paar Stunden / ein Turnier Doppelkopf</li>
+      <li>Möchte einen Vergleich mit anderen Spielern (<a href="#highscore">Rangliste</a>)</li>
+    </ul>
+
+    <h3>Neuling</h3>
+    <p>
+    Ein (noch-nicht-)Spieler, der seine ersten Schritte mit Doppelkopf macht.
+    </p>
+    <ul>
+      <li>Möchte das Spiel kennenlernen.</li>
+      <li>Möchte in die Spiele hineinschauen.</li>
+      <li>Sucht jemanden, der ihm das Spiel erklärt, ihn an die Hand nimmt.</li>
+    </ul>
+
+    <h3>Stammtisch</h3>
+    <p>
+    Eine Gruppe von Spielern, die zusammen (regelmäßig) spielen.
+    </p>
+    <ul>
+      <li>Möchten zusammen in Ruhe Doppelkopf spielen</li>
+    </ul>
+    <p class="question">
+    Wird das überhaupt benötigt?
+    Die Spieler können sich schließlich direkt verbinden.
+    </p>
+
+    <h3>Teams</h3>
+    <p>
+    Teams/Clans, die gemeinsam gewertet werden.
+    </p>
+    <p class="question">
+    Macht das Sinn?
+    Im Spiel spielt man nicht unbedingt mit einem Teamkollegen zusammen.
+    </p>
+
+
+
+    <h2>Boni</h2>
+
+    <p>
+    Als nächstes sammeln wir, was an zusätzlichen Funktionen unterstützt werden können/sollen.
+    </p>
+
+    <h3>Rangliste</h3>
+    <p>
+    Eine Rangliste der Spieler.
+    </p>
+
+    <h3>Turnier</h3>
+    <p>
+    Bei einem Turnier treten viele Spieler gegeneinander an, um unter sich einen Gewinner zu ermitteln.
+    </p>
+    <p>
+    Wie sieht das bei realen Doppelkopf-Turnieren aus?
+    </p>
+    <ul>
+      <li>
+      Zu einem Turnier können sich die Spieler anmelden, das Turnier selber findet an einem Tag / über mehrere Tage (z.B. 3 Samstage) statt.
+      </li>
+      <li>
+      Die Spieler werden unter Berücksichtigung ihres Ranges zusammengestellt und nach z.B. 4 Runden werden die Spieler neu verteilt.
+      </li>
+      <li>
+      Bei den Spielen sind ruhige Zuschauer erlaubt.
+      </li>
+      <li>
+      Die Zuschauer können sich untereinander unterhalten.
+      </li>
+    </ul>
+
+    <h3>Unterstützung anderer Doppelkopfspiele</h3>
+    <p>
+    Andere Doppelkopfspiele (z.B. Doppelkopf Professional) können sich auch anmelden.
+    </p>
+
+
+
+    <h2>Bedienung</h2>
+
+    <h3>privat</h3>
+    <ul>
+      <li>Ein Spieler startet den Server</li>
+      <li>Andere verbinden sich mit dem Server
+      <ul>
+	<li>zum Mitspielen (Typ <var>Spieler</var>)</li>
+	<li>zum zuschauen (Typ <var>Zuschauer</var>)</li>
+	<li>mit einem beliebigen Spieler verbinden, um über die Schulter zu schauen (Typ <var>Schatten</var>)</li>
+      </ul>
+      jede Verbindung muß akzeptiert werden
+      </li>
+      <li>die Regeln werden abgeglichen (Server gibt vor, über Chat kann sich abgestimmt werden)</li>
+      <li>Spielen</li>
+      <li>ausfallende Spieler (Verbindung abgebrochen oder zu lange nicht reagiert) werden durch KI ersetzt</li>
+      <li>nach jedem Spiel können Spieler hinzustoßen</li>
+      <li>wenn der Server ausfällt übernimmt automatisch ein anderer</li>
+    </ul>
+
+    <h3>Spielplattform</h3>
+    <p>
+    Die Bedienung gliedern wir wieder nach den Spielertypen auf.
+    </p>
+    <dl>
+      <dt>Gelegenheitsspieler</dt>
+      <dd>
+      <ul>
+	<li>Verbinden mit Spielplattform</li>
+	<li>Auflistung der Spiele mit ähnlichen Regeln und ähnlichem Schwierigkeitsgrad</li>
+	<li>Auswahl des Spiels / Anbieten eines Spiels</li>
+	<li>Spielen</li>
+      </ul>
+      </dd>
+
+      <dt>Vielspieler</dt>
+      <dd>
+      <ul>
+	<li>Verbinden mit Spielplattform</li>
+	<li>Anmelden auf dem Spielplattform (automatisch)</li>
+	<li>Auflistung der Spiele mit ähnlichen Regeln und ähnlichem Schwierigkeitsgrad</li>
+	<li>Auflisten der Freunde</li>
+	<li>Auswahl des Spiels / Anbieten eines Spiels</li>
+	<li>Spielen</li>
+      </ul>
+      </dd>
+
+      <dt>Neuling</dt>
+      <dd>
+      <ul>
+	<li>Verbinden mit Spielplattform</li>
+	<li>Auflistung aller öffentlichen Spiele
+	<ul>
+	  <li>Bei einem öffentlichen Spiel zuschauen</li>
+	</ul>
+	</li>
+	<li>Auflistung aller Betreuer
+	<ul>
+	  <li>An Betreuer anhängen</li>
+	  <li>Dem Betreuer über die Schulter schauen</li>
+	  <li>Mit dem Betreuer privat unterhalten</li>
+	</ul>
+	</li>
+      </ul>
+      </dd>
+
+      <dt>Stammtisch</dt>
+      <dd>
+      <ul>
+	<li>Verbinden mit Spielplattform</li>
+	<li>Anmelden auf dem Spielplattform (automatisch)</li>
+	<li>Anmelden am Stammtisch (automatisch)</li>
+	<li>Auflisten der Stammtischfreunde</li>
+	<li>neues Turnier starten</li>
+	<li>altes Turnier fortsetzen</li>
+      </ul>
+      </dd>
+    </dl>
+
+
+
+    <h2>Prinzipien</h2>
+    <p>
+    Dinge, die bei der Implementation beachtet werden sollen.
+    </p>
+    <ul>
+      <li>
+      Gelegenheitsspieler sollen nicht gegenüber Vielspielern benachteilt werden, insbesondere nicht bei der Rangliste.
+      </li>
+    </ul>
+
+
+
+    <h2>Implementation</h2>
+
+    <h3>Anmelden</h3>
+    <ul>
+      <li>Ohne Registrierung: anonym</li>
+      <li>Mit Registrierung: auf Wunsch automatisch registrieren</li>
+      <li>Übertragung des Regelfilters</li>
+    </ul>
+
+    <h4>Registrierung</h4>
+    <ul>
+      <li>Eindeutiger Benutzername</li>
+      <li>ein Paßwort (wird automatisch vom Programm übertragen)</li>
+      <li>Wenn ein Monat lang nicht angemeldet wurde, verfällt der Benutzername</li>
+    </ul>
+
+    <h5>Vorteil der Registrierung</h5>
+    <ul>
+      <li>kann gesucht werden (auf Wunsch)</li>
+      <li>Ranglisteneintrag (auf Wunsch)</li>
+      <li>Teilnahme an einem Stammtisch</li>
+      <li>kann Daten auf dem Server speichern (s.u.)</li>
+    </ul>
+
+
+    <h3>Spielangebot</h3>
+    <ul>
+      <li>Spieler bietet Spiel an</li>
+      <li>Spieler können auch zwischen den Spielen hinzustoßen</li>
+      <li>Verbindungen müssen erst akzeptiert werden (Spieler, Zuschauer)</li>
+      <li>Personen/Rechner blockieren</li>
+      <li>Zuschauer allgemein zulassen/verbieten</li>
+      <li>Kommunikation:
+      <ul>
+	<li>Spieler sprechen mit Spielern</li>
+	<li>Zuschauer sprechen mit Zuschauern</li>
+	<li>Zuschauer hören Spieler</li>
+      </ul>
+      </li>
+    </ul>
+
+    <h3>Spielsuche</h3>
+    <p>
+    Der Spieler überträgt seine Daten an den Server und bekommt eine Liste von Spielen zurück.
+    </p>
+    <p>
+    (Finale) Filterung auf Seite des Clients.
+    </p>
+    <ul>
+      <li>ähnliche Regeln (Einteilung in 'wichtig', 'gerne', 'egal')</li>
+      <li>gleichstarke Spieler
+      <ul>
+	<li>Wertung über Rangliste</li>
+	<li>Wertung über Spielerstatistiken</li>
+      </ul>
+      </li>
+      <li>Profispiel (gute Spieler), zum Zuschauen</li>
+    </ul>
+
+    <h3>Spielablauf</h3>
+    <ul>
+      <li>Regeln werden vom Spielanbieter gesetzt
+      <ul>
+	<li>über Chat abgleichbar</li>
+      </ul>
+      </li>
+      <li>Spiel läuft auf allen Rechnern</li>
+      <li>Spieler fällt aus, wenn die Verbindung getrennt wird oder er fünf Minuten lang nicht reagiert (keinen Vorbehalt macht, keine Karte spielt, Stich nicht schließt)</li>
+      <li>ausfallender Spieler (Chef kommt): wird durch KI ersetzt</li>
+      <li>ausfallende Verbindung: Spiel kann lokal zuende gespielt werden</li>
+      <li>Einstieg nach jedem Spiel möglich</li>
+    </ul>
+
+    <h3>Betreuung</h3>
+    <ul>
+      <li>Betreuter wechselt mit Betreuer</li>
+      <li>privater Chat-Kanal</li>
+    </ul>
+
+    <h3>Unterstützung anderer Doppelkopfspiele</h3>
+    <ul>
+      <li>FreeDoko muß das Protokoll verstehen</li>
+    </ul>
+
+
+
+
+    <h2>Probleme</h2>
+
+    <h3>Rangliste</h3>
+    <ul>
+      <li>gutes Bewertungsverfahren</li>
+    </ul>
+
+    <h3>Turnier</h3>
+    <ul>
+      <li>
+      Spiel muß bei jemanden vertrauenswürdigen laufen oder der Server im Internet muß das übernehmen (Last auf dem Rechner).
+      </li>
+      <li>
+      Schummeln, da recht einfach alle Blätter sichtbar gemacht werden können.
+      Um das zu unterbinden darf auf den lokalen Rechnern nicht das Spiel laufen, das geht nur durch größeren Umbau des Programmablaufs.
+      </li>
+      <li>Viel Arbeit</li>
+    </ul>
+
+    <h3>andere Doppelkopfspiele</h3>
+    <ul>
+      <li>andere Entwickler sollen zustimmen</li>
+      <li>
+      unterschiedliche Regelunterstützung<br>
+      z.B. Doppelkopf Professionell:
+      <ul>
+	<li>FreeDoko unterstützt keinen Joker</li>
+	<li>Doppelkopf Professionell unterstützt nur Ansagen, wenn der Spieler am Zug ist</li>
+      </ul>
+      </li>
+    </ul>
+
+
+
+    <h2>Daten</h2>
+    <h3>Während einer Verbindung auf dem Server</h3>
+    <ul>
+      <li>IP-Adresse, Port</li>
+      <li>Registrierungsname (falls vorhanden)</li>
+    </ul>
+
+    <h3>Lokal</h3>
+    <ul>
+      <li>Freunde</li>
+      <li>Ignorierliste</li>
+      <li>Regelgewichtung</li>
+    </ul>
+
+    <h3>Dauerhaft auf dem Server</h3>
+    <p>
+    Nur wenn der Spieler registriert ist:
+    </p>
+    <ul>
+      <li>Registrierungsname</li>
+      <li>Paßwort</li>
+      <li>zugehörige Stammrunde</li>
+      <li>ob Spieler gesucht werden darf</li>
+      <li>Freunde</li>
+      <li>Ignorierliste</li>
+      <li>Regelgewichtung</li>
+    </ul>
+
+
+
+    <h2>Roadmap</h2>
+    <p>
+    Eine grobe Übersicht, was wir in welcher Reihenfolge einbauen.
+    </p>
+
+    <h3>0.8.0</h3>
+    <ul>
+      <li>Netzwerkspiel mit direkter Verbindung:<br>
+      Ein Spieler eröffnet Spiel, andere können dazustoßen
+      </li>
+    </ul>
+
+    <h3>1.0</h3>
+    <ul>
+      <li>Spielplattform (Prototyp steht schon)</li>
+    </ul>
+
+    <h3>2.0</h3>
+    <ul>
+      <li>Rangliste</li>
+      <li>Betreuung</li>
+      <li>Stammtisch (bei Bedarf)</li>
+    </ul>
+
+    <h3>> 2.0</h3>
+    <ul>
+      <li>Turniere</li>
+      <li>andere Doppelkopfspiele</li>
+    </ul>
+
+
+    <div class="official_page">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/network_concept.html">offizielle Internetseite</a>
+    </div>
+
+  </body>
+
+</html>

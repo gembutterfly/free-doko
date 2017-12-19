@@ -1,0 +1,6 @@
+?package(freedoko-binary): \
+	needs="X11" \
+	section="Games/Card" \
+	title="FreeDoko Doppelkopf" \
+	command="/usr/games/FreeDoko" \
+	icon="/usr/share/pixmaps/FreeDoko.png"

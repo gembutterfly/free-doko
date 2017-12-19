@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: Turniereinstellungen</title>
+
+    <meta name="date" content="2005-01-08">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.icon.png">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="start.html" title="Programmstart">
+    <link rel="next" href="rules_config.html" title="Regelkonfiguration">
+
+    <link rel="alternate" href="../../en/operation/party_settings.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+
+    <h1>Turniereinstellungen</h1>
+
+    <p>
+    Nach dem Programmstart oder nach der Auswahl eines neuen Turniers wird das folgende Einstellungsfenster angezeigt.
+    </p>
+
+    <div class="picture_center">
+      <map name="party_settings_map">
+	<area shape="rect" coords=" 38, 41,266,136"
+	href="#seed"                alt="Startwert">
+	<area shape="rect" coords=" 38,151,266,246"
+	href="#startplayer"         alt="Startspieler">
+
+	<area shape="rect" coords="301, 88,368,108"
+	href="rules_config.html"    alt="Regeln">
+	<area shape="rect" coords="301,117,368,137"
+	href="player_config.html"   alt="Spieler">
+	<area shape="rect" coords="301,176,368,195"
+	href="network_config.html"  alt="Netzwerk">
+
+	<area shape="rect" coords="107,264,238,284"
+	href="#load_bug_report"     alt="lade Fehlerbericht">
+	<area shape="rect" coords="245,264,376,284"
+	href="#start_party"         alt="Turnier starten">
+      </map>
+
+      <a href="pictures/Turniereinstellungen.png"><img src="pictures/Turniereinstellungen.small.png" alt="Turniereinstellungen" usemap="#party_settings_map"></a>
+    </div>
+
+    <p>
+    Außer den direkt sichtbaren Einstellungen zum <a href="#seed">Startwert</a> und <a href="#startplayer">Ausspieler</a> können Sie mit den Knöpfen <samp>Regeln</samp>, <samp>Spieler</samp> und <samp>Netzwerk</samp> in einem separaten Fenster die <a href="rules_config.html">Regeln</a>, jeden der vier <a href="player_config.html">Spieler</a> sowie das <a href="network_config.html">Netzwerk</a> einstellen.
+    </p>
+
+    <p>
+    Wenn alle Einstellungen getätigt sind können Sie das Turnier mit dem Knopf <samp>Turnier starten</samp> beginnen.
+    Die Regeln und die Spielerkonfigurationen werden automatisch gespeichert (siehe auch <a href="../files.html">persönliche Dateien</a>) und beim nächsten Programmstart geladen.
+    </p>
+
+    <h2><a name="seed">Startwert</a></h2>
+
+    <p>
+    Mit dem Startwert wird die Kartenverteilung festgelegt, d.h. derselbe Startwert bewirkt dieselbe Kartenverteilung (ausgehend vom Startspieler), abhägig davon, ob mit oder ohne Neunen gespielt wird.
+    <!--
+    Eine Auswahl an Startwerten und die zugehörigen besonderen Spiele beim Spiel mit Neunen befindet sich unter <a href="../../../seed.out.bz2">seed.out.bz2</a> (ca. 560 KB).
+    -->
+    </p>
+
+    <h2><a name="startplayer">Ausspieler</a></h2>
+
+    <p>
+    Der Ausspieler besagt, welcher Spieler beim ersten Spiel im Turnier beginnt.
+    Ab dann sind die Spieler im Uhrzeigersinn an der Reihe (Ausnahme bei Soli).
+    </p>
+
+    <h2><a name="start_party">Turnier starten</a></h2>
+
+    <p>
+    Mit diesem Knopf wird das Turnier gestartet.
+    </p>
+    <p>
+    Beim Netzwerkspiel kann nur der Server das Turnier starten, für die anderen Spieler wird das Turnier dann automatisch gestartet.
+    </p>
+
+    <div class="non_release">
+    <h2><a name="load_bug_report">lade Fehlerbericht</a></h2>
+
+    <p>
+    Öffnet einen Dateiauswahldialog, um einen Fehlerbericht zu starten.
+    Alternativ kann ein Fehlerbericht auch per Drag'n'drop in das Hauptfenster gezogen werden.
+    </p>
+  </div> <!-- class="non_release" -->
+
+    <div class="Version">Version 0.7.3</div>
+
+  </body>
+</html>

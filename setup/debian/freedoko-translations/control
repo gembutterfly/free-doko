@@ -1,0 +1,15 @@
+Source: freedoko-translations
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-translations
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Provides: freedoko-translation
+Recommends: freedoko-binary
+Description: translations for 'freedoko'
+ This package does contain the translations for the game 'freedoko'.
+ Till now it contains the translations in english, german and french 

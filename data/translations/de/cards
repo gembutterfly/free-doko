@@ -1,0 +1,31 @@
+# FreeDoko translation: part cards
+# language: deutsch
+# version: 0.7.5
+
+# value
+Card::value				= Wert
+Card::Value::nine			= Neun
+Card::Value::jack			= Bube
+Card::Value::queen			= Dame
+Card::Value::king			= König
+Card::Value::ten			= Zehn
+Card::Value::ace			= As
+Card::Value::no card value		= kein Kartenwert
+Card::Value::unknown card value		= unbekannter Kartenwert
+
+# tcolor
+Card::color				= Farbe
+Card::tcolor				= Farbe mit Trumpf
+Card::Color::club			= Kreuz
+Card::Color::spade			= Pik
+Card::Color::heart			= Herz
+Card::Color::diamond			= Karo
+Card::Color::trump			= Trumpf
+Card::Color::no card color		= keine Kartenfarbe
+Card::Color::unknown card color	        = unbekannte Kartenfarbe
+
+# cards
+card					= Karte
+cards					= Karten
+
+Card::%tcolor% %tvalue%			= %tcolor% %tvalue%

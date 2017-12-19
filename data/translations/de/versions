@@ -1,0 +1,263 @@
+# FreeDoko translation: part version
+# language: deutsch
+# version: 0.7.5
+
+Greeting::first run			= \
+	Willkommen zu FreeDoko\n\
+	\n\
+	Vor dem Spiel haben wir noch einige Hinweise:\n\
+          \n\
+	* FreeDoko steht unter der GPL 2.0, nähere Hinweise stehen im Menü 'Hilfe' unter 'Lizenz'. \
+	  Die gesamte GPL 2.0 finden Sie im Dokumentations-Verzeichnis und unter http://www.gnu.org/licenses/gpl.html. \
+	  Eine (inoffizielle) deutsche Übersetzung finden Sie unter http://www.gnu.de/gpl-ger.html. \
+          \n\
+	  Beachten Sie bitte, daß die Kartensätze nicht unbedingt unter der GPL stehen, insbesondere der InnoCard Kartensatz nicht. \
+	  Weiter Informationen zur Lizenz des Kartensatzes finden Sie im Menü 'Hilfe' unter 'Kartensatzlizenz'. \
+	  \n\
+          \n\
+	* Beim ersten Start von FreeDoko werden einige Verzeichnisse erstellt. \
+	  Wenn Sie FreeDoko löschen wollen löschen Sie auch die erzeugten Verzeichnisse (mit allem Inhalt), auch beim Deinstallieren des Programmes bleiben die Verzeichnisse mit den persönlichen Einstellungen erhalten. \
+	  \n\
+          \n\
+	* FreeDoko ist noch in der Entwicklung. \
+	  Deshalb können Sie einige turnierspezifische Regeln nicht anwählen, das Netzwerkspiel ist bisher erst teilweise möglich und die Dokumentation ist nicht vollständig. \
+	  \n\
+          \n\
+	* Wenn das Programm auf Probleme stößt wird das Spiel angehalten und Sie können einen Fehlerbericht erstellen. \
+	  \n\
+          \n\
+	* Um uns bei der Entwicklung von FreeDoko zu unterstützen können Sie mit uns in direkten Kontakt treten (z.B. unter http://sourceforge.net/projects/free-doko/). \
+	  Sie können auch im Spiel Fehlermeldungen über den entsprechenden Menüpunkt erstellen und uns diese dann zuschicken. \
+	  Genauere Informationen stehen in der Dokumentation zu FreeDoko. \
+	  \n\
+          \n\
+	* Wenn der Computer einen schlechten Zug macht erstellen Sie bitte einen Fehlerbericht über den Menüpunkt, schreiben dazu, was sie aus welchem Grund schlecht an dem Zug finden, und schicken uns den Fehlerbericht zu. \
+	  Damit helfen Sie uns, die Computergegner weiter zu verbessern. \
+	  \n\
+          \n\
+	* Damit Sie immer auf dem Laufenden bleiben, können Sie sich in unserem Newsletter eintragen (https://lists.sourceforge.net/lists/listinfo/free-doko-newsletter), damit erhalten Sie bei jeder neuen Version eine E-Mail zugesandt. \
+	  \n\
+	\n\
+          \n\
+	Viel Spaß beim Spielen
+
+Greeting::%sversion%	= \
+	Willkommen zur Version %sversion%
+
+ChangeLog::for %sversion%	= \
+	 Änderungsliste zur Version %sversion%
+
+ChangeLog::till %sversion%	= \
+	 Änderungsliste bis zur Version %sversion%
+
+
+# 0.6.3
+ChangeLog::0.6.3	= \
+	* Die Oberfläche hat sich geändert, wir setzen jetzt die Bibliothek gtkmm (http://www.gtkmm.org) ein.\n\
+	* Informationen zum Spiel und Turnier sind dem Menü 'Information' zusammengefaßt, dort gibt es jetzt auch den neuen Punkt 'Kartenvorschlag' (Tatenkürzel: 'h'). \
+	  Der schlägt die Karte vor, die der Computer spielen würde und gibt auch eine (kurze) Begründung an. \n\
+	* In den Einstellungen können Sie unter 'Informationsfenster' genau einstellen, welche Informationen Sie im Spiel als Fenster sehen wollen. \n\
+	* Die Karten sind jetzt auch im Programm skalierbar, stellen Sie in 'Einstellungen' im Punkt 'Erscheinungsbild' -> 'Karten' einfach die gewünschte Kartenhöhe ein. \
+	* Der Syntax der Schriften hat sich geändert. Deshalb müssen neue Schriften gewählt werden ('Einstellungen' -> 'Erscheinungsbild' -> 'Schriftarten, Farben')
+
+# 0.6.4
+ChangeLog::0.6.4	= \
+	* Gegenansagen sind jetzt möglich (Regeln, Ansagen, Gegenansage)\n\
+	* Der Kartenvorschlag kann auch automatisch gezeigt werden (Einstellungen, Verhalten, automatischer Kartenvorschlag)\n\
+	* Bei den Spielernamen sind jetzt auch Sonderzeichen erlaubt\n\
+	* Das Graphikformat der Bilder ist jetzt 'png'
+
+# 0.6.5
+ChangeLog::0.6.5	= \
+	* Bei den Texten sind jetzt auch Umlaute erlaubt\n\
+	* Der Mauscursor zeigt an, ob eine Karte ausspielbar ist\n\
+	* Einige Fehler in der KI korrigiert
+
+# 0.6.5b
+ChangeLog::0.6.5b	= \
+	* Der letzte Stich ist einsehbar
+
+# 0.6.6
+ChangeLog::0.6.6	= \
+	* Neues Layout für die Spielerkonfiguration und die Regeln\n\
+	* Spielerstatistiken (im Menü 'Informationen')\n\
+	* überarbeitete Handhabung von Schweinen:\n\
+	  Einstellung 'Schweine automatisch ansagen' bewirkt, daß der Spieler sich nicht um seine Schweine kümmern muß, sie werden automatisch zum spätmöglichstem Zeitpunkt angesagt.\n\
+	  Ist die Einstellung deaktiviert muß sich der Spieler selber um die Ansage kümmern (Menü 'Ansagen').
+
+# 0.6.7
+ChangeLog::0.6.7	= \
+	* Am Spielende kann das Spiel durchgesehen werden\n\
+	* In den Stichhaufen werden die Sonderpunkte durch offene Karten angezeigt\n\
+	* neue Einstellung: die zulässigen Karten können vorgehoben werden\n\
+	* Turnierpunktefenster verbessert: die Spielrunden werden jetzt angzeigt\n\
+	* der KI-Type kann für jeden Stich angegeben werden\n\
+	* die Mauscursor zeigt an, ob die KI rechnet\n\
+	* Mit den Ziffern 1-9 und a, b, c kann eine Karte gespielt werden
+
+# 0.6.7b
+ChangeLog::0.6.7b	= \
+	* Assertion-Fehler korrigiert bei Solospielern (wenn ein neues Spiel gestartet wird)\n\
+	* Zufälliger Startwert in den Turniereinstellungen korrigiert\n\
+	* In den Einstellungen können die Textfelder wieder geändert werden
+
+# 0.6.8
+ChangeLog::0.6.8	= \
+	* Die Zählweise kann bei den Turnierpunkten eingestellt werden\n\
+	* Ein Turnierendefenster wurde hinzugefügt\n\
+	* Die Anzahl der Runden kann beschränkt werden
+
+# 0.6.9
+ChangeLog::0.6.9	= \
+	* Turniere können gespeichert werden. Außerdem wird automatisch das aktuelle Turnier mitgespeichert, so daß es später fortgesetzt werden kann.\n\
+	* Ansagen können direkt am Tisch getätigt werden (Maus über das Ansagensymbol, ist natürlich einstellbar)\n\
+	* Neuer Kode für die Blatterkennung\n\
+	* neue Regel: bei Schweinen erste Dolle über zweite
+
+# 0.7.0
+ChangeLog::0.7.0	= \
+	* Regel: Schweine und Hyperschweine gemeinsam\n\
+	* Regelverbesserung: Beim Spiel 'ohne Neunen' sind die Karo Könige Hyperschweine.\n\
+	* Start vom Mehrspielercode: Verbinden mit anderen Doppelkopfspiel und Chatten ist schon möglich.\n\
+	* Textdateien in das UTF-8-Format gewandelt\n\
+	* Standard-KI-Konfiguration geändert
+
+# 0.7.1
+ChangeLog::0.7.1	= \
+	* Einstellung 'zeige Sonderpunkte in den Stichhaufen' entfernt\n\
+	* Einstellungen: Die Informationen der KI über die Karten und Teams der anderen Spieler können angezeigt werden (Rubrik 'Hilfe').\n\
+	* neue Übersetzung 'altdeutsch'\n\
+	* Teaminformationen überarbeitet
+
+# 0.7.2
+ChangeLog::0.7.2	= \
+	* subversion repository unter http://gna.org/\n\
+	* Netzwerkspiel weiterentwickelt\n\
+	* Tischrotation hinzugefügt\n\
+	* Versionswechsel auf gtkmm 2.4\n\
+	* Unterstützung vordefinierter KIs
+
+# 0.7.2b
+ChangeLog::0.7.2b	= \
+	* kritischer Fehler korrigiert (Absturz ohne Fehlermeldung in den letzten Stichen)
+
+# 0.7.3
+ChangeLog::0.7.3	= \
+        * neue Regeln: \
+	  'minimale Anzahl zu schmeißende Neunen', \
+	  'minimale Anzahl zu schmeißende Könige', \
+	  'mit Neunen und Königen schmeißen', \
+	  'Kontra verdoppelt Punkt "gegen die Alten"', \
+	  'nur als erste Ansage', \
+	  'Ansage bis zum vollen Stich', \
+	  'Füchse zählen nicht', \
+	  'Füchse zusätzlich schieben', \
+	  'Füchse offen schieben'\n\
+	* freie Heuristikordnung, verbessertes Interface für die Heuristikkonfiguration\n\
+	* Unterstützung für verschiedene Bewertungen\n\
+	* französische Übersetzung\n\
+	* Graph für die Turnierpunkte\n\
+	* Netzwerkunterstützung
+
+# 0.7.4
+ChangeLog::0.7.4        = \
+	* neue Kartensätze: \
+	  Altenburg/german, \
+	  Elite, \
+	  InnoCard\n\
+	* Verlängerung der Lizenz für das französische Altenburger Kartenblatt\n\
+	* Regel 'Punktetopf'\n\
+	* Unterstützung für Themen\n\
+	* Verbesserung des Netzwerkspiels: \
+	  Synchronisations des Schließen der Stiche, \
+	  Verwaltung der Ansagen vom Server\n\
+	* KI Verbesserungen: \
+	  Gegnerblätter werden geschätzt, \
+	  neue Heuristiken, \
+	  Ansagen überarbeitet
+
+# 0.7.5
+ChangeLog::0.7.5        = \
+	* neue Regeln: \
+          mit Reichtum werfen, \
+	  Schweine in Armut, \
+	  Pflichtansage in Hochzeit\n\
+	* Sprachausgabe der Spieler\n\
+	* Spielsynchronisation für Netzwerkspiele\n\
+	* KI-Verbesserungen, u.a. neue Heuristiken\n\
+	* Fehlerkorrekturen\n\
+	* Bedienung: volle Stiche und Informationsfenster werden nun mit der rechten Maustaste im Spielfeld geschlossen, der volle Stich zusätzlich per Linksklick auf dem Stich
+
+# 0.7.6
+ChangeLog::0.7.6        = \
+	* Referenzen: dadurch testen wir Entwickler regelmäßig bestimmte Spielsituationen\n\
+	* neue Regeln: u.a. Bock, Schmeißen geht vor Solo \n\
+	* Verbesserungen in der KI, insbesondere bei der Schätzung der Blätter der anderen Spieler\n\
+	* Performanceverbesserungen und Fortschrittsanzeige
+
+# 0.7.6b
+ChangeLog::0.7.6b        = \
+	* Fehler korrigiert: Schweine im Farbsolo
+
+# 0.7.7
+ChangeLog::0.7.7        = \
+	* Pflichtsoli \n\
+	* KI-Einstellung "aggressiv" für aggressive Ansage \n\
+	* Fehlerkorrekturen (insb. Abstürze in Spielen mit Schweinen)
+
+# 0.7.8
+ChangeLog::0.7.8        = \
+	* Unterstützung von Microsoft Windows 7 \n\
+	* Verbesserungen der KI \n\
+	* Fehlerkorrekturen
+
+# 0.7.9
+ChangeLog::0.7.9        = \
+	* neue Regel: Klopfen \n\
+	* Neuer KI-Typ "Monte Carlo (stechen/bedienen)" \n\
+	* weitere KI-Verbesserungen \n\
+	* Fehlerkorrekturen
+
+# 0.7.10
+ChangeLog::0.7.10        = \
+	* Fehlerkorrekturen\n\
+	* Verbesserungen der KI
+
+# 0.7.11
+ChangeLog::0.7.11        = \
+	* Verlängerung der Lizenz des Altenburg-Kartensatzes\n\
+	* Fehlerkorrekturen\n\
+	* Verbesserungen der KI, insbesondere stärkeres Abstechen
+
+# 0.7.12
+ChangeLog::0.7.12        = \
+	* Der Altenburg-Kartensatz ist durch den InnoCard-Kartensatz ersetzt\n\
+	* Unterstützung von Symbolsätzen (siehe Einstellungen→Erscheinungsbild→Thema)\n\
+	* Verbesserungen der KI\n\
+	* Fehlerkorrekturen
+
+# 0.7.13
+ChangeLog::0.7.13        = \
+	* Verlängerung der Lizenz für den InnoCard-Kartensatz bis zum 31. Dezember 2015\n\
+	* Größere und qualitativ bessere Kartenbilder \n\
+	* Einige Turniereinstellungen sind in der Voreinstellung versteckt\n\
+	* Verbesserungen der KI\n\
+	* Fehlerkorrekturen
+
+# 0.7.14
+ChangeLog::0.7.14        = \
+	* Verlängerung der Lizenz für den InnoCard-Kartensatz bis zum 31. Dezember 2016\n\
+	* Fehlerkorrekturen
+
+# 0.7.15
+ChangeLog::0.7.15        = \
+	* Die Lizenz vom InnoCard-Kartensatz wurde nicht verlängert, daher haben wir den Kartensatz entfernt\n\
+	* Zur Version 3 von gtkmm (graphische Bibliothek) gewechselt\n\
+	* Teilweise Modernisierung vom Code\n\
+	* Verbesserungen der KI\n\
+	* Fehlerkorrekturen
+
+# 0.7.16
+ChangeLog::0.7.16        = \
+	* Die Lizenz vom InnoCard-Kartensatz wurde bis Ende 2017 verlängert, wir haben den Kartensatz wieder aufgenommen. \n\
+	* Fehler in der Entscheidung für ein Solospiel korrigiert

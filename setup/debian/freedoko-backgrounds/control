@@ -1,0 +1,12 @@
+Source: freedoko-backgrounds
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-backgrounds
+Architecture: all
+Conflicts: freedoko (<< 0.6.6)
+Description: background graphics for 'freedoko'
+ This package does contain some background graphics for the game 'freedoko'.

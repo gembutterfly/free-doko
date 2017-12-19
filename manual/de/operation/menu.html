@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Menü</title>
+
+    <meta name="date" content="2005-01-19">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.icon.png">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="overview.html" title="Übersicht">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="interface.html" title="Spielfläche">
+    <link rel="next" href="symbols.html" title="Symbole">
+
+    <link rel="alternate" href="../../en/operation/menu.html" hreflang="en" title="english">
+  </head>
+
+  <body>
+
+    <h1>Menü</h1>
+
+    <p>
+    Das Menü von FreeDoko gliedert sich wie folgt:
+    </p>
+    <ol>
+      <li><a href="#party">Turnier</a>
+      <ol>
+	<li><a href="#new_party">neues Turnier</a></li>
+	<li><a href="#load_party">Turnier laden</a></li>
+	<li><a href="#save_party">Turnier speichern</a></li>
+	<li><a href="#end_party">Turnier beenden</a></li>
+	<li><a href="#quit">Programm beenden</a></li>
+      </ol>
+      </li>
+      <li><a href="#information">Informationen</a>
+      <ol>
+	<li><a href="#card_suggestion">Kartenvorschlag</a></li>
+	<li><a href="#last_trick">Letzter Stich</a></li>
+	<li><span class="non_release"><a href="#game_info">Spielinformationen</a></span></li>
+	<li><a href="#rules">Regeln</a></li>
+	<li><a href="#party_points">Turnierpunkte</a></li>
+	<li><a href="#players">Spieler</a></li>
+	<li><a href="#players_db">Spielerstatistiken</a></li>
+      </ol>
+      </li>
+      <li><a href="#announcements">Ansagen</a>
+      <ol>
+	<li>Gegenansage</li>
+	<li>Re/Kontra</li>
+	<li>keine 90</li>
+	<li>keine 60</li>
+	<li>keine 30</li>
+	<li>schwarz</li>
+	<li>Schweine</li>
+	<li>Hyperschweine</li>
+      </ol>
+      </li>
+      <li><a href="#settings">Einstellungen</a>
+      <ol>
+	<li>hebe zulässige Karten vor</li>
+	<li>zeige alle Blätter</li>
+	<li>Kartensortierung</li>
+	<li>Themen</li>
+	<li>Einstellungen</li>
+      </ol>
+      </li>
+      <li><a href="#network">Netzwerk</a>
+      <ol>
+	<li>Chat</li>
+	<li>Log</li>
+	<li>Einstellungen</li>
+      </ol>
+      </li>
+      <li><a href="#bug_report">Fehlermeldung</a></li>
+      <li><a href="#help">Hilfe</a>
+      <ol>
+	<li><a href="#help_overview">Hilfeübersicht</a></li>
+	<li><a href="#license">Lizenz</a></li>
+	<li><a href="#changelog">Änderungsliste</a></li>
+	<li><a href="#about">über</a></li>
+	<span class="non_release"><li><a href="#generate_error">Erzeuge Fehler</a></li></span>
+      </ol>
+      </li>
+    </ol>
+
+    <h2><a name="party">Turnier</a></h2>
+
+    <h3><a name="new_party">neues Turnier</a></h3>
+    <p>
+    <kbd>neues Turnier</kbd> startet (ohne Nachfrage) ein <a href="party_settings.html">neues Turnier</a>.
+    </p>
+
+    <h3><a name="load_party">Turnier laden</a></h3>
+    <p>
+    Bei Auswahl von <kbd>Turnier laden</kbd> können Sie mit Hilfe eines Dateiauswahldialogs eine Turnierdatei laden und das angegebene Turnier weiterspielen.
+    </p>
+
+    <h3><a name="save_party">Turnier speichern</a></h3>
+    <p>
+    Immer am Ende eines Spiels können Sie das Turnier speichern.
+    Automatisch wird das Turnier immer unter dem Namen <var>current</var> gespeichert.
+    </p>
+
+    <h3><a name="end_party">Turnier beenden</a></h3>
+    <p>
+    <kbd>Turnier beenden</kbd> beendet das laufende Turnier und geht direkt zum Turnierendefenster. Ein noch laufendes Spiel wird nicht ausgwertet.
+    </p>
+
+    <h3><a name="quit">Programm beenden</a></h3>
+    <p>
+    Jederzeit können Sie FreeDoko beenden.
+    Beim Beenden werden automatisch alle Einstellungen, Regeln und Spieler gespeichert.
+    </p>
+
+
+    <h2><a name="information">Informationen</a></h2>
+
+    <p>
+    Während des Turniers können Sie verschiedene Informationen abrufen.
+    </p>
+
+    <h3><a name="card_suggestion">Kartenvorschlag</a></h3>
+    <p>
+    Immer wenn Sie eine Karte ausspielen müssen, können Sie sich vom Computer eine Karte vorschlagen lassen.
+    </p>
+
+    <h3><a name="last_trick">Letzter Stich</a></h3>
+    <p>
+    Jederzeit nach dem ersten Stich können Sie sich den letzten Stich / die letzten Stiche (siehe <a href="rules_config.html">Regeln</a>) ansehen.
+    </p>
+
+    <div class="non_release">
+      <h3><a name="game_info">Spielinformationen</a></h3>
+      <p>
+      Das Spielinformationsfenster gibt detaillierte Informationen über den bisherigen Spielverlauf.
+      Da insbesondere die Teams der Spieler angezeigt werden ist dieser Menüpunkt in der veröffentlichten Version nicht vorhanden.
+      </p>
+    </div>
+
+    <h3><a name="rules">Regeln</a></h3>
+    <p>
+    Jederzeit während des Spielens können Sie sich die Regeln anschauen, <span class="release">in einem Turnier aber nicht ändern</span>.
+    </p>
+
+    <h3><a name="party_points">Turnierpunkte</a></h3>
+    <p>
+    Die Turnierpunkte umfassen die Punkte, die die Spieler in den einzelnen Spielen erreicht haben.
+    Zu jedem vergangenen Spiel können Sie sich auch noch eine Spielzusammenfassung ansehen.
+    </p>
+
+    <h3><a name="players">Spieler</a></h3>
+    <p>
+    Mit diesem Menüpunkt läßt sich die Konfiguration der Spieler ansehen.
+    </p>
+
+    <h3><a name="players_db">Spielerstatistiken</a></h3>
+    <p>
+    Die Spielerstatistiken geben einen Überblick über die gewonnen Spiele und die genutzten Heuristiken.
+    </p>
+
+
+
+    <h2><a name="announcements">Ansagen</a></h2>
+    <p>
+    Im Spiel können die Ansagen (Gegenansage, keine 120, keine 90, keine 60, keine 30, schwarz, Schweine, Hyperschweine) über dieses Menü getätigt werden.
+    Wem das noch zu umständlich ist, der kann das Menü auch abreißen und so im separatem Fenster ansagen.
+    </p>
+
+
+    <h2><a name="settings">Einstellungen</a></h2>
+    <p>
+    Mit dem letzten Menüpunkt <samp>Einstellungen</samp> wird das Einstellungsfenster angezeigt und Sie können die <a href="settings.hml">Einstellungen</a> ändern.
+    <br>
+    Die anderen Menüpunkte bieten einen Schnellzugriff auf die Einstellungen <a href="settings.html#emphasize_valid_cards">hebe zulässige Karten hervor</a>, <a href="settings.html#show_all_hands">zeige alle Blätter</a>, <a href="settings.html#cards_order">Kartensortierung</a>.
+    <br>
+    Über den Menüpunkt Themen lässt sich ein Thema für Karten, Kartenrückseite, Symbole und Hintergrund auswählen.
+    </p>
+
+    <h2><a name="network">Netzwerk</a></h2>
+    <p>
+    Das Netzwerk-Menü bietet Zugriff auf alles, was mit dem Netzwerkspiel in Verbindung steht.
+    </p>
+
+    <h2><a name="bug_report">Fehlermeldung</a></h2>
+    <p>
+    Mit einer <a href="bug_report.html">Fehlermeldung</a> können Sie das aktuelle Spiel speichern und uns zuschicken.
+    Dieser Menüpunkt ist dafür da, daß Sie uns mitteilen können, wenn z.B. der Computer schlecht spielt, so daß wir das Programm verbessern können.
+    </p>
+
+
+    <h2><a name="help">Hilfe</a></h2>
+
+    <h3><a name="help_overview">Hilfeübersicht</a></h3>
+    <p>
+    Die Hilfeübersicht wird im angegebenen <a href="settings.html#browser">HTML-Betrachter</a> angezeigt.
+    Wird die Hilfe nicht auf dem Computer gefunden wird die Dokumentation im Internet geladen.
+    </p>
+
+    <h3><a name="license">Lizenz</a></h3>
+    <div class="picture_center">
+      <a href="pictures/Lizenz.png"><img src="pictures/Lizenz.small.png" alt="Bild Lizenz"></a>
+    </div>
+    <p>
+    FreeDoko steht unter der <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>, eine Kurzform können Sie sich unter diesem Menüpunkt anschauen.
+    </p>
+
+    <p>
+    Weiterhin können Sie sich die Lizenzen für den Kartensatz und gegebenenfalls die Symbole anschauen.
+    </p>
+
+    <h3><a name="changelog">Änderungsliste</a></h3>
+    <div class="picture_center">
+      <a href="pictures/Aenderungsliste.png"><img src="pictures/Aenderungsliste.small.png" alt="Bild Änderungsliste"></a>
+    </div>
+    <p>
+    Die <samp>Änderungsliste</samp> enthält die Änderungen seit der Version 0.6.3.
+    </p>
+
+    <h3><a name="about">Über</a></h3>
+    <div class="picture_center">
+      <a href="pictures/Ueber.png"><img src="pictures/Ueber.small.png" alt="Bild Über"></a>
+    </div>
+    <p>
+    Das Fenster <samp>Über</samp> enthält u.a. die Autoren, die Adresse der Internetseite und die E-Mail-Adresse zu FreeDoko.
+    </p>
+
+    <div class="non_release">
+      <h3><a name="generate_error">erzeuge Fehler</a></h3>
+      <div class="picture_center">
+	<a href="pictures/Fehler_erzeugen.png"><img src="pictures/Fehler_erzeugen.small.png" alt="Bild erzeuge Fehler"></a>
+      </div>
+      <p>
+      Mit diesem Menüpunkt kann ein Fehler erzeugt werden, der wie ein interner Fehler behandelt wird.
+      Insbesondere kann so ein Speicherabzug erstellt werden.
+      </p>
+    </div>
+
+    <div class="Version">Version 0.6.9</div>
+
+  </body>
+
+</html>

@@ -1,0 +1,70 @@
+# settings for the installation-85,17 
+# used by 'make install'
+
+# the different directories for the files
+
+# installing in /usr/local
+MAIN_DIRECTORY         = /usr/local
+BIN_DIRECTORY          = $(MAIN_DIRECTORY)/games
+DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
+HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/FreeDoko
+MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+# debian
+#MAIN_DIRECTORY         = /usr
+#BIN_DIRECTORY          = $(MAIN_DIRECTORY)/games
+#DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
+#HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/freedoko
+#MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+#ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+#DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+# gentoo
+#MAIN_DIRECTORY         = /usr
+#BIN_DIRECTORY          = $(MAIN_DIRECTORY)/bin
+#DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
+#HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/freedoko-$(VERSION)
+#MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+#ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+#DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+# SuSE
+#MAIN_DIRECTORY         = /usr
+#BIN_DIRECTORY          = $(MAIN_DIRECTORY)/bin
+#DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
+#HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/packages/freedoko
+#MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+#ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+#DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+# FreeBSD
+#MAIN_DIRECTORY         = /usr
+#BIN_DIRECTORY          = $(MAIN_DIRECTORY)/games
+#DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
+#HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/freedoko
+#MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+#ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+#DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+# Arch Linux
+#MAIN_DIRECTORY         = /usr
+#BIN_DIRECTORY          = $(MAIN_DIRECTORY)/bin
+#DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/freedoko
+#HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/freedoko
+#MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+#ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
+#DESKTOP_FILE_DIRECTORY = $(MAIN_DIRECTORY)/share/applications
+
+
+# release
+# where the temporary release files are saved
+# must be absolute path
+RELEASE_TMP = /tmp/FreeDoko.release
+# where the files/packages of a release are saved
+# must be absolute path
+RELEASE_DEST = /home/dknof/Programme/FreeDoko_$(VERSION).release
+# where the binary for MS-Windows is located
+#FREEDOKO_EXE = ./src/FreeDoko.exe
+FREEDOKO_EXE = /home/Systeme/qemu/FreeDoko/trunk/src/FreeDoko.exe

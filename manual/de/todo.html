@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Planung</title>
+
+    <meta name="date" content="2005-12-14T18:55:23+0100">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="configuration.html" title="Configuration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/todo.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/todo.html" title="offizielle Internetseite">
+  </head>
+
+  <body>
+
+    <h1>Roadmap</h1>
+    <dl>
+      <dt>zur 0.8</dt>
+      <dd>
+      <ul>
+	<li>Netzwerk</li>
+	<li>Pflicht-Soli</li>
+      </ul>
+      </dd>
+
+      <dt>zur 0.9</dt>
+      <dd>
+      <ul>
+	<li>Netzwerk: Zuschauer, Schatten</li>
+	<li>Dokumentation</li>
+      </ul>
+      </dd>
+
+      <dt>zur 1.0</dt>
+      <dd>
+      <ul>
+	<li>Gamelounge</li>
+	<li>vervollständigen</li>
+	<li>stabilisieren</li>
+      </ul>
+      </dd>
+
+      <dt>zur 1.0</dt>
+      <dd>
+      <ul>
+	<li>Animationen</li>
+      </ul>
+      </dd>
+    </dl> 
+
+    <h1>Vorschläge und Planungen</h1>
+
+
+    <h2>Einstellungen</h2>
+
+    <ul>
+      <li>Aufteilung in Bereiche: 'einfach' &mdash; 'moderat' &mdash; 'komplex'</li>
+      <li>Größen (Kartenhöhe, Schriftgröße) automatisch von der Bildschirmauflösung</li>
+    </ul>
+
+
+
+    <h2>Regeln</h2>
+
+    <h3>Turnier</h3>
+    <ul>
+      <li>Pflichtsoli</li>
+
+      <li>Ohne Neuner und ohne Zehner (<a href="https://sourceforge.net/tracker/?func=detail&aid=1283421&group_id=38051&atid=421200">1283421</a>)</li>
+
+      <li>mehr als vier Spieler</li>
+
+      <li>
+      Es gibt eine interessante Variante des Spiels. Dabei können die Kreuz-Damen, sowie die Herz Zehnen gefangen werden, Füchse nach wie vor auch. Füchse bringen dabei 4, die Damen 5 und die zehen 10 Punkte. Die erste Zehn ist immer höher, Schweine gibt es nicht.
+      </li>
+      <li>siehe <a href="http://de.wikipedia.org/wiki/Doppelkopf">Wikipedia</a></li>
+
+      <li>Ansage Re: +1<br>
+      Ansage Kontra: 2*<br>
+      Ansage Re+Kontra: 4*</li>
+
+      <li>Gewonnenes Solo verdoppelt nur, keine Verdreifachung</li>
+      <li>Ramschen</li>
+    </ul>
+
+    <h3>Sonderpunkte</h3>
+    <ul>
+      <li>Fuchsschlag (auch in den anderen Stichen)</li>
+
+      <li>Re/Kontra verdoppelt auch Sonderpunkte</li>
+
+      <li>Sonderpunkte separat verwalten</li>
+
+      <li>Sonderpunkte auch im Solo
+      (<a href="https://sourceforge.net/tracker/?func=detail&aid=928098&group_id=38051&atid=421200">928098</a>)</li>
+    </ul>
+
+    <h3>Soli</h3>
+    <ul>
+      <li>Farbsolo nur mit den Farbkarten (Buben + Damen eingeordnet); wie Fleischloser mit Trumpffarbe (<a href="https://sourceforge.net/tracker/?func=detail&aid=1816595&group_id=38051&atid=421200">1816595</a>)</li>
+      <li>Rangfolge nach Solostärke: (<a href="https://sourceforge.net/tracker/?func=detail&amp;atid=421200&amp;aid=1715453&amp;group_id=38051">Feature Request 1715453</a>)<br>
+      Wenn mehr als ein Spieler ein Solo spielen möchte, wird es demjenigen
+      zugesprochen, der nach dem Geber als nächster sitzt. Auch wenn der andere ein
+      besseres Solo hätte, kommt er nicht an die Reihe. Als Feature würde ich mir
+      daher wünschen, dass in so einem Fall die Solo-Aspiranten "reizen" können, also
+      keine-90, keine-60, usw. schon vorher ansagen können, um das Solo an sich zu
+      ziehen. Bei Gleichstand gilt nach wie vor die Reihenfolge nach dem Geber, sonst
+      erhält derjenige mit der höchsten Ansage das Solorecht.
+      </li>
+
+      <li>Uno: (Vorschlag: Alexander Mai, <a href="https://sourceforge.net/tracker/?func=detail&amp;atid=421200&amp;aid=1203768&amp;group_id=38051">Feature Requests item #1203768</a>)
+      <blockquote>
+	<p>
+	Das Ding hat viele Namen, ich kennes als "Uno". Ziel
+	dieses Solos ist es, möglichst keinen oder zur Not
+	einen Stich zu machen. Bei mehr Stichen gilt das Solo
+	als verloren.
+	Die Trumpfanordnung ist wie beim normalen Spiel.
+	</p>
+      </blockquote>
+      </li>
+    </ul>
+
+    <h3>Armut</h3>
+    <ul>
+      <li>Armut geht vor Solo</li>
+
+      <li>Schmeißen bei mindestens 70 Punkte (<a href="https://sourceforge.net/tracker/?func=detail&atid=421200&aid=1601450&group_id=38051">Feature request 1601450</a>)</li>
+      <li>spezielle Armutregeln:
+      <ul>
+	<li>Abgabe am Anfang des zweiten Stichs</li>
+	<li>Nur an den Partner abgeben
+	(Bei einer Hochzeit nach dem Klärungsstich, wenn kein Bräutigam gefunden wurde wird nicht geschoben)
+	<ul>
+	  <li>Aufnahmepflicht</li>
+	</ul>
+	</li>
+	<li>Pflicht, Farben zurückzugeben</li>
+	<li>Armut nur bei zwei / einem Trumpf</li>
+      </ul>
+      <li>doppelte Armut (seed: 95319, mit Neunen, Füchse zählen nicht)</li>
+
+      Zählung:
+      <ul>
+	<li>kein Stich: doppelt gewonnen</li>
+	<li>ein Stich: einfach gewonnen</li>
+	<li>zwei Stiche: einfach verloren</li>
+	<li>mehr Stiche: (n-1)-fach verloren</li>
+      </ul>
+
+      <p>
+      Problem: KI muß an solche Spiele völlig anders rangehen.
+      </p>
+      </li>
+    </ul>
+
+    <h3>Schmeißen</h3>
+    <ul>
+      <li>Höchste Karte zum Schmeißen angeben (Fuchs, Karo Bube, ...)
+      (<a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1380101&amp;group_id=38051&amp;atid=421200">Feature Request 1380101</a>)</li>
+    </ul>
+
+    <h3>Schmeißen im solo</h3>
+    <ul>
+      <li>Schmeißen geht vor Solo (bisher geht Solo vor Schmeißen).</li>
+    </ul>
+
+    <h3>Ansagen</h3>
+    <ul>
+      <li>Feigheit (wenn zwei weitere Ansagen möglich gewesen wären gibt es Strafpunkte) (<a href="https://sourceforge.net/tracker/?func=detail&aid=1282255&group_id=38051&atid=421200">1282255</a>)</li>
+      <li>Re/Kontra bis zur 5. ausgespielten Karte</li>
+      <li>Klopfen:<br>
+      bei der Klopfen-Regel gibt es kein Kontra oder Re mehr, man klopft halt, wenn
+      man gute Karten hat. Das Klopfen geht nur in der ersten Runde bevor alle 4
+      Karten gefalllen sind. Abgerechnet wird dann so, dass jedes Klopfen einen zus
+      tzlichen Punkt gibt.  Hat ein Partei geklopft und verloren, wird genauso
+      verfahren, als hätte man bei Kontra oder Re verloren: es folgt dann in den
+      meisten Fällen ein Bockspiel! Durch das Klopfen gewinnt das Spiel mehr an
+      Taktik, da man durch die Spielweise herausfinden muss, welchen Partner man hat.
+      Das Klopfen geht natürlich auch bei den Solos. So kann man sein Solo spielen
+      und klopfen und wenn die Gegner meinen der Solospieler verliert,  kann maximal
+      3 mal dagen geklopft werden.
+      </li>
+      <li>Verschiedene Konventionen (<a href="https://sourceforge.net/tracker/?func=detail&atid=421200&aid=1584221&group_id=38051">Feature Request 1584221</a>)</li>
+      Es wäre schön wenn FreeDoko auch Anspielkonventionen
+      ermöglichen würde.
+      z.B. Dullenanspiel, Damenanspiel usw.
+      Ansage vor Anspiel, mit Anspiel usw.
+
+      Siehe auch:
+      <a href="http://home.arcor.de/jayjay72/Doppelkopf-Gilde/Sonstiges/yalah-Verschiedenes.html">http://home.arcor.de/jayjay72/Doppelkopf-Gilde/Sonstiges/yalah-Verschiedenes.html</a>, <a href="http://home.arcor.de/jayjay72/Doppelkopf-Gilde/Taktik.html">http://home.arcor.de/jayjay72/Doppelkopf-Gilde/Taktik.html</a>
+      </li>
+      <li>Zögern</li>
+      <li>Reizen (<a href="https://sourceforge.net/tracker/?func=detail&aid=1715453&group_id=38051&atid=421200">1715453</a>)</li>
+      <li>Reihenfolge der Soli (<a href="https://sourceforge.net/tracker/?func=detail&aid=1715453&group_id=38051&atid=421200">1715453</a>)</li>
+      <li>Klopfen (<a href="https://sourceforge.net/tracker/?func=detail&aid=1734065&group_id=38051&atid=421200">1734065</a>)</li>
+    </ul>
+
+    <h3>Sonderkarten</h3>
+    <ul>
+      <li>Schweine
+	<ul>
+	<li>Keine Schweine in Hochzeit</li>
+	<li>Schweine dürfen nur angesagt werden, wenn man vorher Re/Kontra angesagt hat</li>
+	<li>erstes ist Schwein, zweites ist Fuchs. Hier ist es eventuell vorteilhaft, keine Schweine anzusagen.</li>
+	</ul>
+      </li>
+      <li>Dollen nicht in Farbsoli</li>
+      <li>Karo König immer über Kreuz Dame</li>
+      <li>Sonderkarten stark flexibilisieren:
+	<ul>
+	  <li>Karo Neunen statt Dullen (<a href="https://sourceforge.net/tracker/?func=detail&aid=1641952&group_id=38051&atid=421200">1641952</a>)</li>
+	  <li>Hyperschweine beliebig setzen (hier: Karo Zehn)
+	    (<a href="https://sourceforge.net/tracker/index.php?func=detail&amp;aid=1649003&amp;group_id=38051&amp;atid=421200">Feature Request 1649003</a>)</li>
+	  <li>Schweine im Solo sind immer Karo Asse nicht die Asse der Trumpffarbe</li>
+	  <li>Wildsau (Füchse), Superwildsau (Zehner), Megawildsau (Könige), Hyperwildsau (Neuner)
+	    (<a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1380101&amp;group_id=38051&amp;atid=421200">Feature Request 1380101</a>,
+	    <a href="https://sourceforge.net/tracker/?func=detail&aid=1438746&group_id=38051&atid=421200">1438746</a>)</li>
+	  <li>Schafe (<a href="https://sourceforge.net/tracker/?func=detail&aid=1306297&group_id=38051&atid=421200">1306297</a>)</li>
+	  <li>Im Solo Fuchs als höchsten</li>
+	</ul>
+      </li>
+    </ul>
+
+    <h3>Sonstige</h3>
+    <ul>
+      <li>&bdquo;black lady&rdquo;:
+	die black lady hat mann wenn man beide pikdamen
+	besitzt, dann ist die erste von beiden die allerhöchste
+	karte von allen (inklusive) zusatzkarten.
+	die zweite ist wieder normal eingereiht.
+	(<a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=992922&amp;group_id=38051&amp;atid=421200">Feature Request 992922</a>)
+      </li>
+
+    </ul>
+
+    <h2>KI</h2>
+    <ul>
+      <li>Hochzeitler zum unfreiwilligen Solo zwingen</li>
+      <li>lernende KI</li>
+    </ul>
+
+
+    <h2>Fehlerbericht</h2>
+
+    <ul>
+      <li>E-Mail eintragen (E-Mail als Einstellung)</li>
+      <li>Fehlerbericht automatisch senden</li>
+    </ul>
+
+
+
+    <h2>KI</h2>
+
+    <ul>
+      <li>Refenz-KIs lauffähig (Klasse 'class VirtualGame : public Game')</li>
+      <li>Wenn die Spieler hinter mir zwischen Karte A und Karte B keine mehr haben reicht es, Karte A auszuspielen</li>
+    </ul>
+
+
+
+    <h2>GUI</h2>
+
+    <ul>
+      <li>Kontexthilfe (F1)</li>
+      <li>Kontexteinstellungen (S-F2)</li>
+      <li>Überarbeiten vom Speichern/Laden der Regeln/KIs</li>
+      <li>Stichhaufen: Fenster mit Übersicht der Stiche (Punkte, Sonderpunkte, Ansicht) (je nach Stichansicht in Regeln)</li>
+      <li>Vorschau bei Graphiken</li>
+      <li>Bei Wechsel ins Fehlerberichtsfenster: alten Fehlerbericht freigeben (für Windows)</li>
+      <li>beliebigen Kartensatz, Kartenrückseite, Hintergrund (Tisch) suchen wenn der angegebene nicht vorhanden ist</li>
+      <li>Kartensätze von pysol, kde, ... direkt unterstützen</li>
+      <li>Fehlerbehandlung bei Kartensätzen, Symbolen, ... überarbeiten (bessere Handhabung, Übersetzen)</li>
+      <li>Symbole für alle Knöpfe</li>
+      <li>Einheit bei den Verzögerungen schreiben</li>
+      <li>Konfiguration nur für Spielertypen zulassen, die sich von 'Aiconfig' ableiten (Gegenbeispiel ist 'AiDummy')</li>
+      <li>Internetseite ins Programm</li>
+      <li>Nachrichten-Fenster: Nachrichten hinzufügen, Nachrichten löschen</li>
+      <li>Bild vom Spieler</li>
+      <li>Animation</li>
+      <li>Minimieren des Hauptfensters minimiert alle Fenster (<a href="https://sourceforge.net/tracker/?func=detail&aid=928098&group_id=38051&atid=421200">928098</a>)</li>
+      <li>Spielfenster behält Größe und Position (<a href="https://sourceforge.net/tracker/?func=detail&aid=1562378&group_id=38051&atid=421200">1562378</a>)</li>
+    </ul>
+
+    <h3>Bedienung</h3>
+
+    <ul>
+      <li>bei Tastaturkürzel Menü schließen
+	<li>Wenn Schrift nicht gefunden: Schriftauswahl hoch</li>
+	<li>Drag'n drop (Verzeichnisse für Themen, Hintergrund, Kartenhintergrund, Regel, KI-Konfiguration, Einstellungen)</li>
+	<li>Klick auf dem Splash-Screen versteckt ihn</li>
+	<li>Tab-Reihenfolge</li>
+    </ul>
+
+    <h3>Informationen</h3>
+
+    <ul>
+      <li>Zeigen, an wen der Stich bisher geht (aufhellen)</li>
+      <li>wenn Maus über Karte beim Ausspielen: diese verdunkeln</li>
+      <li>rechte Maustaste auf Karte: diese in den Vordergrund</li>
+      <li>Statusbar mit Nachrichten (ai denkt, Karten laden, ...)</li>
+      <li>Spiel-Log (&rarr; Regeln, z.B. letzter Stich)</li>
+    </ul>
+
+    <h3>Turnierpunkte</h3>
+
+    <ul>
+      <li>Restrunden, Restpunkte anzeigen</li>
+      <li>Farbliche Markierung verbessern</li>
+      <li>Fenster soll wie Notizblock aussehen, keine Fenstermanager-Rahmen</li>
+      <li>Statistik (wie Spielerstatistik, bloß nur für das Turnier)</li>
+    </ul>
+
+    <h3>Windows</h3>
+
+    <ul>
+      <li>GTK-Thema mit Windows-Aussehen</li>
+    </ul>
+
+
+
+    <h2>Graphik</h2>
+
+    <ul>
+      <li>Unterstützung verschiedener Graphikformate. Die einfachste Lösung wäre, auf Dateiendungen zu verzichten (sofern GTK dann die Dateien richtig erkennt), das ist aber nicht üblich.</li>
+      <li>Symbole für die Sonderpunkte (gefangen: Gittermuster, Doppelkopf: 40+)</li>
+      <li>Osterthema</li>
+      <li>Weihnachtsthema</li>
+    </ul>
+
+
+    <h2>Übersetzung (Quelltext)</h2>
+
+    <ul>
+      <li>Syntax beim Einlesen überprüfen (%)</li>
+      <li>Spezialisierungen (z.B. <samp>spielt einen Köhler</samp>)</li>
+    </ul>
+
+
+
+    <h2>Dokumentation</h2>
+
+    <ul>
+      <li>Ziemlich viel</li>
+      <li>'$HOME/.FreeDoko' erwähnen</li>
+    </ul>
+
+
+
+    <h2>Netzwerk</h2>
+
+    <p>
+    Siehe <a href="network_concept.html">Netzwerk Konzept</a>.
+    </p>
+    <ul>
+      <li>Synchronisation (<a href="https://sourceforge.net/tracker/?func=detail&aid=1645709&group_id=38051&atid=421200">1645709</a></li>
+    </ul>
+
+
+
+
+    <h2>Sonstiges</h2>
+
+    <ul>
+      <li>In jede Ressourcendatei die Version schreiben</li>
+      <li>Spieler personalisieren</li>
+    </ul>
+
+
+
+    <h2>Chrome</h2>
+
+    <ul>
+      <li>Blatt setzen</li>
+      <li>Stich zurücknehmen</li>
+      <li>Anzeige der im Spiel noch nicht ausgespielten Karten</li>
+      <li>beliebige Karte spielen</li>
+      <li>Hochzeit: Anzeige, wieviele Stiche man noch Zeit hat, um einen Partner zu finden.</li>
+      <li>Text-Version</li>
+    </ul>
+
+
+    <hr>
+    <div style="text-align: right;">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/todo.html">offizielle Internetseite</a>
+    </div>
+  </body>
+
+</html>

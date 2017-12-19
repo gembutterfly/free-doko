@@ -1,0 +1,16 @@
+# All object-files
+OBJECTS = \
+	game.announcement.o \
+	game.o \
+	game.gameplay.o \
+	game.info.o \
+	game.marriage.o \
+	game.player.o \
+	game.swines.o \
+	game.team.o \
+	game.trick.o \
+	reservation.o \
+	specialpoint.o \
+	game_summary.o \
+	gameplay.o \
+	  gameplay_action.o

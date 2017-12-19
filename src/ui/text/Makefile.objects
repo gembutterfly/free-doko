@@ -1,0 +1,18 @@
+# All object-files
+OBJECTS = \
+	ui.o \
+	  ui.init.o \
+	  ui.party.o \
+	  ui.game.o \
+	    ui.poverty.o \
+	    ui.swines.o \
+	    ui.game.gameplay.o \
+	    ui.genscher.o \
+	  ui.trick.o \
+	  ui.update.o \
+	ui.io.o \
+	general.o \
+	party.o \
+	bug_report.o \
+	help.o \
+	settings.o

@@ -1,0 +1,66 @@
+# FreeDoko translation: bug report
+# language: deutsch
+# version: 0.7.5
+
+BugReport::bug report		= Fehlermeldung
+BugReport::create 		= Fehlermeldung erstellen
+
+BugReport::generated error	= manuell erzeugter Fehler
+
+BugReport::end			= Fehlerbericht beenden
+
+BugReport::save			= \
+	Der Fehlerbericht wird im Verzeichnis 'FreeDoko.BugReports' gespeichert. \n\
+	Bitte schreiben Sie, wodurch der Fehler aufgetreten ist \
+	und schicken Sie die Datei an 'freedoko@users.sourceforge.net'.\n\
+	An die unten angeführte Datei wird die Version, die Zeit, der eingetragene Text und verschiedene Spielinformationen angehangen.\n\
+	Wenn eine Rückmeldung erwünscht ist, tragen Sie am besten Ihre Email-Adresse in den Fehlerbericht ein, damit wir den Fehlerbericht leicht zuordnen können.
+
+BugReport::created directory '%sdirectory%'	= \
+	Verzeichnis '%sdirectory%' für die Fehlerberichte erstellt.
+
+BugReport::could not save at '%sfilename%', trying '%sfilename2%'. = \
+	Konnte die Fehlerberichtsdatei nicht unter '%sfilename%' speichern, probiere '%sfilename2%'.
+BugReport::could not save			= \
+	Konnte den Fehlerbricht nicht speichern. \n \
+	Bitte manuell erstellen.
+
+BugReport::write seed: %useed%			= \
+	Versuche, den Startwert auszugeben: %useed%
+
+BugReport::write startplayer: %ustartplayer%	= \
+	Versuche, den Startspieler auszugeben: %ustartplayer%
+
+BugReport::bug found, create report, %scontact%	= \
+	Es ist ein interner Fehler aufgetreten :-( \n\
+	Bitte erstellen Sie den Fehlerbericht und senden Sie ihn an %scontact%.\n\
+	Vielen Dank.\n\n\
+	Nach dem Erstellen des Fehlerberichtes wird sich das Programm beenden.
+
+BugReport::message = \
+	Fehlerbeschreibung
+
+BugReport::automatic creation, %sfilename%, %scontact%	= \
+	Es ist ein interner Fehler aufgetreten :-(\n\
+	Ein Fehlerbericht wird in der Datei '%sfilename%' gespeichert.\n\
+	Bitte senden Sie den Fehlerbericht an %scontact%.\n\
+	Vielen Dank.
+
+BugReport::automatic report creation failed		= \
+	Es ist ein interner Fehler aufgetreten :-(\n\
+	Ein Fehlerbericht kann nicht erzeugt werden, \
+	bitte geben Sie uns den Startwert des Spiels und eine Beschreibung des Spielverhaltens, damit wir den Fehler nachvollziehen können.\n\
+	Vielen Dank.
+
+Press <Return> to display the bug report.	= \
+	<Return> drücken, um den Fehlerbericht auszugeben.
+
+Press <Return> to exit.				= \
+	<Return> drücken, um das Programm zu beenden.
+Press <Return> to create segmentation fault.	= \
+	<Return> drücken, um einen Speicherzugriffsfehler zu erzeugen.
+Creating segmentation fault.			= \
+	Erstelle Speicherzugriffsfehler.
+
+replayed bug report: %sbug report% = \
+        Spielte den folgenden Fehlerbericht nach: %sbug report%

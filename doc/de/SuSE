@@ -1,0 +1,35 @@
+(getestet mit 8.0)
+
+Kompilieren
+-----------
+(Diether Knof <dknof@gmx.de>)
+
+Zuerst muessen die DOS-Zeilenenden weg.
+Dazu im FreeDoko-Verzeichnis ein 'make dos2unix' ausfuehren.
+(Ich habe selber den Konverter geschrieben, hat SuSE den urspruenglichen herausgenommen? Ich habe ihn nicht gefunden).
+
+
+
+freedoko-altenburg-0.6.8-2.i386.rpm unter SuSE 9.2
+--------------------------------------------------
+(Dank an Wolfgang Klein für die Beschreibung und das dummy-Paket)
+
+FreeDoko erwarted die Datei 'libexpat.so.1', dafür als root:
+  ln -s /usr/lib/libexpat.so.0 /usr/lib/libexpat.so.1
+Und damit YaST sich nicht über fehlende Abhängigkeiten im Paketsystem beschwert muß noch ein dummy-rpm installiert werden.
+Zu finden ist das unter http://free-doko.sourceforge.net/download/dummy-libexpat-1.0-0.i586.rpm.
+Erstellt wurd das Pakte mit der folgenden spec-Datei:
+  Name: dummy-libexpat
+  Version: 1.0
+  Release: 0
+  Summary: This is a dummy package
+  Group: dummy
+  License: GPL
+  Provides: libexpat.so.1
+  %description
+  This is only a dummy package to fool yast
+  %prep
+  %build
+  %install
+  %clean
+  %files

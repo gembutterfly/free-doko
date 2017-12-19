@@ -1,0 +1,876 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: Einstellungen</title>
+
+    <meta name="date" content="2004-06-23">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.icon.png">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="overview.html" title="Übersicht">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="bug_report.html" title="Fehlerbericht">
+    <link rel="next" href="problems.html" title="Probleme">
+
+    <link rel="alternate" href="../../en/operation/settings.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+
+
+    <h1>Einstellungen</h1>
+
+    <p>
+    Einstellungen können unter dem Menupunkt &bdquo;Einstellungen:Einstellungen&rdquo; geändert werden.
+    Sie werden automatisch beim Programmstart geladen und beim Verlassen gespeichert.
+    Eine Änderung tritt sofort in Kraft, es ist keine Bestätigung erforderlich (vgl. GNOME Kontrollzentrum).
+    </p>
+    <p>
+    Gespeichert werden die Einstellungen in der Datei <var>FreeDokorc</var> im privaten FreeDoko-Verzeichnis (Linux: <var>~/.FreeDoko</var>, Windows: <var>FreeDoko</var> im Verzeichnis für die persönlichen Programmeinstellungen).
+    Die Syntax ist dabei: <var>Kennwort</var>: <samp>Wert</samp>.
+    </p>
+
+    <p>
+    Im folgenden werden die Einstellungen im einzelnen erklärt:
+    </p>
+
+    <div>
+      <map name="settings_map">
+	<area shape="rect" coords="5, 24,114, 57"
+	href="#general"               alt="Allgemein">
+	<area shape="rect" coords="5, 58,114, 90"
+	href="#behaviour"             alt="Verhalten">
+	<area shape="rect" coords="5, 91,114,123"
+	href="#assistance"            alt="Unterstützung">
+	<area shape="rect" coords="5,124,114,156"
+	href="#help"                  alt="Hilfe">
+	<area shape="rect" coords="5,157,114,190"
+	href="#information_windows"   alt="Informationsfenster">
+	<area shape="rect" coords="5,191,114,223"
+	href="#cards_order"           alt="Kartensortierung">
+	<area shape="rect" coords="5,224,114,257"
+	href="#appearance"            alt="Erscheinungsbild">
+      </map>
+      <map name="settings_map.information">
+	<area shape="rect" coords="5, 24,114, 57"
+	href="#general"               alt="Allgemein">
+	<area shape="rect" coords="5, 58,114, 90"
+	href="#behaviour"             alt="Verhalten">
+	<area shape="rect" coords="5, 91,114,123"
+	href="#assistance"            alt="Unterstützung">
+	<area shape="rect" coords="5,124,114,156"
+	href="#help"                  alt="Hilfe">
+	<area shape="rect" coords="5,157,114,190"
+	href="#information_windows"   alt="Informationsfenster">
+	<area shape="rect" coords="5,191,114,223"
+	href="#cards_order"           alt="Kartensortierung">
+	<area shape="rect" coords="5,224,114,257"
+	href="#appearance"            alt="Erscheinungsbild">
+
+	<area shape="rect" coords="117,27,170,43"
+	href="#gametype_window"       alt="Spieltyp">
+	<area shape="rect" coords="172,27,243,43"
+	href="#full_trick"            alt="Voller Stich">
+	<area shape="rect" coords="245,27,303,43"
+	href="#marriage_window"       alt="Hochzeit">
+	<area shape="rect" coords="305,27,363,43"
+	href="#genscher_window"       alt="Genscher">
+	<area shape="rect" coords="365,27,415,43"
+	href="#announcement_window"   alt="Ansage">
+	<area shape="rect" coords="417,27,476,43"
+	href="#swines_window"         alt="Schweine">
+      </map>
+      <map name="settings_map.appearance">
+	<area shape="rect" coords="5, 24,114, 57"
+	href="#general"               alt="Allgemein">
+	<area shape="rect" coords="5, 58,114, 90"
+	href="#behaviour"             alt="Verhalten">
+	<area shape="rect" coords="5, 91,114,123"
+	href="#assistance"            alt="Unterstützung">
+	<area shape="rect" coords="5,124,114,156"
+	href="#help"                  alt="Hilfe">
+	<area shape="rect" coords="5,157,114,190"
+	href="#information_windows"   alt="Informationsfenster">
+	<area shape="rect" coords="5,191,114,223"
+	href="#cards_order"           alt="Kartensortierung">
+	<area shape="rect" coords="5,224,114,257"
+	href="#appearance"            alt="Erscheinungsbild">
+
+	<area shape="rect" coords="117,27,159,43"
+	href="#table"                 alt="Tisch">
+	<area shape="rect" coords="161,27,211,43"
+	href="#cards"                 alt="Karten">
+	<area shape="rect" coords="213,27,262,43"
+	href="#theme"                 alt="Thema">
+	<area shape="rect" coords="264,27,385,43"
+	href="#fonts_colors"          alt="Schriftarten, Farben">
+	<area shape="rect" coords="387,27,476,43"
+	href="#splash_screen"         alt="Splash-Screen">
+      </map>
+    </div>
+
+    <h2 id="general">Allgemein</h2>
+
+    <p>
+    In dieser Rubrik werden allgemeine Einstellungen wie der <a href="#name">Name</a> und die <a href="#language">Sprache</a> getätigt.
+    Die Zeiten werden in Sekunden eingestellt mit einer Genauigkeit von Zehntelsekunden (das sollte reichen).
+    </p>
+
+    <div class="picture_center"><a href="pictures/settings/general.png"><img src="pictures/settings/general.small.jpg" width="348" height="223" alt="Allgemein"></a></div>
+
+    <dl>
+      <dt id="name">Name</dt>
+      <dd>
+      Der Name vom Spieler.
+      Ist kein Name angegeben, wird der Name vom System übernommen.
+      </dd>
+
+      <dt id="language">Sprache</dt>
+      <dd>
+      Die Sprache für die Texte.
+      Aus den installierten Sprachen kann eine aus der DropDown-Liste ausgewählt werden.
+      <var>Standard</var> übernimmt die Sprache vom System.
+      </dd>
+
+      <dt id="browser">HTML-Betrachter</dt>
+      <dd>
+      Welcher Browser für die Anzeige von den Hilfe-Seiten genutzt werden soll.
+      Ist keiner angegeben, so wird unter Windows in der Registry gesuch, unter Linux Browser von der internen Liste (firefox, epiphany, galeon, mozilla, opera, konqueror, netscape, w3m, links, lynx) getestet.
+      </dd>
+
+      <dt id="sound">Sound</dt>
+      <dd>
+      Diese Einstellung gibt an, ob Sound genutzt werden soll.
+      </dd>
+
+      <dt id="show_bug_report_button_in_game_finished_window">zeige Fehlermeldung-Knopf im &bdquo;Spielende&rdquo;-Fenster</dt>
+      <dd>
+      Wenn diese Einstellung aktiviert ist, kann direkt vom Spielende-Fenster ein Fehlerbericht erstellt werden.
+      </dd>
+
+      <dt id="save_bug_reports_on_desktop">Speicher die Fehlermeldungen auf dem Desktop</dt>
+      <dd>
+      Wenn diese Einstellung aktiviert ist, werden die Fehlermeldungen auf dem Desktop (im Ordner 'FreeDoko.BugReports') gespeichert.
+      Ansonsten werden sie im Verzeichnis mit den privaten Daten von FreeDoko (s.o.) gespeichert.
+      </dd>
+
+      <dt id="save_party_changes">Turnieränderungen speichern</dt>
+      <dd>
+      Normalerweise werden Turnieränderungen, das sind Regeln und die Spieler, automatisch gespeichert.
+      Mit dieser Einstellung wird das Speicherung unterdrückt.
+      Wenn ein Fehlerbericht nachgespielt wird, wird diese Einstellung automatisch auf <var>aus</var> gestellt.
+      </dd>
+
+      <dt id="additional_party_settings">Zusätzliche Turnierneistellungen</dt>
+      <dd>
+      Zeigt die Turniereinstellungen „Startwert“ und „Ausspieler“ mit an.
+      Die Einstellung wird benötigt, um Turniere nachspielen zu können. Ist sie abgewählt, wird der Startwert zufällig gewählt und der Ausspieler ist der erste Spieler.
+      </dd>
+
+      <dt id="browser_command">HTML-Betrachter</dt>
+      <dd>
+      Das Programm, mit dem HTML-Dateien (die Hilfe und das Handbuch) geöffnet werden.
+      </dd>
+
+    </dl>
+
+
+    <h2 id="behaviour">Verhalten</h2>
+
+    <div class="picture_center"><a href="pictures/settings/behaviour.png"><img src="pictures/settings/behaviour.small.jpg" width="348" height="223" alt="Verhalten"></a></div>
+
+    <dl>
+      <dt id="card_play_delay">Verzögerung beim Kartenausspielen</dt>
+      <dd>
+      Zwischen dem Ausspielen von zwei Karten vergeht (mindestens) die angegebene Zeit.
+      </dd>
+    </dl>
+
+    <h2 id="assistance">Unterstützung</h2>
+    <div class="picture_center"><a href="pictures/settings/assistance.png"><img src="pictures/settings/assistance.small.jpg" width="348" height="223" alt="Unterstützung"></a></div>
+    <dl>
+      <dt id="show_soloplayer_in_game">zeige Solospieler im Spiel</dt>
+      <dd>
+      Wenn ein Spieler ein Solo, eine Hochezeit, eine Armut oder einen Genscher spielt wird er mit der Spielart markiert.
+      </dd>
+
+      <dt id="announce_swines_automatically">Schweine automatisch ansagen</dt>
+      <dd>
+      Die Schweine und Hyperschweine werden automatisch angesagt und zwar zum letztmöglichen Zeitpunkt.
+      Sie können die Ansage auch mit dieser Einstellung auch vorher tätigen.
+      </dd>
+
+      <dt id="show_if_valid">zeige ob zulässig</dt>
+      <dd>
+      Es wird durch den Mauszeiger gezeigt, welche Karten im laufenden Stich zulässig sind.
+      </dd>
+
+      <dt id="emphasize_valid_cards">hebe zulässige Karten hervor</dt>
+      <dd>
+      Alle unzulässigen Karten werden grau dargestellt.
+      </dd>
+    </dl>
+
+    <h2 id="help">Hilfe</h2>
+    <div class="picture_center"><a href="pictures/settings/help.png"><img src="pictures/settings/help.small.jpg" width="348" height="223" alt="Hilfe"></a></div>
+    <dl>
+      <dt id="show_all_hands">zeige alle Blätter</dt>
+      <dd>
+      Wenn es die Regel zuläßt, werden die Blätter aller Spieler und bei der Armut die geschobenen Karten gezeigt.
+      </dd>
+
+      <dt id="show_ai_information_hands">zeige Blätter (KI-Information)</dt>
+      <dd>
+      Die Blätter der Mitspieler werden nach den Informationen der KI angezeigt.
+      Helle Karte kann der Mitspieler haben, normal dargestellte muß er besitzen.
+      <br>
+      Warnung:
+      Da vor allem am Spielanfang viele Karten dargestellt werden verlangsamt die Einstellung das Programm.
+      Außerdem sind die Blätter nicht wirklich übersichtlich.
+      </dd>
+
+      <dt id="show_known_teams_in_game">zeige bekannte Teams im Spiel</dt>
+      <dd>
+      Sobald für einen Spieler die Teamzugehörigkeit bekannt wird (z.B. durch Ansagen und Spielen der Kreuz Dame) wird dessen Teamzugehörigkeit angezeigt.
+      </dd>
+
+      <dt id="show_ai_information_teams">zeige Teams (KI-Information)</dt>
+      <dd>
+      Bei den Mitspielern wird durch hell dargestellte Symbole das Team angezeigt, wie die KI es sich denkt (sofern es nicht bekannt ist).
+      </dd>
+
+      <dt id="show_trickpiles_points">zeige Punkte der Stichhaufen</dt>
+      <dd>
+      Auf den Stichhaufen steht, wie viele Punkte der Spieler schon gesammelt hat.
+      </dd>
+
+      <dt id="automatic_card_suggestion">automatischer Kartenvorschlag</dt>
+      <dd>
+      Immer wenn der menschliche Spieler dran ist wird automatisch eine Karte vorgeschlagen, diese wird in Richtung Tischmitte geschoben.
+      </dd>
+    </dl>
+
+    <h2 id="information_windows">Informationsfenster</h2>
+
+    <p>
+    Für die verschiedenen Spielinformationen können Fenster aktiviert werden, die sich bei Bedarf auch automatisch wieder schließen.
+    Geschlossen werden können die Fenster durch den entsprechenden Knopf oder einfach über einen Klick in die Spielfläche.
+    </p>
+    <p>
+    Alle Informationen sind auch über die Symbole sichtbar, wenn man sich nur auf die Symbole verläßt kann es aber leichter passieren, daß man etwas übersieht.
+    Insbesondere beim Genscher kann sich das sehr nachteilig auswirken.
+    </p>
+
+    <h3 id="gametype_window">Spieltyp</h3>
+    <div class="picture_center"><a href="pictures/settings/information.gametype.png"><img src="pictures/settings/information.gametype.small.jpg" width="348" height="223" alt="Spieltyp"></a></div>
+
+    <dl>
+      <dt id="show_window_gametype">zeige Fenster &bdquo;Spieltyp&rdquo;</dt>
+      <dd>
+      Beim Start eines Spiels wird der Spieltyp angezeigt, wenn kein normales Spiel vorliegt.
+      </dd>
+      <dd>
+      Wenn die Einstellung deaktiviert ist und <a href="#announce_swines_automatically">Schweine automatisch ansagen</a> deaktiviert ist und Schweine beim Spielstart angesagt werden müssen, können bei einem Farbsolo keine Schweine angesagt werden. 
+      </dd>
+
+      <dt id="close_window_gametype_automatically">schließ Fenster &bdquo;Spieltyp&rdquo; automatisch</dt>
+      <dd>
+      Das Fenster &bdquo;Spieltyp&rdquo; wird automatisch geschlossen.
+      </dd>
+
+      <dt id="gametype_window_close_delay">Verzögerung beim Schließen vom &bdquo;Spieltyp&rdquo;-Fenster</dt>
+      <dd>
+      Nach der angegebenen Zeit wird das &bdquo;Spieltyp&rdquo;-Fenster automatisch geschlossen.
+      </dd>
+    </dl>
+
+    <h3 id="full_trick">Voller Stich</h3>
+    <div class="picture_center"><a href="pictures/settings/information.full_trick.png"><img src="pictures/settings/information.full_trick.small.jpg" width="348" height="223" alt="Voller Stich"></a></div>
+
+    <dl>
+      <dt id="show_full_trick_window">zeige Fenster &bdquo;Voller Stich&rdquo;</dt>
+      <dd>
+      Das Fenster &bdquo;Ganzer Stich&rdquo; zeigt bei jedem vollen Stich an, weclher Spieler den Stich erhält und welche Sonderpunkte durch den Stich erreicht werden.
+      </dd>
+
+      <dt id="show_full_trick_window_if_special_points">zeige Fenster &bdquo;Voller Stich&rdquo; bei Sonderpunkten</dt>
+      <dd>
+      Wenn das Fenster &bdquo;Voller Stich&rdquo; normalerweise nicht angezeigt werden soll kann die Anzeige bei Vorliegen von Sonderpunkten aktiviert werden.
+      </dd>
+
+      <dt id="close_full_trick_automatically">schließ vollen Stich automatisch</dt>
+      <dd>
+      Der volle Stich wird automatisch geschlossen (ansonsten nur mit einem expliziten Mausklick).
+      </dd>
+
+      <dt id="full_trick_close_delay">Verzögerung beim Schließen vom vollen Stich</dt>
+      <dd>
+      Nach der angegebenen Zeit wird der volle Stich automatisch geschlossen und der nächste Stich geöffnet.
+      Durch einen Mausklick kann der Stich auch vorher geschlossen werden.
+      </dd>
+    </dl>
+
+    <h3 id="marriage_window">Hochzeit</h3>
+    <div class="picture_center"><a href="pictures/settings/information.marriage.png"><img src="pictures/settings/information.marriage.small.jpg" width="348" height="223" alt="Hochzeit"></a></div>
+
+    <dl>
+      <dt id="show_window_marriage">zeige Fenster &bdquo;Hochzeit&rdquo;</dt>
+      <dd>
+      Bei der Hochzeitsfindung wird ein Fenster angezeigt, der das Paar angibt.
+      </dd>
+
+      <dt id="close_window_marriage_automatically">schließ Fenster &bdquo;Hochzeit&rdquo; automatisch</dt>
+      <dd>
+      Das Fenster &bdquo;Hochzeit&rdquo; wird automatisch geschlossen.
+      </dd>
+
+      <dt id="marriage_window_close_delay">Verzögerung beim Schließen vom &bdquo;Hochzeit&rdquo;-Fenster</dt>
+      <dd>
+      Nach der angegebenen Zeit wird das &bdquo;Hochzeit&rdquo;-Fenster automatisch geschlossen.
+      </dd>
+    </dl>
+
+    <h3 id="genscher_window">Genscher</h3>
+    <div class="picture_center"><a href="pictures/settings/information.genscher.png"><img src="pictures/settings/information.genscher.small.jpg" width="348" height="223" alt="Genscher"></a></div>
+
+    <dl>
+      <dt id="show_window_genscher">zeige Fenster &bdquo;Genscher&rdquo;</dt>
+      <dd>
+      Bei einem Genscher wird ein Fenster angezeigt, das das neue Re-Paar anzeigt.
+      </dd>
+
+      <dt id="close_window_genscher_automatically">schließ Fenster &bdquo;Genscher&rdquo; automatisch</dt>
+      <dd>
+      Das Fenster &bdquo;Genscher&rdquo; wird automatisch geschlossen.
+      </dd>
+
+      <dt id="genscher_window_close_delay">Verzögerung beim Schließen vom &bdquo;Genscher&rdquo;-Fenster</dt>
+      <dd>
+      Nach der angegebenen Zeit wird das &bdquo;Genscher&rdquo;-Fenster automatisch geschlossen.
+      </dd>
+    </dl>
+
+    <h3 id="announcement_window">Ansage</h3>
+    <div class="picture_center"><a href="pictures/settings/information.announcement.png"><img src="pictures/settings/information.announcement.small.jpg" width="348" height="223" alt="Ansage"></a></div>
+
+    <dl>
+      <dt id="show_window_announcement">zeige Fenster &bdquo;Ansage&rdquo;</dt>
+      <dd>
+      Wird eine Ansage getätigt, wird ein Fenster angezeigt.
+      In diesem Fenster kann eine Gegenansage getätigt werden, ansonsten nur über das Menü.
+      </dd>
+
+      <dt id="close_window_announcement_automatically">schließ Fenster &bdquo;Ansage&rdquo; automatisch</dt>
+      <dd>
+      Das Fenster &bdquo;Ansage&rdquo; wird automatisch geschlossen.
+      </dd>
+
+      <dt id="announcement_window_close_delay">Verzögerung beim Schließen vom &bdquo;Ansage&rdquo;-Fenster</dt>
+      <dd>
+      Nach der angegebenen Zeit wird das &bdquo;Ansage&rdquo;-Fenster automatisch geschlossen.
+      </dd>
+    </dl>
+
+    <h3 id="swines_window">Schweine</h3>
+    <div class="picture_center"><a href="pictures/settings/information.swines.png"><img src="pictures/settings/information.swines.small.jpg" width="348" height="223" alt="Schweine"></a></div>
+
+    <dl>
+      <dt id="show_window_swines">zeige Fenster &bdquo;Schweine&rdquo;</dt>
+      <dd>
+      Wenn ein Spieler Schweine oder Hyperschweine ansagt wird ein Fenster angezeigt.
+      </dd>
+      <dd>
+      Wenn die Einstellung deaktiviert ist und <a href="#announce_swines_automatically">Schweine automatisch ansagen</a> deaktiviert ist und Hyperschweine beim Spielstart angesagt werden müssen, können bei einem Farbsolo keine Hyperschweine angesagt werden. 
+      </dd>
+
+      <dt id="close_window_swines_automatically">schließ Fenster &bdquo;Schweine&rdquo; automatisch</dt>
+      <dd>
+      Das Fenster &bdquo;Schweine&rdquo; wird automatisch geschlossen.
+      </dd>
+
+      <dt id="swines_window_close_delay">Verzögerung beim Schließen vom &bdquo;Schweine&rdquo;-Fenster</dt>
+      <dd>
+      Nach der angegebenen Zeit wird das &bdquo;Schweine&rdquo;-Fenster automatisch geschlossen.
+      </dd>
+    </dl>
+
+
+    <h3 id="network_window">Netzwerk</h3>
+    <div class="picture_center"><a href="pictures/settings/information.network.png"><img src="pictures/settings/information.network.small.jpg" width="348" height="223" alt="Netzwerk"></a></div>
+    <dl>
+
+      <dt id="network_connections_urgency_hint">Verbindungs-Hinweis</dt>
+      <dd>Gibt einen Hinweis, daß sich die Netzwerk-Verbindungen geändert haben.</dd>
+
+      <dt id="network_chat_urgency_hint">Chat-Hinweis</dt>
+      <dd>Gibt einen Hinweis, daß eine neue Chat-Nachricht angekommen ist.</dd>
+    </dl>
+
+    <h2 id="cards_order">Kartensortierung</h2>
+    <div class="picture_center"><a href="pictures/settings/cards_order.png"><img src="pictures/settings/cards_order.small.jpg" width="348" height="223" alt="Kartensortierung"></a></div>
+    <p>
+    Die Karten koennen geordnet oder gemischt dargestellt werden.
+    Bei der Ordnung wird nach den fünf Spielfarben Trumpf, Kreuz, Pik, Herz und Karo sortiert, bei jeder Farbe kann noch zwischen auf- und absteigenden Wert gewählt werden.
+    </p>
+
+    <h2 id="appearance">Erscheinungsbild</h2>
+
+    <h3 id="table">Tisch</h3>
+    <div class="picture_center"><a href="pictures/settings/appearance.table.png"><img src="pictures/settings/appearance.table.small.jpg" width="348" height="223" alt="Tisch"></a></div>
+    <dl>
+      <dt id="own_hand_on_table_bottom">eigenes Blatt unten</dt>
+      <dd>
+      Wenn aktiviert, wird das Blatt des menschlichen Spielers am unteren Tischrand angezeigt.
+      </dd>
+
+      <dt id="table_rotation">Tischrotation</dt>
+      <dd>
+      Gibt an, an welcher Position der erste Spieler sitzt (es wird im Uhrzeigersinn gedreht).
+      </dd>
+
+      <dt id="rotate_trick_cards">rotiere Stichkarten</dt>
+      <dd>
+      Wenn die Stichkarten rotiert werden, werden die Karten so dargestellt, als ob jeder Spieler seine Karte gerade in die Mitte geschoben hat.
+      Werden sie nicht rotiert, so liegen die Stichkarten aufrecht.
+      </dd>
+    </dl>
+
+    <h3 id="cards">Karten</h3>
+    <div class="picture_center"><a href="pictures/settings/appearance.cards.png"><img src="pictures/settings/appearance.cards.small.jpg" width="348" height="223" alt="Karten"></a></div>
+
+    <dl>
+      <dt id="original_cards_size">normale Kartengröße</dt>
+      <dd>
+      Die Karten werden in der in dem Kartensatz vorliegenden Größe dargestellt.
+      </dd>
+
+      <dt id="cards_height">Kartenhöhe</dt>
+      <dd>
+      Die Karten werden skaliert, so daß die Höhe die angegebene erreicht.
+      Das Verhältnis von Breite und Höhe bleibt erhalten.
+      </dd>
+    </dl>
+
+    <h3 id="theme">Thema</h3>
+    <div class="picture_center"><a href="pictures/settings/appearance.theme.png"><img src="pictures/settings/appearance.theme.small.jpg" width="348" height="223" alt="Thema"></a></div>
+
+    <dl>
+      <dt id="background">Hintergrund</dt>
+      <dd>
+      Mit dem Hintergrund kann angegeben werden, welche Graphik als Tischhintergrund (gekachelt) genutzt wird.
+      </dd>
+
+      <dt id="cardset">Kartenspiel</dt>
+      <dd>
+      Das Kartenspiel beinhaltet die Graphiken für die Karten und die Symbole.
+      </dd>
+
+      <dt id="cards_back">Kartenrueckseite</dt>
+      <dd>
+      Die Kartenrückseite kann von den Rückseiten vom gewählten Kartenspiel ausgewählt werde.
+      </dd>
+    </dl>
+
+    <h3 id="fonts_colors">Schriftarten, Farben</h3>
+    <div class="picture_center"><a href="pictures/settings/appearance.fonts_colors.png"><img src="pictures/settings/appearance.fonts_colors.small.jpg" width="348" height="223" alt="Schriftarten, Farben"></a></div>
+
+    <dl>
+      <dt id="name_fonts">Schriftart der Namen</dt>
+      <dd>
+      Hier kann die Schriftart für die Namen der Spieler im Spielfeld angegeben werden.
+      </dd>
+
+      <dt id="name_fonts_color">Farbe der Namen</dt>
+      <dd>
+      Hier kann die Farbe für die Namen der Spieler im Spielfeld angegeben werden.
+      </dd>
+
+      <dt id="name_active_fonts_color">Farbe des Namens des aktiven Spielers</dt>
+      <dd>
+      Dem aktiven Spieler kann eine andere Farbe gegeben werden, so daß sich dieser leichter erkennen läßt.
+      Der aktive Spieler im Spiel ist der, der die nächste Karte ausspielen muß (d.h. beim vollen Stich auch der Gewinner des Stiches), wenn das Spiel beendet ist werden die Gewinner angezeigt, <span class="ToDo">beim Turnierende der/die Turniergewinner</span>.
+      </dd>
+
+      <dt id="trickpile_points_font">Schriftart der Punkte der Stichhaufen</dt>
+      <dd>
+      Diese Schriftart wird für die Punkte der Stichhaufen verwendet.
+      </dd>
+
+      <dt id="trickpile_points_font_color">Farbe der Punkte der Stichhaufen</dt>
+      <dd>
+      Die Farbe der Schrift sollte an den Kartenhintergrund angepaßt werden.
+      </dd>
+
+      <dt id="poverty_shift_arrow_color">Farbe des Schiebepfeils</dt>
+      <dd>
+      Diese Farbe wird für den Schiebepfeil verwendet.
+      </dd>
+    </dl>
+
+    <h3 id="splash_screen">Splash-Screen</h3>
+    <div class="picture_center"><a href="pictures/settings/appearance.splash-screen.png"><img src="pictures/settings/appearance.splash-screen.small.jpg" width="348" height="223" alt="Splash-Screen"></a></div>
+
+    <dl>
+      <dt id="show_splash_screen">zeige Splash-Screen</dt>
+      <dd>
+      Wem der Splash-Screen stört, der kann ihn hier abschalten.
+      </dd>
+
+      <dt id="splash_screen_transparent">transparenter Splash-Screen</dt>
+      <dd>
+      Der transparente Splash-Screen sieht meiner Meinung nach besser aus &mdash; aber man hat ja die Wahl.
+      </dd>
+    </dl>
+
+    <h2>Sonstige</h2>
+    <dl>
+      <dt id="automatic_savings">Automatisches Speichern</dt>
+      <dd>
+      Es werden die folgenden Daten automatisch gespeichert:
+      <ul>
+	<li>Version</li>
+	<li>Einstellungen</li>
+	<li>Regeln</li>
+	<li>Spieler</li>
+	<li>Tunier</li>
+      </ul>
+      Diese Einstellung kann über die Kommandozeilenoption <kbd>--no-automatic-savings</kbd> abgestellt werden.
+      </dd>
+    </dl>
+
+
+    <h2>Übersicht</h2>
+    <p>
+    Die Zeiten werden immer in Millisekunden angegeben.
+    </p>
+
+    <table>
+      <colgroup span="3">
+	<col width="2*">
+	<col span="2" width="*">
+      </colgroup>
+
+      <tr>
+	<th align="right">Bezeichnung</th>
+	<th align="left">Kennwort</th>
+	<th align="left">Standardwert</th>
+      </tr>
+      <!-- Allgemein -->
+      <tr>
+	<th align="right">Name</th>
+	<td>name</td>
+	<td>vom System</td>
+      </tr>
+      <tr>
+	<th align="right">Sprache</th>
+	<td>language</td>
+	<td>vom System</td>
+      </tr>
+      <tr>
+	<th align="right">HTML-Betrachter</th>
+	<td>browser</td>
+	<td>Windows: vom System; Linux: firefox, epiphany, galeon, mozilla, opera, konqueror, netscape, w3m, links, lynx</td>
+      </tr>
+      <tr>
+	<th align="right">Sound</th>
+	<td>sound</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">zeige Fehlermeldung-Knopf im &bdquo;Spielende&rdquo;-Fenster</th>
+	<td>show bug report button in game finished window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Speicher die Fehlermeldungen auf dem Desktop</th>
+	<td>save bug reports on desktop</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Turnieränderungen speichern</th>
+	<td>save party shages</td>
+	<td>Ja</td>
+      </tr>
+      <!-- Verhalten -->
+      <tr>
+	<th align="right">Ansagen über den Tisch</th>
+	<td>announce in table</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Kartenausspielen</th>
+	<td>card play delay</td>
+	<td>500</td>
+      </tr>
+      <!-- Unterstützung -->
+      <tr>
+	<th align="right">zeige Solospieler im Spiel</th>
+	<td>show soloplayer in game</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Schweine automatisch ansagen</th>
+	<td>announce swines automatically</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">zeige ob zulässig</th>
+	<td>show if valid</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">hebe zulässige Karten hervor</th>
+	<td>emphasize valid cards</td>
+	<td>Nein</td>
+      </tr>
+      <!-- Hilfe -->
+      <tr>
+	<th align="right">zeige alle Blätter</th>
+	<td>show all hands</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">zeige Blätter (KI-Information)</th>
+	<td>show all hands</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">zeige bekannte Teams im Spiel</th>
+	<td>show ai information hands</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">zeige Teams (KI-Information)</th>
+	<td>show ai information teams</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">zeige Punkte der Stichhaufen</th>
+	<td>show trickpiles points</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">automatischer Kartenvorschlag</th>
+	<td>automatic card suggestion</td>
+	<td>Nein</td>
+      </tr>
+      <!-- Informationsfenster -->
+      <!-- > Spieltyp -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Spieltyp&rdquo;</th>
+	<td>show gametype window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ &bdquo;Spieltyp&rdquo;-Fenster automatisch</th>
+	<td>close gametype window automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom &bdquo;Spieltyp&rdquo;-Fenster</th>
+	<td>gametype window close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- > Voller Stich -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Voller Stich&rdquo;</th>
+	<td>show full trick window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Voller Stich&rdquo; bei Sinderpunkten</th>
+	<td>show full trick window if special points</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ vollen Stich automatisch</th>
+	<td>close full trick automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom vollen Stich</th>
+	<td>full trick close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- > Hochzeit -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Hochzeit&rdquo;</th>
+	<td>show marriage window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ &bdquo;Hochzeit&rdquo;-Fenster automatisch</th>
+	<td>close marriage window automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom &bdquo;Hochzeit&rdquo;-Fenster</th>
+	<td>marriage window close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- > Genscher -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Genscher&rdquo;</th>
+	<td>show genscher window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ &bdquo;Genscher&rdquo;-Fenster automatisch</th>
+	<td>close genscher window automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom &bdquo;Genscher&rdquo;-Fenster</th>
+	<td>genscher window close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- > Ansage -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Ansage&rdquo;</th>
+	<td>show announcement window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ &bdquo;Ansage&rdquo;-Fenster automatisch</th>
+	<td>close announcement window automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom &bdquo;Ansage&rdquo;-Fenster</th>
+	<td>announcement window close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- > Schweine -->
+      <tr>
+	<th align="right">zeige Fenster &bdquo;Schweine&rdquo;</th>
+	<td>show swines window</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">schließ &bdquo;Schweine&rdquo;-Fenster automatisch</th>
+	<td>close swines window automatically</td>
+	<td>Nein</td>
+      </tr>
+      <tr>
+	<th align="right">Verzögerung beim Schließen vom &bdquo;Schweine&rdquo;-Fenster</th>
+	<td>swines window close delay</td>
+	<td>2000</td>
+      </tr>
+      <!-- Kartensortierung -->
+      <tr>
+	<th align="right">Kartensortierung</th>
+	<td>cards order</td>
+	<td>Trumpf aufwärts, Kreuz abwärts, Herz abwärts, Pik abwärts, Karo abwärts </td>
+      </tr>
+      <!-- Erscheinungsbild -->
+      <!-- > Tisch -->
+      <tr>
+	<th align="right">eigenes Blatt unten</th>
+	<td>own hand on table bottom</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Tischrotation</th>
+	<td>table rotation</td>
+	<td>0</td>
+      </tr>
+      <tr>
+	<th align="right">rotiere Stichkarten</th>
+	<td>rotate trick cards</td>
+	<td>Ja</td>
+      </tr>
+      <!-- > Karten -->
+      <tr>
+	<th align="right">normale Kartengröße</th>
+	<td>original cards size</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">Kartenhöhe</th>
+	<td>cards height</td>
+	<td>Originalgröße</td>
+      </tr>
+      <!-- > Thema -->
+      <tr>
+	<th align="right">Hintergrund</th>
+	<td>background</td>
+	<td>table</td>
+      </tr>
+      <tr>
+	<th align="right">Kartenspiel</th>
+	<td>cardset</td>
+	<td>Altenburg/french</td>
+      </tr>
+      <tr>
+	<th align="right">Kartenrueckseite</th>
+	<td>cards back</td>
+	<td>penguin</td>
+      </tr>
+      <!-- > Schriftarten, Farben -->
+      <tr>
+	<th align="right">Schriftart der Namen</th>
+	<td>name fonts</td>
+	<td>Serif Bold Italic 16</td>
+      </tr>
+      <tr>
+	<th align="right">Farbe der Namen</th>
+	<td>name fonts color</td>
+	<td>black</td>
+      </tr>
+      <tr>
+	<th align="right">Farbe des Namens des aktiven Spielers</th>
+	<td>name active fonts color</td>
+	<td>green</td>
+      </tr>
+      <tr>
+	<th align="right">Schriftart der Punkte der Stichhaufen</th>
+	<td>trickpile points font</td>
+	<td>Serif Bold 18</td>
+      </tr>
+      <tr>
+	<th align="right">Farbe der Punkte der Stichhaufen</th>
+	<td>trickpile points font color</td>
+	<td>black</td>
+      </tr>
+      <tr>
+	<th align="right">Farbe des Schiebepfeils</th>
+	<td>poverty shift arrow color</td>
+	<td>black</td>
+      </tr>
+      <!-- > Splash-Screen -->
+      <tr>
+	<th align="right">zeige Splash-Screen</th>
+	<td>show splash screen</td>
+	<td>Ja</td>
+      </tr>
+      <tr>
+	<th align="right">transparenter Splash-Screen</th>
+	<td>splash screen transparent</td>
+	<td>Nein</td>
+      </tr>
+      <!-- Sonstige -->
+      <tr>
+	<th align="right">automatisches Speichern</th>
+	<td>automatic savings</td>
+	<td>Ja</td>
+      </tr>
+    </table>
+
+    <div class="Version">Version 0.7.5</div>
+
+  </body>
+</html>

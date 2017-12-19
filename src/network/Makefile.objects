@@ -1,0 +1,9 @@
+# All object-files
+OBJECTS = \
+	types.o \
+	server.o \
+	  server.os.o \
+	listener.o \
+	connection.o \
+	  interpreter.o \
+	  actor.o

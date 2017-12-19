@@ -1,0 +1,40 @@
+# FreeDoko translation: part gtkmm, menu
+# language: english
+# version: 0.7.5
+
+# menu
+Menu::party				= partie
+  Menu::Item::new party			= nouvelle partie
+  Menu::Item::load party		= charger partie
+  Menu::Item::save party		= sauver partie
+  Menu::Item::end party			= finir la partie
+  Menu::Item::quit			= quitter
+Menu::information			= information
+  Menu::Item::last trick		= dernière levée
+  Menu::Item::card suggestion		= suggestion de carte
+  Menu::Item::rules			= règles
+  Menu::Item::game debug		= info sur le jeu
+  Menu::Item::party points		= points de partie
+  Menu::Item::players			= joueurs
+  Menu::Item::players database		= base de données des joueurs
+Menu::announcements			= annonces
+  Menu::Item::swines announcement	= cochons
+  Menu::Item::hyperswines announcement	= hypercochons
+Menu::preferences			= préférences
+  Menu::Item::preferences		= préférences
+  Menu::Item::preferences::themes	= thèmes
+Menu::network				= réseau
+  Menu::Item::chatter			= chat
+  Menu::Item::network log		= log réseau
+  Menu::Item::network settings		= réglages
+
+Menu::Item::bug report			= rapport de bug
+
+Menu::help				= aide
+  Menu::Item::help index		= index de l'aide
+  Menu::Item::license			= licence
+  Menu::Item::cardset license		= licence de jeu
+  Menu::Item::changelog			= historique des changements
+  Menu::Item::support			= support
+  Menu::Item::about			= à propos
+  Menu::Item::generate error		= générer erreur

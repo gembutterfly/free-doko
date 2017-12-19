@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: Fehlerbericht</title>
+
+    <meta name="date" content="2004-03-18">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.icon.png">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="overview.html" title="Übersicht">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="keys.html" title="Tastaturkürzel">
+    <link rel="next" href="settings.html" title="Einstellungen">
+
+    <link rel="alternate" href="../../en/operation/bug_report.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+
+
+    <h1>Fehlerbericht</h1>
+
+
+    <h2>Sinn und Zweck</h2>
+
+    <p>
+    Die Fehlerberichte helfen uns, von Ihnen entdeckte Fehler nachzuvollziehen.
+    Wir verstehen dabei unter einem Fehler, daß sich das Programm nicht entsprechend der Dokumentation bzw. der Erwartung verhält.
+    </p>
+
+    <p>
+    Beispiele wären:
+    </p>
+    <ul>
+      <li>Den Menüpunkt <cite>letzter Stich</cite> gewählt, es erscheinen aber die Regeln.</li>
+      <li>
+      Der Computer spielt nicht vernünftig.
+      Da bitte schreiben, was Sie als Spielverhalten erwarten und warum.
+      </li>
+    </ul>
+
+    <p>
+    Es gibt zwei Möglichkeite, Fehlermeldungen zu erhalten:
+    </p>
+    <ol>
+      <li>Sie wählen den Menüpunkt <cite>Fehlermeldung</cite> (s.u.),</li>
+      <li>das Programm bemerkt selber einen Fehler und generiert die Fehlermeldung automatisch, bevor es sich beendet.</li>
+    </ol>
+
+
+    <h3>Fehlermeldungs-Fenster</h3>
+
+    <p>
+    Wenn Sie im Menü <cite>Fehlermeldung</cite> auswählen, erscheint folgendes Fenster:
+    </p>
+    <div style="text-align:center;">
+      <img src="pictures/Fehlerbericht.png" alt="Fehlerbericht Screenshot">
+    </div>
+    <p>
+    Das Fenster ist wie folgt aufgeteilt:
+    </p>
+
+    <ul>
+      <li>
+      Im oberen Bereich steht, was es mit der Fehlermeldung auf sich hat.
+      Wichtig ist da eigentlich nur, wohin Sie die Fehlermeldung schicken sollen, und zwar an <a href="mailto:freedoko@users.sourceforge.net">freedoko@users.sourceforge.net</a> senden oder direkt auf der SourceForge-Fehlerseite <a href="http://sourceforge.net/tracker/?func=add&amp;group_id=38051&amp;atid=421197">http://sourceforge.net/tracker/?func=add&amp;group_id=38051&amp;atid=421197</a> eintragen.
+      </li>
+      <li>
+      In der Mitte steht, in welche Datei die erzeugte Fehlermeldung geschrieben wird (<cite>FreeDoko.bug_report.</cite> gefolgt vom Startwert des Spiels).
+      Diese Datei finden Sie im Ausführungsverzeichnis, das ist normalerweise Ihr Heimatverzeichnis, unter Windows wird der Fehlerbericht auf dem Desktop abgespeichert.
+      </li>
+      <li>
+      Darunter kann noch die <a href="settings.html#save_bug_reports_on_desktop">Einstellung</a>, ob der Fehlerbericht auf dem Desktop abgespeichert werden soll, geändert werden.
+      </li>
+      <li>
+      Im unteren Feld können (sollten) Sie einen Kommentar hinzuschreiben, in dem Sie beschreiben, was für ein Fehler aufgetreten ist.
+      <br>
+      Wenn Sie eine Rückmeldung erhalten möchten geben Sie bitte auch ihre E-Mail-Adresse mit an, damit wir den Fehlerbericht leicht zuordnen können.
+      </li>
+    </ul>
+
+
+    <h3>Automatische Erstellung</h3>
+
+    <p>
+    Bemerkt FreeDoko einen Fehler, z.B. daß am Ende vom Spiel die Teams nicht bekannt sind, dann erstellt das Programm automatisch einen Fehlerbericht und beendet sich.
+    Dabei wird Ihnen ein Hinweis ausgegeben (unter Windows in der DOS-Box), was falsch gelaufen ist und wie die Fehlerdatei heißt.
+    Wenn Sie noch eine Bemerkung einfügen wollen, können Sie die Fehlerdatei einfach mit einem Texteditor bearbeiten (s.u.).
+    </p>
+
+
+    <h2>Fehler-Datei</h2>
+
+    <p>
+    Die Fehler-Datei ist eine normale Textdatei, die Sie sich mit einem normalen Texteditor (z.B. <samp>notepad</samp>, <samp>vi</samp>) anschauen können.
+    Bitte verändern Sie nach dem Kommentar nichts, da wir den Fehlerbericht ansonsten nicht direkt nachspielen können.
+    Den Kommentar können Sie aber hinterher noch erweitern.
+    </p>
+
+    <p>
+    Der Inhalt ist wie folgt:
+    </p>
+    <ol>
+      <li>Informationen über das Programm:
+      <ol>
+	<li>Version</li>
+	<li>Zeitpunkt der Programmerstellung</li>
+	<li>Betriebssystem</li>
+	<li>Uhrzeit</li>
+	<li>genutzte Sprache</li>
+      </ol>
+      </li>
+      <li>Ihr Kommentar</li>
+      <li>Das aktuelle Spiel:
+      <ol>
+	<li>die Regeln</li>
+	<li>die Spielerkonfigurationen</li>
+	<li>Vorbehalte und Spieltyp</li>
+	<li>die einzelnen Blätter</li>
+	<li>der Spielablauf (gespielte Karten, Ansagen, Stiche)</li>
+	<li>die aktuellen Blätter</li>
+	<li>der aktuelle Stich</li>
+	<li>das Spielverhalten vom menschlichen Spieler</li>
+      </ol>
+      </li>
+      <li>Eventuell das vorherige Spiel (im selben Format wie das aktuelle).</li>
+    </ol>
+
+    <div class="Version">Version 0.6.7</div>
+
+  </body>
+</html>

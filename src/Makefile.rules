@@ -1,0 +1,160 @@
+.PHONY : rules_help
+rules_help:
+	@echo "  chmod          sets the access rights"
+	@echo "  touch          touch all files"
+	@echo "  clean          remove objects files"
+	@echo "  objects        create the object files"
+	@echo "  directories    call make for the subdirectories"
+
+
+
+# check for current directory
+ifeq ($(FREEDOKO_WORKING_DIRECTORY),)
+FREEDOKO_WORKING_DIRECTORY=.
+endif
+
+ifeq ($(FREEDOKO_WORKING_DIRECTORY),.)
+# stay in the same directory
+
+TARGET_DIR_LOCAL=
+
+else # if !(local compiling)
+
+# absolute path
+
+ifeq ($(OPERATING_SYSTEM), Windows)
+# $(abspath ) does not work under Windows
+TARGET_DIR_LOCAL=$(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR)/
+# check for relative paths
+# needed in order to remove the current subdir
+ifeq ($(firstword $(subst /, ,$(FREEDOKO_WORKING_DIRECTORY))),.)
+	TARGET_DIR_LOCAL=$(shell cd)/$(DEPTH)/$(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR)/
+endif
+ifeq ($(firstword $(subst /, ,$(FREEDOKO_WORKING_DIRECTORY))),..)
+	TARGET_DIR_LOCAL=$(shell cd)/$(DEPTH)/$(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR)/
+endif
+
+else
+TARGET_DIR_LOCAL=$(abspath $(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR))/
+# check for relative paths
+# needed in order to remove the current subdir
+ifeq ($(firstword $(subst /, ,$(FREEDOKO_WORKING_DIRECTORY))),.)
+	TARGET_DIR_LOCAL=$(abspath $(DEPTH)/$(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR))/
+endif
+ifeq ($(firstword $(subst /, ,$(FREEDOKO_WORKING_DIRECTORY))),..)
+	TARGET_DIR_LOCAL=$(abspath $(DEPTH)/$(FREEDOKO_WORKING_DIRECTORY)/$(SUBDIR))/
+endif
+
+endif
+
+ifeq ($(SHELLTYPE), sh)
+
+# create the subdirectory for the object files
+.PHONY: objects_target_dir
+objects_target_dir:
+	@if [ ! -d $(TARGET_DIR_LOCAL)"." ]; then mkdir -p $(TARGET_DIR_LOCAL)"."; fi
+
+endif # if (sh)
+
+ifeq ($(SHELLTYPE), COMMAND.COM)
+
+# create the subdirectory for the object files
+.PHONY: objects_target_dir
+objects_target_dir:
+	@if not exist $(subst /,\,$(TARGET_DIR_LOCAL)) mkdir $(subst /,\,$(TARGET_DIR_LOCAL))
+
+endif # if (COMMAND.COM)
+
+# compile the objects
+.PHONY: objects
+objects: objects_target_dir
+
+endif # if !(local compiling)
+
+# compile the objects
+.PHONY: objects
+objects: $(addprefix $(TARGET_DIR_LOCAL),$(OBJECTS))
+
+
+$(TARGET_DIR_LOCAL)%.o : %.cpp \
+		  $(DEPTH)/Makefile.modules \
+		  $(DEPTH)/Makefile.local \
+		  $(DEPTH)/Makefile.os
+# Gentoo users do want to see the real compile line.
+# So remove the next line and remove the '@' in the line after.
+	@echo $(CXX) -c $(SUBDIR)/$<
+	@$(CXX) $(INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(DEPGEN_FLAGS) -o $@ -c $<
+
+
+-include $(OBJECTS:%.o=$(TARGET_DIR_LOCAL)%.d)
+
+
+# call make for the subdirectories
+.PHONY: directories
+directories: $(DIRECTORIES)
+
+# call make for the subdirectories
+.PHONY : $(DIRECTORIES)
+$(DIRECTORIES) :
+	$(MAKE) -C $@
+
+# remove the object files in this directory and the subdirectories
+.PHONY : clean
+clean :
+ifeq ($(SHELLTYPE), sh)
+	-$(RM) $(TARGET_DIR_LOCAL)*.o
+	-$(RM) $(TARGET_DIR_LOCAL)*.d
+ifeq ($(SUBDIR),.)
+	-$(RM) $(PROGRAM)
+	-$(RM) core core.*
+	-$(RM) tags
+endif
+	-for d in *; do	test -d $$d && test -e $$d/Makefile && $(MAKE) -C $$d $@; done
+ifneq ($(FREEDOKO_WORKING_DIRECTORY),.)
+	-test -d $(TARGET_DIR_LOCAL) && rmdir $(TARGET_DIR_LOCAL)
+endif
+endif
+ifeq ($(SHELLTYPE), COMMAND.COM)
+	-$(RM) $(subst /,\,$(TARGET_DIR_LOCAL))*.o
+	-$(RM) $(subst /,\,$(TARGET_DIR_LOCAL))*.d
+ifeq ($(SUBDIR),.)
+	-$(RM) $(PROGRAM).exe
+endif
+	-for %%d in ( $(DIRECTORIES) ) do $(MAKE) -C %%d $@
+ifneq ($(FREEDOKO_WORKING_DIRECTORY),.)
+	-rmdir $(subst /,\,$(TARGET_DIR_LOCAL))
+endif
+endif
+
+# clean the directory
+.PHONY: delete
+delete : clean
+
+# touch all files
+# use this if you have clock problems
+ifeq ($(SHELLTYPE), sh)
+.PHONY : touch
+touch :
+	touch -c *
+	@for d in *; \
+	do	if test -d $$d; \
+		then	if test -e $$d/Makefile; \
+			then	$(MAKE) -C $$d $@; \
+			fi \
+		fi \
+	done
+endif
+
+# sets the access rights
+# 644 for files, 755 for directories
+ifeq ($(SHELLTYPE), sh)
+.PHONY : chmod
+chmod :
+	@find -type d -exec chmod +x \{\} \;
+	chmod -R go-w .
+	chmod -R a+rX .
+	@find . ! -type d ! -type l -exec chmod -x \{\} \;
+	@find -name "c" -exec chmod +x \{\} \;
+	@find -name "*.bat" -exec chmod +x \{\} \;
+	@find -name "*.exe" -exec chmod +x \{\} \;
+endif

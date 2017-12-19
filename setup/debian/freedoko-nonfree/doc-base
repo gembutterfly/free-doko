@@ -1,0 +1,9 @@
+Document: FreeDoko
+Title: FreeDoko Handbuch
+Author: Diether Knof, Borg Enders
+Abstract: Dokumentation für das Doppekkopfspiel FreeDoko
+Section: Apps/Games
+     
+Format: HTML
+Index: /usr/share/doc/freedoko-nonfree/manual/de/index.html
+Files: /usr/share/doc/freedoko-nonfree/manual/de/*.html /usr/share/doc/freedoko/manual/de/operation/*.html

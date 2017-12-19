@@ -1,0 +1,116 @@
+# FreeDoko translation: part messages
+# language: deutsch
+# version: 0.7.5
+
+
+Message::creating directory '%sdir%'		= \
+	Erstelle Verzeichnis '%sdir%'.
+Message::failed 				= Fehler
+
+Message::party load: open failed '%sfilename%'	= \
+	Fehler beim Öffnen der Datei '%sfilename%'.
+Message::party load: load error '%sfilename%'	= \
+	Fehler beim Laden des Turniers aus der Datei '%sfilename%'.
+
+Message::network support	= \
+	Das Netzwerkspiel ist noch nicht vollständig implementiert.\n\
+	Der Mehrspielermodus wird erst zur Version 0.8.0 vollständig implentiert sein, Sie können jedoch schon jetzt Teile davon testen und uns Bemerkungen, Vorschläge, ... zuschicken (free-doko-developer@sourceforge.net).\n\
+	Bisher sollten die Spiele zu zweit funktionieren, bei Ansagen kann es aber noch zu Problemen kommen.
+
+Error::could not create listener on port %uport%	= \
+	Fehler: Konnte keinen Empfänger auf dem Port %uport% erstellen.
+
+Error::loading default cardset %scardset%		= \
+	Konnte nicht den Standard-Kartensatz '%scardset%' laden.\n\
+	Ist die Installation vollständig?
+Error::loading default cards back %sback% (%scardset%)	= \
+	Konnte nicht die Standard-Kartenrückseite '%sback%' des Kartensatzes '%scardset%' laden.\n\
+	Ist die Installation vollständig?
+Error::loading default background %sbackground%	= \
+	Konnte nicht den Standard-Hintergrund '%sbackground%' laden.\n\
+	Ist die Installation vollständig?
+
+Error::could not load cardset %scardset%		= \
+	Fehler beim Laden des Kartensatzes '%scardset%'.\n\
+	Wenn Sie noch keinen Kartensatz installiert haben, finden Sie welche auf unserer Internetseite http://free-doko.sourceforge.net/de/Dateien.html.
+Error::could not find any back for cardset %scardset%	= \
+	Konnte keine Kartenrückseite für den Kartensatz '%scardset%' finden.
+Error::could not find any background 			= \
+	Konnte keinen Hintergrund finden.
+
+Error::loading the card %tcard% (%scardset%)            = \
+	Konnte die Karte '%tcard%' vom Kartensatz '%scardset%' nicht laden
+Error::loading the card back %sback% (%scardset%)       = \
+	Konnte die Kartenrückseite '%sback%' vom Kartensatz '%scardset%' nicht laden.
+Error::loading the background %sbackground% 		= \
+	Konnte den Hintergrund '%sbackground%' nicht laden.
+
+Error::loading logo (%sfile%) =\
+	Konnte das Logo nicht aus der Datei '%sfile%' laden.
+Error::loading icon (%sfile%) =\
+	Konnte das Symbol nicht aus der Datei '%sfile%' laden.
+
+Error::Party::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Fehler beim Speichern des Tuniers.\n\
+	Konnte temporäre Datei '%stmpfile% nicht öffnen.\n\
+	Breche Speichern ab.
+Error::Party::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Fehler beim Speichern des Tuniers.\n\
+	Konnte das Tunier nicht in die temporäre Datei '%stmpfile% schreiben.\n\
+	Lasse temporäre Datei bestehen (zur Fehleridentifikation).
+Error::Party::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Fehler beim Speichern des Tuniers.\n\
+	Konnte die temporäre Datei '%stmpfile% nicht in die gewünschte Datei %sfile% umbenennen.\n\
+	Lasse temporäre Datei bestehen.
+
+Error::Rule::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Fehler beim Speichern der Regeln.\n\
+	Konnte temporäre Datei '%stmpfile% nicht öffnen.\n\
+	Breche Speichern ab.
+Error::Rule::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Fehler beim Speichern der Regeln.\n\
+	Konnte die Regeln nicht in die temporäre Datei '%stmpfile% schreiben.\n\
+	Lasse temporäre Datei bestehen (zur Fehleridentifikation).
+Error::Rule::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Fehler beim Speichern der Regeln.\n\
+	Konnte die temporäre Datei '%stmpfile% nicht in die gewünschte Datei %sfile% umbenennen.\n\
+	Lasse temporäre Datei bestehen.
+
+Error::Setting::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Fehler beim Speichern der Einstellungen.\n\
+	Konnte temporäre Datei '%stmpfile% nicht öffnen.\n\
+	Breche Speichern ab.
+Error::Setting::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Fehler beim Speichern der Einstellungen.\n\
+	Konnte die Einstellungen nicht in die temporäre Datei '%stmpfile% schreiben.\n\
+	Lasse temporäre Datei bestehen (zur Fehleridentifikation).
+Error::Setting::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Fehler beim Speichern der Einstellungen.\n\
+	Konnte die temporäre Datei '%stmpfile% nicht in die gewünschte Datei %sfile% umbenennen.\n\
+	Lasse temporäre Datei bestehen.
+
+Error::Aiconfig::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Fehler beim Speichern der KI-Konfiguration.\n\
+	Konnte temporäre Datei '%stmpfile% nicht öffnen.\n\
+	Breche Speichern ab.
+Error::Aiconfig::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Fehler beim Speichern der KI-Konfiguration.\n\
+	Konnte die KI-Konfiguration nicht in die temporäre Datei '%stmpfile% schreiben.\n\
+	Lasse temporäre Datei bestehen (zur Fehleridentifikation).
+Error::Aiconfig::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Fehler beim Speichern der KI-Konfiguration.\n\
+	Konnte die temporäre Datei '%stmpfile% nicht in die gewünschte Datei %sfile% umbenennen.\n\
+	Lasse temporäre Datei bestehen.
+
+Error::Player%sname%::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Fehler beim Speichern des Spielers '%sname%'.\n\
+	Konnte temporäre Datei '%stmpfile% nicht öffnen.\n\
+	Breche Speichern ab.
+Error::Player%sname%::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Fehler beim Speichern des Spielers '%sname%'.\n\
+	Konnte den Spieler nicht in die temporäre Datei '%stmpfile% schreiben.\n\
+	Lasse temporäre Datei bestehen (zur Fehleridentifikation).
+Error::Player%sname%::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Fehler beim Speichern des Spielers '%sname%'.\n\
+	Konnte die temporäre Datei '%stmpfile% nicht in die gewünschte Datei %sfile% umbenennen.\n\
+	Lasse temporäre Datei bestehen.

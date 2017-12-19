@@ -1,0 +1,76 @@
+# FreeDoko translation: help
+# language: français
+# version: 0.7.5
+
+
+# help menu
+license					= licence
+License::of cardset '%scardset%'	= licence du jeu de cartes '%scardset%'
+
+cardset license				= licence du jeu de cartes
+
+version					= version
+Version::%sversion% %tabout%		= \
+	Version: %sversion%\n\n%tabout%
+
+ChangeLog				= ChangeLog
+
+help				= aide
+online help			= aide en ligne
+Help::not found			= aide non trouvée
+Help::not found: %slocation% = \
+	La page du manuel n'a pu être trouvée en local sur l'ordinateur. \
+	Vous pouvez chercher la page sur internet, l'adresse est:\n\
+	%slocation%
+
+support					= Unterstützung
+Version::%sversion% %tsupport%		= \
+	Version: %sversion%\n\n%tsupport%
+Support::support			= \
+	S'il vous plaît, aidez l'équipe FreeDoko, afin que nous améliorions le programme ultérieurement. \
+	Il y a plusieurs possibilités d'aider :\n\
+	\n\
+	* rapport de bug\n\
+	\  Si l'ordinateur joue ou suggère une mauvaise carte, créez un rapport de bug et envoyez nous le. Vous pourrez trouver d'autres informationsconcernant le rapport de bug dans le manuel à http://free-doko.sourceforge.net/doc/manual/de/bug_report.html.\n\
+	\n\
+	* documentation\n\
+	\  Participez à la documentation écrite du FreeDoko. Plus vous écrirez, plus nous pourrons nous consacrer à l'amélioration du programme.\n\
+	\n\
+	* themes\n\
+	\  Si vous aimez dessiner vous pouvez nous donner un thème de FreeDoko. Créez un nouveau jeu de cartes, de nouveaux symboles ou des fonds d'écran additionnels.\n\
+	\n\
+	* money\n\
+	\  Avec PayPal vous pouvez donner de l'argent à l'équipe FreeDoko et à l'hôte sourceforge.net. Plus d'informations à https://sourceforge.net/donate/index.php?group_id=38051
+
+about					= à propos
+About::about				= \
+	FreeDoko est un jeu de Doppelkopf, programmé par Borg Enders, Diether Knof et Florian Sundermann.\n\
+	Ce programme est distribué sous GPL.\n\n\
+	Homepage: http://free-doko.sourceforge.net/\n\
+	E-Mail: freedoko@users.sourceforge.net\n\n\n\
+	Programming:\n\
+	Borg Enders\n\
+	Diether Knof\n\
+	Florian Sundermann\n\
+	\n\
+	Ports\n\
+	HPUX: Rainer Dörntge\n\
+	FreeBSD: Thomas Gellekum\n\
+	gentoo: Rafael Kolless\n\
+	SuSE: Toni\n\
+	\n\
+	Translations:\n\
+	Français: Yves Caubarrus
+
+visit homepage 				= \
+	visiter la page d'accueil
+cardset internet page			= \
+	sets sur internet
+
+
+License: Altenburg expired =\
+	L'utilisation du jeu de cartes 'Altenburg' est seulement garanti jusqu'au 31 décembre 2013. Vous pouvez trouver d'autres jeus à http://free-doko.sourceforge.net/en/files.html.
+License: InnoCard expired =\
+	L'utilisation du jeu de cartes 'InnoCard' est seulement garanti jusqu'au 31 décembre 2009. Vous pouvez trouver d'autres jeus à http://free-doko.sourceforge.net/en/files.html.
+License: Elite expired =\
+	L'utilisation du jeu de cartes 'Elite' est seulement garanti jusqu'au 31 décembre 2009. Vous pouvez trouver d'autres jeus à http://free-doko.sourceforge.net/en/files.html.

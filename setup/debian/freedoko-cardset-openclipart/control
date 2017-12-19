@@ -1,0 +1,13 @@
+Source: freedoko-cardset-openclipart
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-cardset-openclipart
+Architecture: all
+Provides: freedoko-cardset
+Description: openclipart cardset for 'freedoko'
+ This package does contain the openclipart cardset for the game 'freedoko'.
+ See http://www.openclipart.org.

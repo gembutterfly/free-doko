@@ -1,0 +1,45 @@
+# FreeDoko translation
+# language: deutsch
+# version: 0.7.5
+
+!name 	deutsch
+
+FreeDoko	= FreeDoko
+version		= Version
+
+!input	"messages"
+!input	"bug_report"
+
+!input	"versions"
+
+!input	"basistypes"
+!input	"rules"
+!input	"settings"
+!input	"cards"
+!input	"aiconfig"
+!input	"network"
+
+!input	"gui"
+
+!input	"chat"
+
+for		= für
+default 	= Standard
+creating	= erstelle
+
+yes		= ja
+no		= nein
+
+0		= null
+1		= eins
+2		= zwei
+3		= drei
+4		= vier
+5		= fünf
+6		= sechs
+7		= sieben
+8		= acht
+9		= neun
+10		= zehn
+11		= elf
+12		= zwölf

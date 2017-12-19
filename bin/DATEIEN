@@ -1,0 +1,14 @@
+DATEIEN                    diese Datei (Beschreibung der Dateien)
+FILES                      englische Version dieser Datei
+
+FreeDoko.bat               fügt die dll-Dateien in den Pfad ein und führt FreeDoko aus
+FreeDoko.desktop           Desktop-Datei für Desktop-Umgebungen under Linux
+
+create_icons               erstellt die Symbole aus den Karten
+create_cards_column        erstellt die Spalte mit den Karten für die Internetpräsenz
+
+cardset_convert.*.sh       Konverter eines Kartensatzes zum FreeDoko-Format
+
+dos2unix                   Konvertiert das DOS-Zeilenende zum UNIX-Zeilenende
+
+homepage.release_update    aktualisiert die Release-spezifischen Einträge der Internetseite

@@ -1,0 +1,17 @@
+freedoko-backgrounds (0.7.9) unstable; urgency=low
+
+  * update to debian squeeze
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 06 Mar 2011 08:14:30 +0100
+
+freedoko-backgrounds (0.7.6) unstable; urgency=low
+
+  * update to debian lenny
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jun 2009 21:22:00 +0200
+
+freedoko-backgrounds (0.6.6) unstable; urgency=low
+
+  * exporting the backgrounds into a seperate package
+
+ -- Diether Knof <dknof@gmx.de>  Mon, 19 Jul 2004 20:29:06 +0200

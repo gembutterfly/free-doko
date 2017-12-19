@@ -1,0 +1,58 @@
+#!FreeDoko
+# FreeDoko party
+
+first seed = 3
+first startplayer = 0
+
+rules 
+{
+    mutate = false
+    number of rounds limited = true
+    number of rounds = 10
+    points limited = false
+    counting = plus-minus
+}
+
+players
+{
+  {
+    name = Mara
+    type = ai
+
+    aiconfig
+    {
+      difficulty = profi
+    }
+  }
+  {
+    name = Gerd
+    type = ai
+
+    aiconfig
+    {
+       difficulty = profi
+    }
+  }
+  {
+    name = Erika
+    type = ai
+
+    aiconfig
+    {
+       difficulty = profi
+    }
+  }
+  {
+    name = Sven
+    type = ai
+
+    aiconfig
+    {
+       difficulty = profi
+    }
+  }
+}
+
+game summaries
+{
+}

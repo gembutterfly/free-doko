@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Netzwerkprotokoll</title>
+
+    <meta name="date" content="2005-07-14T22:40:16+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="bug_report.html" title="Kehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/network_protocoll.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/network_protocoll.html" title="offizielle Internetseite">
+  </head>
+
+  <body>
+
+    <h1>FreeDoko Netzwerkprotokoll</h1>
+
+    <h2>Nachrichttypen</h2>
+    <p>
+    FreeDoko kennt drei Arten von Nachrichten:
+    </p>
+    <ul>
+      <li>
+      <a href="#description:messages:simple">einfache Nachrichten</a>
+      (<a href="#syntax:messages:simple">Syntax</a>)
+      </li>
+      <li>
+      <a href="#description:messages:special">spezielle Nachrichten</a>
+      (<a href="#syntax:messages:special">Syntax</a>)</li>
+      <li>
+      <a href="#description:messages:normal">normale Nachrichten</a>
+      (<a href="#syntax:messages:normal">Syntax</a>)</li>
+    </ul>
+
+    <h3><a name="description:messages:simple">einfache Nachrichten</a></h3>
+    <p>
+    <em>Einfache Nachrichten</em> werden nur für die Verbindung genutzt.
+    </p>
+
+    <h3><a name="description:messages:special">spezielle Nachrichten</a></h3>
+    <p>
+    <em>Spezielle Nachrichten</em> sind Nachrichten, die nichts mit dem Spiel an sich zu tun haben.
+    Sie sind Hilfsmittel für die Kommunikation.
+    </p>
+
+    <h3><a name="description:messages:normal">normale Nachrichten</a></h3>
+    <p>
+    Alle Nachrichten die den Spielverlauf betreffen sind <em>normale Nachrichten</em>.
+    Auch die Nachrichten zum Chatten fallen unter die normalen Nachrichten.
+    </p>
+
+    <h3><a name="description:time">Zeit</a></h3>
+    <p>
+    Die <em>Zeit</em> gibt an, zu welchem Zeitpunkt (bzgl. des absendenden Rechners) die Nachricht losgeschickt wurde.
+    Sie kann z.B. verwendet werden, um die Rechner zu synchronisieren.
+    Die Zeit wird bei jeder speziellen und normalen Nachricht mit übertragen.
+    </p>
+    <p>
+    Statt einer Zeit kann auch <kbd>-</kbd> verwendet werden, dann wird die Zeit ignoriert.
+    </p>
+
+
+    <h2>Syntax</h2>
+    <p>
+    Eine <em>Nachricht</em> von FreeDoko besteht immer aus eine Zeile, d.h. sie endet mit einem Zeilenendezeichen (<var>\n</var>).
+    </p>
+
+    <h3><a name="syntax:messages:simple">einfache Nachrichten</a></h3>
+    <p>
+    Eine einfache Nachricht besteht nur aus Text.
+    Das erste Zeichen darf weder eine Ziffer noch ein Minuszeichen sein.
+    </p>
+    <p>
+    Beispiel:
+    <kbd>FreeDoko server</kbd>
+    </p>
+
+    <h3><a name="syntax:messages:special">spezielle Nachrichten</a></h3>
+    <p>
+    Eine spezielle Nachricht beginnt mit einem Stern, gefolgt von der <a href="#syntax:time">Zeit</a>, gefolgt von einem Doppelpunkt.
+    Dahinter folgt der Nachrichteninhalt.
+    </p>
+    <p>
+    Beispiel:
+    <kbd>*12345.67: ping: 10</kbd>
+    </p>
+
+    <h3><a name="syntax:messages:normal">normale Nachrichten</a></h3>
+    <p>
+    Eine spezielle Nachricht beginnt mit der <a href="#syntax:time">Zeit</a>, gefolgt von einem Doppelpunkt.
+    Dahinter folgt der Nachrichteninhalt.
+    </p>
+    <p>
+    Beispiel:
+    <kbd>12345.67: Name: Diether</kbd>
+    </p>
+
+    <h3><a name="syntax:time">Zeit</a></h3>
+    <p>
+    Der Syntax der Zeit ist <kbd>Sekunden.Milisekunden</kbd> oder <kbd>-</kbd>.
+    </p>
+    <p>
+    Beispiel:
+    <kbd>12345.67</kbd>
+    </p>
+
+
+
+    <h2>Nachrichten</h2>
+
+    <h3><a name="messages:simple">einfache Nachrichten</a></h3>
+    <dl>
+      <dt><kbd>FreeDoko server</kbd></dt>
+      <dd>
+      Diese Nachricht wird beim Aufbei einer Verbindung vom Server gesendet.
+      Daran kann erkannt werden, daß es eine Verbindung zu einem FreeDoko-Server ist.
+      </dd>
+
+      <dt><kbd>bye</kbd></dt>
+      <dd>
+      Diese Verbindung wird geschlossen.
+      </dd>
+
+      <dt><kbd>ping</kbd></dt>
+      <dd>
+      Wie bei spezielle Nachrichten.
+      </dd>
+    </dl>
+
+    <h3><a name="messages:special">spezielle Nachrichten</a></h3>
+    <dl>
+      <dt><kbd><a name="ping">ping</a></kbd></dt>
+      <dd>
+      Mit <kbd>pong</kbd> antworten.
+      Damit kann z.B. die Verbindung getestet werden
+      </dd>
+
+      <dt><kbd><a name="pong">pong</a></kbd></dt>
+      <dd>
+      Anwort auf ein <a href="#ping">ping</a>
+      </dd>
+
+      <dt><kbd><a name="ping_Nummer">ping: $Nummer</a></kbd></dt>
+      <dd>
+      Wie <a href="#ping">ping</a>, hier wird zusätzlich eine Nummer mitgegeben um mehrere pings unterscheiden zu können.
+      </dd>
+
+      <dt><kbd><a name="pong_Nummer">pong: $Nummer</a></kbd></dt>
+      <dd>
+      Antwort auf <a href="#ping_Nummer">ping: $Nummer</a>.
+      </dd>
+    </dl>
+
+    <h3><a name="messages:normal">normale Nachrichten</a></h3>
+    <p>
+    Die normalen Nachrichten steuern den Spielverlauf.
+    Daher werde diese nicht jederzeit akzeptiert.
+    Außerdem gibt es noch die Unterscheidung zwischen Elter und Kind-Nachrichten.
+    </p>
+
+    <h4>jederzeit</h4>
+    <dl>
+      <dt><kbd><a name="name">name: $Name</a></kbd></dt>
+      <dd>Der Name der Verbindung (der Spielername)</dd>
+
+      <dt><kbd><a name="chat">chat: $Text</a></kbd></dt>
+      <dd>Chatten von $Text</dd>
+
+      <dt><kbd><a name="ask">ask: $Frage</a></kbd></dt>
+      <dd>
+      Fragt nach <var>$Frage</var> (z.B. <kbd><a href="#name">name</a></kbd>)
+      </dd>
+      <dd>
+      Erlaubte Fragen:
+      <ul>
+	<li><a href="#name">name</a></li>
+	<li><a href="#rules">rules</a></li>
+      </ul>
+      </dd>
+    </dl>
+
+    <h4>Turniereinstellung</h4>
+    <p>
+    Nachrichten, die vor dem Start des Turniers gesendet werden:
+    </p>
+
+    <dl>
+      <dt><kbd><a name="player">player $Nummer: $Einstellung</a></kbd></dt>
+      <dd>
+      Für den Spieler <var>$Nummer</var> wird eine der folgenden Einstellungen getätigt:
+      <dl>
+	<dt><kbd>type = $Typ</kbd></dt>
+	<dd>
+	Gibt an, wer für die Spieleraktionen zuständig ist.
+	<var>$Typ</var> kann folgende Werte annehmen:
+	<dl>
+	  <dt><var>network</var></dt>
+	  <dd>Der Elter kümmert sich um den Spieler.</dd>
+
+	  <dt><var>local</var></dt>
+	  <dd>
+	  Das Kind kümmert sich um den Spieler.
+	  Normalerweise hat jedes Kind nur einen Spieler, um den es sich kümmert.
+	  </dd>
+	</dl>
+	</dd>
+
+	<dt><kbd>name = $Name</kbd></dt>
+	<dd>Der Spieler hat den Namen <var>$Name</var></dd>
+      </dl>
+      </dd>
+
+      <dt><kbd><a name="players_switch">players switch: $1 $2</a></kbd></dt>
+      <dd>
+      Die beiden Spieler <var>$1</var> und <var>$2</var> werden vertauscht, dabei sind '$1' und '$2' Zahlen zwischen 0 und 3.
+      </dd>
+
+      <dt><kbd><a name="rules">rules</a></kbd></dt>
+      <dd>
+      Als nächstes werden die Regeln in einem Block (<kbd>{ ... }</kbd>) übertragen.
+      Bis der Block beendet wird bestehen die Nachrichten nur aus <kbd>$Typ = $Wert</kbd>.
+      </dd>
+
+      <dt><kbd><a name="rule">rule: $Typ = $Wert</a></kbd></dt>
+      <dd>
+      Die Regel <var>$Typ</var> wird auf <var>$Wert</var> gesetzt
+      </dd>
+      <dd>Beispiel: <kbd>rule: with nines = false</kbd></dd>
+
+      <dt><kbd><a name="party_seed">party: seed: $Wert</a></kbd></dt>
+      <dd>
+      Der Startwert ist <var>$Wert</var>.
+      </dd>
+      <dd>Beispiel: <kbd>party: seed: 3</kbd></dd>
+
+      <dt><kbd><a name="party_startplayer">party: startplayer: $Wert</a></kbd></dt>
+      <dd>
+      Der Startspieler ist <var>$Wert</var>.
+      </dd>
+      <dd>Beispiel: <kbd>party: startplayer: 0</kbd></dd>
+    </dl>
+
+    <h4>Turnier</h4>
+    <p>
+    Nachrichten, die während eines Turniers gesendet werden:
+    </p>
+
+    <dl>
+      <dt><kbd><a name="party_start">party start</a></kbd></dt>
+      <dd>
+      Das Turnier startet.
+      </dd>
+
+      <dt><kbd><a name="party_start_round">party start round: $Runde</a></kbd></dt>
+      <dd>
+      Die Runde <var>$Runde</var> des Turniers startet.
+      </dd>
+
+      <dt><kbd><a name="party_finish">party finish</a></kbd></dt>
+      <dd>
+      Das Turnier endet.
+      </dd>
+    </dl>
+
+    <h4>Spiel</h4>
+    <p>
+    Nachrichten, die während eines Spiels gesendet werden:
+    </p>
+    <dl>
+      <dt><kbd><a name="gameplay_action">gameplay action</a></kbd></dt>
+      <dd>
+      Eine Spielaktion (wie Vorbehalt und gespielte Karte).
+      </dd>
+
+      <dt><kbd><a name="game_start">game: start</a></kbd></dt>
+      <dd>
+      Das Spiel startet.
+      </dd>
+
+      <dt><kbd><a name="game_finish">game: finish</a></kbd></dt>
+      <dd>
+      Das Spiel endet.
+      </dd>
+
+      <dt><kbd><a name="game_startplayer">game: startplayer: $Startspieler</a></kbd></dt>
+      <dd>
+      Der Startspieler vom Spiel ist <var>$Startspieler</var>.
+      </dd>
+
+      <dt><kbd><a name="game_seed">game: seed: $Startwert</a></kbd></dt>
+      <dd>
+      Der Startwert vom Spiel ist <var>$Startwert</var>.
+      </dd>
+
+      <dt><kbd><a name="game_hand">game: hand $Spieler: $Blatt</a></kbd></dt>
+      <dd>
+      Spieler <var>$Spieler</var> hat das Blatt <var>$Blatt</var>.
+      </dd>
+    </dl>
+
+
+
+    <h3>Wer darf was?</h3>
+
+    <table style="margin: 1ex auto 1ex;">
+      <tr>
+	<th style="text-align: left; padding-right: 1em;">Elter</th>
+	<th style="text-align: left; padding-right: 1em;">Kind</th>
+	<th style="text-align: left; padding-right: 1em;">Nachricht</th>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td>K</td>
+	<td><a href="#name">name</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td>K</td>
+	<td><a href="#chat">chat</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td>K</td>
+	<td><a href="#ask">ask</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#player_type">player $Nummer: type</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td>K</td>
+	<td><a href="#player_name">player $Nummer: name</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#player_name">players switch</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#rules">rules</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#rule">rule</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#party_start">party start</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#party_start_round">party start round</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#party_finish">party finish</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td>K</td>
+	<td><a href="#gameplay_action">gameplay action</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_start">game: start</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_Finish">game: finish</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_close">game: close</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_startplayer">game: startplayer</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_seed">game: seed</a></td>
+      </tr>
+      <tr>
+	<td>E</td>
+	<td></td>
+	<td><a href="#game_hand">game: hand $Player</a></td>
+      </tr>
+    </table>
+
+
+    <h2>Kommunikation</h2>
+    <p>
+    Nachfolgend ist eine beispielhafte Übersicht über die Kommunikation zwischen dem Elter und dem Kind.
+    </p>
+
+    <table style="margin: 1ex auto 1ex;">
+      <tr>
+	<th style="text-align: left;">Elter</th>
+	<th style="text-align: left;">Kind</th>
+      </tr>
+      <tr>
+	<td>Servertypinformation</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Name</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td>Name</td>
+      </tr>
+      <tr>
+	<td>Regeln</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Spielernummer</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Regeländerung</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>starte Turnier</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>starte Spiel</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>verteile Karten</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Vorbehalte</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td>Vorbehalt</td>
+      </tr>
+      <tr>
+	<td>Spieltyp (+ Solospieler, ...)</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>gespielte Karten</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td>gespielte Karte</td>
+      </tr>
+      <tr>
+	<td>schließe Stich</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Ansage</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td>Ansage</td>
+      </tr>
+      <tr>
+	<td>Spielende</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Turnierende</td>
+	<td></td>
+      </tr>
+      <tr>
+	<td>Verbindungsabbruch</td>
+	<td>Verbindungsabbruch</td>
+      </tr>
+    </table>
+
+    <hr>
+    <div style="text-align: right;">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/network_protocol.html">offizielle Internetseite</a>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,29 @@
+# FreeDoko translation: part cards
+# language: français
+# version: 0.7.5
+
+# value
+Card::value				= valeur
+Card::Value::nine			= neuf
+Card::Value::jack			= valet
+Card::Value::queen			= dame
+Card::Value::king			= roi
+Card::Value::ten			= dix
+Card::Value::ace			= as
+Card::Value::no card value		= pas de valeur de carte
+
+# tcolor
+Card::color				= couleur
+Card::tcolor				= couleur d'atout
+Card::Color::club			= trèfle
+Card::Color::spade			= pique
+Card::Color::heart			= coeur
+Card::Color::diamond			= carreau
+Card::Color::trump			= atout
+Card::Color::no card color		= pas de couleur de carte
+
+# cards
+card					= carte
+cards					= cartes
+
+Card::%tcolor% %tvalue%			= %tvalue% de %tcolor%

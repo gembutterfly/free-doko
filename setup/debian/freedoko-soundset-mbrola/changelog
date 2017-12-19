@@ -1,0 +1,17 @@
+freedoko-soundset-mbrola (0.7.9) unstable; urgency=low
+
+  * update to debian squeeze
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 06 Mar 2011 08:14:30 +0100
+
+freedoko-soundset-mbrola (0.7.6) unstable; urgency=low
+
+  * update to debian lenny
+
+ -- Diether Knof <dknof@gmx.de>  Fri, 26 Jun 2009 21:22:00 +0200
+
+freedoko-soundset-mbrola (0.7.5) unstable; urgency=low
+
+  * created soundset
+
+ -- Diether Knof <dknof@gmx.de>  Sun, 26 Oct 2008 09:23:53 +0100

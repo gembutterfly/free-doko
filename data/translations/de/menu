@@ -1,0 +1,40 @@
+# FreeDoko translation: menu
+# language: deutsch
+# version: 0.7.5
+
+# menu
+Menu::party				= Turnier
+  Menu::Item::new party			= neues Turnier
+  Menu::Item::load party		= Turnier laden
+  Menu::Item::save party		= Turnier speichern
+  Menu::Item::end party			= Turnier beenden
+  Menu::Item::quit			= Programm beenden
+Menu::information			= Informationen
+  Menu::Item::last trick		= letzter Stich
+  Menu::Item::card suggestion		= Kartenvorschlag
+  Menu::Item::rules			= Regeln
+  Menu::Item::game debug		= Spielinformationen
+  Menu::Item::party points		= Turnierpunkte
+  Menu::Item::players			= Spieler
+  Menu::Item::players database		= Spielerstatistiken
+Menu::announcements			= Ansagen
+  Menu::Item::swines announcement	= Schweine
+  Menu::Item::hyperswines announcement	= Hyperschweine
+Menu::preferences			= Einstellungen
+  Menu::Item::preferences		= Einstellungen
+  Menu::Item::preferences::themes	= Themen
+Menu::network				= Netzwerk
+  Menu::Item::chatter			= Chat
+  Menu::Item::network log		= Log
+  Menu::Item::network settings		= Einstellungen
+  
+Menu::Item::bug report			= Fehlermeldung
+
+Menu::help				= Hilfe
+  Menu::Item::help index		= Hilfeübersicht
+  Menu::Item::license			= Lizenz
+  Menu::Item::cardset license		= Kartensatzlizenz
+  Menu::Item::changelog			= Änderungsliste
+  Menu::Item::support			= Unterstützung
+  Menu::Item::about			= über
+  Menu::Item::generate error		= erzeuge Fehler

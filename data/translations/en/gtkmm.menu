@@ -1,0 +1,42 @@
+# FreeDoko translation: part gtkmm, menu
+# language: english
+
+# menu
+Menu: party				= party
+  Menuitem: new party			= new party
+  Menuitem: load party			= load party
+  Menuitem: save party			= save party
+  Menuitem: end party			= end party
+  Menuitem: quit			= quit
+Menu: information			= information
+  Menuitem: last trick			= last trick
+  Menuitem: card suggestion		= card suggestion
+  Menuitem: rules			= rules
+  Menuitem: game info			= game info
+  Menuitem: party points		= party points
+  Menuitem: players			= players
+  Menuitem: players database		= players database
+Menu: announcements			= announcements
+  Menu: swines announcement		= swines
+  Menu: hyperswines announcement	= hyperswines
+Menu: preferences			= preferences
+  Menuitem: preferences			= preferences
+Menu: network				= network
+  Menuitem: chatter			= chatterer
+  Menuitem: network log			= log
+  Menuitem: network settings		= settings
+  
+Menuitem: bug report			= bug report
+
+Menu: help				= help
+  Menuitem: help index			= help index
+  Menuitem: cardset license		= cardset license
+  Menuitem: about			= about
+  Menuitem: license			= license
+  Menuitem: changelog			= changelog
+  Menuitem: generate error		= generate error
+
+license				= license
+cardset license			= cardset license
+about				= about
+ChangeLog			= ChangeLog

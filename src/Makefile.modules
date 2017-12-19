@@ -1,0 +1,48 @@
+# which 'modules' are to be compiled
+
+# The user interface
+# At least one module should be activated
+# simple text interface (very incomplete)
+USE_UI_TEXT	?= false
+# gtkmm library version 3 (http://www.gtkmm.org)
+USE_UI_GTKMM	?= true
+# GTK is not supported anymore since Version 0.6.5
+
+# The network code
+# It is not necessary for single players
+# The network does use the 'GNet' library (http://live.gnome.org/GNetLibrary)
+USE_NETWORK	?= false
+# DokoLounge (www.doko-lounge.de), work in progress
+USE_NETWORK_DOKOLOUNGE	?= false
+
+# sound support (experimental, use at your own risk)
+ifeq ($(OPERATING_SYSTEM), Linux)
+# uses the alut system (Linux only)
+USE_SOUND_ALUT     ?= true
+# use a program like 'aplay'
+USE_SOUND_COMMAND    ?= false
+endif
+ifeq ($(OPERATING_SYSTEM), Windows)
+# Windows mmsystem command 'PlaySound()'
+USE_SOUND_PLAYSOUND ?= true
+endif
+
+ifeq ($(OPERATING_SYSTEM), Linux)
+ifeq ($(USE_SOUND_COMMAND),true)
+USE_SOUND ?= true
+endif
+ifeq ($(USE_SOUND_ALUT),true)
+USE_SOUND ?= true
+endif
+endif
+:wa
+ifeq ($(OPERATING_SYSTEM), Windows)
+ifeq ($(USE_SOUND_PLAYSOUND),true)
+USE_SOUND ?= true
+endif
+endif
+
+# whether to use thread support (experimental, use at your own risk)
+USE_THREADS     ?= false
+# whether to use boost (till now (0.7.8), only for reference checks)
+USE_BOOST     ?= false

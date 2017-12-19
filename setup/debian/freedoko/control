@@ -1,0 +1,15 @@
+Source: freedoko
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko
+Architecture: all
+Depends: freedoko-binary, freedoko-data
+Suggests: freedoko-manual
+Description: meta package for all necessary packages for 'freedoko'
+ This package depends on a the binary and the data for 'freedoko'.
+ So with this package you install the minimum needed for 'freedoko'.
+ The best cardsets are in the package 'freedoko-nonfree' which is not covered by this package because of the license of the cardsets.

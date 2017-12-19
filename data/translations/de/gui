@@ -1,0 +1,399 @@
+# FreeDoko translation: part gui
+# language: deutsch
+# version: 0.7.13
+
+!input	"menu"
+!input	"help"
+
+FreeDoko %ttitle%		= FreeDoko %ttitle%
+
+# buttons
+apply				= übernehmen
+close				= schließen
+reset				= zurücksetzen
+cancel				= abbrechen
+abort				= abbrechen
+adopt				= übernehmen
+allot				= verteilen
+load				= laden
+save				= speichern
+hardcoded			= Vorgabe
+
+# first run
+first run			= erster Start
+FreeDoko first run		= Willkommen zu FreeDoko
+
+# program updated
+program updated			= Programmaktualisierung
+FreeDoko program updated	= FreeDoko Aktualisierung
+reset ais			= KI'en zurücksetzen
+
+# init (splash screen)
+splash screen			= Splash-Screen
+loading back of the cards	= lade die Kartenrückseiten
+loading the cards		= lade die Karten
+loading the cards (cards back)	= lade die Karten (Rückseite)
+loading the cards (%tcard%)	= lade die Karten (%tcard%)
+loading the icons		= lade die Symbole
+loading the icons (%ui%/%un%)	= lade die Symbole (%ui%/%un%)
+initiating the GUI		= initiiere die GUI
+initiating the GUI (license)           = initiiere die GUI (Lizenz)
+initiating the GUI (changelog)         = initiiere die GUI (Änderungsliste)
+initiating the GUI (support)           = initiiere die GUI (Unterstützung)
+initiating the GUI (about)             = initiiere die GUI (Über)
+initiating the GUI (preferences)       = initiiere die GUI (Eeinstellungen)
+initiating the GUI (bug report)        = initiiere die GUI (Fehlerbericht)
+initiating the GUI (bug report replay) = initiiere die GUI (Fehlerberichtnachspiel)
+initiating the GUI (main window)       = initiiere die GUI (Hauptfenster)
+initiating the GUI (table)             = initiiere die GUI (Tisch)
+initiating the GUI (network)           = initiiere die GUI (Netzwerk)
+initiating the GUI (network log)       = initiiere die GUI (Netzwerklog)
+initiating the GUI (dokolounge)        = initiiere die GUI (DokoLounge)
+initiating the GUI (party summary)     = initiiere die GUI (Turnierzusammenfassung)
+initiating the GUI (party settings)    = initiiere die GUI (Turniereinstellungen)
+initiating the GUI (players db)        = initiiere die GUI (Spielerdatenbank)
+initiating the GUI (game debug)        = initiiere die GUI (Spieldebug)
+initiating the GUI (chatter)           = initiiere die GUI (Schnatterer)
+initiating the GUI (show all)          = initiiere die GUI (zeige alles)
+finished			= fertig
+
+# settings
+settings			= Konfiguration
+preferences			= Einstellungen
+general				= allgemein
+behaviour			= Verhalten
+cards order			= Kartensortierung
+appearance			= Erscheinungsbild
+cards				= Karten
+theme				= Thema
+fonts				= Schriftarten
+
+# summary of the party
+party summary			= Turnierzusammenfassung
+new party			= neues Turnier
+continue party			= Turnier fortfahren
+gamenumber: %ugameno%		= Spiel %ugameno%
+roundnumber: %uroundno%		= Runde %uroundno%
+remaining rounds: %urounds%	= verbleibende Runden: %urounds%
+remaining points: %ipoints%	= verbleibende Punkte: %ipoints%
+next startplayer: %sname%	= nächster Startspieler: %sname%
+points				= Punkte
+duty soli			= Pflichtsoli
+
+# settings of the party
+party settings			= Turniereinstellungen
+
+general				= allgemein
+seed			        = Startwert
+card distribution		= Kartenverteilung
+startplayer			= Ausspieler
+random				= zufällig
+
+game duration                   = Spieldauer
+
+player				= Spieler
+player %unumber%		= Spieler %unumber%
+players				= Spieler
+statistics			= Statistiken
+name				= Name
+random name			= zufälliger Name
+voice                           = Stimme
+type				= Art
+configure			= konfigurieren
+player %uno% configuration	= Konfiguration von Spieler %uno%
+configure players		= Spieler konfigurieren
+configure rules			= Regeln konfigurieren
+configure network		= Netzwerk konfigurieren
+network				= Netzwerk
+
+start party			= Turnier starten
+load bug report			= lade Fehlerbericht
+save on desktop			= auf dem Desktop abspeichern
+
+save party			= Turnier speichern
+load party			= Turnier laden
+
+# network
+network				= Netzwerk
+network settings		= Netzwerkeinstellungen
+server				= Server
+address				= Adresse
+connections			= Verbindungen
+connection			= Verbindung
+new connection			= neue Verbindung
+connect				= verbinden
+local addresses			= lokale Adressen
+new listener			= neuer Empfänger
+listeners			= Empfänger
+create listener			= erstelle Empfänger
+open port			= offener Port
+port				= Port
+standard port			= Standardport
+rule differences		= Regelunterschiede
+server value			= Serverwert
+self value			= eigener Wert
+# log
+network log			= Netzwerkprotokoll
+time				= Zeit
+address				= Adresse
+text				= Text
+clear network			= leere Netzwerk
+synchronize network		= synchronisiere
+# chat
+send				= sende
+
+# DokoLounge
+DokoLounge                      = DokoLounge
+DokoLounge: Lounge              = DokoLounge: Lounge
+name: %sname%                   = Name: %sname%
+create account                  = Account erstellen
+login                           = Einloggen
+logout                          = Ausloggen
+klingel                         = Klingel
+hilfe                           = Hilfe
+blog                            = Blog
+pinnwand                        = Pinnwand
+messages                        = Nachrichten
+DokoLounge: Help                = DokoLounge: Hilfe
+DokoLounge: Blog                = DokoLounge: Blog
+DokoLounge: PinBoard            = DokoLounge: Pinnwand
+DokoLounge: Mail                = DokoLounge: Nachrichten
+DokoLounge: Alert               = DokoLounge: Hinweis
+player list                     = Spielerliste
+table list                      = Tischliste
+chat                            = Chat
+table %itable% (%stype%)        = Tisch %itable% (%stype%)
+audience                        = Zuschauer
+
+# rules
+# -> rules
+announcement with maximal cards	= max. Blattgröße
+save rules			= Regeln speichern
+adjust rules 			= Regeln anpassen
+
+# players database
+players database data type	= Typ
+players database		= Spielerstatistiken
+clear database			= löschen
+recreate database		= neu erzeugen
+update database			= aktualisieren
+ranking				= Bewertung
+average game points		= Spielpunkte
+average game trick points	= Stichpunkte
+games				= Spiele
+games marriage			= Hochzeiten
+games poverty			= Armuten
+games solo			= Solospiele
+games solo color		= Farbsoli
+games solo picture		= Bildsoli
+games solo picture single	= ein Bild
+games solo picture double	= zwei Bilder
+specialpoints			= Sonderpunkte
+specialpoints winning		= Gewinnpunkte
+specialpoints announcements	= Ansagepunkte
+heuristics			= Heuristiken
+heuristics general		= allgemeine
+heuristics solo			= Soli
+heuristics solo color		= Farbsoli
+heuristics solo picture		= Bildsoli
+heuristics solo meatless	= Fleischlose
+statistic total			= total
+statistic won			= gewonnen
+statistic lost			= verloren
+statistic percent won		= Prozent
+
+# aiconfig
+difficulty			= Schwierigkeit
+card suggestion			= Kartenvorschlag
+replacement ai			= Ersatz-KI
+no ai configuration		= keine KI-Konfiguration
+trick				= Stich
+configure ais			= KIs konfigurieren
+save aiconfig of %splayer%	= Speicher KI-Konfiguration von %splayer%
+future limit			= Berechnungsgrenze
+heuristics as in normal game	= wie im normalen Spiel
+move up				= hoch
+move down			= runter
+
+# reservation
+reservation			= Vorbehalt
+reservation (%sname%)		= Vorbehalt (%sname%)
+reservation default		= Standard
+solo				= Solo
+offer duty solo 		= Solo anbieten
+
+reservation announce		= anmelden
+bock: %umultiplier%             = Bock: Punkte * %umultiplier%
+
+# gametype
+gametype			= Spieltyp
+gametype: %ttype%		= Spieltyp: %ttype%
+gametype: %ttype% (duty solo)	= Spieltyp: %ttype% (Pflichtsolo)
+%splayer% plays a %tgametype%.	= %splayer% spielt ein %tgametype%.
+%splayer% has %tgametype%.	= %splayer% hat %tgametype%.
+%splayer% has %tnumber% nines.	= %splayer% hat %tnumber% Neuner.
+%splayer% has %tnumber% kings.	= %splayer% hat %tnumber% Könige.
+%splayer% has %tnumber% nines and kings.	= %splayer% hat %tnumber% Neuner und Könige.
+%splayer% has %upoints% richness.	= %splayer% hat %upoints% Punkte.
+%splayer% has a %tgametype%.	= %splayer% hat eine %tgametype%.
+%splayer% has a %tgametype%: %tselector%.	= %splayer% hat eine %tgametype%: %tselector%.
+partner is %splayer%.		= Partner ist %splayer%.
+%splayer% has returned %utrumpno% trump.	= \
+	%splayer% hat %utrumpno% Trumpf zurückgeschoben.
+%splayer% has returned %utrumpno% trumps.	= \
+	%splayer% hat %utrumpno% Trümpfe zurückgeschoben.
+%splayer% marries %sbride%.	= %splayer% heiratet %sbride%.
+%splayer% has found no bride.	= %splayer% hat keinen Partner gefunden.
+%splayer% has a swine.		= %splayer% hat ein Schwein.
+%splayer% has swines.		= %splayer% hat Schweine.
+%splayer% has hyperswines.	= %splayer% hat Hyperschweine.
+%splayer% announces '%tannouncement%'.	= %splayer% sagt '%tannouncement%' an.
+%splayer% announces '%tannouncement%' (duty 30).	= \
+	%splayer% sagt '%tannouncement%' an (Pflichtansage).
+
+# genscher
+genscher			= Genscher
+no genscher			= kein Genscher
+new partner			= neuer Partner
+no partner change		= kein Genscher
+Select a new partner or keep the old.	= Wähle einen neuen Partner oder behalte den alten.
+Genscher: %splayer% chooses %spartner%.	= Genscher: %splayer% wählt %spartner%.
+Genscher: Please choose your partner.	= Genscher: Bitte wähle Deinen Partner.
+
+# full trick
+full trick			= voller Stich
+specialpoint			= Sonderpunkt
+specialpoints			= Sonderpunkte
+The trick goes to %swinner%.	= Der Stich geht an %swinner%.
+points				= Punkte
+Points in the trick: %upoints%	= Punkte im Stich: %upoints%
+of player			= von Spieler
+
+# swines
+swines				= Schweine
+hyperswines			= Hyperschweine
+
+# last trick
+last trick			= letzter Stich
+%unumber%. trick		= %unumber%. Stich
+startplayer: %sname%		= Ausspieler: %sname%
+winner: %sname%			= Gewinner: %sname%
+
+# card suggestion
+Thinking, please wait.		= Überlege, bitte warten.
+suggested card			= Kartenvorschlag
+play card			= Karte spielen
+
+# game information
+game information		= Spielinformationen
+game info			= Spielinformationen
+player info			= Spielerinformationen
+team info			= Teaminformationen
+tricks				= Stiche
+soloplayer			= Solospieler
+heuristic			= Heuristik
+name				= Name
+teams				= Team
+announcement			= Ansage
+points				= Punkte
+
+# party points
+party points			= Turnierpunkte
+round				= Runde
+game				= Spiel
+game points			= Spielpunkte
+add up points			= zähle Punkte zusammen
+collapse rounds			= Runden zusammenfalten
+expand rounds			= Runden auffalten
+table				= Tabelle
+graph				= Graph
+remaining rounds		= verbleibende Runden
+remaining games			= verbleibende Spiele
+remaining points		= verbleibende Punkte
+bock                            = Bock
+duty free soli 			= freie Pflichtsoli
+duty color soli 		= Farb-Pflichtsoli
+duty picture soli 		= Bild-Pflichtsoli
+duty soli round 		= Pflichtsolorunde
+duty free soli: %usoli% 	= freie Pflichtsoli: %usoli%
+duty color soli: %usoli% 	= Farb-Pflichtsoli: %usoli%
+duty picture soli: %usoli% 	= Bild-Pflichtsoli: %usoli%
+
+# game overview
+show game overview		= zeige Spielübersicht
+Game overview: %ugame%		= Spielübersicht: %ugame%
+
+# game finished
+end of game			= Spielende
+show party points		= zeige Turnierpunkte
+show game review		= zeige Spieldurchgang
+next game			= nächstes Spiel
+end of party 			= Turnierende
+
+# game summary
+game summary			= Spielzusammenfassung
+game %ugameno%			= Spiel %ugameno%
+seed %useed%			= Startwert: %useed%
+startplayer %sname%		= Startspieler: %sname%
+name				= Name
+trick points			= Stichpunkte
+team				= Team
+Winner: no team			= kein Sieger
+Winner: %tteam%			= Sieger: %tteam%
+# ToDo: special case '1' point
+Winner: team %twinnerteam% with %uwinnerpoints% points (%tlooserteam%: %ulooserpoints% points)	= \
+	Sieger: Team %twinnerteam% mit %uwinnerpoints% Punkten (%tlooserteam%: %ulooserpoints% Punkte)
+game points: %ipoints%		= Spielpunkte: %ipoints%
+game points: %ipoints% for %tteam%	= Spielpunkte: %ipoints% für %tteam%
+team				= Team
+sign				= Vorzeichen
+point(s)			= Punkt(e)
+description			= Beschreibung
+bock triggers			= Bock-Auslöser
+
+# game review
+game review			= Spieldurchgang
+game review: %ttrick%		= Spieldurchgang: %ttrick%
+
+# party finished
+party finished			= Turnierende
+rang				= Platz
+lustsolo games			= Lustsoli
+finish party			= beende Turnier
+
+
+Cannot construct the icon for the announcement '%tannouncement%'.\n\
+Keeping the old one.	= \
+	Kann das Symbol für die Ansage '%tannouncement%' nicht erzeugen.\n\
+	Behalte das alte Symbol.
+
+# replay a bug report
+BugReportReplay::Group::general	= allgemein
+BugReportReplay::Group::actions	= Aktionen
+BugReportReplay::Group::human actions	= Menschaktionen
+BugReportReplay::Group::game summary	= Spielzusammenfassung
+bug report			= Fehlerbericht
+bug report replay		= Fehlerberichtnachspiel
+Version: %sversion%		= Version: %sversion%
+Compiled: %stime%		= Kompiliert: %stime%
+System: %ssystem%		= System: %ssystem%
+Time: %stime%			= Zeit: %stime%
+Language: %slanguage%		= Sprache: %slanguage%
+Trick: %utrick%			= Stich: %utrick%
+Seed: %useed%			= Startwert: %useed%
+Startplayer: %ustartplayer%	= Startspieler: %ustartplayer%
+Soloplayer: %usoloplayer%	= Solist: %usoloplayer%
+Soloplayer: -			= Solist: -
+auto actions			= automatisiere Aktionen
+
+# gameplay actions
+type				= Typ
+player				= Spieler
+data				= Daten
+
+# bug report (?)
+error                           = Fehler
+file				= Datei
+file: %sfile%			= Datei: %sfile%
+save				= speichern
+dismiss				= verwerfen

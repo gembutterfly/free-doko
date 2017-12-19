@@ -1,0 +1,349 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{tabularx}
+
+\newcommand{\kreuz}{$\clubsuit$}
+\newcommand{\pik}{$\spadesuit$}
+\newcommand{\herz}{$\heartsuit$}
+\newcommand{\karo}{$\diamondsuit$}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+ \linespread{2.0}
+{\Huge
+FreeDoko
+\ \\
+\vspace{2cm}
+Concept
+\ \\
+\vspace{2cm}
+}
+{\large
+\ \\
+\vspace{2cm}
+Borg Enders\\
+Diether Knof
+\ \\
+\vspace{2cm}
+\ \\
+}
+\ \\
+\vspace{2cm}
+\ \\
+September 2001
+\end{center}
+\newpage
+\tableofcontents \newpage
+\section{Game Idea}
+The game Doppelkopf is a card game for four or more players.
+One game is played by four players. the game Doppelkopf has is origin in game Schafkopf,
+which is mostly played in south germany.
+The name of this game seems to depend on the double(german:doppel) occuring of all cards (Doppel-Scahfkopf).
+Doppelkopf is played in opposite to Schafkopf in the whole of germany, but mainly in northh germany and
+the region of Rhein and Main.\\
+Doppelkopf is a card game with 48 cards and a minimum of 4 players, that is not so different from Skat.
+It is played with two normal sets of Skat cards without the cards seven and eight. Most of the time the owners of the club queens
+are playing together. By this you get while playing often new pairs of players.
+In the beginning of each game it is unknown which players are in the same team.
+To find this out or to hide it, is one of main attractions of the game Doppelkopf.\\
+For Doppelkopf the skills of each players are one great factor for the course of the game.
+This guarantees an exciting and varied game event.
+\newpage
+\section{Planed Features}
+\subsection{Supported Rules}
+\begin{itemize}
+\item playing with or without nines
+\item poverty with more then four nines
+\item poverty of trump with lesser then four trumps
+\item a said reservation is obligatory
+\item marriage (both club queens on one hand); choosing of teammate:
+\begin{itemize}
+\item first foreign trick decides
+\item first foreign heart trick decides
+\item first foreign spade trick decides
+\item first foreign club trick decides
+\item first foreign color trick decides
+\item first foreign trump trick decides
+\item setting of the last trick for this decision
+\end{itemize}
+\item swines (both diamond aces on one hand) are the highest trumps. Time of Announcement:
+\begin{itemize}
+\item before the game
+\item when first swine is played
+\item when first diamond ace is won by the own team, the second is a swine and is announced
+     (no hyperswines)
+\item hyperswines, both diamond Nines on one hand, when swines were announced:
+\begin{itemize}
+\item announcement before the game
+\item announcement, when first nine is played
+\end{itemize}
+\end{itemize}
+\item one special point for Charly: club jack wins last trick
+\begin{itemize}
+\item two special points for double Charly: both club jacks of one team are winning the last trick
+\item one special point for caught Charly: when a club jack is jabbed by the other team in the last trick and the other team wins that trick
+\item two special points for caught double Charly: when both club jacks are in the last trick and the other teams wins this trick
+\end{itemize}
+\item one special point for fox in last trick: last trick is won with diamon ace (no swine)
+\begin{itemize}
+\item two special points for double fox in last trick: last trikc is won with two diamond aces of one team
+\end{itemize}
+\item one special point for caught fox, if the diamond ace ends in a trick won by the opposite team
+\item heart tens trumps (or normal color cards). For being trump:
+\begin{itemize}
+\item second heart tens in one trick jabs first
+\item but not in the last trick
+\item first heart ten jabs second
+\item but not in the last trick
+\item one special point for dollenbeat,when one heart ten jabs the other one
+\end{itemize}
+\item Genscher: both diamond kings on one hand. In this case the player with the Genscher may decide with which player
+he wnats to play together. This may happen in the moment he is playing the first king.
+All denials are obsolete if he uses his Genscher. This rule is only valid for normal games or a marriage with
+already determined teammates.
+\item solos: one player plays versus the other three:
+\begin{itemize}
+\item Jack-Solo: only jacks are trump
+\item Queen-Solo: only queens are trump
+\item Queen-Jack-Solo: only queens and jacks are trump
+\item K"ohler: all picture cards are trump
+\item Colorsolo: (swines of color (optional),) (heart tens,) queens, jacks and the cards of the chosen color are trump
+\item Meatless: there are no trumps
+\end{itemize}
+\item announcements and denials (with the times till to which trick they are allowed and how many are allowed)
+\begin{itemize}
+\item Re: I own a club queen (or I'am a Soloplayer)
+\item Contra: I own no club queen (or I'am not the Soloplayer)
+\item No 90: the opposing team gets not 90 points, announcement of own team must be said before this
+\item No 60: the opposing team gets not 60 points, No 90 of own team must be said before this
+\item No 30: the opposing team gets not 30 points, No 60 of own team must be said before this
+\item Black: the opposing team gets no trick, No 30 of own team must be said before this
+\item denials may be left out, when the needed denials are still allowed. This missing denials
+are counting then as said.
+\item on each denial you may say re or contra (but only once in a game)
+\end{itemize}
+\item You may look at a given number of tricks (depending on the difficulty level)
+\item free chooseable number and type of duty solos
+\item free chooseable counting type: plus-minus, plus or minus.
+\end{itemize}
+\subsection{Game Extent}
+\begin{itemize}
+\item one player can play versus ais with different difficulty levels
+\item Multiplayer game
+\item different game variants
+\begin{itemize}
+\item given number of rounds
+\item playing till reaching of a given number of points
+\item playing till a given amount of points is used
+\item playing without end
+\item playing for a given amount of time
+\item rules are mostly configurable by user
+\end{itemize}
+\item saving and loading of games
+\item sorting of cards.
+\begin{itemize}
+\item descending/ascending
+\item trump right/left
+\item free choosable color order
+\end{itemize}
+\end{itemize}
+\subsection{Technischer Umfang}
+\begin{itemize}
+\item systemrequirements ca. 300MHz and 64MB.
+\item supported resolutions $640\times 480$, $800\times 600$, $1024\times 768$, $1280\times 1024$
+\item one version for linux and one for Windows 95 and higher
+\item graphical Interface uses GTK+
+\item every function should be usable with mouse and keyboard
+\item configuration file
+\item command line arguments
+\item programming language: C++ (Compiler: Linux: g++; Windows: g++)
+\item one additional textbased version for Linux and Windows
+\item Multiplayer via TCP/IP
+\begin{itemize}
+\item peer-to-peer-net: Host jobs can be given to other computers if a the host is leaving the game
+\end{itemize}
+\item Sound output (linux: sox (Systemaufruf); Windows: PlaySound  from winmm.lib)
+\item multi lingual (german, englisch, ...)
+\item published under the GPL
+\end{itemize}
+\subsection{Players Profile}
+The player gives a starting levl and can free up/donwgrade his actual level.\\
+After x won games (Points of own team \textgreater 120 and own points \textgreater 60), after y keeped denials
+and after z won solos the player will be upgraded one level.\\
+If he chooses to up/downgrade his level, the computated complete values will not be changed.
+After a dwongrade a player will be at the middle of the last lower level, an upgrade will bring the player
+to the beginning of the next level.\\
+The ai will choosen in regret of the players level and other player can see how good their opponent is.
+Also each player may choose an ai, which play for him, when he leaves the game.
+\subsection{Difficulty levels}
+\subsubsection{Novice}
+\begin{itemize}
+\item all cards open
+\item you can look at all tricks
+\item Re/Contra is shown
+\item swines are shown
+\item points are automatically counted
+\item the computer advises cards for playing on demand
+\item ai counts heart tens and swines
+\item ai forgets all other played cards
+\end{itemize}
+\subsubsection{Novice pro}
+\begin{itemize}
+\item cards covered
+\item you can look at all tricks
+\item Re/contra is shown
+\item swines are shown
+\item points are counted automatically
+\item the computer advises cards for playing on demand
+\item ai counts heart tens and swines
+\item ai counts jabbed colors
+\end{itemize}
+\subsubsection{Normal}
+\begin{itemize}
+\item you can only look at the last played trick
+\item Re/Contra is shown
+\item swines are shown
+\item points are counted automatically
+\item the computer advises cards for playing on demand
+\item Ai counts jabbed colors
+\item Ai remembers last played trick
+\item Ai counts heart tens and swines
+\end{itemize}
+\subsection{Normal pro}
+\begin{itemize}
+\item points are not counted automatically
+\item you can only look at the last played trick
+\item Re/Contra is shown
+\item swines are shown
+\item the computer advises cards for playing on demand
+\item ai counts jabbed colors
+\item ai rememebrs last 3 played tricks
+\item ai counts swines and heart tens
+\end{itemize}
+\subsection{Profi}
+\begin{itemize}
+\item points are not counted automatically
+\item you can only look at the last trick
+\item swines are shown
+\item ai counts jabbed colors
+\item ai remembers last 6 played tricks
+\item ai counts swines and heart tens
+\end{itemize}
+\subsection{Profi pro}
+\begin{itemize}
+\item points are not counted automatically
+\item you can only look at the last trick
+\item ai counts jabbed colors
+\item ai remembers all played cards
+\end{itemize}
+\newpage
+\section{GUI}
+\subsection{Draft}
+Skills of the GUI:
+\begin{itemize}
+\item looking at tricks
+\item counting of points
+\item settings
+\begin{itemize}
+\item sorting of cards
+\item choosing of card type
+\end{itemize}
+\item Choosing of announcements and denials
+\end{itemize}
+\subsection{The Graphic}
+\begin{itemize}
+\item you are looking on a table with writing block (here you can zoom in), cards on the four sides of
+the able and the actual played trick in the middle.
+\item Animations:
+\begin{itemize}
+\item cards are moved in the middle
+\item trick is turned
+\item trick moved to the player who has won it
+\item for this player a stack of cards is growing
+\end{itemize}
+\end{itemize}
+\newpage
+\section{Running of the Programm}
+\subsection{Server-Client-Concept}
+It is better when the server need not to be started as a seperate program, but can be chosen by the player.
+\begin{itemize}
+\item Preparations:
+\begin{itemize}
+\item Settings of the Server (for example: rules, number of players, ...)
+\item Settings of the clients (z.Bsp.: names, profiles, ...)
+\item waiting for the clients
+\end{itemize}
+\item start of the session:
+\begin{itemize}
+\item start of the games
+\begin{itemize}
+\item mixing of cards
+\item dealing of cards
+\end{itemize}
+\item waiting for annnouncement
+\item playing tricks
+\begin{itemize}
+\item for each trick
+\begin{itemize}
+\item determine who plays next
+\item waiting for next card
+\item showing the played card to everybody else
+\end{itemize}
+\item collecting trick
+\item determination of winner
+\end{itemize}
+\item end of game
+\begin{itemize}
+\item counting of points
+\item counting of special points
+\item writing of points in gamepoints tabele
+\item calculating of points for each player for party
+\end{itemize}
+\end{itemize}
+\item determination of points and final winner
+\end{itemize}
+\subsubsection{Server}
+\begin{itemize}
+\item mixing of cards
+\item dealing of cards
+\item management of rules
+\item management of players points
+\item communication with clients
+\item choosing type of client (human, ai)
+\end{itemize}
+\subsubsection{Client}
+\begin{itemize}
+\item Setting of players name
+\item looking at the last trick
+\item gets rules from server
+\item checking for rule violations
+\item gets played cards from server
+\item plays cards
+\end{itemize}
+\subsection{peer-to-peer}
+Each computer knows all other computers which are part of this game.
+Each computer knows the actual server.\\
+loss of server:
+If one client doesn't get a message for more than 0.3 sec from the server, he ask the server if he is still alive.
+If he gets no answer from the server, sends a loss of server to all other computers.
+At the start each computer gets an identifier (number) and now the computer with lowest identifier is the new server.
+\newpage
+\section{Ai}
+\subsection{Functions}
+\begin{itemize}
+\item chooseable difficult level
+\begin{itemize}
+\item memory
+\item foresight
+\item counting of cards
+\end{itemize}
+\item chooseable behaviour
+\begin{itemize}
+\item greedy
+\item trustfull
+\end{itemize}
+\end{itemize}
+\end{document}

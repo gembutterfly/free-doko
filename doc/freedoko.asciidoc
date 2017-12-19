@@ -1,0 +1,157 @@
+freedoko(6)
+===========
+:doctype: manpage
+
+NAME
+----
+freedoko - A free game of Doppelkopf
+
+SYNOPSIS
+--------
+*freedoko* ['OPTIONS'] [filename]
+
+DESCRIPTION
+-----------
+The game `Doppelkopf' is a card game for four or more Players similar to``Skat' (like xskat).
+A game is played by four players.
+Doppelkopf originates probably from the mostly in south germany played game `Schafkopf'.
+The game is written for Linux and Windows.
+
+OPTIONS
+--------
+These programs follow the usual GNU command line syntax, with long options starting with two dashes (-). 
+A summary of options is included below or can be get with *freedoko -?*.
+
+*-h -?*::
+*--help*::
+	print this help, quits
+
+*-v*::
+*--version*::
+	print the version, quits
+
+*-L*::
+*--license*::
+	print some info about the license (GPL), quits
+
+*--defines*::
+	print the defines (compile time), quits
+
+*--directories*::
+	print the directories FreeDoko searchs, quits
+
+*--debug*::
+	print debug information (so far the gameplay)
+
+*-u*::
+*--ui [string]*::
+	setting the ui type.
+	Til now, only 'gtkmm' is implemented
+
+*--settings [string]*::
+	file with (extra) settings to load
+
+*-n*::
+*--name [string]*::
+	the name of the player
+*-l*::
+*--language [string]*::
+	the language (shortform or longform)
+
+*-C*::
+--cardset [string]*::
+	the cardset
+
+*-H*::
+*--cards-height [number]*::
+	the height of the cards
+
+*-s*::
+*--seed [number]*::
+        set the starting seed.
+        This value will be overwritten by a loaded party, so use with '-'.
+
+*-b*::
+*--bug-report [filename]*::
+	replay the bug report
+
+*-r*::
+*--references [dirname]*::
+	check the references in the directory
+
+*--auto-bug-reports*::
+        automatically create bug reports for hardcoded situations
+
+*--fast-play*::
+        automate some behaviour
+
+        bitwise settings:
+          1  automatic party start
+          2  ai players
+          4  random ai
+          8  skip pauses
+         16  skip gameplay informations
+         32  skip game finished dialog
+         64  show all hands
+        128  skip party finished dialog
+        256  quit when finished
+        512  seed info (see below)
+
+*--seed-info*::
+        print the seeds and some information on stdout
+        (overwrites the bit in 'fast-play')
+
+*--save-standard-aiconfig*::
+        saves the standard aiconfig in the ai directory in the private data directory under the filename 'standard.defensive.saved'.
+        Quits the program
+
+*--no-automatic-savings*::
+        do save nothing automatically
+
+*--threads [number]*::
+	number of threads to use when calculating
+	(thread support must have been enabled for compiling)
+
+*--start-server*::
+	starts the server on the standard port (4224)
+	(network support must have been enabled for compiling)
+
+*--connect [address]*::
+	connects FreeDoko with another FreeDoko server
+	(network support must have been enabled for compiling)
+
+*[filename]*::
+	play the party in the file
+	Per default the file 'current' in the 'parties' subdirectory is taken.
+	If the file ends in .BugReport.FreeDoko or .Reference.FreeDoko the file is treated as a bug report.
+
+*-*::
+	when used as first option:
+	do load neither the rules, the players nor the current party
+
+
+BUGS
+----
+Report bugs to freedoko@users.sourceforge.net
+
+
+AUTHOR
+------
+FreeDoko is mainly written by Diether Knof and Borg Enders.
+
+RESOURCES
+---------
+SourceForge: <https://sourceforge.net/projects/free-doko/>
+
+Main web site: <http://free-doko.sourceforge.net/>
+
+Contact: <freedoko@users.sourceforge.net>
+
+SEE ALSO
+--------
+xskat (6)
+
+COPYING
+-------
+Copyright (C) 2001-2015 by Diether Knof and Borg Enders.
+Free use of this software is granted under the terms of the GNU General Public License (GPL) either version 2 or (at your option) any later version.

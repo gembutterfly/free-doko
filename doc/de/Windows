@@ -1,0 +1,27 @@
+Aktuell bieten wir keine exe-Datei für Windows an.
+
+FreeDoko kann unter Microsoft Windows mit msys2 kompiliert werden.
+Die Schritte dafür sind:
+1) Msys2 installieren
+2) In msys2 weitere Pakete installieren
+3) FreeDoko herunterladen und entpacken
+4) FreeDoko kompilieren
+5) FreeDoko starten
+
+1)
+Msys2 kann unter https://msys2.github.io/ heruntergeladen werden
+
+2)
+pacman -S mingw32/mingw-w64-i686-gcc mingw32/mingw-w64-i686-gtkmm3 make pkg-config
+
+3) FreeDoko
+  Den Quelltext der akuellen Release von der Internetseite http://free-doko.sourceforge.net/de/Dateien.html#Quelltext, oder die aktuelle Entwicklerversion mittels subversion (siehe Dokumentation in 'subversion') oder als Archiv von 'http://svn.gna.org/daily/freedoko-snapshot.tar.gz'.
+
+4)
+$ PKG_CONFIG_PATH=/mingw32/lib/pkgconfig
+$ PATH=/mingw32/bin:/mingw32/lib:$PATH
+$ make
+
+5)
+Es muss /mingw32/bin im Pfad sein oder die dll-Dateien müssen in das FreeDoko-Verzeichnis kopiert werden.
+$ ./FreeDoko

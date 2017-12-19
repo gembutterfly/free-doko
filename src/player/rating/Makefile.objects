@@ -1,0 +1,2 @@
+# All object-files
+OBJECTS = rating.o

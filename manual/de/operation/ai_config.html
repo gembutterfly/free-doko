@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: KI Konfiguration</title>
+
+    <meta name="date" content="2003-09-17">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="party_settings.html" title="Turniereinsetllungen">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="rules_config.html" title="Regeln">
+    <link rel="next" href="reservation.html" title="Vorbehalt">
+
+    <link rel="alternate" href="../../en/operation/ai_config.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+
+    <h1>KI Konfiguration</h1>
+
+    <h2 id="group_data">Daten</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/data.png"><img src="pictures/aiconfig/data.small.jpeg" width="565" height="422" alt="Daten" usemap="#aiconfig_map"></a></div>
+
+    <p>
+    In der Daten-Rubrik können die KI-Konfugurationen im ganzen bearbeitet werden.
+    </p>
+
+    <h3 id="difficulty">Auswahlbox</h3>
+    <p>
+    In der Auswahlbox können die Schwierigkeitsstufe der KI ausgewählt werden.
+    Neben den vorgegebenen können Sie in den anderen Reitern die KI individuell anpassen.
+    </p>
+
+    <h3 id="adept">übernehmen</h3>
+    <p>
+    Mit <em>übernehmen</em> können Sie die KI-Konfiguration von einem anderen Spieler auf diesen kopieren.
+    </p>
+
+    <h3 id="allot">verteilen</h3>
+    <p>
+    <em>Verteilen</em> setzt die KI-Konfiguration der anderen Spieler auf die von dem aktiven Spieler.
+    </p>
+
+    <h3 id="load">laden</h3>
+    <p>
+    Abgespeicherte KI-Konfigurationen können Sie über den gleichnamigen Knopf <em>laden</em>.
+    </p>
+
+    <h3 id="save">speichern</h3>
+    <p>
+    Individuelle Konfigurationen können Sie in eine Datei <em>speichern</em>.
+    </p>
+
+
+
+    <h2 id="group_simple">Einfach</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/simple.png"><img src="pictures/aiconfig/simple.small.jpeg" width="565" height="422" alt="Einfah" usemap="#aiconfig_map"></a></div>
+
+
+    <h3 id="fairplay_hands">kennt nicht alle Blätter</h3>
+    <p>
+    Die KI kennt die Karten der anderen Spieler nicht, sondern ermittelt diese aus den bereits gespielten Karten, an die sie sich erinnert (siehe <a href="#remember_tricks">Anzahl erinnerter Stiche</a>).
+    </p>
+
+    <h3 id="fairplay_teams">kennt nicht alle Teams</h3>
+    <p>
+    Die KI kennt nicht die von Anfang an die Teams der anderen Spieler.
+    </p>
+
+    <h3 id="trusting">vertrauensvoll</h3>
+    <p>
+    Eine vertrauensvolle Ki bewertet Pfunde, die sie bekommt eher als zum eigenen Team gehörig.
+    </p>
+
+    <h3 id="remember_tricks">Anzahl erinnerter Stiche</h3>
+    <p>
+    Dieser Wert gibt an wieviele Stiche sich die KI merken kann.
+    Karten aus Stichen, die weiter als dieser Wert in der Vergangenheit liegen, werden aus dem Gedächtnis der Ai gelöscht.
+    Ausnahmen hierbei sind besondere Karten wie Dollen, Scheine, etc (die sich ein Mensch üblicherweise auch für den ganzen Spielverlauf merkt).
+    </p>
+
+
+    <h2 id="group_aitype">KI-Typ</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/aitype.png"><img src="pictures/aiconfig/aitype.small.jpeg" width="565" height="422" alt="KI-Typ" usemap="#aiconfig_map"></a></div>
+    <p>
+    In der Rubrik <em>KI-Typ</em> können Sie für jeden Stich detailliert den KI-Typ und die damit verbundenen Einstellungen <em>Bewertung</em> und <em>Grenze für die Zukunftsberechnung</em> angeben.
+    </p>
+
+    <h3 id="aitype">KI-Typ</h3>
+    <p>
+
+    </p>
+    <dl>
+      <dt id="random" class="non_release">zufällig</dt>
+      <dd class="non_release">Es wird zufällig eine der zulässigen Karten genommen.</dd>
+
+      <dt id="virtual_games">Virtuelle Spiele</dt>
+      <dd>
+      Hierbei betrachtet die KI für jede aktuelle Karte auf ihrer Hand rekursiv, wie das Spiel verlaufen würde, wenn sie diese Karte spielt.
+      Zum simulieren der anderen Spieler in diesen virtuellen Spielen, nimmt die KI leicht modifizierte Klone von sich selber.
+      </dd>
+
+      <dt id="gametree">Spielbaum</dt>
+      <dd>
+      Hierbei baut die KI für jede Karte einen Baum aller möglichen Spielverläufe auf.
+      Die Spielverläufe werden entsprechend dem Eintrag <a href="#rating">Bewertung</a> bewertet.
+      Die Karte mit der besten Bewertung wird genommen.
+      <br>
+      So wertet Spielbaum mit der Bewertung <a href="#rating_maximum">Maximum</a> (jeder Spieler spielt seine bestmöglichste Karte) den schlechtmöglichsten Spielverlauf, also wird die Karte genommen, bei der der ungünstigste Spielverlauf nicht schlechter ist als bei den anderen Karten.
+      </dd>
+
+      <dt id="gametree_with_heuristics">Spielbaum mit Heuristiken</dt>
+      <dd>
+      Auch hier bei wird ein Spielbaum mit Stichen aufgebaut, allerdings werden zuerst 
+      die für die KI geltenden Heuristiken für die anderen Spieler in jedem Stich 
+      angewandt und erst wenn die nicht greifen ein kompletter Teilbaum wie bei dem Typ Spielbaum aufgebaut.
+      </dd>
+
+      <dt id="gametree_for_team">Spielbaum für Team</dt>
+      <dd>
+      Das Prinzip ist das gleiche wie bei <a href="#gametree">Spielbaum</a>.
+      Der Unterschied ist der, daß der Partner für einen spielt.
+      <br>
+      So untersucht Spielbaum für Team mit der Bewertung <a href="#rating_maximum">Maximum</a> den Spielverlauf, bei dem alle Spieler optimal für ihr Team spielen.
+      </dd>
+
+      <dt id="monte_carlo">Monte Carlo</dt>
+      <dd>
+      Bei diesem Typ werden für jede Karte rein zufällige Spiele gespielt.
+      Die Spiele werden entsprechend dem Eintrag <a href="#rating">Bewertung</a> bewertet.
+      Die Karte mit der besten Bewertung wird genommen.
+      </dd>
+    </dl>
+
+
+    <h3 id="rating">Bewertung</h3>
+    <p>
+    Die <em>Bewertung</em> gibt an, wie mehrere Werte zu einem Wert für eine Karte zusammengefaßt werden.
+    <br>
+    Für die Formeln seien die <var>x<sub>i</sub></var> für <var>i &isin; {1, ..., n}</var> die aufsteigend sortierten Werte.
+    </p>
+    <!-- ToDo: Interpretation für die einzelnen KI-Typen -->
+    <dl>
+      <dt id="rating_maximum">Maximum</dt>
+      <dd>
+      Es wird der größte von allen Werten genommen.
+      <br>
+      Formel: <var>max<sub>i</sub> x<sub>i</sub></var>
+      </dd>
+
+      <dt id="rating_minimum">Minimum</dt>
+      <dd>
+      Es wird der kleinste von allen Werten genommen.
+      Nicht zu empfehlen.
+      <br>
+      Formel: <var>min<sub>i</sub> x<sub>i</sub></var>
+      </dd>
+
+      <dt id="rating_second_maximum">Zweitbester</dt>
+      <dd>
+      Es wird der zweitgrößte Wert genommen.
+      Nicht zu empfehlen.
+      </dd>
+
+      <dt id="rating_second_minimum">Zweitschlechtester</dt>
+      <dd>
+      Es wird der zweitkleinste Wert genommen.
+      </dd>
+
+      <dt id="rating_average">Durchschnitt</dt>
+      <dd>
+      Es wird der Durchschnitt von allen Werten genommen.
+      <br>
+      Formel: <var>1/n &sum;<sub>i</sub> x<sub>i</sub></var>
+      </dd>
+
+      <dt id="rating_pysical_average">Physikalischer Durchschnitt</dt>
+      <dd>
+      Es wird der Durchschnitt von allen Werten außer dem größten und dem kleinsten genommen.
+      <br>
+      Formel: <var>1/(n-2) (&sum;<sub>i</sub> x<sub>i</sub> - min<sub>i</sub> x<sub>i</sub> - max<sub>i</sub> x<sub>i</sub>)</var>
+      </dd>
+
+      <dt id="rating_median">Median</dt>
+      <dd>
+      Es wird der Median genommen, d.h. der Wert, so daß genausoviele Werte kleiner wie größer wie der gewählte sind.
+      <br>
+      Formel: <var>x<sub>j</sub></var> mit <var>|{x : x &lt; x<sub>j</sub>}| = |{x : x &gt; x<sub>j</sub>}|</var>
+      </dd>
+
+      <dt id="rating_linear">Linear</dt>
+      <dd>
+      Die Werte werden entsprechend ihrer Position (aufsteigend) gewichtet.
+      D.h. der schlechteste Wert mit 1, der zweitschlechteste mit 2, usw.
+      <br>
+      Formel: <var>2/(n*(n+1)) &sum;<sub>i</sub> i * x<sub>i</sub>
+      </dd>
+
+      <dt id="rating_linear_reverse">Linear invers</dt>
+      <dd>
+      Die Werte werden entsprechend ihrer Position (absteigend) gewichtet.
+      D.h. der beste Wert mit 1, der zweitbeste mit 2, usw.
+      <br>
+      Formel: <var>2/(n*(n+1)) &sum;<sub>i</sub> (n+1-i) * x<sub>i</sub>
+      </dd>
+    </dl>
+
+    <h3 id="future_limit">Grenze für die Zukunftsberechnung</h3>
+    <p>
+    Die <em>Grenze der Zukunftsberechnung</em> ist eine Beschränkung für die Rechenzeit, die bei den KI-Typen genutzt wird.
+    Die Einheit ist <kbd>Anzahl der zu berechnenden Stiche</kbd>.
+    <br>
+    Bei <a href="#virtual_games">Virtuelle Spiele</a> und den <a href="#gametree">Spielbaum</a>-Typen wird über die Grenze berechnet, wie viele Stiche im virtuellen Spiel betrachtet werden.
+    Normalerweise ist das einer, nur in den letzten Stichen werden mehr Stiche genutzt.
+    Eine Veringerung der Grenze bringt nur am Ende des Spielverlaufs eine Verbesserung der Rechenzeit, da immer der aktuelle Stich zuende berechnet wird.
+    <br>
+    Bei <a href="#monte_carlo">Monte Carlo</a> bewirkt eine höhere Grenze, daß für jede Karte mehr Spiele durchgespielt werden.
+    Die Grenze ist hier im Gegensatz zu bei den anderen Typen auch scharf, das heißt, bei <a href="#monte_carlo">Monte Carlo</a> kann die Rechenzeit gut mit dieser Einstellung beschränkt werden.
+    </p>
+
+
+
+
+
+    <h2 id="group_game_decision">Spielentscheidung</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/game_decision.png"><img src="pictures/aiconfig/game_decision.small.jpeg" width="565" height="422" alt="Spielentscheidung" usemap="#aiconfig_map"></a></div>
+
+    <p>
+    Um zu entscheiden, ob ein <a href="../rules.html#finding:solo">Solospiel</a> gespielt wird, berechnet die KI aus dem Blatt einen Wert (wie bei den Ansagen) und vergleicht diesen mit den in dieser Rubrik <em>Spielentscheidung</em> angegebenen minimalen Spielwerten.
+    </p>
+
+    <h3 id="take_poverty">Minimaler Blattwert für Armutaufnahme</h3>
+    <p>
+    Minimaler Blattwert, um eine Armut aufzunehmen.
+    </p>
+
+    <h3 id="handvalue_single_solo">Minimaler Blattwert für Ansage eines einfachen Bildersolos</h3>
+    <p>
+    Minimaler Blattwert, um ein einfaches Bildsolo (Bubensolo, Damensolo, Königensolo) zu spielen.
+    </p>
+
+    <h3 id="handvalue_double_solo">Minimaler Blattwert für Ansage eines doppelten Bildersolos</h3>
+    <p>
+    Minimaler Blattwert, um ein doppeltes Bildsolo (Solo mit zwei Bildtypen als Trumpf) zu spielen.
+    </p>
+
+    <h3 id="handvalue_triple_solo">Minimaler Blattwert für Ansage eines dreifachen Bildersolos</h3>
+    <p>
+    Minimaler Blattwert, um einen Köhler zu spielen.
+    </p>
+
+    <h3 id="handvalue_color_solo">Minimaler Blattwert für Ansage eines Farbsolo</h3>
+    <p>
+    Minimaler Blattwert, um ein Farbsolo zu spielen.
+    </p>
+
+    <h3 id="handvalue_meatless">Minimaler Blattwert für Ansage eines Fleischlosen</h3>
+    <p>
+    Minimaler Blattwert, um ein Fleischlos (Solo ohne Trümpfe) zu spielen.
+    </p>
+
+
+
+    <h2 id="group_announcements">Ansagen</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/announcements.png"><img src="pictures/aiconfig/announcements.small.jpeg" width="565" height="422" alt="Ansagen" usemap="#aiconfig_map"></a></div>
+    <p>
+    In der Rubrik <em>Ansage</em> kann eingestellt werden, wie gerne die KI ihre Ansagen tätigt.
+    </p>
+
+
+    <h3>Minimaler Blattwert für Ansage</h3>
+    <p>
+    Dieser Wert gibt an ab welchen Rückgabewert der Handbewertung die KI eine Ansage macht (je höher desto vorsichtiger).
+    </p>
+
+    <h3>Dekrement des Blattwertes für weitere Ansagen</h3>
+    <p>
+    Angabe um wieviel der Rückgabewert der Handbewertung für jede Folge Ansage abnehmen darf (je höher desto häufiger erfolgen Folgeansagen).
+    </p>
+
+    <h3>Blattwertmodifikator zur Konfiguration der Ansagefreudigkeit</h3>
+    <p>
+    Dieser Wert wird bei den meisten Berechnungen zu dem Minimalem Blattwert für die Ansagen gerechnet (je niedriger dieser Wert ist desto eher erfolgt ein Ansage).
+    </p>
+
+    <h3>Minimaler Blattwert für Gegenansage</h3>
+    <p>
+    Dieser Wert gibt an ab welchen Rückgabewert der Handbewertung die KI eine Gegenansage macht (je höher desto vorsichtiger).
+    </p>
+
+    <h3>Blattwertmodifikator zur Konfiguration der Gegenansagefreudigkeit</h3>
+    <p>
+    Dieser Wert wird bei den meisten Berechnungen zu dem Minimalem Blattwert für die Gegenansagen gerechnet (je niedriger dieser Wert ist desto eher erfolgt ein Gegenansage).
+    </p>
+
+
+
+    <h2 id="group_trick_decision">Stichentscheidung</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/trick_decision.png"><img src="pictures/aiconfig/trick_decision.small.jpeg" width="565" height="422" alt="Stichentscheidung" usemap="#aiconfig_map"></a></div>
+
+    <p>
+    In der Rubrik <em>Stichentscheidung</em> können einige Werte gesetzt werden, die insbesondere die <a href="#group_heuristics">Heuristiken</a> betreffen.
+    </p>
+
+    <h3 id="first_card_fehl_creation">Erzeuge mit erster Karte Fehlfarbe</h3>
+    <p>
+    Hier wird entschieden, ob die KI mit Farbkarten aufspielen darf, um auf der eigenen Hand eine Fehlfarbe zu erzeugen.
+    </p>
+
+    <h3 id="last_trick_with_heuristics">Letzer Stich, in dem Heuristiken eingesetzt werden</h3>
+    <p>
+    Ab diesem Stich wird nur der in <a href="group_aitype">KI-Typ</a> festgelegte Mechanismus genutzt.
+    </p>
+
+    <h3 id="last_fehlcreation">Letzer Stich, um Fehlkarte zu erzeugen</h3>
+    <p>
+    Letzter Stich, in dem eine Fehlfarbe durch abschmeissen erzeugt werden darf, um später diese Farbe zu stechen.
+    Nach diesem Stich wird die KI nicht mehr bewußt Farbkarten abschmeissen um bei sich eine Fehlfarbe zu erzeugen, um später zu stechen.
+    </p>
+
+    <h3 id="limit_throw_fehl">Maximale Stichpunkte um Fehlkarte abzuwerfen</h3>
+    <p>
+    Gibt an, wie viele Punkte maximal im Stich enthalten sein dürfen, damit die KI eine Fehlkarte abwirft (anstatt zu stechen).
+    </p>
+
+    <h3 id="limit_dolle">Minimale Stichpunkte für bevorzugten Dameneinsatz</h3>
+    <p>
+    Dieser Wert gibt an wieviele Punkte im Stich sein müssen, bevor die KI eine Dame einsetzt, wenn die Situation es erlaubt.
+    </p>
+
+    <h3 id="limit_dolle">Minimale Stichpunkte für bevorzugten Dolleneinsatz</h3>
+    <p>
+    Dieser Wert gibt an wieviele Punkte im Stich sein müssen, bevor die KI eine Dolle einsetzt, wenn die Situation es erlaubt.
+    </p>
+
+
+
+    <h2 id="group_heuristics">Heuristiken</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/heuristics.png"><img src="pictures/aiconfig/heuristics.small.jpeg" width="565" height="422" alt="Heuristiken" usemap="#aiconfig_map"></a></div>
+    <!-- ToDo -->
+
+    <h3 id="">Spiele As</h3>
+    <p>
+    Wenn die KI ein As auf der Hand für das noch genug Farbkarten draußen sind, spielt sie dieses As vor.
+    </p>
+
+    <h3 id="">Wähle für Farbstich</h3>
+    <p>
+    Die KI versucht ein möglichst gute Karte für die letzte Karte in einem Farbstich zu spielen.
+    </p>
+
+    <h3 id="">Spiele Pfund</h3>
+    <p>
+    Wenn ein Stich ans wahrscheinlich eigene Team geht, versucht die KI ein Karte mit möglichst hohen Punkten zu spielen.
+    </p>
+
+    <h3 id="">Steche, um As nachzuspielen</h3>
+    <p>
+    Wenn die KI noch ein As auf der Hand hat, das gut auzuspielen wäre, versucht sie zu stechen, um ans Ausspiel zu kommen.
+    </p>
+
+    <h3 id="">Erzeuge Fehlfarbe</h3>
+    <p>
+    Wenn sie die Möglichkeit hat versucht die KI eine Farbkarte abzuschmeissen, um diese Farbe blank zu bekommen und später zu stechen.
+    </p>
+
+    <h3 id="">Wähle beste Karte, um Stich zugewinnen</h3>
+    <p>
+    Die KI veruscht ein möglichst gute Karte zu spielen, um diesen Stich zu gewinnen.
+    </p>
+
+    <h3 id="">Spiele abwechselnd niedrige und hohe Trümpfe</TD></h3>
+    <p>
+    Die KI versucht anderen Spielern ihre Trümpfe zu ziehen, in dem sie abwechselnd niedrige und hohe Trümpfe spielt.
+    </p>
+
+    <h3 id="">Spiele fürs Team</h3>
+    <p>
+    Die KI versucht einen Stich der zum eigenen Team geht mit Punkten anzufüttern.
+    </p>
+
+    <h3 id="">Steche einen Fuchs</h3>
+    <p>
+    Wenn ein Fuchs gespielt wurde, versucht die KI diesen zu bekommen sofern es ihr möglich ist.
+    </p>
+
+    <h3 id="">Spiele Farb-As</h3>
+    <p>
+    Nur für den Solospieler:
+    Wenn die KI ein As auf der hand für das noch genug Farbkarten draussen sind, spielt sie dieses As vor.
+    </p>
+
+    <h3 id="">Wähle beste Karte, um Stich zugewinnen</h3>
+    <p>
+    Nur für den Solspieler:
+    Die KI veruscht ein möglichst gute Karte zu spielen, um diesen Stich zu gewinnen.
+    </p>
+
+    <h3 id="">Steche, um As nachzuspielen</h3>
+    <p>
+    Nur für den Solospieler:
+    Wenn die KI noch ein As auf der Hand hat, das gut auzuspielen wäre, versucht sie zu stechen, um ans Ausspiel zu kommen.
+    </p>
+
+    <h3 id="">Spiele abwechselnd niedrige und hohe Trümpfe</h3>
+    <p>
+    Nur für den Solospieler:
+    Die KI versucht anderen Spielern ihre Trümpfe zu ziehen, in dem sie abwechselnd niedrige und hohe Trümpfe spielt.
+    </p>
+
+    <h3 id="">Spiele zweitbesten Trumpf</h3>
+    <p>
+    Nur für den Solospieler:
+    Die KI versucht anderen Spielern ihre Trümpfe zu ziehen, in dem sie ihren zweit besten Trumpf spielt.
+    </p>
+
+    <h3 id="">Spiele beste Farbe</h3>
+    <p>
+    Die KI spielt ihre best besetzte Farbe an und runter.
+    </p>
+
+
+
+    <h2 id="group_card_limits">Kartengrenzen</h2>
+    <div class="picture_center"><a href="pictures/aiconfig/card_limits.normal_game.png"><img src="pictures/aiconfig/card_limits.normal_game.small.jpeg" width="565" height="422" alt="Kartengrenzen" usemap="#aiconfig_map"></a></div>
+    <div class="picture_center"><a href="pictures/aiconfig/card_limits.solo.png"><img src="pictures/aiconfig/card_limits.solo.small.jpeg" width="565" height="422" alt="Kartengrenzen" usemap="#aiconfig_map"></a></div>
+
+    <!-- ToDo -->
+
+    <div class="Version">Version 0.7.3</div>
+
+  </body>
+</html>

@@ -1,0 +1,207 @@
+# FreeDoko translation: part settings
+# language: deutsch
+# version: 0.7.12
+
+setting				= Einstellung
+settings			= Einstellungen
+
+update				= aktualisieren
+
+settings: %tgroup%			= Einstellungen: %tgroup%
+
+# general
+Setting::Group::general			= Allgemeines
+Setting::automatic savings		= automatisches Speichern
+Setting::save party changes		= Turnieränderungen speichern
+Setting::additional party settings	= Zusätzliche Turniereinstellungen
+Setting::name				= Name
+Setting::language			= Sprache
+
+Setting::sound				= Sound
+
+Setting::max threads			= Threads
+
+# behaviour
+Setting::Group::behaviour		= Verhalten
+Setting::announce in table		= Ansagen auf dem Spielfeld
+Setting::card play delay		= Verzögerung beim Kartenausspielen
+
+# assistance
+Setting::Group::assistance		= Unterstützung
+Setting::announce swines automatically	= Schweine automatisch ansagen
+Setting::show if valid			= zeige, ob zulässig
+Setting::emphasize valid cards		= hebe zulässige Karten hervor
+Setting::show known teams in game	= zeige bekannte Teams im Spiel
+Setting::show soloplayer in game	= zeige Solospieler im Spiel
+
+# help
+Setting::Group::help			= Hilfe
+Setting::automatic card suggestion	= automatischer Kartenvorschlag
+Setting::show all hands			= zeige alle Blätter
+Setting::show ai information hands	= zeige Blätter (KI-Information)
+Setting::show ai information teams	= zeige Teams (KI-Information)
+Setting::show trickpiles points		= zeige Punkte der Stichhaufen
+
+
+# information windows
+Setting::Group::information windows \
+	= Informationsfenster
+
+Setting::Group::gametype \
+	= Spieltyp
+Setting::show gametype window \
+	= zeige Fenster "Spieltyp"
+Setting::close gametype window automatically \
+	= schließe Spieltyp-Fenster automatisch
+Setting::gametype window close delay \
+	= Verzögerung beim Schließen vom Spieltyp-Fenster
+
+Setting::Group::full trick \
+	= Voller Stich
+Setting::show full trick window \
+	= zeige Fenster "Voller Stich"
+Setting::show full trick window if special points \
+	= zeige Fenster "Voller Stich" bei Sonderpunkten
+Setting::close full trick automatically \
+	= schließe vollen Stich automatisch
+Setting::full trick close delay \
+	= Verzögerung beim Schließen vom vollen Stich
+
+Setting::Group::marriage \
+	= Hochzeit
+Setting::show marriage window \
+	= zeige Fenster "Hochzeit"
+Setting::close marriage window automatically \
+	= schließe Hochzeit-Fenster automatisch
+Setting::marriage window close delay \
+	= Verzögerung beim Schließen vom Hochzeit-Fenster
+
+Setting::Group::genscher \
+	= Genscher
+Setting::show genscher window \
+	= zeige Fenster "Genscher"
+Setting::close genscher window automatically \
+	= schließe Genscher-Fenster automatisch
+Setting::genscher window close delay \
+	= Verzögerung beim Schließen vom Genscher-Fenster
+
+Setting::Group::announcement \
+	= Ansage
+Setting::show announcement window \
+	= zeige Fenster "Ansage"
+Setting::close announcement window automatically \
+	= schließe Ansage-Fenster automatisch
+Setting::announcement window close delay \
+	= Verzögerung beim Schließen vom Ansage-Fenster
+
+Setting::Group::swines \
+	= Schweine
+Setting::show swines window \
+	= zeige Fenster "Schweine"
+Setting::close swines window automatically \
+	= schließe Schweine-Fenster automatisch
+Setting::swines window close delay \
+	= Verzögerung beim Schließen vom Schweine-Fenster
+
+Setting::Group::network \
+	= Netzwerk
+Setting::network connections urgency hint \
+	= Verbindungs-Hinweis
+Setting::network chat urgency hint \
+	= Chat-Hinweis
+
+Setting::Group::DokoLounge \
+        = Dokolounge
+Setting::DokoLounge name \
+        = Name
+Setting::DokoLounge password \
+        = Passwort
+Setting::DokoLounge auto login \
+        = automatisch anmelden
+
+# cards order
+Setting::Group::cards order		= Kartensortierung
+Setting::cards order			= Kartensortierung
+Direction::none				= keine
+Direction::up				= aufwärts
+Direction::down				= abwärts
+Setting::CardsOrder::unsorted		= unsortiert
+Setting::CardsOrder::random		= zufällig
+Setting::CardsOrder::sorted		= sortiert
+Setting::CardsOrder::mixed		= gemischt
+Setting::CardsOrder::mix cards		= Karten mischen
+
+# appearance
+Setting::Group::appearance		= Erscheinungsbild
+
+#   table
+Setting::Group::table			= Tisch
+Setting::own hand on table bottom	= eigenes Blatt unten
+Setting::table rotation			= Tischrotation
+Setting::rotate trick cards		= rotiere Stichkarten
+
+#   cards
+Setting::Group::cards			= Karten
+Setting::original cards size		= normale Kartengröße
+Setting::cards height			= Kartenhöhe
+
+#   theme
+Setting::Group::theme			= Thema
+Setting::cardset			= Kartenspiel
+Setting::iconset from cardset		= Symbole vom Kartensatz
+Setting::iconset			= Symbole
+Setting::background			= Hintergrund
+Setting::cards back			= Kartenrückseite
+
+#   fonts
+Setting::Group::fonts and colors	= Schriftarten, Farben
+Setting::name font			= Schriftart der Namen
+Setting::name font color		= Farbe der Namen
+Setting::name active font color		= Farbe des Namens des aktiven Spielers
+Setting::name reservation font color    = Farbe des Namens bei einem Vorbehalt
+Setting::trickpile points font		= Schriftart der Punkte der Stichhaufen
+Setting::trickpile points font color	= Farbe der Punkte der Stichhaufen
+
+Setting::poverty shift arrow color	= Farbe der Schiebepfeils
+
+# splash screen
+Setting::Group::splash screen		= Splash-Screen
+Setting::show splash screen		= Zeige Splash-Screen
+Setting::splash screen transparent	= transparenter Splash-Screen
+
+# bug report button
+Setting::show bug report button in game finished window	= Zeige Fehlermeldung-Knopf im "Spielende"-Fenster
+Setting::save bug reports on desktop	= Speicher die Fehlermeldungen auf dem Desktop
+
+
+# commands for external programs
+Setting::play sound command			= Musikprogramm
+Setting::browser command			= HTML-Betrachter
+
+
+# other
+
+#   directories
+Setting::public data directory		= Verzeichnis der öffentlichen Daten
+Setting::private data directory		= Verzeichnis der privaten Daten
+Setting::settings file			= Einstellungsdatei
+Setting::languages directory		= Sprachenverzeichnis
+Setting::language file			= Sprachdatei
+Setting::graphic extension		= Dateiendung der Graphiken
+Setting::sound extension		= Dateiendung der Sprachdateien
+Setting::cardsets directory		= Kartenspielverzeichnis
+Setting::cards directory		= Kartenverzeichnis
+Setting::cards back directory		= Kartenrückseitenverzeichnis
+Setting::iconsets directory		= Symbolsatzverzeichnis
+Setting::icons directory		= Symbolverzeichnis
+Setting::backgrounds directory		= Hintergrundverzeichnis
+Setting::sounds directory		= Soundverzeichnis
+Setting::ai directory			= KI-Verzeichnis
+Setting::parties directory		= Turnierverzeichnis
+Setting::rules directory		= Regelverzeichnis
+Setting::settings directory		= Einstellungsverzeichnis
+
+
+# themes
+Setting::Theme::autumn  = Herbst
+Setting::Theme::christmas  = Weihnachten

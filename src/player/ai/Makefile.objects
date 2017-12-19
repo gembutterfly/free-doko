@@ -1,0 +1,17 @@
+# All object-files
+OBJECTS = \
+	ai.o \
+	aiDb.o \
+	team_information.o \
+	  team_information.heuristics.o \
+	cards_information.o \
+	  cards_information.of_player.o \
+	    cards_information.heuristics.o \
+	heuristics.o \
+	  heuristics.best_winning.o \
+	weighting.o \
+	trickweighting.o \
+	w_virtual_games.o \
+	gametree.o \
+	w_monte_carlo.o
+

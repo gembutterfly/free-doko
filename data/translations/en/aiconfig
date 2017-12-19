@@ -1,0 +1,281 @@
+# FreeDoko translation: part aiconfig
+# language: english
+# version: 0.7.5
+
+
+aiconfig		= aiconfig
+aiconfigs		= aiconfigs
+
+!input "aiconfig.heuristics.description"
+
+AiConfig::difficulty				= difficulty
+AiConfig::Difficulty::custom			= custom
+AiConfig::Difficulty::novice			= novice
+AiConfig::Difficulty::standard defensive	= standard defensive
+AiConfig::Difficulty::standard offensive	= standard offensive
+AiConfig::Difficulty::profi			= profi
+AiConfig::Difficulty::profi aggressive		= profi aggressive
+AiConfig::Difficulty::profi unfair		= profi unfair
+
+AiConfig::Group::data			= data
+AiConfig::Group::simple                 = simple
+AiConfig::Group::aitype			= aitype
+AiConfig::Group::announcement		= announcement
+AiConfig::Group::trick decision		= trick decision
+AiConfig::Group::game decision		= game decision
+
+AiConfig::Group::heuristics		= heuristics
+AiConfig::HeuristicsMap::GametypeGroup::default		= default
+AiConfig::HeuristicsMap::GametypeGroup::normal		= normal game
+AiConfig::HeuristicsMap::GametypeGroup::marriage	= marriage
+AiConfig::HeuristicsMap::GametypeGroup::silent marriage	= silent marriage
+AiConfig::HeuristicsMap::GametypeGroup::undetermined marriage = marriage determination
+AiConfig::HeuristicsMap::GametypeGroup::poverty		= poverty
+AiConfig::HeuristicsMap::GametypeGroup::soli		= soli
+AiConfig::HeuristicsMap::GametypeGroup::soli color	= color soli
+AiConfig::HeuristicsMap::GametypeGroup::soli single picture = single picture soli
+AiConfig::HeuristicsMap::GametypeGroup::soli double picture = double picture soli
+AiConfig::HeuristicsMap::GametypeGroup::solo koehler	= koehler
+AiConfig::HeuristicsMap::GametypeGroup::solo meatless	= meatless
+AiConfig::HeuristicsMap::PlayerTypeGroup::re		= re
+AiConfig::HeuristicsMap::PlayerTypeGroup::contra	= contra
+AiConfig::HeuristicsMap::PlayerTypeGroup::special	= special
+
+AiConfig::Group::card limits		= card limits
+AiConfig::CardLimit::Group::normal game		= normal game
+AiConfig::CardLimit::Group::solo		= solo
+AiConfig::CardLimit::Group::trump limit		= trump limit
+AiConfig::CardLimit::Group::lowest trump limit	= lowest trump limit
+
+
+# aitype
+AiConfig::aitype				= aitype
+AiConfig::AiType::no choosebestcard		= no ai type
+AiConfig::AiType::random			= random
+AiConfig::AiType::virtual games			= virtual games
+AiConfig::AiType::gametree			= gametree
+AiConfig::AiType::gametree with heuristics	= gametree with heuristics
+AiConfig::AiType::gametree for team		= gametree for team
+AiConfig::AiType::monte carlo			= monte carlo
+AiConfig::AiType::monte carlo - jab or serve	= Monte Carlo (jab/serve)
+
+# rating
+AiConfig::rating				= rating
+AiConfig::Rating::maximum			= maximum
+AiConfig::Rating::minimum			= minimum
+AiConfig::Rating::second maximum		= second maximum
+AiConfig::Rating::second minimum		= second minimum
+AiConfig::Rating::average			= average
+AiConfig::Rating::physical average		= physical average
+AiConfig::Rating::median			= median
+AiConfig::Rating::linear			= linear
+AiConfig::Rating::linear reverse		= linear reverse
+
+AiConfig::future limit			= limit for calcualtion of future tricks
+
+AiConfig::trusting			= trusting
+AiConfig::aggressive			= aggressive
+AiConfig::teams known			= knows the teams of the other players
+AiConfig::hands known			= knows the hands of the other players
+AiConfig::estimate hands		= estimate the hands of the other players
+AiConfig::first card fehl creation	= create a 'Fehlcard' with first card
+AiConfig::remember tricks		= number of remembered tricks
+
+AiConfig::game decision           = game Decision
+
+
+AiConfig::heuristics              = Heuristics
+
+
+AiConfig::Heuristic::no heuristic \
+	= no heuristic
+AiConfig::Heuristic::manual \
+	= manual
+AiConfig::Heuristic::bug report \
+	= card from bug report
+AiConfig::Heuristic::network \
+	= network
+AiConfig::Heuristic::get trick for announcement \
+	= get trick for announcement
+AiConfig::Heuristic::let trick pass \
+	= let trick pass
+AiConfig::Heuristic::grab trick \
+	= grab trick
+AiConfig::Heuristic::play trump \
+	= play trump
+AiConfig::Heuristic::play to marry \
+	= play to marry
+AiConfig::Heuristic::play to get married \
+	= play to get married
+AiConfig::Heuristic::choose ace \
+	= choose color ace
+AiConfig::Heuristic::choose ten \
+	= choose color ten
+AiConfig::Heuristic::choose single ace \
+	= choose single color ace
+AiConfig::Heuristic::only valid card \
+	= only valid card
+AiConfig::Heuristic::choose for color trick \
+	= choose card for color trick
+AiConfig::Heuristic::jab color over fox \
+	= jab color over fox
+AiConfig::Heuristic::retry color \
+	= retry color
+AiConfig::Heuristic::play color for partner \
+	= play color for partner
+AiConfig::Heuristic::try color for partner \
+	= try color for partner
+AiConfig::Heuristic::play color in solo \
+	= play color in solo
+AiConfig::Heuristic::play color for partner ace \
+	= play color for partner ace
+AiConfig::Heuristic::play bad color \
+	= play bad color
+AiConfig::Heuristic::serve color trick \
+	= Serve color trick
+AiConfig::Heuristic::serve trump trick \
+	= Serve trump trick
+AiConfig::Heuristic::choose pfund \
+	= Choose pfund
+AiConfig::Heuristic::choose pfund poverty \
+	= Choose pfund
+AiConfig::Heuristic::choose pfund before partner \
+	= Choose pfund before partner
+AiConfig::Heuristic::jab for ace \
+	= jab for sequel ace
+AiConfig::Heuristic::create fehl \
+	= create 'Fehlcolor'
+AiConfig::Heuristic::best winning card \
+	= Choose best card for winning this trick
+AiConfig::Heuristic::play low high \
+	= Play alternating low and high trumps
+AiConfig::Heuristic::play for team \
+	= Play for team
+AiConfig::Heuristic::jab fox \
+	= jab fox
+AiConfig::Heuristic::try for doppelkopf \
+	= try for doppelkopf
+AiConfig::Heuristic::draw trump \
+	= draw trump
+AiConfig::Heuristic::play highest color card in game \
+	= play highest color card in game
+AiConfig::Heuristic::partner backhand draw trump \
+	= backhand draw trump
+AiConfig::Heuristic::start with color \
+	= start with color
+AiConfig::Heuristic::start with low color \
+	= start with low color
+AiConfig::Heuristic::start with low trump \
+	= start with low trump
+AiConfig::Heuristic::play to jab later \
+	= play to jab later
+AiConfig::Heuristic::play for partner worries \
+	= play for partner worries
+AiConfig::Heuristic::poverty: special: play pfund \
+	= Play pfund (poverty player)
+AiConfig::Heuristic::poverty: special: offer pfund \
+	= poverty: special: offer pfund
+AiConfig::Heuristic::poverty: special: give no points \
+	= give no points (poverty player)
+AiConfig::Heuristic::poverty: re: trump color trick high \
+	= trump color trick high (poverty, re)
+AiConfig::Heuristic::poverty: re: play trump \
+	= start with trump (poverty, re)
+AiConfig::Heuristic::poverty: contra: play color \
+	= start with play color (poverty, contra)
+AiConfig::Heuristic::poverty: contra: trump color trick high \
+	= trump color trick high (poverty, contra)
+AiConfig::Heuristic::poverty: contra: leave to partner \
+	= leave trick to partner (poverty, contra)
+AiConfig::Heuristic::poverty: contra: overjab re \
+	= overjab re (poverty, contra)
+
+AiConfig::Heuristic::poverty: best winning card \
+	= best winning card (poverty, last card)
+
+
+AiConfig::Heuristic::meatless: play highest color \
+	= play best color
+AiConfig::Heuristic::picture: second best trump \
+	= play second best trump
+AiConfig::Heuristic::color: best winning \
+	= choose best card for winning this trick
+AiConfig::Heuristic::color: jab for ace \
+	= jab for sequel Ace
+AiConfig::Heuristic::color: play low high \
+	= play alternating low and high trumps
+
+AiConfig::limit throw fehl \
+	= maximal trick points to throw fehl card
+AiConfig::limit queen \
+	= minimal trick points for prefered playing of Queen
+AiConfig::limit dolle \
+	= minimal trick points for prefered playing of Dolle
+AiConfig::last fehlcreation \
+	= last trick with which to create a 'Fehlcolor' by throwing
+AiConfig::last tricks without heuristics \
+	= last tricks in which no heuristics are used
+AiConfig::first trick for trump points optimization \
+	= first trick for trump points optimization
+AiConfig::announce limit \
+	= minimal hand value for announcement
+AiConfig::announce limit reply \
+	= minimal hand value for announcement reply
+AiConfig::announce limit decrement \
+	= decrement of hand value for following annoucements
+AiConfig::announce config \
+	= hand value modificator for configuration of announcements decisions 
+AiConfig::announce config reply \
+	= hand value modificator for configuration of announcements reply decisions 
+AiConfig::take poverty \
+	= minimal hand value for make announcement
+AiConfig::handvalue single solo \
+	= minimal hand value for announcing single picture solo
+AiConfig::handvalue double solo \
+	= minimal hand value for announcing double picture solo
+AiConfig::handvalue trible solo \
+	= minimal hand value for announcing trible picturre
+AiConfig::handvalue color solo \
+	= minimal hand value for announcing color solo
+AiConfig::handvalue meatless \
+	= minimal hand value for announcing meatless
+
+AiConfig::Heuristic::choose best card		= best card found with ai type
+AiConfig::Heuristic::Description::choose best card \
+	= The ai playes different game courses and takes the card with the "best" course.
+
+AiConfig::trump limit			= trump limit
+AiConfig::lowest trump limit		= lowest trump limit
+
+AiConfig::limit throwing		= limit throwing
+AiConfig::trump limit normal		= normal: trump limit
+AiConfig::lowest trump limit normal	= normal: lowest trump limit
+AiConfig::limit high			= limit high
+
+AiConfig::trump limit color		= color: trump limit
+AiConfig::lowest trump limit color	= color: lowest trump limit
+
+AiConfig::trump limit jack		= jack: trump limit
+AiConfig::lowest trump limit jack	= jack: lowest trump limit
+AiConfig::trump limit queen		= queen: trump limit
+AiConfig::lowest trump limit queen	= queen: lowest trump limit
+AiConfig::trump limit king		= king: trump limit
+AiConfig::lowest trump limit king	= king: lowest trump limit
+AiConfig::trump limit jack queen	= jack queen: trump limit
+AiConfig::lowest trump limit jack queen	= jack queen: lowest trump limit
+AiConfig::trump limit jack king		= jack king: trump limit
+AiConfig::lowest trump limit jack king	= jack king: lowest trump limit
+AiConfig::trump limit queen king	= queen king: trump limit
+AiConfig::lowest trump limit queen king	= queen king: lowest trump limit
+AiConfig::trump limit koehler		= koehler: trump limit
+AiConfig::lowest trump limit koehler	= koehler: lowest trump limit
+AiConfig::trump limit meatless		= meatless: trump limit
+AiConfig::lowest trump limit meatless	= meatless: lowest trump limit
+
+
+AiConfig::Heuristic::Group::normal game		= normal game
+AiConfig::Heuristic::Group::poverty		= poverty
+AiConfig::Heuristic::Group::solo		= soli
+AiConfig::Heuristic::Group::Solo::color		= color soli
+AiConfig::Heuristic::Group::Solo::picture	= picture soli
+AiConfig::Heuristic::Group::Solo::meatless	= meatless

@@ -1,0 +1,117 @@
+# FreeDoko translation: part messages
+# language: français
+# version: 0.7.5
+
+
+Message::creating directory '%sdir%'		= \
+	Création du répertoire '%sdir%'.
+Message::failed 				= failed ***
+
+Message::party load: open failed '%sfilename%'	= \
+	Erreur d'ouverture de '%sfilename%'.
+Message::party load: load error '%sfilename%'	= \
+	Erreur de chargement du tournoi à partir du fichier '%sfilename%'.
+
+Message::network support	= \
+	Le support réseau n'est pas encore terminé\
+	Les jeux multi-joueurs seront possibles à partir de la version 0.8.0, jusque là, vous pouvez tester certaines parties et nous faire part de vos remarques, suggestions, ... (free-doko-developer@sourceforge.net).\n\
+	Jusqu'à présent, les parties simples(pas de misère), annonces, cochons et "genscher" devraient fonctionner.
+
+Error::could not create listener on port %uport%	= \
+	Erreur: Impossible de créer un port d'écoute sur le port %uport%.
+
+
+Error::loading default cardset %scardset%		= \
+	Impossible de charger le jeu de cartes '%scardset%'.\n\
+	L'installation est-elle complète?
+Error::loading default cards back %sback% (%scardset%)	= \
+	Impossible de charger le dos des cartes standard '%sback%' du jeu de cartes %scardset%.\n\
+	L'installation est-elle complète?
+Error::loading default background %sbackground%	= \
+	Impossible de charger le fond d'écran standard '%sbackground%'.\n\
+	L'installation est-elle complète?
+
+Error::could not load cardset %scardset%		= \
+	Could not load cardset '%scardset%'.\n\
+	Si vous n'avez installé aucun jeu de cartes, vous pourrez en trouver sur notre page internet http://free-doko.sourceforge.net/en/files.html.
+Error::could not find any back for cardset %scardset%		= \
+	Impossible de trouver un dos de carte pour le jeu '%scardset%'.
+Error::could not find any background		= \
+	Impossible de trouver un fond d'écran
+
+Error::loading the card %tcard% (%scardset%)            = \
+	Impossible de charger la carte '%tcard%' du jeu '%scardset%'.
+Error::loading the card back %sback% (%scardset%)       = \
+	Impossible de trouver le dos de carte '%sback%' pour le jeu '%scardset%'.
+Error::loading the background %sbackground% 		= \
+	Impossible de charger le fond d'écran '%sbackground%'.
+
+Error::loading logo (%sfile%) =\
+	Impossible de charger le logo à partir du fichier '%sfile'.
+Error::loading icon (%sfile%) =\
+	Impossible de charger l'icone à partir du fichier '%sfile'.
+
+Error::Party::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Error while saving the party.\n\
+	Could not open the temporary file '%stmpfile%'.\n\
+	Aborting saving.***
+Error::Party::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Error while saving the party.\n\
+	Could not write the party in the temporary file '%stmpfile%'.\n\
+	Leaving temporary file (for bug identification).***
+Error::Party::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Error while saving the party.\n\
+	Could not rename the temporary file '%stmpfile%' in the file %sfile%.\n\
+	Leaving temporary file.***
+
+Error::Rule::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Error while saving the rules.\n\
+	Could not open the temporary file '%stmpfile%'.\n\
+	Aborting saving.***
+Error::Rule::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Error while saving the rules.\n\
+	Could not write the rules in the temporary file '%stmpfile%'.\n\
+	Leaving temporary file (for bug identification).***
+Error::Rule::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Error while saving the rules.\n\
+	Could not rename the temporary file '%stmpfile%' in the file %sfile%.\n\
+	Leaving temporary file.***
+
+Error::Setting::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Error while saving the settings.\n\
+	Could not open the temporary file '%stmpfile%'.\n\
+	Aborting saving.***
+Error::Setting::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Error while saving the settings.\n\
+	Could not write the settings in the temporary file '%stmpfile%'.\n\
+	Leaving temporary file (for bug identification).***
+Error::Setting::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Error while saving the settings.\n\
+	Could not rename the temporary file '%stmpfile%' in the file %sfile%.\n\
+	Leaving temporary file.***
+
+Error::Aiconfig::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Error while saving the ai configuration.\n\
+	Could not open the temporary file '%stmpfile%'.\n\
+	Aborting saving.***
+Error::Aiconfig::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Error while saving the ai configuration.\n\
+	Could not write the ai configuration in the temporary file '%stmpfile%'.\n\
+	Leaving temporary file (for bug identification).***
+Error::Aiconfig::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Error while saving the ai configuration.\n\
+	Could not rename the temporary file '%stmpfile%' in the file %sfile%.\n\
+	Leaving temporary file.***
+
+Error::Player%sname%::save: Error opening temporary file %stmpfile%. Aborting saving. =\
+	Error while saving the player '%sname%'.\n\
+	Could not open the temporary file '%stmpfile%'.\n\
+	Aborting saving.***
+Error::Player%sname%::save: Error saving in temporary file %stmpfile%. Keeping temporary file (for bug tracking). = \
+	Error while saving the player '%sname%'.\n\
+	Could not write the player in the temporary file '%stmpfile%'.\n\
+	Leaving temporary file (for bug identification).***
+Error::Player%sname%::save: Could not rename temporary file %stmpfile% to requested file %sfile%. Keeping temporary file. = \
+	Error while saving the player '%sname%'.\n\
+	Could not rename the temporary file '%stmpfile%' in the file %sfile%.\n\
+	Leaving temporary file.***

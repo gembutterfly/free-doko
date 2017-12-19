@@ -1,0 +1,13 @@
+# All object-files
+OBJECTS = \
+	pure.o \
+	player1.o \
+	base_cards.o \
+	reservation.o \
+	marriage.o \
+	genscher.o \
+	announcement.o \
+	card_played.o \
+	trick_full.o \
+	check.o \
+	print.o

@@ -1,0 +1,129 @@
+# FreeDoko rules (version 0.7.7  (2009-9-26) (developer version) (dknof))
+
+show if valid = false
+show all hands = false
+show tricks number = 1
+show tricks in trickpiles = false
+show trickpiles points = false
+show known teams in game = false
+show soloplayer in game = false
+
+card hint = false
+take back tricks = false
+
+with nines = true
+
+bock = false
+  bock multiplier = 2
+  append bock = false
+  bock after 120-120 = true
+  bock after lost solo = false
+  bock after lost re/contra = false
+  bock after heart trick = false
+  bock after black game = false
+
+throw with nines = false
+min number of throwing nines = 5
+throw with kings = false
+min number of throwing kings = 6
+throw with nines and kings = false
+min number of throwing nines and kings = 7
+throw with richness = false
+min richness for throwing = 70
+
+poverty = false
+  poverty shift = false
+  poverty shift only trump = false
+  poverty fox do not count = false
+  poverty fox shift extra = false
+  poverty fox shift open = false
+  throw with one trump = false
+  throw when fox highest trump = false
+
+marriage determination = 3
+  marriage first foreign = true
+  marriage first color = false
+  marriage first single color = false
+  marriage first trump = false
+
+genscher = false
+
+solo = true
+  solo jack = true
+  solo queen = true
+  solo king = false
+  solo queen jack = false
+  solo king jack = false
+  solo king queen = false
+  solo koehler = false
+  solo color = true
+  solo meatless = true
+  throwing before solo = false
+
+dollen = true
+  dollen second over first = false
+  dollen contrary in last trick = false
+  dollen first over second with swines = false
+
+swines = false
+  swines in solo = true
+  swines in poverty = true
+  swines announcement begin = true
+  swine only second = false
+hyperswines = false
+  hyperswines in solo = false
+  hyperswines in poverty = true
+  hyperswines announcement begin = true
+  swines and hyperswines joint = false
+
+# Extrapoints:
+extrapoint catch fox = true
+extrapoint fox last trick = false
+extrapoint double fox last trick = false
+extrapoint dolle jabs dolle = false
+extrapoint heart trick = false
+extrapoint charlie = true
+extrapoint catch charlie = false
+extrapoint double charlie = false
+extrapoint catch double charlie = false
+extrapoint catch charlie only with diamond queen = false
+
+announcement first trick thirty points = false
+announcement first trick thirty points only first = false
+announcement first trick thirty points only re/contra = true
+announcement first trick thirty points in marriage = true
+announcement re/contra doubles = false
+announcement contra doubles against re = false
+
+# till when to make the announcements:
+announcement no 120 = 11
+announcement no 90 = 10
+announcement no 60 = 9
+announcement no 30 = 8
+announcement no 0 = 7
+last announcement = 5
+announcement till full trick = false
+announcement reply = false
+announcement strict limit = false
+number of rounds limited = true
+  number of rounds = 5
+points limited = false
+  points = 40
+number of duty soli = 1
+  number of duty color soli = 0
+  number of duty picture soli = 0
+offer duty solo = false
+lustsolo player leads = false
+number of players = 4
+number of players in game = 4
+
+# number of same cards = 2
+# number of card colors = 4
+# number of card tcolors = 5
+# number of card values = 6
+# number of cards = 48
+# number of teams = 2
+# number of players per team = 2
+# number of tricks in game = 12
+
+counting = plus-minus

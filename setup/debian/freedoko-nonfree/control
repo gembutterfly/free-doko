@@ -1,0 +1,19 @@
+Source: freedoko-nonfree
+Section: non-free/games
+Priority: optional
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-nonfree
+Architecture: any
+Provides: freedoko, freedoko-binary, freedoko-data, freedoko-backgrounds, freedoko-icongroups, freedoko-translations, freedoko-manual-base, freedoko-manual-de, freedoko-manual-en, freedoko-cardset, freedoko-soundset-mbrola
+Conflicts: freedoko-binary, freedoko-data, freedoko-backgrounds, freedoko-icongroups, freedoko-translations, freedoko-manual-base, freedoko-manual-de, freedoko-manual-en
+Depends: libgtkmm-2.4-1c2a, libgnet2.0-0, libalut0
+Replaces: freedoko-altenburg
+Description: The german card game ``Doppelkopf'' (including non-free cardsets)
+ The game ``Doppelkopf'' is a card game for four or more Players similar to ``Skat'' (like 'xskat').
+ One game will be played by four players.
+ Doppelkopf originates probably from the mostly in south germany played game ``Schafkopf''.
+ The game is written with GTKMM for Linux and Windows.
+ The section is 'non-free' because of the default cardset 'Altenburg'. The program itself is written under the GPL, so if you take the cardset 'xskat' (taken from the package 'xskat') you have a free package.

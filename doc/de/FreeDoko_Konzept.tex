@@ -1,0 +1,444 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{german}
+\usepackage{tabularx}
+%\usepackage{times}
+\usepackage[pdftex]{hyperref}
+\usepackage[utf8x]{inputenc}
+
+\newcommand{\kreuz}{$\clubsuit$}
+\newcommand{\pik}{$\spadesuit$}
+\newcommand{\herz}{$\heartsuit$}
+\newcommand{\karo}{$\diamondsuit$}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+\linespread{2.0}
+{\Huge
+FreeDoko
+\ \\
+\vspace{2cm}
+Konzept
+\ \\
+\vspace{2cm}
+}
+{\large
+\ \\
+\vspace{2cm}
+Borg Enders\\
+Diether Knof
+\ \\
+\vspace{2cm}
+\ \\
+}
+\ \\
+\vspace{2cm}
+\ \\
+September 2001
+\end{center}
+\newpage
+\tableofcontents \newpage
+\section{Spielidee}
+Das Doppelkopfspiel ist ein Kartenspiel für vier oder mehr Personen.
+Das einzelne Spiel wird von vier Spielern gespielt. Das Doppelkopfspiel ist
+wahrscheinlich aus dem meist im süddeutschen Raum gespielten Schafkopf entstanden, das bereits seit 1895 ein Regelwerk
+besaß. Es erhielt den Namen daher, daß alle Karten doppelt im Spiel vorhanden sind (Doppel-Schafkopf).
+Doppelkopf wird im Gegensatz zu Schafkopf inzwischen in ganz Deutschland gespielt, überwiegend jedoch in Norddeutschland
+und in der Rhein-Main-Gegend.\\
+Doppelkopf ist ein Kartenspiel mit 48 Karten und mindestens 4 Spielern, das Skat nicht unähnlich ist. Hierbei wird mit zwei
+normalen Skatblättern ohne Siebener und Achter gespielt. Es spielen dann immer die Besitzer der beiden Kreuz-Damen zusammen.
+Hierdurch bilden sich während des Spielens immer wieder neue Paare. Es ist von vornherein nicht klar, wer mit wem eine Partei bildet.
+Dies herauszufinden oder zu verheimlichen, macht einen wesentlichen Reiz des Doppelkopfspieles aus.\\
+Bei Doppelkopf ist der Spielverlauf auch ähnlich wie bei Skat zu großen Teilen vom Können der einzelnen Spieler abhängig.
+Dieses sorgt für ein spannendes und abwechslungsreiches Spielerlebnis.
+\newpage
+\section{Vorgesehener Funktionsumfang}
+\subsection{Die unterstützten Regeln}
+\begin{itemize}
+\item Spiel mit oder ohne Neunen
+\item Armut mit mehr als vier Neunen
+\item Trumpfarmut bei weniger als vier Trümpfen
+\item ein angesagter Vorbehalt ist verbindlich
+\item Hochzeit (beide Kreuz-Damen auf einer Hand); Wahl des Mitspielers:
+\begin{itemize}
+\item Erster fremder Stich entscheidet
+\item Erster fremder Herz Stich entscheidet
+\item Erster fremder Pik Stich entscheidet
+\item Erster fremder Kreuz Stich entscheidet
+\item Erster fremder Farbstich entscheidet
+\item Erster fremder Trumpfstich entscheidet
+\item Festlegen des letzten Klärungsstiches
+\end{itemize}
+\item Schweine (beide Karo Asse auf einer Hand) sind die höchsten Trümpfe. Ansagezeitpunkt:
+\begin{itemize}
+\item Ansage vor dem Spiel
+\item Ansage, wenn erstes Schwein gespielt wird
+\item Wenn erstes As von der eigenen Partei gewonnen wurde, wird das zweite Karo As zum Schwein und angesagt
+     (keine Hyperschweine)
+\item Hyperschweine, beide Karo Neunen auf einer Hand, wenn Schweine angesagt wurden:
+\begin{itemize}
+\item Ansage vor dem Spiel
+\item Ansage, wenn erste Neun gespielt wird
+\end{itemize}
+\end{itemize}
+\item Ein Sonderpunkt für Karlchen: Kreuz Bube macht letzten Stich
+\begin{itemize}
+\item Zwei Sonderpunkte für Doppel-Karlchen: beide Kreuz Buben einer Partei im letzten Stich
+\item Ein Sonderpunkt für Karlchen fangen: wenn Kreuz Bube im letzten Stich von Gegenpartei überstochen wird und
+die Gegenpartei den Stich macht
+\item Zwei Sonderpunkte für Doppel-Karlchen fangen: wenn beide Kreuz Buben im letzten Stich von Gegenpartei überstochen werden
+\end{itemize}
+\item Ein Sonderpunkt für Fuchs im letzten Stich: Letzter Stich wird mit Karo As (kein Schwein) gewonnen:
+\begin{itemize}
+\item Zwei Sonderpunkte für Doppel-Fuchs im letzten Stich: letzter Stich wird durch zwei Karo Asse einer Partei gewonnen
+\end{itemize}
+\item Ein Sonderpunkt für gefangenen Fuchs, wenn ein Karo As in einem Stich der Gegenpartei endet
+\item Herz Zehnen Trumpf (oder normale Farbkarten). Bei Trumpf:
+\begin{itemize}
+\item Zweite Herz Zehn in einem Stich schlägt erste
+\item Außer im letzten
+\item Erste Herz Zehn schlägt zweite
+\item Außer im letzten Stich
+\item Ein Sonderpunkt für Dollenschlag, wenn eine Herz Zehn die andere schlägt
+\end{itemize}
+\item Genscher: Beide Karo Könige auf einer Hand, dann darf der Spiler mit dem Genscher sich beim Ausspielen
+des ersten Karo Königs einen neuen Mitspieler aussuchen. Hierdurch werden alle Ansagen außer Re und Kontra nichtig.
+Dieser ist nur bei Normalspielen oder geklärter Hochzeit erlaubt.
+\item Soli: Ein Spieler spielt gegen die drei anderen:
+\begin{itemize}
+\item Buben-Solo: nur Buben sind Trumpf
+\item Damen-Solo: nur Damen sind Trumpf
+\item Damen-Buben-Solo: nur Damen und Buben sind Trumpf
+\item Köhler: Nur Bilder sind Trumpf
+\item Farbsolo: (Farb Schweine (optional),) (Herz Zehnen,) Damen, Buben und entsprechende Farbkarten sind Trumpf
+\item Fleischloser: Es gibt keinen Trumpf
+\end{itemize}
+\item An- und Absagen (mit Angaben bis wann und viele Ansagen insgesamt erlaubt sind)
+\begin{itemize}
+\item Re: Ich habe eine Kreuz-Dame (bin Solospieler)
+\item Kontra: Ich habe keine Kreuz-Dame (bin kein Solospieler)
+\item Keine 90: die Gegenpartei schafft keine 90 Punkte, Ansage der eigenen Partei mußte vorher erfolgen
+\item Keine 60: die Gegenpartei schafft keine 60 Punkte, keine 90 mußte vorher angesagt werden
+\item Keine 30: die Gegenpartei schafft keine 30 Punkte, keine 60 mußte vorher angesagt werden
+\item Schwarz: die Gegenaprtei macht keinen Stich, keine 30 mußte vorher angesagt werden
+\item Absagen dürfen übersprungen werden, wenn vorher nötige Absagen noch erlaubt sind. Diese gelten
+dann als abgesagt
+\item Auf jede Absage darf ein Re oder Kontra ggf. erwidert werden
+\end{itemize}
+\item Eine vorgegeben Anzahl (abhängig vom Schwierigketisgrad) von bereits gespielten Stichen
+darf betrachtet werden
+\item Frei wählbare Anzahl und Art der Pflichtsoli
+\item Frei wählbare Zählart, ob Plus-Minus, Plus oder Minus
+\end{itemize}
+\subsection{Spielumfang}
+\begin{itemize}
+\item Einzelspieler Spiel gegen KIs unterschiedlicher Schwierigkeitsgrade
+\item Multiplayer-Spiel
+\item Verschiedene Spielvarianten
+\begin{itemize}
+\item Vorgegebene Anzahl von Runden
+\item Spiel bis zum erreichen einer bestimmten Punktzahl
+\item Spielen einer bestimmten Anzahl von Punkten (Punktetopf)
+\item Endlosspiel
+\item Spiel auf Zeit (Tunier)
+\item Regeln durch Anwender weitestgehend konfigurierbar
+\end{itemize}
+\item Speichern und Laden von Doppelkopfpartien
+\item Sortierung der Karten
+\begin{itemize}
+\item aufwärts/abwärts
+\item Trumpf links/rechts
+\item beliebige Farbreihenfolge sollte angebbar sein: Herz Zehnen, Karo, Kreuz, Pik, Herz, Schweine, Buben, Damen
+\end{itemize}
+\end{itemize}
+\subsection{Technischer Umfang}
+\begin{itemize}
+\item Rechneranforderungen ca. 300MHz und 64MB.
+\item Unterstützte Auflösungen $640\times 480$, $800\times 600$, $1024\times 768$, $1280\times 1024$
+\item Eine Programmversion für Linux und eine für Windows 95 und höher
+\item Als graphische Oberfläche wird GTK+ verwendet
+\item Alle Funktionen über Tastatur und Maus bedienbar
+\item Konfigurationsdatei
+\item Kommandozeilenargumente
+\item Programmiersprache: C++ (Compiler: Linux: g++; Windows: g++)
+\item eine zusätzliche textbasierte Version für Linux und Windows
+\item Multiplayerfähig via TCP/IP
+\begin{itemize}
+\item peer-to-peer-Netz: Hostaufagben können einfach weiter gereicht werden beim ausscheiden des Hosts
+\end{itemize}
+\item Soundausgaben (linux: sox (Systemaufruf); Windows: PlaySound aus der Multimedia-Bibliothek winmm.lib)
+\item Mehrsprachig (deutsch, englisch, ...)
+\item Wird unter die GPL gestellt
+\end{itemize}
+\subsection{Dokumentation}
+\begin{itemize}
+\item Anleitungen:
+\begin{itemize}
+\item Die DDV-Kurzanleitung als Crashkurs für ganz eilige.
+\item Die FreeDoko-Regeln als detailierte Einführung in das Spiel.
+\item Die Tunier-Regeln für alle die es ganz genau wissen wollen.
+\end{itemize}
+\end{itemize}
+\subsection{Spielerprofil}
+Der Spieler gibt Startlevel an und kann seinen Level beliebig up/downgraden.\\
+Nach x gewonnen Spielen (Punkte der eigenen Partei \textgreater 120 und eigene Punkte \textgreater 60), nach y gehaltenen Absagen
+und nach z gewonnen Soli findet ein Upgrade des Spielerlevels statt.\\
+Durch ein freiwilliges up/downgraden werden die ermittelten Gesamtwerte nicht beeinflußt.
+Ein Downgrade bringt den Spieler zur Mitte des letzten Levels zurück, ein Upgrade zum Anfang des nächsten Levels.\\
+Die KI wird dann entsprechend dem Spielerlevel gewählt und andere Spieler können sehen, wie gut ihr Gegener ist.
+Jeder Spieler darf auch eine Ersatz KI, die sein Spiel beim Ausfall seines Rechners Übernimmt, entsprechend seinem
+Level festlegen.
+\subsection{Schwierigkeitsgrade}
+\subsubsection{Anfänger}
+\begin{itemize}
+\item Alle Karten offen
+\item Alle Stiche betrachtbar
+\item Re/Kontra anzeigen
+\item Schweine anzeigen
+\item Automatische Punktezählung
+\item Kartenvorschlag
+\item KI zählt Herz Zehnen und Schweine mit
+\item KI berücksichtigt keine weiteren gespielten Karten
+\end{itemize}
+\subsubsection{Anfänger pro}
+\begin{itemize}
+\item Karten verdeckt
+\item Alle Stiche betrachtbar
+\item Re/Kontra anzeigen
+\item Schweine anzeigen
+\item Automatische Punktezählung
+\item Kartenvorschlag
+\item KI zählt Herz Zehnen und Schwein mit
+\item Die KI zählt gestochene Farben mit
+\end{itemize}
+\subsection{Normal}
+\begin{itemize}
+\item Nur letzten Stich noch betrachten
+\item Re/Kontra anzeigen
+\item Schweine Anzeigen
+\item Automatische Punktezählung
+\item Kartenvorschlag
+\item KI zählt gestochene Farben mit
+\item KI berücksichtig letzten Stich
+\item KI zählt Herz Zehnen und Schweine mit
+\end{itemize}
+\subsection{Normal pro}
+\begin{itemize}
+\item Keine Punkte zählen
+\item Nur letzten Stich noch betrachten
+\item Re/Kontra anzeigen
+\item Schweine anzeigen
+\item Kartenvorschlag
+\item KI zählt gestochene Farben mit
+\item KI berücksichtigt letzte 3 Stiche
+\item KI zählt Herz Zehnen und Schweine mit
+\end{itemize}
+\subsection{Profi}
+\begin{itemize}
+\item Keine Punkte zählen
+\item Nur letzten Stich noch betrachten
+\item Schweine anzeigen
+\item KI zählt gestochene Farben mit
+\item KI berücksichtigt letzte 6 Stiche
+\item KI zählt Herz Zehnen und Schweine mit
+\end{itemize}
+\subsection{Profi pro}
+\begin{itemize}
+\item Keine Punkte zählen
+\item Nur letzten Stich noch betrachten
+\item KI zählt gestochene Farben mit
+\item KI berücksichtigt alle Stiche
+\item KI zählt Herz Zehnen und Schweine mit
+\end{itemize}
+\newpage
+\section{GUI}
+\subsection{Entwurf}
+Fähigkeiten der GUI:
+\begin{itemize}
+\item Stiche betrachten
+\item Punkte zählen
+\item Einstellungen
+\begin{itemize}
+\item Sortierung der Karten
+\item Kartenart wählen (auf jedenfall die Rückseite)
+\end{itemize}
+\item Auswahl von An- und Absagen
+\end{itemize}
+\subsection{Die Grafik}
+\begin{itemize}
+\item Blick von oben auf einne Tisch mit Schreibblock (vergrößerbar), Karten an den vier Tischseiten und aktueller Stich
+in der Mitte.
+\item nach Möglichkeit menschliche Hände und ähnliches vermeiden, da gute Grafik hierfür zu aufwendig in der Erstellung sein würde
+\item Animationen:
+\begin{itemize}
+\item die Karten werden in die Mitte geschoben
+\item dann wird der Stich umgedreht
+\item zu dem Spieler geschoben, der ihn bekommt
+\item vor dem dann ein Kartenstapel anwächst
+\end{itemize}
+\end{itemize}
+\newpage
+\section{Programmablauf}
+\subsection{Server-Klient-Konzept}
+Idealerweise sollte der Server nicht als separates Programm gestartet werden, sondern kann vom Spieler eingestellt werden
+(beim Programmstart wird er automatisch gestartet, es kann aber auch ein anderer eingestellt werden).
+\begin{itemize}
+\item Vorbereitung:
+\begin{itemize}
+\item Einstellungen beim Server machen (z.Bsp.: Spielregeln, Art der Klients, ...)
+\item Einstellungen bei den Klients machen (z.Bsp.: Namen, Schwierigkeitsgrad, ...)
+\item Auf alle Klients warten
+\item Server abgleichen
+\end{itemize}
+\item Partie starten:
+\begin{itemize}
+\item Spiel starten
+\begin{itemize}
+\item Karten mischen
+\item Karten austeilen
+\end{itemize}
+\item Ansagen abwarten
+\item Stiche machen
+\begin{itemize}
+\item Züge durchführen
+\begin{itemize}
+\item Ausspieler bekannt geben
+\item von Ausspieler Karte verlangen
+\item ausgespielte Karte den Klients zeigen
+\end{itemize}
+\item Stich einsammeln
+\item Gewinner bekannt geben
+\end{itemize}
+\item Spielende
+\begin{itemize}
+\item Punkte der Parteien zählen
+\item Sonderpunkte vergeben
+\item Punkte in die Tabelle eintragen
+\item Punktestand angeben
+\end{itemize}
+\end{itemize}
+\item Punktestand und Gewinner angeben
+\end{itemize}
+\subsubsection{Server}
+\begin{itemize}
+\item Mischen der Karten
+\item Verteilen der Karten
+\item Festlegen der Spielregeln
+\item Übermitteln der Spielregeln an die Klients
+\item Verwalten der Punkte (Aufschreiben)
+\item Kommunikation mit den Klients
+\item Einstellung der Art der Klients (Mensch oder KI)
+\end{itemize}
+\subsubsection{Klient}
+\begin{itemize}
+\item Name einstellbar
+\item Einsicht letzter Stich
+\item Bekommt vom Server die Regeln
+\item Überprüfen der Spielregeln
+\item Bekommt vom Server die gespielten Karten
+\item Spielt Karte aus
+\end{itemize}
+\subsection{peer-to-peer}
+Jeder Rechner kennt alle am Spiel beteiligten Rechner.
+Auf jedem Rechner wird festgehalten, welcher Rechner der aktuelle Server ist.\\
+Wenn ein Rechner Server ist, ermittelt dieser die nächste gespielte Karte entweder von Spieler auf einem der Klients
+oder von lokaler KI.
+Lokal ermittelte Karten werden von Klients und Server an alle anderen beteiligten Klients und den ggf. den Server geschickt.
+Nach Ablauf des Stiches wertet der Server den Stich aus und gibt die Ergebnisse an die Klients weiter.\\
+Serverausfall: Wenn ein Klient seit 0.3 sec nichts vom Server gehört hat, fragt dieser beim Server nach, ob er noch aktiv ist.
+Falls keine Antwort erfolgt, sendet der Klient den anderen Rechnern das Vorliegen eines Serverausfalls.
+Jeder Rechner bekommt beim Anmelden beim Server noch eine Numer und jetzt wird der Rechner mit der niedrigsten noch existierenden
+Nummer zum Server. Der ausgefallene Server wird dabei ggf. durch eine zusätzliche KI ersetzt.
+\newpage
+\section{KI}
+\subsection{Funktionsumfang}
+\begin{itemize}
+\item Schwierigkeitsstufe einstellbar
+\begin{itemize}
+\item Gedächtnis (wie viele Stiche werden sich gemerkt, auf welche Karten wird geachtet, ...)
+\item Vorraussicht, wie viele Stiche in die Zukunf wird der Spielbveraluf berechnet
+\item Mitzählen von abgestochen Farben, Herz Zehnen, Schweinen
+\end{itemize}
+\item Verhalten einstellbar
+\begin{itemize}
+\item gierig (nimmt jeden Stich, den er kriegen kann)
+\item vertrauensvoll (wenn ihn jemand eine Karo 10 gibt, dann gibt er ihm auch Punkte)
+\end{itemize}
+\end{itemize}
+\subsection{Heuristiken}
+Was ist eine Heuristik? Einfach gesagt eine Regel, die meistens aber nicht immer gilt. Im folgenden
+werden einige Heuristiken für Doppelkopf mit absteigender Anwendungsbedeutung aufgeführt, das heißt,
+es ist sinnvoller die erste Regel zuerst anzuwenden, als die zweite:
+\begin{enumerate}
+\item Komme mit einem Farb-As beraus, wenn noch entsprechend viele Karten der Farbe im Spiel sind (und keiner
+diese Farbe bereits gestochen hat). Komme dabei mit dem As heraus, wo noch am meisten Karten ausliegen.
+\item Falls kein As als Ausspieler, dann kleinen Trumpf nehmen.
+\item Als letzte Karte eines Farbstiches, dessen Farbe man nicht hat, spiel ein Karo As, eine Karo Zehn,
+einen Karo König, einen Buben, eine Karo Neun oder eine Dame,
+\begin{enumerate}
+\item wenn in diesem Stich nicht bereits eine Trumpfkarte ist (bei Gierig überstechen).
+\item wenn nicht bereits jemand von der eigenen Partei den Stich bekommt (vertrauensvoll: pfundet).
+\end{enumerate}
+\item Wenn die eigene Partei den Stich gewinnt, pfunde durch Spielen eines Karo Asses, einer Karo Zehn, einer Farb Zehn, eines Farb
+Asses oder Königs als letzte Karte, sofern erlaubt.
+\item Immer so niedrig wie möglich bedienen (außer der Partenr steht schon fest)
+\item Wenn man den mit einem As oder einer Zehn den Stich nicht gewinnt, versucht man doch lieber einen König oder eine
+Neun der entsprechenden Farbe zu spielen.
+\item Wenn mit einem Trumpf dieser Stich nicht gewonnen wird, sollte Fehl oder ein niedriger Trumpf gespielt werden, wenn erlaubt. Die Trumpfreihefolge hierbei ist zuerst
+Karo Neun, dann Karo König, Bube, Karo Zehn, Karo As, Dame.
+\item Spiel kein As, das bereits im Stich liegt. Es sei denn der Partner bekommt den Stich.
+\item Spiel keine Dame die bereits im Stich leigt (Damen sind in der Regel zu wertvoll, als sie zu opfern, wenn man es vermeiden kann).
+\item auf Karlchen spielen wenn möglich
+\item im Wechsel hohe niedrige Trümpfe spielen
+\end{enumerate}
+\subsubsection{Armut}
+Eine Armut kann aufgenommen werden, wenn der Spieler mindestens ein paar Damen hat und durch die Armut nur Trümpfe
+oder max. 2 Fehlfarben hat. Wenn der Spieler in Vorhand sitzt, spielt er einen niedrigen Trumpf, ansonsten versucht er
+seine Fehlfarben loszuwerden bzw. sticht die Farben ab. Die Trümpfe sollten meist im Wechsel gespielt werden, das heißt, mal einen
+niedrigen mal einen hohen. Wenn der Spieler viele hohe hat, kann er auch von oben ziehen.
+\subsubsection{Solo}
+\begin{itemize}
+\item Farbsolo
+\begin{itemize}
+\item der Spieler sollte viele Trümpfe haben bzw. ein gutes Beiblatt, das heißt Asse.
+\item Entweder sollte dann ein As oder ein niedriger Trumpf gespielt werden
+\end{itemize}
+\item Buben / Damen /gemischtes
+\begin{itemize}
+\item der Spieler sollte ein einigermaßen gutes Beiblatt haben
+\item Ansonsten wie das Farbsolo spielbar
+\end{itemize}
+\item Köhler
+\begin{itemize}
+\item der Spieler sollte mindestesn 10 Trümpfe haben
+\item als Fehlfarben am besten nur Asse
+\item Er sollte einige Könige und Damen haben
+\item dann im Wechsel hohe und niedrige Trümpfe spielen
+\end{itemize}
+\item Fleischloser
+\begin{itemize}
+\item Der Spieler sollte eine lange Farbe oder viele Asse haben
+\item von oben runter spielen, oder wenn man alle oberen Karten selber hat, auch mal einen König vorspielen
+\end{itemize}
+\end{itemize}
+\newpage
+\section{Weiterführende Ideen}
+\begin{itemize}
+\item im Multiplayerspiel Zuschauer erlauben
+\item im Multiplayerspiel ein öffentliches Chat-Fenster
+\begin{itemize}
+\item ermöglichen von Strafpunkte durch regelwidrigen Gebrauch des Chat-Fensters (Absprachen, Mitzählen, ...)
+\end{itemize}
+\item Online Tuniere
+\item Doppelkopf mit 5 Spielern
+\item Spielerprofil um frei einbindbare Spielergrafik erweitern
+\item Frei konfigurierbarer Schwierigkeitsgrad
+\item Doppelkopf mit 8 Spielern
+\item (noch eine schwerere Spielstufe, bei der die KI die Kartenverteilung kennt)
+\item Ai freikonfogurierbar (Heuristiken Liste mit Rangfogle, der
+Heuristiken SPielreiehnfolge)
+\end{itemize}
+\end{document}

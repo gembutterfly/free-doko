@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko LIESMICH</title>
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+
+    <h1>FreeDoko LIESMICH</h1>
+
+
+    <h2><a name="Inhaltsverzeichnis">Inhaltsverzeichnis</a></h2>
+
+    <ol>
+      <li><a href="#Inhaltsverzeichnis">Inhaltsverzeichnis</a></li>
+      <li><a href="#Installation">Installation</a></li>
+      <li><a href="#Programmstart">Programmstart</a>
+      <ul>
+	<li><a href="#Programmstart_Linux">Linux</a></li>
+	<li><a href="#Programmstart_Windows">Windows</a></li>
+      </ul>
+      </li>
+      <li><a href="#Einstellungen">Einstellungen</a>
+      <ul>
+	<li><a href="#Einstellungen::Sprache">Sprache</a></li>
+      </ul>
+      </li>
+      <li><a href="#Dateien">Dateien</a></li>
+      <li><a href="#Bemerkungen">Bemerkungen</a></li>
+    </ol>
+
+
+    <h2><a name="Installation">Installation</a></h2>
+
+    <p>
+    Dieser Teil ist nur für die Leute gedacht, die sich das Programm kompilieren wollen, die mit dem vorkompilierten Programm können direkt zu <a href="#Programmstart">Programmstart</a> weitergehen.
+    </p>
+
+    <p>
+    Zum Kompilieren einfach im Verzeichnis <var>src</var> <var>make</var> aufrufen.
+    Wenn unter Linux eine Fehlermeldung mit <code>no-cygwin</code> oder <code>ms-bitfields</code> erscheint, dann hat die automatische Erkennung nicht funktioniert.
+    Geben Sie in der Shell <kbd>export OSTYPE=linux-gnu</kbd> ein und starten Sie <kbd>make</kbd> noch einmal.
+    </p>
+
+    <p>
+    Für SuSE bitte <a href="SuSE">SuSE</a> anschauen (Probleme mit DOS-Zeilenende).
+    </p>
+
+    <p>
+    Für Windows bitte <a href="Windows">Windows</a> anschauen (dlls).
+    </p>
+
+
+
+    <h2><a name="Programmstart">Programmstart</a></h2>
+
+    <p>
+    FreeDoko unterstützt einige Kommandozeilenargumente, diese lassen sich mit '--help' anschauen.
+    </p>
+
+    <h3><a name="Programmstart_Linux">Linux</a></h3>
+    <p>
+    Das Programm <var>FreeDoko</var> starten.
+    </p>
+    <p>
+    Um FreeDoko nutzen zu dürfen, müssen Sie Mitglied der Gruppe <var>games</var> sein.
+    </p>
+
+    <h3><a name="Programmstart_Windows">Windows</a></h3>
+    <p>
+    Die Batch-Datei <var>FreeDoko.bat</var> starten.
+    </p>
+
+
+    <h2><a name="Einstellungen">Einstellungen</a></h2>
+
+    <p>
+    In der Ressourcendatei <var>FreeDokorc</var> stehen die Einstellungen für das Programm.
+    <br>
+    Das Format ist wie folgt:
+    Leerzeilen und Zeilen, die mit einem <code>'#'</code> beginnen werden ignoriert, Einstellungen beginnen mit dem Schlüsselwort, gefolgt von einem <code>'='</code> und dem Wert ('1' steht fuer 'ja', '0' fuer 'nein');
+    </p>
+    <p>
+    Alle Einstellungen können wärend des Spiels geändert werden und werden <em>sofort</em> aktiv.
+    </p>
+
+    <h3><a name="Einstellungen::Sprache">Sprache</a></h3>
+    <p>
+    Um die Sprache von FreeDoko zu ändern also einfach mit <kbd>F2</kbd> das Einstellungsfenster öffnen und dann auch die angezeigte Sprache <var>Standard</var> klicken und eine andere auswählen.
+    </p>
+
+
+    <h2><a name="Dateien">Dateien</a></h2>
+
+    <p>
+    Zu FreeDoko gehören folgende Dateien und Verzeichnisse:
+    </p>
+    <ul>
+      <li>Programmdatei<br>
+	Unter Linux ist dies <var>FreeDoko</var>, unter Windows <var>FreeDoko.exe</var>.
+      </li>
+      <li>Lizenz: <var>COPYING</var> </li>
+      <li>Allgemeine Information: <var>LIESMICH</var>, <var>README</var>
+	<li>Hintergründe: Unterverzeichnis <var>backgrounds</var></li>
+	<li>Kartensätze: Unterverzeichnis <var>cardsets</var></li>
+	<li>Symbolsätze: Unterverzeichnis <var>iconsets</var></li>
+	<li>Sounds: Unterverzeichnis <var>sounds</var></li>
+	<li>Textdateien: Unterverzeichnis <var>translations</var></li>
+	<li>Dokumentation: Unterverzeichnis <var>doc</var></li>
+	<li>Handbuch: Unterverzeichnis <var>manual</var></li>
+	<li>Regelsätze: Unterverzeichnis <var>rules</var></li>
+	<li>Logos: <var>FreeDoko.png</var>, <var>icon.png</var></li>
+	<li>Programmierer: <var>AUTHORS</var> </li>
+	<li>Änderungsliste: <var>ChangeLog</var> </li>
+	<li>Versionsinformation: <var>Version</var> </li>
+    </ul>
+
+    <h2><a name="Bemerkungen">Bemerkungen</a></h2>
+
+    <ul>
+      <li>Diese Version ist noch alpha, das heißt sie ist noch nicht vollständig.</li>
+      <li>Bei Fehlern bitte eine E-Mail an <a href="mailto:freedoko@users.sourceforge.net">freedoko@users.sourceforge.net</a> schicken.</li>
+    </ul>
+
+  </body>
+
+</html>

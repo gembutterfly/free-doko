@@ -1,0 +1,12 @@
+Source: freedoko-cardsets-xskat
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-cardsets-xskat
+Architecture: all
+Provides: freedoko-cardset
+Description: xskat cardset for 'freedoko'
+ This package does contain the xskat cardsets for the game 'freedoko'.

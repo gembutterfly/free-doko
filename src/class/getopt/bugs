@@ -1,0 +1,1 @@
+'-s-long' is parsed as '-s' and '--long' (if '-s' does not take an argument)

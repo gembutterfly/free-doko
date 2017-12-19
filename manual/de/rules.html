@@ -1,0 +1,694 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Spielregeln</title>
+
+    <meta name="date" content="2005-07-14T22:40:15+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="&Uuml;bersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einf&uuml;hrung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="&Uuml;bersicht">
+    <link rel="up" href="overview.html" title="&Uuml;bersicht">
+
+    <link rev="alternate" href="../en/rules.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/rules.html" title="offizielle Internetseite">
+  </head>
+
+  <body>
+
+    <h1>Spielregeln von FreeDoko</h1>
+
+
+    <h2>Inhalt</h2>
+
+    <ol>
+      <li><a href="#hand">Das Doppelkopfblatt</a></li>
+      <li><a href="#cardsorder">Rangfolge der Karten</a>
+      <ol class="depth2">
+	<li><a href="#cardsorder:dollen">Dollen</a></li>
+	<li><a href="#cardsorder:swines">Schweine</a></li>
+      </ol>
+      </li>
+      <li><a href="#teams">Parteien</a></li>
+      <li><a href="#gamegoal">Spielziel</a></li>
+      <li><a href="#partyending">Turnierende</a></li>
+      <li><a href="#finding">Spielfindung</a>
+      <ol class="depth2">
+	<li><a href="#finding:solo">Solospiele</a></li>
+	<li><a href="#finding:marriage">Hochzeit</a></li>
+	<li><a href="#finding:poverty">Armut</a></li>
+      </ol>
+      </li>
+      <li><a href="#gamelpay">Spielverlauf</a></li>
+      <li><a href="#announcements">An- und Absagen</a></li>
+      <li><a href="#genscher">Genscher</a></li>
+      <li><a href="#scoring">Spielbewertung</a>
+      <ol class="depth2">
+	<li><a href="#scoring:winning">Gewinnstufen und Gewinnkriterien</a></li>
+	<li><a href="#scoring:gamevalues">Spielwerte</a></li>
+	<li><a href="#scoring:counting">Punkte z&auml;hlen</a>
+      </ol>
+      </li>
+      <li><a href="#viewingtricks">Sticheinsicht</a></li>
+    </ol>
+
+    <p>
+    Im folgenden werden alle von FreeDoko unterst&uuml;tzten Spielregeln detailiert erl&auml;utert.
+    </p>
+
+
+    <h2><a name="hand">Das Doppelkopfblatt</a></h2>
+
+    <p>
+    Das Blatt besteht aus je 12 Karten der vier Farben Kreuz
+    (Kreuz), Pik (Pik), Herz (Herz) und Karo (Karo), n&auml;mlich
+    (Z&auml;hlwert (Augen) in Klammern) pro Farbe je zwei Asse (11), zwei Zehnen
+    (10), zwei K&ouml;nige (4), zwei Damen (3), zwei Buben (2) und zwei
+    Neunen (0). <em>Optional</em> kann bei FreeDoko auch ohne Neunen
+    gespielt werden. In jeder Farbe sind also 60 Augen vorhanden, so
+    da&szlig; das Doppelkopfblatt insgesamt 240 Augen enh&auml;lt.
+    </p>
+
+    <h2><a name="cardsorder">Rangfolge der Karten</a></h2>
+
+    <p>
+    Jede Karte geh&ouml;rt entweder zu einer der gleichwertigen
+    &bdquo;Fehlfarben&rdquo; oder zu den Trumpfkarten. Jede Trumpfkarte ist
+    rangh&ouml;her als irgendeine Fehlkarte. Die Rangfolge h&auml;ngt vom Typ
+    des Spieles ab, der vor Beginn des Spieles ermittelt wird. Es
+    gibt folgende zwei Spieltypen: Solo und Normalspiel. Die
+    Rangfolge beim Solo wird im Kapitel <a href="#solo">Solo</a> 
+    erkl&auml;rt, da dieser Spieltyp ein Sonderfall ist.
+    </p>
+    <p>
+    Die Rangfolge der Karten beim Normalspiel ist wie folgt:
+    <br>
+    Die absteigende Reihenfolge der jeweils zweifach im Spiel
+    vorhandenen Trumpfkarten ist: Kreuz Dame, Pik Dame, Herz Dame,
+    Karo Dame, Kreuz Bube, Pik Bube, Herz Bube, Karo Bube, Karo
+    As, Karo Zehn, Karo K&ouml;nig und Karo Neun. In den drei
+    Fehlfarben ist die absteigende Rangfolge der ebenfalls doppelt
+    vorhandenen Karten: As, Zehn, K&ouml;nig und Neun.
+    </p>
+
+    <p>
+    Grunds&auml;tzlich besteht Bedienpflicht. Wenn eine angespielte Karte
+    nicht bedient werden kann, darf getrumpft oder abgeworfen werden.
+    Bei zwei gleichen Karten in einem Stich ist die zuerst gespielte
+    dieser Karten h&ouml;her als die zweite.
+    </p>
+
+
+    <h3><a name="cardsorder:dollen">Herz Zehnen</a></h3>
+
+    <p>
+    In der Regel sind die Herz Zehnen Tr&uuml;mpfe, k&ouml;nnen aber
+    <em>optional</em> bei FreeDoko auch normale Farbkarten sein. Wenn diese
+    Tr&uuml;mpfe sind, stehen die Herz Zehnen in der Rangfolge der Karten
+    &uuml;ber den Kreuz Damen. Allerdings gibt es <em>optional</em> zwei Formen
+    der Rangfolge der Herz Zehnen in einem Stich:
+    </p>
+    <ol>
+      <li>Die zweite schl&auml;gt immer die erste.
+      <ul>
+	<li>Au&szlig;er (<em>optional</em>) im letzen Stich.</li>
+      </ul>
+      </li>
+      <li>Die erste schl&auml;gt immer die zweite.
+      <ul>
+	<li>Au&szlig;er (<em>optional</em>) im letzten Stich.</li>
+      </ul>
+      </li>
+    </ol>
+
+
+    <h3><a name="cardsorder:swines">Schweine</a></h3>
+
+    <p>
+    Bei FreeDoko gibt es <em>optional</em> noch die M&ouml;glichkeit h&ouml;here
+    Tr&uuml;mpfe als die Kreuz Damen und, wenn vorhanden, die Herz
+    Zehnen zu erlauben. Diese Tr&uuml;mpfe hei&szlig;en Schweine und
+    Hyperschweine. Schweine sind zwei Karo Asse auf einer Hand und
+    m&uuml;ssen angesagt werden. Diese Karten sind die h&ouml;chstens
+    Tr&uuml;mpfe im Spiel, solange keine Hyperschweine angesagt werden.
+    Hyperschweine sind zwei Karo Neunen auf einer Hand, wenn bereits
+    Schweine angesagt wurden und auch nur dann.
+    </p>
+
+    <p>
+    F&uuml;r die Ansagezeitpunkte von Schweinen und Hyperschweinen gibt
+    es <em>optional</em> verschiedene M&ouml;glichkeiten:
+    </p>
+    <ul>
+      <li>F&uuml;r Schweine:
+      <ul>
+	<li>Ansage vor dem Spiel.</li>
+	<li>Ansage, wenn das erstes Schwein gespielt wird.</li>
+	<li>Wenn das erste As von der eigenen Partei gewonnen wurde, wird das
+	zweite Karo As zum Schwein und angesagt.
+	Die Ansage mu&szlig; vor dem Ausspielen des zweiten Karo Asses erfolgen, sie enth&auml;lt auch das Team des Schweinebesitzers.
+	In diesem Spezialfall sind keine Hyperschweine erlaubt.</li>
+      </ul>
+      </li>
+      <li>F&uuml;r Hyperschweine:
+      <ul>
+	<li>Ansage vor dem Spiel.</li>
+	<li>Ansage, wenn die erste Neun gespielt wird</li>
+      </ul>
+      </li>
+    </ul>
+
+
+    <h2><a name="teams">Parteien</a></h2> 
+
+    <p>
+    Doppelkopf wird mit vier Spielern gespielt. Im Normalspiel
+    spielen die Spieler, die die Kreuz Damen besitzen (Re-Partei)
+    gegen de beiden anderen (Kontra-Partei). Es ist allerdings auch
+    m&ouml;glich, da&szlig; ein Spieler gegen die drei anderen ein Solo spielt.
+    Bei diesen ist dann der Solospieler die Re-Partei.
+    </p>
+
+    <h2><a name="gamegoal">Spielziel</a></h2>
+
+    <p>
+    Jede Partei versucht mehr "Augen" als die Gegenpartei zu
+    erspielen und dabei einen m&ouml;glichst hohen Punktwert des Spieles
+    bei der Abrechnung zu erreichen.
+    </p>
+
+
+    <h2><a name="partyending">Turnierende</a></h2>
+
+    <p>
+    Bei Doppelkopf besteht ein komplettes Turnier entweder aus einer vorher angegeben Anzahl von Spielen oder einer
+    vorher festgelgten Anzahl gespielter Punkte (Punktetopf).
+    </p>
+
+
+    <h2><a name="finding">Spielfindung</a></h2>
+
+    <p>
+    Bei der Spielfindung geht es darum f&uuml;r das n&auml;chste Spiel zu
+    entscheiden, ob ein normales Spiel oder ein Solo gespielt wird.
+    </p>
+    <p>
+    Bevor das Spiel beginnt mu&szlig; in der Vorbehaltsfrage der Spieltyp
+    ermittelt werden. Beginnend beim linken Nachbarn des Kartengebers
+    wird in ununterbrochener Reihenfolge nach Vorbehalten gefragt.
+    Wenn ein Spieler ein Pflichtsolo, Lustsolo, eine Armut oder eine
+    Hochzeit anmelden m&ouml;chte, sagt er laut und deutlich:
+    "Vorbehalt". Ein Spieler der keinen "Vorbehalt" anmelden
+    m&ouml;chte sagt laut und deutlich: "Gesund". Falls sich alle
+    Spieler "Gesund" melden wird ein Normalspiel durchgef&uuml;hrt.
+    Wenn nur ein Spieler einen "Vorbehalt"angemeldet hat, mu&szlig; er
+    diesen "taufen", das hei&szlig;t, er mu&szlig; bekannt geben, ob er ein
+    Solo, eine Armut oder eine Hochzeit spielen will. Wenn mehrere
+    Spieler im selben Spiel "Vorbehalt" angemeldet haben, gilt die
+    Reihenfolge:
+    </p>
+    <ol>
+      <li>Pflichtsolo</li>
+      <li>Lustsolo</li>
+      <li>Armut</li>
+      <li>Hochzeit</li>
+    </ol>
+    <p>
+    Um festzustellen, wer bei mehreren Vorbehalten den
+    h&ouml;chstrangigen hat, wird als erstes reihum gefragt, ob einer der
+    betroffenen Spieler ein Pflichtsolo spielen will. Wenn dies alle
+    verneinen, wird nach dem Lustsolo gefragt. Falls auch alle
+    Spieler verneinen, wird nach der Armut und gegebenenfalls danach
+    nach der Hochzeit gefragt. Sobald ein Spieler den gefragten
+    Vorbehalt bejaht, tauft dieser seinen "Vorbehalt". Alle anderen
+    angemeldeten Vorbehalte verfallen. Ein einmal angesagter
+    Vorbehalt ist verbindlich, das hei&szlig;t, er mu&szlig; gegebenfalls
+    getauft werden, wenn kein h&ouml;herrangiger besteht.
+    </p>
+
+
+    <h3><a name="finding:solo">Solospiele</a></h3>
+
+    <p>
+    Ein Solospiel ist ein Spiel bei dem ein Spieler alleine gegen die
+    drei anderen Spieler spielt.
+    </p>
+
+    <dl>
+      <dt>Farbsolo:</dt>
+      <dd>
+      (<em>Optional</em>:  Schweine der gew&auml;hlten Farbe,) Herz Zehnen, Alle
+      Damen und alle Buben sind wie im Normalspiel Trumpf. Karo As,
+      Karo Zehn, Karo K&ouml;nig und Karo Neun werden durch die
+      entsprechenden Karten der gew&auml;hlten Trumpffarbe (Kreuz, Pik,
+      Herz\ oder Karo) ersetzt. Wichtig beim Herz-Solo bleiben die
+      Dollen (die Herz Zehnen als Trumpf) hoch. Es gibt also 26 bzw.
+      24 Tr&uuml;pfe. Falls ohne Neunen gespielt wird gibt es nat&uuml;rlich zwei
+      Tr&uuml;mpfe weniger.
+      </dd>
+      <dt>Fleischloser:</dt>
+      <dd>
+      Es gibt keine Tr&uuml;mpfe. Die Karten gelten in der Reihenfolge As,
+      Zehn, K&ouml;nig, Dame, Bube, Neun.
+      </dd>
+      <dt>Damen-Solo:</dt>
+      <dd>
+      Alle Damen sind Trumpf in der Reihenfolge Kreuz, Pik, Herz,
+      Karo. Es gibt also acht Trumpf. Alle anderen Karten sind Fehl in
+      der Reihenfolge As, Zehn, K&ouml;nig, Bube, Neun.
+      </dd>
+      <dt>Buben-Solo:</dt>
+      <dd>
+      Alle Buben sind Trumpf in der Reihenfolge Kreuz, Pik, Herz,
+      Karo. Es gibt also acht Trumpf. Alle anderen Karten sind Fehl in
+      der Reihenfolge As, Zehn, K&ouml;nig, Dame, Neun.
+      </dd>
+      <dt>Damen-Buben-Solo:</dt>
+      <dd>
+      Alle Damen und Buben sind Trumpf in der Reihenfolge Kreuz Dame,
+      Pik Dame, Herz Dame, Karo Dame, Kreuz Bube, Pik Bube, Herz
+      Bube, Karo Bube. Es gibt also 16 Trumpf. Alle anderen Karten
+      sind Fehl in der Reihenfolge As, Zehn, K&ouml;nig, Neun.
+      </dd>
+      <dt>K&ouml;hler:</dt>
+      <dd>
+      Alle K&ouml;nige, Damen und Buben sind Trumpf in der Reihenfolge
+      Kreuz K&ouml;nig, Pik K&ouml;nig, Herz K&ouml;nig, Karo K&ouml;nig, Kreuz
+      Dame, Pik Dame, Herz Dame, Karo Dame, Kreuz Bube, Pik Bube,
+      Herz Bube, Karo Bube. Es gibt also 24 Trumpf. Alle anderen
+      Karten sind Fehl in der Reihenfolge As, Zehn, Neun.
+      </dd>
+      <dt>K&ouml;nigen-Solo:</dt>
+      <dd>
+      Alle K&ouml;nige sind Trumpf in der Reihenfolge Kreuz, Pik, Herz,
+      Karo. Es gibt also acht Trumpf. Alle anderen Karten sind Fehl in
+      der Reihenfolge As, Zehn, Dame, Bube, Neun.
+      </dd>
+      <dt>K&ouml;nig-Damen-Solo:</dt>
+      <dd>
+      Alle K&ouml;nige und Damen sind Trumpf in der Reihenfolge Kreuz K&ouml;nig, Pik K&ouml;nig, Herz
+      K&ouml;nig, Karo K&ouml;nig, Kreuz Dame,
+      Pik Dame, Herz Dame, Karo Dame. Es gibt also 16 Trumpf. Alle anderen Karten
+      sind Fehl in der Reihenfolge As, Zehn, Bube, Neun.
+      </dd>
+      <dt>K&ouml;nig-Buben-Solo:</dt>
+      <dd>
+      Alle K&ouml;nige und Damen sind Trumpf in der Reihenfolge Kreuz K&ouml;nig, Pik K&ouml;nig, Herz
+      K&ouml;nig, Karo K&ouml;nig, Kreuz Bube,
+      Pik Bube, Herz Bube, Karo  Bube. Es gibt also 16 Trumpf. Alle anderen Karten
+      sind Fehl in der Reihenfolge As, Zehn, Dame, Neun.
+      </dd>
+    </dl>
+
+
+    <h4>Pflichtsoli</h4>
+
+    <p>
+    <em>Optional</em> gibt es bei FreeDoko die M&ouml;glichkeit eine beliebige
+    Anzahl von Pflichtsoli vorzugeben. Jede Soloart kann als
+    Pflichtsoli gespielt werden. Der Solospieler hat hierbei die
+    Aufspielpflicht zum ersten Stich. Wenn die Anzahl nicht
+    gespielter Pflichtsoli gleich der Anzahl noch zu absolvierender
+    Spiele ist, mu&szlig; derjenige Spieler, dem ein Pflichtsolo fehlt und
+    der als N&auml;chster links vom Kartengeber sitzt, ein Pflichtsolo
+    spielen, das hei&szlig;t, er wird "vorgef&uuml;hrt". Ein freiwilliges
+    Solo wird nachgegeben, das hei&szlig;t, es gibt der Spieler nochmal,
+    der auch schon die Karten zum Pflichtsolo verteilt hat. Ein
+    vorgef&uuml;hrtes Pflichtsolo wird hingegen nicht nachgegeben.
+    </p>
+
+
+    <h4>Lustsoli</h4>
+
+    <p>
+    Sobald ein Spieler alle seine Pflichtsoli absolviert
+    hat, darf er ein Lustsolo spielen. Als Lustsolo kann jede Soloart
+    gespielt werden. Beim Lustsolo spielt der linke Nachbar des
+    Kartengebers aus und es wird auch nicht nachgegeben.
+    </p>
+
+
+    <h3><a name="finding:marriage">Hochzeit</a></h3>
+
+    <p>
+    Wenn ein Spieler beide Kreuz Damen auf der Hand hat, kann er
+    sich, falls er kein Solo melden m&ouml;chte zwischen zwei Spieltypen
+    entscheiden. Er kann entweder die Hochzeit anmelden oder eine
+    "Stille Hochzeit" (Farbsolo in Karo) spielen. Falls der Spieler
+    mit den beiden Kreuz Damen kein Solo spielen m&ouml;chte, meldet er
+    in der Vorbehaltsfrage einen "Vorbehalt" an. Bei der
+    angemeldeten Hochzeit hat der Spieler verschiedene M&ouml;glichkeiten
+    seinen Mitspieler zu finden. Hierzu w&auml;hlt er eine der folgenden
+    M&ouml;glichkeiten:
+    </p>
+    <ul>
+      <li>Erster fremder Stich entscheidet</li>
+      <li>Erster fremder Trumpfstich entscheidet</li>
+      <li>Erster fremder Farbstich entscheidet</li>
+      <li>Erster fremder Herz Stich entscheidet</li>
+      <li>Erster fremder Pik Stich entscheidet</li>
+      <li>Erster fremder Kreuz Stich entscheidet</li>
+    </ul>
+
+    <p>
+    Der Spieler, der als erster einen Stich gewinnt, der dem
+    geforderten Kriterium entspricht und der nicht die beiden Kreuz
+    Damen hat, spielt mit dem Hochzeitler zusammen. <em>optional</em> kann
+    auch ein letzter Kl&auml;rungsstiches festgelegt werden, das hei&szlig;t,
+    wenn der Hochzeitler bis zu diesem Zeitpunkt keinen Partner
+    gefunden hat, wird das Spiel als Karo Solo des Hochzeitlers
+    fortgesetzt.
+    </p>
+
+
+    <h3><a name="finding:poverty">Armut</a></h3>
+
+    <p>
+    In FreeDoko gibt es <em>optional</em> zwei Formen der Armut.
+    </p>
+
+
+    <h4>Neunen werfen</h4>
+
+    <p>
+    Wenn ein Spieler mehr als vier Neunen auf seiner Hand hat, darf
+    dieser entscheiden, ob er m&ouml;chte das neu gegeben oder normal
+    gespielt wird. Das einzige, was ein Neugeben verhindern kann,
+    ist, da&szlig; einer der Spieler ein Solo spielt.
+    </p>
+
+
+    <h4>Trumpfarmut</h4>
+
+    <p>
+    Zu dieser Armut kommt es, wenn ein Spieler weniger als vier
+    Tr&uuml;mpfe hat. In diesem Fall gibt es bei FreeDoko zwei
+    M&ouml;glichkeiten die <em>optional</em> gew&auml;hlt werden k&ouml;nnen. Die erste
+    Variante entspricht genau der Armut mit mehr als vier Neunen.
+    </p>
+
+    <p>
+    Bei der zweiten Variante legt der Spieler drei Karten verdeckt
+    auf den Tisch. Zu diesen drei Karten geh&ouml;ren alle seine
+    Trumpfkarten. Jetzt d&uuml;rfen die Spieler nacheinander entscheiden,
+    ob sie die Karten aufnehmen m&ouml;chten. Wenn kein Spieler die
+    Karten aufnimmt, wird neu gegeben. Andernfalls gibt der Spieler,
+    der die Karten aufgenohmen hat, dem Spieler mit der Armut drei
+    beliebige Karten zur&uuml;ck und sagt dabei an, wieviele Tr&uuml;mpfe er
+    zur&uuml;ckgegeben hat. Der Spieler, der die Karten aufgenohmen hat,
+    bildet dabei zusammen mit dem Spieler mit der Armut die
+    Re-Partei. Die Verteilung der Kreuz Damen ist f&uuml;r die weitere
+    Parteienbildung nicht mehr relevant. Ansonsten wird das Spiel
+    jetzt wie ein Normalspiel gespielt. Wenn allerdings ein Spieler
+    lieber ein Solo spielen m&ouml;chte, geht dieses vor und der Spieler
+    mit der Armut beh&auml;lt seine Karten.
+    </p>
+
+
+    <h2><a name="gameplay">Spielverlauf</a></h2>
+
+    <h3>Aufspiel</h3>
+
+    <p>
+    Aufspielpflicht zum ersten Stich hat der linke Nachbar des
+    Kartengebers oder der Pflichtsolispieler. Zum ersten Stich wird erst nach gekl&auml;rter
+    Vorbehaltsfrage aufgespielt. Ab dem zweiten Stich spielt immer
+    derjenige auf, der den vorangegangenen Stich gemacht hat. Eine
+    gespielte Karte darf nicht zur&uuml;ckgenommen werden.
+    </p>
+
+
+    <h3>Bedienen</h3>
+
+    <p>
+    F&uuml;r jeden Stich herrscht Bedienpflicht, das hei&szlig;t, jeder mu&szlig;,
+    wenn m&ouml;glich eine Karte der aufgespielten Fehlfarbe oder
+    geforderten Trumpffarbe zugeben(bedienen). Wer die ausgespielte
+    Fehlfarbe nicht hat, darf entweder eine Trumpfkarte zugeben
+    (stechen), oder eine beliebige Karte einer anderen Fehlfarbe
+    spielen. Wenn eine Trumpfkarte gefordert wird, aber nicht bedient
+    werden kann, darf eine beliebige Karte einer Fehlfarbe zugegeben
+    werden.
+    </p>
+
+
+    <h2><a name="announcements">An- und Absagen</a></h2>
+
+    <h3>Ansage</h3>
+
+    <p>
+    Mit der Ansage &bdquo;Re&rdquo; (Re-Partei) oder &bdquo;Kontra&rdquo; (Kontra-Partei)
+    zeigt der Ansagende an, welcher Partei er angeh&ouml;rt und da&szlig; er
+    glaubt, zusammen mit seinem Partner das Spiel gewinnen zu k&ouml;nnen.
+    Eine Ansage ist solange m&ouml;glich bis der Spieler seine Karte des
+    zweiten Stiches bzw. die erste Karte nach dem Kl&auml;rungsstich einer
+    Hochzeit gespielt hat. Sie darf jedoch nicht vor Beendigung der
+    Vorbehaltsfrage erfolgen. Eine zweite &bdquo;Re&rdquo; oder &bdquo;Kontra&rdquo;
+    Ansage ist nicht erlaubt, wenn schon f&uuml;r die eigene Partei eine
+    entsprechende Ansage gemacht wurde.
+    </p>
+
+
+    <h3>Absagen</h3>
+
+    <p>
+    Bei Doppelkopf gibt es folgende Absagen mit ihrer jeweiligen
+    Bedeutung:
+    </p>
+    <dl>
+      <dt>Keine 90:</dt>
+      <dd> die Gegenpartei schafft keine 90 Punkte, Ansage der eigenen Partei mu&szlig;te vorher
+      erfolgen.
+      <dt>Keine 60:</dt>
+      <dd> die Gegenpartei schafft keine 60 Punkte, keine 90 mu&szlig;te vorher angesagt
+      werden.
+      <dt>Keine 30:</dt>
+      <dd> die Gegenpartei schafft keine 30 Punkte, keine 60 mu&szlig;te vorher angesagt
+      werden.
+      <dt>Schwarz:</dt>
+      <dd> die Gegenpartei macht keinen Stich, keine 30 mu&szlig;te vorher angesagt
+      werden.
+    </dl>
+    <p>
+    Bei FreeDoko kann <em>optional</em> konfiguriert werden, bis wann und
+    wieviele Absagen erlaubt sind. Es d&uuml;rfen auch Absagen
+    &uuml;bersprungen werden, wenn vorher n&ouml;tige Absagen noch erlaubt
+    sind. Diese gelten dann als abgesagt. Auf jede Absage darf ein Re
+    oder Kontra, sofern nicht bereits erfolgt, erwidert werden. Bei
+    einer Hochzeit verschiebt der Kl&auml;rungsstich alle
+    Absagezeitpunkte entsprechend, das hei&szlig;t, wenn der dritte Stich
+    der Kl&auml;rungsstich ist, d&uuml;rfen alle Absagen zwei Stiche sp&auml;ter
+    erfolgen.
+    </p>
+
+
+    <h2><a name="genscher">Genscher</a></h2>
+
+    <p>
+    <em>Optional</em> gibt es bei FreeDoko eine Sonderegel f&uuml;r alle, die
+    etwas Unfairnis ins Spiel bringen m&ouml;chten. Diese Regel hei&szlig;t
+    Genscher und tritt dann in Kraft, wenn ein Spieler beide Karo
+    K&ouml;nige auf seiner Hand hat. In diesem Fall darf dieser Spieler
+    beim Ausspielen des ersten Karo K&ouml;nigs (Genscher) v&ouml;llig frei
+    entscheiden, wer sein Mitspieler sein soll. Allerdings kann der
+    Spieler den Genscher auch spielen ohne von ihm Gebrauch zu machen.
+    Beim Gebrauch des Genschers werden alle Absagen aufgehoben, und
+    es bleiben nur gemachte Ansagen bestehen.
+    </p>
+    <p>
+    Diese Sonderregeln gilt nicht bei einem Solospiel oder einer Armut.
+    </p>
+
+
+    <h2><a name="scoring">Spielbewertung</a></h2>
+
+    <h3><a name="scoring:winning">Gewinnstufen und Gewinnkriterien</a></h3>
+
+    <p>
+    Die F&auml;lle, in denen eine Partei gewonnen hat und den Grundwert
+    von einem Spielpunkt daf&uuml;r erh&auml;lt, werden im folgenden
+    vollst&auml;ndig aufgef&uuml;hrt.
+    </p>
+    <p>
+    Die Re-Partei hat in den folgenden F&auml;llen gewonnen:
+    </p>
+    <ol>
+      <li>Mit dem 121. Auge, wenn keine Ansage bzw. Absage getroffen wurde,</li>
+      <li>mit dem 121. Auge, wenn nur &bdquo;Re&rdquo; angesagt wurde,</li>
+      <li>mit dem 121. Auge, wenn &bdquo;Re&rdquo; und &bdquo;Kontra&rdquo; unabh&auml;ngig von der Reihenfolge angesagt
+      wurden,</li>
+      <li>mit dem 120. Auge, wenn nur &bdquo;Kontra&rdquo; angesagt wurde,</li>
+      <li>mit dem 151. (181., 211.) Auge, wenn sie der Kontra-Partei &bdquo;keine 90&rdquo; (&bdquo;keine 60&rdquo;, &bdquo;keine 30&rdquo;) abgesagt
+      hat,</li>
+      <li>falls sie alle Stiche erhalten hat, wenn sie der Kontra-Partei &bdquo;schwarz&rdquo; abgesagt hat,</li>
+      <li>mit dem 90. (60., 30.) Auge, wenn von der Kontra-Partei &bdquo;keine 90&rdquo; (&bdquo;keine 60&rdquo;, &bdquo;keine 30&rdquo;) abgesagt
+      wurde und die Re-Partei sich nicht durch eine Absage zu einer
+      h&ouml;heren Augenzahl verpflichtet hat,</li>
+      <li>mit dem 1. Stich, den sie erh&auml;lt, wenn von der Kontra-Partei &bdquo;schwarz&rdquo; abgesagt wurde und die
+      Re-Partei sich nicht durch eine Absage zu einer h&ouml;heren Augenzahl
+      verpflichtet hat.</li>
+    </ol>
+    <p>
+    Die Kontra-Partei hat in den folgenden F&auml;llen gewonnen:
+    </p>
+    <ol>
+      <li>Mit dem 120. Auge, wenn keine Ansage bzw. Absage getroffen wurde,</li>
+      <li>mit dem 120. Auge, wenn nur &bdquo;Re&rdquo; angesagt wurde,</li>
+      <li>mit dem 120. Auge, wenn &bdquo;Re&rdquo; und &bdquo;Kontra&rdquo; unabh&auml;ngig von der Reihenfolge angesagt wurden,</li>
+      <li>mit dem 121. Auge, wenn nur &bdquo;Kontra&rdquo; angesagt wurde,</li>
+      <li>mit dem 151. (181., 211.) Auge, wenn sie der Re-Partei &bdquo;keine 90&rdquo; (&bdquo;keine 60&rdquo;, &bdquo;keine 30&rdquo;) abgesagt hat,</li>
+      <li>falls sie alle Stiche erhalten hat, wenn sie der Re-Partei &bdquo;schwarz&rdquo; abgesagt hat,</li>
+      <li>mit dem 90. (60., 30.) Auge, wenn von der Re-Partei &bdquo;keine 90&rdquo; (&bdquo;keine 60&rdquo;, &bdquo;keine 30&rdquo;) abgesagt
+      wurde und die Kontra-Partei sich nicht durch eine Absage zu einer h&ouml;heren Augenzahl verpflichtet hat,</li>
+      <li>mit dem 1. Stich, den sie erh&auml;lt, wenn von der Re-Partei &bdquo;schwarz&rdquo; abgesagt wurde und die Kontra-Partei
+      sich nicht durch eine Absage zu einer h&ouml;heren Augenzahl verpflichtet hat.</li>
+    </ol>
+
+
+    <h3><a name="scoring:gamevalues">Spielwerte</a></h3>
+
+    <p>
+    Die Spielwerte der Einzelspiele werden in Spielpunkten (Punkten) ausgedr&uuml;ckt.
+    </p>
+    <ol>
+      <li>Gewonnen: 1 Punkt als Grundwert
+      <ol>
+	<li>unter 90 gespielt: 1 Punkt zus&auml;tzlich</li>
+	<li>unter 60 gespielt: 1 Punkt zus&auml;tzlich</li>
+	<li>unter 30 gespielt: 1 Punkt zus&auml;tzlich</li>
+	<li>schwarz gespielt: 1 Punkt zus&auml;tzlich</li>
+      </ol>
+      </li>
+      <li>Es wurde:
+      <ol>
+	<li>&bdquo;Re&rdquo; angesagt: 2 Punkte zus&auml;tzlich (bzw. <em>optional</em> eine
+	Verdopplung der Punkte)</li>
+	<li>&bdquo;Kontra&rdquo; angesagt: 2 Punkte zus&auml;tzlich (bzw. <em>optional</em> eine
+	Verdopplung der Punkte)</li>
+      </ol>
+      </li>
+      <li>Es wurde von der Re-Partei:
+      <ol>
+	<li>&bdquo;keine 90&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;keine 60&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;keine 30&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;schwarz&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+      </ol>
+      </li>
+      <li>Es wurde von der Kontra-Partei:
+      <ol>
+	<li>&bdquo;keine 90&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;keine 60&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;keine 30&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+	<li>&bdquo;schwarz&rdquo; abgesagt: 1 Punkt zus&auml;tzlich</li>
+      </ol>
+      </li>
+      <li>Es wurden von der Re-Partei:
+      <ol>
+	<li>120 Augen gegen &bdquo;keine 90&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>90 Augen gegen &bdquo;keine 60&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>60 Augen gegen &bdquo;keine 30&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>30 Augen gegen &bdquo;schwarz&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+      </ol>
+      </li>
+      <li>Es wurden von der Kontra-Partei:
+      <ol>
+	<li>120 Augen gegen &bdquo;keine 90&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>90 Augen gegen &bdquo;keine 60&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>60 Augen gegen &bdquo;keine 30&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+	<li>30 Augen gegen &bdquo;schwarz&rdquo; erreicht: 1 Punkt zus&auml;tzlich</li>
+      </ol>
+      </li>
+    </ol>
+
+    <p>
+    Sonderpunkte k&ouml;nnen von beiden Parteien nur beim Normalspiel gewonnen werden.
+    Sie werden gegebenenfalls zuerst miteinander und danach mit den unter (1 - 6) ermittelten
+    Punkten verrechnet.
+    Es werden folgende Sonderpunkte vergeben:
+    </p>
+    <ul>
+      <li>Gegen die Kreuz Damen gewonnen: 1 Sonderpunkt</li>
+      <li>Doppelkopf (ein Stich mit 40 oder mehr Augen): 1 Sonderpunkt</li>
+      <li>Karo As (Fuchs) der Gegenpartei gefangen: 1 Sonderpunkt</li>
+      <li><em>Optional</em> Kreuz Bube (Karlchen) macht den letzten Stich: 1 Sonderpunkt
+      <ul>
+	<li><em>Optional</em> 2 Sonderpunkte f&uuml;r Doppel-Karlchen: beide Kreuz Buben einer Partei im letzten Stich</li>
+	<li><em>Optional</em> 1 Sonderpunkt f&uuml;r Karlchen fangen: wenn Kreuz Bube im letzten Stich von Gegenpartei &uuml;berstochen wird und
+	die Gegenpartei den Stich macht</li>
+	<li><em>Optional</em> 2 Sonderpunkte f&uuml;r Doppel-Karlchen fangen: wenn beide Kreuz Buben im letzten Stich von Gegenpartei &uuml;berstochen werden</li>
+      </ul>
+      </li>
+      <li><em>Optional</em> 1 Sonderpunkt f&uuml;r Fuchs im letzten Stich: Letzter Stich wird mit Karo As (kein Schwein) gewonnen
+      <ul>
+	<li><em>Optional</em> 2 Sonderpunkte f&uuml;r Doppel-Fuchs im letzten Stich: letzter Stich wird durch zwei Karo Asse einer Partei gewonnen
+	</li>
+      </ul>
+      </li>
+      <li><em>Optional</em> 1 Sonderpunkt f&uuml;r Dollenschlag, wenn eine Herz Zehn die andere schl&auml;gt</li>
+    </ul>
+
+    <p>
+    Bei einem Solo gibt es keine Sonderpunkte. Dies gilt auch f&uuml;r eine
+    &bdquo;Stille Hochzeit&rdquo;.
+    </p>
+
+
+    <h3><a name="scoring:counting">Punkte z&auml;hlen</a></h3>
+
+    <p>
+    Bei FreeDoko besteht <em>optional</em> die M&ouml;glichkeit eine von drei Z&auml;hlarten zu w&auml;hlen:
+    </p>
+    <ul>
+      <li>alle Punkte werden jedem Gewinner positiv angeschrieben</li>
+      <li>alle Punkte werden f&uuml;r jeden Verlierer negativ angeschrieben</li>
+      <li>alle Punkte werden nach der Plus-Minus-Regel angeschrieben, das hei&szlig;t jeder
+      Gewinner bekommet die Punkte positiv und jeder Verlierer bekommt die Punkte negativ angeschrieben.
+      Hierbei ist die Summe der vergebenen Punkte immer null. Deswegen wird bei einem Solo die Punktzahl f&uuml;r den Solospieler verdreifacht und ihm bei Gewinn gutgeschrieben,
+      bei Niederlage abgezogen. Den drei Spielern der Gegenpartei wird die einfache Punktzahl mit umgekehrtem
+      Vorzeichen angeschrieben.</li>
+    </ul>
+
+
+    <h2><a name="viewingtricks">Sticheinsicht</a></h2>
+
+    <p>
+    Die Anzahl der bereits gespielten Stiche, die noch betrachtet
+    werden d&uuml;rfen, kann bei FreeDoko <em>optional</em> in den Regeln
+    eingestellt werden.
+    </p>
+
+    <hr>
+    <div style="text-align: right;">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/rules.html">offizielle Internetseite</a>
+    </div>
+  </body>
+
+</html> 

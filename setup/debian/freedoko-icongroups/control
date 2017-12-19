@@ -1,0 +1,12 @@
+Source: freedoko-icongroups
+Section: games
+Priority: extra
+Maintainer: Diether Knof <dknof@gmx.de>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: freedoko-icongroups
+Architecture: all
+Conflicts: freedoko (<< 0.7.11)
+Description: icongroups for 'freedoko'
+ This package does contain some icongroups for the game 'freedoko'.

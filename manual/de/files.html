@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko: Dateien</title>
+
+    <meta name="date" content="2005-07-14T22:40:15+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rev="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../pictures/FreeDoko.icon.png">
+    <link rel="stylesheet" type="text/css" href="../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="copyright" href="credits.html" title="Credits">
+    <link rel="help" href="faq.html" title="FAQ">
+
+    <link rel="section" href="introduction.html" title="Einführung">
+    <link rel="section" href="installation.html" title="Installation">
+    <link rel="subsection" href="compiling.eclipse.html" title="Kompilieren mit Eclipse">
+    <link rel="section" href="operation/overview.html" title="Bedienung">
+    <link rel="section" href="shortrules.html" title="Spielregeln Kurzreferenz">
+    <link rel="section" href="rules.html" title="Spielregeln">
+    <link rel="section" href="bug_report.html" title="Fehlerbericht">
+    <link rel="section" href="configuration.html" title="Konfiguration">
+    <link rel="section" href="todo.html" title="Planung">
+    <link rel="section" href="bugs.html" title="Fehler">
+    <link rel="section" href="faq.html" title="FAQ">
+    <link rel="section" href="credits.html" title="Credits">
+    <link rel="section" href="toc.html" title="Inhaltsverzeichnis">
+
+    <link rel="start" href="overview.html" title="Übersicht">
+    <link rel="up" href="overview.html" title="Übersicht">
+
+    <link rev="alternate" href="../en/files.html" hreflang="en" title="english">
+
+    <link rev="alternate" href="http://free-doko.sourceforge.net/doc/manual/de/files.html" title="offizielle Internetseite">
+  </head>
+
+
+  <body>
+
+    <h1>Persönliche Dateien von FreeDoko</h1>
+
+    <p>
+    FreeDoko speichert einige persönliche Dateien ab.
+    Diese finden sich unter Unix-Systemen im Unterverzeichnis <var>.FreeDoko</var> vom Heimatverzeichnis, unter Windows im Unterverzeichnis <var>FreeDoko</var> im <var>Applikationsdaten</var>-Verzeichnis des Benutzers.
+    </p>
+
+    <p>
+    Alle Dateien mit Einstellungen sind im normalen Textformat gespeichert.	
+    Das Format ist: <samp>Schlüsselwort</samp> = <samp>Wert</samp>.
+    Leere Zeilen und Zeilen, die mit '#' beginnen, werden ignoriert.
+    </p>
+
+
+    <h2>FreeDokorc</h2>
+
+    <p>
+    Die <a href="operation/settings.html">Einstellungen</a> werden in der Datei <var>FreeDokorc</var> gespeichert.
+    Das Laden geschieht automatisch beim Programmstart, das Speichern automatisch, wenn Einstellungen geändert werden.
+    </p>
+
+
+    <h2>Version</h2>
+
+    <p>
+    In dieser Datei steht die Version von dem FreeDoko-Programm, welches Sie beim letzten Mal genutzt haben (Versionsnummer, ob Release, Erstellungszeit).
+    </p>
+    <p>
+    Genutzt wird die Datei um bei Versionswechsel ein Hinweisfenster mit den Neuerungen anzuzeigen, sowie automatisch Änderungen durchzuführen (natürlich auch mit einem Hinweis).
+    </p>
+
+
+    <h2>player.[1234]</h2>
+
+    <p>
+    In diesen vier Dateien werden die <a href="operation/party_settings.html#players">Spielerkonfigurationen</a> (inklusive der KI) beim Starten eines Tuniers automatisch gespeichert
+    Beim Starten von FreeDoko werden die Dateien geladen.
+    <var>player.1</var> ist der Spieler unten, <var>player.2</var> der Spieler links, <var>player.3</var> der Spieler oben und <var>player.4</var> der letzte Spieler.
+    </p>
+
+
+    <h2>seed</h2>
+
+    <p>
+    In der <var>seed</var>-Datei werden die Startwerte der Turniere gespeichert.
+    Damit haben Sie die Daten um frühere Spiele nochmal zu spielen.
+    </p>
+    <p>
+    Jeder Startwert wird in einer neuen Zeile an die Datei angehängt, gefolgt von dem Startspieler, dem Zeitpunkt und in der nächsten Zeile die Spielart (wenn sie nicht normal ist).
+    Die Datei <var>seed</var> wird immer größer, maximal 75 Zeichen pro Spiel (d.h. frühestens nach 13.000 Spiele verbraucht die Datei ein Megabyte).
+    </p>
+
+
+    <h2>ai/</h2>
+
+    <p>
+    In diesem Verzeichnis werden die <a href="operation/ai_config.html">KI-Konfigurationen</a> gespeichert.
+    Dieses Verzeichnis wird ausgelesen, wenn eine KI-Konfiguration geladen werden soll.
+    </p>
+
+
+    <h2>rules/</h2>
+
+    <p>
+    In diesen Ordner werden die <a href="rules.html">Regelsätze</a> gespeichert.
+    Dieses Verzeichnis wird ausgelesen, wenn ein Regelsatz geladen werden soll.
+    </p>
+    <p>
+    Der Regelsatz <var>last</var> ist der Regelsatz, der zuletzt genutzt wurde.
+    Er wird beim Starten von FreeDoko automatisch geladen und beim Starten eines Tuniers automatisch gespeichert.
+    </p>
+
+
+    <h2>parties/</h2>
+
+    <p>
+    Im Verzeichnis <var>parties</var> werden die Partieen gespeichert.
+    Die aktuelle Partie heißt <var>current</var>.
+    </p>
+
+    <hr>
+    <div style="text-align: right;">
+      <a href="http://free-doko.sourceforge.net/doc/manual/de/files.html">offizielle Internetseite</a>
+    </div>
+  </body>
+
+</html>

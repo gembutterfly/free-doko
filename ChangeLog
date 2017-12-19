@@ -1,0 +1,6012 @@
+2017-01-10
+	---------------------------
+	- FreeDoko 0.7.16 (alpha) -
+	---------------------------
+
+2017-01-10
+	- fixed bug in solo game decision
+
+2017-01-05
+	- re-included InnoCard cardset
+
+2016-12-30
+	---------------------------
+	- FreeDoko 0.7.15 (alpha) -
+	---------------------------
+
+2016-12-29 Diether Knof
+	- updated check for outdated cardsets
+
+2016-12-05 Diether Knof
+	- random names are taken from a list and not generated anymore
+
+2016-07-14 Diether Knof
+	- changed next seed algorithm for the game startseed
+
+2016-05-29 Diether Knof
+	- switched to gtkmm Version 3
+
+2016-04-16 Diether Knof
+	- fixed bug: trickpile points were shown when the color was changed, regardless of the rule
+
+2016-02-06 Borg Enders
+	- tweaked trickweighting for jacks that are not trump
+
+2016-01-16
+	---------------------------
+	- FreeDoko 0.7.14 (alpha) -
+	---------------------------
+
+2016-01-09 Diether Knof
+	- revised installation commands (make install)
+
+2016-01-03 Diether Knof
+	- updated InnoCard license, fixed license date check
+	- All information is now shown after displaying the main window
+
+2015-12-25 Borg Enders
+	- tweaked make announcement for meatless solo
+	- tweaked make announcement for solo player, playing against swines
+
+2015-12-24 Borg Enders
+	- improved make_reply for solo player
+	- tweaked no_60 for solo
+	- tweaked no_90 for poverty
+	- improved draw trump for first tricks of solo
+
+2015-08-15 Diether Knof
+	- added class for simplier using of status messages
+
+2015-06-26 Diether Knof
+	- fixed bug in announcement check
+
+2015-06-12 Diether Knof
+	- fixed bug in poverty detection (when having richness)
+
+2015-03-19 Diether Knof
+	- fixed bug in monte carlo (player not found for teaminfo)
+
+2014-12-29
+	---------------------------
+	- FreeDoko 0.7.13 (alpha) -
+	---------------------------
+
+2014-12-29 Diether Knof
+	- improved icon layout for wide screens
+
+2014-12-28 Diether Knof
+	- fixed loading of a reference
+	- small improvement in team information heuristics
+	- fix loading a swines icon
+	- updated default settings for cardsets
+	- added different sizes for the iconsets
+
+2014-12-27 Borg Enders
+	- Tweaked TrickWeighting
+	- Tweaked AI announcement behaviour
+	
+2014-12-06 Borg Enders
+	- Tweaked AI announcement behaviour
+	- Tweaked TrickWeighting
+
+2014-11-01 Diether Knof
+	- fixed bug loading a bug report
+
+2014-09-23 Diether Knof
+	- fixed bug with makro 'ex' (use 'EX' instead)
+
+2014-09-19 Diether Knof
+	- seed and startplayer are hidden by default (can be changed in the settings)
+
+2014-09-18 Diether Knof
+	- almost every replaced use of Player::no() since it is not unique with more than 4 players
+
+2014-08-05 Diether Knof
+	- replaced "using namespace std" by individual "using"-commands
+	- replaced almost all std::list by std::vector
+
+2014-07-24 Diether Knof
+	- fixed heuristics "choose pfund before partner" and "best winning card" according to the references
+
+2014-07-19 Diether Knof
+	- fixed bug in poverty: shifting hyperswines to swines but no joined swines and hyperswines
+
+2014-07-06 Borg Enders
+	- tweaked AI
+
+2014-06-14 Diether Knof
+	- fixed bug when starting a new tournament / loading a bug report
+
+2014-06-13 Borg Enders
+	- tweaked AI
+
+2014-06-07 Borg Enders
+	- tweaked AI
+	
+2014-05-25 Borg Enders
+	- tweaked NO60 announcement of AI to consider Dollen more
+	- tweaked trickweighting
+
+2014-05-22 Diether Knof
+	- heuristic: choose pfund before partner: do not assume, that the partner has a dolle
+	- heuristic: at the last chance call 'play to get married' before all other heuristics
+
+2014-05-21 Diether Knof
+	- improved best winning card: do not overjab with ten points if the opposite team can get the trick
+	- improved best winning card: do not overjab the partner close
+
+2014-05-19 Diether Knof
+	- added support for Byte Order Mark in bug reports
+
+2014-05-18 Diether Knof
+	- Fixed bug in best jabbing card which could lead to infinite loop
+
+2014-05-18 Borg Enders
+	- replayed bugreports
+	- tweaked trickweighting
+
+2014-05-13 Diether Knof
+	- The game summary shows the right player name (> 4 players)
+	- Game summary: show winning and loosing players with green/red color
+
+2014-05-12 Diether Knof
+	- Adding players to a tournament
+	- Doko-Lounge: shifting players between the games
+
+2014-04-04 Diether Knof
+	- removed all waitings for the fast play
+
+2014-03-29 Diether Knof
+	- Doko-Lounge: added active commands (untested)
+
+2014-03-27 Diether Knof
+	- Doko-Lounge: jumping into a game
+	- GUI: changed HTIN identifier from player to position
+	- fixed two bugs in cards information: handling of unknown cards
+
+2014-03-19 Diether Knof
+	- Doko-Lounge: replaying two games
+
+2014-03-17 Diether Knof
+	- Doko-Lounge: update to client version 60
+
+2014-02-22 Borg Enders
+	- tweaked trickweighting
+
+2014-02-18 Diether Knof
+	- Doko-Lounge: jumping into a game
+
+2014-02-09 Borg Enders
+	- tweaked trickweighting for using trump as first card of trick against announcement bz opposite team.
+
+2014-02-05 Diether Knof
+	- Doko-Lounge: announcement and solo
+	- Doko-Lounge: finished replaying one recorded session
+
+2014-01-29 Diether Knof
+	- fixed ai selecting color solo when it is not allowed by the rules
+
+2014-01-19 Diether Knof
+	- further work on the Doko-Lounge (table chat and audience)
+
+2014-01-12 Diether Knof
+	- further work on the Doko-Lounge (observer of one game)
+
+2014-01-06 Diether Knof
+	- further work on the Doko-Lounge
+	- updated copyright date to 2014
+
+2013-12-31 Diether Knof
+	- removed all Altenburg pictures
+
+2013-12-23 Diether Knof
+	- further work on the Doko-Lounge
+
+2013-12-16 Diether Knof
+	- further work on the Doko-Lounge lists of tables and players
+
+2013-12-15 Diether Knof
+	- added tables list to Doko-Lounge
+
+2013-12-07
+	---------------------------
+	- FreeDoko 0.7.12 (alpha) -
+	---------------------------
+
+2013-12-02 Diether Knof
+	- Makefile: corrections
+	- added default back to load
+
+2013-11-16 Diether Knof
+	- replaced Altenburg cardset with InnoCard
+
+2013-11-10 Diether Knof
+	- DokoLounge: chat
+
+2013-11-05 Diether Knof
+	- fixed specialpoint caught charlie
+
+2013-11-01 Diether Knof
+	- DokoLounge: showing help, blog, pin board and messages
+
+2013-10-27 Diether Knof
+	- begun with support for DokoLounge
+
+2013-10-01 Diether Knof
+	- cards information: added check, whether two players share as many "can have" cards as they still have to play (the other players cannot have these cards, then).
+
+2013-09-30 Diether Knof
+	- fixed detecting of round startgames when loading a party
+
+2013-09-26 Diether Knof
+	- fixed detecting of last game in the tournament
+
+2013-09-25 Diether Knof
+	- added support for separate iconset
+	- merged licenses (program, cardset, iconset) into one window
+
+2013-09-23 Diether Knof
+	- fixed display of party points graph
+
+2013-09-20 Diether Knof
+	- reorganized round increasing (now: before starting a game, before: at finishing a game)
+
+2013-09-16 Diether Knof
+	- small improvement in heuristic "jab for ace"
+	- fixed team display in reservation
+	- Knocking is only for normal games, silent marriages and genscher
+
+2013-09-11 Diether Knof
+	- some small fixes/improvements in heuristics (choose pfund)
+	- added support for individual verbose messages in bug report replays (for quiet references)
+	- references: added subdirectory "_broken" to subdirectories of the references
+	- references: directories containing a file "_skip" are skipped
+
+2013-09-09 Diether Knof
+	- fixed dates of cardset Altenburg expirement
+
+2013-09-01 Borg Enders
+	- improved monte carlo to avoid trump as first card of a trick
+
+2013-06-29 Borg Enders
+	- improved trickweighting
+
+2013-06-22 Borg Enders
+	- improved trickweighting
+
+2013-06-16 Borg Enders
+	- improved trickweighting
+	
+2013-06-09 Borg Enders
+	- improved trickweighting
+	
+2013-05-04 Borg Enders
+	- improved trickweighting for dolle after swine owner
+
+2013-04-13 Borg Enders
+	- improved trickweighting for dolle before swine
+
+2013-02-24 Borg Enders
+	- tweaked trickweighting
+
+2013-02-03 Borg Enders
+	- tweaked trickweighting
+
+2013-01-26 Borg Enders
+	- tweaked trickweighting
+
+2013-01-07 Diether Knof
+	- updated copyright date to 2013
+	- tweaked value in cards information heuristic 'two dollen'
+	- fixed bug in bug report loading
+
+2012-11-17 Diether Knof
+	- added setting of party seed to the bug report
+
+2012-11-03 Diether Knof
+	− fixed rule "marriage before poverty"
+
+2012-10-07 Borg Enders
+	- replayed bug reports
+	- created new references
+	- tweaked make announcement for poverty
+
+2012-10-02 Diether Knof
+	- fixed double icon drawing
+
+2012-09-27 Borg Enders
+	- replayed bug reports
+	- created new references
+	- tweaked make announcement
+
+2012-09-20 Borg Enders
+	- replayed bug reports
+	- created new references
+	- tweaked announcement for poverty
+	- tweaked say no60
+
+2012-09-12 Diether Knof
+	- fixed bug in heuristic 'choose pfund before partner': added check, that the trick can be jabbed
+	- poverty shifting: the startplayer of the game is shown while the active player is the human
+
+2012-07-17 Diether Knof
+	- probably fixed bug in icon drawing
+
+2012-07-14 Diether Knof
+	- fixed performance problem when changing the language to english or german
+
+2012-07-13 Diether Knof
+	- fixed crash in poverty reservation
+	- poverty: contra: leave to partner: overjab, if the player has no card less then the given one
+
+2012-06-19 Diether Knof
+	- choose pfund: reworked case 'last player'
+
+2012-06-16 Diether Knof
+	- Fixed bug: crash when bock games reach into the duty soli round
+
+2012-06-04 Diether Knof
+	- The results of the references checks are saved in the main directory.
+
+2012-05-31 Diether Knof
+	- choose pfund card: always pfund in the first color run
+
+2012-05-30 Diether Knof
+	- icons: in the reservation the marriage selector icon is shown
+	- icons: support for silent marriage / marriage solo icon
+
+2012-05-24 Diether Knof
+	- fixed crash when starting from another directory (data files were not found)
+	- fixed compilation problems with clang (llvm)
+
+2012-05-23 Diether Knof
+	- added best winning card to default heuristics of poverty - contra
+	- choose pfund: reworked the ten/ace selection
+	- finetuning an best winning card
+
+2012-05-18 Borg Enders
+	- fixed broken References 101732,  139722_1, 139722,040594, 096567, 043530, 126305, 261053
+
+2012-05-17 Borg Enders
+	- fixed broken References 268670
+
+2012-05-06 Diether Knof
+	- play for team: do not count special cards as pfund
+
+2012-05-05 Diether Knof
+	- choose pfund before partner: in solo games also take color tricks into account
+	- partner backhand draw trump: also use this heuristic, if the opposite team has announced, but not better then the own team
+
+2012-05-02 Diether Knof
+	- serve color trick: also take a trump to get rid of them
+
+2012-05-01 Diether Knof
+	- team information heuristics: value change
+	- heuristic 'play highest color card in game': also applies after the first trick card
+	- choose pfund card: choose a color ace also in situations, it could get the second color run
+
+2012-04-22 Diether Knof
+	- improved 'best jabbing card'
+	- bug report: added trick number of game review
+	- improved heuristic 'play color for partner ace'
+
+2012-04-22 Borg Enders
+	- announcemnets calculation adapted for the game with out nines
+	- tweaked trickweighting
+
+2012-04-21 Diether Knof
+	- Monte Carlo: in the first trump trick do not jab with a card less then diamond jack
+	- improved heuristic 'get trick for announcement'
+	- choose pfund card: at first select a single color ten
+	
+2012-04-15 Borg Enders
+	- tweaked trickweighting
+	
+2012-04-14 Borg Enders
+	- tweaked no90 announcement
+	
+2012-04-09 Borg Enders
+	- tweaked trickweighting (and created two accorduing references)
+
+2012-04-03 Diether Knof
+	- fixed bug in 'make announcement'
+
+2012-03-31 Borg Enders
+	- tweaked AI for NO90 announcement
+	- tweaked trickweighting for serving a club queen
+
+2012-03-17 Diether Knof
+	- Monte Carlo: removed some special cards as startcard for a trick
+	- improvement of 'best winning card'
+	- play pfund, meatless: do not pfund an ace
+	- changed weighting for team information heuristics
+	- choose pfund card: pfund a color ace for a doppelkopf
+	- some fixes/improvements in cards information heuristics
+
+2012-03-17 Borg Enders
+	- announcement tweaks 
+	- tweaked trickweighting  
+
+2012-03-11 Borg Enders
+	- announcement tweaks (while checking automatically generated bugreports)
+	- tweaked trickweighting  
+
+2012-03-04 Diether Knof
+	- best winning card: do not jab a marriage decision trick as bride
+
+2012-03-04 Diether Knof
+	- heuristic 'choose for color trick': added a check in a poverty, that the poverty player can jab the trick
+
+2012-02-26 Diether Knof
+	- added cards information heuristic 'bride pfunds in decision trick'
+
+2012-02-19 Diether Knof
+	- fixed limiting of the main window to the screen size
+	- small improvement in cards information heuristic 'served color'
+
+2012-01-25 Diether Knof
+	- the program path is added to the data directories
+
+2012-01-22 Diether Knof
+	- fixed bug: unannounced swines/hyperswines were taken as pfund
+	- updated date to 2012 in the head of the source files
+
+2012-01-21 Diether Knof
+	- fixed bug in best winning card
+	- fixed bug: a silent marriage was counted as duty solo
+
+2012-01-08 Borg Enders
+	- current trick winner especially considered for no60
+
+2011-12-29 Borg Enders
+	- improved announcements based on aces
+	- won trick makes announcement no120 more probable
+	- current trick winner especially considered for no90
+
+2011-12-20 Diether Knof
+	- fixed bug locating the manual
+
+2011-12-18
+	---------------------------
+	- FreeDoko 0.7.11 (alpha) -
+	---------------------------
+
+2011-12-17 Diether Knof
+	- fix of predefined ais
+	- small improvement in best winning card
+
+2011-12-15 Diether Knof
+	- improved documentation layout ("Kurzregeln" and "DDV_Kurzregeln")
+
+2011-12-13 Diether Knof
+	- fixed some compilation bugs
+
+2011-12-10 Diether Knof
+	- fixed bug in heuristic "play to get married"
+	- added cards information heuristic "first player played club queen"
+
+2011-12-04 Borg Enders
+	- fixed announcement reference
+	- improved trickweighting => reference 234467
+
+2011-11-27 Diether Knof
+	- in a tournament no seed is taken again
+	- added info of remaining rounds, games and points to the reservation window
+
+2011-11-26 Borg Enders
+	- tweaked announcements
+	
+2011-11-20 Borg Enders
+	- tweaked announcements
+
+2011-11-12 Diether Knof, Borg Enders
+	- some fixes in best winning card, start with low color
+
+2011-10-30 Diether Knof
+	- further work on 'best winning card' and 'optimized card to play'
+	- fixed bug in 'choose pfund before partner': case startplayer re but unknown, second player re and has to decide
+
+2011-10-19 Diether Knof
+	- further work on 'best winning card' and 'optimized card to play'
+
+2011-10-09 Diether Knof
+	- expanded license of the altenburg cardsets
+	- further work on 'best winning card'
+
+2011-09-24 Diether Knof
+	- 'jab for ace': do not overjab a trick of the partner, if the player behind has no ace to play
+
+2011-09-24 Diether Knof
+	- small improvements in 'best winning card'
+
+2011-09-14 Diether Knof
+	- fixed assertion in end game
+
+2011-09-09 Diether Knof
+	- game review: added view for the full hands (start) and the full trickpiles (end)
+
+2011-09-08 Diether Knof
+	- fixed wrong serving in 'jab for ace'
+
+2011-09-07 Diether Knof
+	- 'optimize card to play' improved for color tricks
+
+2011-09-05 Diether Knof
+	- added rules 'marriage first one decides' and 'marriage before poverty'
+
+2011-09-04 Diether Knof
+	- aiconfig: poverty - contra: put 'play color for partner' in the front
+	- database: the heuristics are only counted for the tricks till 'last tricks without heuristics'
+	- improvements on 'best winning card'
+	- added card objects for each card (like Card::DIAMOND_JACK)
+
+2011-08-31 Diether Knof
+	- 'start with low color': do not play, if the following player is of the opposite team
+
+2011-08-30 Diether Knof
+	- removed heuristic separation 'color: best winning card', now only use 'best winning card'
+	- replaced 'best winning card' with new code for the implemented cases (normal games, third and fourth position)
+	- some improvement on the reimplementation of 'best winning card'
+
+2011-08-29 Diether Knof
+	- further work on reimplementation of 'best winning card'
+	- fixed compilation errors/problems with new boost library
+
+2011-08-28 Diether Knof
+	- further work on reimplementation of 'best winning card' (jabbing heuristics and jabbing decision in case 4th and 3rd player)
+	- fixed handling of special cards in optimized_card_to_play()
+
+2011-08-27 Diether Knof
+	- work on reimplementation of 'best winning card' (jabbing heuristics)
+
+2011-08-27 Borg Enders
+	- added serving aces consideration to marriage no120 announcement
+
+2011-08-26 Diether Knof
+	- some small fixes in team information heuristics and cards information heuristics
+
+2011-08-25 Diether Knof
+	- 'choose pfund before partner': when the player has more then one pfund, select one also for the case that the partner must have a very high card
+	- cards information heuristic 'color trick jabbed first run' now takes the remaining cards into account
+	- 'draw trump': added check, that the opposite team still has trump
+
+2011-08-24 Diether Knof
+	- improved team detection for case 'two contra and one re player'
+
+2011-08-23 Diether Knof
+	- fixed cards information heuristic 'serve color' for undetermined marriage
+	- 'play trump' chooses a fox, if the player still has both, has at max 4 trumps and his partner is behind
+	- 'best winning card': take a trump ace in the first color run nearly always
+	- tweaked modifier for team information heuristics in regard to oneself
+
+2011-08-22 Diether Knof
+	- heuristic 'serve trump trick': increased minimum trump number to 5
+
+2011-08-18 Diether Knof
+	- heuristics order: moved 'play color for partner ace' between 'choose ace' and 'choose ten'
+
+2011-08-17 Diether Knof
+	- improved 'choose pfund before partner' for solo games
+
+2011-08-16 Diether Knof
+	- in solo games, 'jab for ace' is not selected in first color run which goes to the contra team
+
+2011-08-14
+	---------------------------
+	- FreeDoko 0.7.10 (alpha) -
+	---------------------------
+
+2011-08-13 Diether Knof
+	- some ui fixes/improvements (showing of gameinfo; rules adjustements; description of duty soli round; rules rounds and points limit in the party settings window)
+
+2011-08-07 Diether Knof
+	- fixed crash in last trick
+	- improved lowest card selection in 'monte carlo jab or serve'
+
+2011-07-21 Diether Knof
+	- further work on simple text interface
+
+2011-07-03 Diether Knof
+	- fixed bug in team information value
+	- perhapsed fixed the problem with game insertion in the party points
+	- reworked heuristic 'get trick for announcement', calcPointsOfSameTeam and calcPointsOfOppositeTeam
+
+2011-06-14 Diether Knof
+	- heuristic order: put 'retry color' behind 'play color for partner ace'
+	- team information heuristics: value adjustment
+	- heuristic 'poverty contra play color': prefer an ace to other color cards
+	- choose pfund: as soloplayer in a poverty always prefer an ace
+
+2011-06-05 Diether Knof
+	- choose pfund: do not pfund a jack, if the trick can be jabbed
+	- improved heuristic 'serve trump' for solo games
+	- heuristic 'choose ace' takes a ten to save the ace in solo games for future jabbing
+
+2011-06-04 Borg Enders
+	- tweaked Heuristics::say_no60 for poverty
+	- tweaked Heuristics::say_no0 
+
+2011-06-02 Diether Knof
+	- reply announcement: added check of points
+
+2011-06-02 Borg Enders
+	- announcement reply checks now the points of the opposite team
+	- tweaked trickweighting
+
+2001-05-29 Borg Enders
+	- tweaked trickweighting
+
+2011-05-28 Diether Knof
+	- fixed bug in cards information heuristic "last player played pfund"
+	- heuristic "serve trump": added check for possible extrapoint in trick
+	- added heuristic "jab fox" to "poverty - contra"
+	- monte carlo - jab or serve: check whether
+	- heuristic "play pfund" improved
+
+2011-05-15 Borg Enders, Diether Knof
+	- many ai bug fixes
+
+2011-05-11 Diether Knof
+	- fixed compilation problems
+
+2011-05-01 Borg Enders
+	- continued refactoring of trickweighting
+
+2011-04-30 Diether Knof
+	- fixed bug in heuristic 'start with color'
+	- added check for short color in heuristic 'start with low color'
+	- fixed crash "no valid game found" in 'gametree with heuristics'
+
+2011-04-30 Borg Enders
+	- continued refactoring of trickweighting
+
+2011-04-18 Diether Knof
+	- fixed crash when two players want to play a solo
+
+2011-04-11 Diether Knof
+	- fixed bug (settings.cpp)
+
+2011-04-09 Diether Knof
+	- added manual to release archives
+	- added sounds to debian package 'freedoko-nonfree'
+
+2011-04-05 Diether Knof
+	- fixed bug: specialpoint 'contra won' was not always set
+
+2011-04-02 Diether Knof
+	- updated reference to gnet internet page
+
+2011-03-22 Diether Knof
+	- fixed determination of winnerteam with rule 'knocking'
+
+2011-03-21 Diether Knof
+	- monte carlo: do not take a dolle as first card with rule 'second over first'
+
+2011-03-12 Diether Knof
+	- fixed bug in function 'lowest_trump_card' (not in all cases a trump was selected)
+
+2011-03-12 Borg Enders
+	- continued refactoring of trickweighting
+	- tweaked say_no90
+
+2011-03-10 Diether Knof
+	- fixed lead: in a duty solo the solo player now always leads
+	- fixed automatic announcement of hyperswines (game without nines)
+
+2011-03-05 Borg Enders
+	- continued refactoring of trickweighting
+	- tweaked announcement reply for soli
+
+2011-03-06
+	--------------------------
+	- FreeDoko 0.7.9 (alpha) -
+	--------------------------
+
+2011-03-05 Diether Knof
+	- fixed loading of translation
+	- fixed party points graph (last round was not shown)
+
+2011-02-27 Borg Enders
+	- started refactoring of trickweighting
+	- tweaked re announcement for marriage
+	- tweaked sayNo90
+	- tweake make::announcement
+
+2011-02-27 Diether Knof
+	- added team information heuristic: overjabbed player
+	- fixed vanishing of announcement on the table 
+
+2011-02-27 Diether Knof
+	- fixed bug report loading for bug reports without any gameplay action
+
+2011-01-08 Borg Enders
+	- tweaked trickweighting to consider second_dolle_over_first (new reference created)
+
+2011-01-02 Diether Knof
+	- fixed bock detection: reply was not accepted as re/contra
+
+2010-12-23 Borg Enders
+	- tweaked trickweighting (new reference created)
+
+2010-12-12 Diether Knof
+	- cards information: fixed bug in hand estimation (cards were added, that the player cannot have)
+	- cards information: when the player has an announcement, the weighting for color cards is decreased
+
+210-12-12 Borg Enders
+	- CalcHandValue now considers Heart Ace in a better way
+
+2010-12-08 Diether Knof
+	- fixed bug in heuristic "jab fox"
+	- fixed crash: shifted swines
+
+2010-12-07 Diether Knof
+	- "draw trump": added check for absolute difference
+
+2010-11-28 Borg Enders
+	- tweaked make_announcement in case of marriage.
+	- tweaked make_announcement for contra.
+
+2010-11-27 Diether Knof
+	- fixed bug in heuristic "choose pfund before partner"
+
+2010-11-25 Diether Knof
+	- added aitype "monte carlo - jab or serve" (which only checks two cards), changed in the default ais "monte carlo" to "monte carlo - jab or serve"
+
+2010-11-21 Diether Knof
+	- gametree: assume in the last tricks, that the own team is known
+
+2010-11-16 Borg Enders
+	- tweaked sayNo90
+	
+2010-11-14 Borg Enders
+	- long colors on hand are now better considered for announcements
+
+2010-11-13 Borg Enders
+	- re/contra announcement considers now points off opposite team 
+	  (and also if own team has already >120 points, e.g. if announcement are allowed to be made very late in game)
+
+2010-11-03 Borg Enders
+	- annoucement now take care if first trick are served by other players
+
+2010-11-01 Diether Knof
+	- "draw trump" no checks rule "second over first"
+	- "serve trump" checks the remaining trumps on the hand
+
+2010-11-01 Borg Enders
+	- for announcements unprotected color tens are now considered in a better way
+
+2010-10-29 Diether Knof
+	- improved performance: loading many games
+	- improved "best winning card": do not use it, if the player only jabs directly over the partner
+
+2010-10-28 Diether Knof
+	- fixed crash: first game is solo
+
+2010-10-28 Diether Knof
+	- fixed bug in heuristic 'choose ten' (missing check for color card)
+	- improved announcement decision: also take the current trick into account if it is not full
+
+2010-10-11 Diether Knof
+	 fixed crash: starting new party while last trick window was open
+	- choose pfund card: prefer a ten of a color over an ace, if another player still has a ten
+	- some bug fixes in the team information
+
+2010-10-03 Diether Knof
+	- added gametype check for heuristic "poverty: special: play pfund"
+
+2010-09-27 Diether Knof
+	- fixed bug in cards information
+
+2010-09-25 Diether Knof
+	- improved cards information heuristic "last player played pfund": check for trump ace / ten
+
+2010-09-24 Diether Knof
+	- added cards information heuristic "soloplayer startcard color"
+
+2010-09-23 Diether Knof
+	- cards information: for the estimated hand now only take the highest weighting of the other players into account (before: all weightings)
+
+2010-09-20 Diether Knof
+	- small bug fixes
+
+2010-09-19 Diether Knof
+	- added team information heuristics: start with low color / start with low trump
+	- improved team information heuristic "pfund in color trick"
+	- improved heuristic "retry color"
+
+2010-09-18 Diether Knof
+	- improved heuristics "choose ace" and "choose ten": ignore, whether the partner has the color
+	- improved heuristic "choose pfund": not in a trump trick of a picture solo, if one has to serve trump
+
+2010-09-17 Diether Knof
+	- heuristic "try for doppelkopf" now checks, whether it is secure to use a special card
+	- improved heuristic "start with low trump": re and first card in the game
+	- improved heuristic "play low trump"
+	- added subsequent optimization for ai type "monte carlo"
+	- some heuristics improvements
+	- bug reports replayed
+
+2010-09-16 Diether Knof
+	- improved heuristic "choose color ace": also check, whether the opposite team must have the color
+	- enhanced heuristic "serve trump trick": also play a low trump, if one has few (1/2) high trumps
+
+2010-09-15 Diether Knof
+	- heuristics "draw trump" and "draw trump partner backhand": added check for announcements of the other teams
+	- added heuristic "choose bad color"
+	- fixed rule changes in bug report loading
+
+2010-09-12 Diether Knof
+	- improved heuristic "choose for color trick"
+	- added heuristic "choose ten"
+
+2010-09-11 Borg Enders, Diether Knof
+	- replayed bug reports
+
+2010-08-28 Diether Knof
+	- fixed heuristic "choose best card" for color tricks
+
+2010-08-27 Diether Knof
+	- fixed display of aiconfig heuristics selection
+
+2010-08-22 Diether Knof
+	- changed default ai "profi unfair": rating is now maximum instead of linear
+
+2010-08-15 Diether Knof
+	- fixed sorting of two fox in poverty with deactivated rule "swines in poverty"
+
+2010-08-10 Diether Knof
+	- fixed heuristic "serve trump trick" for solo games
+
+2010-08-08 Diether Knof
+	- improved heuristic "serve color trick" (checking, whether the own team gets the trick)
+
+2010-08-07 Diether Knof
+	- wrong cards order setting is now repaired automatically
+	- added rule "solo always counts triple"
+
+2010-08-03 Diether Knof
+	- fixed compiling problems with gcc 4.5
+
+2010-07-30 Borg Enders
+	- fine tuned Heuristics::say_no60
+	- tweaked Heuristics::make_announcement for poverty
+
+2010-07-28 Diether Knof
+	- best winning card: sometimes prefer a club queen to a heart/spade queen
+
+2010-07-25 Diether Knof
+	- checking the references now includes the subdirectories (each gets its own results file)
+	- improved team information heuristic 'pfund in color' (pfund with another color)
+
+2010-07-24 Diether Knof
+	- heuristic "jab for ace": with opposite team behind, now take the highest trump, not only the highest queen (especially use a swine)
+	- heuristic "retry color" now checks not to play a trump card
+	- improved heuristic "choose pfund card" for color tricks
+
+2010-07-19 Diether Knof
+	- in the party points table, the duty soli rows are only shown, if there are some selected in the rules
+
+2010-07-18 Diether Knof
+	- added some missing stoppings of the stop watch
+
+2010-07-15 Diether Knof
+	- fixed crash in poverty reservation replaying a bug report
+
+2010-07-06 Diether Knof
+	- added version in the main window title
+
+2010-07-04 Diether Knof
+	- fixed hand display (sorting and announcement) in reservation (swines were not shown)
+
+2010-07-03 Borg Enders
+	- tweaked trickweighting to use club queen more often if team is not yet known.
+	- tweaked trickweighting.
+
+2010-07-01 Diether Knof
+	- fixed end of party due to round limit (two rounds too early)
+	- added duty soli selection to the simple ais
+	- fixed drawing of the party points graph (in the duty soli round)
+
+2010-06-29 Diether Knof
+	- compilation fixes
+	- moved unused code to new subdirectory
+
+2010-06-27 Borg Enders
+	- fixed problem with choosing fox as last card in lost trick.
+
+2010-06-26 Diether Knof
+	- bug fix in Windows install-dev-script (installation of boost library)
+	- bug fix in heuristic 'start with low trump'
+	- the cardset license is also searched in the parent directory of the cardset
+
+2010-06-21 Diether Knof
+	- the players can make their announcement instantly (especially useful in network games)
+
+2010-06-16 Diether Knof
+	- taking a look at the last trick window does no longer pause the game
+
+2010-06-16 Diether Knof
+	- in the party settings the style of the player name represents the player type (bold for human, italic for network)
+
+2010-06-06 Diether Knof
+	- fixed call of manual page (detecting the right path)
+
+2010-06-05 Borg Enders
+	- Contra/Re considers announcement of other party
+	- tweaked solo decision for missing high trumps
+	- tweaked play_low_high
+
+2010-06-05 Diether Knof
+	- fixed simple bugs in threads code
+
+2010-06-04 Diether Knof
+	- fixed call of help pages
+
+2010-05-26 Diether Knof
+	- heuristic 'choose pfund': in a color trick the remaining opposite players must 'can have' at least two cards of the player
+	- monte carlo only chooses a fox in the last three tricks
+
+2010-05-24 Diether Knof
+	- fixed call of help under Windows
+
+2010-05-22 Borg Enders
+	- lots of small trumps on hand reduce now probability for announcements/replies
+	- NO90 is will now be said in less cases by poverty partner
+	- tweaked announcements to be more unlikely if following treikc is not served by player
+	- tweaked probality of announcement before first card is played
+
+2010-05-22 Diether Knof
+	- reworked seed statistics (use 'make seed.info')
+
+2010-05-21 Borg Enders
+	- fixed usage of wrong function for detection of on swines in change from 2010-05-14.
+
+2010-05-14 Borg Enders
+	- improved announcement if re has swines and both dollen on hand
+
+2010-05-10 Diether Knof
+	- gametree: do not take the 'cards to play' - 1 worst cards into account (reworked class Rating)
+
+2010-05-08 Diether Knof
+	- fixed bug in cards information heuristics 'not jabbed trump'
+
+2010-05-07 Diether Knof
+	- added function Ai::partner(Player)
+	- fixed bug in cards information heuristics 'not jabbed trump': added check for case, that the player lets his partner jab the trick
+	- added cards information heuristic 'last player played pfund'
+
+2010-04-29 Diether Knof
+	- changed layout of game summary
+
+2010-04-25 Diether Knof
+	- tests and work on network code
+
+2010-04-11 Diether Knof
+	- fixed bug in heuristic 'play trump'
+	- improved heuristic 'choose pfund before partner' (try diamond king as re player)
+	- 'play low high' now always plays a small trump in the first 4 tricks
+	- 'jab for ace' does not overjab a high card of a partner
+
+2010-04-01 Borg Enders
+	- fixed problem where no duty solo was found
+
+2010-03-29 Diether Knof
+	- improved heuristic 'jab for ace': do not use as marriage player in a decision trick
+
+2010-03-28 Diether Knof
+	- fixed counting for rule knocking
+
+2010-03-23 Diether Knof
+	- improved heuristic 'choose pfund before partner' (check, whether the partner has to serve the color)
+	- added trick numbers to bug report
+
+2010-03-22 Diether Knof
+	- added rule 'knocking'
+
+2010-03-21 Borg Enders
+	- marriage partner considers now swines and hyperswines on partner hand for own announcement
+	- tweaked trickweighting for picture soli with kings as high trump cards
+
+2010-03-21 Diether Knof
+	- fixed loading of bug reports
+	- added rule 'extrapoint catch fox last trick'
+
+2010-03-13
+	--------------------------
+	- FreeDoko 0.7.8 (alpha) -
+	--------------------------
+
+2010-03-08 Diether Knof
+	- further tweaking of heuristic 'play low high'
+	- further preparations for the next release
+
+2010-03-07 Diether Knof
+	- preparation for the next release
+
+2010-03-07 Borg Enders
+	- Heuristics::play_to_get_married now starts with color aces also.
+	- tweaked Heuristics::play_low_high to be only used if there are still enough jacks and queens on hand.
+	- tweaked trickweighting
+	
+2010-03-06 Borg Enders
+	- improved Heuristic::MakeReply
+	- tweaked Heuristics::CalcHandValue
+
+2010-03-03 Diether Knof
+	- informations are only shown once
+
+2010-03-01 Diether Knof
+	- improved CardsInformation heuristic 'both dollen'
+
+2010-02-28 Diether Knof
+	- added boost support for compiling under Microsoft Windows (add 'USE_BOOST' in Makefile.local)
+
+2010-02-27 Diether Knof
+	- the player difficulties now take the rule 'with nines' for the ai type into account
+
+2010-02-25 Borg Enders
+	- fixed broken references 246985
+
+2010-02-22 Borg Enders	
+	- fixed broken references: 43530
+
+2010-02-21 Diether Knof
+	- improved heuristic 'play trump' for the case that the player has many high cards
+
+2010-02-21 Borg Enders
+	- fixed reference 1236; backhand weigthing is now modified for tricks with many points.
+	- modified trickweighting to use heart ten less often in trick which goes already to own team in a solo.
+	- reduced probability to play heart ten as first card, if higher trumps are still in game
+	- created references 126305, 260689
+
+2010-02-17 Diether Knof
+	- improved heuristic 'serve trump'
+
+2010-02-14 Diether Knof
+	- the reservation window can no longer be closed in a duty solo round, while no duty solo is selected
+	- fixed bug in party loading (wrong startplayer at the begin of the duty solo round)
+	- finetuning at team information heuristic 'pfund in color trick'
+
+2010-02-12 Diether Knof
+	- improved heuristic 'play for partner worries' (do not use, when the partner still has enough trumps)
+
+2010-02-06 Diether Knof
+	- improved heuristic 'poverty: contra: leave to partner' (more use of cards information
+
+2010-01-23 Borg Enders, Diether Knof
+	- fixed search for username under Microsoft Windows (should resolve the problems under Microsoft Windows 7)
+
+2010-01-17 Diether Knof
+	- fixed search for appdata directory under Microsoft Windows (should resolve the problems under Microsoft Windows 7)
+
+2010-01-16 Diether Knof
+	- added error check for creation of the directories in the first start
+
+2010-01-14 Diether Knof
+	- '::version' now contains the date of the version (before: the compile date)
+
+2009-12-13 Diether Knof
+	- improved heuristic 'jab for fox' for the second last player
+	- fixed loading of bug reports
+
+2009-12-10 Diether Knof
+	- improved heuristic 'choose pfund' for second color run
+
+2009-12-09 Diether Knof
+	- fixed bug in heuristic 'serve trump trick'
+
+2009-11-28 Diether Knof
+	- improved heuristic 'play trump'
+
+2009-11-23 Diether Knof
+	- added heuristic 'choose single ace' before 'play to get married'
+	- expanded heuristic 'start with low color' for solo games (re and contra)
+
+2009-11-23 Borg Enders
+	- changed Heuristics::serve_trump_trick to not be used in solo games where solo player has already played.
+	- tweaked trickweighting
+	
+2009-11-22 Diether Knof
+	- the heuristic 'play for team' does only choose ten or more points, when the player has enough of the cards in the hand
+	- fixed heuristics 'choose for color trick', 'choose pfund' and 'serve color trick' for the case that there are not enough remaining cards in the first color run
+
+2009-11-19 Diether Knof
+	- when the hands are known, the teams are not known by default (fixed error)
+
+2009-11-18 Diether Knof
+	- fixes in default ai configurations
+
+2009-11-14 Diether Knof
+	- added heuristic 'start with color'
+	- fixed and expanded card information heuristics 'not jabbed trump'
+
+2009-11-13 Diether Knof
+	- fixed gamelist update (marriage solo)
+
+2009-11-11 Diether Knof
+	- improved heuristic 'play ace' for known hands
+
+2009-11-10 Diether Knof
+	- cards information: weighting is not changed by the card played by the player himself
+
+2009-11-08 Diether Knof
+	- fixed bug in cards information heuristics 'served trump'
+	- fixed bug in cards information update (ai configuration: hands known, but tricks are forgotten)
+	- fixed bug in cards information update (missing update when tcolor information changed)
+	- fixed bug in weighting (selected card was non of the preselected cards)
+
+2009-11-07 Borg Enders
+	- tweaked trickweighting
+	- tweaked Heuristics::say_no90
+	- added to annoncement consideration of any announcements of opposite team
+	- tweaked Heuristics::CalcHandValue
+	- tweaked Heuristics::best_winning_card
+
+2009-11-06 Diether Knof
+	- improved heuristic 'serve color trick'
+	- fixed bug in heuristic 'play trump'
+	- improved 'best winning card' (when a player has already thrown a color card)
+	- fixed bug in heuristic 'play pfund'
+
+2009-11-01 Diether Knof
+	- cards information heuristics: added negative check for double dolle
+	- choose pfund card: added small trump jacks before trump nine
+	- choose pfund card: a trump ace is also played, if the players behind can get the trick and the winnercard is below trump card limit
+
+2009-11-01 Borg Enders
+	- tweaked trickweighting
+
+2009-10-30 Diether Knof
+	- improved heuristic 'play trump': when the trick goes to the own team, play a low trump
+
+2009-10-25 Diether Knof
+	- improved card decision in virtual games: if the trick goes to the own team, select the highest cards when the weighting is the same
+	- fixed bug in cards information (recalcing when the hands are known)
+
+2009-10-24 Diether Knof
+	- fixed heuristic function 'lowest best trump card'
+
+2009-10-19 Borg Enders
+	- added modificator so that AI will play duty solo more often in the party end phase.
+
+2009-10-06 Diether Knof
+	- HandCard::is_special() now also tests for possible swines/hyperswines
+	- added check for trumplimit in heuristic 'start with low trump'
+
+2009-10-03 Diether Knof
+	- expanded the bug report, so the whole party is saved
+
+2009-09-30 Diether Knof
+	- bug fixes in party rounds (again) and duty solo round handling
+
+2009-09-29 Diether Knof
+	- fixed language update of combo box
+
+2009-09-28 Diether Knof
+	- created pad file
+	- fixed default difficulty changing to 'beginner' on player setup
+
+2009-09-27
+	--------------------------
+	- FreeDoko 0.7.7 (alpha) -
+	--------------------------
+
+2009-09-27 Diether Knof
+	- added md5sum to homepage
+
+2009-09-26 Diether Knof
+	- another fix on the party points
+	- updated default rules
+
+2009-09-25 Diether Knof
+	- fixed list of party points (wrong round-display with soli and bock games)
+
+2009-09-23 Diether Knof
+	- fixed crash: changing the cards while the ai was thinking
+	- fixed loading a finished party: no further game can be played
+
+2009-09-22 Diether Knof
+	- fixed bug with undetermined teams at the end of the game
+
+2009-09-19 Diether Knof
+	- added rule 'offer duty solo'
+	- fixed bug in gametree: modifier got too big because of bock multiplier
+
+2009-09-16 Diether Knof
+	- some fixes for duty soli
+	- added duty soli for ai
+
+2009-09-14 Diether Knof
+	- fixed respecting the settings for information windows
+	- some fixes for duty soli
+
+2009-09-13 Diether Knof
+	- expanded heuristic 'choose ace' for other then the startplayer
+	- further work on duty soli
+
+2009-09-12 Borg Enders
+	- fixed bug in solo decision in respect to fehl color consideration
+
+2009-09-09 Diether Knof
+	- partly fixed handling of bock rounds for future games
+
+2009-09-06 Diether Knof
+	- work on duty soli
+	- fixed bug in gametree: weighting of lost games
+
+2009-09-06 Borg Enders
+	- tweaked trickweighting
+
+2009-09-05 Diether Knof
+	- added aiconfig 'aggressive'
+
+2009-09-01 Diether Knof
+	- fixed bug: hyperswines in color solo
+	- fixed bug: genscher with 'reply' announcement
+
+2009-08-29 Diether Knof
+	- removed heuristic 'play worrie for partner', obsolete by 'play pfund before partner'
+	- fixed bug in cards information (poverty: returned trumpno)
+
+2009-08-29 Borg Enders
+	- tweaked calculation for decision to play single picture soli
+	- tweaked trickweighting to use dolle, swine, hyperswine more often as solo player
+
+2009-08-27 Borg Enders
+	- added rating to CalcHandValue if color trick goes to other player
+	- improved CalcHandValue further in respect to Contra player when considering to small number of queens for announcements
+
+2009-08-25 Borg Enders
+	- fixed a bug in make_announcement which caused to aggressive CONTRA and RE
+	- improved CalcHandValue to consider to small number of queens for announcements
+	- fixed problem in CalcHandValue where calculation for owning more trumps than anybody else was also applied against solo player
+	- added rating to CalcHandValue for limited number of trumps on hand
+	- added rating to CalcHandValue if trick is full and not won by at least own team
+
+2009-08-23 Diether Knof
+	- fixed bug in heuristic 'play worrie for partner'
+
+2009-08-22 Diether Knof
+	- fixed bugs in cards information (update at gamestart)
+	- fixed selection of reservation (poverty)
+	- fixed statistics display (bock special point)
+
+2009-08-20 Diether Knof
+	- fixed bug: cards information recalcing in the middle of a trick
+	- fixed bug: missing update of a hand in the virtual games
+	- updated todo list in manual
+
+2009-08-18 Diether Knof
+	- fixed team update in virtual games (when a club queen is played)
+	- fixed checking of gametype for swines announcement (lead to error in thrown richness)
+
+2009-08-16 Diether Knof
+	- fixed bug: combination swines, poverty and rule 'fox do not count'
+
+2009-08-16
+	---------------------------
+	- FreeDoko 0.7.6b (alpha) -
+	---------------------------
+
+2009-08-14 Diether Knof
+	- fixed bug: swines in solo
+	- fixed compilation bug
+
+2009-08-01
+	--------------------------
+	- FreeDoko 0.7.6 (alpha) -
+	--------------------------
+
+2009-07-31 Diether Knof
+	- updated cardset license informations (source code and homepage)
+
+2009-07-26 Borg Enders
+	- now also missing spade queens are considered for taking a poverty. (bugreport 063458 2009-07-19)
+
+2009-07-23 Diether Knof
+	- heuristic 'try for doppelkopf': added check for solo games
+
+2009-07-22 Diether Knof
+	- fixed bug in initialisation of the settings
+
+2009-07-01 Diether Knof
+	- updated install scripts
+
+2009-06-25 Diether Knof
+	- further translations update
+	- fixed broken link in developer installation
+	- added link to ubuntu guide on the homepage 
+
+2009-06-22 Diether Knof
+	- further translations update
+	- fixed bug in mouse cursor update in poverty shifting
+
+2009-06-21 Borg Enders
+	- fixed problem for announcements and serving aces (Bugreport 030055 2009-06-20)
+
+2009-06-14 Diether Knof
+	- fixed bug report '153705' (invalid game in virtual games due to wrong update of the cards information)
+
+2009-06-07 Diether Knof
+	- added further checks for cards information
+
+2009-06-02 Borg Enders
+	- fixed problems in Trickweighting with Reference Bugreports for release.
+
+2009-06-01 Diether Knof
+	- added overview of the cards to the cards information output
+
+2009-05-29 Diether Knof
+	- fixed wrapping in card suggestion window
+	- fixed bug in the estimation of the hands (considering of the weightings)
+
+2009-05-28 Diether Knof
+	- fixed bug when loading broken bug reports
+
+2009-05-16 Borg Enders
+	- improved heuristic::best_winning_card to consider still coming cards for trickpoint decision (fixed bugreport 224778_1 2009-05-04)
+
+2009-05-13 Diether Knof
+	- added cards information heuristic picture_solo_re_played_second_best_trump
+	- heuristic 'play low high': added check, that the opposite team still has trump to dras
+	- heuristic 'poverty special play pfund': added check for partner to be able to jab
+
+2009-05-10 Diether Knof
+	- improved error handling of saving parties, rules, settings, players and aiconfigs (see changelog from 2009-04-22 for party saving)
+	- a click in the table raises the information windows (workaround for broken window managers like MS-Windows)
+	- choose for color trick: added check for the opposite team to win the trick within the color (p.e. by the ace)
+
+2009-05-10 Borg Enders
+	- improved announcements NO90 for colors with out aces on hand to be more cautious (Bugreport 184642 2009-04-05)
+
+2009-05-04 Diether Knof
+	- auto detecting of a bug report in the command line (instead of a tournament file)
+
+2009-04-22 Diether Knof
+	- fixed bug in handling of broken party files
+	- party files are now saved first in a temporary file, then renamed (#2778384)
+	- the default party is loaded after handling of the command line options
+	- removed command line options for setting of the seed and the startplayer (conflicts with loading of a party)
+
+2009-04-20 Diether Knof
+	- fixed bug in heuristic "play for partner worries"
+
+2009-04-07 Borg Enders
+	- added weighting for usage of Diamond (Trump) Ten to Trickweighting (fixed reference: 126306)
+
+2009-04-06 Diether Knof
+	- split heuristic "start with color" in "start with low color" and "start with low trump"
+
+2009-04-05 Diether Knof
+	- fixed heuristic "let trick pass" (#2728946)
+	- fixed heuristic "play worrie for partner" (#2601242)
+
+2009-04-05 Borg Enders
+	- improved trickweighting for not overjabbing partner with last trick card (Bugreport 125461 2007-01-18)
+
+2009-04-04 Diether Knof
+	- fixed problems with character set
+
+2009-03-29 Diether Knof
+	- fixed bug in heuristic "let trick pass"
+	- some code cleanup
+	- added cards weighting heuristic "first player played pfund"
+	- fixed bugs in cards information
+
+2009-03-28 Borg Enders
+	- improved trichweigthing to check for some more modi if card wins trick (Bugreport 271358 2008-10-25)
+
+2009-03-22 Borg Enders
+	- improved trickweighting when trump is played which can not win trick (Bugreport 126306 2008-12-06)
+	- tweaked trickweighting (Bugreport 70732 2008-11-15)
+
+2009-03-21 Borg Enders
+	-Heuristics::jab_for_ace estimates success of ace in solo now (Bugreport 215334 2009-01-25)
+	- improved trickweighting when last card of trick is a high trump (Bugreport 156132 2009-03-14)
+
+2009-03-20 Borg Enders
+	- Heuristics::serve_color_trick is now also used if trick can not be won (Bugreport 000006 2009-03-14)
+	- Heuristics::make_announcement improved to consider marriage (Bugreport 39979_5 2009-03-19)
+
+2009-03-18 Diether Knof
+	- fixed comparison with hyperswine
+	- fixed bug in heuristic choose_for_color_trick
+
+2009-03-16 Diether Knof
+	- fixed bugs in HandCards (#2668301)
+	- fixed bugs in heuristics functions 'lowest_free_card' and 'choose_best_prefiltered_color_card' (#2677005)
+	- fixed update in cards information
+
+2009-03-08 Diether Knof
+	- fixed display of reply announcement in table
+	- fixed bug in cards information (information update)
+	- fixed bug in heuristc 'jab for ace'
+
+2009-03-07 Borg Enders
+	- replayed Bugreports
+	- improved best_winning_card
+
+2009-03-04 Diether Knof
+	- fixed bug in cards information (check of invalid game)
+	- added logos to the homepage
+
+2009-02-21 Diether Knof
+	- further improvements on hands estimation
+	- added rule 'throwing before solo'
+
+2009-02-20 Diether Knof
+	- fixed bug in hands estimation
+
+2009-02-18 Diether Knof
+	- new estimation of the hands
+
+2009-02-17 Diether Knof
+	- added code for weighted card list (for better estimation of hands)
+
+2009-02-16 Diether Knof
+	- fixed bug in cards information (tcolor counter)
+
+2009-02-15 Diether Knof
+	- fixed display of trickpoints, when the game is finished
+
+2009-02-12 Diether Knof
+	- further fix in winnerteam determination
+
+2009-02-11 Diether Knof
+	- fixed bug in heuristic 'choose pfund before player' (bug 2570661)
+
+2009-02-10 Diether Knof
+	- added informations of the tcolors to cards information
+
+2009-02-01 Diether Knof
+	- fixed counting for solo games
+	- fixed teamplay in 'gametree for team'
+	- further fix in winnerteam determination
+
+2009-01-31 Diether Knof
+	- fixed bug in announcement validation
+	- fixed bug in winnerteam determination
+	- fixed order of hand sorting and gamestatus change
+
+2009-01-27 Diether Knof
+	- fixed bug in ui (2531932)
+	- work on install-dev scripts for Windows
+
+2009-01-20 Diether Knof
+	- fixed bug in heuristic choose pfund before partner (2521771)
+	- reworked heuristics 'play highest color', 'create fehl'
+
+2009-01-18 Diether Knof
+	- fixed announcement according to the rules of the DDV
+	- added rule 'announcement strict limit'
+	- tested Windows install-dev scripts
+
+2009-01-12 Diether Knof
+	- 'update on demand' for the cards information (~50% less time)
+
+2009-01-10 Diether Knof
+	- some performance improvements (~5% less time)
+	- replaced aiconfig 'FAIRPLAYHANDS' by 'HANDS_KNOWN', 'FAIRPLAYTEAMS' by 'TEAMS_KNOWN' and added aiconfig 'ESTIMATED_HANDS'
+	- fixed bug in heuristic choose_for_color_trick
+	- replayed new heuristic bug reports
+
+2009-01-08 Diether Knof
+	- fixed bug in cards informations (the poverty player has trump in virtual games)
+
+2009-01-07 Diether Knof
+	- fixed bug in cards information heuristics
+
+2009-01-06 Diether Knof
+	- renamed heuristic 'play to marry' in 'play to get married' (for the bride)
+	- created new heuristic 'play to marry' (for the contra player)
+
+2009-01-05 Diether Knof
+	- reworked heuristic 'let trick pass'
+
+2009-01-04 Diether Knof
+	- removed Card::operator bool()
+	- set standard ai typ to 'profi'
+	- updated references
+
+2009-01-03 Borg Enders, Diether Knof
+	- activated prepared new heuristics
+	- reviewed cards information
+
+2009-01-02 Diether Knof
+	- fixed e-mail address in homepage
+	- generalized runtime handling
+	- cards information: club queens shall now only be distributed according to the team information
+
+2009-01-01 Diether Knof
+	- fixed bug in heuristic 'jab fox'
+	- fixed bug handling of cards information in virtual games
+	- improved 'serve trump trick': also use the heuristic, when the trick goes the ones team and the trumps are the of the same value
+	- updated copyright in the source code files
+
+2008-12-31 Borg Enders
+	- improved Heuristics::choose_for_color_trick top create fehl colros in reasonable situation
+	- prepared new Heuristic Heuristics::play_trump
+
+2008-12-29 Borg Enders
+	- improved Heuristics::jab_fox for undetermined marriage
+
+2008-12-23 Diether Knof
+	- fixed bug in cards information
+	- added test for runtime
+
+2008-12-22 Diether Knof
+	- fixed bug in cards information
+	- improved cards information: to distribute unknown cards, only take the weighting of the unkown ones in the cards information of the other players into account
+
+2008-12-22 Borg Enders
+	- prepared new heuristic: Heuristics::play_color_in_solo
+
+2008-12-21 Borg Enders
+	- prepared new heuristic: Heuristics::play_to_jab_later
+	- prepared new heuristic: Heuristics::poverty_special_offer_pfund
+	- fixed problem in Heuristics::play_for_partner_worries (and made small reworks)
+
+2008-12-14 Diether Knof
+	- fixed cards information for the poverty player (diamond ace)
+	- added cards information heuristic for poverty
+	- fixed display of poverty icon
+
+2008-12-14 Borg Enders
+	- Heuristics::play_low_high will no longer be used during undetermined marriage
+	- Heuristics::jab_for_ace is now only used with queen if trick is won or there are still some queens remaining on the hand
+	- improved Heuristics::play_low_high for usage of club queen
+
+2008-12-10 Diether Knof
+	- improved cards information heuristic 'served trump'
+	- fixed bug in king solo
+	- fixed swines announcement in a poverty
+	- fixed swines (but not hyperswines) display when all hands are shown
+	- bug report replay
+
+2008-12-10 Diether Knof
+	- implemented rule 'catch charlie only with diamond queen'
+	- improved cards information heuristics
+
+2008-12-08 Diether Knof
+	- added display of progress in virtual games
+	- fixed bug in Heuristics::best_winning_card()
+
+2008-12-07 Diether Knof
+	- added display of progress in virtual games
+	- fixed performance bug
+
+2008-12-06 Borg Enders
+	- fixed a bug in Heuristics::choose_pfund
+
+2008-12-02 Diether Knof
+	- cards information: cross-weighting
+	- cards information: take team information into account
+
+2008-11-30 Diether Knof
+	- fixed bug in Heuristics::best_winning_card()
+	- rescaled weighting in cards information
+
+2008-11-30 Borg Enders
+	- changed Heuristics::play_low_high to not use last queen for drawing trumps
+
+2008-11-26 Diether Knof
+	- fixed handling of announcement in bug report replay
+
+2008-11-25 Diether Knof
+	- improved cards information
+
+2008-11-23 Diether Knof
+	- fixed bug in Heuristics::best_winning_card()
+
+2008-11-22 Diether Knof
+	- cards information: new weighting heuristic for trumps in a picture solo
+	- fixed bug in 'Heuristics::lowest_free_card()'
+
+2008-11-21 Diether Knof
+	- bock support: added handling of solo games
+
+2008-11-17 Diether Knof
+	- added bock information in the ui
+
+2008-11-16 Diether Knof
+	- fixed manual announcement for hyperswines
+
+2008-11-16 Borg Enders
+	- improved heuristic jab_for_ace
+
+2008-11-15 Diether Knof
+	- added bock support (still missing: some information in the ui, solo support)
+
+2008-11-14 Diether Knof
+	- fixed cards information in a poverty, when the poverty player got back trumps (he now has enough color cards according to the back-shifted trumps)
+
+2008-11-12 Diether Knof
+	- fixed accepting selected marriage selector
+	- removed display of selected marriage selector when a marriage is not possible
+	- fixed display of startplayer when showing the gameinfo window
+
+2008-11-09 Diether Knof
+	- added statistics to the reference check
+
+2008-11-09 Diether Knof
+	- added reference check for directories
+
+2008-11-08 Diether Knof
+	- removed obsolete info-files
+
+2008-11-06 Diether Knof
+	- added swines/hyperswines button for solo games
+
+2008-11-02 Diether Knof
+	- further work on reference checks
+	- added desriptions for the steps needed to create a heuristic (see heuristics.cpp)
+
+2008-11-01 Diether Knof, Borg Enders
+	- replayed bug reports
+	- created new heuristics choose single ace, play best color card in game
+
+2008-10-31 Diether Knof
+	- fixed compilation bugs
+	- first work on references
+
+2008-10-26
+	--------------------------
+	- FreeDoko 0.7.5 (alpha) -
+	--------------------------
+
+2008-10-26 Diether Knof
+	- fixed Windows setup (shortcut, icon, uninstall)
+
+2008-10-18 Borg Enders
+	- improved Heuristics::choose_pfund_card
+
+2008-10-12 Borg Enders
+	- replayed bugreports
+
+2008-10-05 Borg Enders
+	- fixed bug in AI where number of color cards where counted wrongly when ai cehcked which solo to play
+
+2008-09-28 Diether Knof
+	- added soundfiles to installation
+	- fixed party loading: random seed and startplayer are now supported
+
+2008-09-28 Borg Enders
+	- replayed Bugreports
+	- improved poverty_re_trump_color_trick_high
+
+2008-09-27 Diether Knof, Borg Enders
+	- improved trickweighting
+
+2008-09-27 Diether Knof
+	- updated translations
+	- joined heuristics 'choose for color trick' and 'choose for color trick marriage'
+
+2008-09-26 Borg Enders
+	- replayed Bugreports
+	- run release test for 28, 26 and 25 games
+	
+2008-09-23 Diether Knof
+	- updated most translations
+	- when throwing, the sound is played while the gametype window is shown
+
+2008-09-21 Diether Knof
+	- fixed handling with nonexisting sound file
+
+2008-09-21 Borg Enders
+	- improved trickweighting for showing TEAM::RE
+
+2008-09-20 Florian Sundermann
+	- Splitted "ask partner for worries" heuristic to "play for partner worries" and "play worrie for partner"
+
+2008-09-13 Borg Enders
+	- improved Heuristic::best_winning_card, restrictions for using dolle, swine and hyperswine lowered
+	- improved trickweighting for showing TEAM::RE
+	- replayed Bugreports
+	
+2008-09-04 Borg Enders
+	- improved trickweighting
+
+2008-07-14 Diether Knof
+	- fixed assignment of winner point
+
+2008-07-13 Diether Knof
+	- 'best winning card': a club queen is preferred, when the own team is not known (before: when no announcement was made)
+
+2008-07-07 Diether Knof
+	- fixed display of tricks when the game is finished
+
+2008-07-05 Diether Knof
+	- replaced "no 120 won" specialpoint with "won" specialpoint
+	- fixed default reservation in bug report replay
+	- quick'n dirty support for zsh under Windows
+	- fixed crash (poverty partner searched in normal game)
+
+2008-07-04 Diether Knof
+	- fixed new error in game summary (see 2008-06-03)
+
+2008-07-01 Diether Knof
+	- fixed crash in CalcHandValue in poverty shifting
+
+2008-06-30 Diether Knof
+	- replaced documentation pictures with ones with free cards
+
+2008-06-22 Diether Knof
+	- game finished: instead of the cards, the tricks are shown
+
+2008-06-21 Diether Knof
+	- game review: added scrolling with scroll wheel
+
+2008-06-15 Diether Knof
+	- fixed team display in redistributed game
+
+2008-06-14 Diether Knof
+	- added 'hyperswines' button in swines information window
+	- fixed loading of card back 
+
+2008-06-12 Diether Knof
+	- integrated windows icon in the exe file
+
+2008-06-03 Diether Knof
+	- fixed game summary: won against no 90
+
+2008-05-29 Diether Knof
+	- fixed two crashes
+	- replaced "file selectors" with new "file chooser dialogs"
+
+2008-05-26 Diether Knof
+	- created autotest.bat
+	- replayed bug reports
+	- game info dialogs stay in front of the main window
+	- begun replacing old Gtk::FileSelection with Gtk::FileChooserDialog
+	- changed bug reports name
+
+2008-05-25 Diether Knof
+	- fixed bug in virtual games
+
+2008-05-24 Borg Enders, Diether Knof
+	- fixed some bug reports (Heuristics)
+
+2008-05-01 Borg Enders
+	- improved MarriageSelector Ai::get_Marriage() to use special colors for determination trick not as often as before
+	- improved Heuristics::CalcHandValue for normal games
+
+2008-04-24 Diether Knof
+	- fixed problems with g++-3.4.0 (except sigc++)
+
+2008-04-20 Borg Enders
+	- improved CalcHandValue (Announcements) for poverty
+	
+2008-04-06 Borg Enders
+	- changed Heuristics::make_announcement to emphasize hands with lot of trumps.
+
+2008-03-21 Borg Enders
+	- improved CalcHandValue (Announcements) for single picture soli and calculation of fehl colors in general
+
+2008-02-25 Diether Knof
+	- fixed sorting of game actions
+	- fixed bug: closing of genscher window
+	- added overview of the sounds to the documentation
+
+2008-02-24 Diether Knof
+	- increased area in which a full trick is closed
+
+2008-02-10 Diether Knof
+	- accepted patch from bug report 1853005
+	- the full trick and gameinfo dialogs are now closed with the right mouse button in the table
+
+2008-02-09 Diether Knof
+	- finished sound support for Microsoft Windows
+	- fixed memory bugs
+
+2008-01-27 Diether Knof
+	- begin with sound support for Microsoft Windows (PlaySound())
+
+2008-01-19 Diether Knof
+	- added creation of shortcuts to the windows developer installer
+
+2008-01-07 Borg Enders
+	- fixed bug in Trickweighting for poverty
+
+2008-01-06 Borg Enders
+	- imporved trickweighting 
+
+2007-12-16 Florian Sundermann
+	- new heuristic ask_partner_for_worries
+
+2007-12-06 Borg Enders
+	- fixed problem in trickweighting with calculation for possible_swine applied to swine.
+
+2007-12-05 Borg Enders
+	- improved trickweighting for poverty
+
+2007-12-03 Borg Enders
+	- Heuristics::make_reply improved
+
+2007-09-30 Diether Knof
+	- heuristic 'choose pfund': fixed bug for jabbed color trick
+
+2007-09-22 Diether Knof
+	- fixed package name in debian menu 
+
+2007-09-18 Diether Knof
+	- updated english translation
+
+2007-09-17 Diether Knof
+	- simplified special point translation
+
+2007-09-16 Diether Knof
+	- fixed display of re/contra in the special point list
+
+2007-09-10 Diether Knof
+	- fixed bug in cards information heuristic 'served color': trump cards are now ignored
+
+2007-09-09 Diether Knof
+	- fixed fast play in poverty shifting
+	- added author to heuristics
+	- checked heuristic 'start_with_color'
+
+2007-09-02 Borg Enders
+	- improved Heuristic::CalcHandValue used for Announcements for Team::RE
+
+2007-08-27 Diether Knof
+	- joined debian packages for the translations
+
+2007-08-25 Florian Sundermann
+	- new heuristic start_with_color
+
+2007-08-04 Borg Enders
+	- improved Heuristics::choose_pfund_card to not use trump ace if partner is start player and already winning the trick.
+
+2007-07-28 Borg Enders
+	- improved Ai::get_Marriage()
+	- changed NO90 and NO60 announcements for AI
+	- improved trickweighting
+
+2007-07-17 Diether Knof
+	- heuristic 'catch fox': fixed bug
+	- further work on game synchronization
+
+2007-07-16 Diether Knof
+	- CardsInformation heuristic 'no color ace': points are dependent on the number of cards in the color (because of dollen and rule 'without nines')
+	- improved manual page searching
+
+2007-07-13 Diether Knof
+	- added reordering of the gameplay actions in a full trick
+	- fixed some documentation (doxygen)
+
+2007-07-07 Borg Enders
+	- improved Trickweighting
+
+2007-07-04 Diether Knof
+	- added setting 'automatic savings'
+
+2007-07-03 Diether Knof
+	- cards information heuristic: fixed 'no swines' for not normal games
+	- cards information heuristic: added 'no hyperswines'
+
+2007-07-02 Diether Knof
+	- cards information heuristic: added 'no silent marriage'
+
+2007-07-01 Borg Enders
+	- improved Trickweighting
+
+2007-06-27 Diether Knof
+	- bug fix: preferences dialog (wrong adjusting of the thread value)
+	- reworked WVirtualGames class
+	- heuristic: improved 'serve color trick'
+	- heuristic: improved 'play color for partner ace'
+	- network: added simple game synchronization
+
+2007-06-26 Diether Knof
+	- added setting for threads (still unstable)
+	- reworked Weighting class for thread support
+	- reworked Gametree class
+
+2007-06-20 Diether Knof
+	- fixed heuristic 'serve color trick' for first color run with information
+	- fixed bug in 'Heuristics::CalcHandValue' (check for running game)
+	- added break before the shifting in the poverty in order to see the number of cards
+	- replayed bug reports
+
+2007-06-10 Borg Enders	
+	- replayed bugreports
+
+2007-06-05 Diether Knof
+	- bug fix: swines in poverty
+
+2007-06-04 Diether Knof
+	- further work on Windows developer installer scripts
+
+2007-06-01 Diether Knof
+	- fixed thread code (compilation)
+
+2007-05-24 Borg Enders
+	- improved Heuristics::jab_fox
+
+2007-05-22 Borg Enders
+	- improved Heuristics::jab_for_ace for trump trick.
+
+2007-05-21 Borg Enders
+	- replayed bugreports
+
+2007-05-16 Diether Knof
+	- fixed translation syntax bug
+	- added check for GTKMM-defines
+
+2007-05-14 Borg Enders
+	- improved Heuristics::make_announcement
+	- improved Heuristics::make_announcement for soli
+
+2007-05-13 Borg Enders
+	- improved Heuristics::CalcHandValue for aces and being start player
+
+2007-05-12 Diether Knof
+	- bug fix: invalid cardset preference
+
+2007-05-12 Borg Enders
+	- Heuristics::choose_pfund_card improved for poverty
+	- Heuristics::CalcHandValue imporved for large number of trumps on hand.
+	- Heuristics::poverty_re_play_trump improved
+
+2007-05-07 Diether Knof
+	- tested pending bug reports
+	- reworked sound selection
+
+2007-05-06 Borg Enders
+	- new heuristic let_trick_pass
+	- set Aiconfig::LIMIT_THROW_FEHL to 8
+	- replayed bugreports
+
+2007-04-12 Diether Knof
+	- fixed invalid game bug in virtual games
+	- fixed cards information: multiple players get enough cards for all
+
+2007-04-08 Borg Enders
+	- improved Heuristics::poverty_re_play_trump for situation where partner has still trump.
+
+2007-04-07 Borg Enders
+	- improved Heuristics::best_winning_card for poverty
+
+2007-04-06 Borg Enders
+	- improved  Ai::checksolo for picture soli
+	- added Heuristics::choose_for_color_trick_marriage
+
+2007-04-02 Diether Knof
+	- CardsInformation: added information of the poverty cards
+
+2007-03-31 Borg Enders
+	- improved TrickWeighting::modi for poverty
+
+2007-03-25 Borg Enders
+	- fixed pessimistic assumption of trick winner for first color run in Heuristics::best_winning_card
+
+2007-03-19 Diether Knof
+	- improved 'serve_*_trick'
+	- fixed html errors in the homepage
+
+2007-03-18 Diether Knof
+	- work on sound: alut library
+	- reservation: swines and hyperswines are now sorted according to the reservation
+
+2007-03-17 Borg Enders
+	- improved Heuristics::choose_pfund_card for poverty
+	- Heuristics::choose_pfund for soli
+
+2007-03-14 Diether Knof
+	- poverty: the shifted cards are sorted when accepted
+	- fixed reservation window: handling of poverty and swines
+	- fixed reservation window: swines+hyperswines: sensitivity
+
+2007-03-12 Diether Knof
+	- fixed announcement for silent marriage
+
+2007-03-10 Borg Enders
+	- fixed bug in Card Heuristics::best_winning_card
+
+2007-02-24 Borg Enders
+	- limited saving of Dolle to last tricks of game in Heuristics::best_winning_card
+
+2007-02-22 Diether Knof
+	- added rule 'announcement first trick thirty points only re/contra'
+	- replayed bug reports
+
+2007-02-12 Wolfgang Menzel
+	- fixed german text
+
+2007-02-10 Diether Knof
+	- added solo check for heuristics
+	- added signal bindings for default signal handlers
+
+2007-02-08 Diether Knof
+	- fixed cards information bug: club queen in silent marriage
+
+2007-02-06 Diether Knof
+	- improved heuristic 'serve color trick' (especially for meatless)
+
+2007-02-05 Diether Knof
+	- added pause for gameinfo dialog (single player)
+	- added rule 'announcement first trick thirty points in marriage'
+	- improved responseness
+
+2007-02-04 Diether Knof
+	- added rule 'throw with richness'
+	- fixed bug with infinite round
+
+2007-02-02 Andreas Oberritter
+	- patches for port to the 'Internet Tablet'
+
+2007-02-02 Diether Knof
+	- Windows installation script uses some Visual Basic Script
+
+2007-01-31 Diether Knof
+	- added rules 'swines in poverty' and 'hyperswines in poverty'
+	- fixed swines in poverty shifting (again)
+	- added seed and startplayer to game summary
+
+2007-01-25 Diether Knof
+	- fixed bug: swines and hyperswines not in solo games
+	- fixed white announcement icons
+
+2007-01-24 Diether Knof
+	- fixed bug: hyperswines in solo games (announcement at game start)
+
+2007-01-23 Diether Knof
+	- fixed bug with rule 'no swines and hyperswines joint' (could announce hyperswines when swines were not announced)
+
+2007-01-22 Diether Knof
+	- added icon.png and logo.png to the debian packages
+
+2007-01-21 Diether Knof
+	- added md5sum check to Windows developer installation batch file
+
+2007-01-18
+	--------------------------
+	- FreeDoko 0.7.4 (alpha) -
+	--------------------------
+
+2007-01-18 Diether Knof
+	- reworked windows installation scripts
+	- updated bugs list in the manual
+
+2007-01-16 Diether Knof
+	- reworked debian installation files
+
+2007-01-15 Diether Knof
+	- fixed two compilation bugs
+
+2007-01-14 Diether Knof
+	- fixed bug: announcement reset in genscher
+
+2007-01-11 Diether Knof
+	- updated installation documentation
+	- added documentation for -dev.Setup.exe
+
+2007-01-10 Diether Knof
+	- changed symbols and rules pictures in the manual to free cardset xskat/french
+	- fixed dependency of duty solo (points or rounds must be limited)
+	- fixed sensitivity of 'reset' button in the rules
+
+2007-01-09 Yves Caubarrus
+	- updated french translation
+
+2007-01-08 Diether Knof
+	- fixed bug: poverty with swines
+
+2007-01-06 Borg Enders
+	- bugreports replayed and classified
+	- fixed bug in Heuristics::serve_trump_trick
+
+2007-01-03 Diether Knof
+	- the ui is now initialized after parsing the command line options
+
+2007-01-02 Diether Knof
+	- reworked developer installation batch file
+	- fixed name update for the bug report replay window
+	- the logo is not hardcoded anymore, loaded in png-format
+	- fixed bug in cards information
+
+2006-12-29 Diether Knof
+	- improved locating of graphic files
+
+2006-12-28 Borg Enders, Diether Knof
+	- ai improvements
+	- network testing
+
+2006-12-27 Diether Knof
+	- fixed bug in poverty shifting (wrong number of cards shifted back)
+	- added framework for sound support
+	- added innocard logo
+
+2006-12-26 Borg Enders
+	- improved TrickWeighting::modi
+
+2006-12-25 Borg Enders
+	- improved TrickWeighting::modi
+
+2006-12-24 Borg Enders
+	- improved TrickWeighting::modi
+	- improved Heuristics::best_winning_card
+
+2006-12-22 Diether Knof
+	- fixed bug in heuristic 'grab trick'
+	- created cardset InnoCard
+
+2006-12-20 Diether Knof
+	- created flag for automatic bug reports
+
+2006-12-19 Diether Knof
+	- fixed event handling while the KI is thinking
+	- created Windows installer for the developer version
+
+2006-12-17 Diether Knof
+	- fixed error in cards information (invalid estimated hands)
+	- improved make targets for release
+
+2006-12-17 Borg Enders
+	- pre-release test
+
+2006-12-16 Diether Knof
+	- reworked path handling in settings (p.e. searching for cardset)
+
+2006-12-15 Diether Knof
+	- created DOS-batch file for automatic downloading and creating the freedoko program
+	- improved announcement icons
+	- fixed heuristic assignment bug
+
+2006-12-14 Diether Knof
+	- fixed display of extrapoint 'dolle jabs dolle'
+	- automatic creating of 'Makefile.local' from the template
+	- automatic creating of the logo from the free one
+
+2006-12-12 Diether Knof
+	- created different columns for the homepage
+	- added Elite promotion texts to the english homepage
+	- now using variables for the directories for the setup
+
+2006-12-11 Borg Enders
+	- fixed bug Heuristics::choose_ace
+
+2006-12-11 Diether Knof
+	- fixed heuristics settings for solo games, contra
+	- fixed winnerteam information in heuristics
+	- created ui for the themes
+	- fixed translation 'de-alt' (rules)
+	- fixed bug in icons display (rules window)
+	- update english translation
+
+2006-12-09 Borg Enders
+	- replayed bugreports and re-rated some
+	- improved Heuristics::jab_for_ace for avoiding usage of dollen and swine if wining of trick is not secured
+	- removed some bugreports with accetable, even not perfect behaviour of ai in preparation of next release
+	- Heuristics::best_winning_card improved
+	- Heuristics::poverty_re_trump_color_trick_high fixed to not be apllicable if only partner is behind
+
+2006-12-08 Diether Knof
+	- added theme support for the settings
+
+2006-12-05 Diether Knof
+	- improved cards information: 3 can have with 2 fox and 2 remaining cards leads to must have 1 fox
+	- fixed bug in virtual games: in the recursion the hands were not updated according to the cards information
+
+2006-12-03 Diether Knof
+	- fixed bug with announcement replies
+
+2006-12-02 Borg Enders
+	- improved Heuristics::jab_fox for correct usage of Dolle
+	- fixed bug in Heuristics::play_to_marry regarding playing dollen and hyperswines for first foreign
+	- fixed bug in Heuristics::choose_pfund (where pfund was chosen for last card, even when trick was won by opposite team)
+
+2006-11-25 Borg Enders
+	- choose_pfund improved to be not used for undetermined marriage
+
+2006-11-23 Diether Knof
+	- the aiconfig 'standard defensive' is taken from the hardcoded values
+	- created free icon with the xskat cardset
+
+2006-11-19 Borg Enders
+	- Ai::poverty_cards_change improved
+	- Heuristics::best_winning_card improved for situations where other can no longer win trick
+	- Heuristics::choose_pfund for color soli contra players activated
+	- Heuristics::choose_pfund_before_partner fixed where pfund was played even when partner had already served the current trick
+
+2006-11-15 Diether Knof
+	- fixed assertion bug in CalcHandValue (running game was not checked)
+
+2006-11-12 Borg Enders, Diether Knof
+	- improved trickweighting
+
+2006-11-11 Diether Knof
+	- fixed bug in gametree
+
+2006-11-07 Diether Knof
+	- replaced cardset 'Altenburg' with the free 'xskat' cardsets in the repository
+	- fixed bug in bug report replay window
+
+2006-11-06 Diether Knof
+	- added cardset 'Altenburg/german'
+	- the game only asks for announcements, if the player can still announce
+
+2006-11-01 Borg Enders
+	- TrickWeighting::modi improved
+	- checkSolo for color soli improved
+
+2006-10-31 Borg Enders
+	- Heuristics::best_winning_card_single_picture bug fixed
+	- Heuristics::best_winning_card_triple_picture bug fixed
+	- Heuristics::best_winning_card_double_picture bug fixed 
+
+2006-10-30 Diether Knof
+	- improved card counter runtime (~15% reduction)
+	- fixed program flow while waiting for the human
+
+2006-10-29 Diether Knof
+	- added runtime counter
+	- improved cards information runtime (~25% reduction)
+	- further work on network games concept
+
+2006-10-28 Diether Knof
+	- added button for adjusting the rules when switching to play 'without nines'
+	- added button 'announcement reply' to gameinfo dialog
+	- begun concept for network games
+
+2006-10-26 Borg Enders
+	- checkSolo for color soli improved
+
+2006-10-26 Diether Knof
+	- fixed bug in the handling of the working directory while compiling
+
+2006-10-25 Borg Enders
+	- checkSolo for single picture soli improved
+
+2006-10-23 Diether Knof
+	- reworked game information windows (one window instead of many)
+	- fixed bug in card suggestion
+	- improved license display on the homepage
+
+2006-10-21 Borg Enders
+	- Removed already fixed Bugreports
+	- Heuristics::CalcHandValue improved to take numberOftrumps on hand as total number into account
+	- New conditonal announcement debugging begun (ANNOUNCE_DEBUG)
+	- Heuristics::say_no90 improved
+	- Heuristics::CalcHandValue takes in Soli now team into account
+	- Heuristics::make_reply improved
+	- TrickWeighting::modi takes now jabbed colors into account 
+	- Ai::poverty_take_accept takes now missing dollen and missing club queens into account
+
+2006-10-15 Diether Knof
+	- added error window for missing cardset
+
+2006-10-14 Diether Knof
+	- fixed bug in cards information (virtual games problem)
+	- fixed bug in heuristic 'jab fox'
+
+2006-10-13 Diether Knof
+	- fixed/improved cards information when a hand is fully estimated
+	- replaced aiconfig 'last trick with heuristic' with 'last tricks without heuristics'
+	- improved cards information heuristic 'last player jabbed trump'
+
+2006-10-12 Diether Knof
+	- improved ai in marriage determination color trick
+	- added support for a working directory while compiling
+
+2006-10-11 Diether Knof
+	- added check for license expiration of the altenburg cardset
+	- always remember own cards
+	- fixed missing swines announcement in gametree (rule: second swine)
+	- gametree also takes the trick points in finished games into account
+
+2006-10-11 Borg Enders
+	- Bugreports replayed and already fixed reports deleted
+	- Heuristics::best_winning_card improved
+	- Heuristics::jab_fox improved (takes now card of partner into account)
+
+2006-10-10 Diether Knof
+	- fixed 'choose ace' to prefer unplayed colors
+
+2006-10-08 Diether Knof
+	- added card information heuristic 'color trick jabbed first run'
+	- improved cards information of the club queen (normal games and marriage)
+
+2006-10-07 Diether Knof
+	- fixed bug in cards information
+
+2006-10-06 Diether Knof
+	- automatic bug report creation for lost poverty games and bad announcements
+	- fixed bug in heuristic 'serve trump trick'
+	- fixed bugs in CalcHandValue
+
+2006-10-04 Borg Enders
+	- Bugreports replayed and already fixed reports deleted
+	- Heuristics::poverty_re_play_trump improved
+	- Ai::poverty_cards_change for shifting of trumps reworked
+	- Heuristics::say_no0, say_no30, say_no60, say_no90 take announcement of opposite team into account
+	- Ai handles now early announcements better
+	- fixed double counting of not annouced own swines in Heuristics::CalcHandValue
+	- Heuristics::say_no0 fine tuned
+	- Heuristics::say_no60 fine tuned
+	- Heuristics::CalcHandValue takes now jabbed colors into account
+	- Heuristics::say_no90 fine tuned
+	- Heuristics::CalcHandValue takes now Genscher into account
+
+2006-10-04 Diether Knof
+	- fixed bug in color runs
+
+2006-10-03 Borg Enders
+	- Heuristics::choose_pfund improved
+	- Heuristics::jab_for_ace improved
+	- Heuristics::best_winning_card prefers now Club::QUEEN if there is no announcement of player
+
+2006-09-29 Diether Knof
+	- fixed problem with latin1 encoded bug reports
+
+2006-09-29 Borg Enders
+	- improved Heuristics::jab_fox
+
+2006-09-27 Diether Knof
+	- fixed bug in heuristic 'draw trump (partner backhand)'
+	- added color for a reservation of a player
+	- when changing to the 'general' reservations, the reservations are resetted
+	- the game info window can still be seen when the game is finished
+	- in network games, network players have an appended star
+	- fixed bug in loading a bug report
+	- fixed team display bug in marriages
+	- fixed swines sorting in solo games during the reservation
+	- fixed bug in heuristic 'serve color trick'
+	- added documentation page for the bug report
+
+2006-09-27 Borg Enders, Diether Knof
+	- network testing
+
+2006-09-23 Borg Enders
+	- Heuristics::play_to_marry improved for MARRIAGE_SELECTOR::FIRST_FOREIGN and MARRIAGE_SELECTOR::FIRST_COLOR
+	- TrickWeighting::modi improved
+	- Heuristics::jab_fox improved
+
+2006-09-22 Diether Knof
+	- fixed sorting: unannounced hyperswines after swines announcement
+
+2006-09-26 Diether Knof
+	- important cards are remembered always, independent of 'remember tricks no'
+	- improved party points graph
+
+2006-09-25 Diether Knof
+	- added support for limited points
+
+2006-09-24 Diether Knof
+	- command line argument are handled immediately
+	- fixed & improved cards information (solves bug report asserts/87863)
+	- some bug fixes (poverty games)
+	- fixed graph display bug
+	- the button in the game finished window now shows 'end of party'
+	- added game status 'game start' (between reservation and play)
+
+2006-09-22 Diether Knof
+	- fixed sorting: unannounced hyperswines after swines announcement
+
+2006-09-21 Diether Knof
+	- syncronized trick closing in network games
+	- the main window does not get bigger than the screen
+
+2006-09-18 Diether Knof
+	- fixed some documentation bugs (for doxygen)
+	- fixed bug in gametree (modi_sum)
+	- improved/simplified heuristic 'serve color trick'
+	- fixed team information display
+
+2006-09-18 Borg Enders
+	- files changelog and ideas integrated into doxygen
+
+2006-09-17 Diether Knof
+	- added cript 'create_standard_aiconfigs'
+
+2006-09-16 Borg Enders
+	- TrickWeighting::modi improved
+	- Heuristics::choose_pfund improved
+	- replayed bugreports
+
+2006-09-15 Borg Enders
+	- small improvement to Heuristics::play_to_marry
+
+2006-09-13 Diether Knof
+	- fixed bug in CardsInformation::remaining(Color)
+	- added heuristic 'try color for partner'
+	- fixed bug in heuristic 'play color for partner'
+	- added 'trick taken' gametype, removed 'trick closed'
+	- bools are saved in 'true'/'false'-format
+
+2006-09-11 Diether Knof
+	- fixed bug in 'CardsInformation::Heuristics::served_color'
+	- 'CardsInformation::Heuristics::no_color_ace' now checks for played cards of the color
+
+2006-09-09 Borg Enders
+	- improved Ai::get_Marriage 
+
+2006-09-08 Diether Knof
+	- fixed display bug (ai hands information in second last trick)
+	- small improvements in team information heuristics
+
+2006-09-05 Diether Knof
+	- added workaround for 'throwing trick closed' error
+	- added cards information heuristics for the last player
+	- added '--directories' command line option
+
+2006-09-02 Diether Knof
+	- simplified heuristic 'draw trump'
+	- added license information to the pictures with the cardset 'Altenburg'
+	- replaced 'Ai::playedcard()' with 'CardsInformation::remaining()'
+	- reworked 'Heuristics::choose_best_fehl()'
+
+2006-09-02 Borg Enders
+	- added calculation for undetermined Marriage to TrickWeighting::modi
+	- improved Trickweighting::modi for poverty
+	- improved Trickweighting::modi for possible swines & HyperSwines
+	- improved Trickweighting::modi for serving of trumps
+
+2006-08-31 Diether Knof
+	- added heuristic 'partner backhand draw trump'
+	- added 'Game::isspecial(HandCard)'
+
+2006-08-30 Diether Knof
+	- added heuristic 'play color for partner ace'
+
+2006-08-29 Diether Knof
+	- moved ai difficulty button to the front player page
+	- improved automatic actions in the bug report replay
+	- fixed bug (Virtual_games only one valid card found)
+	- replayed bug reports
+
+2006-08-28 Diether Knof
+	- changed ai to using estimated hands (most surely not stable)
+
+2006-08-27 Borg Enders
+	- improved TrickWeighting for playing of high cards, when trick is not won with this card
+	- improved TrickWeighting for picture soli
+
+2006-08-26 Borg Enders
+	- improved TrickWeighting::backhand for meatless
+	- improved TrickWeighting for forcing other player to use high trumps.
+	- Heuristics::create_fehl disabled for marriages till teams are found.
+	- Heuristics::play_low_high disabled for not solo players in soli
+	- TrickWeighting::modi usage of color nines increased a little bit
+	
+2006-08-21 Diether Knof
+	- added heuristics 'grab trick' and 'play color for partner'
+	- appended heuristic 'grab trick' to standard.offensive
+	- set 'first card fehl creation' to '0' on profi players
+	- fixed bug in heuristic 'trump color trick high'
+
+2006-08-20 Diether Knof
+	- made Erika offensive by default
+	- fixed poverty bug (but still need new heuristic)
+
+2006-08-19 Borg Enders
+	- improved TrickWeighting::backhand for poverty
+	- replaced comparison of winnercard with played card through player nocomparison in Trickweighting avoiding ambigous situations, when played card is eqaul to winnercard
+	- Ai::calculate_meatless_color improved
+
+2006-08-18 Diether Knof
+	- reworked, fixed and improved heuristic 'choose ace'
+
+2006-08-17 Diether Knof
+	- removed database from bug report
+	- players: if only slightly modified, only the difference to a standard aitype is saved
+
+2006-08-16 Diether Knof
+	- fixed silent marriage counting bug
+	- added in-game determination of a silent marriage
+	- fixed startplayer display in reservation
+
+2006-08-14 Diether Knof
+	- documented make targets (use 'make help')
+	- moved seed statistics output in seperate functino
+	- added pdf files to manual archive
+
+2006-08-10
+	--------------------------
+	- FreeDoko 0.7.3 (alpha) -
+	--------------------------
+
+2006-08-09 Diether Knof
+	- fixed party points sum display (Bug #1536551)
+
+2006-08-07 Diether Knof
+	- added heuristics to bug report
+	- Bugreports classified
+	- improved thread support
+
+2006-08-05 Borg Enders
+	- Bugreports classified
+
+2006-08-03 Diether Knof
+	- added thread support for gametree
+
+2006-08-01 Diether Knof
+	- fixed genscher problem in network games
+
+2006-07-30 Diether Knof
+	- added announcement of swines/hyperswines in gametree
+
+2006-07-29 Diether Knof
+	- added network support for poverty games
+
+2006-07-27 Yves Caubarrus
+	- updated french translation
+
+2006-07-27 Diether Knof
+	- some bug fixes
+
+2006-07-26 Diether Knof
+	- added command line option for showing the defines of the compilation
+
+2006-07-24 Diether Knof
+	- checking of bug reports
+
+2006-07-23 Diether Knof
+	- new format for the bug report
+
+2006-07-21 Diether Knof
+	- automatic replay of the bug report
+
+2006-07-20 Diether Knof
+	- added game summary to the bug report window
+	- rework of the bug report replay
+	- added window for opening the online help
+
+2006-07-19 Diether Knof
+	- added rule 'announcement till full trick'
+
+2006-07-18 Diether Knof
+	- fixes on bug report replay
+
+2006-07-17 Diether Knof
+	- removed counter from network protocol (tcp takes care of 'data reliably and in-order')
+	- bug report replay: automatic setting of the reservation
+
+2006-07-15 Borg Enders
+	- Ai::calculate_meatless_color improved
+	- trickweigthing improved
+
+2006-07-12 Diether Knof
+	- added intern counter for bug reports
+	- fixed bug in game points
+	- fixed bug in showing of swines announcement
+	- fixed bug in hyperswines announcement in a poverty
+
+2006-07-10 Diether Knof
+	- added gtkmm-dll files of gtkmm version 2.6 (for Microsoft Windows 98)
+	- begun with better hand estimation algorithm
+
+2006-07-08 Borg Enders
+	- tested version (20 Bugreports created)
+
+2006-07-05 Diether Knof
+	- added license informations to the dll files
+
+2006-07-04 Diether Knof
+	- improved trickweighting
+	- improved heuristics documentation
+
+2006-07-01 Borg Enders
+	-  Heuristics::best_winning_card improved
+
+2006-06-24 Borg Enders
+	- Added comments for Heuristic description parser
+
+2006-06-23 Diether Knof
+	- added network support for the command line (server and connection)
+
+2006-06-21 Diether Knof
+	- added CardsInformation::higher_card_exists (see BugReport 57381)
+
+2006-06-19 Diether Knof
+	- added current time to network log (linux)
+
+2006-06-07 Diether Knof
+	- split the fast play into subparts
+	- fixed error resulted from a connection hangup during a game
+
+2006-06-03 Borg Enders
+	- Virtual games improved
+	- trickweigthing improved
+
+2006-06-01 Diether Knof
+	- fixed cards information bug in poverty games
+	- added support forgenerationg heuristics description from the code documentation
+	- documented poverty heuristics in the code
+	- fixed solo games translations in the language 'de-alt'
+
+2006-05-30 Diether Knof
+	- fixed compiling bug (thanks to Toni)
+
+2006-05-29 Diether Knof, Borg Enders
+	- Trickweighting improved for fox and second color run
+	- Heuristics::choose_for_color_trick improved for poverty
+	- Heuristics::poverty_re_trump_color_trick_high improved
+	- Heuristics::poverty_best_winning_card added
+
+2006-05-22 Diether Knof
+	- begun support with estimated hands (according to the gameplay)
+
+2006-05-21 Borg Enders
+	- Heuristics::best_winning_card improved for poverty
+	- Heuristics::choose_pfund_card improved (blank aces are now also trump cards)
+	- Ai::get_Marriage improved first trick of specific now only when marriage serves
+
+2006-05-14 Borg Enders
+	- Bugreports replayed
+	- Heuristics::best_winning_card handles now cards found via betterPointsOptimize correct
+	- Heuristics::choose_pfund_card improved for marriage owner
+	- Heuristics::choose_for_color_trick improved for poverty
+	- Heuristics::best_winning_card improved for poverty
+
+2006-05-04 Diether Knof
+	- fixed bug in network information display
+	- improved Makefiles (just take the needed object files)
+
+2006-05-03 Diether Knof
+	- fixed bug with 'unreal' heuristics
+
+2006-04-28 Diether Knof
+	- added rating 'linear reverse'
+
+2006-04-27 Diether Knof
+	- added gametree variation 'gametree for team'
+	- bug reports replayed
+	- fixed bugs in party round calculating
+
+2006-04-24 Diether Knof
+	- some heuristics for the poverty
+
+2006-04-20 Diether Knof
+	- manual: ai configuration
+
+2006-04-19 Diether Knof
+	- further work on network code
+	- fixed latest time for announcement
+	- fixed bug with shifted swines
+
+2006-04-13 Diether Knof
+	- work on the manual
+
+2006-04-12 Diether Knof
+	- fixed detecting of specialpoint 'no 90 won' (#1468559)
+	- added screenshots to settings documentation
+
+2006-04-10 Diether Knof
+	- some bug fixes
+
+2006-04-09 Borg Enders
+	- Heuristics::choose_pfund_card improved
+
+2006-04-07 Yves Caubarrus
+	- updated french translation
+
+2006-04-06 Diether Knof
+	- fixed 'annoucement in table' bug (#1465651)
+
+2006-04-04 Diether Knof
+	- added rating support to 'gametree'
+	- added tab navigation to the rules config manual page
+
+2006-04-01 Borg Enders
+	- ChoosePfund improved
+
+2006-03-31 Diether Knof
+	- added graph for the party points
+
+2006-03-30 Diether Knof
+	- work on network code
+	  simple games (without announcements and so) should work mostly
+
+2006-03-28 Diether Knof
+	- added description for the heuristics
+
+2006-03-27 Diether Knof
+	- simplified poverty replay (right click to auto fill the cards)
+
+2006-03-26 Diether Knof
+	- added support for descriptions of the heuristics
+
+2006-03-25 Diether Knof
+	- improved user interface for the heuristics
+
+2006-03-23 Diether Knof
+	- when (de)iconifying the main window, all windows are (de)iconifyed
+	- fullscreen support (C-f)
+
+2006-03-21 Diether Knof
+	- new rule 'announcement contra doubles against re'
+	  (feature request 1400595)
+	- new rule 'announcement first trick thirty points only first'
+	  (feature request 1422366)
+	- new rule 'throw with nines and kings'
+	  (feature request 1380101)
+
+2006-03-20 Borg Enders, Diether Knof
+	- replayed bug reports
+
+2006-03-19 Diether Knof
+	- fixed team display
+
+2006-03-17 Diether Knof
+	- added rule 'poverty fox shift open'
+	- updated rules in the german manual
+
+2006-03-16 Diether Knof
+	- fixed auto saving bug
+	- rule 'poverty fox shift extra'
+	  (feature request '1380101')
+
+2006-03-14 Diether Knof
+	- full support of free heuristics order
+
+2006-03-13 Diether Knof
+	- work on free heuristics order
+
+2006-03-12 Borg Enders
+	- Bugreports replayed
+	- TrickWeighting improved
+
+2006-03-09 Diether Knof
+	- bug reports replayed
+	- added description to Version
+
+2006-03-08 Diether Knof
+	- added a check, whether the ostype was correctly determined
+
+2006-03-06 Diether Knof
+	- fixed drag'n'drop for bug reports
+	- fixed bug in poverty gameplay
+
+2006-03-05 Diether Knof
+	- added rating 'linear'
+	- fixed bug in heuristic 'retry color'
+	- added support for environment variables 'FREEDOKO_DATA_DIRECTORY' and 'FREEDOKO_HELP_DIRECTORY'
+
+2006-03-04 Borg Enders
+	- Bugreports replayed
+	- Makefile.rules fixed for windows
+	- TrickWeighting improved
+
+2006-03-01 Diether Knof
+	- added credits to 'about' window
+	- fixed bug in the translation system
+	- added support for rule 'poverty fox do not count'
+	  (feature request '1380101')
+
+2006-02-28 Diether Knof
+	- added support for different ratings in 'monte carlo'
+
+2006-02-27 Diether Knof
+	- fixed specialpoint behaviour in a marriage
+	- fixed genscher in a marriage
+
+2006-02-26 Borg Enders
+	- Bugreports replayed
+	- Heuristics::say_no0 improved
+
+2006-02-25 Diether Knof
+	- some fixes/improvements on the Makefile
+
+2006-02-21 Borg Enders
+	- Bugreports replayed
+	- Heuristics::best_winning_card improved
+	- try_for_doppelkopf improved
+
+2006-02-14 Diether Knof
+	- added licence information of the 'Spielkartenfabrik Altenburg GmbH' to the homepage and the manual
+	- added gentoo ports information to the credits
+	- added translation support for arbitrary throwing nines/kings
+
+2006-02-12 Diether Knof
+	- added link to gentoo ebuild (thanks to Rafael Kolless and Dietrich Heise)
+
+2006-02-11 Borg Enders
+	- Bugreports replayed (all incoming classified)
+
+2006-02-10 Diether Knof
+	- begun with support for arbitrary number for throwing nines/kings
+	  (feature request '1010326')
+
+2006-02-10 Yves Caubarrus
+	- french translation
+
+2006-02-09
+	---------------------------
+	- FreeDoko 0.7.2b (alpha) -
+	---------------------------
+
+2006-02-07 Diether Knof
+	- fixed bug: simultan hyperswines and swines announcement in virtual games
+
+2006-02-06 Diether Knof
+	- removed pdf links in the homepage
+
+2006-01-30 Diether Knof
+	- fixed bug in batch file
+	- added credits for ports
+
+2006-01-25 Diether Knof
+	- critical bug fixed
+
+2006-01-23
+	--------------------------
+	- FreeDoko 0.7.2 (alpha) -
+	--------------------------
+
+2006-01-22 Diether Knof
+	- improvements on the setup files
+
+2006-01-21 Diether Knof
+	- automatic language selection for the MS-Windows installer
+
+2006-01-20 Diether Knof
+	- fixed bug in team information heuristics
+	- updated english translation
+
+2006-01-18 Diether Knof
+	- fixed bug that made it possible to change the players during a tournament
+	- fixed bug in team information
+
+2006-01-16 Diether Knof
+	- updated setup files
+
+2006-01-13 Borg Enders
+	- Bugreports replayed
+	- (Heuristics::ChoosePfundCard improved, but a new function in Cardsinformation, would be better, see 2do-comment, see also Bugreport 57381).
+	- best_winning_card improved to prefer club queens before spade queens
+
+2006-01-10 Diether Knof
+	- some documentation cleanup and reorganization
+
+2006-01-06 Diether Knof
+	- fixed table rotation bugs
+
+2006-01-05 Diether Knof
+	- fixed syntax errors in the html files
+
+2006-01-04 Diether Knof
+	- added new arrow graphics for the party settings
+
+2006-01-02 Diether Knof
+	- finished support for predefined ai configurations
+
+2005-12-30 Diether Knof
+	- ai configuration: added graphical configuration for the card configuration
+
+2005-12-29 Diether Knof
+	- switched to gtkmm 2.4
+	- completed documentation for compiling under Microsoft Windows
+
+2005-12-28 Borg Enders, Diether Knof
+	- modified trickweighting for jabbed color tricks
+	- fixed team determination for virtual games
+	- generated standard ais
+	- new heuristic 'retry color'
+	- new heuristic 'poverty player play pfund'
+	- improved order of heuristics
+
+2005-12-24 Borg Enders
+	- Bugreports replayed
+	- trickweighting improved for fox captured by own team
+	- trickweighting improved for playing dolle, swine hyperswine only when trick is won by own team.
+	- trickweighting for meatless improved
+
+2005-12-21 Diether Knof
+	- begun support for hardcoded aiconfigs with different difficult levels
+
+2005-12-20 Diether Knof
+	- begun documentation for compiling FreeDoko under Microsoft Windows
+
+2005-12-18 Diether Knof
+	- bug reports replayed
+
+2005-12-14 Diether Knof
+	- manual todo: added links to the feature requests
+
+2005-12-13 Diether Knof
+	- removed support for DokoProf
+	- split listener from network server
+
+2005-12-12 Diether Knof
+	- fixed display bug of the team information
+
+2005-12-11 Borg Enders
+	- Bugreports replayed
+	- Heuristics::best_winning_card improved for both dollen on one hand
+	- Heuristics::best_winning_card bug fixed which allowed small cards, also only queens should be chosen.
+
+2005-12-06 Diether Knof
+	- added message about the network support
+	- fixed bug in ai configuration display
+
+2005-12-04 Borg Enders
+	- Bugreports replayed
+	- Heuristics::choose_pfund_card improved for koehler
+
+2005-12-03 Diether Knof
+	- improved support for DokoProf (rules and chatting)
+	- added switching of players
+	- added network players skeleton
+	- documented the FreeDoko network protocol
+
+2005-12-02 Diether Knof
+	- added rotation to the table
+	- added rules differences table for the network
+	- added network support for rules
+
+2005-12-01 Diether Knof
+	- homepage: added links to the official pages
+	- added english description for changing the language to 'english'
+
+2005-11-27 Diether Knof
+	- created script for updating the homepage for a new version
+
+2005-11-27 Borg Enders
+	- Bugreports replayed
+	- Heuristics::choose_pfund_card regards now genscher for playing fox
+
+2005-11-24 Diether Knof
+	- fixed team information in an undetermined marriage
+	- cleaned subversion repository
+
+2005-11-22 Diether Knof
+	- created the file 'Makefile.local.template'
+
+2005-11-19 Borg Enders
+	- created subversion repository on gna.org
+
+2005-11-16 Diether Knof
+	- added network traffic counter
+	- added direct sender entry for network traffic
+
+2005-11-15 Diether Knof
+	- fixed two bugs in the loading at program start
+
+2005-11-14 Diether Knof
+	- fixed bug of 'fox highest trump'
+
+2005-11-12
+	--------------------------
+	- FreeDoko 0.7.1 (alpha) -
+	--------------------------
+
+2005-11-06 Diether Knof
+	- reorganized network code
+
+2005-10-30 Diether Knof
+	- fixed bug in swines (Rule: swines only second)
+	- improved team information (takes special points into account)
+	- improvement of the network code (order in the messages)
+
+2005-10-28 Diether Knof
+	- added drag-n-drop for bug reports
+
+2005-10-26 Diether Knof
+	- improved information handling in 'team information' (team of self)
+
+2005-10-23 Diether Knof
+	- fixed bug in cards information (problem with the forgetting of tricks)
+	- added static default names for the players
+	- fixed bug in new team information
+
+2005-10-20 Diether Knof
+	- switched to g++-4.0 (Linux)
+
+2005-10-03 Borg Enders
+	- small refactoring in heuristics.cpp: trumpInTrick
+	- bug reports replayed
+
+2005-09-30 Diether Knof
+	- fixed bug in cards information
+
+2005-09-29 Diether Knof
+	- added translation 'altdeutsch' (german card names, 'Dullen')
+
+2005-09-27 Diether Knof
+	- added game actions to the bug report replay window
+
+2005-09-26 Diether Knof
+	- fixed bug in team information
+	- bug report replay: further work on file loading
+
+2005-09-25 Borg Enders
+	- code rework of heuristics.cpp continued (some refactoring still to do)
+	- Bug in Heuristics::say_no0 fixed
+	- Bugs in Heuristics::say_no30, Heuristics::say_no60, Heuristics::say_no90 fixed
+	
+2005-09-24 Borg Enders
+	- code rework of heuristics.cpp continued
+	- small bug in Heuristics::CalcHandValue fixed
+	  
+2005-09-21 Diether Knof
+	- reworked homepage
+
+2005-09-12 Diether Knof
+	- moved team informations from 'Player' to 'Ai'
+
+2005-09-08 Diether Knof
+	- removed setting 'show special points in trickpile'
+
+2005-09-07 Borg Enders
+	- Heuristics.cpp code rework continued
+	- Heuristics::best_winning_card improved
+	- Bug fixed in Heuristics::choose_for_color_trick
+
+2005-09-04 Borg Enders
+	- Heuristics.cpp code rework started
+	- Bug fixed in Heuristics::play_to_marry
+
+2005-09-03 Diether Knof
+	- documented the ideas of 'CardsInformation' and 'TeamInformation'
+
+2005-08-31 Diether Knof
+	- further work on new team information code
+	- added some team information heuristics
+
+2005-08-30 Diether Knof
+	- begun with new team information code
+
+2005-08-28 Borg Enders
+	- Heuristics::choose_for_color_trick improved
+	- Heuristics::best_winning_card improved
+
+2005-08-28 Diether Knof
+	- fixed bug in cards information
+
+2005-08-27 Diether Knof
+	- added rule entries for bock round (but not implemented bock)
+
+2005-08-22
+	--------------------------
+	- FreeDoko 0.7.0 (alpha) -
+	--------------------------
+
+2005-08-22
+	- improved cards information
+
+2005-08-21
+	- added settings 'show ai information hands' and 'show ai information teams'
+
+2005-08-17 Diether Knof
+	- when the public data directory does not exists the current directory is taken
+
+2005-08-15 Diether Knof
+	- fixed bug: swines in poverty
+	- fixed bug: 'swines only second' when the player has brought his fox home
+	- fixed bug in cards information
+
+2005-08-14 Diether Knof
+	- improved 'first start' and 'new version' window
+	- added information window for the changing to 'without nines'
+
+2005-08-11 Diether Knof
+	- fixed bug: cards information in connection with 'swines only second'
+
+2005-08-09 Diether Knof
+	- created mutator for the rules (testing gets easier)
+
+2005-08-08 Diether Knof
+	- fixed bug: cards information: forget tricks
+
+2005-08-07 Diether Knof
+	- fixed bug: specialpoints with unknown teams
+
+2005-08-06 Borg Enders, Diether Knof
+	- announcement improvements
+	- improvements of the ai
+
+2005-08-04 Diether Knof
+	- translations reworked
+
+2005-08-01 Diether Knof
+	- changed encoding of textfiles to utf8
+
+2005-07-31 Borg Enders
+	- Heuristics::CalcHandValue improved
+	- WMonteCarlo::best_card improved
+
+2005-07-24 Borg Enders, Diether Knof
+	- improved marriage gameplay
+	- improved poverty accepting
+
+2005-07-23 Diether Knof
+	- further work on network code (connection and interface)
+	- connection between two FreeDoko-games
+
+2005-07-21 Diether Knof
+	- added rule 'swines and hyperswines joint'
+	- games without nines: hyperswines are now the trump kings
+
+2005-07-19 Diether Knof
+	- further network code (including outgoing chatter)
+
+2005-07-17 Diether Knof
+	- begin with network code
+
+2005-07-16 Diether Knof
+	- begin with UI for network
+
+2005-07-10 Diether Knof
+	- fixed weighting bug in undetermined marriage
+	- fixed bug in cards information: when three players do not have a color the remaining player must have all cards if the color
+
+2005-07-09 Borg Enders
+	- trickweighting improved
+
+2005-07-07 Diether Knof
+	- fixed bug: 'announcement in table' was always shown, independent of the setting
+	- fixed bug in cards information: added test that every card is distributed
+
+2005-07-03 Borg Enders
+	- testing
+	- new Heuristic getTrockForKeepingAnnouncement(Trick const& t, HeuristicInterface const& hi )
+
+2005-06-30
+	--------------------------
+	- FreeDoko 0.6.9 (alpha) -
+	--------------------------
+
+2005-06-26 Borg Enders, Diether Knof
+	- improved announcement replies
+	- begun with network code
+
+2005-06-24 Diether Knof
+	- fixed bug in gametree
+
+2005-06-23 Diether Knof
+	- fixed bug: playing cards with the keyboard
+
+2005-06-21 Diether Knof
+	- fixed swines bug in poverty
+
+2005-06-19 Borg Enders
+	- testing
+	- trickweighting improved for single picture soli
+
+2005-06-13 Diether Knof
+	- the card suggestion window stays open
+
+2005-06-11 Diether Knof
+	- changed windows installer to 'NSIS'
+
+2005-06-07 Diether Knof
+	- fixed bug with 'cardsinformation' code
+
+2005-06-04 Borg Enders
+	- bugreports replayed
+	- ai initilaizes state for play low high now better
+
+2005-05-28 Diether Knof
+	- added support for 'number of remembered tricks'
+
+2005-05-25 Diether Knof
+	- added rule 'dollen first over second with swines'
+
+2005-05-15 Diether Knof
+	- added setting 'announce in table'
+
+2005-05-14 Diether Knof, Borg Enders
+	- bug fixes
+
+2005-05-06 Diether Knof
+	- an announcement can be made directly on the table (mouse of the announcement icon)
+
+2005-05-05 Diether Knof
+	- workaround for a bug in the Windows version (Compiler bug?)
+	- finished code for saving and loading of parties
+	- fixed bug: extrapoint heart trick (now all cards have to be heart)
+	- fixed bug in gametree
+
+2005-05-02 Diether Knof
+	- fixed bug: wrong counting of 'double fox last trick' and so
+	- in a sologame the team icons of the contra players are not shown anymore
+	- fixed bug: party points in a lost solo, counting type 'plus-minus'
+	- added party summary window (is shown when a party is loaded)
+
+2005-04-28 Borg Enders
+	- tested and generated some bugreports
+	- trickweighting improved for serving of dollen, swines, hyperswines	
+	- play_low_high improved
+
+2005-04-25 Diether Knof
+	- loading of parties (partly)
+
+2005-04-21 Diether Knof
+	- bug fix in Gametree
+	- saving of the party
+
+2005-04-19 Diether Knof
+	- bug fixes in 'CardsInformation'
+
+2005-04-17 Diether Knof
+	- further work on 'CardsInformation'
+
+2005-04-15 Diether Knof
+	- created class 'CardsInformation' in order to replace 'Ai::handofplayer()'
+	- add 'Player::cards_to_play()'
+
+2005-04-14 Diether Knof
+	- reworked rules config documentation
+
+2005-04-11
+	--------------------------
+	- FreeDoko 0.6.8 (alpha) -
+	--------------------------
+
+2005-04-09 Diether Knof
+	- added workaround in gametree for problems with the hand in virtual games
+
+2005-04-04 Diether Knof
+	- reworked 'basistypes.cpp'
+	- bug fix in gametree
+
+2005-04-03 Borg Enders, Diether Knof
+	- bug fixes
+
+2005-04-01 Diether Knof
+	- improved release and cd creating code
+
+2005-03-30 Diether Knof
+	- fixed bug in the ai (counting of the own cards in virtual games)
+
+2005-03-19 Borg Enders
+	- Bugreports replayed
+	- heuristics::best_winning_card tries now also to optimize the points of the card to play
+	- w_virtual_games takes now the smallest card, if it finds only one valid game and would lose the card in this game
+
+2005-03-18 Diether Knof
+	- added chat subsystem and a chat window (C-c)
+
+2005-03-17 Diether Knof
+	- added extra check for invalid games
+	- added extra check in the poverty
+
+2005-03-14 Diether Knof
+	- by default only the left mouse button leads to an action (before every button)
+
+2005-03-12 Borg Enders
+	- Bugreports replayed
+	- heuristics::best_winning_card tries now also to optimize the points of the card to play
+	- w_virtual_games takes now the smallest card, if it finds only one valid game and would lose the card in this game
+
+2005-03-06 Borg Enders, Diether Knof
+	- bug fixes
+
+2005-03-05 Borg Enders
+	- Bugreports replayed
+
+2005-03-02 Diether Knof
+	- added menu item 'end party'
+
+2005-02-28 Diether Knof
+	- right-click on the hand now plays the suggested card
+	- fixed bug: winner in game when both have announced 'no 120' and both has got 120 points. Then contra wins the game (before noone has one the game)
+
+2005-02-27 Diether Knof
+	- bug report replay: begun with loading the whole file at once
+
+2005-02-26 Borg Enders
+	- Bugreports replayed
+	- Heuristics::jab_for_ace takes now playersposition in account before jabbing.
+	- Heuristics::best_winning_card for trump tricks improved.
+
+2005-02-26 Diether Knof
+	- fixed bug (segmentation fault after starting a new game when one should play a card)
+	- added simple information window for bug report replays
+
+2005-02-15 Diether Knof
+	- fixed bug (clicking too fast on the own cards could lead to a segmentation fault)
+
+2005-02-14 Diether Knof
+	- fixed bug in counting in the case where no team has won
+	- fixed bug 'specialpoint hearttrick'
+
+2005-01-27 Diether Knof
+	- fixed bug of the poverty cards:
+	  the shifted cards could be seen when a previous poverty was rejected
+
+2005-01-25 Diether Knof
+	- improved gametree by cutting dominated branches
+
+2005-01-21 Diether Knof
+	- added heuristic 'serve trump trick'
+	- in a bug report replay the card for the human is automatically
+	  suggested from the bug report
+
+2005-01-20 Diether Knof
+	- fixed bug in monte carlo:
+	  monte carlo did take the dummy ai for the games, since that ai no
+	  longer takes the card at random, I added a new ai AiRandom for that
+	  purpose.
+
+2005-01-19 Diether Knof
+	- fixed bug in the ai:
+	  when in a poverty the cards shifted back were not subtracted from 'playedcards'
+	- the last heuristic is now saved also by virtual players
+
+2005-01-18 Diether Knof
+	- fixed bug in the specialpoints (closes bug #1095153)
+
+2005-01-17 Diether Knof
+	- added class 'HandCard' which represents a card that belongs to a hand (and so to a player)
+	- replaced Card with HandCard whereever it needs further information than the color and the value
+
+2005-01-17 Diether Knof
+	- improved emphasizing of the valid cards
+
+2005-01-14 Diether Knof
+	- improved card suggestion (among other the suggestion is only calculated once)
+	- a card can now be played while the ai is thinking for the suggestion
+	- The changing of the game status is now made by exceptions.
+	  For that I created a thrower class for the UI (since gtkmm does not support exceptions)
+
+2005-01-13 Diether Knof
+	- a card suggestion now also emphasizes the card in the hand
+	- with automatic card suggestion the card suggestion window is not shown any more
+
+2005-01-12 Diether Knof
+	- fixed gametree bug 'no valid game found'
+	- improved heuristic 'serve color trick'
+
+2005-01-11 Diether Knof
+	- bug reports for gametree
+
+2005-01-07 Diether Knof
+	- added card weightings to game info window
+
+2005-01-06 Diether Knof
+	- when the party is finished the table shows the points made by the players
+
+2005-01-05 Diether Knof
+	- added class for saving the actions in the game
+	- added game info window
+	  since it gives team information and shows all tricks it is deactivated in the release
+	- fixed bug in game review (the wrong cards were removed from the hands)
+
+2005-01-04 Diether Knof
+	- added party finished window
+
+2005-01-03 Diether Knof
+	- improved loading of players
+	- added rule 'counting type'
+
+2004-12-31 Borg Enders
+	- Bugreports replayed
+
+2004-12-29 Borg Enders
+	- bug in Heuristics::choose_ace fixed 	  	
+
+2004-12-28 Borg Enders
+	- trickweighting improved
+	- Heuristics::choose_pfund_card improved
+
+2004-12-27 Borg Enders
+	- Bugreports replayed and classified
+
+2004-12-26 Borg Enders
+	- trickweighting improved
+
+2004-12-20
+	---------------------------
+	- FreeDoko 0.6.7b (alpha) -
+	---------------------------
+
+2004-12-19 Diether Knof
+	- fixed assertion bug with soloplayer (when starting a new game)
+	- fixed random seed bug in party settings
+	- fixed bug in the preferences (keys did not work)
+	- Microsoft Windows XP: hopefully now I get the correct username from the registry
+
+2004-12-16
+	--------------------------
+	- FreeDoko 0.6.7 (alpha) -
+	--------------------------
+
+2004-12-15 Diether Knof
+	- added card selection by [1-9abc]
+
+2004-12-14 Borg Enders
+	- heuristic jab_fox improved
+	- heuristic best_winning_card improved
+	- heuristic choose_for_color_trick improved
+
+2004-12-14 Diether Knof
+	- added setting 'show special points in trickpiles'
+	- added command line arguments for seed and startplayer
+
+2004-12-12 Borg Enders
+	- monteCarlo now sets the teams at the beginning of each game calculation and takes not the teams which appear in the simulated game.
+
+2004-11-29 Diether Knof
+	- added current trick number to the top of the bug report
+	- split the future limit to the single tricks
+
+2004-11-28 Borg Enders
+	- color_runs are now calculated correct again by ai.
+	- heuristics::choose_for_color_trick improved
+	
+2004-11-21 Diether Knof
+	- the aitype can now be set for each trick seperately
+
+2004-11-20 Borg Enders
+	- best_winning card improved, heart ten will be now used earlier if there are swines or hyper_swines
+	- bug fixed were ai would always choose pfunds for by by own teamed jabbed colors when playing last card of trick regardless of trick winner
+	- played_card will be actualized earlier
+
+2004-11-20 Diether Knof
+	- added game points and party points to the game overview
+	- clicking on a trick in the trickpile shows that trick (as long as the rules allow it)
+	- the main window has now a minimum size of three times the cards height
+
+2004-11-18 Diether Knof
+	- improved party points table
+
+2004-11-15 Diether Knof
+	- added a button to the party points overview for selecting whether the points shall be summed up
+
+2004-11-14 Diether Knof
+	- added colors to the party points
+
+2004-11-13 Diether Knof
+	- replaced 'Gamepoints' with 'GameSummary'
+
+2004-11-11 Diether Knof
+	- further work on the game summary
+
+2004-11-06 Borg Enders, Diether Knof
+	- added busy cursor
+	- fixed bug: gamestatus changing while the ai was thinking
+
+2004-10-31 Diether Knof
+	- reworked 'rule.cpp'
+
+2004-10-28 Diether Knof
+	- removed game status 'GAME_GENSCHER', 'GAME_SHOW_LAST_TRICK', 'GAME_SHOW_GAMETYPE'
+	- reworked file 'party.cpp'
+	- added rounds to the party
+
+2004-10-27 Diether Knof
+	- the 'game finished' dialog now keeps the position over the games
+
+2004-10-26 Diether Knof
+	- fixed sensitivity bug in the player configuration dialog
+
+2004-10-25 Diether Knof
+	- fixed errors for g++-3.4 support
+	- changed to new card selection routine of the ai
+
+2004-10-23 Borg Enders
+	- bugreports replayed
+	- initializiation of play_low_high slightly improved
+	- heuristic::choose_for_color_trick improved
+	- now will be pfunds of different color also counted as jabbed
+	- heuristics::choose_pfund_card plays now a fox at first color_runs
+	
+2004-10-11 Diether Knof
+	- added class 'GameSummary'
+	  it is needed later for saving/loading parties
+
+2004-10-08 Diether Knof
+	- Hand: added a reference to the player the hand belongs to
+
+2004-10-07 Diether Knof
+	- fixed bugs in the announcement menu
+	- changed the trickvector in 'Game' in a vector of pointers to tricks
+	- added a self-check for 'Game', 'Trick' and 'Player'
+
+2004-10-05 Diether Knof
+	- the special points are now showed in the trickpiles
+	- in 'Trick::specialpoints()': skipped the case when the winnerplayer is in the same team as the player the specialpoint is of
+	- the valid cards can be emphasized
+	- added button for updating the translation (only non-release)
+
+2004-10-04 Diether Knof
+	- added number to 'Trick' (for determining the last trick)
+	- added trickpile to 'Player'
+
+2004-10-02 Diether Knof
+	- game review
+
+2004-09-25 Borg Enders
+	- ai::nextcard_new picture_soli solo-player corrected
+	
+2004-09-25
+	--------------------------
+	- FreeDoko 0.6.6 (alpha) -
+	--------------------------
+
+2004-09-25 Diether Knof
+	- fixed bug: navigation in the last trick
+
+2004-09-23 Diether Knof
+	- fixed swines announcement bug when asking a card hint
+	- fixed bug with 'lustsoloplayer leads'
+
+2004-09-22 Diether Knof
+	- fixed 'low-high' heuristic state problem
+
+2004-09-20 Borg Enders
+	- ai::nextcard_new map creation corrected
+	
+2004-09-18 Borg Enders
+	- bugreports replayed
+	- heuristitics::jab_fox improved
+	
+2004-09-03 Diether Knof
+	- fixed bug in heuristic 'jab fox'
+	- united swines and hyperswines information dialogs
+
+2004-08-30 Diether Knof
+	- new card distribution algorithm
+
+2004-08-29 Diether Knof
+	- added a changelog history in the 'help' menu
+
+2004-08-28 Borg Enders, Diether Knof
+	- improved some heuristics ('jab for fox', 'choose pfund', 'jab for ace')
+	- improved 'Ai::update_played_cards()' for poverty games
+	- begun with new heuristics handling
+	- improved the ui layout
+
+2004-08-26 Diether Knof
+	- added menu items 'swines' and 'hyperswines' in the 'announcements' menu
+	- swines handling in solo games
+
+2004-08-24 Diether Knof
+	- reworked swines handling (because of problems with the rule 'only second swine')
+	  till now: automatic handling but in solo games
+
+2004-08-22 Borg Enders
+	- Bugreports replayed	
+	- trickweighting improved
+	- debug-output for soli in ai::nextcard* improved
+
+2004-08-22 Diether Knof
+	- removed 'VERSION' from 'constants.h' because of problems with SuSE
+	- 'game finished' window is now hidden when starting a new party
+
+2004-08-21 Borg Enders
+	- Bugreports replayed	
+	- heuristics::CalcHandValue improved
+	- trickweighting for poverty-Player improved
+	
+
+2004-08-18 Diether Knof
+	- Rule::valid_colors(), Rule::valid_values(), Rule::valid_cards()
+	- fixed ai bug in games without nines
+	- new heuristic 'serve color trick'
+
+2004-08-17 Diether Knof
+	- Game::is_last_trick()
+	- fixed bug with swines, rule 'only second' (Bug #1002953)
+	- Hand::containes(Hand) for testing the generated hand from the ai
+
+2004-08-12 Diether Knof
+	- the gameinfo windows now keep the old position (workaround for problem with Gtk)
+
+2004-08-11 Diether Knof
+	- 'Game::swines_announcement_valid' and 'Game::hyperswines_announcement_valid'
+
+2004-08-09 Diether Knof
+	- keys: 'p' and 'r' in the party settings window: show players/rules
+	- layout of the players configuration is (almost) the old one
+
+2004-08-08 Diether Knof
+	- icons for the rules-notebook
+	- reset buttons (rules, preferences) gets insensitive when nothing has to be resetted
+
+2004-07-31 Borg Enders
+	- Bugreports replayed 
+	- ai announces now swines, when playing it, and announcemnt is not demanded at start of game
+	- heuristics::say_no90 improved
+
+2004-07-19 Diether Knof
+	- changed layout for the player configuration
+
+2004-07-19 Diether Knof
+	- further debian packages:
+	  - freedoko-all
+	  - freedoko
+	  - freedoko-binary
+	  - freedoko-manual-de
+	  - freedoko-manual-en
+	- fixed bug 128373
+	- changed default aiconfig to 'trusting' and 'fairplayhands'
+	- during startup some default cardsets are searched if the one of the
+resource file is not found
+
+2004-07-19 Diether Knof
+	- added support for groups in the statistics
+	- added support for finer debian packages
+	  till now: - freedoko-data	(meta package)
+		    - freedoko-translation-de
+		    - freedoko-translation-en
+		    - freedoko-backgrounds
+		    - freedoko-cardsets-xskat
+		    - freedoko-cardsets-pysol
+		    - freedoko-cardsets-kdecarddecks
+
+2004-07-18 Diether Knof
+	- saving and loading for the players database
+	- split type 'Aiconfig::Heuristic' from 'Aiconfig::TypeBool'
+	- activated database for release
+	- mouse cursor changing for poverty
+
+2004-07-13 Diether Knof
+	- created window for the players database
+
+2004-07-10 Borg Enders
+	- Bugreports replayed 
+	- bug fixed: ai chooses now in meatless solo after playing one color again a new color
+	- heuristics::say_no90 for solo games improved
+
+2004-07-10 Diether Knof
+	- updated genscher selection
+
+2004-07-06 Diether Knof
+	- simplyfied the 'party settings' dialog
+	- changed layout for the players
+	- bugfix: loading the aiconfig
+
+2004-07-05 Diether Knof
+	- changed layout for the rules
+
+2004-07-03 Diether Knof
+	- some documentation: operation in german:
+	  - start
+	  - party settings
+	- removed setting 'card invalid delay'
+
+2004-06-28
+	---------------------------
+	- FreeDoko 0.6.5b (alpha) -
+	---------------------------
+
+2004-06-28 Diether Knof
+	- buxfix: translation for window 'show last trick'
+	- class Version: added support for patch-characters
+
+2004-06-24
+	--------------------------
+	- FreeDoko 0.6.5 (alpha) -
+	--------------------------
+
+2004-06-24 Diether Knof
+	- fixed bug in translation object handling
+	- fixed some misspellings in the english translation
+
+2004-06-23 Diether Knof
+	- added support for gtkmm 2.4 (see 'doc/de/LIESMICH.gtkmm_2.4')
+
+2004-06-22 Rainer D�rntge
+	- added support for compiling with cygwin
+
+2004-06-21 Diether Knof
+	- added support for compiling windows binary under linux (using mingw32)
+	  still errors because of auto import (Gtk::TreeViewColumn)
+	  For testing: 'export OSTYPE=Linux_to_Windows'
+	- the mouse cursor now shows whether a card is valid for playing
+
+2004-06-20 Diether Knof
+	- improved Makefiles: using target '.PHONY' and using the gcc to create dependency files (http://make.paulandlesley.org/autodep.html)
+	- fixed some bugs in poverty replay
+
+2004-06-20 Borg Enders
+	- bugreports replayed
+	- Double Karlchens are now counted correct (bugreport.273378)
+	- ai checks now for jabbed club queen in not already full tricks (bugreport.191824)
+	- Heuristics::choose_ace improved (bugreport.4639)
+	- bug in Heuristics::best_winning_card fixed (bugreport.256063)
+	- bug in Heuristics::choose_best_fehl fixed (bugreport.212431)	
+
+2004-06-18 Diether Knof
+	- translation part finished but the column headers
+
+2004-06-12 Diether Knof
+	- rewrote translation part; special characters are supported now
+
+2004-06-04 Thomas Gellekum
+	- patches for FreeBSD support
+
+2004-06-04 Diether Knof
+	- fixed bug in party points (when no team has one no points were shown)
+	- removed gtk part (because of the changing of 'Language' to 'Translator')
+
+2004-06-01
+	--------------------------
+	- FreeDoko 0.6.4 (alpha) -
+	--------------------------
+
+2004-05-31 Diether Knof
+	- added automatic showing of card suggestion
+	- added heuristic 'only valid card' for explanation in the card suggestion
+
+2004-05-29 Borg Enders, Diether Knof
+	- fixed team information bug in trickweighting
+	- added special point 'Doppelkopf' for a poverty
+
+2004-05-28 Diether Knof
+	- added support for announcement reply in winnerteam determination
+
+2004-05-25 Diether Knof
+	- updated teaminfo for silent marriage
+
+2004-05-22 Diether Knof
+	- fixed gamepoints for replying
+	- added button 'show party points' in the game finished window
+	- changing of the name now applies to the game summaries and the party points, also
+	- new translation system with recursive translation (to be tested...)
+
+2004-05-22 Borg Enders
+	- Bugreports replayed
+	- Heuristics::choose_for_color_trick for marriage improved
+	- trickweigthing::modi for Marriage improved
+	- Heuristics::calc_hand_value takes now the game.trick_current into account for determination of fehl colors
+
+2004-05-21 Borg Enders
+	- Bugreports replayed
+	- heuristics::choose_pfund_card improved
+	- game::player_previous implemented
+	- trickweigthing::backhand bug fixed
+	- Heuristics::best_winning_card improved
+	- trickweigthing::modi improved 
+
+2004-05-20 Diether Knof
+	- seperated cards order from the hands
+	- when a poverty has been denied by all player, the shifted cards are shown
+	- made (most of) the windows 'keep' the old position
+
+2004-05-18 Diether Knof
+	- updated team information in announcement reply
+
+2004-05-17 Diether Knof
+	- reworked script 'create_icons'; it now uses imagemagick
+
+2004-05-15 Borg Enders
+	- bugreports replayed
+	- heuristics::jab_for_ace for teamplay improved
+	
+2004-05-14 Diether Knof
+	- changed grapic files from 'xpm' to 'png'
+
+2004-05-14 Borg Enders
+	- ai remembers now if it plays a silent marriage
+
+2004-05-12 Diether Knof
+	- fixed announcements in the marriage
+	- fixed update of the announcement reply in the announcement info window
+
+2004-05-11 Diether Knof
+	- the players notebook and the aiconfigs notebook always show the same player
+	- aiconfigs show he same tab in the notebook for all players (only depth 1), so when you switch the player you remain in the same context
+
+
+2004-05-10 Diether Knof
+	- added showing of trickpoints when the game is finished
+
+2004-05-09 Diether Knof
+	- fixed marriage determination trickno (Bug #949956)
+
+2004-05-08 Diether Knof
+	- fixed bug in gametree
+
+2004-05-07 Diether Knof
+	- added support for special characters in the names
+
+2004-05-05
+	--------------------------
+	- FreeDoko 0.6.3 (alpha) -
+	--------------------------
+
+2004-05-04 Diether Knof
+	- updated translations
+
+2004-05-02 Diether Knof
+	- added 'first start'-window
+
+2004-04-30 Diether Knof
+	- fixed valid cards bug in gametree (there were tested too little cards)
+
+2004-04-27 Diether Knof
+	- a click on the suggested card plays it
+	- added support for cards resizing with the keyboard (C-+, C--, C-0)
+
+2004-04-25 Diether Knof
+	- fixed memory leak in 'debug.h'
+	- fixed memory leaks in Gametree
+	- fixed team bug in 'Game::announcement_of_team()'
+	- added copying of the team informations in gametree
+	  this fixes the 'there exists a player without a team' errors
+	- GUI: added support for getting back cards in a poverty
+
+2004-04-25 Borg Enders, Diether Knof
+	- improved teaminfo in undetermined marriage
+	- fixed bug in poverties
+
+2004-04-22 Diether Knof
+	- fixed bug with undeterminated marriage at the end of the game
+
+2004-04-19 Diether Knof
+	- fixed bug in 'ai.cpp' (segfault)
+
+2004-04-18 Diether Knof
+	- using local documentation with windows
+
+2004-04-15 Diether Knof
+	- fixed bug in announcement reply of the ai
+
+2004-04-12 Borg Enders
+	- ai::updateplayedcards throws now an InvalidGameException
+
+2004-04-11 Borg Enders
+	- ai:.check_solo for colorsolo improved and swine detection bug fixed
+	- the other check_solo functions improved in the same way
+
+2004-04-10 Borg Enders
+	- trickweighting::modi improved, higher trumps will be now used seldomer for serving
+	- heuristics::choose_pfund for soli improved	
+
+2004-04-09 Borg Enders
+	- Bugreports replayed
+	- heuristics::draw_trump now only valid for first card of a trick
+	- heuristics::best_winning_card for picture Soli improved.
+	- w_virtual_games team determination improved
+	- trickweighting::modi team determination improved
+
+2004-04-06 Borg Enders
+	- New AiConfig values: ANNOUNCELIMITREPLY, ANNOUNCELIMITCONFIG
+	- Heuristics::make_reply implemented
+	- Ai can now reply on announcements
+	- exported Function => Trickweighting::backhand
+	- trickweighting::modi for dollen modified
+	
+2004-04-06 Diether Knof
+	- fixed bug in future limit counting of gametree
+	- adapted the shortcuts to the HIG (mainly see 'ui/gtkmm/menu.cpp')
+
+2004-04-02 Diether Knof
+	- added accelerators to the menu (that are shortcuts for the menu items)
+
+2004-03-31 Diether Knof
+	- the manual page can now be accessed through the program
+
+2004-03-28 Borg Enders
+	- ai says no no0, no60, no30 every time, when it has already has the points to win the announcement
+	- new Specialpoint reply
+	- Some bugs in Gamepoints::evaluate fixed
+	- Gamepoints::Evaluate calculates now SPECIALPOINT::REPLY
+	
+2004-03-26 Diether Knof
+	- fixed bug in poverty shifting (the cards could be shifted to the middle before accepting the poverty)
+
+2004-03-25 Diether Knof
+	- swines are not announced automatically, when playing a solo, now
+	- fixed bug in marriage determination (one trick too early)
+	- changed the times in settings to 1/1000 seconds (from 1/10 seconds)
+	- moved the information windows into the top left corner of the table
+	  (note that the name of the left player and sometimes parts of the
+name of the top player are overlayed)
+
+2004-03-24 Diether Knof
+	- removed settings 'rotate icons', 'max future limit' and 'directory search depth'
+	- fixed (one) bug in gametree (no valid card found)
+	- added icon for the main window
+
+2004-03-23 Diether Knof
+	- made gtkmm the default ui
+	- added (some) icons (buttons, menu items)
+
+2004-03-20 Borg Enders, Diether Knof
+	- fixed bug in 'Gamepoints::winnerteam()': 'ASSERT(repoints + contrapoints != 240)'
+	- changed random number generator function
+	- implemented full announcement rules of ddv
+	- begun support for announcement reply
+	- added ai type 'random'
+
+2004-03-19 Diether Knof
+	- fixed bug in the announcement after not determined marriage
+
+2004-03-18 Diether Knof
+	- fixed bug in the mixing of the cards
+
+2004-03-16
+	--------------------------
+	- FreeDoko 0.6.2 (alpha) -
+	--------------------------
+
+2004-03-15 Diether Knof
+	- added information and error support in the UI
+
+2004-03-14 Diether Knof
+	- gtkmm: added poverty shifting
+
+2004-03-14 Borg Enders
+	- Bugreports replayed
+	- W_virtual_games tries no longer to bring a partner in the back hand in a solo meatless
+
+2004-03-13 Diether Knof
+	- gtkmm: improved scaling
+	- gtkmm: added sum of party points
+	- added 'Game::human_player()' for simple acces to the human player
+
+2004-03-12 Diether Knof
+	- added 'Game::is_finished()'
+	- added support for not showing the known teams in the game
+	- fixed bug with caught fox in genscher
+
+2004-03-08
+	--------------------------
+	- FreeDoko 0.6.1 (alpha) -
+	--------------------------
+
+2004-03-08 Diether Knof
+	- moved all makefiles for compiling into the 'src'-directory
+	- fixed bug with announcement menu in a marriage
+	- fixed bug with cardsize verifying in virtual games
+
+2004-03-06 Borg Enders
+	- ai: fixed pfund bug in poverty games
+
+2004-02-28 Borg Enders
+	- Heuristics::SecondBestTrump gives now every time a card back
+
+2004-02-26 Diether Knof
+	- translated bug report messages
+
+2004-02-25 Diether Knof
+	- found bug with 'nextplayer()' returning empty card
+
+2004-02-23 Diether Knof
+	- gtkmm: announcements
+	- improved team information
+	  I think that for the human player _all_ team information (direct and indirect) are shown
+
+2004-02-22 Borg Enders
+	- Ai::get_Marriage takes checks now for valid rules
+	- Version 0.6.1 tested
+
+2004-02-22 Diether Knof
+	- new setting: save the bug reports on the desktop
+	- Trying some directories to save the bug reports in
+	- renaming automatic saved rules file from 'default' to 'last'
+	- gtkmm: genscher
+
+2004-02-19 Diether Knof
+	- The bug reports are now saved in the directory 'FreeDoko.BugReports'
+
+2004-02-17 Diether Knof
+	- Windows: the bug report is now saved on the desktop
+
+2004-02-15 Diether Knof
+	- added support for human reservations in the bug report
+	- some bug fixes
+
+2004-02-13 Borg Enders
+	- Bugreports replayed
+
+2004-02-13 Diether Knof
+	- fixed new bug with the dollen
+	- added rule 'marriage first foreign' to be set.
+	  If no selector is valid, 'marriage first color' is set automatically.
+
+2004-02-12 Diether Knof
+	- fixed bug in gtk: starting a new party when having the genscher info window lead to a segmentation fault
+	- wrote workaround for graphic bug of the team icon of the top player
+	- fixed bug with double extra point 'charlie'
+	- fixed bug with partner selection in 'genscher'
+	- added assertion that rules are not changed during a game
+
+2004-02-08 Borg Enders
+	- Ai::genscher_partner() improved
+
+2004-02-08 Diether Knof
+	- gtkmm: 'card suggestion'
+	- added macro 'WORKAROUND' (constants.h) for code that is needed but shall not be
+	- updated settings and shortcuts documentation in the manual
+	- changed 'Game::trick_current_no()':
+	  When the trick is full, it remains the number (p.e. 0).
+	  Before a full trick incremented 'Game::trick_current_no()'
+
+2004-02-05 Diether Knof
+	- gtkmm: playing of cards
+
+2004-01-31 Borg Enders, Diether Knof
+	- reworked special points
+	- finished players database
+
+2004-01-27 Diether Knof
+	- gtkmm: 'last trick' window
+
+2004-01-29 Borg Enders
+	- TrickWeighting::modi improved 
+	- WVirtualGames::weightings_calc improved
+
+2004-01-28 Borg Enders
+	- Heuristics::jab_for_ace now only used for first ace of each color
+
+2004-01-27 Borg Enders
+	- Heuristics::best_winning_card improved
+	- Heuristics::play_for_team improved 
+	
+2004-01-27 Diether Knof
+	- gtkmm: 'full trick' window
+
+2004-01-25 Borg Enders
+	- Heuristics::choose_for_color_trick improved
+	- new function Ai::calculate_meatless_color
+	- Ai::nextcard_meatless improved
+	- Heuristics::SecondBestTrump improved
+			
+2004-01-24 Borg Enders
+	- Heuristics::CalcHandValue improved to use color_runs for calculating value of missing colors
+	- Heuristics::CalcHandValue improved. Swines, Hyperswines are now only counted once for owning player
+	- Heuristics::CalcHandValue improved for long colors
+	- Ai::poverty_take_accept improved
+	- New heuristic draw_trump
+
+2004-01-22 Diether Knof
+	- added gametype 'GENSCHER'
+	- gtkmm: added information dialogs for: swines, hyperswines, announcement, marriage, genscher
+
+2004-01-22 Borg Enders
+	- Bugreports replayed and sorted after categories
+
+2004-01-21 Borg Enders
+	- heuristics::say_no60, say_no90 improved
+	- Bugreports replayed and sorted after categories
+
+2004-01-20 Diether Knof
+	- added information window settings
+	- gtkmm: added scaling of cards and icons
+
+2004-01-16 Borg Enders
+	- Bugreports replayed
+
+2004-01-15 Diether Knof
+	- gtkmm: reorganization of the handling of changes (language, cards, setting, ...)
+
+2004-01-14 Borg Enders
+	- Ai::poverty_cards_get_back implemented
+
+2004-01-14 Diether Knof
+	- gtkmm: icons
+
+2004-01-13 Borg Enders
+	- Bugreports replayed
+	- Big Problem in Ai::updateplayedcards found: Bugreport 76975
+
+2004-01-13 Diether Knof
+	- gtkmm: party points
+
+2004-01-12 Diether Knof
+	- gtkmm: rotation on demand (only when needed)
+
+2004-01-11 Diether Knof
+	- gtkmm: game finished window
+
+2004-01-08 Diether Knof
+	- added documentation for the bug report window (german)
+
+2004-01-05 Diether Knof
+	- fixed bug with the selection of a background or a card back
+	- added showing of the active player (gtk and gtkmm):
+	  o reservation: the startplayer of the game
+	  o during the game: the next player (when the trick is full it is also the winnerplayer of the trick)
+	  o game finished:
+	    - normal: the winnerplayers
+	    - when viewing the tricks: the winnerplayer of the tricks
+	  the color can be changed via the settings
+
+2004-01-04 Diether Knof
+	- gtkmm: reservation (finished)
+	- gtkmm: keys
+
+2004-01-03 Diether Knof
+	- gtkmm: trickpiles points
+	- gtkmm: names
+
+2004-01-02 Diether Knof
+	- gtkmm: trickpiles (without points)
+
+2003-12-31 Diether Knof
+	- gtkmm: trick
+
+2003-12-30 Diether Knof
+	- gtkmm: hands
+
+2003-12-24 Borg Enders
+	- AiDb used heuristics statistic implemented
+
+2003-12-23 Borg Enders
+	- PlayersDb::evaluate(Player, GamePoints) implementation started
+
+2003-12-22 Borg Enders
+	- intensive testing of version 0.6.0
+	
+2003-12-15
+	------------------------
+	- FreeDoko 0.6 (alpha) -
+	------------------------
+
+2003-12-10 Diether Knof
+	- added output of the version each time FreeDoko is started
+
+2003-12-09 Diether Knof
+	- fixed bug in 'Gametree'
+	- increase 'REMEMBERTRICKS' in 'Gametree' each trick
+
+2003-12-08 Diether Knof
+	- finished Version-class (with date)
+	- always write the version in the public data directory, file 'Version'
+
+2003-11-30 Borg Enders
+	- trickweighting penalty for playing fox.
+	- choose_pfund for single picture soli improved.
+
+2003-11-29 Borg Enders
+	- say:_no90 for Ai improved, there the ai was a little to pessimistic 
+	- trickweighting for short colors in SOLO_MEATLESS improved
+	- trickweighting for swines improved.
+	- make_Announcemnet for ai a little bit improved.
+	- choose_ace improved
+	- best_card in monte_carlo and virtual_games for not choosing
+	  fox, if there are some equal good cards.
+	- choose_pfund for picture soli improved
+	- play_for_team improved for soli with king as important trump
+	- say_no90, say_no60 for owner of swines and hyperswines improved
+	
+2003-11-23 Borg Enders
+	- trickweighting modified for better play of heart tens, swines, hyperswines
+	- heuristics::play_for_team improved, ai is now a little bit more cautious with playing a fox
+
+2003-11-22 Borg Enders
+	- bugreports reviewed
+
+2003-11-09 Borg Enders
+	- some bugreports reviewed
+	
+2003-10-30 Diether Knof
+	- added support for different aitypes (loading, saving, ui)
+
+2003-11-01 Borg Enders
+	- Monte Carlo chooseBestCard implemented
+
+2003-11-05
+	--------------------------
+	- FreeDoko 0.5.4 (alpha) -
+	--------------------------
+
+2003-11-01 Diether Knof, Rainer Doerntge
+	- fixed bug in poverty ui
+
+2003-10-30 Diether Knof
+	- added use of 'getpwuid()' for getting the home directory
+	- fixed bug in the bug report (poverty)
+
+2003-10-29 Diether Knof
+	- fixed bug with changing of the player names
+	- gtkmm: settings: cards order
+
+2003-10-28 Diether Knof
+	- gtkmm: improved startup time
+
+2003-10-27 Diether Knof
+	- fixed bug with 'dolle jabs dolle' of own team (for known teams)
+
+2003-10-26 Diether Knof
+	- fixed bug with random startplayer (sourceforge: Bugs item #830135)
+	- added support for 'HPUX 11.00' (thanks to Rainer Dörntge) (untested)
+	- gtk:: 'setting' (all but cards order, colors and fonts)
+
+2003-10-25 Diether Knof
+	- gtkmm: 'splash screen' finished
+	- gtkmm: improved performance of loading and rotating pixbufs
+	- gtkmm: loading the background
+	- gtkmm: logo in the table
+
+2003-10-24 Diether Knof
+	- gtkmm: 'splash screen' (normal)
+	- gtkmm: cards (loading)
+
+2003-10-23 Diether Knof
+	- ui, os: simple status message system
+	- added name of active player in 'reservation' window, if there is
+	  more than one human
+
+2003-10-22 Diether Knof
+	- gtkmm: 'reservation' (mostly)
+
+2003-10-20 Diether Knof
+	- added button to reset the aiconfig to the hardcoded
+	- added heuristics for 'GameTree'
+	- found some bugs in 'GameTree' (but not fixed, yet)
+
+2003-10-19 Diether Knof
+	- made bug report replay keep replaying, although the game is inconsistent
+	- added testing for seed_value-bug (sourceforge: Bugs item #825200)
+
+2003-10-19 Borg Enders
+	- Bug in Ai::remaining_trumps() fixed
+	- Card Heuristics::best_winning_card_single_picture(Trick const& t, Card::Value v, HeuristicInterface const& hi, unsigned pointmodi ) implemented
+	- Aiconfig for single_picture soli optimized
+	- heuristics::best_winning_card_double_picture implemented
+	- heuristics::best_winning_card_triple picute implemented
+	
+2003-10-18 Borg Enders
+	- new exception debug-mechanismens implemented: DEBUG_THROW, DEBUG_CAUGHT
+	- review of Bugreports.
+	- heuristics::choose_for_color_trick improved for poverty
+	- WVirtualGame::modi improved
+	- WVirtualGame::modi  moved in own class TrickWeighting
+
+2003-10-17 Diether Knof
+	- fixed hyperswines bug (sourceforge: Bugs item #825200)
+	- gtkmm: 'aiconfig'
+	- gtkmm: 'bug report'
+
+2003-10-16 Diether Knof
+	- gtkmm: 'aiconfig' (mostly)
+
+2003-10-15 Diether Knof
+	- gtkmm: 'player' (without configuration)
+	- updated logo
+
+2003-10-14 Borg Enders
+	- fixed some bug reports
+
+2003-10-14 Diether Knof
+	- gtkmm: 'rules'
+
+2003-10-12 Diether Knof
+	- gtkmm: 'about' and 'cardset license' dialog
+	- gtkmm: 'rules' (but loading and saving)
+
+2003-10-10 Diether Knof
+	- gtkmm: begun with 'party settings'
+
+2003-10-09 Borg Enders
+	- choose_for_color_trick improved
+	- ai::single_ace improved
+
+2003-10-09 Diether Knof
+	- gtkmm: part of 'settings'
+
+2003-10-08 Diether Knof
+	- removed properties 'Hand::cardsnumber_p' and 'Hand::cardsnumber_all_p'
+	- reworked part of 'hand.cpp'
+	- begun with gtkmm: Main Window, Menu, License
+
+2003-10-03 Borg Enders
+	- bugreports reviewed
+	- best_winning_card improved
+
+2003-10-03 Diether Knof
+	- added 'Ai::isequal(Ai const&)' for comparing two ai's
+	- fixed bugs in 'Ai::handofplayer()'
+	- fixed bug in 'WVirtualGames::end_depth_calculate()'
+
+2003-10-01 Diether Knof
+	- implemented 'Gametree' for the ai (optional to WVirtualGames)
+
+2003-09-25 Borg Enders, Diether Knof
+	- improved handofplayer for fairplayhands
+
+2003-09-25 Borg Enders
+	- Heuristic::CalcHandvalue for meatless improved
+	- Ai::jabbedbyotherteam implemented
+	- HeuristicInterface extended
+	- Heuristic::choose-ace improved
+	
+2003-09-25 Diether Knof
+	- windows are now automatically raised
+
+2003-09-25 Diether Knof
+	- added support for poverty in the 'bug report replay'
+	- automatic bug report creating when an assertion-error is detected
+
+2003-09-24 Diether Knof
+	- added viewing and changing of settings in the text ui
+	- when replaying a bug report, the rule 'show all hands' is now always
+	  activated
+
+2003-09-24 Borg Enders
+	- ai.handsofplayer improved
+	- heuristic::play_low_high improved
+	- heuristic::choose_pfund improved
+	- heuristic::play_for_team improved
+
+2003-09-23 Borg Enders
+	- ai supports now genscher
+
+2003-09-22 Diether Knof
+	- begun with text ui
+
+2003-09-21 Diether Knof
+	- added window for the cardset license (menu 'help')
+
+2003-09-20 Diether Knof
+	- showing the shifted cards when all hands are shown
+
+2003-09-19 Diether Knof
+	- implemented 'HeuristicInterface' in 'heuristic.cpp' and 'ai.cpp'
+	- implemented 'VirtualGamesInterface' in 'w_virtual_games.cpp' and 'ai.cpp'
+	- added genscher support to the bug report
+
+2003-09-18 Diether Knof
+	- fixed memory leak in the bug report
+	- aded graphical interface for genscher
+
+2003-09-16 Diether Knof
+	- fixed some bugs in the copy constructor of 'Game'
+	- added support for rule 'SWINE_ONLY_SECOND'
+	- implemented framework for genscher
+
+2003-09-15 Diether Knof
+	- added loading, saving, adopting and alloting of ai-configuration
+	- failed adding support for changing the type of the players in a game
+
+2003-09-14 Diether Knof
+	- rewrote swines part
+	  removed support for rule 'SWINES_ONLY_SECOND' because of theoretical
+	  problems 
+	- added setting 'SAVE_PARTY_CHANGES' for keeping the own configuration
+	  when replaying a bug report
+	- added automatic creating of some directories
+	  (~/.FreeDoko, ~/.FreeDoko/rules, ~/.FreeDoko/aiconfigs)
+	- added loading and saving of rules
+
+2003-09-14 Borg Enders
+	- HeuriticInterface implemented	
+
+2003-09-13 Borg Enders
+	- VirtualGamesInterface implemented
+	
+2003-09-12 Diether Knof
+	- added swines output for the bug report
+
+2003-09-12 Borg Enders
+	- generation of fairhands improved
+	- ai knows now when a player has run out of trumps
+
+2003-09-11 Diether Knof
+	- added support for marriage and solo games in 'bug report replay'
+	- fixed some output of the bug report
+	- announcements are made automatically for humans when replaying a bug
+	  report
+	- added swines info to 'UI' and 'OS', especially to the bug report
+
+2003-09-10 Diether Knof
+	- added reading of hands and tricks from a stream
+	- added comparisons of hands and tricks
+	- the 'bug report replay' now verifies the beginning hands,
+	  the played cards, the announcements and the tricks
+
+2003-09-09 Diether Knof
+	- when loading a new 'bug report replay', the old one is removed
+
+2003-09-08 Diether Knof
+	- fixed bugs in the 'bug report replay'
+	- added output of differences of the ai to the bug report replay
+
+2003-09-03 Diether Knof
+	- structured the source in different folders
+	- removed redundant includes
+	- new source files for 'Specialpoint'
+
+2003-09-02
+	--------------------------
+	- FreeDoko 0.5.3 (alpha) -
+	--------------------------
+
+2003-09-02 Diether Knof
+	- created backs for the Altenburg cardset
+	- made the creating of setup-exe-files for Windows mostly automatic
+
+2003-08-31 Diether Knof
+	- Altenburg cardset: created cardset from the original data
+
+2003-08-26 Diether Knof
+	- Altenburg cardset:
+	  - created cards
+	  - added licence
+	  - made the cardset the default (till 2006, see license)
+	- fixed bug with the automatic changing of the cards back when
+	  changing the cards theme
+	- fixed some bugs in the calculating of the gamepoints:
+	  - a point for an announcement is only counted, if there is a winner
+	    team
+	  - the points 'no 90' and so are only counted, if the team has won or
+	    if no team has won (so if contra got 80 points, re get a gamepoint
+	    if re has won or if no team has won)
+	- when the ai is thinking, the ui now always reacts
+	- made the ai to prefer a dolle to a swine in choosebestcard
+
+2003-08-24 Diether Knof
+	- reworked ui.gtk/aiconfigs.*
+	- reworked ui.gtk/aiconfig.*
+	- when changing a player in party settings -> players, the player in
+	  aiconfigs is changed (but not vice versa, because a recursive loop
+	  in the signals)
+
+2003-08-21 Borg Enders
+	- order of gamepoints improved
+	- bug in choose_for_color_trick with solo fixed
+	- w_virtual_games:: modi improved
+	- jab_fox uses now highest queen
+	- w_virtual_games:: modi specialpoints have now a higher value
+
+2003-08-23 Diether Knof
+	- fixed bug with remaining 'tricks' window when starting a new party
+	- reworked ui.gtk/players.*
+	- reworked ui.gtk/player.*
+
+2003-08-22 Diether Knof
+	- rewrote party settings -> general
+	- fixed bug of announcement (if the trick is full but not removed,
+	  an announcement is still possible)
+	- reworked ui.gtk/dialog.*
+	- reworked ui.gtk/rules.*
+
+2003-08-21 Diether Knof
+	- rewrote party settings
+
+2003-08-20 Diether Knof
+	- made the bug report button in the game finished window hidable
+	- added a backup for the last game in the bug report
+
+2003-08-19 Diether Knof
+	- always use the name of the players instead of 'player 1' or so
+	- the player names are updated at once
+	- fixed bug with duty announcement
+	- added button for the bug report to the game finished window
+	- changed the order of the buttons in the dialog:
+	  - the apply button has vanished
+	  - the reset button is now on the left side
+	  - on the right side is the button you most likely want to use 
+	- fixed bug in the help system
+	- the settings are saved when quitting the program
+	  (so it is not necessary to close the settings window)
+
+2003-08-18 Diether Knof
+	- fixed bug when resetting the rules
+
+2003-08-17 Borg Enders
+	- class Ranking implemented, playersDB extended with Ranking
+	- copy-constructors for db implemented
+
+2003-08-16 Borg Enders
+	- denials improved, when last time for denials is early in the game
+	- gamepoints has now a pointer to game
+
+2003-08-16 Diether Knof
+	- wrote english introduction
+	- added a '+'/'-' to the gamepoints in the game summary window
+
+2003-08-15 Diether Knof
+	- windows: read the languge from the registry
+	- added clone function for the players
+
+2003-08-13 Diether Knof
+	- added rule 'close full trick with click'
+	- added '(no release)' to bug report
+
+2003-08-08 Diether Knof
+	- improved english manual
+
+2003-08-03 Diether Knof
+	- improved german manual (rules)
+	- added navigation meta tags to the german manual
+
+2003-07-31 Diether Knof
+	- improved german manual (introduction, shortrules, faq, credits, toc)
+
+2003-07-29 Diether Knof
+	- when the name in 'settings' is changed, it is automatically changed 
+	  in the party settings window
+	- if a default setting is used (p.e. for the name), the default name
+	  is put in the entry (til now, the entry was empty for default values)
+
+2003-07-28 Borg Enders
+	- comments added for PlayersDb, HumanDb, AiDb
+
+
+2003-07-27 Borg Enders
+	- PlayersDb implementation started
+	- HumanDb implementation started
+	- AiDb implementation started
+	
+2003-07-24 Diether Knof
+	- when using the default name, it is shown in the party settings window
+	  (up to now the name field was empty)
+
+
+2003-07-20 Borg Enders
+	- Counting Bugs for heart trick and dollen fixed.
+	- german short manual written.
+	- Marriage Selection for heart improved
+	- special point heart trick is only valid with four not trump
+	  heart cards
+	- ai announces now a little bit more careful in solos
+	- english short manual written.
+	
+2003-07-02 Diether Knof
+	- revised announcement rules during a marriage:
+	  when having a marriage, no player can announce until the teams are
+	  known. After that, all time limits are shifted the number of tricks,
+	  the finding has taken.
+	- Added rule 'last announcement'
+	  (is only needed for marriage, when the announcement time limit
+	   are shifted)
+	- Fixed bug with card resorting when shifting (led to an error)
+	
+2003-07-01 Diether Knof
+	- the swines are now shown properly during a poverty
+
+2003-06-29 Borg Enders
+	- tested different installers for Windows
+
+2003-06-25 Diether Knof
+	- Added support for Windows XP
+
+2003-05-26
+	--------------------------
+	- FreeDoko 0.5.2 (alpha) -
+	--------------------------
+
+2003-05-25 Diether Knof
+	- wrote a manual page (only a small)
+
+2003-05-18 Diether Knof
+	- created dialog for the ai configuration
+
+2003-05-18 Borg Enders
+	- Bugs in Heuristis: Choose_for_color_trick and best_winning_card fixed
+	- choose_pfund_card for solo improved
+
+2003-05-16 Diether Knof
+	- added extra button for the random seed and a random startplayer
+	- improved selection of the startplayer
+
+2003-05-15 Diether Knof
+	- fixed some bugs in bug_report_replay
+
+2003-05-11 Borg Enders, Diether Knof
+	- fixed logical bug in heuristics
+	- improved calculation of future limit for the virtual players
+	- fixed bug with gamepoints
+
+2003-05-10 Diether Knof
+	- added shortcut 'C-n' to start a new party
+	- made the name of the right player right align, if it is too long
+
+2003-05-09 Borg Enders
+	- best_winning_card improved
+
+2003-05-08 Borg Enders
+	- Heuristic::choose_pfund improved	    
+	- Heuristic::playfehl improved
+	- Aiconfig::FEHLCREATIONONFIRSTCARD can be used to turn the creation of a fehl color
+	  as first card of atrick on/off
+	
+2003-05-06 Diether Knof
+	- fixed bug with winnerteam in WVirtualGames::modi()
+	  the real team of the player was taken, not that the ai
+	  thought the team of the winnerplayer was
+
+2003-05-04 Diether Knof
+	- reworked most of party.cpp
+	- fixed bug with starting seed, starting player
+	  in the 'party settings' window
+
+2003-04-27 Borg Enders
+	- AI for duty soli prepared
+	- choose_for_color_trick will noit longer be used for a Meatless solo
+	- for a poverty only the partner of the player with the poverty uses the 
+	  play_low_high
+	- choose_pfund and play_for_team will no longer be used for the player 
+	  with a poverty
+	- bug in lowest_color_card fixed and also in lowest_color_card_meatless
+	- bug in choose_best_winning card fixed
+	       
+	    
+2003-04-27 Diether Knof
+	- added os PartyPoints 
+
+2003-04-19 Borg Enders
+	- increased the possibility for using Heuristic::play_for_team
+
+2003-04-18  Borg Enders
+	- AI has now a member lastHeuristic_, which keeps track of the last
+	  used heuristic
+	- Heuristics usage by Ai examined: after 85 games:
+	       Played cards:			  4080
+	       Heuristics::choose_ace		  242
+	       Heuristics::choose_for_color_trick      204
+	       Heuristics::choose_pfund		 53
+	       Heuristics::jab_for_ace		 159
+	       Heuristics::create_fehl		  79
+	       Heuristics::best_winning_card	   494
+	       Heuristics::play_low_high	       223
+	       Heuristics::play_for_team		 1
+	       Heuristics::jab_fox		      32
+	       Meatless: Heuristics::play_highest_color  6
+	       picture: Heuristics::second_best_trump   11
+	       color: Heuristics::choose_ace	     9
+	       color: Heuristics::best_winning	  11
+	       color: Heuristics::jab_for_ace	    0
+	       color: Heuristics::play_low_high	  0
+	       ChooseBestCard:			1584
+	       
+2003-04-12 Diether Knof
+	- added automatic saving and loading of the players
+	- fixed bug with the name generator
+	  (it always generated the same names)
+	- ,,improved'' the dummy ai
+
+2003-04-12 Borg Enders
+	- Aiconfig has now element LASTHEURISTICTRICK
+	- Heuristics will only be used till trick 
+	  with number LASTHEURISTICTRICK (Preset 9)
+	- AI can now play without the knowledge of the hands of the
+	  other players (changeable via Aiconfig)
+	- If virtual games are full calculated, the main weighting
+	  algorithm is now based on the points the team gets in the game
+	- Bug with Heuristic::lowest_trump_card_limit fixed
+	- previous Heuristics trump_card_limit() and lowest_trump_card_limit()
+	  are now part of Ai and via Aiconfig changeable
+	- now every used Heuristic can be activated and deactivated
+	  via AiConfig.
+
+2003-04-11 Diether Knof
+	- bug report replay:
+	  - loading the rules
+	  - saving the players (ai with configuration)
+	  - loading the players
+
+2003-04-10 Diether Knof
+	- Begun with the feature to replay a bug report
+	  - showing the system/program information
+	  - showing the message
+	  - setting the seed
+	  - setting the startplayer
+	  - showing the differences between
+	    the bug report rule (loading not yet supported),
+	    the default rule (the rule taken from the private directory),
+	    and the standard rule (the hardcoded)
+
+2003-04-08 Diether Knof
+	- Bug with the redistribution of the cards fixed
+
+2003-04-07
+	--------------------------
+	- FreeDoko 0.5.1 (alpha) -
+	--------------------------
+
+2003-04-06 Borg Enders 
+	- Choose_for_color_trick improved for solo meatless
+	- Choose_for_color_trick well be now also used for first color runs
+	- best_winning_crd improved
+
+2003-04-06 Borg Enders 
+	- created some screenshots for linux (english)
+
+2003-04-04 Diether Knof
+	- fixed bug in the marriage selection
+
+2003-04-03 Diether Knof
+	- change the cursor into a watch when creating the menus in 'settings'
+
+2003-03-30 Diether Knof
+	- replaced classes 'Vector' and 'String' with 'std::vector' and 'std::string'
+
+2003-03-29 Diether Knof
+	- added saving of 'show all hands' when changing directly in the menu
+	- fixed points of the specialpoint 'solo' to '*3'
+	- added 'Party::humanno()'
+
+2003-03-29 Borg Enders
+	- some Ai bugs fixed
+
+2003-03-28 Diether Knof
+	- fixed bug: changing language during poverty shifting
+
+2003-03-28 Borg Enders
+	- Aiconfig has now a value for configuration of ai announcements
+	- created new screenshots for windows
+	
+2003-03-26 Diether Knof
+	- improved Makefiles:
+	  - when compiling, it is checked, whether mozilla is installed
+	  - now, 'gtk' and 'gecko' can easily turned of in 'Makefile.modules'
+	- fixed bug: the ai played soli, although it was not allowed
+
+2003-03-21 Diether Knof
+	- changed a bit the directory structure:
+	  remove subdirectory 'graphics':
+	  - the cardsets are moved into the new directory 'cardsets'
+	  - the backgrounds are moved into the parent directory 'data'
+	  - the help icons are moved into the parent directory 'data'
+
+2003-03-19 Diether Knof
+	- fixed bug with mixed cards order
+	- bugreport:
+	  removed - hands of the players each four tricks
+		  - teaminfo of the players
+	- ostr << player: don't give out the hands and the teaminfo
+
+2003-03-18 Diether Knof
+	- removed setting 'show setting window on start'
+	- reworked the menu
+
+2003-03-17 Diether Knof
+	- added automatic changing of the card back when changing the theme
+	- simplified selection of the language, the background, the cards back
+	  and the help icons style
+	- fixed bug when changing the trickpile points font/color when not in game
+
+2003-03-16 Borg Enders
+	- first announcement of ai improved
+
+2003-03-15 Borg Enders
+	- bug fixed, we would say no0, even if opposite team has already tricks
+
+2003-03-11 Diether Knof
+	- simplified selection of a theme
+
+2003-03-10 Diether Knof
+	- united settings 'GRAPHICS_FAMILY' und 'GRAPHICS_STYLE'
+
+2003-03-09 Borg Enders
+	- bug in w_virtualgames::modi fixt
+
+2003-03-05 Diether Knof
+	- added 'Trick::operator==(Trick)' and 'Trick::islast()'
+	- added extrapoints to 'last trick' and 'full trick'
+	
+2003-03-05 Borg Enders
+	- choosebestcard homebringing of fox improved
+
+2003-02-24 Diether Knof
+	- improved ui of the cards order setting
+	- created some screenshots for linux (german)
+
+2003-02-23
+	- fixed bug with the filenames of the bug report
+	- added setting for the color of the poverty shift arrow
+
+2003-02-21
+	------------------------
+	- FreeDoko 0.5 (alpha) -
+	------------------------
+
+2003-02-21 Diether Knof
+	- fixed bugs in the global Makefile
+	
+2003-02-20 Diether Knof
+	- tested the compilation under SuSE
+	  -> wrote LIESMICH.SuSE (only german, so far)
+	- wrote README.Windows and LIESMICH.Windows
+
+2003-02-18 Diether Knof
+	- fixed bug with bug-report in release (many informations were missing)
+	- added output of the seed in release, so if the program crashes we have the seed
+	- reworked the german part of the homepage 
+	- implemented rule 'announcement first trick thirty points'
+
+2003-02-17 Diether Knof
+	- added all human actions to the end of the bug report
+	- a new bug report with the same seed is written to a separate file
+	  (a '_' and a number is appended)
+
+2003-02-14 Diether Knof
+	- some improvements of the poverty ui:
+	  - mirroring the arrow when shifting back
+	  - right-click on the cards inserts all into the hand
+	  - the poverty player has already an icon when shifting
+
+2003-02-09 Borg Enders
+	- AiConfig LIMITHIGH modified
+	- Heuristics::CalcHandValue for Koehler improved
+	- i::checksolo(Card::Value c1, Card::Value c2, Card::Value c3,GameType t) for Koehler improved
+
+2003-02-08 Borg Enders
+	- w_virtualgames::modi improved
+	- heuristics::best_winning_card improved
+
+2003-01-31 Diether Knof
+	- poverty: swines/hyperswines when shifting now implemented
+	- added poverty output to the bug report
+	- improved Player::teaminfo_update():
+	  when the player is re and two players are contra, the remaining is re
+	
+2003-01-30 Diether Knof
+	- accepting a poverty with no card shifted
+	
+2003-01-29 Borg Enders
+	- Ai bugs for poverty removed
+	
+2003-01-27 Diether Knof
+	- added Hand::unplaycard(c)
+	- implemented UI for poverty shifting
+	  missing: - accepting a poverty with no card shifted
+		   - swines/hyperswines when shifting
+
+2003-01-27 Borg Enders
+	- W_virtualgames::modi improved
+
+2003-01-26 Diether Knof
+	- begun with the GTK-implementation of the poverty-shifting
+
+2003-01-26 Borg Enders
+	- Ai Annoucements improved
+	- Heuritics::calcHandValue bug removed
+	- new bug in Heuristics::choosepfund removed
+
+2003-01-19 Borg Enders, Diether Knof
+	- fixed bug with teams in virtual games
+	- added Game to comparison of cards
+
+2003-01-12 Borg Enders
+	- translation of AiConfig prepared
+	- WVirtualGames::modi balanced for better use of dollen, swines and Hyperswines
+	- announcement rate of ai a little bit decreased
+
+2003-01-06
+	--------------------------
+	- FreeDoko 0.4.5 (alpha) -
+	--------------------------
+
+2002-12-28 Borg Enders
+	- screenshots for english Manual 
+
+2002-12-27 Borg Enders
+	- German Manual reworked
+
+2002-12-26 Borg Enders
+	- Poverty for Ai prepared
+	- Ai::poverty_shift() implemented
+	- Ai::poverty_take_accept() implemented
+	- Ai::poverty_cards_change() implemented
+
+2002-12-21 Borg Enders, Diether Knof
+	- some bug fixes
+	- finished rules with swines/hyperswines
+
+2002-12-15 Diether Knof
+	- fixed bug with redistribute
+
+2002-12-15 Borg Enders
+	- Heuristics::best_winning_card improved
+	- Ai::checksolo() improved
+
+2002-12-14 Diether Knof
+	- fixed bug 'new party'
+	- implemented rule 'DOLLE_CONTRARY_IN_LAST_TRICK' (not tested!)
+
+2002-12-08 Borg Enders
+	- bug in Heuristic::jab_for_ace removed
+	- undetermined marriage at the end of a game is correct counted
+
+2002-12-01 Diether Knof
+	- added Player::trick_full(Trick const& trick) and Ai::trick_full(Trick const& trick)
+
+2002-11-30 Borg Enders
+	- WVirtualGames throws now color cards before playing low trumps
+
+2002-11-25 Diether Knof
+	- begun with implemention of poverty
+
+2002-11-24 Borg Enders
+	- I've neglected this file for some time
+	- more clear points for solo, new specialpoint SOLO
+
+2002-11-19 Diether Knof
+	- added function BugReport::add(String)
+	- fixed bug with the trickpiles
+
+2002-11-18 Diether Knof
+	- fixed some bugs in the bug report
+	- added announcements to the bug report
+
+2002-11-15 Diether Knof
+	- automatic loading and saving of rules
+	- fixed bug with spin buttons (as in marriage determination)
+
+2002-11-15
+	--------------------------
+	- FreeDoko 0.4.4 (alpha) -
+	--------------------------
+
+2002-11-12 Diether Knof
+	- included help system in FreeDoko (only for Linux)
+	- added toc to manual
+
+2002-11-09 Borg Enders, Diether Knof
+	- fixed the gamepoints for announcements
+
+2002-11-04 Diether Knof
+	- the ai now makes the announcement as late as possible
+
+2002-10-26 Diether Knof
+	- implemented exeptions for announcements and denials in a marriage game
+	- some improvements of w_virtual_games:
+	  - 5 points for having a partner in the back
+	  - 10 points for bringing a fox home
+
+2002-10-25 Diether Knof
+	- added game summary to bug report
+
+2002-10-24 Diether Knof
+	- added new menu item for opening the manual in a browser
+
+2002-10-23 Diether Knof
+	- when there is only one human player, there are no submenus in the announcement menu
+
+2002-10-21 Diether Knof
+	- fixed bug in WVirtualGame::best_card()
+	- fixed bug in Player::isre()
+
+2002-10-18 Diether Knof
+	- can now compile with g++-3.2 (windows)
+
+2002-10-17 Diether Knof
+	- reorganization of the screenshots
+	- can now compile with g++-3.2 (linux)
+
+2002-10-10 Diether Knof
+	- started with a help system
+
+2002-10-06 Borg Enders, Diether Knof
+	- rewrote WVirtual (for the ai)
+
+2002-09-29 Borg Enders
+	- reworked the ai files
+
+2002-09-28 Diether Knof
+	- changed appearance of the table outside a game
+
+2002-09-27 Diether Knof
+	- when looking at the tricks at the end of the game,
+	  the hands show the remaining cards
+
+2002-09-26 Diether Knof
+	- splitted game.cpp, reworked game.*
+
+2002-09-25 Diether Knof
+	- reworked player.*
+
+2002-09-23 Diether Knof
+	- reworked some functions in gtk/
+
+2002-09-22 Diether Knof
+	- changed documentation of trick.* to doxygen
+
+2002-09-20 Diether Knof
+	- reworked trick.*, human.*
+
+2002-09-19 Diether Knof
+	- added menu for announcements
+	- worked on the team determination
+	- created new game.h, player.h
+
+2002-09-17 Diether Knof
+	- added announcement (till now, only for the ai)
+
+2002-09-12
+	--------------------------
+	- FreeDoko 0.4.3 (alpha) -
+	--------------------------
+
+2002-09-10 Diether Knof
+	- removed the directory names from the setting file
+	- reworked bug report
+
+2002-09-08 Borg Enders
+	- player::sethand and ai::sethand are now correct for
+	  virtual
+	- bugs for ai::playedcards_p removed
+
+2002-09-05 Borg Enders
+	- old Bugreports replayed and most were obsolete, only
+	  one new bug found (in Heuristics::choose_ace which will
+	  be resolved in the next days)
+
+2002-09-04 Borg Enders
+	- Heuristics::choose_for_color_trick improved for marriage
+
+2002-09-02 Borg Enders
+	- Heuristics::best_winning_card a little improved
+
+2002-09-01 Diether Knof
+	- marriage: when all cards of the selected color are played, the teams are set
+
+2002-09-01 Borg Enders
+	- checksolo for colorsolo improved
+	- new heuristic for meatless, now ai plays long colors in
+	  one run
+	- checksolo for meatless improved
+	- Heuristics::best_winning_card improved
+
+2002-08-28 Diether Knof
+	- fixed bug with the card selection of the left and right player
+
+2002-08-25 Diether Knof
+	- changed the font buttons
+
+2002-08-23 Diether Knof
+	- changed the splash screen
+
+2002-08-16
+	--------------------------
+	- FreeDoko 0.4.2 (alpha) -
+	--------------------------
+
+2002-08-14 Diether Knof
+	- the language can be taken from the system
+	- added selector dialogs for the fonts and font colors
+	- added icons for Windows and Linux
+
+2002-08-06 Diether Knof
+	- fixed bugs in handling incorrect settings
+
+2002-07-31 Diether Knof
+	- cleaned up most of w_virtual.*
+	- Windows: the registry is now used for the name and private data directory
+	- the settings are saved automatically
+
+2002-07-29 Diether Knof
+	- Ai::handofplayer now returns the own hand, if the ai is the requested player
+	- added command line option to select the ui (til now only 'gtk' and 'none')
+
+2002-07-28 Diether Knof
+	- changed Ai::playedcards_p to Vector
+	  added 'Ai::playedcard(Card)
+	  added 'Ai::playedcard(unsigned color_u, unsigned value_u)
+	- added Card::Card(unsigned color_u, unsigned value_u)
+
+2002-07-28 Diether Knof, Borg Enders
+	- fixed bug with team determination in marriage
+	- added icon (does not work under Windows, yet)
+	- fixed bug in ai
+	- fixed bug in specialpoints
+
+2002-07-23 Borg Enders
+	- finished rework of 'heuristics.cpp' for final betaversion
+
+2002-07-22 Borg Enders
+	- Started rework of 'heuristics.cpp' for final betaversion
+	- Heuristic::choose_lowest_color_card removed.
+	- Heuristic::choose_lowest_trump_card removed.
+	- Heuristics::check_card removed. 'ai.cpp' adapted.
+
+2002-07-21 Borg Enders, Diether Knof
+	- when in the settings the name is empty, the name is taken from the system (Linux)
+
+2002-07-17 Diether Knof
+	- the bug report now also includes the rules
+	- added translation to english
+	- the settings can now be made in the current language,
+	  you only need the english keywords til the first 'language'
+
+2002-07-16 Diether Knof
+	- extended the translation, so that you can now include numbers and such
+	- rewrote the german translation
+	- implemented the marriage rules
+
+2002-07-15 Diether Knof
+	- changes of the settings and the rules are now immediately applied
+
+2002-07-14 Diether Knof
+	- rewrote gtk/settings.*
+	- rewrote loading of the files (translation, settings)
+	  - the name and the value are now parted by a '='
+
+2002-07-13 Diether Knof
+	- rewrote gtk/reservation.*
+	- under Windows the libraries from www.gtk.org (http://www.gimp.org/~tml/gimp/win32/downloads.html) are used now
+
+2002-07-12 Diether Knof
+	- added support of gtk+-2.0
+	  It is not the default, because:
+	  - under Windows it takes too much ressource, so that you can only play a handfull of games
+	  - under linux most of the users will not have the new gtk version installed
+
+2002-07-09 Diether Knof
+	- added rule 'take back tricks'
+
+2002-07-07 Diether Knof
+	- added some rules
+	- implemented rule 'throwing with six kings'
+	- implemented rule 'throwing when fox highest trump'
+	- added icons 'six_kings' and 'fox_highest_trump'
+	- implemented rule 'show tricks number'
+	- tested compilation under
+	  - RedHat:	no problem
+	  - Mandrake:	no problem
+	  - SuSE:	problems (EOL?)
+	  - Caldera:	problems (same as SuSE?)
+	- implemented rules 'swines in solo' and 'hyperswines in solo'
+
+2002-07-01 Diether Knof
+	- (re)activated poverty for the release
+	- fixed bug in the marriage determination
+	- changed most 'int'-variables to 'unsigned'-variables
+	- created dummy ai: it takes at random a valid card
+
+2002-06-27 Diether Knof
+	- reworked gtk/rules.* (removed rules.*.* files)
+	  now all unsopported rules are shown insensitive in the 'party settings' window
+
+2002-06-27 Borg Enders
+	- icons eplantion added to doc\operation\de\freedoko_anleitung.pdf
+
+2002-06-24 Diether Knof
+	- reworked rule.*
+
+2002-06-20 Diether Knof
+	- the script 'create_icons' now also creates the no_* icons (using postscript)
+
+2002-06-18 Diether Knof
+	- Reorganized the graphics (cards, icons and card backs):
+	  The structure is: `family` and `style`
+	  (FreeDokorc: 'graphic size', 'graphic family', 'graphic style')
+	  So you find the 'xskat' french' graphics in the xskat/french directory.
+	- Rewrote the converter from the kdecarddecks.
+	  It is now named 'kdecarddecks-to-FreeDoko-cardsets'
+	- Created a converter from the pysol-cardsets
+	  It is named pysol-carddsets-to-FreeDoko-cardsets'
+	- converted all kdecarddecks and pysolcarddecks I have on my system
+	  (just called
+	   'kdecarddecks-to-FreeDoko-cardsets /usr/share/apps/carddecks/cards-*'
+	   and 'pysol-cardsets-to-FreeDoko-cardsets /usr/share/pysol/cardset-*')
+
+2002-06-17 Diether Knof
+	- added extrapoint 'heart trick'
+	- a card is only a fox, if the game is normal, a marriage or a poverty
+	  (that removes the bug, that a swine in the last trick makes an extrapoint, and similar bugs)
+
+2002-06-17 Borg Enders
+	- added reason to Special thanks in manual
+	- NO120_SAID gets now the correct points in basistypes.cpp
+	- some minor bug in w_virtual removed
+	- in ai files some party. to game(). changed
+	- some bugs in W_gametree removed
+	- fairplay in aiconfig splitted in fairplayhands (default: false) and
+	  fairplayteams (default: true)
+	- all six predefined Aiconfiguration are now useful
+	- some rework in 'ai.*', 'weighting.*', 'w_virtual.*',
+	  'w.gametree.*' and 'heuristics.cpp' done
+	- 'game.cpp', 'player.*' and 'human.*' adjusted to new function calls of Ai
+
+
+2002-06-17 Diether Knof
+	- created cardsets '81x126' and '72x114'
+
+2002-06-16 Diether Knof
+	- moved the team icon of player 1 and 3 to the top of the hand
+
+2002-06-16 Borg Enders, Diether Knof
+	- Some bugs of trick Specialpoint removed
+	- Rule 'announcement re doubles' implemented
+	- Specialpoints now in correct order
+	- Some bugs in the virtual weighting removed
+
+2002-06-15 Borg Enders
+	- first rework of freedoko_rules.pdf
+
+2002-06-15 Diether Knof
+	- Since Windows and the Linux windowmanagers take care of the shortcuts,
+	  Alt-F4 is removed
+	- Escape does not quit the program anymore (in the release)
+	- created 'name(.)' and 'operator<<(ostream&, .) functions for the basistypes
+	- started recreating of the translation file
+
+2002-06-14 Diether Knof
+	- use now new functions for parsing the command line arguments
+	- restricted the command line arguments to
+	  - help
+	  - version
+	  - license
+	  - settings
+	  - name
+	  - language
+	  - graphic_size_directory
+	- reworked 'rule.*' files
+	  replaced 'CONST_NUMBER_OF_PLAYERS' and 'CONST_NUMBER_OF_CARDS' with Rule::NUMBER_OF_PLAYERS' and Rule::NUMBER_OF_CARDS',
+	  added 'Rule::NUMBER_OF_COLOURS', 'Rule::NUMBER_OF_VALUES', 'Rule::NUMBER_OF_TRICKS_IN_GAME'
+
+2002-06-13
+	--------------------------
+	- FreeDoko 0.4.1 (alpha) -
+	--------------------------
+
+2002-06-13 Diether Knof
+	- fixed bug 'ASSERT(file full_trick.cpp, line 167): FullTrick::show(), 'game_status' != GAME_PLAY' when the program pops up the full trick window
+	- Alt-F4 quits the program
+	- using the cross in the title bar of the window does not make FreeDoko crash any more
+	- changed the cursor in the table
+	  when you try to play an invalid card, the cursor changes a short time
+	  (setting: 'card invalid delay')
+
+2002-06-11
+	------------------------
+	- FreeDoko 0.4 (alpha) -
+	------------------------
+
+2002-06-08  Borg Enders
+	- screenshots of german version of all windows created.
+	- first version of german operation manual written
+
+2002-06-06 Borg Enders
+	- Aiconfig copy constructor implemented
+	- Aiconfig& operator=(const Aiconfig& aic) implemented
+
+2002-06-05 Borg Enders
+	- Ai inherits now Aiconfig (changes in files aiconfig.*, ai.*,
+	  heuristics.cpp
+
+2002-06-01 Borg Enders
+	- Remaining gamepoints in Gamepointstable are no longer
+	  decremented for unlimited points
+
+2002-05-31 Borg Enders
+	- Gamepointcalculation prepared for new rule for value of
+	  No120 in basistypes.cpp
+	- bug in ai.cpp removed
+	- calc_one in W_virtual modified
+
+2002-05-30 Borg Enders
+	- manual/en/credits.html and manual/de/credits.html updated
+
+2002-05-28  Borg Enders
+	- shortrules.pdf some minor errors removed
+	- manual/en/shortrules.html some minor errors removed
+	- freedoko_regeln.pdf updated for all rules
+	- manual/de/rules.html updated for all rules
+
+2002-05-26 Diether Knof, Borg Enders
+	- checked for rules still needed
+	- configurationfile for rules designed
+	- tricks to calculate into future of ai now element of
+	  aiconfig
+	- maximum tricks to calculate into future of ai now element of
+	  FreeDokorc for adapt ai performance to computer performance
+
+2002-05-20 Borg Enders
+	- Text for German Rules reworked
+	- Started with writing of a manual in html
+	- shortrules.pdf created
+	- ddv_kurzregeln.pdf created.
+
+2002-05-19 Borg Enders
+	- More dynamic algorithm implemented for determination of
+	  tricks to calculate into the future with w_virtual;
+
+2002-05-16 Diether Knof
+	- added function 'int Party::gameno() const'
+	- when selecting a row in the party points, a description of the game
+	  is shown (the same as in ths 'game finished' window)
+	- fixed bug in Trick::specialpoints
+	  'charlie' was counted four times (one time for each card)
+	- removed 'Hand::Hand(Card*, int)' ('Hand::Hand(Vector<Card>)' is to be used instead)
+
+2002-05-14 Diether Knof
+	- made the party points scrollable
+	- added a sum row to 'party points'
+
+2002-05-13 Diether Knof
+	- created party points window
+	- removed bug in 'gamepoints' (contra with 120 points and no announcement)
+	- The name of player 2 is now aligned left
+	- created base classes 'Dialog', 'PlayfieldDialog' and 'TableDialog'
+	- for now, the check boxes of the menu items are not updated
+	  -- to be fixed (file 'menu.cpp')
+
+2002-05-12 Diether Knof
+	- removed some memory leaks (no big ones do exist)
+	- created trickpiles
+	- new rule and setting: SHOW_TRICK_POINTS
+
+2002-05-12 Borg Enders
+	- Card Ai::nextcard optimized if only one card is valid this
+	  card will be played immediately
+	- in w_virtual virtual_player teams are now set
+
+2002-05-10 Borg Enders
+	- Heuristics::Check_card improved
+
+2002-05-10 Diether Knof
+	- the startplayer does not change, when someone has a poverty
+	- fixed bug in the gamepoints
+	- reworked most of the gtk files, removed 'key.cpp'
+	- you can navigate through the last tricks with the cursor keys
+
+2002-05-08 Borg Enders
+	- w_virtual takes no specialpoints in account and plays
+	  not so meany high cards any longer
+
+2002-05-05 Borg Enders, Diether Knof
+	- AI tuning
+	- some bugs removed
+	- when the game is finished, all hands are shown
+
+2002-05-04 Diether Knof
+	- added specialpointslist to the game finished-window
+	- added navigation through the tricks
+
+2002-05-03 Diether Knof
+	- made the border smaller, so that you can use the original xskat cards
+	  with the resolution 1024x768
+	  (see thread in the Forum 'Open Discussion' at sourceforge)
+	- made the minimum size of the window smaller
+
+2002-05-03 Borg Enders
+	- 'weighting.*' reworked
+	- 'w_gametree.*' reworked
+	- 'w_virtual.*' reworked
+	- Ai::colorjabbed_p is now a Vector
+
+2002-04-29 Diether Knof
+	- reworked last_trick.*'
+	- implemented poverty (throwing)
+	- the result of 'Hand::validcards(Trick)' does not contain two same cards
+	- created a new icon swines-hyperswines (when a player has both swines and hyperswines)
+
+2002-04-28 Diether Knof
+	- reworked 'setting.*'
+
+2002-04-26 Diether Knof
+	- reworked 'rule.*', 'language.*'
+	- swines and hyperswines are announced automatically when a player
+	  plays a color-solo
+
+2002-04-26 Borg Enders
+	- w_virtual calculates now future tricks
+	  ai maybe a little slow now on cpus with
+	  less then 400Mhz
+
+2002-04-26 Diether Knof
+	- Fixed bugs in 'debug.h'
+	- reworked all 'info.*' files (added 'info.cpp')
+	  now you can toggle the output of the info without having to recompile
+	  every file
+
+2002-04-25 Borg Enders
+	- Hand::validcards assert added
+	- Ai::number_of_single_tens() counts now even two single tens
+	  on hand
+	- some bugs in Ai::nextcard_picturesolo removed
+	- last Ai::checksolo(...) bugs remeoved
+	- hand.* reworked
+
+2002-04-24 Borg Enders
+	- bool Card::istrump(GameType t) implemented
+	- int Hand::numberof(const Card::Color& c,const GameType& t)
+	  implemented
+	- Ai::number_of_fehl(GameType t) modified
+	- rest of ai modified
+
+2002-04-21 Borg Enders, Diether Knof
+	- tried to use the Microsoft Visual C++-Compiler
+	  (it does have yet have three errors)
+
+2002-04-20 Borg Enders
+	- in heuristics.cpp:
+	  - lowest_best_trump_card,
+	  - best_winning_card,
+	  - choose_for_color_trick
+	  - choose_pfund
+	  - create_fehl
+	  modified for better solo performance
+	- ai::remaining_trumps() implemented
+	- ai plays in picturesolo as soloplayer
+	  now trumps till she is the only one with
+	  trumps
+	- criterions for soli increased
+	- number_of_single_tens, number_of_fehl for
+	  ai implemented
+	- ai::checksolo(...) improved
+	- first implementation for
+	  calculation of future tricks for
+	  w_virtual implemented
+
+2002-04-20 Diether Knof
+	- reworking of files 'rule.*' finished
+
+2002-04-19 Diether Knof
+	- reworking files 'rule.*'
+	- now you can create a debian and redhat package with 'make packages'
+	  (requires the deb-tools, fakeroot and alien)
+
+2002-04-18 Diether Knof
+	- player names can be changed during the games
+
+2002-04-10 Diether Knof
+	- fixed bug in 'setting.cpp'
+	- files 'game_finished.*' reworked
+	- removed 'gtk.*' files (moved functions to 'utils.*' and new 'key.*'
+	- files 'utils.*' reworked
+
+2002-04-11 Borg Enders
+	- predefined Ais specified
+	- 'game.*' reworked
+
+2002-04-09 Borg Enders
+	- 'gamepointstable.*' reworked
+	- Party::init() modified
+
+2002-04-09 Borg Enders
+	- 'gamepoints.*' reworked
+	- Trick::specialpoints modified
+
+2002-04-10
+	--------------------------
+	- FreeDoko 0.3.6 (alpha) -
+	--------------------------
+
+2002-04-07 Diether Knof
+	- fixed bug, that the team icons were not shown, when no human played
+	- updating of gobal known teams
+
+2002-04-07 Diether Knof, Borg Enders
+	- new constructor for AI using Aiconfig
+	- prototype predefined AIs implemented
+	- bug in team setting removed
+	- some gui-interfaces modified
+	- files 'gametype.*' reworked
+	- now five nines are supported
+	- MarriageSelector implemented
+	- Marriage is now full supported
+	- new Screenshots created
+
+2002-04-06 Diether Knof
+	- when playing a solo or throwing with five nines, the startplayer remains the same
+	- improved team setting
+
+2002-04-05 Diether Knof
+	- split 'settings.cpp'
+	- files 'reservation.*' reworked
+
+2002-04-05 Borg Enders
+	- class Aiconfig implemented
+
+2002-04-04 Diether Knof
+	- Added mixed card mode
+
+2002-04-03 Diether Knof
+	- Added output of the played cards of the human players to the bug report
+
+2002-04-02 Borg Enders
+	- rework of ai.cpp finished
+
+2002-04-01 Diether Knof
+	- Tested FreeDoko under a pentium 120, 64 MB RAM
+	  compilation and loading takes it time, the playing is not slow
+
+2002-03-31 Borg Enders
+	- Ai::nextcard_colorsolo() reworked
+	- Ai::nextcard_picturesolo() reworked
+	- Ai::playedcard() reworked
+	- Ai::colorjabbed() reworked
+	- Ai::color_runs() reworked
+	- ...
+	- Ai::get_reservation() reworked
+
+2002-03-30 Borg Enders
+	- Ai::sethand() reworked
+	- Ai::createfairhand() reworked
+	- Ai::updateplayedcards() reworked
+
+2002-03-29 Borg Enders
+	- Heuristics::Best_wining_card modified (higher cards are now
+	  not so often used)
+	- destructor of ai reworked
+	- Ai::operator= reworked
+
+2002-03-28 Borg Enders
+	- construtor of ai reworked
+	- some default values for ai properties as defines implemented.
+
+2002-03-27 Borg Enders
+	- ai.h reworked
+
+2002-03-22 Diether Knof
+	- files 'full_trick.* reworked
+	- Tested compilation under
+	  - Debian (woody)
+	    - works, I develop under Debian
+	    - you can also use the SuSE and the Caldera binaries
+	    - you cannot use the RedHat and Mandrake binaries
+	  - RedHat 7.2
+	    - works
+	    - you can also use the Debian, Mandrake, SuSE and Caldera binaries
+	  - Mandrake 8.0
+	    - works (but not with the flag '-Werror')
+	    - you can also use the Debian, RedHat, SuSE and Caldera binaries
+	  - Caldera 3.1
+	    - works -- you have to change the end of lines of the *.cpp and *.h files to the unix format and to define 'NO_STRINGSTREAM'
+	    - you can also use the Debian and the SuSE binaries
+	    - you cannot use the RedHat and Mandrake binaries
+	  - SuSE 7.2
+	    - works -- you have to change the end of lines of the *.cpp and *.h files to the unix format.
+	    - you can also use the Debian and the Caldera binaries
+	    - you cannot use the RedHat and Mandrake binaries
+
+2002-03-22 Diether Knof
+	- moved the setting of the known teams of the player at the start of the game from 'Player' to 'Game'
+	- added sorting of the cards to the settings
+
+2002-03-22 Diether Knof
+	- added Player::hasswines(), Player::hashyperswines()
+	- added Game::trumpcolor()
+	- some icons can now be seen:
+	  - team (normal game)
+	  - gametype (sologame)
+	  - swines
+	  - hyperswines
+
+2002-03-22 Borg Enders
+	- rework of heuristics.cpp finished
+
+2002-03-21 Diether Knof
+	- files 'settings.*' reworked
+	- new files widgets/*
+
+2002-03-21 Borg Enders
+	- some functions of Heuristics reworked
+
+2002-03-20 Borg Enders
+	- bug in Heuristics::jab_for_ace removed and some functions
+	  of Heuristics reworked
+
+2002-03-19 Borg Enders
+	- Heuristics::best_winning_card() reworked and a little
+	  modified, for better choose of cards for last card of trick or
+	  first run of a color.
+
+2002-03-17  Borg Enders
+	- bug in Heuristics::choose_ace removed
+
+2002-03-16 Diether Knof
+	- files splash.*' reworked
+
+2002-03-15 Diether Knof
+	- files bug_report.*' reworked
+
+2002-03-14 Diether Knof
+	- files icon.*' reworked
+
+2002-03-13 Diether Knof
+	- files card.*' reworked
+
+2002-03-09 Borg Enders
+	- Ai::nextcard_picturesolo() implemented
+	- ai plays now silent soli
+	- some bugs in w_virtual and w_gametree removed
+
+2002-03-06 Diether Knof
+	- files menu.*' reworked
+	- fixed bug in 'operator>(Card, Card)'
+	- files help.*' reworked
+
+2002-03-05 Diether Knof
+	- files 'playfield.*', 'hand.*', 'name.*', 'trick.*' mostly finished
+	  the new code is now working
+
+2002-02.23 Borg Enders
+	- player.h and player.cpp reworked with vector.h and debug.h
+	- human.cpp reworked with debug.h
+
+2002-02-22 Borg Enders
+	- party.h and party.ccp reworked with vector.h and debug.h
+	- debug.h has no MEMCHECK_STREAM and ASSERT_STREAM
+	- card.cpp reworked with debug.h
+	- trick.h and trick.cpp reworked with vector.h and debug.h
+
+2002-02-21 Borg Enders
+	- namegen.h and namegen.cpp code reworked (using vector.h and
+	  debug.h)
+	- Specialpoint enumtype
+	- int Value_of_Specialpoint(Specialpoint sp)
+	- basistypes.cpp code reworked (using debug.h)
+
+2002-02-21 Diether Knof
+	- included new random function, so that under Linux and Windows the same seed will result in the same game
+	- starting with rewriting the gtk-code, so that it is object orientated
+
+2002-02-17 Borg Enders, Diether Knof
+	- fixed some bugs in the ai
+	- implemented swines and hyerswines (but no icon, yet)
+
+2002-02-14 Diether Knof
+	- fixed bug in debug macros, so they can be used inside an if-statement
+	- rewrote the gtk/trick.* files, so they now use a class 'GTK_Trick'
+
+2002-02-11 Diether Knof
+	- fixed bugs in bug report
+	- added output of hands every four tricks
+	- added output of teams of human players
+	- fixed bugs with 'Player::update_re' (determination of teams)
+	- fixed bug in 'compile.bat'
+	- fixed bug in settings window: language did not always appear right
+	- improved the setting language: now you can also write the long name of the language in the settings file
+
+2002-02-10 Diether Knof
+	- fixed bug in new debug macros
+
+2002-02-10 Borg Enders
+	- Ai::nextcard_colorsolo() implemented
+	- removed bugs in Heuristics::best_winning_card
+	- choosebestcard and choosenextbestcard in w_virtual.cpp und
+	  w_gametre.cpp improved
+	- bug removed in Heuristics::checkcard
+	- bug removed in w_virtual::calc_one
+
+2002-02-09 Diether Knof
+	- color selection dialog is now working
+
+2002-02-08 Diether Knof
+	- Added font selection dialog (works) and color selection dialog (does not work yet)
+
+2002-02-07 Diether Knof
+	- expanded 'vector' and 'string' class to 'Vector' and 'String'
+
+2002-02-06 Diether Knof
+	- fixed Bug, that the bug report is written to '/dev/null' in the release
+
+2002-02-03 Diether Knof
+	- replaced 'Vector' class with the standard 'vector' class
+
+2002-02-02 Diether Knof
+	- fixed problem with the newline in the *.string-files
+	  (for Linux and Windows there are now different files
+
+2002-01-31 Diether Knof
+	- replaced the 'String' class with the 'string' class of libstdc++
+
+2002-01-31
+	--------------------------
+	- FreeDoko 0.3.5 (alpha) -
+	--------------------------
+
+2002-01-29 Diether Knof
+	- made most of the theme-settings available
+
+2002-01-27 Diether Knof
+	- included the enumerate types `TColor` and `Value` in the class 'Card',
+	  the rules-enumerate types in the class 'Rule',
+	  the settings-enumerate types in the class 'Setting'
+	- the settings of the party can now be seen during the game
+	- Extended the fields of the settings-window
+
+2002-01-26 Diether Knof
+	- implemented Order of the card (setting: "card order")
+
+2002-01-25 Diether Knof
+	- added loading of the icons
+	- created script to rotate the icons (rotate_icons)
+	- Finally managed to make a fast rotation under Windows
+
+2002-01-24 Borg Enders
+	- preparation of Player, Ai and Game for fair playing Ai
+	- ai has now variable to decide if she should play fair
+
+2002-01-24 Diether Knof
+	- fixed Bug: the random seed did not change
+
+2002-01-23 Diether Knof
+	- new settings avaiable (card back directory, icon directory), some settings renamed
+	- support for loading rotated cards (pe jack.0.xpm, jack.1.xpm, jack.2.xpm. jack.3.xpm)
+	  (reason: under Windows, the rotation takes much too long)
+	- wrote script to rotate the cards (rotate_cards)
+
+2002-01-23 Borg Enders
+	- class w_virtual for weigthing with virtual players generated
+	  Files: w_virtual.*
+	- class w_gametree for weigthingh with gametree generated
+	  Files: w_gametree.*
+	- w_virual and w_gametree capsuled in weighting
+	- Basistypes.h: AiType added
+	- Ai has now variable to choose weighting algorithm
+	- Heuristic output for w_virtual.calcone suppressed by
+	  capsuling of ai::nextcard
+	- one bug in w_virtual::calc_one removed
+
+2002-01-21
+	--------------------------
+	- FreeDoko 0.3.4 (alpha) -
+	--------------------------
+
+2002-01-21 Diether Knof
+	- removed three memory leaks
+	- inserted setting "rotate cards"
+
+2002-01-20 Diether Knof, Borg Enders
+	- New Ai implemented
+	- some bugs removed
+
+2002-01-19 Diether Knof
+	- The font for the names of the playes can be set in the resource file
+	- When playing a card, only the played card is removed, the others do not any more shift
+	  (extended the class 'Hand', so that now all cards remain in the class and for each card a flag is set, whether the card has already been played)
+
+2002-01-18 Diether Knof
+	- took most cards from the package 'kdecarddecks' and included them in this program (wrote two little scripts for that)
+
+2002-01-12 Diether Knof
+	- The full-trick window reappears at the last position, not under the mouse anymore
+
+2002-01-11 Borg Enders
+	- Ai:: Announcement get_announcement(const Game& g) const , int announce_limit_dec()
+	  implemented
+	- basistypes:: Team Opposite(Team t) implemented
+	- internal compiler error in Trick::Trick(const Trick& t)
+	  removed
+	- Heuristics::  static bool make_announcement(const Ai& ai, const Game& g);
+	  static bool say_no90(const Ai& ai ,const Game& g);
+	  static bool say_no60(const Ai& ai ,const Game& g);
+	  static bool say_no30(const Ai& ai ,const Game& g);
+	  static bool say_no0(const Ai& ai ,const Game& g);
+1implemented
+
+	- Ai can now make all announcements for all game_types.
+
+2002-01-11 Diether Knof
+	- setting of the startplayer and the random seed of the party ist now available
+	- The distribution of the cards begins at the player, that plays the first card
+	- Created doc/Roadmap-file out of the old ToDo-file,
+	  rewrote the ToDo-file
+	- new flag for showing the setting window at the start of the program
+	  (look in the FreeDokorc)
+	- new hierarchy in the data-files (new/different settings):
+	  data +- size1 +- cards +-...
+	       |
+	       +- size2 +- cards +- ...
+	       |
+	       :
+	       +- background
+
+2002-01-10 Diether Knof
+	- fixed bug in the copying of players
+	- fixed bug in the setting of the teams
+	- rotated the cards for the other players
+	- now the mask-pixmap is taken for the card background, if the requested card-background-pixmap cannot be loaded
+	- improved script for creating cardsets
+	- created two new cardsets (136x210 and 180x280)
+	- fixed bug in the mask of the cardset '63x98ul'
+	- created own routine to draw the background
+	  (the default routine does not work in Windows)
+
+2002-01-09 Borg Enders
+	- weighting.cpp some comments added
+	- tried to finish weighting::caclc_one for new ai:
+	   but sometimes it crashs with:
+1Error: file player.cpp, line 366, function Player::game()
+1'game_p' is a NULL-pointer
+
+2002-01-06 Borg Enders und Diether Knof
+	- Namegenerator integrated and bug removed.
+	- New ``graphicengine'' with selection of cards is up
+
+2002-01-04 Diether Knof
+	- fixed Bug in 'Trick::isvalid()' (you could play 'empty' cards)
+	- Linux: the languages are found automatically
+	  (under Windows the dirent-library does not work)
+
+2002-01-03 Diether Knof
+	- Tested compilation on different systems:
+	  - Debian (woody)
+	  - SuSE 7.2
+	  - RedHat 7.1
+	  - Mandrake 8.0
+	  - Caldera 3.1
+
+2002-01-02 Diether Knof
+	- fixed some lines in the 'Makefile'
+
+2002-01-01 Borg Enders
+	- Hand::numberclubqueens() implemented
+	- ai::checksolo implemented
+	- ai can now decide if she wants to play a solo.
+	- Ai::get_reservation complete implemented
+
+2001-12-30 Borg Enders
+	- Ai::get_reservation prototype improved
+	- Hand::numberswines(), numberhyperswines(), numbernines() implemented
+
+2001-12-28 Borg Enders
+	- files namgen.h and namegen.cpp created
+	- class Namegenerator implemented
+
+2001-12-25 Klaus Franken
+	- new cardset '63x98ul'
+
+2001-12-24 Borg Enders
+	- moved one line in Hand::operator= for fixing an internal compiler error
+	- Memory leak for weighting fixed
+	- tried to implement soundtest.cpp for windows, stopped with errors for header file <mmsystem.h> of compiler:
+	- started implementation of a new weighting algorithm for ai:
+	  - first copied weighting.* to weighting.old.*
+	  - Implementation of new Weighting::calc_one started
+	    + Ai(), Ai& operator=(const Ai&) activated again
+	    + Player::Player(const Player& p) activated again
+	    + after lot of tries and bugs I didn't understand (like one not ending loop
+	      by creation of an virtual ai-player) ...
+	  - copied weighting.* to weighting.new.*
+	  - copied old back
+
+2001-12-20 Diether Knof
+	- some changes in the Makefiles
+	- some bugs removed
+	  - all hands 'contra' when playing solo
+	  - pressing 'space' in 'settings of party'-window
+
+2001-11-18
+	--------------------------
+	- FreeDoko 0.3.2 (alpha) -
+	--------------------------
+
+2001-12-18 Diether Knof
+	- team setting, when playing a hidden marriage
+	- added Player::get_reservation() (Ai::, Human::)
+	- added changing the types of the players
+	- removed a bug in 'Ai::~Ai'
+
+2001-12-17 Borg Enders
+	- Player::new_game() implemented
+	- Ai::new_game() implemented
+
+2001-12-15 Borg Enders
+	- one bug in Card Heuristics::best_winning_card removed
+	- Card Heuristics::check_card checks now for fox too
+	- Card Heuristics::create_fehl modified
+
+2001-12-13 Diether Knof
+	- Changed the order of the cards in 'Trick'
+	- more arguments(see 'FreeDoko --help')
+	- put the christmas graphics in a subdirectory
+	- Added 'party setting'-window
+
+2001-12-12 Borg Enders
+	- Heuristic:CheckCard checks now correct for dollen
+	- trick playerofcard implemented and inserted where it should be used
+	- especially in player::update_re
+
+2001-12-12 Diether Knof
+	- Added christmas motive
+	  (card background: candle, christmastree[123], background: star1)
+
+2001-12-11 Diether Knof
+	- Fixed bug with the language in the settings-window
+	- implemented arguments (help, version, language, name)
+	  (uses my 'setopt'-function)
+
+2001-12-10 Borg Enders
+	- Heuristics::jab_fox implemented
+	- ai throws fox as pfund only if there are only 4 trumps left on hand
+	  or his team mate wins this trick and it's the last card
+	- basistype for gamepointstable: CountingType, PointsTableStyle
+	- Gametypes rearranged for easier solo check
+	- GamePointsTable::addgamepoints alpha version reached
+
+2001-12-09 Diether Knof
+	- implemented class 'party', some internal changes,
+	- changed 'main()'-function (now using 'freedoko_alpha.cpp')
+
+2001-12-07 Diether Knof
+	- created german README-file (in html and text format)
+
+2001-12-05 Borg Enders
+	- int Sum_of_Specialpoints(SpecialpointsVector spv) implemented
+	- Trick::specialpoints() alpha version reached
+	- GamePoints extended
+	- GamePoints::evaluate(Game g) implemented
+
+2001-12-03
+	--------------------------
+	- FreeDoko 0.3.1 (alpha) -
+	--------------------------
+
+2001-11-26 Borg Enders
+	- Struct Specialpoints and SpecialpointsVector implemented
+	- Trick::specialpoints() first prototype implemented
+
+2001-11-24 Borg Enders
+	- Heuristics::play_for_team added
+	- Heuristics::create_fehl is now only valid for second color runs.
+	- some Ai bugs removed
+	- some new configuration variables for ai implemented
+
+2001-11-22 Diether Knof
+	- using namespaces (Rule, Setting, GameType, GameValue, Team)
+	- Beginning with sound (Linux)
+
+2001-11-16 Borg Enders
+	- now the teams are updated after each played card (game::nextcard)
+	- Heuristics::check_cards checks now for second over first dolle
+	- Ai has now an attribute for mininum points per trick for jabbing with a queen
+	- Ai has now an attribute for minimum points per trick for jabbing with dollen or higher
+	- Heuristic::make_announcement implemented, which decides if an ai player wants to say re or contra
+	- Ai has now attribute for minimum points computated with Heuristic::make_announcement to say re or contra
+	- fuchs is no longer played for maybe_teams
+	- three contras determine now the last re
+
+2001-11-15 Borg Enders <Borg@BorgSoft.de>
+
+	- some bugs in ai and heuristics eliminated
+
+2001-11-15 Diether Knof
+
+	- shortend the bug report (two reports of one game share the same data)
+
+2001-11-14 Diether Knof
+
+	- fixed the email-adress to <freedoko@users.sourceforge.net>
+
+2001-11-13
+	------------------------
+	- FreeDoko 0.3 (alpha) -
+	------------------------
+
+2001-11-12 Diether Knof <dknof@gmx.de>
+
+	- Added 'PlayerType' (player.h) for the players:
+	  Player::player_type_p; (protected);
+	  PlayerType Player::type() const;
+	- In settings:
+	  - play card delay,
+	  - show full trick window,
+	  - full trick delay
+	  added (look in 'FreeDokorc')
+	  The waiting can be stopped with a click with the mouse or pressing
+	  'space' (I hope. this works OK)
+	- Created Screenshots for Linux640x480
+
+
+2001-11-11 Diether Knof <dknof@gmx.de>
+
+	- King, jack-king, queen-king soli implemented
+	- When selecting a gametype the cards are sorted
+
+2001-11-08 Borg Enders <Borg@BorgSoft.de>
+
+	- some bugs in ai and heuristics eliminated
+	- heuristic::play_low_high implemented
+
+2001-11-07 Borg Enders <Borg@BorgSoft.de>
+
+	- player::setsoloplayer implemented
+	- bug color_runs eliminated
+	- Ai-bug Fuchs/diamond ten eliminated: Ai throws fuchs and ten only if there is no other way
+	- create_fehl is called only for tricks with less then 10 points (LAST_FEHL_CREATION is no
+	  longer considered)
+	- best_winning_card is called only if trick is not already won by own team
+	- best_winning_card chooses cards now considering points in the actual trick
+
+2001-11-05  Diether Knof <dknof@gmx.de>
+	- class 'Vorbehalt' created (vorbehalt.*)
+	- 'vorbehalt'-window created (gtk/gtk_vorbehalt.*)
+	- Variable 'Game::team_p' and functions 'Game::team(int)',
+	  'Game::teaminfo_set()' created
+	- The player can play Solo-games
+
+
+2001-11-04  Diether Knof <dknof@gmx.de>
+	- Bug report implemented:
+	  Output is written in a file that can be send to
+	  freedoko@users.sourceforge.net
+	- Found
+
+2001-11-03  Borg Enders <Borg@BorgSoft.de> Diether Knof <dknof@gmx.de>
+	- Cleaned up the directories
+	- Created some screenshots for windows
+	- Implemented pixmap-background for the table (see 'FreeDokorc')
+
+2001-11-02  Diether Knof <dknof@gmx.de>
+	- Update of the homepage
+
+2001-10-30
+	------------------------
+	- FreeDoko 0.2 (alpha) -
+	------------------------

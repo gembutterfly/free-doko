@@ -1,0 +1,7 @@
+freedoko for Debian
+-------------------
+
+If you have problems compiling FreeDoko (you get "error: invalid option `no-cygwin'" or so), first make an 'export OSTYPE' and try again.
+'OSTYPE' is used to detect, whether FreeDoko is compiled under Linux, Windows or MacOSX.
+
+ -- Diether Knof <dknof@gmx.de>, Sun May 25 16:06:14 CEST 2003

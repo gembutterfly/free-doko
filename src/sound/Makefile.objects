@@ -1,0 +1,17 @@
+# All object-files
+OBJECTS =
+
+ifeq ($(USE_SOUND), true)
+OBJECTS += sound.o
+
+ifeq ($(USE_SOUND_COMMAND), true)
+OBJECTS += command.o
+endif
+ifeq ($(USE_SOUND_ALUT), true)
+OBJECTS += alut.o
+endif
+ifeq ($(USE_SOUND_PLAYSOUND), true)
+OBJECTS += playsound.o
+endif
+
+endif

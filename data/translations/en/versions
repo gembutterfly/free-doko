@@ -1,0 +1,235 @@
+# FreeDoko translation: part version
+# language: english
+# version: 0.7.5
+
+Greeting::first run			= \
+	Welcome to FreeDoko.\n\
+	\n\
+	Before the game we have some informations:\n\
+	* FreeDoko is distributed under the GNU General Public License (GPL), you can find more information in the menu 'help' under 'license'. The total GPL can be found in the documentation directory and under http://www.gnu.org/licenses/gpl.html.\n\
+	* When starting FreeDoko the first time there are created some directories. If you want to delete FreeDoko don't forget to remove the generated directories (with the content).\n\
+	* If the cards are too big, you can change the size in the preferences (preferable in „appearance“, „theme“, „cardset“).\n\
+	* FreeDoko is still in developement. Therefor you cannot select all shown elements (p.e. almost all rules for the tournament). Also the program might crash. If FreeDoko detects a problem the game will be stopped and you can create a bug report.\n\
+	* In order to help us developing FreeDoko you can contact us directy (p.s. under http://sourceforge.net/projects/free-doko/). You can create bug reports in the game by using the corresponding menu item and mail them to us (freedoko@users.sourceforge.net). More information can be found in the documentation of FreeDoko.\n\
+	\n\
+	Have fun playing
+
+Greeting::%sversion%	= \
+	Welcome to the version %sversion%
+
+ChangeLog::for %sversion%	= \
+	 ChangeLog for version %sversion%:
+
+ChangeLog::till %sversion%	= \
+	 ChangeLog till version %sversion%
+
+
+# 0.6.3
+ChangeLog::0.6.3			= \
+	* The user interface has changed, we do now use the library gtkmm (http://www.gtkmm.org).\n\
+	* The informations of the game and the tournament are collected in the menu 'information', there is also the new item 'card suggestion' (shortcut: 'h'). \
+	  This suggests a card to play and gives a (short) rationals. \n\
+	* The cards are scalable, now. Insert your desired cards height in 'settings' in the tab 'appereance', 'cards'.\n\
+	* The syntax of the fonts has changed. So you have to select new fonts ('preferences' -> 'appearance' -> 'fonts, colors')
+
+# 0.6.4
+ChangeLog::0.6.4			= \
+	* Now you can reply to an announcement (rules, announcements, announcement reply)\n\
+	* The card suggestion can be made automatically (preferences, behaviour, automatic card suggestion)\n\
+	* You can use special characters in the names of the players\n\
+	* The graphics are now saved as 'png'
+
+# 0.6.5
+ChangeLog::0.6.5			= \
+	* added support for special characters in the texts\n\
+	* the mouse cursor shows whether a card is playable\n\
+	* fixed some bugs in the ai
+
+# 0.6.5b
+ChangeLog::0.6.5b		= \
+	* the last trick can be seen
+
+# 0.6.6
+ChangeLog::0.6.6			= \
+	* new layout for the players configuration and the rules\n\
+	* player statistics (in the menu 'information')\n\
+	* overworked handling of swines:\n\
+	  With the setting 'announce swines automatically' the swines of the player are announced automatically at the last possible point of time.\n\
+	  Else the player has to announce the swines manually (menu 'announcements').
+
+# 0.6.7
+ChangeLog::0.6.7	= \
+	* when the game has finished it can be reviewed\n\
+	* the special points are shown in the trickpiles\n\
+	* new setting: the valid cards can be emphasized\n\
+	* improved party points window: game rounds are visible \n\
+	* the ai type can be set for each trick\n\
+	* the cursor shows whether the ai is thinking\n\
+	* a card can be played with the digits 1-9 and a, b, c
+
+# 0.6.7b
+ChangeLog::0.6.7b	= \
+	* fixed assertion bug with soloplayer (when starting a new game)\n\
+	* fixed random seed bug in party settings\n\
+	* in the preferences the text entries can be changed
+
+# 0.6.8
+ChangeLog::0.6.8	= \
+	* the counting type of the party points can be changed\n\
+	* added party finished window\n\
+	* the number of rounds can be limited
+
+# 0.6.9
+ChangeLog::0.6.9	= \
+	* parties can be saved, the current party is saved automatically\n\
+	* announcements can be made in the table (put the mouse over the announcement icon)\n\
+	* new code for the hand determination\n\
+	* new rule: with swines first dolle over second
+
+# 0.7.0
+ChangeLog::0.7.0	= \
+	* rule: swines and hyperswines joint\n\
+	* rules improvement: when playing 'without nines' the kings of diamond are hyperswines\n\
+	* started with the multiplayer code: connection with another FreeDoko-game to chat is possible\n\
+	* converted the text files in utf-8\n\
+	* changed the default AI configuration
+
+# 0.7.1
+ChangeLog::0.7.1	= \
+	* setting 'show special points in trickpiles' removed \n\
+	* setting: the information of the ai about the cards and teams of the other players can be displayed (group: 'help'). \n\
+	* new translation 'altdeutsch' \n\
+	* overworked team information
+
+# 0.7.2
+ChangeLog::0.7.2	= \
+	* subversion repository under http://gna.org/\n\
+	* further developement on network code\n\
+	* added table rotation\n\
+	* version change to gtkmm 2.4\n\
+	* support for predefined ais
+
+# 0.7.2b
+ChangeLog::0.7.2b	= \
+	* fixed critical bug (crash without a bug report in the last tricks)
+
+# 0.7.3
+ChangeLog::0.7.3	= \
+        * new rules: \
+	  'min number of throwing nines', \
+	  'min number of throwing kings', \
+          'throw with nines and kings', \
+          'announcement contra doubles against re', \
+          'announcement first trick thirty points only first', \
+	  'announcement till full trick', \
+	  'poverty fox do not count', \
+	  'poverty fox shift open', \
+	  'poverty fox shift extra'\n\
+	* free heuristic order, improved heuristics settings interface\n\
+	* added support for different ratings\n\
+	* french translation\n\
+	* party points graph\n\
+	* network support for simple games
+
+# 0.7.4
+ChangeLog::0.7.4        = \
+	* new cardsets: \
+	  Altenburg/german, \
+	  Elite, \
+	  InnoCard\n\
+	* prolongation of the license for the Altenburg/french cardset\n\
+	* rule 'limited points'\n\
+	* support for themes\n\
+	* improvements of the network play: \
+	  synchronization of the closing of the tricks, \
+	  announcements are managed by the server\n\
+	* ai improvements: \
+	  hands of the other players are estimated, \
+	  new heuristics, \
+	  announcements overworked
+
+# 0.7.5
+ChangeLog::0.7.5        = \
+	* new rules: \
+          throw with richness, \
+	  swines in poverty, \
+	  duty announcement in marriage\n\
+	* sound support\n\
+	* game synchronization for network games\n\
+	* ai improvements, a.o. new heuristics\n\
+	* bug fixes\n\
+	* handling: full tricks and information windows are now closed with the right mouse butten, additionally the full trick with a left click on the trick
+
+# 0.7.6
+ChangeLog::0.7.6        = \
+	* references: With references, we developers do regular tests of various game situations.\n\
+	* new rules: p.a. bock, throwing goes before solo\n\
+	* improvements in the ai, especially at the estimation of the hands of the other players\n\
+	* better performance, also progress is now shown
+
+# 0.7.6b
+ChangeLog::0.7.6b        = \
+	* fixed bug: swines in color solo
+
+# 0.7.7
+ChangeLog::0.7.7        = \
+	* duty soli \n\
+	* ai configuration "aggressive" for aggressive announcements \n\
+	* bug fixes (especially crashes in games with swines)
+
+# 0.7.8
+ChangeLog::0.7.8        = \
+	* support for Microsoft Windows 7 \n\
+	* improvements of the ai \n\
+	* bug fixes
+
+# 0.7.9
+ChangeLog::0.7.9        = \
+	* new rule: knocking \n\
+	* new ai type "monte carlo (jab/serve)" \n\
+	* further improvements of the ai \n\
+	* bug fixes
+
+# 0.7.10
+ChangeLog::0.7.10        = \
+	* bug fixes\n\
+	* ai improvements
+
+# 0.7.11
+ChangeLog::0.7.11        = \
+	* expanded license of the altenburg cardsets\n\
+	* bug fixes\n\
+	* ai improvements, especially jabbing of tricks
+
+# 0.7.12
+ChangeLog::0.7.12        = \
+	* changed carset from Altenburg to InnoCard\n\
+	* support for iconsets\n\
+	* ai improvements\n\
+	* bug fixes
+
+# 0.7.13
+ChangeLog::0.7.13        = \
+	* expanded license of the InnoCard cardsets to 31. December 2015\n\
+	* bigger and better card pictures\n\
+	* some tournament settings are hidden as default\n\
+	* ai improvements\n\
+	* bug fixes
+
+# 0.7.14
+ChangeLog::0.7.14        = \
+	* expanded license of the InnoCard cardsets to 31. December 2016\n\
+	* bug fixes
+
+# 0.7.15
+ChangeLog::0.7.15        = \
+	* The license of the InnoCard cardset was not extended, so we have removed it.\n\
+	* switched to gtkmm version 3 (graphic library)\n\
+	* partly modernized the code\n\
+	* ai improvements\n\
+	* bug fixes
+
+# 0.7.16
+ChangeLog::0.7.16        = \
+	* The license of the InnoCard cardset was extended till 31. December 2017, so we included it again.\n\
+	* Fixed bug in solo game decision

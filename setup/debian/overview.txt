@@ -1,0 +1,49 @@
+* packages needed for building:
+- libgtkmm-2.4-dev
+- libgnet-dev
+- libboost-all-dev
+- libalut-dev
+- devscripts
+- asciidoc
+
+
+* packages:
+
+freedoko-altenburg		non-free
+
+freedoko-all			meta package
+				depends: - freedoko-binary
+					 - freedoko-data
+					 - freedoko-translations
+					 - freedoko-backgrounds
+					 - freedoko-cardsets-xskat
+					 - freedoko-cardset-openclipart
+					 - freedoko-cardsets-gnome-games
+					 - freedoko-cardsets-kdecarddecks
+					 - freedoko-cardsets-pysol
+					 - freedoko-manual-de
+					 - freedoko-manual-en
+
+freedoko			meta package
+				depends: - freedoko-binary
+
+freedoko-binary			depends: - freedoko-data
+
+freedoko-data			meta package
+				depends: - freedoko-translations
+					 - freedoko-backgrounds
+					 - freedoko-cardset
+
+freedoko-translations
+
+freedoko-backgrounds
+
+freedoko-cardset		virtual package
+  +-freedoko-cardsets-xskat
+  +-freedoko-cardset-openclipart
+  +-freedoko-cardsets-gnome-games
+  +-freedoko-cardsets-kdecarddecks
+  `-freedoko-cardsets-pysol
+
+freedoko-manual-de
+freedoko-manual-en

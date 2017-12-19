@@ -1,0 +1,51 @@
+immer
+-----
+* quit
+  Beendet das Programm.
+
+* help
+  Gibt die Hilfe aus
+
+* settings
+  Zeigt die Einstellungen an.
+* setting load 'filename'
+  Laedt die Einstellungen von 'filename'. Ist der Dateiname nicht gegeben, wird ~/.FreeDoko/FreeDokorc geladen.
+* setting save 'filename'
+  Speichert die Einstellungen. Ist der Dateiname nicht gegeben, wird unter ~/.FreeDoko/FreeDokorc gespeichert.
+* settings groups
+  Gibt die Gruppennamen aus
+* setting 'Name'
+  Gibt den Wert der Einstellung/Einstellungsgruppe aus.
+* setting 'Name' = 'Wert'
+  Setzt den Wert von der Einstellung 'Name' auf 'Wert'.
+  Gibt den neuen Wert und den alten aus.
+
+o rules
+  Gibt die Regeln aus
+  (Handhabung wie 'settings')
+
+o players
+  Gibt die Spieler aus
+o player x
+  Gibt Informationen zum Spieler 'x' aus ('x' kann Nummer 1-4 oder der Name sein)
+o player x name = 'name'
+  Setzt den Namen des Spielers 'x' auf 'name'
+o player x type = 'typ'
+  Setzt den Typ des Spielers 'x' auf 'typ'
+o player x difficulty = 'difficulty'
+  Setzt die Schwierigkeit des Spielers 'x' auf 'difficulty'
+
+
+PARTY_INIT
+----------
+* start
+  Started das Tunier
+- seed
+  Ausgabe des Startwertes
+- seed = 'Wert'
+  Setzt den Startwert auf 'Wert' ('random' fuer zufaellig)
+- startplayer
+  Ausgabe des Startspielers
+- startplayer = 'Wert'
+  Setzt den Startspielers auf 'Wert'
+  ('random' fuer zufaellig, Nummer (1-4) und Spielernamen werden angenommen)

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+(make all \
+&& cd .. \
+&& ./c "$@" \
+) || exit 1

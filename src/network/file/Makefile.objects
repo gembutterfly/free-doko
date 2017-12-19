@@ -1,0 +1,4 @@
+# All object-files
+OBJECTS = \
+	connection.o \
+	addresses.o

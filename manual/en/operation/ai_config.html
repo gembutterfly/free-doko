@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+  <head>
+  <title>FreeDoko Rules</title>
+</head>
+
+<body>
+
+<H2>Ai Configuration</H2>
+<TABLE border="1">
+<TR>
+<TD colspan="2"> Group</TD> 
+<TD> Entry </TD>
+<TD> Description </TD>
+</TR>
+<TR>
+<TD colspan="4">
+</TD>
+</TR>
+<TR>
+<TD colspan="2" rowspan="5">simple</TD>
+<TD > trustful </TD>
+<TD>   a trustful ai will rate cars with high points, which it earns, as possibly cards of the own team
+</TD>
+</TR>
+<TR>
+<TD>does not know all hands</TD>
+<TD> the ai doesn't know the hands of the other players, but tries to emulate than on the basis of the played cards
+in the tricks, which it remembers.
+</TD>
+</TR>
+<TR>
+<TD>does not know all teams
+</TD>
+<TD> the ai doesn't know the teams of the other palyers at the start of the game.
+</TD>
+</TR>
+<TR>
+<TD> Number of rememebered Tricks
+</TD>
+<TD> This value standa for the number of tricks, which the ai will remember. Cards in tricks older than this number, will be forgotten by the ai. Exceptions are special cards like Dollen, Swines, etc. (This cards will ahuman player normally remember much longer, too)
+</TD>
+</TR>
+<TR>
+<TD>Future Limit
+</TD>
+<TD> This Value is the number of tricks calculated by ai-type like gametree for the future, if there was no valid heuristic for this situation.
+</TD>
+</TR> 
+<TR>
+<TD colspan="4">
+</TD>
+</TR>
+<TR>
+<TD colspan="2" rowspan="4">Ai-Type
+</TD>
+<TD>
+virtual games
+</TD>
+<TD>
+With this algortihm the ai simulates for each valid card recursive a game, the other plqayer of this gmae will be emualted by slightly modified copies of the ai itself.
+</TD>
+</TR>
+<TR>
+<TD> gametree
+</TD>
+<TD> With this teh ai builds a tree of all possible tricks for this situation.
+</TD>
+</TR>
+<TR>
+<TD>Gametree with heuristics
+</TD>
+<TD>
+The same as gametree, but first tries the ai to use a heuristic for each trick.
+</TD>
+</TR>
+<TR>
+<TD>Monte Carlo
+</TD>
+<TD> By this algorithm the ai generates a hand full of random games.
+</TD>
+</TR>
+<TR>
+<TD colspan="4">
+</TD>
+</TR>
+<TR>
+<TD colspan="2" rowspan="3">
+Ansage
+</TD>
+<TD>
+Minimal Handvalue for announcement
+Minimaler Blattwert für Ansage
+</TD>
+<TD> For all values of the function to calculate the value of a hand above this the ai will make a annoucement.
+(With higher values the ai will play more timid)
+</TD>
+</TR>
+<TR>
+<TD> decrement of the handvalue for following announcements
+</TD>
+<TD> Value for which the return value of the above mentioned function may decrease, so that a ai will make the following announcements ( for higher values the ai will make more following announcements).
+</TD>
+</TR>
+<TR>
+<TD> Handvalue modificator for announcements readyness od the ai
+</TD>
+<TD> This value will added for most computations to the minimal hanfdvlaue for announcements.
+(with smaller values the ai will make more announcements)
+</TD>
+</TR>
+<TR>
+<TD colspan="4">
+</TD>
+</TR>
+<TR>
+<TD colspan="2" rowspan="5">
+Tick decisions
+</TD>
+<TD> Last Trick for using heuristics
+</TD>
+<TD> From this trick beginning it will only be used the ai-type detemernide algorithm. 
+</TD>
+</TR>
+<TR>
+<TD> minimal trick points for usage of a queen
+</TD>
+<TD> For more points than this value in a trick a ai will use a Queen if possible.
+</TD>
+</TR>
+<TR>
+<TD>minimal trick points for usage of a dolle
+</TD>
+<TD> For more points than this value in a trick a ai will use a Dolle if possible.
+</TD>
+</TR>
+<TR>
+<TD>play color card to create a missing color
+</TD>
+<TD>This determines, if the ai may serve color cards for creating a miss color on the own hand.
+</TD>
+</TR>
+<tr>
+<TD>Last trick for creating a miss color by dropping a card, for later jabbing the missing color
+</TD>
+<TD> After this trick the ai will no longer drop cards with the purpose to create a missing color, for jabbing this color later in the game.
+</TD> 
+</TR>
+<TR>
+<TD colspan="4">
+</TD>
+</TR>
+<TR>
+<TD colspan="2" rowspan="6">
+Game decisions
+</TD>
+<TD> minimal hand value for taking a poverty
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will take a poverty.
+</TD>
+</TR>
+<TR>
+<TD>minimal hand value for announcing a single picture soli
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will play a soli with one picture for trump.
+</TD>
+</TR>
+<TR>
+<TD>minimal hand value for announcing a double picture soli
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will play a soli with two pictures for trump.
+</TD>
+</TR>
+<TR>
+<TD>minimal hand value for announcing a triple picture soli
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will play a soli with three pictures for trump.
+</TD>
+</TR> 
+<TR>
+<TD>minimal hand value for announcing a color soli
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will play a soli with one color for trump.
+</TD>
+</TR> 
+<TR>
+<TD>minimal hand value for announcing a meatless soli
+</TD>
+<TD>If the function for calculating the hand value has a higher value than this the ai will play a soli without any  trump.
+</TD>
+</TR> 
+<TR>
+<TD colspan="4"> 
+</TD>
+</TR>
+<TR>
+<TD rowspan="15">
+Heuristics
+</TD>
+<TD rowspan="9">normal game
+</TD>
+<TD>Play ace
+</TD>
+<TD>If the ai has an ace on its hand, with enough cards of the same color still in the game, it will play this ace.
+</TD>
+</TR>
+<TR>
+<TD> choose for color trick
+</TD>
+<TD>The ai tries to play a really good card for the last card in a color trick.
+</TD>
+</TR>
+<TR> 
+<TD> Play Pfund
+</TD>
+<TD> If the own team seems to win a trick, the ai will try to ply a card with a lot of points.
+</TD>
+</TR>
+<TR>
+<TD>jab for ace
+</TD>
+<TD> If the ai has still a ace for play ace, it will try to jab the current trick, to serve this ace.
+</TD>
+</TR>
+<TR>
+<TD>create missing color
+</TD>
+<TD> If the ai has the possibility, it tries to play a color card, so that it can later jab this color.
+</TD>
+</TR>
+<TR>
+<TD>choose best winning card for trick
+</TD>
+<TD>the ai tries to play a really good card to win this trick
+</TD>
+</TR>
+<TR>
+<TD>play alternating low and high trumps</TD>
+<TD> the ai tries to draw the trumps from opponent players by playing alternate low and high trumps
+</TD>
+</TR>
+<TR>
+<TD>play for team
+</TD>
+<TD>the ai tries to put some points in a trick which maybe be won by the own team
+</TD>
+<TR>
+<TD>jab fox
+</TD>
+<TD>If a fox was played, the ai tries as hard as it can to get this fox.
+</TD>
+</TR>
+<TR>
+<TD rowspan="4">
+Color Solo
+</TD>
+<TD>Play ace
+</TD>
+<TD>Only for Soloplayer:
+If the ai has an ace on its hand, with enough cards of the same color still in the game, it will serve this ace.
+</TD>
+</TR>
+<TR>
+<TD>choose best winning card for trick
+</TD>
+<TD>
+only for solo player:
+the ai tries to play a really good card to win this trick
+</TD>
+</TR>
+<TR>
+<TD>jab for ace
+</TD>
+<TD> 
+Only Soloplayer
+If the ai has still a ace for play ace, it will try to jab the current trick, to serve this ace.
+</TD>
+</TR>
+<TR>
+<TD>play alternating low and high trumps</TD>
+<TD> only soloplayer:
+the ai tries to draw the trumps from opponent players by playing alternate low and high trumps
+</TR>
+<TR>
+<TD>picture soli
+</TD>
+<TD> play second best trump
+</TD>
+<TD>
+only soloplayer:
+The ai tries to draw the trumps of the other players by playing its second best trump.
+</td>
+</TR>
+<TR>
+<TD>Meatless
+</TD>
+<TD> play best color
+</TD>
+<TD> the serves with its longest color and plays this till the last card
+</TD>
+</TR>
+</TABLE>
+</body>

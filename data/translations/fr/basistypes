@@ -1,0 +1,183 @@
+# FreeDoko translation: part basistypes
+# language: français
+# version: 0.7.5
+
+!input	"cards"
+
+# gamestatus
+GameStatus::program start		= démarrage du programme
+GameStatus::quit			= quitter
+GameStatus::party new			= partie: nouvelle
+GameStatus::party init			= partie: inialisation
+GameStatus::party initial loaded	= partie: initiale chargée
+GameStatus::party loaded		= partie: chargée
+GameStatus::party play			= partie: jeu
+GameStatus::party finished		= partie: finie
+GameStatus::game new			= jeu: nouveau
+GameStatus::game init			= jeu: initialisation
+GameStatus::game reservation		= jeu: réservation
+GameStatus::game redistribute		= jeu: redistribuer
+GameStatus::game start			= jeu: démarrer
+GameStatus::game poverty shift		= jeu: shift poverty cards
+GameStatus::game play			= jeu: jouer
+GameStatus::game full trick		= jeu: levée complète
+GameStatus::game trick taken		= jeu: levée emportée
+GameStatus::game finished		= jeu: fini
+
+# team
+Team::team				= équipe
+Team::re				= re
+Team::contra				= contre
+Team::maybe re				= peut-être re
+Team::maybe contra			= peut-être contra
+Team::unknown team			= équipe inconnue
+Team::no team				= pas d'équipe
+Team::-					= -
+Team::?					= ?
+Team::?re?				= ?re?
+Team::?contra?				= ?contre?
+
+# gametype
+GameType::gametype			= type de jeu
+GameType::normal			= normal
+GameType::thrown nines			= neufs jetés
+GameType::%tnumber% nines		= %tnumber% neufs
+GameType::thrown kings			= rois jetés
+GameType::%tnumber% kings		= %tnumber% rois
+GameType::thrown nines and kings	= neufs et rois jetés
+GameType::%tnumber% nines and kings	= %tnumber% neufs et rois
+GameType::thrown richness		= richesse jetée
+GameType::%upoints% richness		= %upoints% richesse
+GameType::fox highest trump		= renard atout le plus haut
+GameType::poverty			= misère
+GameType::genscher			= Genscher
+GameType::marriage			= mariage
+GameType::marriage solo			= mariage solo
+GameType::marriage silent		= marriage silencieux
+GameType::solo jack			= solo valets
+GameType::solo queen			= solo dames
+GameType::solo king			= solo rois
+GameType::solo queen-jack		= solo dames-valets
+GameType::solo king-jack		= solo rois-valets
+GameType::solo king-queen		= solo rois-dames
+GameType::solo koehler			= figures
+GameType::solo club			= solo trèfles
+GameType::solo spade			= solo piques
+GameType::solo heart			= solo coeurs
+GameType::solo diamond			= solo carreaux
+GameType::solo meatless			= sans atout
+GameType::Group::games			= jeux
+GameType::Group::general		= normal
+GameType::Group::marriage		= mariage
+GameType::Group::poverty		= misère
+GameType::Group::solo			= solo
+GameType::Group::Solo::color		= solo couleur
+GameType::Group::Solo::picture		= solo figure
+GameType::Group::Solo::Picture::single	= solo figure simple
+GameType::Group::Solo::Picture::double	= solo figures doubles
+
+# announcement
+Announcement::announcement		= annonces
+Announcement::no announcement		= pas d'annonce
+Announcement::no 120			= pas de 120
+Announcement::no 90			= pas de 90
+Announcement::no 60			= pas de 60
+Announcement::no 30			= pas de 30
+Announcement::no 0			= fanny
+Announcement::reply			= réponse à une annonce
+Announcement::no 120 reply		= réponse à pas de 120
+Announcement::no 90 reply		= réponse à pas de 90
+Announcement::no 60 reply		= réponse à pas de 60
+Announcement::no 30 reply		= réponse à pas de 30
+Announcement::no 0 reply		= réponse à fanny
+
+# marriage selector
+MarriageSelector::silent		= silencieux
+MarriageSelector::team set		= team set
+MarriageSelector::first foreign		= première levée
+MarriageSelector::first trump		= premier atout
+MarriageSelector::first color		= première couleur
+MarriageSelector::first club		= premier trèfle
+MarriageSelector::first spade		= premier pique
+MarriageSelector::first heart		= premier coeur
+
+# bock triggers
+BockTrigger::equal points                 = equal points***
+BockTrigger::solo lost                    = solo lost***
+BockTrigger::re lost                      = re lost***
+BockTrigger::contra lost                  = contra lost***
+BockTrigger::heart trick                  = heart trick***
+BockTrigger::black                        = black***
+
+# specialpoint
+SpecialPoint::specialpoint		= point special
+SpecialPoint::specialpoints		= points speciaux
+SpecialPoint::no specialpoint		= pas de point special
+SpecialPoint::caught fox		= renard capturé
+SpecialPoint::caught fox last trick	= caught fox in last trick***
+SpecialPoint::fox last trick		= renard fait la der
+SpecialPoint::double fox last trick	= deux renards font la der
+SpecialPoint::charlie			= charlie
+SpecialPoint::caught charlie		= charlie attrapé
+SpecialPoint::double charlie		= double charlie
+SpecialPoint::caught double charlie	= double charlie attrapé
+SpecialPoint::dolle caught dolle	= une poupée a capturé une poupée
+SpecialPoint::heart trick		= levée à coeur
+SpecialPoint::Doppelkopf		= Doppelkopf
+SpecialPoint::won			= gagné
+SpecialPoint::no 120			= pas de 120
+SpecialPoint::no 90			= pas de 90
+SpecialPoint::no 60			= pas de 60
+SpecialPoint::no 30			= pas de 30
+SpecialPoint::no 0			= fanny
+SpecialPoint::no 120 won		= pas de 120 gagné
+SpecialPoint::against re won		= victoire contre un re
+SpecialPoint::against contra won	= victoire contre un contre
+SpecialPoint::no 120 said		= pas de 120 annoncé
+SpecialPoint::re said			= re annoncé
+SpecialPoint::contra said		= contre annoncé
+SpecialPoint::no 120 said		= pas de 120 annoncé
+SpecialPoint::no 90 said		= pas de 90 annoncé
+SpecialPoint::no 60 said		= pas de 60 annoncé
+SpecialPoint::no 30 said		= pas de 30 annoncé
+SpecialPoint::no 0 said			= fanny annoncé
+SpecialPoint::got 120 against no 90	= 120 points contre un "pas de 90"
+SpecialPoint::got 90 against no 60	= 90 points contre un "pas de 60"
+SpecialPoint::got 60 against no 30	= 60 points contre un "pas de 30"
+SpecialPoint::got 30 against no 0	= 30 points contre un "pas de levée"
+SpecialPoint::no 120 reply said		= réponse à "pas de 120"
+SpecialPoint::no 90 reply said		= réponse à "pas de 90"
+SpecialPoint::no 60 reply said		= réponse à "pas de 60"
+SpecialPoint::no 30 reply said		= réponse à "pas de 30"
+SpecialPoint::no 0 reply said		= réponse à fanny
+SpecialPoint::contra won		= contre gagnant
+SpecialPoint::solo			= solo
+SpecialPoint::bock			= bock***
+SpecialPoint::Group::winning		= gagnant
+SpecialPoint::Group::announcement	= annonce
+
+# player type
+Player::Type::type			= type de joueur
+Player::Type::human			= humain
+Player::Type::ai			= ordinateur
+Player::Type::dummy ai			= ia stupide
+Player::Type::random ai			= ia au hasard
+Player::Type::network			= réseau
+
+# gametype actions
+GameplayAction::reservation		= réservation
+GameplayAction::marriage		= mariage
+GameplayAction::genscher		= "genscher"
+GameplayAction::poverty shift		= passer la misère
+GameplayAction::poverty accepted	= misère acceptée
+GameplayAction::poverty returned	= misère retournée
+GameplayAction::poverty denied		= misère refusée
+GameplayAction::poverty denied by all	= misère refusée par tous
+GameplayAction::announcement		= annonce
+GameplayAction::swines			= cochons
+GameplayAction::hyperswines		= hypercochons
+GameplayAction::card played		= carte jouée
+GameplayAction::trick open		= levée ouverte
+GameplayAction::trick full		= levée pleine
+GameplayAction::trick taken		= levée emportée
+GameplayAction::check			= check***

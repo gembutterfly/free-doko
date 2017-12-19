@@ -1,0 +1,29 @@
+# FreeDoko translation: part network
+# language: deutsch
+# version: 0.7.5
+
+Warning::network unstable =\
+	Die Netzwerkunterstützung ist noch intensiv in der Entwicklung. Daher werden vermutlich Probleme auftreten.
+
+Network::name			= Name
+Network::address		= Adresse
+Network::port			= Port
+Network::incoming bytes		= Eingang
+Network::outgoing bytes		= Ausgang
+
+# relation
+Network::Connection::relation		= Beziehung
+Network::Connection::Relation::orphan	= Weise
+Network::Connection::Relation::parent	= Elter
+Network::Connection::Relation::child	= Kind
+Network::Connection::Relation::sibling	= Geschwister
+
+# type
+Network::Connection::type		= Typ
+Network::Connection::Type::unset	= ungesetzt
+Network::Connection::Type::player	= Spieler
+Network::Connection::Type::shadow	= Schatten
+Network::Connection::Type::observer	= Zuschauer
+
+Error: could not create server on port %uport% = \
+	Konnte keinen Server auf dem Port %uport% erstellen.

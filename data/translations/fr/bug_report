@@ -1,0 +1,65 @@
+# FreeDoko translation: bug report
+# language: français
+# version: 0.7.5
+
+BugReport::bug report			= rapport de bug
+BugReport::create			= créer un rapport de bug
+
+BugReport::generated error		= erreur générée
+
+BugReport::end				= fin du rapport de bug
+
+BugReport::save			= \
+	Le rapport de bug sera sauvegardé dans le répertoire 'FreeDoko.BugReports'. \n\
+	S'il vous plaît faîtes un rapport, quand vous avez trouvé un bug \
+	et envoyez le rapport de bug sur notre site sur souceforge http://sourceforge.net/tracker/?func=add&group_id=38051&atid=421197 ou \
+	envoyez lz fichier à 'freedoko@users.sourceforge.net'. \
+	L'heure, la version, votre texte et quelques informations sur le jeu sont ajoutées au fichier,en dernière ligne.\n\
+	Le fichier peut être détruit après l'envoi du mail. \n\
+	Si vous voulez une réponse à votre rapport de bug, insérez s'il vous plaît votre adresse mail, afin que nous puissions affecter le rapport de bug.
+
+BugReport::created directory '%sdirectory%'	= \
+	Creation du répertoire'%sdirectory%' pour les rapports de bug.
+
+BugReport::could not save at '%sfilename%', trying '%sfilename2%'. = \
+	Impossible de sauvegarder le rapport de bug pout '%sfilename%', on essaie '%sfilename2%'.
+BugReport::could not save			= \
+	Impossible de sauvegarder le rapport de bug :-(. \nS'il vous plaît faites le rapport manuellement.
+
+BugReport::write seed: %useed%			= \
+	Trying to output the seed: %useed%
+
+BugReport::write startplayer: %ustartplayer%	= \
+	Essai d'écriture de l'entame: %ustartplayer%
+
+BugReport::bug found, create report, %scontact%	= \
+	Une erreur interne a été rencontrée :-(\n\
+	S'il vous plaît, créez le rapport de bug et envoyez le à %scontact% pour nous aider à réparer l'erreur.\n\
+	Merci.\n\n\
+	Après la génération du rapport de bug, le programme s'arrêtera tout seul.
+
+BugReport::message = \
+	Description de l'erreur
+
+BugReport::automatic creation, %sfilename%, %scontact%	= \
+	Désolé, vous avez trouvé un bug:-(\n\
+	Un rapport de bug a été sauvegardédans le fichier '%sfilename%'.\n\
+	Envoyez le nous s'il vous plaît à %scontact%.\n\
+	Merci.
+
+
+BugReport::automatic report creation failed		= \
+	Désolé, vous avez trouvé un bug:-(\n\
+	Le rapport de bug  ne peut pas être généré, \
+	s'il vous plaît, donnez nous le n° du jeu et une description de votre partie, afin que nous puissions reproduire le bug.\n\
+	Merci.
+
+Press <Return> to display the bug report.	= \
+	Appuyez sur <Return> pour afficher le rapport de bug.
+
+Press <Return> to exit.				= \
+	Appuyez sur <Return> pour sortir.
+Press <Return> to create segmentation fault.	= \
+	Appuyez sur <Return> pour créer la segmentation fault.
+Creating segmentation fault.			= \
+	Creating segmentation fault.

@@ -1,0 +1,184 @@
+# FreeDoko translation: part basistypes
+# language: english
+# version: 0.7.5
+
+!input	"cards"
+
+# gamestatus
+GameStatus::program start		= program start
+GameStatus::quit			= quit
+GameStatus::party new			= party: new
+GameStatus::party init			= party: init
+GameStatus::party initial loaded	= party: initial loaded
+GameStatus::party loaded		= party: loaded
+GameStatus::party play			= party: play
+GameStatus::party finished		= party: finished
+GameStatus::game new			= game: new
+GameStatus::game init			= game: init
+GameStatus::game reservation		= game: reservation
+GameStatus::game redistribute		= game: redistribute
+GameStatus::game start			= game: start
+GameStatus::game poverty shift		= game: shift poverty cards
+GameStatus::game play			= game: play
+GameStatus::game full trick		= game: full trick
+GameStatus::game trick taken		= game: trick taken
+GameStatus::game finished		= game: finished
+GameStatus::game closed 		= game: closed
+
+# team
+Team::team				= team
+Team::re				= re
+Team::contra				= contra
+Team::maybe re				= maybe re
+Team::maybe contra			= maybe contra
+Team::unknown team			= unknown team
+Team::no team				= no team
+Team::-					= -
+Team::?					= ?
+Team::?re?				= ?Re?
+Team::?contra?				= ?Kontra?
+
+# gametype
+GameType::gametype			= gametype
+GameType::normal			= normal
+GameType::thrown nines			= thrown nines
+GameType::%tnumber% nines		= %tnumber% nines
+GameType::thrown kings			= thrown kings
+GameType::%tnumber% kings		= %tnumber% kings
+GameType::thrown nines and kings	= thrown nines and kings
+GameType::%tnumber% nines and kings	= %tnumber% nines and kings
+GameType::thrown richness		= thrown richness
+GameType::%upoints% richness		= %upoints% richness
+GameType::fox highest trump		= fox highest trump
+GameType::poverty			= poverty
+GameType::genscher			= Genscher
+GameType::marriage			= marriage
+GameType::marriage solo			= marriage solo
+GameType::marriage silent		= silent marriage
+GameType::solo jack			= jack solo
+GameType::solo queen			= queen solo
+GameType::solo king			= king solo
+GameType::solo queen-jack		= queen-jack solo
+GameType::solo king-jack		= king-jack solo
+GameType::solo king-queen		= king-queen solo
+GameType::solo koehler			= koehler
+GameType::solo club			= club solo
+GameType::solo spade			= spade solo
+GameType::solo heart			= heart solo
+GameType::solo diamond			= diamond solo
+GameType::solo meatless			= meatless
+GameType::Group::games			= games
+GameType::Group::general		= allgemein
+GameType::Group::marriage		= marriage
+GameType::Group::poverty		= poverty
+GameType::Group::solo			= solo
+GameType::Group::Solo::color		= color solo
+GameType::Group::Solo::picture		= picture solo
+GameType::Group::Solo::Picture::single	= single picture solo
+GameType::Group::Solo::Picture::double	= double picture solo
+
+# announcement
+Announcement::announcement		= announcement
+Announcement::no announcement		= no announcement
+Announcement::no 120			= no 120
+Announcement::no 90			= no 90
+Announcement::no 60			= no 60
+Announcement::no 30			= no 30
+Announcement::no 0			= black
+Announcement::reply			= announcement reply
+Announcement::no 120 reply		= no 120 reply
+Announcement::no 90 reply		= no 90 reply
+Announcement::no 60 reply		= no 60 reply
+Announcement::no 30 reply		= no 30 reply
+Announcement::no 0 reply		= no 0 reply
+
+# marriage selector
+MarriageSelector::silent		= silent
+MarriageSelector::team set		= team set
+MarriageSelector::first foreign		= first foreign
+MarriageSelector::first trump		= first trump
+MarriageSelector::first color		= first color
+MarriageSelector::first club		= first club
+MarriageSelector::first spade		= first spade
+MarriageSelector::first heart		= first heart
+
+# bock triggers
+BockTrigger::equal points                 = equal points
+BockTrigger::solo lost                    = solo lost
+BockTrigger::re lost                      = re lost
+BockTrigger::contra lost                  = contra lost
+BockTrigger::heart trick                  = heart trick
+BockTrigger::black                        = black
+
+# specialpoint
+SpecialPoint::specialpoint		= specialpoint
+SpecialPoint::specialpoints		= specialpoints
+SpecialPoint::no specialpoint		= no specialpoint
+SpecialPoint::caught fox		= caught fox
+SpecialPoint::caught fox last trick	= caught fox in last trick
+SpecialPoint::fox last trick		= fox gets last trick
+SpecialPoint::double fox last trick	= double fox get last trick
+SpecialPoint::charlie			= charlie
+SpecialPoint::caught charlie		= caught charlie
+SpecialPoint::double charlie		= double charlie
+SpecialPoint::caught double charlie	= caught double charlie
+SpecialPoint::dolle caught dolle	= dolle caught dolle
+SpecialPoint::heart trick		= heart trick
+SpecialPoint::Doppelkopf		= Doppelkopf
+SpecialPoint::won			= won
+SpecialPoint::no 120			= no 120
+SpecialPoint::no 90			= no 90
+SpecialPoint::no 60			= no 60
+SpecialPoint::no 30			= no 30
+SpecialPoint::no 0			= no trick
+SpecialPoint::no 120 won		= no 120 won
+SpecialPoint::against re won		= won against re
+SpecialPoint::against contra won	= won against contra
+SpecialPoint::no 120 said		= no 120 said
+SpecialPoint::re said			= re said
+SpecialPoint::contra said		= contra said
+SpecialPoint::no 120 said		= no 120 said
+SpecialPoint::no 90 said		= no 90 said
+SpecialPoint::no 60 said		= no 60 said
+SpecialPoint::no 30 said		= no 30 said
+SpecialPoint::no 0 said			= no trick said
+SpecialPoint::got 120 against no 90	= got 120 points against no 90
+SpecialPoint::got 90 against no 60	= got 90 points against no 60
+SpecialPoint::got 60 against no 30	= got 60 points against no 30
+SpecialPoint::got 30 against no 0	= got 30 points against no trick
+SpecialPoint::no 120 reply said		= no 120 replied
+SpecialPoint::no 90 reply said		= no 90 replied
+SpecialPoint::no 60 reply said		= no 60 replied
+SpecialPoint::no 30 reply said		= no 30 replied
+SpecialPoint::no 0 reply said		= no trick replied
+SpecialPoint::contra won		= contra won
+SpecialPoint::solo			= solo
+SpecialPoint::bock			= bock
+SpecialPoint::Group::winning		= winning
+SpecialPoint::Group::announcement	= announcement
+
+# player type
+Player::Type::type			= player type
+Player::Type::human			= human
+Player::Type::ai			= computer
+Player::Type::dummy ai			= dummy ai
+Player::Type::random ai			= random ai
+Player::Type::network			= network player
+
+# gametype actions
+GameplayAction::reservation		= reservation
+GameplayAction::marriage		= marriage
+GameplayAction::genscher		= genscher
+GameplayAction::poverty shift		= poverty shift
+GameplayAction::poverty accepted	= poverty accepted
+GameplayAction::poverty returned	= poverty returned
+GameplayAction::poverty denied		= poverty denied
+GameplayAction::poverty denied by all	= poverty denied by all
+GameplayAction::announcement		= announcement
+GameplayAction::swines			= swines
+GameplayAction::hyperswines		= hyperswines
+GameplayAction::card played		= card played
+GameplayAction::trick open		= trick open
+GameplayAction::trick full		= trick full
+GameplayAction::trick taken		= trick taken
+GameplayAction::check			= check

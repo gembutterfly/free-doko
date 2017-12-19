@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de">
+
+  <head>
+    <title>FreeDoko Handbuch: Netzwerkkonfiguration</title>
+
+    <meta name="date" content="2005-04-14T17:08:45+0200">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="Diether Knof, Borg Enders">
+    <link rel="made" href="mailto:freedoko@users.sourceforge.net">
+
+    <link rel="shortcut icon" href="../../pictures/FreeDoko.ico">
+    <link rel="stylesheet" type="text/css" href="../../manual.css">
+
+    <link rel="contents" href="toc.html" title="Inhaltsverzeichnis">
+    <link rel="index" href="overview.html" title="Übersicht">
+    <link rel="start" href="overview.html" title="Übersicht">
+
+    <link rel="up" href="party_settings.html" title="Turniereinsetllungen">
+    <link rel="first" href="start.html" title="Programmstart">
+    <link rel="last" href="problems.html" title="Probleme">
+
+    <link rel="previous" href="party_settings.html" title="Turniereinstellungen">
+    <link rel="next" href="player_config.html" title="Spielerkonfiguration">
+
+    <link rel="alternate" href="../../en/operation/network_config.html" hreflang="en" title="english">
+
+  </head>
+
+  <body>
+    <h1>Netzwerkkonfiguration</h1>
+
+    <p>
+    Dieses Fenster umfaßt die gesamten Netzwerkeinstellungen.
+    </p>
+    <p>
+    Um FreeDoko im Netzwerk zu spielen, muß ein Spieler in der Rubrik <a href="#receiver">Empfänger</a> einen Port öffnen.
+    Anschließend können sich die anderen Spieler unter <a href="#connections">Verbindungen</a> mit dem Empfänger verbinden.
+    Die dazu nötige Adresse findet der Empfänger unter <a href="#local_addresses">lokale Adressen</a>.
+    Anschließend sollten die Spieler noch per Chat ihre Regeln abgleichen, eine Hilfe dafür ist die Übersicht unter <a href="#rule_differences">Regelunterschiede</a>.
+    </p>
+
+    <p>
+    Der Knopf <var>leere Netzwerk</var> entfernt alle Verbindungen.
+    </p>
+
+    <div>
+      <map name="network_map">
+	<area shape="rect" coords="5, 24,114, 57"
+	href="#connections"               alt="Verbindungen">
+      </map>
+    </div>
+
+    <h2 id="connections">Verbindungen</h2>
+
+    <div class="picture_center"><a href="pictures/network/connections.png"><img src="pictures/network/connections.small.jpeg" width="276" height="296" alt="Verbindungen" usemap="#network_map"></a></div>
+
+    <p>
+    Die Rubrik <var>Verbindungen</var> gibt einen Überblick über die Verbindungen zwischen Ihrem FreeDoko-Programm und anderen.
+    Außerdem können Sie hier auch sich mit einem anderen FreeDoko-Programm für das Netzwerkspiel verbinden.
+    </p>
+
+    <h3>Verbindungsübersicht</h3>
+    <p>
+    Die Tabelle enthält folgende Einträge:
+    </p>
+    <dl>
+      <dt>Name</dt>
+      <dd>Der Name des Spielers, zu dem die Verbindung gehört</dd>
+
+      <dt>Adresse</dt>
+      <dd>Die Adresse des Rechners, mit dem Sie verbunden sind. Das kann der Rechnername oder eine IP-Adresse sein.</dd>
+
+      <dt>Port</dt>
+      <dd>Mit welchen Port sie verbunden sind. 2442 ist der Standardport für FreeDoko.</dd>
+
+      <dt>Beziehung</dt>
+      <dd>In welcher Beziehung die Verbindung steht.
+      Es gibt folgende Beziehungen:
+      <dl>
+	<dt>Elter</dt>
+	<dd>Ein FreeDoko-Programm ist immer das Elter. Der Elter gibt die Regeln vor und startet das Turnier.</dd>
+
+	<dt>Kind</dt>
+	<dd>Das Gegenstück zum Elter.</dd>
+      </dl>
+      </dd>
+
+      <dt>Typ</dt>
+      <dd>Der Typ der Verbindung.
+      Es gibt folgende Typen:
+      <dl>
+	<dt>Spieler</dt>
+	<dd>Ein normaler Mitspieler.</dd>
+
+	<dt class="ToDo">Schatten</dt>
+	<dd class="ToDo">Ein Schatten schaut einem Spieler über die Schulter.
+       	Er ist nur mit diesem Spieler verbunden.
+	Ein Spieler uns sein Schatten können sich direkt unterhalten, dadurch kann der Spieler seinem Schatten seine Spielzüge erklären.
+	</dd>
+
+	<dt class="ToDo">Betrachter</dt>
+	<dd class="ToDo">Ein Betrachter sieht das gesamte Spiel.</dd>
+      </dl>
+      </dd>
+
+      <dt>&lt;</dt>
+      <dd>Die Menge der bisher eingegangenen Daten.</dd>
+
+      <dt>&gt;</dt>
+      <dd>Die Menge der bisher ausgegangenen Daten.</dd>
+    </dl>
+
+    <h3>neue Verbindung</h3>
+    <p>
+    Um eine neue Verbindung herzustellen geben Sie die Adresse (d.h. Rechnername oder IP-Adresse) des Rechners an, mit dem Sie sich verbinden wollen.
+    Anschließend können Sie den Port ändern, wenn Ihr Gegenüber nicht den Standardport 2442 von FreeDoko nutzt.
+    Dann müssen Sie nur auf <var>Verbinden</var> klicken.
+    </p>
+
+
+    <h2 id="receiver">Empfänger</h2>
+
+    <div class="picture_center"><a href="pictures/network/receiver.png"><img src="pictures/network/receiver.small.jpeg" width="276" height="296" alt="Empfänger" usemap="#network_map"></a></div>
+
+    <p>
+    Damit FreeDoko im Netz gespielt werden kann, muß ein Spieler einen Empfänger öffnen.
+    Die Empfänger-Rubrik zeigt in der Tabelle an, welche Ports geöffnet sind.
+    Unter <var>neuer Empfänger</var> können Sie den Port einstellen (Standardport ist 2442) und mit <var>erstelle Empfänger</var> einen Empfänger erstellen.
+    </p>
+
+
+    <h2 id="local_adresses">lokale Adressen</h2>
+
+    <div class="picture_center"><a href="pictures/network/local_adresses.png"><img src="pictures/network/local_adresses.small.jpeg" width="276" height="296" alt="lokale Adressen" usemap="#network_map"></a></div>
+
+    <p>
+    Die Adressenliste in der Rubrik <var>lokale Adressen</var> zeigt alle Adressen an, unter denen ihr Rechner erreichbar ist.
+    </p>
+
+
+    <h2 id="rule_differences">Regelunterschiede</h2>
+
+    <div class="picture_center"><a href="pictures/network/rule_differences.png"><img src="pictures/network/rule_differences.small.jpeg" width="276" height="296" alt="Regelunterschiede" usemap="#network_map"></a></div>
+
+    <p>
+    Regelunterschiede zwischen Ihren ursprünglichen Regeln und dem vom Server vorgegebenen können Sie in der gleichnamigen Rubrik sehen.
+    Per Chat können Sie sich dann mit den anderen Spielern abstimmen.
+    </p>
+
+
+    <div class="Version">Version 0.7.3</div>
+
+  </body>
+</html>

@@ -1,0 +1,5 @@
+# All object-files
+OBJECTS = \
+	party.o \
+	rule.o
+
